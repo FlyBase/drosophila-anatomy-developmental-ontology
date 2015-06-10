@@ -1,6 +1,6 @@
 # Welcome to the home of the Drosophila anatomy and development ontologies
 
-This site is a (new) home for releases of the Drosophila anatomy and development ontologies, for information about how to make use of them in your work and for a ticket tracking system allowing you to request changes.
+This site is a (new) home for releases of the Drosophila anatomy and development ontologies (not yet implemented), for information about how to make use of them in your work and for a ticket tracking system allowing you to request changes.
 
 These ontologies are freely available under a [CC-BY](http://creativecommons.org/licenses/by/3.0/) license. Please see our [download guide](download_guide) for details of the various available versions of these ontologies. Please see our [attributions](Attribution) page for details of how to acknowledge us for their use.
 
