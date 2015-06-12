@@ -2,7 +2,7 @@
 
 This site is a (new) home for releases of the Drosophila anatomy (DAO) and development ontologies, for information about how to make use of them in your work and for a ticket tracking system allowing you to request changes.
 
-__Please note:__ The code for these ontologies is for now still hosted in SF [here](https://sourceforge.net/p/fbcv/code-0/HEAD/tree/). The SF trackers [here](https://sourceforge.net/p/fbcv/tickets/) are not in use anymore, though. Please submit new tickets [here](https://github.com/mmc46/flybase-controlled-vocabulary/issues).
+__Please note:__ The code for these ontologies is for now still hosted in SF [here](https://sourceforge.net/p/fbcv/code-0/HEAD/tree/). The SF trackers [here](https://sourceforge.net/p/fbcv/tickets/) are not in use anymore, though. Please submit new tickets [here](https://github.com/mmc46/drosophila-anatomy-developmental-ontology/issues).
 
 These ontologies are freely available under a [CC-BY](http://creativecommons.org/licenses/by/3.0/) license. Please see our [download guide](https://github.com/mmc46/drosophila-anatomy-developmental-ontology/wiki/Download-guide) for details of the various available versions of these ontologies. Please see our [attributions](https://github.com/mmc46/drosophila-anatomy-developmental-ontology/wiki/Attribution) page for details of how to acknowledge us for their use.
 
