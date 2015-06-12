@@ -24,3 +24,13 @@ We encourage anybody who uses these ontologies, either directly or via the resou
  1. _Osumi-Sutherland D., Reeve S., Mungall C., Ruttenberg A. Neuhaus F, Jefferis G.S.X.E, Armstrong J.D._ (2012) A strategy for building neuroanatomy ontologies. [Bioinformatics __28__(9): 1262-1269.](http://dx.doi.org/10.1093/bioinformatics/bts113)
  1. _Milyaev N., Osumi-Sutherland D., Reeve S., Burton N., Baldock R.A., Armstrong J.D._ (2012) The Virtual Fly Brain Browser and Query Interface. [Bioinformatics __28__(3): 411-415](http://dx.doi.org/10.1093/bioinformatics/btr677)
  1. _Grumbling G., Strelets V., The FlyBase Consortium_ (2006) FlyBase: anatomical data, images and queries [Nucleic Acids Res. __34__(Database issue): D484–D488](http://dx.doi.org/10.1093/nar/gkj068)
+
+## Funding
+
+Development of the Drosophila anatomy and development ontologies has been funded by:
+
+  * A series of grants to FlyBase from the [National Human Genome Research Institute](http://www.genome.gov/) at the [U.S. National Institutes of Health](http://www.nih.gov/), the most recent of which is #U41 HG000739. 
+  * An Isaac Newton Trust grant to Michael Ashburner to fund the work of David Osumi-Sutherland, awarded in 2007: Standardising the representation of Drosophila anatomy and development for databases.
+  * BBBSRC:[BB/G02233X/1](http://www.bbsrc.ac.uk/pa/grants/AwardDetails.aspx?FundingReference=BB/G02233X/1), awarded in 2009 to J.Douglas Armstrong, Michael Ashburner and David Osumi-Sutherland: Structured and graphical queries for Drosophila neuroscience data.
+  * An Isaac Newton Trust grant to Cahir O'Kane to fund the work of Marta Costa, awarded in 2012: Neuroinformatic identification of new types of neuron in the Drosophila brain. 
+  * Virtual Fly Brain is supported by a grant from the [Wellcome Trust](http://www.wellcome.ac.uk/), awarded in 2014: Virtual Fly Brain: a global informatics hub for Drosophila neurobiology (WT105023MA).
