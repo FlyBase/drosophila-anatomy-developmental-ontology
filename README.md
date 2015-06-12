@@ -1,4 +1,4 @@
-# Welcome to the home of the Drosophila anatomy and development ontologies
+### Welcome to the home of the Drosophila anatomy and development ontologies
 
 This site is a (new) home for releases of the Drosophila anatomy (DAO) and development ontologies, for information about how to make use of them in your work and for a ticket tracking system allowing you to request changes.
 
