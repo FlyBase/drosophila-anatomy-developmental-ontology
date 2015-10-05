@@ -1,0 +1,3735 @@
+PROFORMA CONTROLLED VOCABULARIES Version 73: 19 Aug 1995
+
+Syntax of this file
+-------------------
+
+Described in curation.doc, section B, Controlled vocabularies
+
+This file includes the terms used by FlyBase as controlled vocabularies.
+The upper-case alphanumeric codes (e.g., P1., GAT6. GAP5. GA17.) are used
+by the FlyBase curators. If a code ends with the characters
+.q then this indicates that the term is to be used as a qualifier of
+a controlled term with the same alphanumeric code. Qualifiers are
+separated from the primary terms by a vertical bar with a
+space character on either side, i.e., primary_term | qualifier.
+Lines that begin with the symbol are title or comment lines. Lines that
+end with a colon are not controlled terms but introduce a list. They may,
+or may not, also be controlled vocabulary terms present as such
+elsewhere in
+the list. Any text on a controlled vocabulary line that follows the symbol
+is a comment. Numbers within square brackets, [], are references and
+refer to the list at the end of this file. The symbols /= indicate
+synonyms. Synonyms are not used as controlled terms: there presence
+is simply as an aid to curation. Within sections these lists have
+a rough hierarchical structure. Lines that have only a symbol
+are spacer lines for ease of reading only.
+
+This file is hierarchical. The top level begins 7 spaces after the
+end of the uppercase alphanumeric line code.
+
+Following all the CVs is a list for curatorial use in free text.
+
+PUBLICATION PROFORMA
+
+P1. publication classes:
+P1. paper
+P1. abstract
+P1. stocklist
+P1. book
+P1. book review
+P1. conference proceedings
+P1. erratum /= correction /= retraction
+P1. review
+P1. letter
+P1. thesis
+P1. patent
+P1. bibliographic list
+P1. obituary
+P1. unpublished /= privately distributed report
+P1. film /= video
+P1. computer file /= CD-ROM
+P1. book review
+P1. poster
+P1. personal communication
+P1. demonstration
+P1. recording
+P1. microscope slides
+P1. slides
+P1. newspaper article
+P1. other
+P1. note
+
+P13.P14. languages:
+P13.P14. afrikaans
+P13.P14. arabic
+P13.P14. belorussian
+P13.P14. bulgarian
+P13.P14. chinese
+P13.P14. cumbrian
+P13.P14. czech
+P13.P14. danish
+P13.P14. dutch
+P13.P14. english
+P13.P14. estonian
+P13.P14. faroese
+P13.P14. finnish
+P13.P14. french
+P13.P14. german
+P13.P14. greek
+P13.P14. hebrew
+P13.P14. hungarian
+P13.P14. icelandic
+P13.P14. indonesian
+P13.P14. italian
+P13.P14. japanese
+P13.P14. latin
+P13.P14. latvian
+P13.P14. lithuanian
+P13.P14. malay
+P13.P14. norwegian
+P13.P14. polish
+P13.P14. portuguese
+P13.P14. romanian
+P13.P14. russian
+P13.P14. serbocroat
+P13.P14. slovak
+P13.P14. spanish
+P13.P14. swedish
+P13.P14. turkish
+P13.P14. ukranian
+P13.P14. yiddish
+
+GENES PROFOMA
+
+G16c. electrophoretic variant
+G16c. RFLP
+G16c. DNA sequence variant
+
+ALLELE PROFORMA
+
+GA3. mutant ranks:
+GA3. RK1
+GA3. RK2
+GA3. RK3
+
+GA4. allele classes:
+GA4. amorph
+GA4. hypomorph
+GA4. neomorph
+GA4. antimorph
+GA4. hypermorph
+GA4. loss of function
+GA4. gain of function
+GA4. wild-type
+
+GA56.q allele class qualifiers:
+GA56.q recessive
+GA56.q dominant
+GA56.q codominant
+GA56.q semidominant
+GA56.q maternal effect
+GA56.q rescuable maternal effect
+GA56.q non-rescuable maternal effect
+GA56.q paternal effect
+GA56.q conditional ts
+GA56.q conditional cs
+GA56.q embryonic
+GA56.q larval
+GA56.q prepupal
+GA56.q pupal
+GA56.q pharate adult
+GA56.q adult
+GA56.q male
+GA56.q female
+GA56.q polyphasic
+GA56.q cell autonomous
+GA56.q cell non-autonomous
+
+GA56. mutant phenotype classes:
+GA56. female sterile
+GA56. female sterile germ-line-dependent
+GA56. female sterile soma-dependent
+GA56. male sterile
+GA56. male sterile germ-line-dependent
+GA56. male sterile soma-dependent
+GA56. lethal
+GA56. enhancer
+GA56. suppressor
+GA56. visible
+GA56. Minute
+GA56. auxotroph
+GA56. paralytic
+GA56. flightless
+GA56. hypoactive
+GA56. hyperactive
+GA56. behavioral
+GA56. learning-defective
+GA56. courtship-defective
+GA56. mating-defective
+GA56. olfactory-defective
+GA56. gustatory-defective
+GA56. visual-defective
+GA56. meiosis-defective
+GA56. mitosis-defective
+GA56. sex-determination defective
+GA56. electrophoretic variant
+GA56. chemical resistant
+GA56. chemical sensitive
+GA56. radiation resistant
+GA56. radiation sensitive
+
+GA8. A4. origin of mutant alleles:
+GA8. A4. FLIPase
+GA8. A4. in vitro mutagenesis
+GA8. A4. in vitro mutagenesis | regulatory fusion
+GA8. A4. in vitro mutagenesis | coding region fusion
+GA8. A4. in vitro mutagenesis | site directed
+GA8. A4. in vitro mutagenesis | deletion
+GA8. A4. in vitro mutagenesis | rescue fragment
+GA8. A4. in vitro mutagenesis | minigene
+GA8. A4. in vitro mutagenesis | amino acid replacement
+GA8. A4. in vitro mutagenesis | other
+GA8. A4. natural population
+GA8. A4. spontaneous
+GA8. A4. recombination
+GA8. A4. recombination between transposable elements
+GA8. A4. gene conversion
+GA8. A4. segregation
+GA8. A4. insertion
+GA8. A4. dysgenic phenomena:
+GA8. A4. IR-hybrid dysgenesis /= IR
+GA8. A4. Stalker-hybrid dysgenesis
+GA8. A4. MR
+GA8. A4. P-element activity
+GA8. A4. &Dgr;2-3
+GA8. A4. Js /= Jumpstarter
+GA8. A4. PM hybrid dysgenesis
+GA8. A4. p&pgr;25.1
+GA8. A4. MR<up>h12</up>
+GA8. A4. hobo dysgenesis
+GA8. A4. irradiation
+GA8. A4. &ggr; ray
+GA8. A4. X ray
+GA8. A4. U.V.
+GA8. A4. neutrons
+GA8. A4. <up>32</up>P
+GA8. A4. <up>3</up>H
+GA8. A4. <up>252</up>Cf fission neutrons
+GA8. A4. <up>3</up>H-TdR
+GA8. A4. chemical mutagenesis
+GA8. A4. DNA feeding
+GA8. A4. DNA injection of egg
+GA8. A4. DNA transformation
+GA8. A4. Janus green
+GA8. A4. ethyl methanesulfonate /= EMS /= CB1528
+GA8. A4. triethylmelamine /= TEM /= CB1246
+GA8. A4. nitrogen mustard /= CB1414
+GA8. A4. 2-chloroethyl-methanesulfonate /= CB1506
+GA8. A4. 2-fluoroethyl-methanesulfonate /= CB1522
+GA8. A4. methyl methanesulfonate /= MMS /= CB1540
+GA8. A4. S-2-chloroethylcysteine /= CB1592
+GA8. A4. sulfur-mustard /= CB1735
+GA8. A4. 1,4-dimethanesulfonoxybutane /= CB2041
+GA8. A4. 1,4-dimethanesulfonoxybut-2-yne /= CB205
+GA8. A4. 1,4-dimethanesulfonoxy-1:4-dimethylbutane /= CB2348
+GA8. A4. D-1,6-dimethylsulfonoxy-mannitol /= CB2511
+GA8. A4. L-1,6-dimethylsulfonoxy-mannitol /= CB2628
+GA8. A4. DL-p-N,N-di-(2-chloroethyl)aminophenylalanine /= CB3007 /=
+melphalan
+GA8. A4. L-p-N,N-di-(2-chloroethyl)aminophenylalanine /= CB3025
+GA8. A4. D-p-N,N-di-(2-chloroethyl)aminophenylalanine /= CB3026
+GA8. A4. p-N,N-di-(2-chloroethyl)aminophenylalanine /= CB3034
+GA8. A4. 1,4-dimethanesulfonoxybut-2-yne /= CB2058
+GA8. A4. 2-chloro-N-(2-chloroethyl)-N-methylethanamine /= HN2
+GA8. A4. 7-bromomethyl 12 methyl benz[&agr;] anthracine
+GA8. A4. styrylquinoline /= CB3086
+GA8. A4. dichlorethane /= DCE
+GA8. A4. diepoxybutane /= DEB
+GA8. A4. ethylenimine /= EI
+GA8. A4. ethyl nitrosourea /= ENU
+GA8. A4. formaldehyde
+GA8. A4. hycanthon methanesulfonate /= HMS
+GA8. A4. methoxy diethylnitrosamine
+GA8. A4.
+2-methoxy-6-dichloro-9-(3-ethyl-2-chloroethyl-aminopropylamino)acridine-dihydrochloride
+/= ICR170
+GA8. A4. nitrosomethyl urea /= NMU
+GA8. A4. N-methyl-N'-nitro-N-nitrosoguanidine /= NNG
+GA8. A4. bromouridine
+GA8. A4. actinomycin
+GA8. A4. caffeine
+GA8. A4. NaF
+GA8. A4. sodium bisulphite
+GA8. A4. 1,2-dibromoethane /= DBE
+GA8. A4. 1,2-dichloroethane /= DCE
+GA8. A4. 1-bromo-2-chloroethane /= BCE
+GA8. A4. diethyl sulfate /= DES
+
+GA19. assay method:
+GA19. 1 == Assayed in vivo (genomic allele)
+GA19. 2 == Assayed in vivo (transient assay)
+GA19. 3 == Drosophila cell culture
+GA19. 4 == Heterologous system
+GA19. 5 == Assayed in vivo (allele of one species in genome of another)
+GA19. 6 == Assayed in vivo (transient assay of allele from one species
+in another)
+
+Describing wild-type stocks and chromosomes [not implemented in proforma]
+extracted wild-type chromosome
+laboratory stock
+selected wild-type stock
+wild-type stock
+
+TRANSCRIPT PROFORMA
+
+GAT4. classes of transcript:
+GAT4. tRNA
+GAT4. tRNA-ala
+GAT4. tRNA-arg
+GAT4. tRNA-asn
+GAT4. tRNA-asp
+GAT4. tRNA-cys
+GAT4. tRNA-gln
+GAT4. tRNA-glu
+GAT4. tRNA-gly
+GAT4. tRNA-his
+GAT4. tRNA-ile
+GAT4. tRNA-leu
+GAT4. tRNA-lys
+GAT4. tRNA-met
+GAT4. tRNA-met-i
+GAT4. tRNA-phe
+GAT4. tRNA-pro
+GAT4. tRNA-Se-cys
+GAT4. tRNA-ser
+GAT4. tRNA-thr
+GAT4. tRNA-trp
+GAT4. tRNA-tyr
+GAT4. tRNA-val
+GAT4. mRNA
+GAT4. pre-mRNA
+GAT4. snRNA
+GAT4. snRNA-U1
+GAT4. snRNA-U2
+GAT4. snRNA-U3
+GAT4. snRNA-U4
+GAT4. snRNA-U5
+GAT4. rRNA
+GAT4. 18S-rRNA
+GAT4. 28S-rRNA
+GAT4. 5S-rRNA
+GAT4. 2S-rRNA
+GAT4. genomic RNA for retroviral genomes
+GAT4. 17.6
+GAT4. 297
+GAT4. 412
+GAT4. 1731
+GAT4. B104
+GAT4. blood
+GAT4. copia
+GAT4. flea
+GAT4. gypsy
+GAT4. HMS-Beagle
+GAT4. hopper
+GAT4. mdg1
+GAT4. mdg3
+GAT4. opus
+GAT4. springer
+GAT4. Tom
+GAT4. 2161
+GAT4. F
+GAT4. D
+GAT4. Doc
+GAT4. G
+GAT4. I
+GAT4. jockey
+GAT4. wallaby
+GAT4. viral transcript for other viruses
+GAT4. DCX
+GAT4. DCX2
+GAT4. RSV
+GAT4. F
+GAT4. K
+GAT4. S
+GAT4. DCV
+GAT4. DOV
+GAT4. DAV
+GAT4. iota
+GAT4. sigma
+GAT4. mitochondrial transcript
+
+PROTEIN PROFORMA
+
+{values for GAP4 and GAP7 not yet implemented}
+
+SUBCELLULAR LOCATION
+
+GAP6. cell
+GAP6. nucleus
+GAP6. nuclear envelope
+GAP6. nuclear inner membrane /= inner envelope
+GAP6. nuclear outer membrane /= outer envelope
+GAP6. annulate lamellae
+GAP6. nuclear pore
+GAP6. nuclear lamina
+GAP6. perinuclear space
+GAP6. nucleoplasm
+GAP6. chromosome
+GAP6. chromatid
+GAP6. telomere
+GAP6. centromere
+GAP6. kinetochore
+GAP6. polytene chromosome
+GAP6. chromocenter
+GAP6. weak point /= constriction
+GAP6. puff
+GAP6. band
+GAP6. interband
+GAP6. ectopic fiber
+GAP6. interphase chromosome
+GAP6. mitotic chromosome
+GAP6. prophase chromosome
+GAP6. metaphase chromosome
+GAP6. meiotic chromosome
+GAP6. chiasmata
+GAP6. synaptonemal complex
+GAP6. recombination nodule
+GAP6. chromatin
+GAP6. nucleosome
+GAP6. euchromatin
+GAP6. heterochromatin
+GAP6. centric heterochromatin
+GAP6. beta-heterochromatin
+GAP6. alpha-heterochromatin
+GAP6. telomeric heterochromatin
+GAP6. perichromatin fibrils
+GAP6. nucleolus
+GAP6. nucleolus organiser
+GAP6. cytoplasm /= cytosol
+GAP6. mitochondrion
+GAP6. mitochondrial membrane
+GAP6. mitochondrion outer membrane
+GAP6. mitochondrion inner membrane /= cristae
+GAP6. mitochondrion intermembrane space
+GAP6. mitochondrion matrix
+GAP6. lysosome
+GAP6. primary lysosome
+GAP6. secondary lysosome
+GAP6. endosome
+GAP6. autophagic vacuole /= autophagosome
+GAP6. multivesicular body
+GAP6. digestive vacuole /= phagolysosome
+GAP6. lysosomal membrane
+GAP6. peroxisome
+GAP6. ribosome
+GAP6. polysome /= polyribosome
+GAP6. cytoskeleton
+GAP6. microtubule
+GAP6. intermediate filament
+GAP6. actin filament /= microfilament
+GAP6. endoplasmic reticulum
+GAP6. smooth endoplasmic reticulum
+GAP6. rough endoplasmic reticulum
+GAP6. endoplasmic reticulum lumen /= cisternal lumen
+GAP6. transport vesicle /= transition vesicle
+GAP6. microsome
+GAP6. Golgi apparatus
+GAP6. Golgi stack /= dictyosome
+GAP6. Golgi lumen
+GAP6. Golgi vesicle
+GAP6. cis-face /= forming face
+GAP6. trans-face /= maturing face /= trans-Golgi network
+GAP6. secretory vesicle
+GAP6. cilia
+GAP6. axoneme
+GAP6. basal body
+GAP6. centrosome
+GAP6. centriole
+GAP6. pericentriolar region /= microtubule organizing center
+GAP6. aster
+GAP6. spindle
+GAP6. contractile ring /= midbody
+GAP6. midbody
+GAP6. plasma membrane
+GAP6. lipid bilayer
+GAP6. basement membrane
+GAP6. coated pit
+GAP6. coated vesicle
+GAP6. intercellular junction
+GAP6. desmosome
+GAP6. belt desmosome /= zonula adherens
+GAP6. spot desmosome /= macula adherens
+GAP6. hemidesmosome /= hemi-adherens
+GAP6. septate junction /= septate desmosome
+GAP6. tight junction /= zonula occludens
+GAP6. pleated septate junction
+GAP6. gap junction /= zonula communicans /= communicating junction
+GAP6. extracellular matrix
+GAP6. intercellular space
+GAP6. mitotic cycle
+GAP6. S-phase
+GAP6. G1-phase
+GAP6. G2-phase
+GAP6. M-phase
+GAP6. prometaphase
+GAP6. prophase
+GAP6. metaphase
+GAP6. anaphase
+GAP6. telophase
+GAP6. interphase
+GAP6. meiotic cycle
+GAP6. meiosis division I
+GAP6. prophase
+GAP6. leptotene
+GAP6. zygotene
+GAP6. pachytene
+GAP6. diplotene
+GAP6. diakinesis
+GAP6. metaphase
+GAP6. anaphase
+GAP6. meiosis division II
+GAP6. prophase
+GAP6. metaphase
+GAP6. anaphase
+GAP6. telophase
+
+KILOBASE PROFORMA
+
+K6. for the description of nucleic acid sequence data:
+K6. intron
+K6. exon
+K6. CDS
+K6. promoter
+K6. enhancer
+K6. TATA_signal
+K6. CAAT_signal
+K6. 5'UTR
+K6. 3'UTR
+K6. polyA_site
+K6. polyA_signal
+K6. sig_peptide
+K6. mutation
+K6. insertion
+K6. insertion_site
+K6. aberr
+K6. protein_bind
+K6. prim_transcript
+K6. misc_feature
+K6. prot_domain
+
+K14. ARS sequence
+K14. AT-rich sequence
+K14. CAX (opa) repeat
+K14. GCN repeat
+K14. GGX (opa-like) repeat
+K14. G-rich sequence
+K14. mitochondrial DNA
+K14. satellite DNA
+K14. repetitive element
+K14. repetitive sequence
+K14. transposable element
+
+ABERRATION PROFORMA
+
+A9. classes of aberration:
+A9. In == Inversion
+A9. InT == Inversion-cum-translocation
+A9. cIn == Bipartite inversion
+A9. T == Translocation
+A9. cT == Cyclic translocation
+A9. Ts == Translocation segregant
+A9. R == Ring
+A9. C == Compound
+A9. Df == Deficiency
+A9. DfIn == Deficient inversion
+A9. DfT == Deficient translocation
+A9. tDp == Tandem duplication
+A9. fDp == Free duplication
+A9. eDp == Uninverted insertional duplication
+A9. iDp == Inverted insertional duplication
+A9. uDp == Unoriented insertional duplication
+A9. bDp == Bipartite duplication
+A9. eTp == Uninverted insertional transposition
+A9. iTp == Inverted insertional transposition
+A9. uTp == Unoriented insertional transposition
+A9. AS == Autosynaptic
+A9. LS == Laevosynaptic
+A9. DS == Dextrosynaptic
+A9. U == Unchanged
+A9. fR == Free ring duplication
+
+MULTI-SPECIES CONSTRUCT PROFORMA
+
+M14. expression construct
+M14. reporter construct gene
+M14. transient expression
+M14. FLIP source
+M14. FRT sites
+M14. P-transposase source
+M14. hobo-transposase source
+M14. mariner-transposase source
+M14. Minos-transposase source
+M14. mutant rescue
+M14. enhancer trap
+M14. in vitro mutagenesis
+M14. toxin-ablation toxin segment
+M14. promoter-fusion promoter
+M14. ectopic expression distribution-within-fly
+M14. cell line transformation
+M14. cell line transfection
+M14. heterologous expression distribution-within-fly
+M14. interference with gene expression gene
+M14. mosaic production
+
+BODY PARTS (USED in ALLELE, TRANSCRIPT, AND PROTEIN PROFORMAS)
+
+GAT6.q GAP5.q GA17.q descriptors:
+GAT6.q GAP5.q GA17.q spatial:
+GAT6.q GAP5.q GA17.q dorsal
+GAT6.q GAP5.q GA17.q ventral
+GAT6.q GAP5.q GA17.q lateral
+GAT6.q GAP5.q GA17.q medial
+GAT6.q GAP5.q GA17.q anterior
+GAT6.q GAP5.q GA17.q posterior
+GAT6.q GAP5.q GA17.q ipsilateral
+GAT6.q GAP5.q GA17.q contralateral
+GAT6.q GAP5.q GA17.q temporal:
+GAT6.q GAP5.q GA17.q early
+GAT6.q GAP5.q GA17.q mid
+GAT6.q GAP5.q GA17.q late
+GAT6.q GAP5.q GA17.q developmental:
+GAT6.q GAP5.q GA17.q embryonic
+GAT6.q GAP5.q GA17.q larval
+GAT6.q GAP5.q GA17.q prepupal
+GAT6.q GAP5.q GA17.q pupal
+GAT6.q GAP5.q GA17.q pharate
+GAT6.q GAP5.q GA17.q adult
+GAT6.q GAP5.q GA17.q male
+GAT6.q GAP5.q GA17.q female
+GAT6.q GAP5.q GA17.q maternal
+GAT6.q GAP5.q GA17.q paternal
+GAT6.q GAP5.q GA17.q miscellaneous:
+GAT6.q GAP5.q GA17.q rudiment
+GAT6.q GAP5.q GA17.q anlagen
+GAT6.q GAP5.q GA17.q precursor
+GAT6.q GAP5.q GA17.q presumptive
+
+GAT6.q GAP5.q GA17.q compartment
+GAT6.q GAP5.q GA17.q anterior compartment
+GAT6.q GAP5.q GA17.q posterior compartment
+GAT6.q GAP5.q GA17.q dorsal compartment
+GAT6.q GAP5.q GA17.q ventral compartment
+
+GAT6. GAP5. GA17. embryonic expression patterns:
+GAT6. GAP5. GA17. pair-rule
+GAT6. GAP5. GA17. even pair-rule
+GAT6. GAP5. GA17. odd pair-rule
+GAT6. GAP5. GA17. segment polarity
+GAT6. GAP5. GA17. gap-rule
+GAT6. GAP5. GA17. terminal
+
+GAT6. GAP5. GA17. % egg length
+
+GAT6. GAP5. GA17. developmental stage:
+GAT6. GAP5. GA17. embryo
+GAT6. GAP5. GA17. embryonic stage [1]
+GAT6. GAP5. GA17. embryonic stage 1
+GAT6. GAP5. GA17. embryonic stage 2
+GAT6. GAP5. GA17. embryonic stage 3
+GAT6. GAP5. GA17. embryonic stage 4
+GAT6. GAP5. GA17. embryonic stage 5
+GAT6. GAP5. GA17. embryonic stage 6
+GAT6. GAP5. GA17. embryonic stage 7
+GAT6. GAP5. GA17. embryonic stage 8
+GAT6. GAP5. GA17. embryonic stage 9
+GAT6. GAP5. GA17. embryonic stage 10
+GAT6. GAP5. GA17. embryonic stage 11
+GAT6. GAP5. GA17. embryonic stage 12
+GAT6. GAP5. GA17. embryonic stage 13
+GAT6. GAP5. GA17. embryonic stage 14
+GAT6. GAP5. GA17. embryonic stage 15
+GAT6. GAP5. GA17. embryonic stage 16
+GAT6. GAP5. GA17. embryonic stage 17
+GAT6. GAP5. GA17. embryonic cell cycle [2]
+GAT6. GAP5. GA17. embryonic cycle 1
+GAT6. GAP5. GA17. embryonic cycle 2
+GAT6. GAP5. GA17. embryonic cycle 3
+GAT6. GAP5. GA17. embryonic cycle 4
+GAT6. GAP5. GA17. embryonic cycle 5
+GAT6. GAP5. GA17. embryonic cycle 6
+GAT6. GAP5. GA17. embryonic cycle 7
+GAT6. GAP5. GA17. embryonic cycle 8
+GAT6. GAP5. GA17. embryonic cycle 9
+GAT6. GAP5. GA17. embryonic cycle 10
+GAT6. GAP5. GA17. embryonic cycle 11
+GAT6. GAP5. GA17. embryonic cycle 12
+GAT6. GAP5. GA17. embryonic cycle 13
+GAT6. GAP5. GA17. embryonic cycle 14
+GAT6. GAP5. GA17. embryonic cycle 14A
+GAT6. GAP5. GA17. embryonic cycle 14B
+GAT6. GAP5. GA17. embryonic cycle 15
+GAT6. GAP5. GA17. embryonic cycle 16
+GAT6. GAP5. GA17. larva
+GAT6. GAP5. GA17. first instar larva /= L1
+GAT6. GAP5. GA17. second instar larva /= L2
+GAT6. GAP5. GA17. third instar larva /= L3
+GAT6. GAP5. GA17. third instar larva stage /= L3-1 [3]
+GAT6. GAP5. GA17. third instar larva stage /= L3-2
+GAT6. GAP5. GA17. prepupa /= PP [3]
+GAT6. GAP5. GA17. prepupal stage P1
+GAT6. GAP5. GA17. prepupal stage P2
+GAT6. GAP5. GA17. prepupal stage P3
+GAT6. GAP5. GA17. prepupal stage P4
+GAT6. GAP5. GA17. prepupal stage P4(i)
+GAT6. GAP5. GA17. prepupal stage P4(ii)
+GAT6. GAP5. GA17. pupa /= P [3]
+GAT6. GAP5. GA17. pupal stage P5
+GAT6. GAP5. GA17. pupal stage P5(i)
+GAT6. GAP5. GA17. pupal stage P5(ii)
+GAT6. GAP5. GA17. pupal stage P6
+GAT6. GAP5. GA17. pupal stage P7
+GAT6. GAP5. GA17. pupal stage P8
+GAT6. GAP5. GA17. pupal stage P9
+GAT6. GAP5. GA17. pupal stage P10
+GAT6. GAP5. GA17. pupal stage P11
+GAT6. GAP5. GA17. pupal stage P11(i)
+GAT6. GAP5. GA17. pupal stage P11(ii)
+GAT6. GAP5. GA17. pupal stage P12
+GAT6. GAP5. GA17. pupal stage P12(i)
+GAT6. GAP5. GA17. pupal stage P12(ii)
+GAT6. GAP5. GA17. pupal stage P13
+GAT6. GAP5. GA17. pupal stage P14
+GAT6. GAP5. GA17. pupal stage P15
+GAT6. GAP5. GA17. pupal stage P15(i)
+GAT6. GAP5. GA17. pupal stage P15(ii)
+GAT6. GAP5. GA17. adult /= imago [3]
+GAT6. GAP5. GA17. adult stage A1
+GAT6. GAP5. GA17. adult stage A2
+GAT6. GAP5. GA17. adult stage 0 [4]
+GAT6. GAP5. GA17. adult stage I
+GAT6. GAP5. GA17. adult stage II
+GAT6. GAP5. GA17. adult stage III
+
+GAT6. GAP5. GA17. anatomy:
+
+GAT6. GAP5. GA17. egg
+GAT6. GAP5. GA17. unfertilized egg
+GAT6. GAP5. GA17. fertilized egg
+GAT6. GAP5. GA17. yolk
+GAT6. GAP5. GA17. yolk granules
+GAT6. GAP5. GA17. lipid droplets
+GAT6. GAP5. GA17. chorion
+GAT6. GAP5. GA17. inner chorionic layer
+GAT6. GAP5. GA17. endochorion
+GAT6. GAP5. GA17. exochorion
+GAT6. GAP5. GA17. vitelline membrane
+GAT6. GAP5. GA17. micropyle
+GAT6. GAP5. GA17. collar
+GAT6. GAP5. GA17. egg operculum
+GAT6. GAP5. GA17. dorsal appendage
+GAT6. GAP5. GA17. posterior aeropyle
+GAT6. GAP5. GA17. pronuclei
+GAT6. GAP5. GA17. male pronucleus
+GAT6. GAP5. GA17. female pronucleus
+GAT6. GAP5. GA17. polar body nuclei
+
+GAT6. GAP5. GA17. embryo
+GAT6. GAP5. GA17. midline
+GAT6. GAP5. GA17. cortex
+GAT6. GAP5. GA17. cleavage
+GAT6. GAP5. GA17. cleavage nuclei
+GAT6. GAP5. GA17. energids
+GAT6. GAP5. GA17. yolk nuclei
+GAT6. GAP5. GA17. vitellophage
+GAT6. GAP5. GA17. blastoderm
+GAT6. GAP5. GA17. syncytial blastoderm
+GAT6. GAP5. GA17. cellular blastoderm
+GAT6. GAP5. GA17. gastrula
+GAT6. GAP5. GA17. mitotic domains [5]
+GAT6. GAP5. GA17. mitotic domain 1..25
+GAT6. GAP5. GA17. mitotic domain A
+GAT6. GAP5. GA17. mitotic domain B
+GAT6. GAP5. GA17. mitotic domain M
+GAT6. GAP5. GA17. mitotic domain N
+GAT6. GAP5. GA17. germ band
+GAT6. GAP5. GA17. extended germ band
+GAT6. GAP5. GA17. contracted germ band
+GAT6. GAP5. GA17. segmented germ band
+GAT6. GAP5. GA17. procephalon /= cephalic segment
+GAT6. GAP5. GA17. dorsal ridge
+GAT6. GAP5. GA17. amnioserosa
+GAT6. GAP5. GA17. pole cell
+GAT6. GAP5. GA17. pole bud
+GAT6. GAP5. GA17. furrows
+GAT6. GAP5. GA17. ventral furrow
+GAT6. GAP5. GA17. cephalic furrow
+GAT6. GAP5. GA17. anterior transverse furrow
+GAT6. GAP5. GA17. posterior transverse furrow
+GAT6. GAP5. GA17. parasegmental furrow
+GAT6. GAP5. GA17. metamaric furrow
+GAT6. GAP5. GA17. invaginations
+GAT6. GAP5. GA17. amnioproctodeal invagination /= posterior midgut
+invagination
+GAT6. GAP5. GA17. germ layers
+GAT6. GAP5. GA17. ectoderm
+GAT6. GAP5. GA17. dorsal ectoderm
+GAT6. GAP5. GA17. neurectoderm [76]
+GAT6. GAP5. GA17. ventral neurectoderm [76]
+GAT6. GAP5. GA17. lateral ventral neurectoderm [76]
+GAT6. GAP5. GA17. medial ventral neurectoderm [76]
+GAT6. GAP5. GA17. intermediate ventral neurectoderm [76]
+GAT6. GAP5. GA17. endoderm
+GAT6. GAP5. GA17. mesoderm
+GAT6. GAP5. GA17. somatic mesoderm
+GAT6. GAP5. GA17. visceral mesoderm
+GAT6. GAP5. GA17. head mesoderm
+GAT6. GAP5. GA17. trunk mesoderm
+GAT6. GAP5. GA17. mesectoderm
+GAT6. GAP5. GA17. tagmata
+GAT6. GAP5. GA17. gnathos
+GAT6. GAP5. GA17. parasegments
+GAT6. GAP5. GA17. parasegment 1..15
+GAT6. GAP5. GA17. segments
+GAT6. GAP5. GA17. head [71]
+GAT6. GAP5. GA17. acron
+GAT6. GAP5. GA17. labral segment /= clypeo-labrum
+GAT6. GAP5. GA17. ocular segment
+GAT6. GAP5. GA17. antennal segment
+GAT6. GAP5. GA17. intercalary segment /= hypopharyngeal lobe
+GAT6. GAP5. GA17. mandibular segment
+GAT6. GAP5. GA17. maxillary segment
+GAT6. GAP5. GA17. labial segment
+GAT6. GAP5. GA17. thorax
+GAT6. GAP5. GA17. thoracic segment 1..3
+GAT6. GAP5. GA17. prothoracic segment /= prothorax /= thoracic segment 1
+GAT6. GAP5. GA17. mesothoracic segment /= mesothorax /= thoracic segment 2
+GAT6. GAP5. GA17. metathoracic segment /= metathorax /= thoracic segment 3
+GAT6. GAP5. GA17. abdomen
+GAT6. GAP5. GA17. abdominal segment 1..11
+GAT6. GAP5. GA17. telson
+
+GAT6. GAP5. GA17. reproductive system
+GAT6. GAP5. GA17. female reproductive tract [6] [7]
+GAT6. GAP5. GA17. ovary
+GAT6. GAP5. GA17. ovariole
+GAT6. GAP5. GA17. basal stalk
+GAT6. GAP5. GA17. peritoneal sheath
+GAT6. GAP5. GA17. epithelial sheath
+GAT6. GAP5. GA17. basement membrane /= tunica propria
+GAT6. GAP5. GA17. germarium
+GAT6. GAP5. GA17. germarium region 1
+GAT6. GAP5. GA17. germarium region 2a
+GAT6. GAP5. GA17. germarium region 2b
+GAT6. GAP5. GA17. germarium region 3
+GAT6. GAP5. GA17. vitellarium
+GAT6. GAP5. GA17. terminal filament
+GAT6. GAP5. GA17. follicle cell
+GAT6. GAP5. GA17. border follicle cell
+GAT6. GAP5. GA17. centripetally migrating follicle cell
+GAT6. GAP5. GA17. polar follicle cell
+GAT6. GAP5. GA17. nurse follicle cell
+GAT6. GAP5. GA17. inwardly migrating follicle cell
+GAT6. GAP5. GA17. interfollicle cell
+GAT6. GAP5. GA17. stem cells
+GAT6. GAP5. GA17. female germline stem cell
+GAT6. GAP5. GA17. follicle stem cell
+GAT6. GAP5. GA17. oogonial cell
+GAT6. GAP5. GA17. germline cyst
+GAT6. GAP5. GA17. cystoblast
+GAT6. GAP5. GA17. cystocyte
+GAT6. GAP5. GA17. nurse cell
+GAT6. GAP5. GA17. ring canal
+GAT6. GAP5. GA17. inner rim
+GAT6. GAP5. GA17. outer rim
+GAT6. GAP5. GA17. spectrosome
+GAT6. GAP5. GA17. fusome
+GAT6. GAP5. GA17. polyfusome
+GAT6. GAP5. GA17. nuage
+GAT6. GAP5. GA17. egg chamber /= follicle
+GAT6. GAP5. GA17. oviduct
+GAT6. GAP5. GA17. lateral oviduct
+GAT6. GAP5. GA17. common oviduct /= main oviduct
+GAT6. GAP5. GA17. female accessory gland /= parovarium
+GAT6. GAP5. GA17. female accessory gland duct
+GAT6. GAP5. GA17. female accessory gland main cells
+GAT6. GAP5. GA17. female accessory gland secondary cells
+GAT6. GAP5. GA17. calyx
+GAT6. GAP5. GA17. genital chamber
+GAT6. GAP5. GA17. pedicel
+GAT6. GAP5. GA17. seminal receptacle /= tubular receptacle
+GAT6. GAP5. GA17. spermathecum
+GAT6. GAP5. GA17. spermathecal duct
+GAT6. GAP5. GA17. uterus
+GAT6. GAP5. GA17. vagina
+GAT6. GAP5. GA17. vulva
+GAT6. GAP5. GA17. oocyte
+GAT6. GAP5. GA17. oocyte nucleus
+GAT6. GAP5. GA17. karyosome
+GAT6. GAP5. GA17. germinal vesicle
+GAT6. GAP5. GA17. endobody
+GAT6. GAP5. GA17. pole plasm
+GAT6. GAP5. GA17. pole granule
+GAT6. GAP5. GA17. oogenesis [8]
+GAT6. GAP5. GA17. oogenesis stage S1
+GAT6. GAP5. GA17. oogenesis stage S2
+GAT6. GAP5. GA17. oogenesis stage S3
+GAT6. GAP5. GA17. oogenesis stage S4
+GAT6. GAP5. GA17. oogenesis stage S5
+GAT6. GAP5. GA17. oogenesis stage S6
+GAT6. GAP5. GA17. oogenesis stage S7
+GAT6. GAP5. GA17. oogenesis stage S8
+GAT6. GAP5. GA17. oogenesis stage S9
+GAT6. GAP5. GA17. oogenesis stage S10
+GAT6. GAP5. GA17. oogenesis stage S10A
+GAT6. GAP5. GA17. oogenesis stage S10B
+GAT6. GAP5. GA17. oogenesis stage S11
+GAT6. GAP5. GA17. oogenesis stage S12
+GAT6. GAP5. GA17. oogenesis stage S12A
+GAT6. GAP5. GA17. oogenesis stage S12B
+GAT6. GAP5. GA17. oogenesis stage S12C
+GAT6. GAP5. GA17. oogenesis stage S13
+GAT6. GAP5. GA17. oogenesis stage S13A
+GAT6. GAP5. GA17. oogenesis stage S13B
+GAT6. GAP5. GA17. oogenesis stage S13C
+GAT6. GAP5. GA17. oogenesis stage S13D
+GAT6. GAP5. GA17. oogenesis stage S14
+GAT6. GAP5. GA17. oogenesis stage S14A
+GAT6. GAP5. GA17. oogenesis stage S14B
+
+GAT6. GAP5. GA17. male reproductive tract [6] [10]
+GAT6. GAP5. GA17. testis
+GAT6. GAP5. GA17. male germline stem cell
+GAT6. GAP5. GA17. hub cell /= apical cell /= interstitial cell
+GAT6. GAP5. GA17. cyst cell
+GAT6. GAP5. GA17. cyst stem cell
+GAT6. GAP5. GA17. cyst progenitor cell
+GAT6. GAP5. GA17. primary gonial cell
+GAT6. GAP5. GA17. testis pigment cell
+GAT6. GAP5. GA17. testicular duct
+GAT6. GAP5. GA17. seminal vesicle /= vas efferens
+GAT6. GAP5. GA17. male accessory gland /= paragonium
+GAT6. GAP5. GA17. ejaculatory bulb /= sperm pump
+GAT6. GAP5. GA17. ejaculatory bulb apodeme /= skeletal rod
+GAT6. GAP5. GA17. ejaculatory bulb plate
+GAT6. GAP5. GA17. ejaculatory duct
+GAT6. GAP5. GA17. posterior ejaculatory duct
+GAT6. GAP5. GA17. anterior ejaculatory duct
+GAT6. GAP5. GA17. vas deferens
+GAT6. GAP5. GA17. germ cell
+GAT6. GAP5. GA17. spermatogonium
+GAT6. GAP5. GA17. spermatocyte
+GAT6. GAP5. GA17. primary spermatocyte cyst
+GAT6. GAP5. GA17. primary spermatocyte
+GAT6. GAP5. GA17. Y Chromosome loop
+GAT6. GAP5. GA17. secondary spermatocyte
+GAT6. GAP5. GA17. spermatid
+GAT6. GAP5. GA17. Nebenkern
+GAT6. GAP5. GA17. protein body
+GAT6. GAP5. GA17. onion stage
+GAT6. GAP5. GA17. waste bag
+GAT6. GAP5. GA17. acroblast
+GAT6. GAP5. GA17. acrosomal granule
+GAT6. GAP5. GA17. axial complex
+GAT6. GAP5. GA17. axoneme /= axial filament
+GAT6. GAP5. GA17. Nebenkern derivative
+GAT6. GAP5. GA17. major mitochondrial derivative
+GAT6. GAP5. GA17. minor mitochondrial derivative
+GAT6. GAP5. GA17. spermatozoan
+
+GAT6. GAP5. GA17. cuticle
+GAT6. GAP5. GA17. cuticulin layer
+GAT6. GAP5. GA17. epicuticle
+GAT6. GAP5. GA17. exocuticle
+GAT6. GAP5. GA17. endocuticle
+GAT6. GAP5. GA17. procuticle
+GAT6. GAP5. GA17. assembly zone
+GAT6. GAP5. GA17. cuticular pore
+GAT6. GAP5. GA17. embryonic cuticle
+GAT6. GAP5. GA17. larval cuticle
+GAT6. GAP5. GA17. first instar larval cuticle
+GAT6. GAP5. GA17. second instar larval cuticle
+GAT6. GAP5. GA17. third instar larval cuticle
+GAT6. GAP5. GA17. puparium
+GAT6. GAP5. GA17. puparial operculum
+GAT6. GAP5. GA17. puparial opercular seam
+GAT6. GAP5. GA17. prepupal cuticle
+GAT6. GAP5. GA17. pupal cuticle
+GAT6. GAP5. GA17. adult cuticle
+GAT6. GAP5. GA17. exuvial fluid
+
+GAT6. GAP5. GA17. epithelium
+GAT6. GAP5. GA17. microvilli
+GAT6. GAP5. GA17. brush border
+GAT6. GAP5. GA17. epidermoblast
+GAT6. GAP5. GA17. epidermis
+GAT6. GAP5. GA17. X and XF cells [11]
+GAT6. GAP5. GA17. X cells
+GAT6. GAP5. GA17. prothoracic X cells
+GAT6. GAP5. GA17. mesothoracic X cells
+GAT6. GAP5. GA17. metathoracic X cells
+GAT6. GAP5. GA17. abdominal 1..7 X cells
+GAT6. GAP5. GA17. XF cells
+GAT6. GAP5. GA17. prothoracic XF cells
+GAT6. GAP5. GA17. mesothoracic XF cells
+GAT6. GAP5. GA17. metathoracic XF cells
+GAT6. GAP5. GA17. abdominal 1..7 XF cells
+
+GAT6. GAP5. GA17. imaginal discs
+GAT6. GAP5. GA17. adepithelial cell
+GAT6. GAP5. GA17. peripodial epithelium /= peripodial membrane
+GAT6. GAP5. GA17. peripodial stalk
+GAT6. GAP5. GA17. adepithelial cell lumen
+GAT6. GAP5. GA17. labial disc
+GAT6. GAP5. GA17. clypeo-labral disc
+GAT6. GAP5. GA17. eye-antennal disc
+GAT6. GAP5. GA17. morphogenetic furrow
+GAT6. GAP5. GA17. ommatidial cluster [65]
+GAT6. GAP5. GA17. five-cell ommatidial precursor
+GAT6. GAP5. GA17. immature eight-cell ommatidial cluster
+GAT6. GAP5. GA17. mature eight-cell ommatidial cluster
+GAT6. GAP5. GA17. two cone-cell ommatidial stage
+GAT6. GAP5. GA17. four cone-cell ommatidial stage
+GAT6. GAP5. GA17. dorsal thoracic discs
+GAT6. GAP5. GA17. dorsal prothoracic disc /= humeral disc
+GAT6. GAP5. GA17. dorsal mesothoracic disc /= notum, wing disc
+GAT6. GAP5. GA17. dorsal metathoracic disc /= haltere disc
+GAT6. GAP5. GA17. ventral thoracic discs /= leg discs
+GAT6. GAP5. GA17. ventral prothoracic disc /= 1st leg disc
+GAT6. GAP5. GA17. ventral mesothoracic disc /= 2nd leg disc
+GAT6. GAP5. GA17. ventral metathoracic disc /= 3rd leg disc
+GAT6. GAP5. GA17. genital disc
+GAT6. GAP5. GA17. histoblast
+GAT6. GAP5. GA17. anterior dorsal histoblast nest abdominal 1..7
+GAT6. GAP5. GA17. posterior dorsal histoblast nest abdominal 1..7
+GAT6. GAP5. GA17. ventral histoblast nest abdominal 1..7
+GAT6. GAP5. GA17. spiracular histoblast nest abdominal 1..7
+GAT6. GAP5. GA17. small cells associated with anterior dorsal
+histoblasts abdominal 1..7 [12]
+GAT6. GAP5. GA17. imaginal ring
+GAT6. GAP5. GA17. salivary gland imaginal ring
+GAT6. GAP5. GA17. foregut imaginal ring
+GAT6. GAP5. GA17. midgut imaginal island /= midgut imaginal histoblasts
+GAT6. GAP5. GA17. hindgut imaginal ring
+GAT6. GAP5. GA17. anal imaginal ring
+
+GAT6. GAP5. GA17. tracheal system [13]
+GAT6. GAP5. GA17. tracheal metamere 1..10 /= Tr1..Tr10 (tracheal
+hemisegment)
+GAT6. GAP5. GA17. trachea
+GAT6. GAP5. GA17. mestracheon
+GAT6. GAP5. GA17. taenidia
+GAT6. GAP5. GA17. taenidial fold
+GAT6. GAP5. GA17. tracheole
+GAT6. GAP5. GA17. tracheolar cell
+GAT6. GAP5. GA17. tracheal node
+GAT6. GAP5. GA17. tracheal node cell
+GAT6. GAP5. GA17. tracheal placode
+GAT6. GAP5. GA17. tracheal pit
+GAT6. GAP5. GA17. tracheocyte
+GAT6. GAP5. GA17. larval tracheocyte /= larval tracheal cell
+GAT6. GAP5. GA17. adult tracheocyte /= adult tracheal cell
+GAT6. GAP5. GA17. tracheal precursor cell
+GAT6. GAP5. GA17. imaginal tracheoblast /= tracheal histoblast
+
+GAT6. GAP5. GA17. embryonic/larval tracheal system
+GAT6. GAP5. GA17. embryonic/larval tracheal placodes
+GAT6. GAP5. GA17. mesothoracic tracheal placode /= tracheal placode 1
+GAT6. GAP5. GA17. metathoracic tracheal placode /= tracheal placode 2
+GAT6. GAP5. GA17. abdominal tracheal placode 1..8 /= tracheal placode 3..10
+GAT6. GAP5. GA17. posterior spiracle placode /= dorsal abdominal 8
+tracheal placode
+GAT6. GAP5. GA17. embryonic/larval tracheal pits
+GAT6. GAP5. GA17. mesothoracic tracheal pit /= tracheal pit 1
+GAT6. GAP5. GA17. metathoracic tracheal pit /= tracheal pit 2
+GAT6. GAP5. GA17. abdominal tracheal pit 1..8 /= tracheal pit 3..10
+GAT6. GAP5. GA17. posterior spiracle primordium /?= 11th tracheal pit,
+/?= abdominal 8 dorsal tracheal pit
+GAT6. GAP5. GA17. embryonic/larval tracheae
+GAT6. GAP5. GA17. larval dorsal trunk /= DT /= dorsal longitudinal trunk
+/= great lateral trunk
+GAT6. GAP5. GA17. dorsal trunk anterior branch 2..10 /= DTa2..DTa10
+GAT6. GAP5. GA17. dorsal trunk posterior branch 1..9 /= DTp1..DTp9
+GAT6. GAP5. GA17. lateral trunk /= LT /= ventral trunk /= lateral
+longitundinal trunk
+GAT6. GAP5. GA17. lateral trunk anterior branch 2..10 /= LTa2..LTa10
+GAT6. GAP5. GA17. lateral trunk posterior branch 1..9 /= LTp1..LTp9
+GAT6. GAP5. GA17. transverse connective 1..10 /= TC1..10 /= outer
+segmental trachea /= ventral segmental trachea /= a and b branches
+GAT6. GAP5. GA17. dorsal branch 1..10 /= DB1..DB10 /=inner segmental
+trachea /= dorsal trachea /= small dorsal commissure
+GAT6. GAP5. GA17. dorsal anastomosis 2..9 /= DA2..DA9
+GAT6. GAP5. GA17. dorsal group branch 1..10 /= DG1..DG10
+GAT6. GAP5. GA17. visceral branch 2 /= VB2 /= intestinal branch /= k branch
+GAT6. GAP5. GA17. visceral branch 4..8 /= VB4..VB8 /= intestinal branch
+/= k branch
+GAT6. GAP5. GA17. spiracular branch 1..10 /= SB1..SB10 /= spiracular trachea
+GAT6. GAP5. GA17. non-functional spiracular branch /=collapsed
+spiracular trachea /= Palmen's threads
+GAT6. GAP5. GA17. ganglionic branch 0..9 /= GB0..GB9 /= ganglionic
+trachea /= ventral ganglionic branch /= i branch
+GAT6. GAP5. GA17. ventral anastomosis 0..2 /= VA0..VA2 /= ventral commissure
+GAT6. GAP5. GA17. fat body branch 1..10 /= FB1..FB10 /= c branch
+GAT6. GAP5. GA17. lateral group branches 2..10
+GAT6. GAP5. GA17. lateral E branch 2..10 /= LE2..LE10
+GAT6. GAP5. GA17. lateral F branch 2..10 /= LF2..LF10 /= f branch
+GAT6. GAP5. GA17. lateral G branch 2..10 /= LG2..LG10 /= g branch
+GAT6. GAP5. GA17. lateral H branch 2..10 /= LH2..LH10 /= h branch
+GAT6. GAP5. GA17. tracheal branches of Tr1
+GAT6. GAP5. GA17. dorsal branch 1 /= DB1
+GAT6. GAP5. GA17. cerebropharyngeal branch /= CP /= dorsal cervical branch
+GAT6. GAP5. GA17. pharyngeal branch /= PB /= anterior branch of dorsal
+cervical branch
+GAT6. GAP5. GA17. cerebral branch /= CB /= posterior branch of dorsal
+cervical branch
+GAT6. GAP5. GA17. cerebral anastomosis /= CA /= dorsal cervical
+anastomosis /?= median anastomosis
+GAT6. GAP5. GA17. dorsal cephalic branch /= DC
+GAT6. GAP5. GA17. lateral cephalic branch /= LC
+GAT6. GAP5. GA17. ventral cephalic branch /= VC /= ventral cervical branch
+GAT6. GAP5. GA17. tracheal branches of Tr10
+GAT6. GAP5. GA17. dorsal branch 10 /= DB10
+GAT6. GAP5. GA17. lateroposterior branch /= LP
+GAT6. GAP5. GA17. caudal-hindgut branch /= CH
+GAT6. GAP5. GA17. caudal branch /= CaB
+GAT6. GAP5. GA17. hindgut branch /= HB
+GAT6. GAP5. GA17. embryonic/larval spiracle
+GAT6. GAP5. GA17. larval posterior spiracle
+GAT6. GAP5. GA17. stigmatophore
+GAT6. GAP5. GA17. spiracular chamber /= atrium
+GAT6. GAP5. GA17. spiracular plate
+GAT6. GAP5. GA17. spiracular opening /= spiracular cleft /= spiracular slit
+GAT6. GAP5. GA17. spiracular scar /= ecdysial scar
+GAT6. GAP5. GA17. spiracular filament
+GAT6. GAP5. GA17. spiracular hair
+GAT6. GAP5. GA17. spiracular sense organ /?= spiracular sensilla trichodea
+GAT6. GAP5. GA17. posterior spiracle retractor muscle
+GAT6. GAP5. GA17. filzkorper \= felt chamber
+GAT6. GAP5. GA17. posterior spiracular gland
+GAT6. GAP5. GA17. posterior spiracular duct
+GAT6. GAP5. GA17. larval anterior spiracle
+GAT6. GAP5. GA17. papilla /= protruding branches
+GAT6. GAP5. GA17. anterior spiracular gland
+GAT6. GAP5. GA17. anterior spiracle retractor muscle
+GAT6. GAP5. GA17. anterior spiracular scar /= ecdysial scar
+GAT6. GAP5. GA17. non-functional larval spiracle 2..9
+
+GAT6. GAP5. GA17. pupal tracheal system
+GAT6. GAP5. GA17. coiled tracheole
+GAT6. GAP5. GA17. pupal tracheae
+GAT6. GAP5. GA17. pupal dorsal trunk
+GAT6. GAP5. GA17. pupal lateral trunk
+GAT6. GAP5. GA17. pupal transverse connective 1..5
+GAT6. GAP5. GA17. pupal cerebropharyngeal branch
+GAT6. GAP5. GA17. pupal cerebral branch
+GAT6. GAP5. GA17. pupal cerebral anastomosis
+GAT6. GAP5. GA17. pupal pharyngeal branch
+GAT6. GAP5. GA17. pupal dorsal branch 1..5
+GAT6. GAP5. GA17. pupal spiracular branch 1..5
+GAT6. GAP5. GA17. pupal abdominal tracheae
+GAT6. GAP5. GA17. pupal wing branch
+GAT6. GAP5. GA17. pupal haltere branch
+GAT6. GAP5. GA17. pupal prothoracic leg trachea /= leg branch 1
+GAT6. GAP5. GA17. pupal mesothoracic leg trachea /= leg branch 2
+GAT6. GAP5. GA17. pupal metathoracic leg trachea /= leg branch 3
+GAT6. GAP5. GA17. pupal ganglionic branch 0..2
+GAT6. GAP5. GA17. pupal ventral anastomosis 0..2
+GAT6. GAP5. GA17. pupal spiracle
+GAT6. GAP5. GA17. anterior pupal spiracle
+GAT6. GAP5. GA17. non-functional pupal spiracle 2..5
+GAT6. GAP5. GA17. air buble prepupal air bubble
+
+GAT6. GAP5. GA17. adult tracheal system
+GAT6. GAP5. GA17. adult tracheae
+GAT6. GAP5. GA17. adult dorsal trunk
+GAT6. GAP5. GA17. adult lateral trunk
+GAT6. GAP5. GA17. transverse connective 1..9 /= dorsal segmental tracheae
+GAT6. GAP5. GA17. dorsal branch 1..9
+GAT6. GAP5. GA17. prothoracic dorsal branch /= prothoracic dorsal commissure
+GAT6. GAP5. GA17. metathoracic dorsal branch /= metathoracic dorsal
+commissure
+GAT6. GAP5. GA17. abdominal dorsal branch 3..9 /= abdominal dorsal
+commissure
+GAT6. GAP5. GA17. ganglionic branch 0..2
+GAT6. GAP5. GA17. ventral anastomosis 0..2 /= ventral commissures
+GAT6. GAP5. GA17. visceral branches /= visceral trachea
+GAT6. GAP5. GA17. spiracular branch 1 ?
+GAT6. GAP5. GA17. spiracular branch 2 ?
+GAT6. GAP5. GA17. spiracular branch 3..9 /= abdominal spiracular trachea
+1..7
+GAT6. GAP5. GA17. dorsal superficial trachea 4..9 9?
+GAT6. GAP5. GA17. ventral superficial trachea 4..9 9?
+GAT6. GAP5. GA17. wing branch
+GAT6. GAP5. GA17. haltere branch
+GAT6. GAP5. GA17. prothoracic leg trachea /= leg branch 1
+GAT6. GAP5. GA17. mesothoracic leg trachea /= leg branch 2
+GAT6. GAP5. GA17. metathoracic leg trachea /= leg branch 3
+GAT6. GAP5. GA17. cervical trachea /?= cerebropharygeal /= cerebral branch
+GAT6. GAP5. GA17. labial trachea /?= pharyngeal branch
+GAT6. GAP5. GA17. maxillary palpus trachea
+GAT6. GAP5. GA17. mediosternal trachea
+GAT6. GAP5. GA17. cibarial muscle trachea
+GAT6. GAP5. GA17. tracheal air sac
+GAT6. GAP5. GA17. abdominal air sac
+GAT6. GAP5. GA17. antennal air sac
+GAT6. GAP5. GA17. anteroscutal air sac
+GAT6. GAP5. GA17. lateroscutal air sac
+GAT6. GAP5. GA17. medioscutal air sac
+GAT6. GAP5. GA17. dorsal head air sac
+GAT6. GAP5. GA17. frontal head air sac
+GAT6. GAP5. GA17. hypopleural air sac
+GAT6. GAP5. GA17. notopleural air sac
+GAT6. GAP5. GA17. parenteric air sac
+GAT6. GAP5. GA17. postgenal air sac
+GAT6. GAP5. GA17. postnotal air sac
+GAT6. GAP5. GA17. propleural air sac
+GAT6. GAP5. GA17. postocular air sac
+GAT6. GAP5. GA17. pleural air sac
+GAT6. GAP5. GA17. scutellar air sac
+GAT6. GAP5. GA17. sternopleural air sac
+GAT6. GAP5. GA17. metathoracic air sac
+GAT6. GAP5. GA17. adult spiracle
+GAT6. GAP5. GA17. adult spiracle 1..9
+GAT6. GAP5. GA17. adult mesothoracic spiracle
+GAT6. GAP5. GA17. adult metathoracic spiracle
+GAT6. GAP5. GA17. adult abdominal spiracle 3..9
+GAT6. GAP5. GA17. peritreme /= rim
+GAT6. GAP5. GA17. lever
+
+GAT6. GAP5. GA17. gut
+GAT6. GAP5. GA17. embryonic gut [14] [15]
+GAT6. GAP5. GA17. stomodeum
+GAT6. GAP5. GA17. midgut primordium
+GAT6. GAP5. GA17. anterior midgut primordium
+GAT6. GAP5. GA17. posterior midgut primordium
+GAT6. GAP5. GA17. proctodeum
+GAT6. GAP5. GA17. hindgut primordium
+GAT6. GAP5. GA17. Malpighian tubule primordium
+GAT6. GAP5. GA17. midgut
+GAT6. GAP5. GA17. large basophilic midgut cells
+GAT6. GAP5. GA17. progenitor midgut cells
+GAT6. GAP5. GA17. midgut chambers
+GAT6. GAP5. GA17. midgut chamber 1..4
+GAT6. GAP5. GA17. midgut constrictions
+GAT6. GAP5. GA17. midgut constriction 1..4
+
+GAT6. GAP5. GA17. larval alimentary canal [14] [15]
+GAT6. GAP5. GA17. larval mouth
+GAT6. GAP5. GA17. atrium
+GAT6. GAP5. GA17. cephalopharyngeal skeleton /= mouth parts [16] [17]
+GAT6. GAP5. GA17. mouth hooks /= mandible
+GAT6. GAP5. GA17. dental sclerite /= ectostomal sclerite
+GAT6. GAP5. GA17. epipharyngeal sclerite /= epistomal sclerite
+GAT6. GAP5. GA17. hypostomal sclerite /= H-piece
+GAT6. GAP5. GA17. pharyngeal sclerite
+GAT6. GAP5. GA17. lateral process /= lateralgrate
+GAT6. GAP5. GA17. ventral wing /= ventral cornua
+GAT6. GAP5. GA17. dorsal wing /= dorsal cornua
+GAT6. GAP5. GA17. vertical bridge /= vertical plate
+GAT6. GAP5. GA17. laticed process /= dorsal bridge
+GAT6. GAP5. GA17. larval tentorium
+GAT6. GAP5. GA17. dorsal pouch
+GAT6. GAP5. GA17. dorsal fold
+GAT6. GAP5. GA17. larval labrum /= median tooth
+GAT6. GAP5. GA17. larval pharynx
+GAT6. GAP5. GA17. pharyngeal bars /= T-bars
+GAT6. GAP5. GA17. larval epipharynx
+GAT6. GAP5. GA17. larval hypopharynx
+GAT6. GAP5. GA17. larval oesophagus /= larval esophagus
+GAT6. GAP5. GA17. larval foregut
+GAT6. GAP5. GA17. alveolar cell
+GAT6. GAP5. GA17. proventriculus
+GAT6. GAP5. GA17. inner layer of proventriculus
+GAT6. GAP5. GA17. recurrent layer of proventriculus
+GAT6. GAP5. GA17. outer layer of proventriculus
+GAT6. GAP5. GA17. larval peritrophic membrane
+GAT6. GAP5. GA17. peritrophic mill
+GAT6. GAP5. GA17. gastric caecum
+GAT6. GAP5. GA17. larval salivary gland
+GAT6. GAP5. GA17. larval salivary gland placode
+GAT6. GAP5. GA17. larval salivary gland duct
+GAT6. GAP5. GA17. larval salivary gland common duct
+GAT6. GAP5. GA17. larval larval midgut
+GAT6. GAP5. GA17. anterior larval midgut
+GAT6. GAP5. GA17. mid larval midgut
+GAT6. GAP5. GA17. posterior larval midgut
+GAT6. GAP5. GA17. specialised larval midgut cells
+GAT6. GAP5. GA17. cuprophylic cell /= calycocyte
+GAT6. GAP5. GA17. midgut interstitial cell
+GAT6. GAP5. GA17. adult midgut precursor cell /= spindle cell
+GAT6. GAP5. GA17. iron accumulating cell
+GAT6. GAP5. GA17. larval hindgut
+GAT6. GAP5. GA17. larval rectum
+GAT6. GAP5. GA17. larval anus
+GAT6. GAP5. GA17. anal pad /= anal organ
+GAT6. GAP5. GA17. anal slit
+
+GAT6. GAP5. GA17. Malpighian tubule
+GAT6. GAP5. GA17. posterior Malpighian tubule
+GAT6. GAP5. GA17. anterior Malpighian tubule
+GAT6. GAP5. GA17. Malpighian tubule segments
+GAT6. GAP5. GA17. initial segment of Malpighian tubule
+GAT6. GAP5. GA17. transitional segment of Malpighian tubule
+GAT6. GAP5. GA17. main segment of Malpighian tubule
+GAT6. GAP5. GA17. ureter
+GAT6. GAP5. GA17. specialised Malpighian tubule cells
+GAT6. GAP5. GA17. Malpighian tubule tip cell
+GAT6. GAP5. GA17. Malpighian tubule Type I cell
+GAT6. GAP5. GA17. Malpighian tubule Type II cell
+
+GAT6. GAP5. GA17. excretory structures
+GAT6. GAP5. GA17. yellow body
+GAT6. GAP5. GA17. meconium
+
+GAT6. GAP5. GA17. pupal/adult alimentary canal [6]
+GAT6. GAP5. GA17. labellar gland
+GAT6. GAP5. GA17. adult epipharynx
+GAT6. GAP5. GA17. adult hypopharynx
+GAT6. GAP5. GA17. salivary pump /= salivary valve
+GAT6. GAP5. GA17. adult salivary gland
+GAT6. GAP5. GA17. adult salivary gland duct
+GAT6. GAP5. GA17. adult common salivary gland duct
+GAT6. GAP5. GA17. alimentary canal
+GAT6. GAP5. GA17. adult mouth
+GAT6. GAP5. GA17. adult oesophagus /= adult esophagus
+GAT6. GAP5. GA17. oesophageal valve /= esophageal valve
+GAT6. GAP5. GA17. crop
+GAT6. GAP5. GA17. cardia /= proventriculus
+GAT6. GAP5. GA17. cardial valve /= cardiac valve /= stomodaeal valve
+GAT6. GAP5. GA17. ventriculus /= stomach /= mesenteron
+GAT6. GAP5. GA17. peritrophic membrane
+GAT6. GAP5. GA17. anterior intestine
+GAT6. GAP5. GA17. pyrolic region
+GAT6. GAP5. GA17. adult rectum /= posterior intestine
+GAT6. GAP5. GA17. adult rectal valve
+GAT6. GAP5. GA17. adult rectal papilla
+GAT6. GAP5. GA17. adult rectal sphincter
+GAT6. GAP5. GA17. adult anus
+
+GAT6. GAP5. GA17. circulatory system
+GAT6. GAP5. GA17. larval circulatory system [19]
+GAT6. GAP5. GA17. alary cell [64]
+GAT6. GAP5. GA17. larval dorsal vessel
+GAT6. GAP5. GA17. larval aorta
+GAT6. GAP5. GA17. larval heart
+GAT6. GAP5. GA17. larval cardiovascular gland
+GAT6. GAP5. GA17. larval ostia
+GAT6. GAP5. GA17. larval ostia 1..3
+GAT6. GAP5. GA17. cardioblast cell /= myocardial cell
+GAT6. GAP5. GA17. periligament cells [11]
+GAT6. GAP5. GA17. lymph gland [21] [22]
+GAT6. GAP5. GA17. anterior lymph gland pair
+GAT6. GAP5. GA17. middle lymph gland pair
+GAT6. GAP5. GA17. posterior lymph gland pair
+GAT6. GAP5. GA17. larval hemocoel
+GAT6. GAP5. GA17. larval hemolymph
+GAT6. GAP5. GA17. larval hemocyte [23]
+GAT6. GAP5. GA17. plasmatocyte
+GAT6. GAP5. GA17. macrophage
+GAT6. GAP5. GA17. lamellocyte
+GAT6. GAP5. GA17. podocyte
+GAT6. GAP5. GA17. procrystal cell
+GAT6. GAP5. GA17. crystal cell
+GAT6. GAP5. GA17. prohemocyte
+GAT6. GAP5. GA17. polygonal cell
+GAT6. GAP5. GA17. larval garland organ
+GAT6. GAP5. GA17. larval garland cell /= nephrocyte
+GAT6. GAP5. GA17. larval pericardial cell
+GAT6. GAP5. GA17. larval oenocyte
+GAT6. GAP5. GA17. abdominal 1..7 larval oenocyte group
+GAT6. GAP5. GA17. melanotic mass /= melanotic tumor /= pseudotumor
+
+GAT6. GAP5. GA17. adult circulatory system [6] [19]
+GAT6. GAP5. GA17. adult dorsal vessel
+GAT6. GAP5. GA17. adult aorta
+GAT6. GAP5. GA17. adult heart
+GAT6. GAP5. GA17. adult aortic funnel
+GAT6. GAP5. GA17. heart chamber
+GAT6. GAP5. GA17. chamber 1..4
+GAT6. GAP5. GA17. adult ostia
+GAT6. GAP5. GA17. adult ostia 1..4
+GAT6. GAP5. GA17. ostiolar valve
+GAT6. GAP5. GA17. ostiolar valve 1..4
+GAT6. GAP5. GA17. dorsal diaphragm
+GAT6. GAP5. GA17. terminal opening
+GAT6. GAP5. GA17. pulsatile organ
+GAT6. GAP5. GA17. scutellar pulsatile organ
+GAT6. GAP5. GA17. frontal pulsatile organ
+GAT6. GAP5. GA17. tibial pulsatile organ
+GAT6. GAP5. GA17. wing pulsatile organs
+GAT6. GAP5. GA17. wing pulsatile organ 1..5
+GAT6. GAP5. GA17. adult garland cell /= nephrocyte
+GAT6. GAP5. GA17. adult pericardial cell
+GAT6. GAP5. GA17. adult oenocyte
+GAT6. GAP5. GA17. dorsal adult oenocyte bands
+GAT6. GAP5. GA17. dorsal adult oenocyte band 1..7
+GAT6. GAP5. GA17. transverse adult oenocyte bands
+GAT6. GAP5. GA17. transverse adult oenocyte band 1..7
+GAT6. GAP5. GA17. ventral adult oenocyte bands
+GAT6. GAP5. GA17. ventral adult oenocyte band 2..6
+
+GAT6. GAP5. GA17. fat body [18]
+GAT6. GAP5. GA17. larval fat body
+GAT6. GAP5. GA17. larval fat body region 1
+GAT6. GAP5. GA17. larval fat body region 2'
+GAT6. GAP5. GA17. larval fat body region 2''
+GAT6. GAP5. GA17. larval fat body region 3'
+GAT6. GAP5. GA17. larval fat body region 3''
+GAT6. GAP5. GA17. larval fat body region 4
+GAT6. GAP5. GA17. larval fat body region 5
+GAT6. GAP5. GA17. larval fat body region 6
+
+GAT6. GAP5. GA17. adult fat body
+GAT6. GAP5. GA17. peripheral adult fat mass
+GAT6. GAP5. GA17. deep adult fat mass
+GAT6. GAP5. GA17. pericardial adult fat mass
+GAT6. GAP5. GA17. abdominal adult fat mass
+
+GAT6. GAP5. GA17. endocrine system
+GAT6. GAP5. GA17. ring gland
+GAT6. GAP5. GA17. prothoracic gland
+GAT6. GAP5. GA17. larval corpus allatum
+GAT6. GAP5. GA17. corpus allatum placode
+GAT6. GAP5. GA17. larval corpus cardiacum
+GAT6. GAP5. GA17. dorsal neurohemal organ /= dorsal median cell
+GAT6. GAP5. GA17. adult corpus allatum
+GAT6. GAP5. GA17. adult corpus cardiacum
+
+GAT6. GAP5. GA17. muscle
+GAT6. GAP5. GA17. muscle classes
+GAT6. GAP5. GA17. somatic muscle
+GAT6. GAP5. GA17. visceral muscle
+GAT6. GAP5. GA17. muscle cells
+GAT6. GAP5. GA17. myoblast
+GAT6. GAP5. GA17. muscle founder cell
+GAT6. GAP5. GA17. fusion competent cell
+GAT6. GAP5. GA17. muscle fiber
+GAT6. GAP5. GA17. myofibril
+GAT6. GAP5. GA17. sarcomere
+GAT6. GAP5. GA17. A band
+GAT6. GAP5. GA17. Z disc
+GAT6. GAP5. GA17. I band
+GAT6. GAP5. GA17. thick filament
+GAT6. GAP5. GA17. thin filament
+GAT6. GAP5. GA17. apodeme
+GAT6. GAP5. GA17. tonofibrilla
+
+GAT6. GAP5. GA17. larval musculature [24] [25] [1] [27]
+GAT6. GAP5. GA17. hypodermal muscles of head
+GAT6. GAP5. GA17. dorsal prothoracic pharyngeal muscle
+GAT6. GAP5. GA17. ventral prothoracic pharyngeal muscle
+GAT6. GAP5. GA17. pharyngeal muscle
+GAT6. GAP5. GA17. hypodermal muscles of prothorax
+GAT6. GAP5. GA17. dorsal mouthparts muscle 1 /= DM1
+GAT6. GAP5. GA17. dorsal mouthparts muscle 2 /= DM2
+GAT6. GAP5. GA17. ventral mouthparts muscle 1 /= VM1
+GAT6. GAP5. GA17. prothoracic dorsal oblique muscle 2 /= DO2 /= dorsal
+external oblique muscle, deo1
+GAT6. GAP5. GA17. prothoracic dorsal oblique muscle 1 /= DO1 /= dorsal
+external oblique muscle, deo2
+GAT6. GAP5. GA17. prothoracic dorsal oblique muscle 3 /= DO3 /= dorsal
+internal oblique muscle, dio1
+GAT6. GAP5. GA17. prothoracic dorsal oblique muscle 4 /= DO4 /= dorsal
+internal oblique muscle, dio2
+GAT6. GAP5. GA17. prothoracic ventral transverse muscle 1 /= VT1 /=
+pleural external transverse muscle, pet1
+GAT6. GAP5. GA17. prothoracic lateral acute muscle 1 /= LA1 /= pleural
+external transverse muscle, pet2
+GAT6. GAP5. GA17. prothoracic lateral acute muscle 2 /= LA2
+GAT6. GAP5. GA17. prothoracic ventral intersegmental muscle 2 /= VS2 /=
+prothoracic-metathoracic muscle, pmm1
+GAT6. GAP5. GA17. prothoracic ventral intersegmental muscle 3 /= VS3 /=
+prothoracic-metathoracic muscle, pmm2
+GAT6. GAP5. GA17. prothoracic ventral intersegmental muscle 4 /= VS4 /=
+prothoracic-metathoracic muscle, pmm3
+GAT6. GAP5. GA17. prothoracic ventral intersegmental muscle 4 /= VS5
+GAT6. GAP5. GA17. hypodermal muscles of mesothorax
+GAT6. GAP5. GA17. mesothoracic dorsal acute muscle 4 /= DA4 /= dorsal
+internal oblique muscle, dio1
+GAT6. GAP5. GA17. mesothoracic dorsal acute muscle 3 /= DA3 /= dorsal
+internal oblique muscle, dio2
+GAT6. GAP5. GA17. mesothoracic dorsal acute muscle 2 /= DA2 /= dorsal
+internal oblique muscle, dio3
+GAT6. GAP5. GA17. mesothoracic dorsal acute muscle 1 /= DA1 /= dorsal
+internal oblique muscle, dio4
+GAT6. GAP5. GA17. mesothoracic dorsal oblique muscle 4 /= DO4 /= dorsal
+external oblique muscle, deo1
+GAT6. GAP5. GA17. mesothoracic dorsal oblique muscle 3 /= DO3 /= dorsal
+external oblique muscle, deo2
+GAT6. GAP5. GA17. mesothoracic dorsal oblique muscle 2 /= DO2 /= dorsal
+external oblique muscle, deo3
+GAT6. GAP5. GA17. mesothoracic dorsal oblique muscle 1 /= DO1 /= dorsal
+external oblique muscle, deo4
+GAT6. GAP5. GA17. mesothoracic segmental border muscle /= SBM /= pleural
+internal transverse muscle, pit
+GAT6. GAP5. GA17. mesothoracic lateral transverse muscle 1 /= LT1 /=
+pleural external transverse muscle, pet1
+GAT6. GAP5. GA17. mesothoracic lateral transverse muscle 2 /= LT2 /=
+pleural external transverse muscle, pet2
+GAT6. GAP5. GA17. mesothoracic lateral transverse muscle 3 /= LT3 /=
+pleural external transverse muscle, pet3
+GAT6. GAP5. GA17. mesothoracic lateral transverse muscle 4 /= LT4 /=
+pleural external transverse muscle, pet4
+GAT6. GAP5. GA17. mesothoracic lateral longitudinal muscle 1 /= LL1 /=
+pleural longitudinal muscle, pl1
+GAT6. GAP5. GA17. mesothoracic lateral oblique muscle 1 /= LO1 /=
+pleural external oblique muscle, peo1
+GAT6. GAP5. GA17. mesothoracic ventral oblique muscle 1 /= VO1 /=
+ventral external oblique muscle, veo1
+GAT6. GAP5. GA17. mesothoracic ventral oblique muscle 2 /= VO2 /=
+ventral external oblique muscle, veo2
+GAT6. GAP5. GA17. mesothoracic ventral longitudinal muscle 1 /= VL1
+GAT6. GAP5. GA17. mesothoracic ventral longitudinal muscle 2 /= VL2
+GAT6. GAP5. GA17. mesothoracic ventral longitudinal muscle 3 /= VL3
+GAT6. GAP5. GA17. hypodermal muscles of metathorax
+GAT6. GAP5. GA17. metathoracic dorsal acute muscle 4 /= DA4 /= dorsal
+internal oblique muscle, dio2
+GAT6. GAP5. GA17. metathoracic dorsal acute muscle 3 /= DA3 /= dorsal
+internal oblique muscle, dio3
+GAT6. GAP5. GA17. metathoracic dorsal acute muscle 2 /= DA2 /= dorsal
+internal oblique muscle, dio4
+GAT6. GAP5. GA17. metathoracic dorsal acute muscle 1 /= DA1 /= dorsal
+internal oblique muscle, dio5
+GAT6. GAP5. GA17. metathoracic dorsal oblique muscle 3 /= DO3 /= dorsal
+external oblique muscle, deo1
+GAT6. GAP5. GA17. metathoracic dorsal oblique muscle 2 /= DO2 /= dorsal
+external oblique muscle, deo2
+GAT6. GAP5. GA17. metathoracic dorsal oblique muscle 1 /= DO1 /= dorsal
+external oblique muscle, deo3
+GAT6. GAP5. GA17. metathoracic segmental border muscle /= SBM /= pleural
+internal transverse muscle, pit
+GAT6. GAP5. GA17. metathoracic lateral transverse muscle 1 /= LT1 /=
+pleural external transverse muscle, pet1
+GAT6. GAP5. GA17. metathoracic lateral transverse muscle 2 /= LT2 /=
+pleural external transverse muscle, pet2
+GAT6. GAP5. GA17. metathoracic lateral transverse muscle 3 /= LT3 /=
+pleural external transverse muscle, pet3
+GAT6. GAP5. GA17. metathoracic lateral transverse muscle 4 /= LT4 /=
+pleural external transverse muscle, pet4
+GAT6. GAP5. GA17. metathoracic lateral longitudinal muscle 1 /= LL1 /=
+pleural longitudinal muscle, pl1
+GAT6. GAP5. GA17. metathoracic lateral oblique muscle 1 /= LO1 /=
+pleural external oblique muscle, peo1
+GAT6. GAP5. GA17. metathoracic dorsal oblique muscle 4 /= DO4 /= pleural
+external oblique muscle, peo2
+GAT6. GAP5. GA17. metathoracic ventral oblique muscle 1 /= VO1 /=
+ventral internal oblique muscle, vio1
+GAT6. GAP5. GA17. metathoracic ventral oblique muscle 2 /= VO2 /=
+ventral internal oblique muscle, vio2
+GAT6. GAP5. GA17. metathoracic ventral oblique muscle 3 /= VO3 /=
+ventral internal oblique muscle, vio3
+GAT6. GAP5. GA17. metathoracic ventral acute muscle 1 /= VA1 /= ventral
+metathoracic-abdominal muscle, vmam
+GAT6. GAP5. GA17. metathoracic ventral longitudinal muscle 1 /= VL1 /=
+ventral internal longitudinal muscle 32
+GAT6. GAP5. GA17. metathoracic ventral longitudinal muscle 2 /= VL2 /=
+ventral internal longitudinal muscle 33
+GAT6. GAP5. GA17. metathoracic ventral longitudinal muscle 3 /= VL3 /=
+ventral internal longitudinal muscle 34
+GAT6. GAP5. GA17. metathoracic ventral longitudinal muscle 4 /= VL4 /=
+ventral internal longitudinal muscle 35
+GAT6. GAP5. GA17. hypodermal muscles of abdominal 1
+GAT6. GAP5. GA17. abdominal 1 dorsal acute muscle 1 /= DA1 /= dorsal
+internal oblique muscle 1 /= dio4
+GAT6. GAP5. GA17. abdominal 1 dorsal acute muscle 2 /= DA2 /= dorsal
+internal oblique muscle 2 /= dio3
+GAT6. GAP5. GA17. abdominal 1 dorsal acute muscle 3 /= DA3 /= dorsal
+internal oblique muscle 3 /= dio2
+GAT6. GAP5. GA17. abdominal 1 lateral longitudinal muscle 1 /= LL1 /=
+dorso-lateral internal longitudinal muscle 4 /= dio1
+GAT6. GAP5. GA17. abdominal 1 lateral oblique muscle 1 /= LO1 /= pleural
+internal oblique muscle 5 /= pio1
+GAT6. GAP5. GA17. abdominal 1 ventral longitudinal muscle 3 /= VL3 /=
+ventral internal longitudinal muscle 6 /= vio2
+GAT6. GAP5. GA17. abdominal 1 ventral longitudinal muscle 4 /= VL4 /=
+ventral internal longitudinal muscle 7 /= vio3
+GAT6. GAP5. GA17. abdominal 1 segment border muscle /= SBM /= pleural
+internal transverse muscle 8 /= pit
+GAT6. GAP5. GA17. abdominal 1 dorsal oblique muscle 1 /= DO1 /= dorsal
+external oblique muscle 9 /= deo4
+GAT6. GAP5. GA17. abdominal 1 dorsal oblique muscle 2 /= DO2 /= dorsal
+external oblique muscle 10 /= deo3
+GAT6. GAP5. GA17. abdominal 1 dorsal oblique muscle 3 /= DO3 /= dorsal
+external oblique muscle 11 /= deo2
+GAT6. GAP5. GA17. abdominal 1 ventral longitudinal muscle 1 /= VL1 /=
+pleural external longitudinal muscle 12 /= pl1
+GAT6. GAP5. GA17. abdominal 1 ventral longitudinal muscle 2 /= VL2 /=
+pleural external longitudinal muscle 13 /= vio1
+GAT6. GAP5. GA17. abdominal 1 ventral oblique muscle 1 /= VO1 /= ventral
+external oblique muscle 14 /= veo1 /= muscle 14.1
+GAT6. GAP5. GA17. abdominal 1 ventral oblique muscle 2 /= VO2 /= ventral
+external oblique muscle 30 /= muscle 14.2
+GAT6. GAP5. GA17. abdominal 1 ventral oblique muscle 4 /= VO4 /= ventral
+external oblique muscle 15 /= veo2
+GAT6. GAP5. GA17. abdominal 1 ventral oblique muscle 5 /= VO5 /= ventral
+external oblique muscle 16 /= veo3
+GAT6. GAP5. GA17. abdominal 1 dorsal transverse muscle 1 /= DT1 /=
+dorso-lateral external oblique muscle 18 /= pet5
+GAT6. GAP5. GA17. abdominal 1 dorsal oblique muscle 4 /= DO4 /=
+dorso-lateral external oblique muscle 19 /= pet4
+GAT6. GAP5. GA17. abdominal 1 dorsal oblique muscle 5 /= DO5 /=
+dorso-lateral external longitudinal muscle 20 /= deo1
+GAT6. GAP5. GA17. abdominal 1 lateral transverse muscle 1 /= LT1 /=
+pleural external transverse muscle 21 /= pet1
+GAT6. GAP5. GA17. abdominal 1 lateral transverse muscle 2 /= LT2 /=
+pleural external transverse muscle 22 /= pet2
+GAT6. GAP5. GA17. abdominal 1 lateral transverse muscle 3 /= LT3 /=
+pleural external transverse muscle 23 /= pet3
+GAT6. GAP5. GA17. abdominal 1 lateral transverse muscle 4 /= LT4 /=
+lateral external transverse muscle 24
+GAT6. GAP5. GA17. abdominal 1 ventral acute muscle 1 /= VA1 /=
+ventro-lateral external oblique muscle 26 /= vs1
+GAT6. GAP5. GA17. abdominal 1 ventral acute muscle 2 /= VA2 /=
+ventro-lateral external oblique muscle 27 /= vs2
+GAT6. GAP5. GA17. abdominal 1 ventral oblique muscle 3 /= VO3 /= ventral
+external oblique muscle 28 /= veo3
+GAT6. GAP5. GA17. abdominal 1 ventral acute muscle 3 /= VA3 /= ventral
+external oblique muscle 29 /= ventral superficial muscle 1 /= vs1
+GAT6. GAP5. GA17. abdominal 1 ventral internal muscle 1 /= VI1 /=
+ventral internal longitudinal mouthparts associated muscle 31
+GAT6. GAP5. GA17. hypodermal muscles of abdominal 2..7
+GAT6. GAP5. GA17. abdominal 2..7 dorsal acute muscle 1 /= DA1 /= dorsal
+internal oblique muscle 1 /= dio4
+GAT6. GAP5. GA17. abdominal 2..7 dorsal acute muscle 2 /= DA2 /= dorsal
+internal oblique muscle 2 /= dio3
+GAT6. GAP5. GA17. abdominal 2..7 dorsal acute muscle 3 /= DA3 /= dorsal
+internal oblique muscle 3 /= dio2
+GAT6. GAP5. GA17. abdominal 2..7 lateral longitudinal muscle 1 /= LL1 /=
+dorso-lateral internal longitudinal muscle 4 /= dio1
+GAT6. GAP5. GA17. abdominal 2..7 lateral oblique muscle 1 /= LO1 /=
+pleural internal oblique muscle 5 /= pio1
+GAT6. GAP5. GA17. abdominal 2..7 ventral longitudinal muscle 3 /= VL3 /=
+ventral internal longitudinal muscle 6 /= vio2
+GAT6. GAP5. GA17. abdominal 2..7 ventral longitudinal muscle 4 /= VL4 /=
+ventral internal longitudinal muscle 7 /= vio3
+GAT6. GAP5. GA17. abdominal 2..7 segment border muscle /= SBM /= pleural
+internal transverse muscle 8 /= pit
+GAT6. GAP5. GA17. abdominal 2..7 dorsal oblique muscle 1 /= DO1 /=
+dorsal external oblique muscle 9 /= deo4
+GAT6. GAP5. GA17. abdominal 2..7 dorsal oblique muscle 2 /= DO2 /=
+dorsal external oblique muscle 10 /= deo3
+GAT6. GAP5. GA17. abdominal 2..7 dorsal oblique muscle 3 /= DO3 /=
+dorsal external oblique muscle 11 /= deo2
+GAT6. GAP5. GA17. abdominal 2..7 ventral longitudinal muscle 1 /= VL1 /=
+pleural external longitudinal muscle 12 /= pl1
+GAT6. GAP5. GA17. abdominal 2..7 ventral longitudinal muscle 2 /= VL2 /=
+pleural external longitudinal muscle 13 /= vio1
+GAT6. GAP5. GA17. abdominal 2..7 ventral oblique muscle 1 /= VO1 /=
+ventral external oblique muscle 14 /= veo1 /= 14.1
+GAT6. GAP5. GA17. abdominal 2..7 ventral oblique muscle 2 /= VO2 /=
+ventral external oblique muscle 30 /= 14.2
+GAT6. GAP5. GA17. abdominal 2..7 ventral oblique muscle 4 /= VO4 /=
+ventral external oblique muscle 15 /= veo2
+GAT6. GAP5. GA17. abdominal 2..7 ventral oblique muscle 5 /= VO5 /=
+ventral external oblique muscle 16 /= veo3
+GAT6. GAP5. GA17. abdominal 2..7 ventral oblique muscle 6 /= VO6 /=
+ventral external oblique muscle 17 /= veo5
+GAT6. GAP5. GA17. abdominal 2..7 dorsal transverse muscle 1 /= DT1 /=
+dorso-lateral external oblique muscle 18 /= pet5
+GAT6. GAP5. GA17. abdominal 2..7 dorsal oblique muscle 4 /= DO4 /=
+dorso-lateral external oblique muscle 19 /= pet4
+GAT6. GAP5. GA17. abdominal 2..7 dorsal oblique muscle 5 /= DO5 /=
+dorso-lateral external longitudinal muscle 20 /= deo1
+GAT6. GAP5. GA17. abdominal 2..7 lateral transverse muscle 1 /= LT1 /=
+pleural external transverse muscle 21 /= pet1
+GAT6. GAP5. GA17. abdominal 2..7 lateral transverse muscle 2 /= LT2 /=
+pleural external transverse muscle 22 /= pet2
+GAT6. GAP5. GA17. abdominal 2..7 lateral transverse muscle 3 /= LT3 /=
+pleural external transverse muscle 23 /= pet3
+GAT6. GAP5. GA17. abdominal 2..7 lateral transverse muscle 4 /= LT4 /=
+lateral external transverse muscle 24
+GAT6. GAP5. GA17. abdominal 2..7 ventral transverse muscle 1 /= VT1 /=
+ventral external oblique muscle 25
+GAT6. GAP5. GA17. abdominal 2..7 ventral acute muscle 1 /= VA1 /=
+ventro-lateral external oblique muscle 26 /= vs1
+GAT6. GAP5. GA17. abdominal 2..7 ventral acute muscle 2 /= VA2 /=
+ventro-lateral external oblique muscle 27 /= vs2
+GAT6. GAP5. GA17. abdominal 2..7 ventral oblique muscle 3 /= VO3 /=
+ventral external oblique muscle 28 /= veo3
+GAT6. GAP5. GA17. abdominal 2..7 ventral acute muscle 3 /= VA3 /=
+ventral external acute muscle 29 /= ventral superficial muscle 1, vs1
+GAT6. GAP5. GA17. hypodermal muscles of abdominal 8 and 9
+GAT6. GAP5. GA17. abdominal 8..9 dorsal oblique muscle 1 /= DO1 /=
+dorsal external oblique muscle, deo1
+GAT6. GAP5. GA17. abdominal 8..9 dorsal transverse muscle 1 /= DT1 /=
+dorsal internal oblique muscle, dio1
+GAT6. GAP5. GA17. abdominal 8..9 lateral transverse muscle 1 /= LT1 /=
+pleural external transverse muscle, pet
+GAT6. GAP5. GA17. abdominal 8..9 ventral longitudinal muscle 1 /= VL1 /=
+pleural longitudinal muscle, pl1
+GAT6. GAP5. GA17. abdominal 8..9 ventral longitudinal muscle 2 /= VL2 /=
+ventral internal oblique muscle, vio1
+GAT6. GAP5. GA17. abdominal 8..9 ventral longitudinal muscle 3 /= VL3
+GAT6. GAP5. GA17. abdominal 8..9 ventral longitudinal muscle 4 /= VL4
+GAT6. GAP5. GA17. abdominal 8..9 ventral oblique muscle 1 /= VO1 /=
+ventral external oblique muscle, veo1
+GAT6. GAP5. GA17. abdominal 8..9 ventral oblique muscle 2 /= VO2
+GAT6. GAP5. GA17. abdominal 8..9 ventral oblique muscle 3 /= VO3
+GAT6. GAP5. GA17. abdominal 8..9 ventral transverse muscle 1 /= VT1
+GAT6. GAP5. GA17. abdominal 8..9 ventral transverse muscle 2 /= VT2
+GAT6. GAP5. GA17. gut suspension muscle 1 /= GS1
+GAT6. GAP5. GA17. gut suspension muscle 3 /= GS3
+GAT6. GAP5. GA17. terminal transverse muscle 1 /= TT1 /?= spiracular
+retractor muscle, srm
+GAT6. GAP5. GA17. terminal oblique muscle 1 /= TO1 /?= spiracular
+retractor muscle, srm
+GAT6. GAP5. GA17. terminal oblique muscle 2 /= TO2 /?= spiracular
+retractor muscle, srm
+GAT6. GAP5. GA17. gut suspension muscle 2 /= GS2 /?= paraanal muscle, pam
+GAT6. GAP5. GA17. gut suspension muscle 4 /= GS4 /?= supraanal muscle, sam
+GAT6. GAP5. GA17. larval apodemes
+GAT6. GAP5. GA17. abdominal 1 apodemes
+GAT6. GAP5. GA17. abdominal 1 intersegmental apodeme
+GAT6. GAP5. GA17. abdominal 1 intrasegmental apodeme 1
+GAT6. GAP5. GA17. abdominal 1 intrasegmental apodeme 2
+GAT6. GAP5. GA17. abdominal 2..7 apodemes
+GAT6. GAP5. GA17. abdominal 2..7 intersegmental apodeme
+GAT6. GAP5. GA17. abdominal 2..7 intrasegmental apodeme 1
+GAT6. GAP5. GA17. abdominal 2..7 intrasegmental apodeme 2
+GAT6. GAP5. GA17. larval visceral muscle
+GAT6. GAP5. GA17. visceral muscles of larval heart
+GAT6. GAP5. GA17. dorsal fibres of larval heart
+GAT6. GAP5. GA17. caudal fibres of larval heart
+GAT6. GAP5. GA17. caudal ostial fibres of larval heart
+GAT6. GAP5. GA17. larval alary muscles /= ligaments
+GAT6. GAP5. GA17. larval alary muscle 1..7
+GAT6. GAP5. GA17. circular muscles of larval heart
+GAT6. GAP5. GA17. larval oesophageal muscle /= esophageal muscle
+GAT6. GAP5. GA17. proventricular muscle
+GAT6. GAP5. GA17. midgut muscle
+GAT6. GAP5. GA17. outer sheath cells [11]
+GAT6. GAP5. GA17. hind gut muscle
+GAT6. GAP5. GA17. gonadal sheath muscle
+
+GAT6. GAP5. GA17. adult musculature [6]
+GAT6. GAP5. GA17. adult muscle precursors /= myoblasts
+GAT6. GAP5. GA17. adult myoblast [64]
+GAT6. GAP5. GA17. thoracic adult myoblast
+GAT6. GAP5. GA17. abdominal adult myoblast
+GAT6. GAP5. GA17. dorsal adult muscle precursor cluster abdominal 1..7
+GAT6. GAP5. GA17. lateral adult muscle precursor cluster abdominal 1..7
+GAT6. GAP5. GA17. ventral adult muscle precursor cluster abdominal 1..7
+GAT6. GAP5. GA17. adepithelial cells
+GAT6. GAP5. GA17. adepithelial cells of labial disc
+GAT6. GAP5. GA17. adepithelial cells of clypeo-labral disc
+GAT6. GAP5. GA17. adepithelial cells of eye-antenna disc
+GAT6. GAP5. GA17. adepithelial cells of dorsal prothoracic disc
+GAT6. GAP5. GA17. adepithelial cells of ventral prothoracic disc
+GAT6. GAP5. GA17. adepithelial cells of dorsal mesothoracic disc
+GAT6. GAP5. GA17. adepithelial cells of ventral mesothoracic disc
+GAT6. GAP5. GA17. adepithelial cells of dorsal metathoracic disc
+GAT6. GAP5. GA17. adepithelial cells of ventral metathoracic disc
+GAT6. GAP5. GA17. adepithelial cells of genital disc
+GAT6. GAP5. GA17. skeletal muscles of head
+GAT6. GAP5. GA17. proboscis muscle 1 /= lateral labial adductor muscle
+/= retractors of rostrum
+GAT6. GAP5. GA17. proboscis muscle 2 /= maxillary retractor muscle /=
+accessory retractors of rostrum
+GAT6. GAP5. GA17. proboscis muscle 3 /= flexors of labrum
+GAT6. GAP5. GA17. maxillary muscle 4 /= adductor of apodeme
+GAT6. GAP5. GA17. labral muscle 5 /= labral compressor muscle /=
+dilators of labrum-epipharynx
+GAT6. GAP5. GA17. haustellum muscle 6 /= palpal muscle /= retractors of
+paraphyses
+GAT6. GAP5. GA17. haustellum muscle 7 /= palpal muscle retractors of furca
+GAT6. GAP5. GA17. haustellum muscle 8 /= transverse labial muscle /=
+transverse of haustellum
+GAT6. GAP5. GA17. cibarial muscle 9 /= lateral pharyngeal muscle /=
+retractors of fulcrum
+GAT6. GAP5. GA17. cibarial muscle 10 /= medial pharyngeal muscle
+GAT6. GAP5. GA17. cibarial dilator muscle 11 /= pharyngeal muscle /?=
+dilator of pharynx
+GAT6. GAP5. GA17. cibarial dilator muscle 12 /= cibarial muscle
+GAT6. GAP5. GA17. salivary pump muscle 13 /= dorsal salivary muscle /=
+gracilis
+GAT6. GAP5. GA17. second antennal segment muscle 14
+GAT6. GAP5. GA17. second antennal segment muscle 15
+GAT6. GAP5. GA17. frontal pulsatile organ muscle 16
+GAT6. GAP5. GA17. skeletal muscles of dorsal head [28] [29]
+GAT6. GAP5. GA17. muscle 17
+GAT6. GAP5. GA17. muscle 18a /= ptilinal-pharyngeal /=
+ptilinal-oesophageal muscle /= ptilinal-esophageal muscle
+GAT6. GAP5. GA17. muscle 18b /= transverse ptilinal muscle
+GAT6. GAP5. GA17. muscle 19a /= fronto-tentorial muscle
+GAT6. GAP5. GA17. muscle 19b /?= geno-tentorial muscle
+GAT6. GAP5. GA17. transverse vertex muscle
+GAT6. GAP5. GA17. ptilino-tentorial muscle
+GAT6. GAP5. GA17. lunula muscle
+GAT6. GAP5. GA17. ocular-antennal muscle /= retractor of antenna muscle
+GAT6. GAP5. GA17. fronto-pharyngeal muscle /= retractor of vertex muscle
+GAT6. GAP5. GA17. skeletal muscle of neck
+GAT6. GAP5. GA17. dorsal cervical muscle 20
+GAT6. GAP5. GA17. dorsal cervical muscle 21
+GAT6. GAP5. GA17. dorsal cervical muscle 22
+GAT6. GAP5. GA17. dorsal cervical muscle 23
+GAT6. GAP5. GA17. lateral cervical muscle 24
+GAT6. GAP5. GA17. ventral cervical muscle 25
+GAT6. GAP5. GA17. ventral cervical muscle 26
+GAT6. GAP5. GA17. ventral cervical muscle 27
+GAT6. GAP5. GA17. skeletal muscles of prothorax
+GAT6. GAP5. GA17. prothoracic tergopleural promotor muscle 28
+GAT6. GAP5. GA17. prothoracic pleural promotor and abductor muscle 29
+GAT6. GAP5. GA17. prothoracic pleural promotor muscle 30
+GAT6. GAP5. GA17. prothoracic sternal anterior rotator muscle 31
+GAT6. GAP5. GA17. prothoracic sternal posterior rotator muscle 32
+GAT6. GAP5. GA17. prothoracic sternal adductor muscle 33
+GAT6. GAP5. GA17. prothoracic extracoxal depressor muscle 34
+GAT6. GAP5. GA17. prothoracic intracoxal depressor muscle 35
+GAT6. GAP5. GA17. prothoracic intracoxal lateral levator muscle 36
+GAT6. GAP5. GA17. prothoracic intracoxal mesal levator muscle 37
+GAT6. GAP5. GA17. prothoracic femural reductor muscle 38
+GAT6. GAP5. GA17. prothoracic tibial levator muscle 39
+GAT6. GAP5. GA17. prothoracic tibial depressor muscle 40
+GAT6. GAP5. GA17. prothoracic tibial depressor muscle 41
+GAT6. GAP5. GA17. prothoracic tarsal levator muscle 42
+GAT6. GAP5. GA17. prothoracic tarsal depressor muscle 43
+GAT6. GAP5. GA17. prothoracic pretarsal depressor muscle 44
+GAT6. GAP5. GA17. skeletal muscles of mesothorax
+GAT6. GAP5. GA17. indirect flight muscle
+GAT6. GAP5. GA17. dorsal medial muscle 45a \= DLM \= dorso-longitudinal
+muscle
+GAT6. GAP5. GA17. dorsal medial muscle 45b \= DLM \= dorso-longitudinal
+muscle
+GAT6. GAP5. GA17. dorsal medial muscle 45c \= DLM \= dorso-longitudinal
+muscle
+GAT6. GAP5. GA17. dorsal medial muscle 45d \= DLM \= dorso-longitudinal
+muscle
+GAT6. GAP5. GA17. dorsal medial muscle 45e \= DLM \= dorso-longitudinal
+muscle
+GAT6. GAP5. GA17. dorsal medial muscle 45f \= DLM \= dorso-longitudinal
+muscle
+GAT6. GAP5. GA17. lateral oblique dorsal muscle 46a \= DVM III \=
+dorso-ventral muscle
+GAT6. GAP5. GA17. lateral oblique dorsal muscle 46b \= DVM III \=
+dorso-ventral muscle
+GAT6. GAP5. GA17. tergosternal muscle 47a \= DVM I \= dorso-ventral muscle
+GAT6. GAP5. GA17. tergosternal muscle 47b \= DVM I \= dorso-ventral muscle
+GAT6. GAP5. GA17. tergosternal muscle 47c \= DVM I \= dorso-ventral muscle
+GAT6. GAP5. GA17. coxal tergal remotor muscle 48a\= DVM II \=
+dorso-ventral muscle
+GAT6. GAP5. GA17. coxal tergal remotor muscle 48b \= DVM II \=
+dorso-ventral muscle
+GAT6. GAP5. GA17. direct flight muscle
+GAT6. GAP5. GA17. direct wing muscle 49
+GAT6. GAP5. GA17. direct wing muscle 50 \= muscle of prealar apophysis
+\= m.ab. 1 \= second basalar muscle \= pa4 \= first basalar, b1
+GAT6. GAP5. GA17. direct wing muscle, basalar muscle 51 \= m.ab. 2 \=
+sternobasalar muscle \= pa3 \= second basalar, b2
+GAT6. GAP5. GA17. direct wing muscle, basalar muscle 52 \= m.an. \= 3rd
+& 4th basalar muscles \= pa6 \= tergopleural, tp
+GAT6. GAP5. GA17. direct wing muscle, muscle of first axillary 53 \=
+m.le.1 \= anterior muscle of first axillary sclerite \= pa3 \= first
+pterale I, I1
+GAT6. GAP5. GA17. direct wing muscle, muscle of third axillary 54 \=
+m.le.2 \= anterior muscle of 3rd axillary sclerite \= pa2 \= first
+pterale III, III1
+GAT6. GAP5. GA17. direct wing muscle, muscle of third axillary 55 \=
+third pterale III, III3
+GAT6. GAP5. GA17. direct wing muscle, muscle of first axillary 56
+GAT6. GAP5. GA17. direct wing muscle, subalar muscle 57
+GAT6. GAP5. GA17. direct wing muscle 58a
+GAT6. GAP5. GA17. direct wing muscle 58b
+GAT6. GAP5. GA17. mesothoracic pleurosternal muscle 59
+GAT6. GAP5. GA17. mesothoracic pleurosternal muscle 60
+GAT6. GAP5. GA17. mesothoracic lateral intrasegmental muscle 61
+GAT6. GAP5. GA17. mesothoracic ventral longitudinal muscle 62
+GAT6. GAP5. GA17. mesothoracic pleural remotor muscle 63
+GAT6. GAP5. GA17. mesothoracic sternal promotor muscle 64
+GAT6. GAP5. GA17. mesothoracic sternal remotor muscle 65
+GAT6. GAP5. GA17. mesothoracic extracoxal depressor muscle 66 \= TDT \=
+tergal depressor of trochanter
+GAT6. GAP5. GA17. mesothoracic intracoxal depressor muscle 67
+GAT6. GAP5. GA17. mesothoracic intracoxal levator muscle 68
+GAT6. GAP5. GA17. mesothoracic femural reductor muscle 69
+GAT6. GAP5. GA17. mesothoracic tibial levator muscle 70
+GAT6. GAP5. GA17. mesothoracic tibial depressor muscle 71
+GAT6. GAP5. GA17. mesothoracic tibial depressor muscle 72
+GAT6. GAP5. GA17. mesothoracic tarsal levator muscle 73
+GAT6. GAP5. GA17. mesothoracic tarsal depressor muscle 74
+GAT6. GAP5. GA17. mesothoracic pretarsal depressor muscle 75
+GAT6. GAP5. GA17. mesothoracic spiracle occlusor muscle 76
+GAT6. GAP5. GA17. skeletal muscles of metathorax
+GAT6. GAP5. GA17. haltere muscle 77
+GAT6. GAP5. GA17. haltere muscle 78
+GAT6. GAP5. GA17. haltere muscle 78a [30]
+GAT6. GAP5. GA17. metathoracic pleurosternal muscle 79
+GAT6. GAP5. GA17. metathoracic lateral intersegmental muscle 80
+GAT6. GAP5. GA17. metathoracic ventral longitudinal muscle 81
+GAT6. GAP5. GA17. metathoracic pleural promotor muscle 82
+GAT6. GAP5. GA17. metathoracic pleural remotor muscle 83
+GAT6. GAP5. GA17. metathoracic sternal promotor muscle 84
+GAT6. GAP5. GA17. metathoracic sternal remotor muscle 85
+GAT6. GAP5. GA17. metathoracic ternal extracoxal depressor muscle 86
+GAT6. GAP5. GA17. metathoracic sternal extracoxal depressor muscle 87
+GAT6. GAP5. GA17. metathoracic intracoxal depressor muscle 88
+GAT6. GAP5. GA17. metathoracic intracoxal levator muscle 89
+GAT6. GAP5. GA17. metathoracic femural reductor muscle 90
+GAT6. GAP5. GA17. metathoracic tibial levator muscle 91
+GAT6. GAP5. GA17. metathoracic tibial depressor muscle 92
+GAT6. GAP5. GA17. metathoracic tibial depressor muscle 93
+GAT6. GAP5. GA17. metathoracic tarsal levator muscle 94
+GAT6. GAP5. GA17. metathoracic tarsal depressor muscle 95
+GAT6. GAP5. GA17. metathoracic pretarsal depressor 96
+GAT6. GAP5. GA17. metathoracic spiracle occlusor muscle 97
+GAT6. GAP5. GA17. skeletal muscles of abdomen
+GAT6. GAP5. GA17. abdominal 1 medial dorsal longitudinal muscle 98
+GAT6. GAP5. GA17. abdominal 1 lateral dorsal longitudinal muscle 99
+GAT6. GAP5. GA17. abdominal 1 lateral dorsal longitudinal muscle 100
+GAT6. GAP5. GA17. abdominal 1 oblique lateral dorsal longitudinal muscle 101
+GAT6. GAP5. GA17. abdominal 1 oblique lateral dorsal longitudinal muscle 102
+GAT6. GAP5. GA17. abdominal 1 lateral tergosternal muscle 103
+GAT6. GAP5. GA17. abdominal 1 ventral longitudinal muscle 104
+GAT6. GAP5. GA17. abdominal 1 spiracular occlusor muscle 105
+GAT6. GAP5. GA17. abdominal 1 internal lateral muscle 106
+GAT6. GAP5. GA17. abdominal 1 oblique sternopleural muscle 107
+GAT6. GAP5. GA17. abdominal 1 oblique sternopleural muscle 108
+GAT6. GAP5. GA17. abdominal 2 dorsal muscle 109
+GAT6. GAP5. GA17. abdominal 3 dorsal muscle 115
+GAT6. GAP5. GA17. abdominal 4 dorsal muscle 121
+GAT6. GAP5. GA17. abdominal 5 dorsal muscle 127
+GAT6. GAP5. GA17. abdominal 6 dorsal muscle 133
+GAT6. GAP5. GA17. abdominal 2 lateral tergosternal muscle 110
+GAT6. GAP5. GA17. abdominal 3 lateral tergosternal muscle 116
+GAT6. GAP5. GA17. abdominal 4 lateral tergosternal muscle 122
+GAT6. GAP5. GA17. abdominal 5 lateral tergosternal muscle 128
+GAT6. GAP5. GA17. abdominal 6 lateral tergosternal muscle 134
+GAT6. GAP5. GA17. abdominal 2 ventral muscle 111
+GAT6. GAP5. GA17. abdominal 3 ventral muscle 117
+GAT6. GAP5. GA17. abdominal 4 ventral muscle 123
+GAT6. GAP5. GA17. abdominal 6 ventral muscle 129
+GAT6. GAP5. GA17. abdominal 6 ventral muscle 135
+GAT6. GAP5. GA17. abdominal 2 spiracular muscle 112
+GAT6. GAP5. GA17. abdominal 3 spiracular muscle 118
+GAT6. GAP5. GA17. abdominal 4 spiracular muscle 124
+GAT6. GAP5. GA17. abdominal 5 spiracular muscle 130
+GAT6. GAP5. GA17. abdominal 6 spiracular muscle 136
+GAT6. GAP5. GA17. abdominal 2 oblique dorsal muscle 113
+GAT6. GAP5. GA17. abdominal 3 oblique dorsal muscle 119
+GAT6. GAP5. GA17. abdominal 4 oblique dorsal muscle 125
+GAT6. GAP5. GA17. abdominal 5 oblique dorsal muscle 131
+GAT6. GAP5. GA17. abdominal 6 oblique dorsal muscle 137
+GAT6. GAP5. GA17. abdominal 2 internal lateral muscle 114
+GAT6. GAP5. GA17. abdominal 3 internal lateral muscle 120
+GAT6. GAP5. GA17. abdominal 4 internal lateral muscle 126
+GAT6. GAP5. GA17. abdominal 5 internal lateral muscle 132
+GAT6. GAP5. GA17. male abdominal muscles
+GAT6. GAP5. GA17. male abdominal 5 muscle /= muscle of Lawrence
+GAT6. GAP5. GA17. female abdominal muscles
+GAT6. GAP5. GA17. abdominal 7 female dorsal muscle 139
+GAT6. GAP5. GA17. abdominal 7 female lateral muscle 140
+GAT6. GAP5. GA17. abdominal 7 female lateral muscle 141
+GAT6. GAP5. GA17. abdominal 7 female ventral muscle 142
+GAT6. GAP5. GA17. abdominal 7 female spiracular muscle 143
+GAT6. GAP5. GA17. abdominal 7 female sternal muscle 144
+GAT6. GAP5. GA17. abdominal 8 female dorsal muscle 145
+GAT6. GAP5. GA17. abdominal 8 female dorsal muscle 146
+GAT6. GAP5. GA17. abdominal 8 female dorsal muscle 147
+GAT6. GAP5. GA17. abdominal 8 female dorsal muscle 148
+GAT6. GAP5. GA17. abdominal 8 female ventral muscle 149
+GAT6. GAP5. GA17. abdominal 8 female lateral ventral muscle 150
+GAT6. GAP5. GA17. abdominal 8 female transverse ventral muscle 151
+GAT6. GAP5. GA17. female dorsal rectal muscle 152
+GAT6. GAP5. GA17. female ventral rectal muscle 153
+
+GAT6. GAP5. GA17. adult apodemes
+GAT6. GAP5. GA17. maxillary apodeme
+GAT6. GAP5. GA17. medial dorsal apodeme
+GAT6. GAP5. GA17. dorsal lateral apodeme
+GAT6. GAP5. GA17. ventral apodeme
+GAT6. GAP5. GA17. dorsal apodeme /?= cibarial apodeme
+GAT6. GAP5. GA17. hypopharyngeal apodeme
+GAT6. GAP5. GA17. aedeagal apodeme
+GAT6. GAP5. GA17. basal apodeme od penis
+
+GAT6. GAP5. GA17. adult visceral muscle
+GAT6. GAP5. GA17. longitudinal muscle
+GAT6. GAP5. GA17. circular muscle
+GAT6. GAP5. GA17. adult oesophageal circular muscles /= esophageal
+circular muscles
+GAT6. GAP5. GA17. adult oesophageal sphincter muscles /= esophageal
+sphincter muscles
+GAT6. GAP5. GA17. adult oesophageal longitudinal muscles /= esophageal
+longitudinal muscles
+GAT6. GAP5. GA17. crop circular muscles
+GAT6. GAP5. GA17. cardial muscles
+GAT6. GAP5. GA17. ventriculus circular muscles
+GAT6. GAP5. GA17. ventriculus longitudinal muscles
+GAT6. GAP5. GA17. anterior intestine circular muscles
+GAT6. GAP5. GA17. posterior intestine circular muscles
+GAT6. GAP5. GA17. posterior intestine longitudinal muscles
+GAT6. GAP5. GA17. rectal circular muscles
+GAT6. GAP5. GA17. adult salivary gland suspensor muscle
+GAT6. GAP5. GA17. adult heart muscle
+GAT6. GAP5. GA17. adult heart suspensory fibrils
+GAT6. GAP5. GA17. adult alary muscle
+GAT6. GAP5. GA17. adult alary muscle 1..4
+GAT6. GAP5. GA17. ventral adult heart longitudinal muscles
+GAT6. GAP5. GA17. ejaculatory bulb muscle
+GAT6. GAP5. GA17. penis protractor muscle /= aedeagus protractor muscle
+GAT6. GAP5. GA17. common oviduct circular muscles
+GAT6. GAP5. GA17. uterine circular muscles
+GAT6. GAP5. GA17. spermathecal duct longitudinal muscles
+GAT6. GAP5. GA17. ovarian sheath muscles
+GAT6. GAP5. GA17. testis sheath muscles
+
+GAT6. GAP5. GA17. imago external [31] [32]
+GAT6. GAP5. GA17. head
+GAT6. GAP5. GA17. eye /= compound eye
+GAT6. GAP5. GA17. eye equator
+GAT6. GAP5. GA17. ommatidia
+GAT6. GAP5. GA17. ocellus
+GAT6. GAP5. GA17. lateral ocellus
+GAT6. GAP5. GA17. medial ocellus
+GAT6. GAP5. GA17. ptilinum
+GAT6. GAP5. GA17. ptilinal suture
+GAT6. GAP5. GA17. fronto-orbital plate
+GAT6. GAP5. GA17. fronto-orbital suture
+GAT6. GAP5. GA17. antennal foramen
+GAT6. GAP5. GA17. frons
+GAT6. GAP5. GA17. prefrons /?= facial carina
+GAT6. GAP5. GA17. postfrons
+GAT6. GAP5. GA17. gena /= cheek
+GAT6. GAP5. GA17. occiput
+GAT6. GAP5. GA17. paraocciput
+GAT6. GAP5. GA17. postocciput
+GAT6. GAP5. GA17. ocellar triangle
+GAT6. GAP5. GA17. postgena
+GAT6. GAP5. GA17. premandibular suture /= premandibular sulcus
+GAT6. GAP5. GA17. rostral membrane
+GAT6. GAP5. GA17. occipital foramen
+GAT6. GAP5. GA17. adult tentorium
+GAT6. GAP5. GA17. posterior tentorial pit
+GAT6. GAP5. GA17. posterior tentorial bar
+GAT6. GAP5. GA17. anterior tentorial pit
+GAT6. GAP5. GA17. maxillary segment
+GAT6. GAP5. GA17. mentum
+GAT6. GAP5. GA17. maxillary lobe
+GAT6. GAP5. GA17. maxillary palpus /= palpus
+GAT6. GAP5. GA17. antenna
+GAT6. GAP5. GA17. antennal segment 1 /= scape
+GAT6. GAP5. GA17. antennal segment 2 /= pedicel
+GAT6. GAP5. GA17. antennal segment 3 /= flagellum /= funiculus
+GAT6. GAP5. GA17. antennal segment 4
+GAT6. GAP5. GA17. antennal segment 5
+GAT6. GAP5. GA17. basal cylinder /= antennal segments 4+5 of Ferris
+GAT6. GAP5. GA17. arista /= segment 6
+GAT6. GAP5. GA17. mouthparts
+GAT6. GAP5. GA17. clypeus
+GAT6. GAP5. GA17. labrum
+GAT6. GAP5. GA17. anterior labial plate
+GAT6. GAP5. GA17. pseudotrachea
+GAT6. GAP5. GA17. discal sclerite
+GAT6. GAP5. GA17. prestomal cavity
+GAT6. GAP5. GA17. labellum /= labial palpus
+GAT6. GAP5. GA17. labella cap
+GAT6. GAP5. GA17. prementum /= theca
+GAT6. GAP5. GA17. cibarium
+GAT6. GAP5. GA17. anterior plate of cibarium /= pharynx
+GAT6. GAP5. GA17. posterior plate of cibarium
+GAT6. GAP5. GA17. ventral magin of cibarium /= fulcrum
+GAT6. GAP5. GA17. proboscis
+GAT6. GAP5. GA17. lacinia
+GAT6. GAP5. GA17. anterior arm of lacinia
+GAT6. GAP5. GA17. ventral arm of lacinia
+GAT6. GAP5. GA17. dorsal arm of lacinia
+GAT6. GAP5. GA17. basiproboscis
+GAT6. GAP5. GA17. mediproboscis /= haustellum
+GAT6. GAP5. GA17. distiproboscis
+GAT6. GAP5. GA17. salivary stylet
+GAT6. GAP5. GA17. cervical sclerite
+GAT6. GAP5. GA17. cervical suture
+GAT6. GAP5. GA17. thorax [33]
+GAT6. GAP5. GA17. prothorax
+GAT6. GAP5. GA17. prothoracic tergum
+GAT6. GAP5. GA17. pronotum
+GAT6. GAP5. GA17. postpronotum /= humerus /= prescutal lobe
+GAT6. GAP5. GA17. prothoracic pleurum /= prepleura
+GAT6. GAP5. GA17. prothoracic episternum /= propleurum
+GAT6. GAP5. GA17. prothoracic preepisternum
+GAT6. GAP5. GA17. prothoracic epimeron
+GAT6. GAP5. GA17. prothoracic sternum
+GAT6. GAP5. GA17. furcasternum
+GAT6. GAP5. GA17. prothoracic postcoxal bridge
+GAT6. GAP5. GA17. prothoracic leg foramen
+GAT6. GAP5. GA17. prescutal suture
+GAT6. GAP5. GA17. humeral trabecule ?
+GAT6. GAP5. GA17. prothoracic furca /= prothoracic sternal apophysis
+GAT6. GAP5. GA17. prothoracic pleural apophysis
+GAT6. GAP5. GA17. prothoracic phragma /= antephragme
+GAT6. GAP5. GA17. mesothorax
+GAT6. GAP5. GA17. mesothoracic tergum
+GAT6. GAP5. GA17. prescutum
+GAT6. GAP5. GA17. scutum /= mesonotum
+GAT6. GAP5. GA17. anterior notal wing process
+GAT6. GAP5. GA17. posterior notal wing process
+GAT6. GAP5. GA17. scutellum
+GAT6. GAP5. GA17. postnotum /= postscutellum
+GAT6. GAP5. GA17. laterotergites /= postpleure superieure
+GAT6. GAP5. GA17. mesothoracic pleurum /= pleura
+GAT6. GAP5. GA17. mesothoracic epimeron
+GAT6. GAP5. GA17. anepimeron /= pteropleurite
+GAT6. GAP5. GA17. katepimeron /= hypopleurite
+GAT6. GAP5. GA17. pleural wing process
+GAT6. GAP5. GA17. mesothoracic episternum
+GAT6. GAP5. GA17. anepisternum /= mesopleurite
+GAT6. GAP5. GA17. mesothoracic preepisternum /= sternopleurite
+GAT6. GAP5. GA17. katepisternum
+GAT6. GAP5. GA17. wing foramen
+GAT6. GAP5. GA17. mesothoracic sutures
+GAT6. GAP5. GA17. scutoscutellar suture
+GAT6. GAP5. GA17. intrascutal suture
+GAT6. GAP5. GA17. pleural suture
+GAT6. GAP5. GA17. notopleural suture
+GAT6. GAP5. GA17. vertical cleft
+GAT6. GAP5. GA17. pleural cleft
+GAT6. GAP5. GA17. mesothoracic phragma
+GAT6. GAP5. GA17. mesothoracic spiracle
+GAT6. GAP5. GA17. prealar apophysis
+GAT6. GAP5. GA17. mesothoracic leg foramen
+GAT6. GAP5. GA17. mesothoracic ventral articulation
+GAT6. GAP5. GA17. mesothoracic precoxal bridge
+GAT6. GAP5. GA17. mesothoracic postcoxal bridge
+GAT6. GAP5. GA17. mesofurca /= mesothoracic sternal apophysis
+GAT6. GAP5. GA17. metathorax
+GAT6. GAP5. GA17. metathoracic tergum
+GAT6. GAP5. GA17. laterotergite /= metanotum
+GAT6. GAP5. GA17. metathoracic pleurum /= postpleura
+GAT6. GAP5. GA17. metathoracic epimeron
+GAT6. GAP5. GA17. metathoracic episternum
+GAT6. GAP5. GA17. metathoracic preepisternum
+GAT6. GAP5. GA17. haltere foramen
+GAT6. GAP5. GA17. metathoracic spiracle
+GAT6. GAP5. GA17. metathoracic ventral articulation
+GAT6. GAP5. GA17. metathoracic leg foramen
+GAT6. GAP5. GA17. metathoracic precoxal bridge
+GAT6. GAP5. GA17. metathoracic postcoxal bridge
+GAT6. GAP5. GA17. metafurca /= metathoracic sternal apophysis
+GAT6. GAP5. GA17. metathoracic phragma /= postphragme
+GAT6. GAP5. GA17. leg
+GAT6. GAP5. GA17. prothoracic leg
+GAT6. GAP5. GA17. prothoracic coxa
+GAT6. GAP5. GA17. prothoracic tibia
+GAT6. GAP5. GA17. prothoracic trochanter
+GAT6. GAP5. GA17. prothoracic femur
+GAT6. GAP5. GA17. prothoracic tarsal segments
+GAT6. GAP5. GA17. prothoracic tarsal segment 1..5 1 /= metatarsus
+GAT6. GAP5. GA17. prothoracic tarsus /= claw
+GAT6. GAP5. GA17. prothoracic auxilia
+GAT6. GAP5. GA17. prothoracic pulvillus
+GAT6. GAP5. GA17. prothoracic pulvillar membrane
+GAT6. GAP5. GA17. prothoracic ungulfus
+GAT6. GAP5. GA17. prothoracic unguitractor plate
+GAT6. GAP5. GA17. prothoracic empodium
+GAT6. GAP5. GA17. prothoracic unguis
+GAT6. GAP5. GA17. prothoracic unguis scales
+GAT6. GAP5. GA17. prothoracic retineriae
+GAT6. GAP5. GA17. mesothoracic leg
+GAT6. GAP5. GA17. mesothoracic coxa
+GAT6. GAP5. GA17. mesothoracic tibia
+GAT6. GAP5. GA17. mesothoracic trochanter
+GAT6. GAP5. GA17. mesothoracic femur
+GAT6. GAP5. GA17. mesothoracic tarsal segments
+GAT6. GAP5. GA17. mesothoracic tarsal segment 1..5 1 /= metatarsus
+GAT6. GAP5. GA17. mesothoracic tarsus /= claw
+GAT6. GAP5. GA17. mesothoracic auxilia
+GAT6. GAP5. GA17. mesothoracic pulvillus
+GAT6. GAP5. GA17. mesothoracic pulvillar membrane
+GAT6. GAP5. GA17. mesothoracic ungulfus
+GAT6. GAP5. GA17. mesothoracic unguitractor plate
+GAT6. GAP5. GA17. mesothoracic empodium
+GAT6. GAP5. GA17. mesothoracic unguis
+GAT6. GAP5. GA17. mesothoracic unguis scales
+GAT6. GAP5. GA17. mesothoracic retineriae
+GAT6. GAP5. GA17. metathoracic leg
+GAT6. GAP5. GA17. metathoracic coxa
+GAT6. GAP5. GA17. metathoracic tibia
+GAT6. GAP5. GA17. metathoracic trochanter
+GAT6. GAP5. GA17. metathoracic femur
+GAT6. GAP5. GA17. metathoracic tarsal segments
+GAT6. GAP5. GA17. metathoracic tarsal segment 1..5 1 /= metatarsus
+GAT6. GAP5. GA17. metathoracic tarsus /= claw
+GAT6. GAP5. GA17. metathoracic auxilia
+GAT6. GAP5. GA17. metathoracic pulvillus
+GAT6. GAP5. GA17. metathoracic pulvillar membrane
+GAT6. GAP5. GA17. metathoracic ungulfus
+GAT6. GAP5. GA17. metathoracic unguitractor plate
+GAT6. GAP5. GA17. metathoracic empodium
+GAT6. GAP5. GA17. metathoracic unguis
+GAT6. GAP5. GA17. metathoracic unguis scales
+GAT6. GAP5. GA17. metathoracic retineriae
+GAT6. GAP5. GA17. wing
+GAT6. GAP5. GA17. tegula
+GAT6. GAP5. GA17. wing sclerite /= plate
+GAT6. GAP5. GA17. pleural sclerite
+GAT6. GAP5. GA17. humeral sclerite
+GAT6. GAP5. GA17. median sclerite
+GAT6. GAP5. GA17. unnamed sclerite
+GAT6. GAP5. GA17. 1st axillary sclerite
+GAT6. GAP5. GA17. 2nd axillary sclerite
+GAT6. GAP5. GA17. 3rd axillary sclerite
+GAT6. GAP5. GA17. 4th axillary sclerite
+GAT6. GAP5. GA17. yellow club
+GAT6. GAP5. GA17. axillary cord
+GAT6. GAP5. GA17. alar lobe
+GAT6. GAP5. GA17. alula
+GAT6. GAP5. GA17. wing septa
+GAT6. GAP5. GA17. wing septum 1
+GAT6. GAP5. GA17. wing septum 2
+GAT6. GAP5. GA17. wing vein
+GAT6. GAP5. GA17. 1st annal vein
+GAT6. GAP5. GA17. postcubitus vein
+GAT6. GAP5. GA17. cubitus vein
+GAT6. GAP5. GA17. auxillary vein /= subcostal vein
+GAT6. GAP5. GA17. costal vein /= radius 1
+GAT6. GAP5. GA17. distal costal vein
+GAT6. GAP5. GA17. medial costal vein
+GAT6. GAP5. GA17. proximal costal vein
+GAT6. GAP5. GA17. wing vein L2 /= radius 2+3
+GAT6. GAP5. GA17. wing vein L3 /= radius 4+5
+GAT6. GAP5. GA17. wing vein L4 /= media 1
+GAT6. GAP5. GA17. wing vein L5 /= media 3+4
+GAT6. GAP5. GA17. wing vein L6 /= anal vein
+GAT6. GAP5. GA17. crossvein
+GAT6. GAP5. GA17. humeral crossvein
+GAT6. GAP5. GA17. anterior crossvein /= radial-medial crossvein
+GAT6. GAP5. GA17. posterior crossvein /= medial crossvein
+GAT6. GAP5. GA17. wing cell
+GAT6. GAP5. GA17. costal cell
+GAT6. GAP5. GA17. marginal cell
+GAT6. GAP5. GA17. submarginal cell
+GAT6. GAP5. GA17. 1st posterior cell
+GAT6. GAP5. GA17. 2nd posterior cell
+GAT6. GAP5. GA17. 3rd posterior cell
+GAT6. GAP5. GA17. anal cell
+GAT6. GAP5. GA17. axillary cell
+GAT6. GAP5. GA17. discal cell
+GAT6. GAP5. GA17. basal cell 1
+GAT6. GAP5. GA17. basal cell 2
+GAT6. GAP5. GA17. haltere
+GAT6. GAP5. GA17. capitellum
+GAT6. GAP5. GA17. haltere pedicel
+GAT6. GAP5. GA17. scabellum
+GAT6. GAP5. GA17. adult abdomen
+GAT6. GAP5. GA17. abdominal tergites
+GAT6. GAP5. GA17. abdominal tergite 1..8
+GAT6. GAP5. GA17. abdominal sternites
+GAT6. GAP5. GA17. abdominal sternite 1..6
+GAT6. GAP5. GA17. Wheeler's organ
+GAT6. GAP5. GA17. male abdominal sternite 7..8
+GAT6. GAP5. GA17. abdominal sternite 11
+GAT6. GAP5. GA17. abdominal spiracles
+GAT6. GAP5. GA17. abdominal spiracle 1..7
+GAT6. GAP5. GA17. pleural membrane
+GAT6. GAP5. GA17. female terminalia
+GAT6. GAP5. GA17. female gonopod /= abdominal sternite 8 /= ovipositor
+/= vaginal plate /= oviscape
+GAT6. GAP5. GA17. epiproct /= abdominal tergite 9 /= supraanal plate /=
+dorsal anal plate
+GAT6. GAP5. GA17. hypoproct /= abdominal sternite 9 /= subanal plate /=
+ventral anal plate
+GAT6. GAP5. GA17. oviprotector /= sternite 7/8 intersegmental membrane
+GAT6. GAP5. GA17. male terminalia
+GAT6. GAP5. GA17. genital arch /= abdominal tergite 9 /= epandrium
+GAT6. GAP5. GA17. pons
+GAT6. GAP5. GA17. posterior lobe
+GAT6. GAP5. GA17. lateral plate
+GAT6. GAP5. GA17. clasper /= surstylus /?= abdominal tergite 10
+GAT6. GAP5. GA17. anal plate /= abdominal tergite 11 /= cercus
+GAT6. GAP5. GA17. male gonopod
+GAT6. GAP5. GA17. paraphyses /= aedeagal guide
+GAT6. GAP5. GA17. decasternum /= abdominal sternite 10
+GAT6. GAP5. GA17. hypandrium /= abdominal sternite 9
+GAT6. GAP5. GA17. hypandrial process
+GAT6. GAP5. GA17. aedeagus
+GAT6. GAP5. GA17. phallic foramen
+GAT6. GAP5. GA17. penis /= phallus
+GAT6. GAP5. GA17. penis mantle
+GAT6. GAP5. GA17. ventral paramere
+
+GAT6. GAP5. GA17. nervous system
+GAT6. GAP5. GA17. peripheral nervous system /= PNS
+GAT6. GAP5. GA17. central nervous system /= CNS
+GAT6. GAP5. GA17. stomatogastric nervous system /= SNS
+GAT6. GAP5. GA17. nerve cells
+GAT6. GAP5. GA17. nerve
+GAT6. GAP5. GA17. fascicle
+GAT6. GAP5. GA17. cell body
+GAT6. GAP5. GA17. axon
+GAT6. GAP5. GA17. dendrites
+GAT6. GAP5. GA17. dendritic arbor
+GAT6. GAP5. GA17. synapse
+GAT6. GAP5. GA17. end plate
+GAT6. GAP5. GA17. bouton
+GAT6. GAP5. GA17. synaptic vesicle
+GAT6. GAP5. GA17. synaptic cleft
+GAT6. GAP5. GA17. postsynaptic membrane
+GAT6. GAP5. GA17. intramembranous particle
+GAT6. GAP5. GA17. presynaptic ribbon /= presynaptic specialisation
+GAT6. GAP5. GA17. neuron
+GAT6. GAP5. GA17. motor neuron
+GAT6. GAP5. GA17. sensory neuron
+GAT6. GAP5. GA17. interneuron
+GAT6. GAP5. GA17. neuromuscular junction
+GAT6. GAP5. GA17. neuropil
+GAT6. GAP5. GA17. cortex
+GAT6. GAP5. GA17. perikarya
+GAT6. GAP5. GA17. glia cell
+GAT6. GAP5. GA17. glioblast /= glial precursor cell, GP
+GAT6. GAP5. GA17. neurilemma
+GAT6. GAP5. GA17. neuroblast /= NB
+GAT6. GAP5. GA17. ganglion mother cell /= GMC
+GAT6. GAP5. GA17. growth cone
+GAT6. GAP5. GA17. perineural sheath cell
+GAT6. GAP5. GA17. outer perineural sheath cells /= perineural cells
+GAT6. GAP5. GA17. inner perineural sheath cells /= sub-perineural cells
+GAT6. GAP5. GA17. embryonic nervous sytem
+GAT6. GAP5. GA17. ventral nerve cord
+GAT6. GAP5. GA17. longitudinal connectives
+GAT6. GAP5. GA17. commissure
+GAT6. GAP5. GA17. anterior commissure
+GAT6. GAP5. GA17. anterior commissure, abdominal 1..8
+GAT6. GAP5. GA17. anterior commissure, thoracic 1..3
+GAT6. GAP5. GA17. posterior commissure
+GAT6. GAP5. GA17. posterior commissure, abdominal 1..8
+GAT6. GAP5. GA17. neurogenic region
+GAT6. GAP5. GA17. procephalic neurogenic region
+GAT6. GAP5. GA17. ventral neurogenic region
+GAT6. GAP5. GA17. optic lobe placode
+GAT6. GAP5. GA17. precursor cells of the stomatogastric nervous system,
+SNSPs [72]
+GAT6. GAP5. GA17. invaginating stomatogastric nervous system precursors,
+iSNSPs
+GAT6. GAP5. GA17. rostral vesicle
+GAT6. GAP5. GA17. intermediate vesicle
+GAT6. GAP5. GA17. caudal vesicle
+GAT6. GAP5. GA17. delaminating stomatogastric nervous system precursors,
+dSNSPs
+GAT6. GAP5. GA17. tip stomatogastric nervous system precursors, tSNSPs
+GAT6. GAP5. GA17. proneural cluster
+GAT6. GAP5. GA17. sensory organ mother cell, SMC
+GAT6. GAP5. GA17. sensillum precursor /= sensory organ precursor cell, SOP
+GAT6. GAP5. GA17. P cell \= lch5 precursor
+GAT6. GAP5. GA17. peripheral nervous system precursor clusters [73]
+GAT6. GAP5. GA17. dorsal thoracic cluster
+GAT6. GAP5. GA17. da1..da5
+GAT6. GAP5. GA17. es1..es5
+GAT6. GAP5. GA17. bd1
+GAT6. GAP5. GA17. ch1..ch3
+GAT6. GAP5. GA17. lateral thoracic cluster
+GAT6. GAP5. GA17. da1..da4
+GAT6. GAP5. GA17. es1..es6
+GAT6. GAP5. GA17. td1
+GAT6. GAP5. GA17. ventral thoracic cluster
+GAT6. GAP5. GA17. da1..da4
+GAT6. GAP5. GA17. es1..es10
+GAT6. GAP5. GA17. ch1
+GAT6. GAP5. GA17. dorsal abdominal cluster
+GAT6. GAP5. GA17. da1..da5
+GAT6. GAP5. GA17. es1..es5
+GAT6. GAP5. GA17. ch1
+GAT6. GAP5. GA17. lateral abdominal cluster
+GAT6. GAP5. GA17. da1..da2
+GAT6. GAP5. GA17. es1..es3
+GAT6. GAP5. GA17. bd1
+GAT6. GAP5. GA17. ch1..ch5
+GAT6. GAP5. GA17. td1
+GAT6. GAP5. GA17. ventral abdominal cluster
+GAT6. GAP5. GA17. da1..da7
+GAT6. GAP5. GA17. es1..es6
+GAT6. GAP5. GA17. bd1
+GAT6. GAP5. GA17. ch1..ch3
+GAT6. GAP5. GA17. td1..td2
+GAT6. GAP5. GA17. glial cells [35] [36]
+GAT6. GAP5. GA17. segmental glial cells
+GAT6. GAP5. GA17. anterior median glial cell /= MGA
+GAT6. GAP5. GA17. medial median glial cell /= MGM
+GAT6. GAP5. GA17. posterior median glial cell /= MGP
+GAT6. GAP5. GA17. longitudinal glial cell 1..6 /= LG1..LG6
+GAT6. GAP5. GA17. A glial cell, abdominal 1..8
+GAT6. GAP5. GA17. B glial cell, abdominal 1..8
+GAT6. GAP5. GA17. intersegmental glial cell 1 /= ISG1
+GAT6. GAP5. GA17. intersegmental glial cell 2 /= ISG2 /= nerve root glia
+/= SBC /= segmental boundary glial cell
+GAT6. GAP5. GA17. segmental glial cell 1..3 /= SG1..SG3
+GAT6. GAP5. GA17. medial exit glial cell 1 /= EGM1
+GAT6. GAP5. GA17. medial exit glial cell 2 /= EGM2
+GAT6. GAP5. GA17. anterior exit glial cell /= EGA
+GAT6. GAP5. GA17. posterior exit glial cell /= EGP
+GAT6. GAP5. GA17. peripheral glial cell 1..4 /= PG1..PG4
+GAT6. GAP5. GA17. dorsoventral channel glial cells /= MS cells
+GAT6. GAP5. GA17. prothoracic A/B like glial cell
+GAT6. GAP5. GA17. mesothoracic A/B like glial cell
+GAT6. GAP5. GA17. metathoracic A/B like glial cell
+GAT6. GAP5. GA17. subperineural glial cell
+GAT6. GAP5. GA17. belt glial cell
+GAT6. GAP5. GA17. neuroblasts [37]
+GAT6. GAP5. GA17. stage 1 (S1) neuroblasts /= SI neuroblasts [76]
+GAT6. GAP5. GA17. neuroblast NB2-2
+GAT6. GAP5. GA17. neuroblast NB2-5
+GAT6. GAP5. GA17. neuroblast NB3-2
+GAT6. GAP5. GA17. neuroblast NB3-5
+GAT6. GAP5. GA17. neuroblast NB5-2 /= medial SI neuroblast NB 5-2 [76]
+GAT6. GAP5. GA17. neuroblast NB5-3
+GAT6. GAP5. GA17. neuroblast NB5-6
+GAT6. GAP5. GA17. neuroblast NB7-1
+GAT6. GAP5. GA17. neuroblast NB7-4
+GAT6. GAP5. GA17. neuroblast MP2
+GAT6. GAP5. GA17. stage 2 (S2) neuroblasts /= SII neuroblasts [76]
+GAT6. GAP5. GA17. neuroblast NB2-3
+GAT6. GAP5. GA17. neuroblast NB1-1 /= neuroglioblast 1-1
+GAT6. GAP5. GA17. neuroblast NB4-2
+GAT6. GAP5. GA17. neuroblast NB6-2
+GAT6. GAP5. GA17. neuroblast NB7-2
+GAT6. GAP5. GA17. stage 3 (S3) neuroblasts /= SIII neuroblasts [76]
+GAT6. GAP5. GA17. neuroblast NB6-4
+GAT6. GAP5. GA17. neuroblast GP
+GAT6. GAP5. GA17. neuroblast X
+GAT6. GAP5. GA17. neuroblast NB6-1
+GAT6. GAP5. GA17. neuroblast NB3-1
+GAT6. GAP5. GA17. neuroblast NB4-1
+GAT6. GAP5. GA17. stage 4 (S4) neuroblasts
+GAT6. GAP5. GA17. neuroblast MNB
+GAT6. GAP5. GA17. neuroblast NB2-1
+GAT6. GAP5. GA17. neuroblast NB2-4
+GAT6. GAP5. GA17. neuroblast NB3-4
+GAT6. GAP5. GA17. neuroblast NB4-4
+GAT6. GAP5. GA17. neuroblast NB5-4
+GAT6. GAP5. GA17. stage 5 (S5) neuroblasts
+GAT6. GAP5. GA17. neuroblast NB7-3
+GAT6. GAP5. GA17. neuroblast NB1-2
+GAT6. GAP5. GA17. neuroblast NB3-3
+GAT6. GAP5. GA17. neuroblast NB4-3
+GAT6. GAP5. GA17. neuroblast NB5-1
+GAT6. GAP5. GA17. neuroblast NB5-5
+GAT6. GAP5. GA17. ganglion mother cells
+GAT6. GAP5. GA17. ganglion mother cell GMC2-5a
+GAT6. GAP5. GA17. ganglion mother cell GMC3-5a
+GAT6. GAP5. GA17. ganglion mother cell GMC5-6a
+GAT6. GAP5. GA17. ganglion mother cell GMC1-1a
+GAT6. GAP5. GA17. ganglion mother cell GMC4-2a
+GAT6. GAP5. GA17. ganglion mother cell GMC5-2a
+GAT6. GAP5. GA17. ganglion mother cell GMC5-2b
+GAT6. GAP5. GA17. ganglion mother cell GMC6-2a
+GAT6. GAP5. GA17. ganglion mother cell GMC7-4a
+GAT6. GAP5. GA17. ganglion mother cell GMC7-4b
+GAT6. GAP5. GA17. neurons
+GAT6. GAP5. GA17. anterior corner cell /= aCC /= 1-1a1
+GAT6. GAP5. GA17. posterior corner cell /= pCC /= 1-1a2
+GAT6. GAP5. GA17. friend of pCC cell /= fpCC
+GAT6. GAP5. GA17. RP1 neuron
+GAT6. GAP5. GA17. RP2 neuron /= 4-2a1
+GAT6. GAP5. GA17. RP2sib neuron /= 4-2a2
+GAT6. GAP5. GA17. RP3 neuron
+GAT6. GAP5. GA17. RP4 neuron
+GAT6. GAP5. GA17. RP5 neuron
+GAT6. GAP5. GA17. lateral ipsisegmental neuron
+GAT6. GAP5. GA17. ventral intersegmental neuron
+GAT6. GAP5. GA17. U1 neuron
+GAT6. GAP5. GA17. U2 neuron
+GAT6. GAP5. GA17. U3 neuron
+GAT6. GAP5. GA17. CQ neuron
+GAT6. GAP5. GA17. EL neuron
+GAT6. GAP5. GA17. EN neuron
+GAT6. GAP5. GA17. DL neuron
+GAT6. GAP5. GA17. VL neuron
+GAT6. GAP5. GA17. NH neuron
+GAT6. GAP5. GA17. PL neuron
+GAT6. GAP5. GA17. PI neuron
+GAT6. GAP5. GA17. SP1 neuron
+GAT6. GAP5. GA17. Z neuron
+GAT6. GAP5. GA17. V neuron
+GAT6. GAP5. GA17. M neuron
+GAT6. GAP5. GA17. VUM1..6 neuron /= ventral unpaired cell 1..6
+GAT6. GAP5. GA17. MP1 neuron
+GAT6. GAP5. GA17. dMP2 neuron
+GAT6. GAP5. GA17. vMP2 neuron
+
+GAT6. GAP5. GA17. larval nervous system [38] [71]
+GAT6. GAP5. GA17. larval brain /= supraoesophageal ganglion /=
+supraesophageal ganglion
+GAT6. GAP5. GA17. optic lobe [39] [66]
+GAT6. GAP5. GA17. optic stalk
+GAT6. GAP5. GA17. optic stalk sheath cell /= lemnoblast cell
+GAT6. GAP5. GA17. outer optic anlage \= outer proliferation center, opc
+GAT6. GAP5. GA17. medulla anlage
+GAT6. GAP5. GA17. medulla neuropil
+GAT6. GAP5. GA17. medulla cortex
+GAT6. GAP5. GA17. medulla forming neuroblast
+GAT6. GAP5. GA17. lamina anlage
+GAT6. GAP5. GA17. lamina neuropil
+GAT6. GAP5. GA17. lamina cortex
+GAT6. GAP5. GA17. lamina forming neuroblast
+GAT6. GAP5. GA17. lamina plexus
+GAT6. GAP5. GA17. lobula anlage
+GAT6. GAP5. GA17. lobula forming neuroblast
+GAT6. GAP5. GA17. lobula plate anlage
+GAT6. GAP5. GA17. lobula plate neuropil
+GAT6. GAP5. GA17. lobula plate cortex
+GAT6. GAP5. GA17. medial proliferation zone /= mpo
+GAT6. GAP5. GA17. lateral proliferation zone /= lpo
+GAT6. GAP5. GA17. inner optic anlage \= inner proliferation center, ipc
+GAT6. GAP5. GA17. central plug
+GAT6. GAP5. GA17. dorsal proliferation zone /= dpi
+GAT6. GAP5. GA17. inner proliferation zone /= ipi
+GAT6. GAP5. GA17. inner anlage neuroblast
+GAT6. GAP5. GA17. optic nerve
+GAT6. GAP5. GA17. larval optic neuropil
+GAT6. GAP5. GA17. mandibular neuromere
+GAT6. GAP5. GA17. labial neuromere
+GAT6. GAP5. GA17. larval sensory nerves [71]
+GAT6. GAP5. GA17. labral nerve /= sensory nerve I, SNI
+GAT6. GAP5. GA17. Bolwig's nerve /= sensory nerve II, SNII
+GAT6. GAP5. GA17. larval antennal nerve /= sensory nerve III, SNIII
+GAT6. GAP5. GA17. papilla nerve /= pan /= sensory nerve IV, SNIV
+GAT6. GAP5. GA17. lateropharyngeal nerve /= lpn /= sensory nerve V, SNV
+GAT6. GAP5. GA17. larval maxillary nerve /= mxn /= sensory nerve VI, SNVI
+GAT6. GAP5. GA17. larval labial nerve /= lan /= sensory nerve VII, SNVII
+GAT6. GAP5. GA17. stomodeal nervous system /= stomatogastric nervous system
+GAT6. GAP5. GA17. frontal ganglion
+GAT6. GAP5. GA17. frontal nerve
+GAT6. GAP5. GA17. hypocerebral ganglion
+GAT6. GAP5. GA17. recurrent nerve
+GAT6. GAP5. GA17. ventricular ganglion
+GAT6. GAP5. GA17. proventricular ganglion
+GAT6. GAP5. GA17. paraoesophagial ganglion /= paraesophagial ganglion
+GAT6. GAP5. GA17. oesophagial nerve 1 /= esophagial nerve 1
+GAT6. GAP5. GA17. oesophagial nerve 2 /= esophagial nerve 2
+GAT6. GAP5. GA17. ventral ganglion /= subesophageal + T1..T3 + A1..A8
+ganglia /= thoracico-abdominal ganglion
+GAT6. GAP5. GA17. suboesophageal commissure /= subesophageal commissure
+GAT6. GAP5. GA17. prothoracic nerve
+GAT6. GAP5. GA17. prothoracic transverse nerve
+GAT6. GAP5. GA17. prothoracic anterior fascicle /= intersegmental nerve
+GAT6. GAP5. GA17. prothoracic sensory neurons
+GAT6. GAP5. GA17. prothoracic desA neuron
+GAT6. GAP5. GA17. prothoracic desB neuron
+GAT6. GAP5. GA17. prothoracic desC neuron
+GAT6. GAP5. GA17. prothoracic desD neuron
+GAT6. GAP5. GA17. prothoracic desE neuron
+GAT6. GAP5. GA17. prothoracic lesA neuron
+GAT6. GAP5. GA17. prothoracic lesB neuron
+GAT6. GAP5. GA17. prothoracic lesC neuron
+GAT6. GAP5. GA17. prothoracic lesD neuron
+GAT6. GAP5. GA17. prothoracic posterior fascicle /= segmental nerve
+GAT6. GAP5. GA17. prothoracic vesA neuron
+GAT6. GAP5. GA17. prothoracic vesB neuron
+GAT6. GAP5. GA17. prothoracic vesC neuron
+GAT6. GAP5. GA17. prothoracic vesD neuron
+GAT6. GAP5. GA17. prothoracic vesE neuron
+GAT6. GAP5. GA17. prothoracic v'esA neuron
+GAT6. GAP5. GA17. prothoracic v'esB neuron
+GAT6. GAP5. GA17. prothoracic v'es3 neuron
+GAT6. GAP5. GA17. prothoracic v''esA neuron
+GAT6. GAP5. GA17. prothoracic v''esB neuron
+GAT6. GAP5. GA17. mesothoracic nerve
+GAT6. GAP5. GA17. mesothoracic transverse nerve
+GAT6. GAP5. GA17. mesothoracic anterior fascicle /= intesegmental nerve
+GAT6. GAP5. GA17. mesothoracic sensory neurons
+GAT6. GAP5. GA17. mesothoracic desA neuron
+GAT6. GAP5. GA17. mesothoracic desB neuron
+GAT6. GAP5. GA17. mesothoracic desC neuron
+GAT6. GAP5. GA17. mesothoracic desD neuron
+GAT6. GAP5. GA17. mesothoracic desE neuron
+GAT6. GAP5. GA17. mesothoracic lesA neuron
+GAT6. GAP5. GA17. mesothoracic lesB neuron
+GAT6. GAP5. GA17. mesothoracic lesC neuron
+GAT6. GAP5. GA17. mesothoracic les3 neuron
+GAT6. GAP5. GA17. mesothoracic posterior fascicle /= segmental nerve
+GAT6. GAP5. GA17. mesothoracic vesA neuron
+GAT6. GAP5. GA17. mesothoracic vesB neuron
+GAT6. GAP5. GA17. mesothoracic vesC neuron
+GAT6. GAP5. GA17. mesothoracic vesD neuron
+GAT6. GAP5. GA17. mesothoracic vesE neuron
+GAT6. GAP5. GA17. mesothoracic v'es3 neuron
+GAT6. GAP5. GA17. mesothoracic v'esA neuron
+GAT6. GAP5. GA17. mesothoracic v'esB neuron
+GAT6. GAP5. GA17. metathoracic nerve
+GAT6. GAP5. GA17. metathoracic transverse nerve
+GAT6. GAP5. GA17. metathoracic anterior fascicle /= intersegmental nerve
+GAT6. GAP5. GA17. metathoracic sensory neurons
+GAT6. GAP5. GA17. metathoracic desA neuron
+GAT6. GAP5. GA17. metathoracic desB neuron
+GAT6. GAP5. GA17. metathoracic desC neuron
+GAT6. GAP5. GA17. metathoracic desD neuron
+GAT6. GAP5. GA17. metathoracic desE neuron
+GAT6. GAP5. GA17. metathoracic lesA neuron
+GAT6. GAP5. GA17. metathoracic lesB neuron
+GAT6. GAP5. GA17. metathoracic lesC neuron
+GAT6. GAP5. GA17. metathoracic les3 neuron
+GAT6. GAP5. GA17. metathoracic posterior fascicle /= segmental nerve?
+GAT6. GAP5. GA17. metathoracic vesA neuron
+GAT6. GAP5. GA17. metathoracic vesB neuron
+GAT6. GAP5. GA17. metathoracic vesC neuron
+GAT6. GAP5. GA17. metathoracic vesD neuron
+GAT6. GAP5. GA17. metathoracic vesE neuron
+GAT6. GAP5. GA17. metathoracic v'es3 neuron
+GAT6. GAP5. GA17. metathoracic v'esA neuron
+GAT6. GAP5. GA17. metathoracic v'esB neuron
+GAT6. GAP5. GA17. abdominal nerve [40]
+GAT6. GAP5. GA17. abdominal 1..7 transverse nerve
+GAT6. GAP5. GA17. abdominal 1..7 segmental nerve
+GAT6. GAP5. GA17. abdominal 1..7 segment motor neurons
+GAT6. GAP5. GA17. abdominal 1..7 RP1 neuron
+GAT6. GAP5. GA17. abdominal 1..7 RP2 neuron
+GAT6. GAP5. GA17. abdominal 1..7 RP3 neuron
+GAT6. GAP5. GA17. abdominal 1..7 RP4 neuron
+GAT6. GAP5. GA17. abdominal 1..7 RP5 neuron
+GAT6. GAP5. GA17. abdominal 1..7 VUM1 neuron
+GAT6. GAP5. GA17. abdominal 1..7 VUM2 neuron
+GAT6. GAP5. GA17. abdominal 1..7 VUM3 neuron
+GAT6. GAP5. GA17. abdominal 1..7 Z neuron
+GAT6. GAP5. GA17. abdominal 1..7 V neuron
+GAT6. GAP5. GA17. abdominal 1..7 M neuron
+GAT6. GAP5. GA17. abdominal 1..7 lateral ipsisegmental neuron
+GAT6. GAP5. GA17. abdominal 1..7 ventral intersegmental neuron
+GAT6. GAP5. GA17. abdominal 1..7 U1 neuron
+GAT6. GAP5. GA17. abdominal 1..7 U2 neuron
+GAT6. GAP5. GA17. abdominal 1..7 anterior fascicle /= intersegmental nerve
+GAT6. GAP5. GA17. abdominal 1..7 sensory neurons
+GAT6. GAP5. GA17. abdominal 1..7 desA neuron
+GAT6. GAP5. GA17. abdominal 1..7 desB neuron
+GAT6. GAP5. GA17. abdominal 1..7 desC neuron
+GAT6. GAP5. GA17. abdominal 1..7 desD neuron
+GAT6. GAP5. GA17. abdominal 1..7 lesA neuron
+GAT6. GAP5. GA17. abdominal 1..7 lesB neuron
+GAT6. GAP5. GA17. abdominal 1..7 lesC neuron
+GAT6. GAP5. GA17. abdominal 1..7 posterior fascicle /= segmental nerve
+SNa..SNd
+GAT6. GAP5. GA17. abdominal 1..7 vesA neuron
+GAT6. GAP5. GA17. abdominal 1..7 vesB neuron
+GAT6. GAP5. GA17. abdominal 1..7 vesC neuron
+GAT6. GAP5. GA17. abdominal 1..7 v'esA neuron
+GAT6. GAP5. GA17. abdominal 1..7 v'esB neuron
+GAT6. GAP5. GA17. abdominal 1..7 v'es2 neuron
+GAT6. GAP5. GA17. abdominal 1..8 median nerve /= dorsal nerve
+GAT6. GAP5. GA17. abdominal 8 transverse nerve
+GAT6. GAP5. GA17. abdominal 8 segmental nerve
+GAT6. GAP5. GA17. abdominal 8 sensory neurons
+GAT6. GAP5. GA17. abdominal 8 des1 neuron
+GAT6. GAP5. GA17. abdominal 8 des3 neuron
+GAT6. GAP5. GA17. abdominal 8 desn neuron
+GAT6. GAP5. GA17. abdominal 8 spA neuron
+GAT6. GAP5. GA17. abdominal 8 spB neuron
+GAT6. GAP5. GA17. abdominal 8 spC neuron
+GAT6. GAP5. GA17. abdominal 8 spD neuron
+GAT6. GAP5. GA17. abdominal 9 segmental nerve
+GAT6. GAP5. GA17. abdominal 9 sensory neurons
+GAT6. GAP5. GA17. abdominal 9 des3+1 neuron
+GAT6. GAP5. GA17. abdominal 9 des3 neuron
+GAT6. GAP5. GA17. abdominal 10 segmental nerve
+GAT6. GAP5. GA17. abdominal 10 sensory neurons
+GAT6. GAP5. GA17. abdominal 10 des3+1+1 neuron
+GAT6. GAP5. GA17. abdominal 10 vesM neuron
+
+GAT6. GAP5. GA17. adult nervous system [6] [44] [48] [49]
+GAT6. GAP5. GA17. adult neuroblasts [50] in larval ventral ganglion
+GAT6. GAP5. GA17. thoracic neuroblasts
+GAT6. GAP5. GA17. thoracic neuroblast t2
+GAT6. GAP5. GA17. thoracic neuroblast t3
+GAT6. GAP5. GA17. thoracic neuroblast t1
+GAT6. GAP5. GA17. thoracic neuroblast g
+GAT6. GAP5. GA17. thoracic neuroblast c
+GAT6. GAP5. GA17. thoracic neuroblast l1
+GAT6. GAP5. GA17. thoracic neuroblast l2
+GAT6. GAP5. GA17. thoracic neuroblast l3
+GAT6. GAP5. GA17. thoracic neuroblast l4
+GAT6. GAP5. GA17. thoracic neuroblast x
+GAT6. GAP5. GA17. thoracic neuroblast s1
+GAT6. GAP5. GA17. thoracic neuroblast s2
+GAT6. GAP5. GA17. thoracic neuroblast s3
+GAT6. GAP5. GA17. thoracic neuroblast s4
+GAT6. GAP5. GA17. thoracic neuroblast d1
+GAT6. GAP5. GA17. thoracic neuroblast d2
+GAT6. GAP5. GA17. thoracic neuroblast d3
+GAT6. GAP5. GA17. thoracic neuroblast b1
+GAT6. GAP5. GA17. thoracic neuroblast b2
+GAT6. GAP5. GA17. thoracic neuroblast w
+GAT6. GAP5. GA17. thoracic neuroblast al
+GAT6. GAP5. GA17. thoracic neuroblast M
+GAT6. GAP5. GA17. abdominal neuroblasts
+GAT6. GAP5. GA17. abdominal 1 neuroblast t1
+GAT6. GAP5. GA17. abdominal 1 neuroblast t2
+GAT6. GAP5. GA17. abdominal 1 neuroblast t3
+GAT6. GAP5. GA17. abdominal 1 neuroblast g
+GAT6. GAP5. GA17. abdominal 1 neuroblast x
+GAT6. GAP5. GA17. abdominal 1 neuroblast s1
+GAT6. GAP5. GA17. abdominal 1 neuroblast s2
+GAT6. GAP5. GA17. abdominal 1 neuroblast al
+GAT6. GAP5. GA17. abdominal 1 neuroblast M
+GAT6. GAP5. GA17. abdominal 2 neuroblast dorso-lateral cluster /= dl /=
+dorso-lateral dopamine neurons [75]
+GAT6. GAP5. GA17. abdominal 2 neuroblast ventro-lateral cluster /= vl /=
+ventro-lateral serotonin neurons [75]
+GAT6. GAP5. GA17. abdominal 2 neuroblast ventro-medial cluster /= vm /=
+paramedial cells [75]
+GAT6. GAP5. GA17. abdominal 2 neuroblast medial cluster /= m [75]
+GAT6. GAP5. GA17. abdominal 3..7 neuroblast dorso-lateral cluster /= dl
+/= dorso-lateral dopamine neurons [75]
+GAT6. GAP5. GA17. abdominal 3..7 neuroblast ventro-lateral cluster /= vl
+/= ventro-lateral serotonin neurons [75]
+GAT6. GAP5. GA17. abdominal 3..7 neuroblast ventro-medial cluster /= vm
+/= paramedial cells [75]
+GAT6. GAP5. GA17. abdominal 3..7 neuroblast medial cluster /= m [75]
+GAT6. GAP5. GA17. posterior tip cell
+GAT6. GAP5. GA17. adult brain
+GAT6. GAP5. GA17. suboesophageal ganglion /= subesophageal ganglion /=
+ventral ganglion
+GAT6. GAP5. GA17. taste-sensory region glomerulus [34]
+GAT6. GAP5. GA17. taste-sensory glomerulus DA
+GAT6. GAP5. GA17. taste-sensory glomerulus M
+GAT6. GAP5. GA17. taste-sensory glomerulus VL
+GAT6. GAP5. GA17. taste-sensory glomerulus VM
+GAT6. GAP5. GA17. cervical connective /= cephalo-thoracic nerve strand
+GAT6. GAP5. GA17. giant fibres
+GAT6. GAP5. GA17. pharyngeal nerve
+GAT6. GAP5. GA17. dorsal cibarial sense organ nerve
+GAT6. GAP5. GA17. cibarial pump muscle nerve /= procurrent nerve
+GAT6. GAP5. GA17. accessory pharyngeal nerve
+GAT6. GAP5. GA17. bypass nerve [51]
+GAT6. GAP5. GA17. adult labial nerve [52]
+GAT6. GAP5. GA17. type I sensory neuron, coiled fibres
+GAT6. GAP5. GA17. type II sensory neuron, shrubby fibres
+GAT6. GAP5. GA17. type III sensory neuron, ventral ipsilateral fibres
+GAT6. GAP5. GA17. type IV sensory neuron, dorsal ipsilateral fibres
+GAT6. GAP5. GA17. type V sensory neuron, ventral contralateral fibres
+GAT6. GAP5. GA17. type VI sensory neuron, dorsal contralateral fibres
+GAT6. GAP5. GA17. type VII sensory neuron, central fibres
+GAT6. GAP5. GA17. type A interneuron
+GAT6. GAP5. GA17. type B interneuron
+GAT6. GAP5. GA17. type C interneuron
+GAT6. GAP5. GA17. type D interneuron
+GAT6. GAP5. GA17. labial motor neuron
+GAT6. GAP5. GA17. adult maxillary nerve
+GAT6. GAP5. GA17. supraoesophageal ganglion /= supraesophageal ganglion
+GAT6. GAP5. GA17. protocerebrum
+GAT6. GAP5. GA17. central complex /= central body [53]
+GAT6. GAP5. GA17. small field neuron
+GAT6. GAP5. GA17. vertical fibre system /= VFS
+GAT6. GAP5. GA17. horizontal fibre system /= HFS /= heavy fibres
+GAT6. GAP5. GA17. pontine neurons
+GAT6. GAP5. GA17. eb-pb-vbo neurons
+GAT6. GAP5. GA17. eb-no neurons
+GAT6. GAP5. GA17. fb-no neurons
+GAT6. GAP5. GA17. fb-eb neurons
+GAT6. GAP5. GA17. fb-eb-no neurons
+GAT6. GAP5. GA17. fb-ltr neurons
+GAT6. GAP5. GA17. pb-no neurons
+GAT6. GAP5. GA17. pb-fb-fb neurons
+GAT6. GAP5. GA17. pb-eb-eb neurons
+GAT6. GAP5. GA17. pb-eb-no neurons
+GAT6. GAP5. GA17. pb-fb-eb neurons
+GAT6. GAP5. GA17. large field neurons
+GAT6. GAP5. GA17. ring neurons /= R
+GAT6. GAP5. GA17. ring neuron 1..4 /= R1..4
+GAT6. GAP5. GA17. extrinsic ring neurons /= ExR
+GAT6. GAP5. GA17. extrinsic ring neuron 1 /= ExR1
+GAT6. GAP5. GA17. extrinsic ring neuron 2 /= ExR2
+GAT6. GAP5. GA17. fan shaped neurons /= F
+GAT6. GAP5. GA17. median fan shaped neuron /= Fm
+GAT6. GAP5. GA17. lateral fan shaped neuron /= Fl
+GAT6. GAP5. GA17. extrinsic pb neurons
+GAT6. GAP5. GA17. extrinsic no neurons
+GAT6. GAP5. GA17. extrinsic ag-pb neurons
+GAT6. GAP5. GA17. intrinsic vbo neurons
+GAT6. GAP5. GA17. intrinsic pb neurons
+GAT6. GAP5. GA17. lateral ellipsoid body tract
+GAT6. GAP5. GA17. protocerebral bridge /= pb
+GAT6. GAP5. GA17. protocerebral glomerulus
+GAT6. GAP5. GA17. protocerebral glomerulus 1..8
+GAT6. GAP5. GA17. ellipsoid body /= eb
+GAT6. GAP5. GA17. fan shaped body /= fb
+GAT6. GAP5. GA17. noduli /= no
+GAT6. GAP5. GA17. ventral body /= vbo /= lateral accessory lobes
+GAT6. GAP5. GA17. lateral triangle /= ltr
+GAT6. GAP5. GA17. median bundle /= mb
+GAT6. GAP5. GA17. corpora pedunculata /= mushroom body
+GAT6. GAP5. GA17. calyx of corpora pedunculata
+GAT6. GAP5. GA17. stalk of corpora pedunculata
+GAT6. GAP5. GA17. Kenyon cells
+GAT6. GAP5. GA17. &agr;-lobe
+GAT6. GAP5. GA17. &bgr;-lobe
+GAT6. GAP5. GA17. &ggr;-lobe
+GAT6. GAP5. GA17. pons cerebralis
+GAT6. GAP5. GA17. optic glomerulus
+GAT6. GAP5. GA17. ocellar nerve /= ocellar pedicle
+GAT6. GAP5. GA17. deuterocerebrum
+GAT6. GAP5. GA17. antennal lobe [54]
+GAT6. GAP5. GA17. antennal glomerulus
+GAT6. GAP5. GA17. antennal glomerulus D
+GAT6. GAP5. GA17. antennal glomerulus DA1..4
+GAT6. GAP5. GA17. antennal glomerulus DC1
+GAT6. GAP5. GA17. antennal glomerulus DL1..3
+GAT6. GAP5. GA17. antennal glomerulus DM1
+GAT6. GAP5. GA17. antennal glomerulus DM2
+GAT6. GAP5. GA17. antennal glomerulus DP1
+GAT6. GAP5. GA17. antennal glomerulus V
+GAT6. GAP5. GA17. antennal glomerulus VA1..7
+GAT6. GAP5. GA17. antennal glomerulus VC1..4
+GAT6. GAP5. GA17. antennal glomerulus VL1
+GAT6. GAP5. GA17. antennal glomerulus VL2
+GAT6. GAP5. GA17. antennal glomerulus VM1..5
+GAT6. GAP5. GA17. antennal glomerulus VP1..3
+GAT6. GAP5. GA17. aristal nerve
+GAT6. GAP5. GA17. antennal commissure
+GAT6. GAP5. GA17. adult antennal nerve
+GAT6. GAP5. GA17. tegumentary nerve /= nervus tegumentalis
+GAT6. GAP5. GA17. antennal mechanosensory and motor center /= AMMC
+GAT6. GAP5. GA17. outer antenno-cerebral tract /= oACT /=
+antenno-glomerular tract
+GAT6. GAP5. GA17. median antenno-cerebral tract /= mACT
+GAT6. GAP5. GA17. inner antenno-cerebral tract /= iACT
+GAT6. GAP5. GA17. antenno-supraoesophageal tract /= AST /=
+antenno-supraesophageal tract, AST
+GAT6. GAP5. GA17. broad root
+GAT6. GAP5. GA17. local interneurons
+GAT6. GAP5. GA17. unilateral local interneurons
+GAT6. GAP5. GA17. bilateral local interneurons
+GAT6. GAP5. GA17. relay interneurons
+GAT6. GAP5. GA17. unilateral ACT relay interneurons /= uACTI
+GAT6. GAP5. GA17. bilateral ACT relay interneurons /= bACTI
+GAT6. GAP5. GA17. fine arborization relay interneurons /= FAI
+GAT6. GAP5. GA17. giant symmetrical relay interneurons /= GSI
+GAT6. GAP5. GA17. bilateral V relay interneuron /= bVI
+GAT6. GAP5. GA17. thoracic relay interneuron /= TI
+GAT6. GAP5. GA17. circumoesophageal tract /= circumesophageal tract
+GAT6. GAP5. GA17. deuterocerebral commisural tract
+GAT6. GAP5. GA17. tritocerebrum [74]
+GAT6. GAP5. GA17. tritocerebral center
+GAT6. GAP5. GA17. tritocerebral commissure
+GAT6. GAP5. GA17. stomodeal nerve projections
+GAT6. GAP5. GA17. type a stomodeal nerve projections
+GAT6. GAP5. GA17. type b stomodeal nerve projections
+GAT6. GAP5. GA17. type c stomodeal nerve projections
+GAT6. GAP5. GA17. pharyngeal nerve projections
+GAT6. GAP5. GA17. accessory pharyngeal nerve projections
+GAT6. GAP5. GA17. labial nerve projections
+GAT6. GAP5. GA17. neurosecretory cells
+GAT6. GAP5. GA17. anteriolateral neurosecretory cells
+GAT6. GAP5. GA17. dorsomedial neurosecretory cells
+GAT6. GAP5. GA17. posteriolateral neurosecretory cells
+GAT6. GAP5. GA17. optic lobe
+GAT6. GAP5. GA17. optic lobe neurons [55] [66]
+GAT6. GAP5. GA17. optic lobe pioneer neurons /= OLP
+GAT6. GAP5. GA17. optic lobe pioneer neuron 1 /= OLP1
+GAT6. GAP5. GA17. optic lobe pioneer neuron 2 /= OLP2
+GAT6. GAP5. GA17. optic lobe pioneer neuron 3 /= OLP3
+GAT6. GAP5. GA17. lamina /= La
+GAT6. GAP5. GA17. receptor cell /= photoreceptor cell
+GAT6. GAP5. GA17. receptor cell R1..8 /= photoreceptor cell R1..8
+GAT6. GAP5. GA17. monopolar laminar cell
+GAT6. GAP5. GA17. monopolar laminar cell, L1..5
+GAT6. GAP5. GA17. monopolar laminar cell, L4<down>x</down>
+GAT6. GAP5. GA17. monopolar laminar cell, L4<down>y</down>
+GAT6. GAP5. GA17. T neurons, T
+GAT6. GAP5. GA17. T neuron, T1
+GAT6. GAP5. GA17. T neuron, T2
+GAT6. GAP5. GA17. T neuron, T2a
+GAT6. GAP5. GA17. T neuron, T3
+GAT6. GAP5. GA17. T neuron, T4
+GAT6. GAP5. GA17. T neuron, T4a
+GAT6. GAP5. GA17. T neuron, T4b
+GAT6. GAP5. GA17. T neuron, T4c
+GAT6. GAP5. GA17. T neuron, T4d
+GAT6. GAP5. GA17. T neuron, T5
+GAT6. GAP5. GA17. T neuron, T5a
+GAT6. GAP5. GA17. T neuron, T5b
+GAT6. GAP5. GA17. T neuron, T5c
+GAT6. GAP5. GA17. T neuron, T5d
+GAT6. GAP5. GA17. lamina wide-field cell /= Lawf1
+GAT6. GAP5. GA17. centrifugal neurons, C
+GAT6. GAP5. GA17. centrifugal neuron, C2
+GAT6. GAP5. GA17. centrifugal neuron, C3
+GAT6. GAP5. GA17. lamina tangential neuron /= Lat
+GAT6. GAP5. GA17. lamina intrinsic neurons /= Lai
+GAT6. GAP5. GA17. optic cartridge /= lamina cartridge
+GAT6. GAP5. GA17. medulla /= m
+GAT6. GAP5. GA17. outer medulla
+GAT6. GAP5. GA17. medulla layer M1..6
+GAT6. GAP5. GA17. serpentine layer /= medulla layer M7
+GAT6. GAP5. GA17. inner medulla
+GAT6. GAP5. GA17. medulla layer M8..10
+GAT6. GAP5. GA17. distal medullary amacrine neurons, Dm
+GAT6. GAP5. GA17. distal medullary amacrine neuron 1..7 /= Dm1..7
+GAT6. GAP5. GA17. medullary intrinsic neurons, Mi
+GAT6. GAP5. GA17. medullary intrinsic neuron 1 /= Mi1 /= small field
+unilateral tristratified neuron, Sut
+GAT6. GAP5. GA17. medullary intrinsic neuron 2..12 /= Mi2..12
+GAT6. GAP5. GA17. transmedullary neurons, Tm
+GAT6. GAP5. GA17. transmedullary neuron 1..28 /= Tm1..28
+GAT6. GAP5. GA17. transmedullary Y neurons, TmY
+GAT6. GAP5. GA17. transmedullary Y neuron 1..11 /= TmY1..11
+GAT6. GAP5. GA17. transmedullary Y neuron 5a /= TmY5a
+GAT6. GAP5. GA17. transmedullary neurons, Tm.Y
+GAT6. GAP5. GA17. transmedullary neuron, 3Y /= Tm3Y
+GAT6. GAP5. GA17. transmedullary neuron, 5Y /= Tm5Y
+GAT6. GAP5. GA17. proximal medullary amacrine neurons, Pm
+GAT6. GAP5. GA17. proximal medullary amacrine neuron 1 /= Pm1
+GAT6. GAP5. GA17. proximal medullary amacrine neuron 1a /= Pm1a
+GAT6. GAP5. GA17. proximal medullary amacrine neuron 2 /= Pm2
+GAT6. GAP5. GA17. medullary tangential neurons, Mt
+GAT6. GAP5. GA17. medullary tangential neuron 1..15 /= Mt1..15
+GAT6. GAP5. GA17. lobula /= Lo
+GAT6. GAP5. GA17. lobula layer, Lo1
+GAT6. GAP5. GA17. lobula layer, Lo2
+GAT6. GAP5. GA17. lobula layer, Lo3
+GAT6. GAP5. GA17. lobula layer, Lo4
+GAT6. GAP5. GA17. Olt neuron
+GAT6. GAP5. GA17. heterolateral columnar neurons /= HLCN
+GAT6. GAP5. GA17. lobular tangential neurons, Lt
+GAT6. GAP5. GA17. lobular tangential neuron 1..10 /= Lt1..10
+GAT6. GAP5. GA17. lobular columnar neurons, Lcn
+GAT6. GAP5. GA17. lobular columnar neuron 1..8 /= Lcn1..8
+GAT6. GAP5. GA17. lobular complex columnar neurons, Lccn
+GAT6. GAP5. GA17. lobular complex columnar neuron 1 /= Lccn1
+GAT6. GAP5. GA17. lobular complex columnar neuron 2 /= Lccn2
+GAT6. GAP5. GA17. lobular intrinsic neuron, Li
+GAT6. GAP5. GA17. lobular intrinsic neuron 1 /= Li1
+GAT6. GAP5. GA17. lobular intrinsic neuron 2 /= Li2
+GAT6. GAP5. GA17. lobula plate 1 /= Lop
+GAT6. GAP5. GA17. layer Lop1
+GAT6. GAP5. GA17. layer Lop2
+GAT6. GAP5. GA17. layer Lop3
+GAT6. GAP5. GA17. layer Lop4
+GAT6. GAP5. GA17. translobullar plate neurons, Tpl
+GAT6. GAP5. GA17. translobullar plate neuron 1..5 /= Tpl1..5
+GAT6. GAP5. GA17. lobular plate tangential neurons, Lpt
+GAT6. GAP5. GA17. lobular plate tangential neuron 1 /= Lpt1
+GAT6. GAP5. GA17. lobular plate tangential neuron 2 /= Lpt2
+GAT6. GAP5. GA17. lobular plate element /= Lpi
+GAT6. GAP5. GA17. Y neurons, Y
+GAT6. GAP5. GA17. Y neuron 1..5 /= Y1..5
+GAT6. GAP5. GA17. giant horizontal cell /= HS
+GAT6. GAP5. GA17. dorsal giant horizontal cell /= HSN
+GAT6. GAP5. GA17. equatorial giant horizontal cell /= HSE
+GAT6. GAP5. GA17. ventral giant horizontal cell /= HSS
+GAT6. GAP5. GA17. optic chiasma
+GAT6. GAP5. GA17. second optic chiasma
+GAT6. GAP5. GA17. stomodeal ganglion /= pharyngeal ganglion /=
+oespohageal ganglion /= hypocerebral ganglion /= ventricular ganglion
+GAT6. GAP5. GA17. stomodeal nerve /= recurrent nerve
+GAT6. GAP5. GA17. cardia nerve
+GAT6. GAP5. GA17. crop nerve
+GAT6. GAP5. GA17. salivary gland nerve
+GAT6. GAP5. GA17. thoracic ganglion
+GAT6. GAP5. GA17. cervical nerve
+GAT6. GAP5. GA17. prothoracic neuromere
+GAT6. GAP5. GA17. dorsal prothoracic nerve
+GAT6. GAP5. GA17. accessory prothoracic nerve
+GAT6. GAP5. GA17. ventral prothoracic nerve
+GAT6. GAP5. GA17. prothoracic ventral neurosecretory neurons /= VTNC [56]
+GAT6. GAP5. GA17. mesothoracic neuromere
+GAT6. GAP5. GA17. anterior dorsal mesothoracic nerve
+GAT6. GAP5. GA17. posterior dorsal mesothoracic nerve
+GAT6. GAP5. GA17. accessory mesothoracic nerve
+GAT6. GAP5. GA17. ventral mesothoracic nerve
+GAT6. GAP5. GA17. mesothoracic ventral neurosecretory neurons /= VNTC [56]
+GAT6. GAP5. GA17. direct flight muscle motor neurons [70]
+GAT6. GAP5. GA17. b1 motor neuron, b1mn
+GAT6. GAP5. GA17. III3 motor neuron, III3mn
+GAT6. GAP5. GA17. b2 motor neuron, b2mn
+GAT6. GAP5. GA17. III1 motor neuron, III1mn
+GAT6. GAP5. GA17. I1 motor neuron, I1mn
+GAT6. GAP5. GA17. dorsal tp motor neuron, dtpmn
+GAT6. GAP5. GA17. ventral tp motor neuron, vtpmn
+GAT6. GAP5. GA17. tergal depressor of trochanter muscle motor neuron, TDTmn
+GAT6. GAP5. GA17. indirect flight muscle motor neuron [57]
+GAT6. GAP5. GA17. indirect flight muscle motor neuron 1..5 /= MN1..5
+GAT6. GAP5. GA17. wing nerve [58]
+GAT6. GAP5. GA17. wing nerve, TSM(1)
+GAT6. GAP5. GA17. wing nerve, TSM(2)
+GAT6. GAP5. GA17. wing nerve, GSR
+GAT6. GAP5. GA17. wing nerve, dHCV
+GAT6. GAP5. GA17. wing nerve, vHCV
+GAT6. GAP5. GA17. wing nerve, ACV
+GAT6. GAP5. GA17. wing nerve, L3-1
+GAT6. GAP5. GA17. wing nerve, L3-2
+GAT6. GAP5. GA17. wing nerve, L3-3
+GAT6. GAP5. GA17. wing nerve, L3-v
+GAT6. GAP5. GA17. metathoracic neuromere
+GAT6. GAP5. GA17. metathoracic ventral thoracic neurosecretory neurons
+/= VNTC [56]
+GAT6. GAP5. GA17. dorsal metathoracic nerve
+GAT6. GAP5. GA17. accessory metathoracic nerve
+GAT6. GAP5. GA17. ventral metathoracic nerve
+GAT6. GAP5. GA17. abdominal nerve trunk
+GAT6. GAP5. GA17. peptinergic (?neurosecretory) neurons [56]
+GAT6. GAP5. GA17. dorsal group, dA
+GAT6. GAP5. GA17. ventral group, vA
+GAT6. GAP5. GA17. abdominal segment 1.. nerve
+
+GAT6. GAP5. GA17. sense organs
+GAT6. GAP5. GA17. sensory organ
+GAT6. GAP5. GA17. sensory organ cell, SOC
+GAT6. GAP5. GA17. external sensory organ /= eo /= es
+GAT6. GAP5. GA17. trichogen cell
+GAT6. GAP5. GA17. tormogen cell
+GAT6. GAP5. GA17. socket
+GAT6. GAP5. GA17. thecogen cell /= support cell
+GAT6. GAP5. GA17. eo dendrite
+GAT6. GAP5. GA17. eo neuron (Type I)
+GAT6. GAP5. GA17. eo glial cell
+GAT6. GAP5. GA17. eo sensory structure
+GAT6. GAP5. GA17. chordotonal organ /= ch /= scolopophorous organ [34]
+GAT6. GAP5. GA17. scolopidia /= scolopale
+GAT6. GAP5. GA17. scolopidial cap cell
+GAT6. GAP5. GA17. scolopidial sheath cell
+GAT6. GAP5. GA17. scolopidial sensory cell
+GAT6. GAP5. GA17. scolopidial ligament cell
+GAT6. GAP5. GA17. scolopidial dendrite
+GAT6. GAP5. GA17. scolopidial neuron (Type I) /= ch
+GAT6. GAP5. GA17. multiple dendritic neuron /= md
+GAT6. GAP5. GA17. md dendrite
+GAT6. GAP5. GA17. md neuron (Type II) /= md
+GAT6. GAP5. GA17. bipolar dendrite neuron /= bd
+GAT6. GAP5. GA17. dendritic arborising neuron /= da
+GAT6. GAP5. GA17. tracheael innervating neuron /= td
+GAT6. GAP5. GA17. macrochaetae /= bristles /= chaetae /= setae
+GAT6. GAP5. GA17. microchaetae /= setulae
+GAT6. GAP5. GA17. hairs /= microtrichea
+GAT6. GAP5. GA17. sensilla trichodea /= hair sensilla /=trichoid sensilla
+GAT6. GAP5. GA17. sensilla campaniformia /= papillae
+GAT6. GAP5. GA17. sensilla basonica /= pegs /=trichoid sensilla
+GAT6. GAP5. GA17. sensilla coeloconica /=coeloconic sensilla
+GAT6. GAP5. GA17. Keilin's organ /= trihair
+GAT6. GAP5. GA17. Kolbchen /= black dot /= black organ /= pit
+GAT6. GAP5. GA17. denticle belt
+GAT6. GAP5. GA17. denticle row 1
+GAT6. GAP5. GA17. denticle row 2
+GAT6. GAP5. GA17. denticle row 3
+GAT6. GAP5. GA17. denticle row 4
+GAT6. GAP5. GA17. denticle row 5
+GAT6. GAP5. GA17. denticle row 6
+GAT6. GAP5. GA17. larval sense organs [1] [38] [41] [42] [44] [46] [71]
+GAT6. GAP5. GA17. antenno-maxRecordsillary complex
+GAT6. GAP5. GA17. buccal tree /?= epipharyngeal sense organ
+GAT6. GAP5. GA17. labral segment sensilla
+GAT6. GAP5. GA17. larval labral sense organ /= epiphyseal sense organ /=
+epiphysis /= ep
+GAT6. GAP5. GA17. pharyngeal monoscolopidial chordotonal organ /= pch1
+GAT6. GAP5. GA17. dorsopharyngeal organ /= dpo
+GAT6. GAP5. GA17. compound sensillum
+GAT6. GAP5. GA17. ocular segment sensilla
+GAT6. GAP5. GA17. Bolwig's organ /= dorsocaudal pharyngeal sense organ
+GAT6. GAP5. GA17. dorsomedial papilla /= dmp /= internal dorsal fold
+sensilla /= dorsomedial papilla of the maxillary sense organ
+GAT6. GAP5. GA17. medial group of sensilla /= DFM1
+GAT6. GAP5. GA17. medial group of sensilla /= DFM2
+GAT6. GAP5. GA17. medial group of sensilla /= DFM3
+GAT6. GAP5. GA17. lateral sensillum /= DFL
+GAT6. GAP5. GA17. pharyngeal sense organ /= X-organ of Keilin /=
+hypopharyngeal sense organ [46] /= hpo
+GAT6. GAP5. GA17. anteroventral group of sensilla
+GAT6. GAP5. GA17. dorsal group sensillum V1..3
+GAT6. GAP5. GA17. dorsal group of sensilla
+GAT6. GAP5. GA17. dorsal group sensillum D1..6
+GAT6. GAP5. GA17. posteriolateral sensillum V4
+GAT6. GAP5. GA17. laterohypopharyngeal organ /= lho
+GAT6. GAP5. GA17. antennal segment sensilla
+GAT6. GAP5. GA17. antennal sense organ /= antennal element /= dorsal
+organ /= antennales Organ /= do
+GAT6. GAP5. GA17. monoscolopidial chordotonal organ /= ch1
+GAT6. GAP5. GA17. intercalary segment sensilla
+GAT6. GAP5. GA17. dorsolateral papilla /= dlp /= dorsolateral papilla of
+the antennal sense organ
+GAT6. GAP5. GA17. modified sensillum campaniformium
+GAT6. GAP5. GA17. pit sensillum
+GAT6. GAP5. GA17. sensillum campaniformium
+GAT6. GAP5. GA17. rostral hairs /= cirri
+GAT6. GAP5. GA17. associated organ /= ao
+GAT6. GAP5. GA17. mandibular segment sensilla
+GAT6. GAP5. GA17. papilla organ /= pao
+GAT6. GAP5. GA17. anterior pharyngeal organ /= apo
+GAT6. GAP5. GA17. lateropharyngeal organ /=lpo
+GAT6. GAP5. GA17. maxillary segment organs
+GAT6. GAP5. GA17. maxillary sense organ /= maxillary element /= terminal
+organ /= to /= Maxillarorgan [4] [46]
+GAT6. GAP5. GA17. distal group of sensilla
+GAT6. GAP5. GA17. sensillum campaniformium 1..3 /= P1..3
+GAT6. GAP5. GA17. knob sensillum 1 /= K1
+GAT6. GAP5. GA17. knob sensillum 2 /= K2
+GAT6. GAP5. GA17. spot sensillum /= S1
+GAT6. GAP5. GA17. pit sensillum 1..5 /= T1..5
+GAT6. GAP5. GA17. ventral organ /= vo [46]
+GAT6. GAP5. GA17. ventral organ sensillum V1..5
+GAT6. GAP5. GA17. dorsal pits [44]
+GAT6. GAP5. GA17. knob in pit sensillum [46]
+GAT6. GAP5. GA17. chordotonal organ with 2 scolopidia /= ch2
+GAT6. GAP5. GA17. hypomaxillary organ /= hmo
+GAT6. GAP5. GA17. labial segment sensilla
+GAT6. GAP5. GA17. hypophysis /= hy /= hypophyseal sense organ [46]
+GAT6. GAP5. GA17. labial sense organ /= lower lip sense organ [44]
+GAT6. GAP5. GA17. labial sensillum 1..3
+GAT6. GAP5. GA17. larval prothoracic sensilla
+GAT6. GAP5. GA17. prothoracic slit papilla sensillum, vc2a /= px
+GAT6. GAP5. GA17. prothoracic slit papilla sensillum, vc2b /= py
+GAT6. GAP5. GA17. prothoracic dorsal sensillum trichodeum, dh1 /= h2 /= shD
+GAT6. GAP5. GA17. prothoracic dorsal sensillum trichodeum, dh2 /= h3 /= shE
+GAT6. GAP5. GA17. prothoracic dorsal sensillum campaniformium, dc1 /= p5
+GAT6. GAP5. GA17. prothoracic dorsal sensillum campaniformium, dc2 /= p6
+GAT6. GAP5. GA17. prothoracic dorsal sensillum campaniformium, dc3 /= p7
+GAT6. GAP5. GA17. prothoracic dorsal triscolopidial chordotonal organ /=
+dch3
+GAT6. GAP5. GA17. prothoracic lateral sensillum trichodeum /= lh1 /= h1
+/= shC
+GAT6. GAP5. GA17. prothoracic lateral sensillum campaniformium, p5
+GAT6. GAP5. GA17. prothoracic lateral sensillum campaniformium, lc1 /= p3
+GAT6. GAP5. GA17. prothoracic lateral sensillum campaniformium, lc2 /= p4
+GAT6. GAP5. GA17. prothoracic ventral Kolbchen /= vbd /= vk /= shB
+GAT6. GAP5. GA17. prothoracic ventral sensillum campaniformium, vc1 /= p1
+GAT6. GAP5. GA17. prothoracic ventral sensillum campaniformium, vc2 /= p2
+GAT6. GAP5. GA17. prothoracic ventral monoscolopidial chordotonal organ
+/= vch1
+GAT6. GAP5. GA17. T1 beard /= prothoracic beard
+GAT6. GAP5. GA17. prothoracic dorsal trichomes
+GAT6. GAP5. GA17. prothoracic ventral denticle belt
+GAT6. GAP5. GA17. larval mesothoracic sensilla
+GAT6. GAP5. GA17. mesothoracic dorsal sensillum trichodeum, dh1 /= h2 /= shD
+GAT6. GAP5. GA17. mesothoracic dorsal sensillum trichodeum, dh2 /= h3 /= shE
+GAT6. GAP5. GA17. mesothoracic dorsal sensillum campaniformium, dc1 /= p5
+GAT6. GAP5. GA17. mesothoracic dorsal sensillum campaniformium, dc2 /= p6
+GAT6. GAP5. GA17. mesothoracic dorsal sensillum campaniformium, dc3 /= p7
+GAT6. GAP5. GA17. mesothoracic dorsal triscolopidial chordotonal organ
+/= dch3
+GAT6. GAP5. GA17. mesothoracic lateral Kolbchen /= ldb /= lk /= shB
+GAT6. GAP5. GA17. mesothoracic lateral sensillum trichodeum /= lh1 /=h1
+/= shC
+GAT6. GAP5. GA17. mesothoracic lateral sensillum campaniformium, lc1 /= p3
+GAT6. GAP5. GA17. mesothoracic lateral sensillum campaniformium, lc2 /= p4
+GAT6. GAP5. GA17. mesothoracic lateral triscolopidial chordotonal organ
+/= lch3
+GAT6. GAP5. GA17. mesothoracic ventral Kolbchen /= vbd /= vk /= shB
+GAT6. GAP5. GA17. mesothoracic ventral sensillum campaniformium, vc1 /= p1
+GAT6. GAP5. GA17. mesothoracic ventral sensillum campaniformium, vc2 /= p2
+GAT6. GAP5. GA17. mesothoracic ventral monoscolopidial chordotonal organ
+/= vch1
+GAT6. GAP5. GA17. mesothoracic Keilin's organ /= ko /= KO /= shA
+GAT6. GAP5. GA17. mesothoracic dorsal trichomes
+GAT6. GAP5. GA17. mesothoracic ventral denticle belt
+GAT6. GAP5. GA17. larval metathoracic sensilla
+GAT6. GAP5. GA17. metathoracic dorsal sensillum trichodeum, dh1 /= h2 /= shD
+GAT6. GAP5. GA17. metathoracic dorsal sensillum trichodeum, dh2 /= h3 /= shE
+GAT6. GAP5. GA17. metathoracic dorsal sensillum campaniformium, dc1 /= p5
+GAT6. GAP5. GA17. metathoracic dorsal sensillum campaniformium, dc2 /= p6
+GAT6. GAP5. GA17. metathoracic dorsal sensillum campaniformium, dc3 /= p7
+GAT6. GAP5. GA17. metathoracic dorsal triscolopidial chordotonal organ
+/= dch3
+GAT6. GAP5. GA17. metathoracic lateral Kolbchen /= lbd /= lk /= shB
+GAT6. GAP5. GA17. metathoracic lateral sensillum trichodeum /= lh1 /= h1
+/= shC
+GAT6. GAP5. GA17. metathoracic lateral sensillum campaniformium, lc1 /= p3
+GAT6. GAP5. GA17. metathoracic lateral sensillum campaniformium, lc2 /= p4
+GAT6. GAP5. GA17. metathoracic ventral Kolbchen /= vbd /= vk /= shB
+GAT6. GAP5. GA17. metathoracic ventral sensillum campaniformium, vc1 /= p1
+GAT6. GAP5. GA17. metathoracic ventral sensillum campaniformium, vc2 /= p2
+GAT6. GAP5. GA17. metathoracic ventral monoscolopidial chordotonal organ
+/= vch1
+GAT6. GAP5. GA17. metathoracic Keilin's organ /= ko /= KO /= shA
+GAT6. GAP5. GA17. metathoracic dorsal trichomes
+GAT6. GAP5. GA17. metathoracic ventral denticle belt
+GAT6. GAP5. GA17. larval abdominal 1..7 sensilla
+GAT6. GAP5. GA17. abdominal 1..7 dorsal sensillum trichodeum, dh1 /=
+h3/4 /= shF
+GAT6. GAP5. GA17. abdominal 1..7 dorsal sensillum trichodeum, h3
+GAT6. GAP5. GA17. abdominal 1..7 dorsal sensillum campaniformium, dc1 /= p8
+GAT6. GAP5. GA17. abdominal 1..7 dorsal sensillum campaniformium, dc2 /= p9
+GAT6. GAP5. GA17. abdominal 1..7 lateral monoscolopidial chordotonal
+organ /= lch1
+GAT6. GAP5. GA17. abdominal 1..7 lateral pentascolopidial chordotonal
+organ /= lch5
+GAT6. GAP5. GA17. abdominal 1..7 lateral sensillum trichodeum /= lh1 /= h2
+GAT6. GAP5. GA17. larval abdominal 1..7 lateral sensillum campaniformium
+/= lc1 /= p7
+GAT6. GAP5. GA17. abdominal 1..7 ventral sensillum trichodeum /= vh1 /= h1
+GAT6. GAP5. GA17. abdominal 1..7 ventral sensillum campaniformium, vc1 /= p1
+GAT6. GAP5. GA17. abdominal 1..7 ventral sensillum campaniformium, vc2 /= p2
+GAT6. GAP5. GA17. abdominal 1..7 ventral sensillum campaniformium, vc3 /= p3
+GAT6. GAP5. GA17. abdominal 1..7 ventral sensillum campaniformium, vc4a
+/= p5
+GAT6. GAP5. GA17. abdominal 1..7 ventral sensillum campaniformium, vc4b
+/= p4
+GAT6. GAP5. GA17. abdominal 1..7 ventral sensillum campaniformium, vc5 /= p6
+GAT6. GAP5. GA17. abdominal 1..7 ventral monoscolopidial chordotonal
+organ /= vch1
+GAT6. GAP5. GA17. abdominal 1..7 dorsal trichomes
+GAT6. GAP5. GA17. abdominal 1..7 ventral denticle belt
+GAT6. GAP5. GA17. larval abdominal 8 sensilla
+GAT6. GAP5. GA17. abdominal 8 dorsal sensillum campaniformium /= dmsc /=
+t7 /= SO7 /= sc3
+GAT6. GAP5. GA17. abdominal 8 dorsomedial sensory organ /= t5 + t6
+GAT6. GAP5. GA17. abdominal 8 dorsomedial sensillum trichodeum /= t6 /= SO6
+GAT6. GAP5. GA17. abdominal 8 dorsomedial sensilla campaniformia /= t5
+/= SO5
+GAT6. GAP5. GA17. abdominal 8 lateral monoscolopidial chordotonal organ
+/= lch1
+GAT6. GAP5. GA17. abdominal 8 lateral triscolopidial chordotonal organ
+/= lch3
+GAT6. GAP5. GA17. spiracular sensory organ
+GAT6. GAP5. GA17. spiracular sensilla trichodea 1..4
+GAT6. GAP5. GA17. abdominal 8 dorsal trichomes
+GAT6. GAP5. GA17. abdominal 8 ventral denticle belt
+GAT6. GAP5. GA17. larval abdominal 9 sensilla
+GAT6. GAP5. GA17. abdominal 9 dorsocaudal sensory organ /= posterior
+lateral sensory organ, dcsc /= t2 + t3 /= sc2/3
+GAT6. GAP5. GA17. abdominal 9 dorsocaudal sensillum campaniformium, t2
+/= SO2
+GAT6. GAP5. GA17. abdominal 9 dorsocaudal sensilla campaniformia, t3 /= SO3
+GAT6. GAP5. GA17. abdominal 9 dorsolateral sensilla trichodeum /= dlsc
+/= t4 /= SO4 /= sc1/2
+GAT6. GAP5. GA17. abdominal 9 lateral monoscolopidial chordotonal organ
+/= lch1
+GAT6. GAP5. GA17. abdominal 9 lateral triscolopidial chordotonal organ
+/= lch3
+GAT6. GAP5. GA17. larval abdominal 10 sensilla
+GAT6. GAP5. GA17. abdominal 10 caudal sensory organ /= anal sensory
+organ /= ventral anal sensilla, csc /= t1 /= SO1 /= sc1
+GAT6. GAP5. GA17. abdominal 10 caudal sensillum trichodea /= t1h
+GAT6. GAP5. GA17. abdominal 10 caudal sensilla campaniformia /= t1p
+GAT6. GAP5. GA17. larval abdominal 11 sensilla
+GAT6. GAP5. GA17. abdominal 11 anal tuft /= t0 /= T
+GAT6. GAP5. GA17. adult sensory organs [31] [32]
+GAT6. GAP5. GA17. head sensilla
+GAT6. GAP5. GA17. cibarial fish-trap bristles /= posterior cibarial
+setae /= filter apparatus of McAlpine
+GAT6. GAP5. GA17. lower row cibarial fish-trap bristles
+GAT6. GAP5. GA17. upper row cibarial fish-trap bristles
+GAT6. GAP5. GA17. cibarial sense organ /= fulcral organ
+GAT6. GAP5. GA17. dorsal cibarial sense organ
+GAT6. GAP5. GA17. dorsal cibarial sensillum 1..2
+GAT6. GAP5. GA17. ventral cibarial sense organ
+GAT6. GAP5. GA17. ventral cibarial sensillum 1..2
+GAT6. GAP5. GA17. anterior orbital bristle /= proclinate orbital bristle
+GAT6. GAP5. GA17. middle orbital bristle /= anterior reclinate orbital
+bristle
+GAT6. GAP5. GA17. posterior orbital bristle /= posterior reclinate
+orbital bristle
+GAT6. GAP5. GA17. occipital bristle /= supracervical bristle
+GAT6. GAP5. GA17. anterior vertical bristle /= inner vertical bristle
+GAT6. GAP5. GA17. posterior vertical bristle /= outer vertical bristle
+GAT6. GAP5. GA17. postvertical bristle
+GAT6. GAP5. GA17. ocellar bristle
+GAT6. GAP5. GA17. interocellar bristle
+GAT6. GAP5. GA17. vibrissae
+GAT6. GAP5. GA17. subvibrissal bristle
+GAT6. GAP5. GA17. interommatidial bristle /= interfacetal bristle
+GAT6. GAP5. GA17. premandibular bristle
+GAT6. GAP5. GA17. maxillary palp sense organs [60]
+GAT6. GAP5. GA17. maxillary palp sensilla basiconica
+GAT6. GAP5. GA17. maxillary palp bristles
+GAT6. GAP5. GA17. adult labral sense organ
+GAT6. GAP5. GA17. labral sensillum 1..9
+GAT6. GAP5. GA17. pseudotracheae
+GAT6. GAP5. GA17. labellar taste pegs /= pseudotracheal sensilla
+GAT6. GAP5. GA17. labellar taste bristle
+GAT6. GAP5. GA17. labellum sensilla
+GAT6. GAP5. GA17. labella taste bristles
+GAT6. GAP5. GA17. labella taste pegs
+GAT6. GAP5. GA17. postoccipital sensilla
+GAT6. GAP5. GA17. rostrum
+GAT6. GAP5. GA17. distal rostral sensilla
+GAT6. GAP5. GA17. proximal rostral sensilla
+GAT6. GAP5. GA17. postgenal sensilla
+GAT6. GAP5. GA17. antennal sensilla
+GAT6. GAP5. GA17. sensilla trichodea of antennal segment 3
+GAT6. GAP5. GA17. sensilla basiconica of antennal segment 3
+GAT6. GAP5. GA17. large sensilla basiconica of antennal segment 3
+GAT6. GAP5. GA17. small sensilla basiconica of antennal segment 3
+GAT6. GAP5. GA17. sensilla coeloconica of antennal segment 3
+GAT6. GAP5. GA17. Johnston's organ /= chordotonal organ of antennal
+segment 2
+GAT6. GAP5. GA17. sacculus
+GAT6. GAP5. GA17. sensilla coeloconica of sacculus /= grooved sensilla
+of sacculus
+GAT6. GAP5. GA17. sensilla basiconica of sacculus
+GAT6. GAP5. GA17. aristal sense organ
+GAT6. GAP5. GA17. poststernal organ
+GAT6. GAP5. GA17. sensilla trichodea of posternal organ
+GAT6. GAP5. GA17. ptilinal sensilla trichodea
+GAT6. GAP5. GA17. eye sensory structures
+GAT6. GAP5. GA17. cornea
+GAT6. GAP5. GA17. corneagous cells
+GAT6. GAP5. GA17. cone cell
+GAT6. GAP5. GA17. posterior cone cell
+GAT6. GAP5. GA17. anterior cone cell
+GAT6. GAP5. GA17. polar cone cell
+GAT6. GAP5. GA17. equatorial cone cell
+GAT6. GAP5. GA17. pseudocone
+GAT6. GAP5. GA17. retina
+GAT6. GAP5. GA17. retinula cell
+GAT6. GAP5. GA17. retinula cell R1..8
+GAT6. GAP5. GA17. rhabdomere
+GAT6. GAP5. GA17. rhabdomere R1..8
+GAT6. GAP5. GA17. mystery cell
+GAT6. GAP5. GA17. pigment cell
+GAT6. GAP5. GA17. primary pigment cell
+GAT6. GAP5. GA17. secondary pigment cell
+GAT6. GAP5. GA17. tertiary pigment cell
+GAT6. GAP5. GA17. pigment granule [61]
+GAT6. GAP5. GA17. primary pigment cell pigment granules
+GAT6. GAP5. GA17. secondary pigment cell pigment granules
+GAT6. GAP5. GA17. intraretinular cell pigment granules
+GAT6. GAP5. GA17. ocellus sensory structures [62]
+GAT6. GAP5. GA17. ocellus cornea
+GAT6. GAP5. GA17. ocellus corneagenous cell
+GAT6. GAP5. GA17. ocellus retinula cell
+GAT6. GAP5. GA17. ocellus rhabdomere
+GAT6. GAP5. GA17. ocellus pigment granule
+GAT6. GAP5. GA17. adult thoracic sensilla
+GAT6. GAP5. GA17. adult prothoracic sensilla
+GAT6. GAP5. GA17. prothoracic chordotonal organ
+GAT6. GAP5. GA17. upper humeral bristle /= upper postpronotal bristle
+GAT6. GAP5. GA17. lower humeral bristle /= lower postpronotal bristle
+GAT6. GAP5. GA17. prothoracic leg sensilla
+GAT6. GAP5. GA17. sensilla trichodea of cervical membrane of prothoracic leg
+GAT6. GAP5. GA17. prothoracic coxal sensilla trichodea
+GAT6. GAP5. GA17. prothoracic coxal sensilla trichodea, St3
+GAT6. GAP5. GA17. prothoracic coxal sensilla trichodea, St4
+GAT6. GAP5. GA17. prothoracic coxal sensilla trichodea, St8
+GAT6. GAP5. GA17. prothoracic coxal bristles on hairy island /= BH<up>-</up>
+GAT6. GAP5. GA17. prothoracic trochanter sensilla campaniformia
+GAT6. GAP5. GA17. prothoracic trochanter sensilla campaniformia,
+Sc<up>-</up>
+GAT6. GAP5. GA17. prothoracic trochanter sensilla campaniformia, Sc3
+GAT6. GAP5. GA17. prothoracic trochanter sensilla campaniformia,
+Sc<up>+</up>5
+GAT6. GAP5. GA17. prothoracic trochanter sensilla campaniformia, Sc13 /=
+Sc<up>-</up>8 + Sc<up>+</up>5
+GAT6. GAP5. GA17. prothoracic trochanter sensilla trichodea
+GAT6. GAP5. GA17. prothoracic trochanter sensillum trichodeum, St1
+GAT6. GAP5. GA17. prothoracic trochanter sensilla trichodea, St5
+GAT6. GAP5. GA17. prothoracic trochanter sensillum trichodeum, 2GSt
+GAT6. GAP5. GA17. prothoracic trochanter edge bristle
+GAT6. GAP5. GA17. prothoracic femural bract
+GAT6. GAP5. GA17. prothoracic femural chordotonal organ 1
+GAT6. GAP5. GA17. prothoracic femural chordotonal organ 2
+GAT6. GAP5. GA17. prothoracic femural chordotonal organ 3
+GAT6. GAP5. GA17. prothoracic femural sensilla campaniformia
+GAT6. GAP5. GA17. prothoracic femural sensillum campaniformium, Sc1
+GAT6. GAP5. GA17. prothoracic femural sensilla campaniformia, Sc11
+GAT6. GAP5. GA17. prothoracic tibial bracts
+GAT6. GAP5. GA17. prothoracic tibial transverse bristle row
+GAT6. GAP5. GA17. prothoracic tibial sensilla trichodea
+GAT6. GAP5. GA17. prothoracic tibial preapical bristle
+GAT6. GAP5. GA17. prothoracic tibial apical bristle
+GAT6. GAP5. GA17. prothoracic tarsus segment 1 central bristle
+GAT6. GAP5. GA17. prothoracic tarsus segment 1 transverse row
+GAT6. GAP5. GA17. prothoracic tarsal bristle longitudinal row 1..8
+GAT6. GAP5. GA17. prothoracic tarsal bristle longitudinal row 5.5
+GAT6. GAP5. GA17. sex comb /= metatarsal comb
+GAT6. GAP5. GA17. adult mesothoracic sensilla
+GAT6. GAP5. GA17. presutural bristle
+GAT6. GAP5. GA17. anterior notopleural bristle
+GAT6. GAP5. GA17. posterior notopleural bristle
+GAT6. GAP5. GA17. anterior supraalar bristle
+GAT6. GAP5. GA17. poster supraalar bristle
+GAT6. GAP5. GA17. anterior dorsocentral bristle
+GAT6. GAP5. GA17. posterior dorsocentral bristle
+GAT6. GAP5. GA17. anterior postalar bristle
+GAT6. GAP5. GA17. posterior postalar bristle /= apical scutellar bristle
+GAT6. GAP5. GA17. anterior scutellar bristle
+GAT6. GAP5. GA17. posterior scutellar bristle
+GAT6. GAP5. GA17. anterior sternopleural bristle
+GAT6. GAP5. GA17. middle sternopleural bristle
+GAT6. GAP5. GA17. posterior sternopleural bristle
+GAT6. GAP5. GA17. ventral sternopleural bristle
+GAT6. GAP5. GA17. acrostichal bristle
+GAT6. GAP5. GA17. katepisternal bristle /= sternal bristle
+GAT6. GAP5. GA17. notal sensilla trichodea /= APAst2
+GAT6. GAP5. GA17. wing sensilla [63]
+GAT6. GAP5. GA17. chordotonal organ of wing
+GAT6. GAP5. GA17. anterior notal wing process sensilla campaniformia /= ANWP
+GAT6. GAP5. GA17. dorsal row /= DR
+GAT6. GAP5. GA17. dorsal triple row /= dTR /= recurved, polyinnervated,
+chemosensory bristles
+GAT6. GAP5. GA17. medial triple row /= mTR /= stout, mechanosensory,
+singly innervated bristles
+GAT6. GAP5. GA17. dorsal double row /= dDR /= slender, mechanosensory,
+singly innervated bristles
+GAT6. GAP5. GA17. ventral row /= VR
+GAT6. GAP5. GA17. ventral triple row /= vTR
+GAT6. GAP5. GA17. ventral triple row, chemosensory /= vTR /= recurved,
+polyinnervated, chemosensory bristles
+GAT6. GAP5. GA17. ventral triple row, mechanosensory /= vTR /= slender,
+mechanosensory, singly innervated bristles
+GAT6. GAP5. GA17. ventral double row /= vDR /= slender, mechanosensory,
+singly innervated bristles
+GAT6. GAP5. GA17. twin sensilla of margin 1 /= TM1
+GAT6. GAP5. GA17. twin sensilla of margin 2 /= TM2
+GAT6. GAP5. GA17. posterior hair
+GAT6. GAP5. GA17. trichomes of the posterior wing margin
+GAT6. GAP5. GA17. sensilla campaniformia of proximal dorsal radius
+GAT6. GAP5. GA17. sensilla campaniformia of dorsal radius, Sc4d /= d.Rad.A
+GAT6. GAP5. GA17. sensilla campaniformia of dorsal radius, Sc25 /= d.Rad.B
+GAT6. GAP5. GA17. sensilla campaniformia of dorsal radius, Sc12 /=
+d.Rad.D + d.Rad.E
+GAT6. GAP5. GA17. sensillum campaniformium of dorsal radius, Sc1 /= GSR,
+giant sensillum of radius
+GAT6. GAP5. GA17. sensilla campaniformia of proximal ventral radius
+GAT6. GAP5. GA17. sensilla campaniformia of ventral radius, Sc4vm /= v.Rad.A
+GAT6. GAP5. GA17. sensilla campaniformia of ventral radius, Sc3 /= v.Rad.B
+GAT6. GAP5. GA17. sensilla campaniformia of ventral radius, Sc5 /= v.Rad.C
+GAT6. GAP5. GA17. sensilla campaniformia of dorsal radius
+GAT6. GAP5. GA17. proximal sensillum /= L3-1
+GAT6. GAP5. GA17. middle sensillum /= L3-2
+GAT6. GAP5. GA17. distal sensillum /= L3-2
+GAT6. GAP5. GA17. sensillum campaniformium of anterior crossvein /= ACV
+GAT6. GAP5. GA17. dorsal humeral crossvein sensillum campaniformium /= d.HCV
+GAT6. GAP5. GA17. ventral humeral crossvein sensillum campaniformium /=
+v.HCV
+GAT6. GAP5. GA17. tegula sensilla campaniformia
+GAT6. GAP5. GA17. peripheral tegula sensilla campaniformia
+GAT6. GAP5. GA17. chordotonal organ of tegula
+GAT6. GAP5. GA17. mesothoracic leg sensilla
+GAT6. GAP5. GA17. mesothoracic coxal sensilla trichodea
+GAT6. GAP5. GA17. mesothoracic coxal sensilla trichodea, St3
+GAT6. GAP5. GA17. mesothoracic coxal sensilla trichodea, St4
+GAT6. GAP5. GA17. mesothoracic coxal sensilla trichodea, St8
+GAT6. GAP5. GA17. mesothoracic coxal bristles on hairy island /=
+BH<up>-</up>
+GAT6. GAP5. GA17. mesothoracic trochanter sensilla campaniformia
+GAT6. GAP5. GA17. mesothoracic trochanter sensilla campaniformia,
+Sc<up>-</up>
+GAT6. GAP5. GA17. mesothoracic trochanter sensilla campaniformia, Sc3
+GAT6. GAP5. GA17. mesothoracic trochanter sensilla campaniformia,
+Sc<up>+</up>5
+GAT6. GAP5. GA17. mesothoracic trochanter sensilla campaniformia, Sc13
+/= Sc<up>-</up>8 + Sc<up>+</up>5
+GAT6. GAP5. GA17. mesothoracic trochanter sensilla trichodea
+GAT6. GAP5. GA17. mesothoracic trochanter sensillum trichodeum, St1
+GAT6. GAP5. GA17. mesothoracic trochanter sensilla trichodea, St5
+GAT6. GAP5. GA17. mesothoracic trochanter sensillum trichodeum, 2GSt
+GAT6. GAP5. GA17. mesothoracic trochanter edge bristle
+GAT6. GAP5. GA17. mesothoracic femural bract
+GAT6. GAP5. GA17. mesothoracic femural chordotonal organ 1
+GAT6. GAP5. GA17. mesothoracic femural chordotonal organ 2
+GAT6. GAP5. GA17. mesothoracic femural chordotonal organ 3
+GAT6. GAP5. GA17. mesothoracic femural sensilla campaniformia
+GAT6. GAP5. GA17. mesothoracic femural sensillum campaniformium, Sc1
+GAT6. GAP5. GA17. mesothoracic femural sensilla campaniformia, Sc11
+GAT6. GAP5. GA17. mesothoracic tibial bracts
+GAT6. GAP5. GA17. mesothoracic tibial transverse bristle row
+GAT6. GAP5. GA17. mesothoracic tibial spur bristle
+GAT6. GAP5. GA17. mesothoracic tibial sensilla trichodea
+GAT6. GAP5. GA17. mesothoracic tibial preapical bristle
+GAT6. GAP5. GA17. mesothoracic tibial apical bristle
+GAT6. GAP5. GA17. mesothoracic tarsal bristle longitudinal row 1..8
+GAT6. GAP5. GA17. mesothoracic tarsal bristle longitudinal interrow 2.5
+GAT6. GAP5. GA17. mesothoracic tarsal bristle longitudinal interrow 3.5
+GAT6. GAP5. GA17. mesothoracic tarsal bristle longitudinal interrow 5.5
+GAT6. GAP5. GA17. mesothoracic tarsal bristle longitudinal interrow 6.5
+GAT6. GAP5. GA17. adult metathoracic sensilla
+GAT6. GAP5. GA17. metathoracic bristle
+GAT6. GAP5. GA17. metathoracic papillae
+GAT6. GAP5. GA17. haltere sensilla [63]
+GAT6. GAP5. GA17. small chordotonal organ of scabellum
+GAT6. GAP5. GA17. large chordotonal organ of scabellum
+GAT6. GAP5. GA17. capitella sensilla trichodea
+GAT6. GAP5. GA17. dorsal pedicellar sensilla campaniformia /= d.Ped
+GAT6. GAP5. GA17. ventral pedicellar sensilla campaniformia /= v.Ped
+GAT6. GAP5. GA17. pedicellar brushes ?
+GAT6. GAP5. GA17. ventral scabellar sensilla campaniformia /= v.Scab
+GAT6. GAP5. GA17. dorsal scabellar sensilla campaniformia /= d.Scab
+GAT6. GAP5. GA17. metathoracic leg sensilla
+GAT6. GAP5. GA17. metathoracic coxal sensilla trichodea
+GAT6. GAP5. GA17. metathoracic coxal sensilla trichodea, St3
+GAT6. GAP5. GA17. metathoracic coxal sensilla trichodea, St4
+GAT6. GAP5. GA17. metathoracic coxal sensilla trichodea, St8
+GAT6. GAP5. GA17. metathoracic coxal bristles on hairy island /=
+BH<up>-</up>
+GAT6. GAP5. GA17. metathoracic trochanter sensilla campaniformia
+GAT6. GAP5. GA17. metathoracic trochanter sensilla campaniformia,
+Sc<up>-</up>
+GAT6. GAP5. GA17. metathoracic trochanter sensilla campaniformia, Sc3
+GAT6. GAP5. GA17. metathoracic trochanter sensilla campaniformia,
+Sc<up>+</up>5
+GAT6. GAP5. GA17. metathoracic trochanter sensilla campaniformia, Sc13
+/= Sc<up>-</up>8 + Sc<up>+</up>5
+GAT6. GAP5. GA17. metathoracic trochanter sensilla trichodea
+GAT6. GAP5. GA17. metathoracic trochanter sensillum trichodeum, St1
+GAT6. GAP5. GA17. metathoracic trochanter sensilla trichodea, St5
+GAT6. GAP5. GA17. metathoracic trochanter sensillum trichodeum, 2GSt
+GAT6. GAP5. GA17. metathoracic trochanter edge bristle
+GAT6. GAP5. GA17. metathoracic femural bract
+GAT6. GAP5. GA17. metathoracic femural chordotonal organ 1
+GAT6. GAP5. GA17. metathoracic femural chordotonal organ 2
+GAT6. GAP5. GA17. metathoracic femural chordotonal organ 3
+GAT6. GAP5. GA17. metathoracic femural sensilla campaniformia
+GAT6. GAP5. GA17. metathoracic femural sensillum campaniformium, Sc1
+GAT6. GAP5. GA17. metathoracic femural sensilla campaniformia, Sc11
+GAT6. GAP5. GA17. metathoracic tibial bracts
+GAT6. GAP5. GA17. metathoracic tibial transverse bristle row
+GAT6. GAP5. GA17. metathoracic tibial sensilla trichodea
+GAT6. GAP5. GA17. metathoracic tibial preapical bristle
+GAT6. GAP5. GA17. metathoracic tibial apical bristle
+GAT6. GAP5. GA17. metathoracic tarsal bristle longitudinal row 1
+GAT6. GAP5. GA17. metathoracic tarsal bristle transverse row 2
+GAT6. GAP5. GA17. metathoracic tarsal bristle longitudinal row 3
+GAT6. GAP5. GA17. metathoracic tarsal bristle longitudinal row 4
+GAT6. GAP5. GA17. metathoracic tarsal bristle longitudinal row 5
+GAT6. GAP5. GA17. metathoracic tarsal bristle longitudinal row 5.5
+GAT6. GAP5. GA17. metathoracic tarsal bristle longitudinal row 6
+GAT6. GAP5. GA17. metathoracic tarsal bristle longitudinal row 7
+GAT6. GAP5. GA17. metathoracic tarsal bristle longitudinal row 8
+GAT6. GAP5. GA17. adult abdominal sensilla
+GAT6. GAP5. GA17. abdominal tergite marginal bristle
+GAT6. GAP5. GA17. abdominal sternite bristle
+GAT6. GAP5. GA17. chordotonal organ of sternite 2
+GAT6. GAP5. GA17. female terminalia sensilla
+GAT6. GAP5. GA17. gonopod thorn bristle
+GAT6. GAP5. GA17. gonopod long bristle
+GAT6. GAP5. GA17. gonopod sensilla trichodea
+GAT6. GAP5. GA17. male terminalia sensilla
+GAT6. GAP5. GA17. clasper teeth /= prensisetae
+GAT6. GAP5. GA17. clasper long bristle
+GAT6. GAP5. GA17. hypandrial bristle
+GAT6. GAP5. GA17. hypandrial hair
+
+MISCELLANEOUS TERMS YOU MAY USE IN FREE TEXT FIELDS
+
+NUCLEOTIDE CODES [67]
+
+a adenine
+c cytosine
+g guanine
+t thymidine
+u uracil
+m a or c
+r a or g /= purine
+w a or t
+s c or g
+y c or t /= pyrimidine
+k g or t
+v a or c or g; not t
+h a or c or t; not g
+d a or g or t; not c
+b c or g or t; not a
+n a or c or g or t
+
+MODIFIED BASES [68]
+
+ac4c 4-acetylcytidine
+chm5u 5-(carboxyhydroxymethyl)uridine
+cm 2'-O-methylcytidine
+cmnm5s2u 5-carboxymethylaminoethyl-2-thiouridine
+cmnm5u 5-carboxymethylaminoethyluridine
+d dihydrouridine
+fm 2'-O-methylpseudouridine
+gal q &bgr;,D-galactosylqueosone
+gm 2'-O-methylguanosine
+i inosine
+i6a N6-isopentyladenosine
+m1a 1-methyladenosine
+m1f 1-methylpseudourinine
+m1g 1-methylguanosine
+m1i 1-methylinosine
+m22g 2,2-dimethylguanosine
+m2a 2-methyladenosine
+m2g 2-methylguanosine
+m3c 3-methylcytidine
+m5c 5-methylcytidine
+m6a N6-methyladenosine
+m7g 7-methylguanosine
+mam5u 5-methylaminomethyluridine
+mam5s2u 5-methoxyaminomethyl-2-thiouridine
+man q &bgr;-D-mannosylqueosine
+mcm5s2u 5-methoxycarbonylmethyl-2-thiouridine
+mcm5u 5-methoxycarbonylmethyluridine
+mo5u 5-methoxyuridine
+ms2i6a 2-methylthio-N6-isopentyladenosone
+ms2t6a
+N-((9-&bgr;-D-ribofuranosyl-2-methyltiopurine-6-yl)carbamoyl)threonine
+mt6a N-((9-&bgr;-D-ribofuranosylpurine-6-yl)N-methyl-carbamoyl)threonine
+mv uridine-5-oxyacetic acid-methylester
+o5u uridine-5-oxyacetic acid /= v
+osyw wybutoxosine
+p pseudouridine
+q queosine
+s2c 2-thiocytidine
+s2t 5-methyl-2-thiouridine
+s4u 4-thiouridine
+t 5-methyluridine
+t6a N((9-&bgr;-D-ribofuranosylpurine-6-yl)carbamoyl)threonine
+tm 2'-O-methyl-5-methyluridine
+um 2'-O-methyl-uridine
+yw wybutosine
+x 3-(3-amino-3-carboxypropyl)uridine /= acp3u
+
+AMINO ACID ABBREVIATIONS [69]
+
+Ala Alanine /= A
+Arg Arginine /= R
+Asn Asparagine /= N
+Asp Aspartic acid /= D
+Cys Cysteine /= C
+Gln Glutamine /= Q
+Glu Glutamic acid /= E
+Gly Glycine /= G
+His Histidine /= H
+Ile Isoleucine /= I
+Leu Leucine /= L
+Lys Lysine /= K
+Met Methionine /= M
+Phe Phenylalanine /= F
+Pro Proline /= P
+Ser Serine /= S
+Thr Threonine /= T
+Trp Tryptophan /= W
+Tyr Tyrosine /= Y
+Val Valine /= V
+
+Aad 2-Aminoadipic acid
+bAad 3-Aminoapidic acid
+&bgr;Ala &bgr;-Alanine /= &bgr;-Aminopropionic acid
+Abu 2-Aminobutyric acid
+4Abu 4-Aminobutyric acid /= Piperidinic acid
+Acp 6-Aminocaproic acid
+Ahe 2-Aminoheptanoic acid
+Aib 2-Aminoisobutyric acid
+bAib 3-Aminoisobutyric acid
+Apm 2-Aminopimelic acid
+Dbu 2,4-Diaminobutyric acid
+Des Desmosine
+Dpm 2,2'-Diaminopimelic acid
+Dpr 2,3-Diaminopropionic acid
+EtGly N-Ethylglycine
+EtAsn N-Ethylasparagine
+Hyl Hydroxylysine
+aHyl allo-Hydroxylysine
+3Hyp 3-Hydroxyproline
+4Hyp 4-Hydroxyproline
+Ide Isodesmosine
+aIle allo-Isoleucine
+MeGly N-Methylglycine /= Sarcosine
+MeIle N-Methylisoleucine
+MeLys 6-N-Methyllysine
+MeVal N-Methylvaline
+Nva Norvaline
+Nle Norleucine
+Orn Ornithine
+
+REFERENCES FOR BODY PARTS CV
+
+[1] FBrf0041814 == Campos-Ortega and Hartenstein, 1985, The Embryonic
+development of Drosophila melanogaster, xi + 227pp
+[2] FBrf0039741 == Foe and Alberts, 1983, J. Cell Sci. 61: 31--70
+[3] FBrf0036849 == Bainbridge and Bownes, 1981, J. Embryol. exp.
+Morphol. 66: 57--80
+[4] FBrf0047373 == Johnson and Milner, 1987, Tissue Cell 19(4): 505--513
+[5] FBrf0049535 == Foe, 1989, Development 107(1): 1--22
+[6] FBrf0007735 == Miller, 1950, Biology of Drosophila (Ed. Demerec,M.)
+John Wiley & Sons, New York: 420--534
+[7] FBrf0034074 == Mahowald and Kambysellis, 1980, The Genetics and
+Biology of Drosophila (Ed. Ashburner,M.; Wright,T.R.F.) Academic Press,
+London and New York d: 141--224
+[8] FBrf0021038 == King, 1970, Ovarian Development in Drosophila
+melanogaster, x + 227pp
+[10] FBrf0034075 == Lindsley and Tokuyasu, 1980, The Genetics and
+Biology of Drosophila (Ed. Ashburner,M.; Wright,T.R.F.) Academic Press,
+London and New York d: 225--294
+[11] FBrf0057603 == Hartenstein and Jan, 1992, Roux Arch. dev. Biol.
+201(4): 194--220
+[12] FBrf0030719 == Madhavan and Schneiderman, 1977, Roux Arch. dev.
+Biol. 183(4): 269--305
+[13] FBrf0064787 == Manning and Krasnow, 1993, The development of
+Drosophila melanogaster. (Ed. Bate,M.; Martinez Arias,A.) Cold Spring
+Harbor Laboratory Press, Cold Spring Harbor, NY: 609--685
+[14] FBrf0007733 == Bodenstein, 1950, Biology of Drosophila (Ed.
+Demerec,M.) John Wiley & Sons, New York: 275--367
+[15] FBrf0064792 == Skaer, 1993, The development of Drosophila
+melanogaster. (Ed. Bate,M.; Martinez Arias,A.) Cold Spring Harbor
+Laboratory Press, Cold Spring Harbor, NY: 941--1012
+[16] FBrf0029665 == Schoeller-Raccaud, 1977, Bull. Soc. ent. Fr. 82: 57--62
+[17] FBrf0045366 == Jurgens et al., 1986, Roux Arch. dev. Biol. 195(6):
+359--377
+[18] FBrf0031020 == Rizki, 1978, The Genetics and Biology of Drosophila
+(Ed. Ashburner,M.; Wright,T.R.F.) Academic Press, London and New York b:
+561--601
+[19] FBrf0031012 == Rizki, 1978, The Genetics and Biology of Drosophila
+(Ed. Ashburner,M.; Wright,T.R.F.) Academic Press, London and New York b:
+397--452
+[21] FBrf0031001 == Gateff, 1978, The Genetics and Biology of Drosophila
+(Ed. Ashburner,M.; Wright,T.R.F.) Academic Press, London and New York b:
+181--275
+[22] FBrf0032406 == Srdic and Gloor, 1978, Revue suisse Zool. 85(1): 11--19
+[23] FBrf0037631 == Brehelin, 1982, Cell Tissue Res. 221(3): 607--615
+[24] FBrf0064793 == Bate, 1993, The development of Drosophila
+melanogaster. (Ed. Bate,M.; Martinez Arias,A.) Cold Spring Harbor
+Laboratory Press, Cold Spring Harbor, NY: 1013--1090
+[25] FBrf0031016 == Crossley, 1978, The Genetics and Biology of
+Drosophila (Ed. Ashburner,M.; Wright,T.R.F.) Academic Press, London and
+New York b: 499--560
+[27] FBrf0044229 == Hooper, 1986, EMBO J. 5: 2321--2329
+[28] FBrf0007310 == Atkins, 1949, Ann. ent. Soc. Am. 42: 245--257
+[29] FBrf0056570 == Kimura and Tanimura, 1992, J. Neurogenet. 8(2): 57--69
+[30] FBrf0037610 == Lawrence, 1982, Cell 29(2): 493--503
+[31] FBrf0007734 == Ferris, 1950, Biology of Drosophila (Ed. Demerec,M.)
+John Wiley & Sons, New York: 368--419
+[32] FBrf0031004 == Bryant, 1978, The Genetics and Biology of Drosophila
+(Ed. Ashburner,M.; Wright,T.R.F.) Academic Press, London and New York c:
+230--335
+[33] FBrf0006943 == Zalokar, 1947, Revue suisse Zool. 54: 17--53
+[34] FBrf0056378 == Shanbhag et al., 1992, Int. J. Insect Morph.
+Embryol. 21(4): 311--322
+[35] FBrf0050373 == Jacobs and Goodman, 1989, J. Neurosci. 9(7): 2402--2411
+[36] FBrf0053160 == Klambt and Goodman, 1991, Ann. N. Y. Acad. Sci. 633:
+142--159
+[37] FBrf0055900 == Doe, 1992, Development 116(4): 855--863
+[38] FBrf0045359 == Dambly-Chaudiere and Ghysen, 1986, Roux Arch. dev.
+Biol. 195(4): 222--228
+[39] FBrf0052913 == Hofbauer and Campos-Ortega, 1990, Roux Arch. dev.
+Biol. 198(5): 264--274
+[40] FBrf0054490 == Sink and Whitington, 1991, J. Neurobiol. 22(3): 298--311
+[41] FBrf0047277 == Jurgens, 1987, Roux Arch. dev. Biol. 196(3): 141--157
+[42] FBrf0045366 == Jurgens et al., 1986, Roux Arch. dev. Biol. 195(6):
+359--377
+[44] FBrf0034076 == Kankel et al., 1980, The Genetics and Biology of
+Drosophila (Ed. Ashburner,M.; Wright,T.R.F.) Academic Press, London and
+New York d: 295--368
+[46] FBrf0074007 == Singh and Singh, 1984, Int. J. Insect Morph.
+Embryol. 13(4): 255--273
+[48] FBrf0002482 == Hertwig, 1932, Z. indukt. Abstamm.- u. VerebLehre
+61: 1--35
+[49] FBrf0007196 == Power, 1948, J. comp. Neurol. 88: 347--409
+[50] FBrf0047815 == Truman and Bate, 1988, Dev. Biol. 125(1): 145--157
+[51] FBrf0074012 == Nayak and Singh, 1983, Int. J. Insect Morph.
+Embryol. 12(5--6): 273--291
+[52] FBrf0042883 == Nayak and Singh, 1985, Int. J. Insect Morph.
+Embryol. 14(2): 115--130
+[53] FBrf0049409 == Hanesch et al., 1989, Cell Tissue Res. 257(2): 343--366
+[54] FBrf0051437 == Stocker et al., 1990, Cell Tissue Res. 262(1): 9--34
+[55] FBrf0049410 == Fischbach and Dittrich, 1989, Cell Tissue Res.
+258(3): 441--476
+[56] FBrf0052426 == Lundquist and Nassel, 1990, J. comp. Neurol. 294(2):
+161--178
+[57] FBrf0048552 == Ikeda and Koenig, 1988, J. comp. Neurol. 273(3):
+436--444
+[58] FBrf0040724 == Murray et al., 1984, Dev. Biol. 104(2): 259--273
+[60] FBrf0042885 == Singh and Nayak, 1985, Int. J. Insect Morph.
+Embryol. 14(5): 291--306
+[61] FBrf0046822 == Stark and Sapp, 1987, J. Neurogenet. 4: 227--240
+[62] FBrf0050358 == Stark et al., 1989, J. Neurogenet. 5: 127--153
+[63] FBrf0038304 == Cole and Palka, 1982, J. Embryol. exp. Morphol. 71:
+41--61
+[64] FBrf0053819 == Bate et al., 1991, Development 113(1): 79--89
+[65] FBrf0064798 == Wolff and Ready, 1993, The development of Drosophila
+melanogaster. (Ed. Bate,M.; Martinez Arias,A.) Cold Spring Harbor
+Laboratory Press, Cold Spring Harbor, NY: 1277--1325
+[66] FBrf0064800 == Meinertzhagen and Hanson, 1993, The development of
+Drosophila melanogaster. (Ed. Bate,M.; Martinez Arias,A.) Cold Spring
+Harbor Laboratory Press, Cold Spring Harbor, NY: 1363--1491
+[67] Cornish-Bowden, 1985, Nucleic Acids Res. 13(9): 3021--3030
+[68] Sprinzl and Gauss, 1982, Nucleic Acids Res. 10(2): r1--r55
+[69] IUPAC-IUB, 1968, J. Biol. Chem. 243(13): 3557--3559
+[70] FBrf0074636 == Trimarchi and Schneiderman, 1994, J. comp. Neurol.
+340(3): 427--443
+[71] FBrf0075072 == Schmidt-Ott et al., 1994, Proc. natn. Acad. Sci.
+USA. 91(18): 8363--8367
+[72] FBrf0078614 == Hartenstein et al., 1994, J. comp. Neurol. 350(3):
+367--381
+[73] FBrf0047289 == Bodmer and Jan, 1987, Roux Arch. dev. Biol. 196(2):
+69--77
+[74] FBrf0074226 == Rajashekhar and Singh, 1994, Int. J. Insect Morph.
+Embryol. 23(3): 225--242
+[75] FBrf0076116 == Lundell and Hirsh, 1994, Dev. Biol. 165(2): 385--396
+[76] FBrf0076117 == Hartenstein et al., 1994, Dev. Biol. 165(2): 480--499
+end
+
+
