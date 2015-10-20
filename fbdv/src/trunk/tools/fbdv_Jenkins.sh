@@ -3,12 +3,12 @@
 echo ''
 echo '*** Checking -edit file ***'
 echo ''
-chado_load_checks.pl ontologies/fbdv-edit.obo > fbdv-edit_checks.txt
+chado_load_checks.pl fbdv/src/trunk/ontologies/fbdv-edit.obo > fbdv-edit_checks.txt
 echo ''
 echo '*** Generating potential release ***'
 echo "*** Generating release files using the $REASONER reasoner ***"
 echo ''
-ontology-release-runner --reasoner $REASONER --allow-equivalent-pairs ontologies/fbdv-edit.obo --no-subsets --simple --relaxed --asserted --allow-overwrite --outdir oort
+ontology-release-runner --reasoner $REASONER --allow-equivalent-pairs fbdv/src/trunk/ontologies/fbdv-edit.obo --no-subsets --simple --relaxed --asserted --allow-overwrite --outdir oort
 echo ''
 echo '*** Running tests on new fbdv-simple.obo ***'
 echo '*** chado load checks ***'
