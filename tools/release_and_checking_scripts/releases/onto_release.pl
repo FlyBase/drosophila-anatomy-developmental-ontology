@@ -131,7 +131,7 @@ for (keys %valid_release_files) {
 }
 print `pwd`;
 print `ls`;
-`cp src/trunk src/tags/$data_version`;    #copy files from src/trunk to src/tags/data-version - without overwriting
+`cp -r src/trunk src/tags/$data_version`;    #copy files from src/trunk to src/tags/data-version - without overwriting
 
 # `svn commit -m'New release of $idp - $data_version, with tag set.' $idp`;  # Better to let user do final commit.
 
