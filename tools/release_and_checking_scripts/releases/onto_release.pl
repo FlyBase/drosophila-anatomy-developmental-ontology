@@ -129,7 +129,7 @@ for (keys %valid_release_files) {
   #`cp $oort_path/$_ releases/latest/.`;  #copy whitelist files from oort to releases/latest- overwrites what is there
   `cp releases/$_ releases/$data_version/.`; #copy whitelist files from oort to releases/data-version - without overwriting
 }
-
+print `pwd`;
 `cp src/trunk src/tags/$data_version`;    #copy files from oort to src/tags/data-version - without overwriting
 
 # `svn commit -m'New release of $idp - $data_version, with tag set.' $idp`;  # Better to let user do final commit.
