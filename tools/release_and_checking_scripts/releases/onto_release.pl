@@ -109,12 +109,12 @@ next if (m/\/$/); # Ignore directories
 # die if not under VC in releases folder
 # For each file in releases folder - die if not on whitelist
 
-for (keys %valid_release_files) {
+#for (keys %valid_release_files) {
   #die "$_ is on the whitelist but not in $oort_path" unless (exists $oort_folder_contents{$_}); 
  # die "$_ is on the whitelist but  not in releases/" unless (exists $release_folder_contents{$_});   
-  my $svn_status = `svn status  releases/$_`;
+ # my $svn_status = `svn status  releases/$_`;
   #die "$_ is on the whitelist  but is not under version control.  Please svn add this file manually and try again." if ($svn_status =~ /^\?/);
-}
+#}
 
 
 for (keys %release_folder_contents) {
@@ -122,15 +122,15 @@ for (keys %release_folder_contents) {
 }
 
 #die; # Safety catch while script debugged
-`svn mkdir releases/$data_version`;
+`mkdir releases/$data_version`;
 
 for (keys %valid_release_files) {
   `cp $oort_path/$_ releases/.`;  #copy whitelist files from oort to releases- overwrites what is there
   #`cp $oort_path/$_ releases/latest/.`;  #copy whitelist files from oort to releases/latest- overwrites what is there
-  `svn cp releases/$_ releases/$data_version/.`; #copy whitelist files from oort to releases/data-version - without overwriting
+  `cp releases/$_ releases/$data_version/.`; #copy whitelist files from oort to releases/data-version - without overwriting
 }
 
-`svn cp src/trunk src/tags/$data_version`;    #copy files from oort to src/tags/data-version - without overwriting
+`cp src/trunk src/tags/$data_version`;    #copy files from oort to src/tags/data-version - without overwriting
 
 # `svn commit -m'New release of $idp - $data_version, with tag set.' $idp`;  # Better to let user do final commit.
 
