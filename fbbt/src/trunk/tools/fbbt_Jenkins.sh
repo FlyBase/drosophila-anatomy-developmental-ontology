@@ -23,7 +23,7 @@ export FB_REL_WL="connected_to develops_directly_from develops_from electrically
 obolib-owl2obo oort/fbbt-basic.owl -o oort/fbbt-basic.obo 
 rm oort/fbbt-basic.owl  # Cleaning up.  No point in keeping OWL version
 owltools oort/fbbt-simple.obo --make-subset-by-properties $FB_REL_WL -o file://`pwd`/tmp.owl
-obolib-owl2obo tmp.owl -o /oort/fbbt-flybase.obo
+obolib-owl2obo tmp.owl -o oort/fbbt-flybase.obo
 cat tmp.obo | sed 's/^xref: OBO_REL:part_of/xref_analog: OBO_REL:part_of/' | sed 's/^xref: OBO_REL:has_part/xref_analog: OBO_REL:has_part/' > oort/fbbt-flybase.obo  # Perhaps just make a generic substitution for xref: OBO_REL ?
 rm tmp.owl  # Cleaning up
 echo ''
