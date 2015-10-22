@@ -2,8 +2,6 @@
 
 This site is a (new) home for releases of the Drosophila anatomy (DAO) and development ontologies, for information about how to make use of them in your work and for a ticket tracking system allowing you to request changes.
 
-__Please note:__ The code for these ontologies is for now still hosted in SF [here](https://sourceforge.net/p/fbcv/code-0/HEAD/tree/). The [SF trackers](https://sourceforge.net/p/fbcv/tickets/) are not in use anymore, though. Please submit new tickets [here](https://github.com/mmc46/drosophila-anatomy-developmental-ontology/issues).
-
 These ontologies are freely available under a [CC-BY](http://creativecommons.org/licenses/by/3.0/) license. Please see our [download guide](https://github.com/mmc46/drosophila-anatomy-developmental-ontology/wiki/Download-guide) for details of the various available versions of these ontologies. Please see our [attributions](https://github.com/mmc46/drosophila-anatomy-developmental-ontology/wiki/Attribution)  page for details of how to acknowledge us for their use.
 
 These ontologies are query-able reference sources for information on Drosophila anatomy and developmental stages.  They also provide controlled vocabularies for use in annotation and classification of data related to Drosophila anatomy, such as gene expression, phenotype and images.  They were originally developed by [FlyBase](http://www.flybase.org), who continue to maintain them and have used them for over 200,000 annotations of phenotypes and expression.  A number of other projects use these ontologies for annotation and to drive their query systems, including [Virtual Fly Brain](http://www.virtualflybrain.org) (VFB), [FlyProt](http://www.flyprot.org/) and [RedFly](http://redfly.ccr.buffalo.edu).
