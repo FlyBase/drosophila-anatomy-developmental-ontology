@@ -26,4 +26,4 @@ obo_track_new.pl purl.obolibrary.org/obo/fbdv/fbdv-simple.obo oort/fbdv-simple.o
 rm purl.obolibrary.org/obo/fbdv/fbdv-simple.obo # Cleaning up
 echo ''
 echo '*** Calculating new metrics ***'
-onto_metrics_calc.pl 'FlyBase development CV' oort/fbdv-non-classified.obo > oort/fbdv_metrics.txt  # Dump to oort folder so in-place for release.
+onto_metrics_calc.pl 'FlyBase_development_CV' oort/fbdv-non-classified.obo > oort/fbdv_metrics.txt  # Dump to oort folder so in-place for release.

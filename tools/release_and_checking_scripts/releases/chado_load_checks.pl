@@ -91,7 +91,7 @@ sub chado_load_checks {
 	}
       }
       elsif ($idp eq 'FBdv') {
-	unless ($value->{namespace} eq 'FlyBase development CV') {
+	unless ($value->{namespace} eq 'FlyBase_development_CV') {
 	  $fail_stat = 1;
 	  print "$value->{namespace} is not a valid namespace for $key.\n"
 	}
