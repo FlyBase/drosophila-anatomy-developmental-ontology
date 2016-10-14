@@ -104,8 +104,14 @@ sub obo_print {
   my $obo_relations = $_[3];
   my $obo_header = $_[4];
   my ($key, $value) = '';
-  print $$obo_header;   
-  while (($key, $value) = each %$obo_stag) {
+  print $$obo_header;
+
+### start change to existing code - changed while loop to foreach loop with assignment of $value
+  foreach my $key (%{$obo_stag}) {
+    my $value = $obo_stag->{$key};
+#  while (($key, $value) = each %$obo_stag) {
+### end change to existing code
+
     print "\n\n".'[Term]
 id: '.$key;
     print '
@@ -125,33 +131,43 @@ is_obsolete: true', if ($value->{is_obsolete});
       print "\ncreated_by: ".$value->{'created_by'}, if ($value->{'created_by'});
       print "\ncreation_date: ".$value->{'creation_date'}, if ($value->{'creation_date'});
 
-    for (@{$obo_mtag->{$key}}) {
-      if ($_->{'estat'} eq 'rel') {
-	if ($_->{'rel'} eq 'is_a') {
-	  print "\nis_a\: ".$_->{'obj'}.' ! '.$obo_stag->{$_->{'obj'}}->{name}
-	} else {
-	  print "\nrelationship: ".$_->{rel}.' '.$_->{obj}.' ! '.$obo_stag->{$_->{obj}}->{name}
-	}
-      }
-      if ($_->{estat} eq 'int') {
-	if ($_->{rel} eq 'is_a') {
-	  print "\nintersection_of: ".$_->{obj}.' ! '.$obo_stag->{$_->{obj}}->{name}
-	} else {
-	  print "\nintersection_of: ".$_->{rel}.' '.$_->{obj}.' ! '.$obo_stag->{$_->{obj}}->{name}
-	}
-      }
-      print "\nalt_id: ".$_->{obj}, if ($_->{estat} eq 'alt_id');
-      print "\ndisjoint_from: ".$_->{obj}, if ($_->{estat} eq 'disjoint_from');
-      print "\nxref: ".$_->{an}, if ($_->{estat} eq 'xref');
-      print "\nsynonym: \"".$_->{an}.'" '.$_->{rel}.' ['.$_->{axref}.']', if (($_->{estat} eq 'syn')&&($_->{rel})&&($_->{axref}));
-      print "\nsynonym: \"".$_->{an}.'" '.$_->{rel}.' []', if (($_->{estat} eq 'syn')&&($_->{rel})&&(!$_->{axref})); # not all have xrefs
+### start change to existing code - have added if loop here to check $obo_mtag->{$key} exists as
+### I wondered if that might be causing the problem if there was a case where it doesn't exists even when $obo_stag->{$key} does.
+    if (exists $obo_mtag->{$key}) {
+### then have changed for to foreach, which doesn't really matter except that is the form I'm more familiar with
+### have indented everything by two characters so it lines up properly
+      foreach (@{$obo_mtag->{$key}}) {
+#    for (@{$obo_mtag->{$key}}) {
+### end change to existing code
+        if ($_->{'estat'} eq 'rel') {
+          if ($_->{'rel'} eq 'is_a') {
+            print "\nis_a\: ".$_->{'obj'}.' ! '.$obo_stag->{$_->{'obj'}}->{name}
+          } else {
+            print "\nrelationship: ".$_->{rel}.' '.$_->{obj}.' ! '.$obo_stag->{$_->{obj}}->{name}
+          }
+        }
+        if ($_->{estat} eq 'int') {
+          if ($_->{rel} eq 'is_a') {
+            print "\nintersection_of: ".$_->{obj}.' ! '.$obo_stag->{$_->{obj}}->{name}
+          } else {
+            print "\nintersection_of: ".$_->{rel}.' '.$_->{obj}.' ! '.$obo_stag->{$_->{obj}}->{name}
+          }
+        }
+        print "\nalt_id: ".$_->{obj}, if ($_->{estat} eq 'alt_id');
+        print "\ndisjoint_from: ".$_->{obj}, if ($_->{estat} eq 'disjoint_from');
+        print "\nxref: ".$_->{an}, if ($_->{estat} eq 'xref');
+        print "\nsynonym: \"".$_->{an}.'" '.$_->{rel}.' ['.$_->{axref}.']', if (($_->{estat} eq 'syn')&&($_->{rel})&&($_->{axref}));
+        print "\nsynonym: \"".$_->{an}.'" '.$_->{rel}.' []', if (($_->{estat} eq 'syn')&&($_->{rel})&&(!$_->{axref})); # not all have xrefs
 #      print "\nsynonym: \"".$_->{an}.'" ['.$_->{axref}.']', if (($_->{estat} eq 'syn')&&(!$_->{rel})&&($_->{axref})); # but all should be scoped
-      print "\nsynonym: \"".$_->{an}.'" []', if (($_->{estat} eq 'syn')&&(!$_->{rel})&&(!$_->{axref}));
-      print "\nsubset: ".$_->{an}, if ($_->{estat} eq 'subset');
-      print "\nunion_of: ".$_->{obj}.' ! '.$obo_stag->{$_->{obj}}{name}, if ($_->{estat} eq 'union_of');
-      print "\nconsider: ".$_->{obj}.' ! '.$obo_stag->{$_->{obj}}{name}, if ($_->{estat} eq 'consider');
-      print "\nreplaced_by: ".$_->{obj}.' ! '.$obo_stag->{$_->{obj}}{name}, if ($_->{estat} eq 'replaced_by');
+        print "\nsynonym: \"".$_->{an}.'" []', if (($_->{estat} eq 'syn')&&(!$_->{rel})&&(!$_->{axref}));
+        print "\nsubset: ".$_->{an}, if ($_->{estat} eq 'subset');
+        print "\nunion_of: ".$_->{obj}.' ! '.$obo_stag->{$_->{obj}}{name}, if ($_->{estat} eq 'union_of');
+        print "\nconsider: ".$_->{obj}.' ! '.$obo_stag->{$_->{obj}}{name}, if ($_->{estat} eq 'consider');
+        print "\nreplaced_by: ".$_->{obj}.' ! '.$obo_stag->{$_->{obj}}{name}, if ($_->{estat} eq 'replaced_by');
+      }
+### start change to existing code - end of loop of new if loop created above
     }
+### end change to existing code
   }
   for (@{$obo_relations}) {
     print '

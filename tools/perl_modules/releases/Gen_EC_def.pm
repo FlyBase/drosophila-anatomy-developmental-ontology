@@ -16,8 +16,10 @@ sub get_EC_def {
   my %new_defs;
   my $obo_mtag = $_[0];
   my $obo_stag = $_[1];
-  my ($id, $value) = '';
-  while (($id, $value) = each %$obo_stag) {
+#  my ($id, $value) = '';
+#  while (($id, $value) = each %$obo_stag) {
+  foreach my $id (keys %{$obo_stag}) {
+
     my $new_def = '';
     my $genus = '';
     my @diff = ();
