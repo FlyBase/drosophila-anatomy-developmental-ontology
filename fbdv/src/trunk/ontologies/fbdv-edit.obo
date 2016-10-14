@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: 2015-07-02
-date: 02:07:2015 14:23
+data-version: 2016-10-14
+date: 14:10:2016 17:30
 saved-by: mmc46
 auto-generated-by: OBO-Edit 2.3
 subsetdef: goslim_yeast "Yeast GO slim"
@@ -19,7 +19,7 @@ subsetdef: goslim_pombe "Fission yeast GO slim"
 synonymtypedef: systematic_synonym "Systematic synonym" EXACT
 default-namespace: FlyBase_development_CV
 namespace-id-rule: * FBdv:$sequence(8,7000,10000)$
-remark: Drosophila temporal ontology. Contains terms imported from http://purl.obolibrary.org/obo/go/releases/2015-07-02/go-simple.obo
+remark: Drosophila temporal ontology. Contains terms imported from http://purl.obolibrary.org/obo/go/releases/2016-10-13/go-simple.obo
 ontology: fbdv
 
 [Term]
@@ -2069,9 +2069,11 @@ id: GO:0003006
 name: developmental process involved in reproduction
 namespace: biological_process
 def: "A developmental process in which a progressive change in the state of some part of an organism specifically contributes to its ability to form offspring." [GOC:dph, GOC:isa_complete]
+synonym: "puberty" NARROW [GOC:dph]
 synonym: "reproductive developmental process" RELATED [GOC:dph, GOC:tb]
 is_a: GO:0022414 ! reproductive process
 is_a: GO:0032502 ! developmental process
+relationship: part_of GO:0000003 ! reproduction
 
 [Term]
 id: GO:0044767
@@ -2092,7 +2094,6 @@ subset: goslim_pir
 subset: gosubset_prok
 synonym: "organelle organisation" EXACT [GOC:curators]
 synonym: "organelle organization and biogenesis" RELATED [GOC:dph, GOC:jl, GOC:mah]
-is_a: GO:0009987 ! cellular process
 is_a: GO:0016043 ! cellular component organization
 
 [Term]
@@ -2122,8 +2123,6 @@ subset: goslim_generic
 synonym: "mitosis" EXACT []
 xref: Wikipedia:Mitosis
 is_a: GO:0000280 ! nuclear division
-is_a: GO:0022402 ! cell cycle process
-is_a: GO:1902589 ! single-organism organelle organization
 is_a: GO:1903047 ! mitotic cell cycle process
 relationship: part_of GO:0000278 ! mitotic cell cycle
 
@@ -2137,6 +2136,7 @@ subset: goslim_ChEMBL
 subset: goslim_plant
 is_a: GO:0044707 ! single-multicellular organism process
 is_a: GO:0044767 ! single-organism developmental process
+is_a: GO:0048856 ! anatomical structure development
 
 [Term]
 id: GO:0007276
@@ -2158,7 +2158,6 @@ synonym: "germ-cell development" EXACT []
 synonym: "primordial germ cell development" NARROW []
 is_a: GO:0003006 ! developmental process involved in reproduction
 is_a: GO:0022412 ! cellular process involved in reproduction in multicellular organism
-is_a: GO:0044702 ! single organism reproductive process
 is_a: GO:0048468 ! cell development
 relationship: part_of GO:0007276 ! gamete generation
 
@@ -2214,9 +2213,7 @@ synonym: "embryogenesis" EXACT []
 synonym: "embryogenesis and morphogenesis" BROAD []
 synonym: "embryonal development" EXACT []
 xref: Wikipedia:Embryogenesis
-is_a: GO:0044767 ! single-organism developmental process
-is_a: GO:0048856 ! anatomical structure development
-relationship: part_of GO:0007275 ! multicellular organismal development
+is_a: GO:0007275 ! multicellular organism development
 
 [Term]
 id: GO:0009987
@@ -2288,6 +2285,7 @@ name: cellular process involved in reproduction in multicellular organism
 namespace: biological_process
 def: "A process, occurring at the cellular level, that is involved in the reproductive function of a multicellular organism." [GOC:isa_complete]
 synonym: "reproductive cellular process in multicellular organism" EXACT [GOC:curators]
+is_a: GO:0044702 ! single organism reproductive process
 is_a: GO:0044763 ! single-organism cellular process
 relationship: part_of GO:0032504 ! multicellular organism reproduction
 
