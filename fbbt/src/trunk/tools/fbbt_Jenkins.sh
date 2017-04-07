@@ -17,6 +17,9 @@ echo ''
 ontology-release-runner --reasoner $REASONER tmp.owl  --no-subsets --simple --relaxed --asserted --allow-overwrite --outdir oort
 rm tmp.owl # Cleaning up
 echo ''
+echo "*** Generating obograph JSON version***"
+owltools oort/fbbt.owl -o -f json oort/fbbt.json
+echo ''
 echo "*** Filtering relations to generating basic & FB versions ***"
 owltools oort/fbbt-simple.obo --make-subset-by-properties part_of develops_from // -o file://`pwd`/oort/fbbt-basic.owl
 export FB_REL_WL="connected_to develops_directly_from develops_from electrically_synapsed_to fasciculates_with has_part has_postsynaptic_terminals_in has_presynaptic_terminals_in has_soma_location has_synaptic_terminals_in has_synaptic_terminals_of innervated_by innervates overlaps part_of partially_overlaps synapsed_by synapsed_to synapsed_via_type_III_bouton_to synapsed_via_type_II_bouton_to synapsed_via_type_Ib_bouton_to synapsed_via_type_Is_bouton_to //"
