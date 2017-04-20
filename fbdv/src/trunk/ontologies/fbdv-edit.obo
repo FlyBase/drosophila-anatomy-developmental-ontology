@@ -2020,8 +2020,13 @@ is_a: GO:0008150 ! biological_process
 id: GO:0000278
 name: mitotic cell cycle
 namespace: biological_process
+alt_id: GO:0007067
 def: "Progression through the phases of the mitotic cell cycle, the most common eukaryotic cell cycle, which canonically comprises four successive phases called G1, S, G2, and M and includes replication of the genome and the subsequent segregation of chromosomes into daughter cells. In some variant cell cycles nuclear replication or nuclear division may not be followed by cell division, or G1 and G2 phases may be absent." [GOC:mah, ISBN:0815316194, Reactome:69278]
+subset: goslim_chembl
+subset: goslim_generic
 subset: goslim_yeast
+synonym: "mitosis" RELATED []
+synonym: "mitotic nuclear division" RELATED []
 xref: Reactome:REACT_100451 "Cell Cycle, Mitotic, Taeniopygia guttata"
 xref: Reactome:REACT_104035 "Cell Cycle, Mitotic, Sus scrofa"
 xref: Reactome:REACT_104195 "Cell Cycle, Mitotic, Canis familiaris"
@@ -2041,8 +2046,9 @@ xref: Reactome:REACT_90846 "Cell Cycle, Mitotic, Oryza sativa"
 xref: Reactome:REACT_96281 "Cell Cycle, Mitotic, Drosophila melanogaster"
 xref: Reactome:REACT_97744 "Cell Cycle, Mitotic, Dictyostelium discoideum"
 xref: Reactome:REACT_98208 "Cell Cycle, Mitotic, Mycobacterium tuberculosis"
+xref: Wikipedia:Mitosis
 is_a: GO:0007049 ! cell cycle
-relationship: has_part GO:0007067 ! mitotic nuclear division
+relationship: has_part GO:0140014 ! mitotic nuclear division
 
 [Term]
 id: GO:0000279
@@ -2112,19 +2118,6 @@ subset: gosubset_prok
 synonym: "cell-division cycle" EXACT []
 xref: Wikipedia:Cell_cycle
 is_a: GO:0044763 ! single-organism cellular process
-
-[Term]
-id: GO:0007067
-name: mitotic nuclear division
-namespace: biological_process
-def: "A cell cycle process comprising the steps by which the nucleus of a eukaryotic cell divides; the process involves condensation of chromosomal DNA into a highly compacted form. Canonically, mitosis produces two daughter nuclei whose chromosome complement is identical to that of the mother cell." [GOC:dph, GOC:ma, GOC:mah, ISBN:0198547684]
-subset: goslim_ChEMBL
-subset: goslim_generic
-synonym: "mitosis" EXACT []
-xref: Wikipedia:Mitosis
-is_a: GO:0000280 ! nuclear division
-is_a: GO:1903047 ! mitotic cell cycle process
-relationship: part_of GO:0000278 ! mitotic cell cycle
 
 [Term]
 id: GO:0007275
