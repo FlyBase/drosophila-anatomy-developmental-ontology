@@ -17,7 +17,7 @@ echo ''
 ontology-release-runner --reasoner $REASONER tmp.owl  --no-subsets --simple --relaxed --asserted --allow-overwrite --outdir oort
 rm tmp.owl # Cleaning up
 echo ''
-echo "*** Generating obograph JSON version ***" #added to test this addition to the release script re github ticket 91
+echo "*** Generating obograph JSON version ***" #added to  test this addition to the release script re github ticket 91
 owltools oort/fbbt.owl -o -f json oort/fbbt.json
 echo ''
 echo "*** Filtering relations to generating basic & FB versions ***"
