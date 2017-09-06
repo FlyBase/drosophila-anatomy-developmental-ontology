@@ -23,10 +23,14 @@ echo ''
 echo "*** Filtering relations to generating basic & FB versions ***"
 owltools oort/fbbt-simple.obo --make-subset-by-properties part_of develops_from // -o file://`pwd`/oort/fbbt-basic.owl
 export FB_REL_WL="connected_to develops_directly_from develops_from electrically_synapsed_to fasciculates_with has_part has_postsynaptic_terminals_in has_presynaptic_terminals_in has_soma_location has_synaptic_terminals_in has_synaptic_terminals_of innervated_by innervates overlaps part_of partially_overlaps synapsed_by synapsed_to synapsed_via_type_III_bouton_to synapsed_via_type_II_bouton_to synapsed_via_type_Ib_bouton_to synapsed_via_type_Is_bouton_to //"
-obolib-owl2obo oort/fbbt-basic.owl -o oort/fbbt-basic.obo 
+#obolib-owl2obo oort/fbbt-basic.owl -o oort/fbbt-basic.obo 
+# TEMJ commented above line 20170906 because Java keeps throwing "NullPointerException" errors upon obolib use after moving from clara to flybase-vm machine. Changing to use owltools instead, which has a converter of owl to obo. May want to update in the future to use ROBOT or whatever tool becomes standard. 20170906.
+owltools oort/fbbt-basic.owl -o -f obo oort/fbbt-basic.obo #TEMJ added 20170906 to replace obolib command.
 rm oort/fbbt-basic.owl  # Cleaning up.  No point in keeping OWL version
 owltools oort/fbbt-simple.obo --make-subset-by-properties $FB_REL_WL -o file://`pwd`/tmp.owl
-obolib-owl2obo tmp.owl -o oort/fbbt-flybase.obo
+#obolib-owl2obo tmp.owl -o oort/fbbt-flybase.obo
+# TEMJ commented above line 20170906 for same reason as above.
+owltools tmp.owl -o -f obo oort/fbbt-flybase.obo #TEMJ added 20170906 to replace obolib command.
 cat tmp.obo | sed 's/^xref: OBO_REL:part_of/xref_analog: OBO_REL:part_of/' | sed 's/^xref: OBO_REL:has_part/xref_analog: OBO_REL:has_part/' > oort/fbbt-flybase.obo  # Perhaps just make a generic substitution for xref: OBO_REL ?
 rm tmp.owl  # Cleaning up
 echo ''
