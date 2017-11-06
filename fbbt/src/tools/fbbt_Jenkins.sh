@@ -10,9 +10,8 @@ update_EC_defs.pl fbbt/src/ontologies/fbbt-edit.obo > tmp.obo
 echo ''
 echo '*** Merging source file ***'
 echo ''
-owltools tmp.obo -o -f owl file://`pwd`/tmp0.owl
-owltools tmp0.owl --merge fbbt/src/ontologies/fbbt_auth_attrib_licence.owl -o file://`pwd`/tmp1.owl
-owltools tmp1.owl --merge fbbt/src/ontologies/fbbt-ext.owl -o file://`pwd`/tmp.owl
+owltools fbbt/src/ontologies/fbbt_auth_attrib_licence.owl --merge tmp.obo -o file://`pwd`/tmp0.owl
+owltools tmp0.owl --merge fbbt/src/ontologies/fbbt-ext.owl -o file://`pwd`/tmp.owl
 rm tmp.obo # Cleaning up
 echo ''
 echo "*** Generating release files using the $REASONER reasoner ***"
