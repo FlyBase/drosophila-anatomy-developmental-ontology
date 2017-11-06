@@ -28,7 +28,7 @@ export FB_REL_WL="connected_to develops_directly_from develops_from electrically
 # TEMJ commented above line 20170906 because Java keeps throwing "NullPointerException" errors upon obolib use after moving from clara to flybase-vm machine. Changing to use owltools instead, which has a converter of owl to obo. May want to update in the future to use ROBOT or whatever tool becomes standard. 20170906.
 owltools oort/fbbt-basic.owl -o -f obo oort/fbbt-basic.obo #TEMJ added 20170906 to replace obolib command.
 rm oort/fbbt-basic.owl  # Cleaning up.  No point in keeping OWL version
-owltools oort/fbbt-simple.obo --make-subset-by-properties $FB_REL_WL -o file://`pwd`/tmp.owl
+owltools oort/fbbt-simple.obo --make-subset-by-properties $FB_REL_WL -o file://`pwd`/tmp2.owl
 #obolib-owl2obo tmp.owl -o oort/fbbt-flybase.obo
 # TEMJ commented above line 20170906 for same reason as above.
 owltools tmp2.owl -o -f obo oort/fbbt-flybase.obo #TEMJ added 20170906 to replace obolib command.
