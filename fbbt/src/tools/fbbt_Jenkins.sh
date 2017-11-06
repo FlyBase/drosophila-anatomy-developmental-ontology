@@ -16,7 +16,7 @@ echo ''
 echo "*** Generating release files using the $REASONER reasoner ***"
 echo ''
 ontology-release-runner --reasoner $REASONER tmp.owl  --no-subsets --simple --relaxed --asserted --allow-overwrite --outdir oort
-rm tmp.owl # Cleaning up
+#rm tmp.owl # Cleaning up#TJ commented out temporarily to debug issue with merging attribution data (in line 13)
 echo ''
 echo "*** Generating obograph JSON version***"
 owltools oort/fbbt.owl -o -f json oort/fbbt.json
@@ -31,9 +31,9 @@ rm oort/fbbt-basic.owl  # Cleaning up.  No point in keeping OWL version
 owltools oort/fbbt-simple.obo --make-subset-by-properties $FB_REL_WL -o file://`pwd`/tmp.owl
 #obolib-owl2obo tmp.owl -o oort/fbbt-flybase.obo
 # TEMJ commented above line 20170906 for same reason as above.
-owltools tmp.owl -o -f obo oort/fbbt-flybase.obo #TEMJ added 20170906 to replace obolib command.
-cat tmp.obo | sed 's/^xref: OBO_REL:part_of/xref_analog: OBO_REL:part_of/' | sed 's/^xref: OBO_REL:has_part/xref_analog: OBO_REL:has_part/' > oort/fbbt-flybase.obo  # Perhaps just make a generic substitution for xref: OBO_REL ?
-rm tmp.owl  # Cleaning up
+owltools tmp2.owl -o -f obo oort/fbbt-flybase.obo #TEMJ added 20170906 to replace obolib command.
+cat tmp2.obo | sed 's/^xref: OBO_REL:part_of/xref_analog: OBO_REL:part_of/' | sed 's/^xref: OBO_REL:has_part/xref_analog: OBO_REL:has_part/' > oort/fbbt-flybase.obo  # Perhaps just make a generic substitution for xref: OBO_REL ?
+rm tmp2.owl  # Cleaning up
 echo ''
 echo '*** Running tests on new fbbt-simple.obo ***'
 echo '*** chado load checks ***'
