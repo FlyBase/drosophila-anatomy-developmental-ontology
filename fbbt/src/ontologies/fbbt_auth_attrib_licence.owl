@@ -1,0 +1,141 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY ns "http://creativecommons.org/ns#" >
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY dc "http://purl.org/dc/elements/1.1/" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY fbbt "http://purl.obolibrary.org/obo/fbbt#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY oboInOwl "http://www.geneontology.org/formats/oboInOwl#" >
+]>
+
+
+<rdf:RDF xmlns="http://purl.obolibrary.org/obo/fbbt.owl#"
+     xml:base="http://purl.obolibrary.org/obo/fbbt.owl"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:ns="http://creativecommons.org/ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#"
+     xmlns:fbbt="http://purl.obolibrary.org/obo/fbbt#">
+    <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/fbbt.owl">
+        <oboInOwl:hasOBOFormatVersion rdf:datatype="&xsd;string">1.2</oboInOwl:hasOBOFormatVersion>
+        <dc:contributor>Liria Masuda-Nakagawa</dc:contributor>
+        <dc:contributor>Michael Ashburner</dc:contributor>
+        <dc:contributor>Simon Reeve</dc:contributor>
+        <dc:contributor>Volker Hartenstein</dc:contributor>
+        <dc:contributor>Gary Grumbling</dc:contributor>
+        <dc:contributor>Kei Ito</dc:contributor>
+        <dc:rights rdf:resource="http://creativecommons.org/licenses/by/3.0/"/>
+        <fbbt:attributionURL rdf:resource="http://dx.doi.org/10.1186/2041-1480-4-32"/>
+        <dc:creator rdf:resource="http://orcid.org/0000-0001-5948-3092"/>
+        <dc:contributor rdf:resource="http://orcid.org/0000-0002-0587-9355"/>
+        <dc:contributor rdf:resource="http://orcid.org/0000-0002-0027-0858"/>
+        <dc:creator rdf:resource="http://orcid.org/0000-0002-7073-9172"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://creativecommons.org/ns#attributionURL -->
+
+    <owl:AnnotationProperty rdf:about="&ns;attributionURL">
+        <rdfs:label rdf:datatype="&xsd;string">attributionURL</rdfs:label>
+        <oboInOwl:shorthand rdf:datatype="&xsd;string">cc-attributionURL</oboInOwl:shorthand>
+        <oboInOwl:id rdf:datatype="&xsd;string">cc-attributionURL</oboInOwl:id>
+        <oboInOwl:hasDbXref rdf:datatype="&xsd;string">http://creativecommons.org/ns#attributionURL</oboInOwl:hasDbXref>
+        <oboInOwl:is_metadata_tag rdf:datatype="&xsd;boolean">true</oboInOwl:is_metadata_tag>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/fbbt.owl#contributor -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/fbbt.owl#contributor"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/creator -->
+
+    <owl:AnnotationProperty rdf:about="&dc;creator">
+        <rdfs:label rdf:datatype="&xsd;string">creator</rdfs:label>
+        <oboInOwl:id rdf:datatype="&xsd;string">dc-creator</oboInOwl:id>
+        <oboInOwl:shorthand rdf:datatype="&xsd;string">dc-creator</oboInOwl:shorthand>
+        <oboInOwl:hasDbXref rdf:datatype="&xsd;string">http://purl.org/dc/elements/1.1/creator</oboInOwl:hasDbXref>
+        <oboInOwl:is_metadata_tag rdf:datatype="&xsd;boolean">true</oboInOwl:is_metadata_tag>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/rights -->
+
+    <owl:AnnotationProperty rdf:about="&dc;rights">
+        <rdfs:label rdf:datatype="&xsd;string">rights</rdfs:label>
+        <oboInOwl:shorthand rdf:datatype="&xsd;string">dc-rights</oboInOwl:shorthand>
+        <oboInOwl:id rdf:datatype="&xsd;string">dc-rights</oboInOwl:id>
+        <oboInOwl:hasDbXref rdf:datatype="&xsd;string">http://purl.org/dc/elements/1.1/rights</oboInOwl:hasDbXref>
+        <oboInOwl:is_metadata_tag rdf:datatype="&xsd;boolean">true</oboInOwl:is_metadata_tag>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://www.geneontology.org/formats/oboInOwl#hasDbXref -->
+
+    <owl:AnnotationProperty rdf:about="&oboInOwl;hasDbXref">
+        <rdfs:label rdf:datatype="&xsd;string">database_cross_reference</rdfs:label>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://www.geneontology.org/formats/oboInOwl#hasOBOFormatVersion -->
+
+    <owl:AnnotationProperty rdf:about="&oboInOwl;hasOBOFormatVersion">
+        <rdfs:label rdf:datatype="&xsd;string">has_obo_format_version</rdfs:label>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://www.geneontology.org/formats/oboInOwl#id -->
+
+    <owl:AnnotationProperty rdf:about="&oboInOwl;id"/>
+    
+
+
+    <!-- http://www.geneontology.org/formats/oboInOwl#is_metadata_tag -->
+
+    <owl:AnnotationProperty rdf:about="&oboInOwl;is_metadata_tag"/>
+    
+
+
+    <!-- http://www.geneontology.org/formats/oboInOwl#shorthand -->
+
+    <owl:AnnotationProperty rdf:about="&oboInOwl;shorthand">
+        <rdfs:label rdf:datatype="&xsd;string">shorthand</rdfs:label>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://www.w3.org/2000/01/rdf-schema#label -->
+
+    <owl:AnnotationProperty rdf:about="&rdfs;label"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
+
