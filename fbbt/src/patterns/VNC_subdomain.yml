@@ -5,8 +5,7 @@ classes:
   'larval segment' : 'FBbt:00001729'
   'longitudinal subdivision of ventral nerve cord' : 'FBbt:00007702'
 
-
-object_properties:
+relations:
   'part of': 'BFO:0000050'
 
 vars:
@@ -19,7 +18,7 @@ data_vars:
 data_list_vars:
   def_xrefs: "xsd:string"
   
-label: 
+name: 
     text: "%s neuropil of %s"
     vars: 
         - div_label
@@ -30,25 +29,24 @@ def:
         A synaptic neuropil subdomain at the intersection of %s 
         and the %s."
     vars: 
-        - long_sub_short
+        - long_sub
         - segment
-    xrefs: # Boilerplate - don't edit
-        value: def_xrefs
+    xrefs: def_xrefs
         
         
-owl_axioms:
+logical_axioms:
 
     - 
-        type: subClassOf
+        axiom_type: subClassOf
         text: "'synaptic neuropil subdomain'"
         vars: []
     - 
-        type: subClassOf
+        axiom_type: subClassOf
         text: "'part of' some %s"
         vars: 
             - segment
     - 
-        type: subClassOf
+        axiom_type: subClassOf
         text: "'part of' some %s"
         vars: 
             - long_sub
