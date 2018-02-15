@@ -14,25 +14,35 @@ vars:
   
 data_vars:
   div_label: "xsd:string"
+  seg_label: "xsd:string"
+  seg_short: "xsd:string"
 
 data_list_vars:
   def_xrefs: "xsd:string"
+  
   
 name: 
     text: "%s neuropil of %s"
     vars: 
         - div_label
-        - segment
+        - seg_label
   
 def:
-    text: > 
-        A synaptic neuropil subdomain at the intersection of %s 
-        and the %s."
+    text: "A synaptic neuropil subdomain at the intersection of the %s and %s (%s)."    
     vars: 
         - long_sub
         - segment
-    xrefs: def_xrefs
+        - seg_short
         
+    xrefs: def_xrefs
+    
+generated_synonyms:
+    - 
+        text: "%s neuropil of %s"
+        vars:
+            - long_sub
+            - segment
+
         
 logical_axioms:
 
