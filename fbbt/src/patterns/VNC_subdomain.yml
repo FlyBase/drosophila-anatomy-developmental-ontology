@@ -15,7 +15,8 @@ vars:
 data_vars:
   div_label: "xsd:string"
   seg_label: "xsd:string"
-  seg_short: "xsd:string"
+  seg_abbv: "xsd:string"
+  sub_abbv: "xsd:string"
 
 data_list_vars:
   def_xrefs: "xsd:string"
@@ -32,7 +33,7 @@ def:
     vars: 
         - long_sub
         - segment
-        - seg_short
+        - seg_abbv
         
     xrefs: def_xrefs
     
@@ -42,6 +43,11 @@ generated_synonyms:
         vars:
             - long_sub
             - segment
+    -
+        text: "%s%s"
+        vars:
+            - seg_abbv
+            - sub_abbv
 
         
 logical_axioms:
