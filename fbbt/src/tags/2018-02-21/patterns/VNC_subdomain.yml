@@ -1,0 +1,73 @@
+pattern_name: VNC_subdomain
+
+classes:
+  'synaptic neuropil subdomain' : 'FBbt:00040006'
+  'larval segment' : 'FBbt:00001729'
+  'longitudinal subdivision of ventral nerve cord' : 'FBbt:00007702'
+
+relations:
+  'part of': 'BFO:0000050'
+
+vars:
+  segment: 'larval segment'
+  long_sub: 'longitudinal subdivision of ventral nerve cord'
+  
+data_vars:
+  div_label: "xsd:string"
+  seg_label: "xsd:string"
+  seg_abbv: "xsd:string"
+  sub_abbv: "xsd:string"
+
+data_list_vars:
+  def_xrefs: "xsd:string"
+  
+  
+name: 
+    text: "%s neuropil of %s"
+    vars: 
+        - div_label
+        - seg_label
+  
+def:
+    text: "A synaptic neuropil subdomain at the intersection of the %s and %s (%s)."    
+    vars: 
+        - long_sub
+        - segment
+        - seg_abbv
+        
+    xrefs: def_xrefs
+    
+generated_synonyms:
+    - 
+        text: "%s neuropil of %s"
+        vars:
+            - long_sub
+            - segment
+    -
+        text: "%s%s"
+        vars:
+            - seg_abbv
+            - sub_abbv
+
+        
+logical_axioms:
+
+    - 
+        axiom_type: subClassOf
+        text: "'synaptic neuropil subdomain'"
+        vars: []
+    - 
+        axiom_type: subClassOf
+        text: "'part of' some %s"
+        vars: 
+            - segment
+    - 
+        axiom_type: subClassOf
+        text: "'part of' some %s"
+        vars: 
+            - long_sub
+        
+
+
+
+  
