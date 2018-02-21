@@ -118,7 +118,7 @@ next if (m/\/$/); # Ignore directories
 
 
 for (keys %release_folder_contents) {
-  # die "$_ is in the release folder but is not a valid release file name. Please remove or add to whitelist" unless exists ($valid_release_files{$_});
+   die "$_ is in the release folder but is not a valid release file name. Please remove or add to whitelist" unless exists ($valid_release_files{$_});
 }
 
 #die; # Safety catch while script debugged
