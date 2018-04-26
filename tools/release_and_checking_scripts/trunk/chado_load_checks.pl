@@ -21,7 +21,7 @@ http://...;
 ISBN:<legal ISBN13>;
 CARO:<CARO curator initials>.
 VFB_vol\:\d{8}
-doi\:\d+\.\d+\/\w+
+DOI\:\d+\.\d+\/\w+
 FlyBrain_NDB\:\d+
 CHEBI\:\d+
 MeSH\:D\d+
@@ -140,7 +140,7 @@ sub is_dbxref_legal {
     &ISBN13_check($1)
   }
   # If not ISBN, does it follow one of the other legal dbxref syntaxes?
-  elsif ($_ =~ m/FlyBase\:FBrf\d{7}|VFB_vol\:\d{8}|FBC\:\S+|FlyBase\:FBim\d{7}|PMID\:\d+|http\:\/\/.+|CARO\:\S+|doi\:\d+\.\d+\/\w+|FlyBrain_NDB\:\d+|CHEBI\:\d+|MeSH\:D\d+|GOC:\S+|Reactome\:\d+|UniProt\:P\d+/) {
+  elsif ($_ =~ m/FlyBase\:FBrf\d{7}|VFB_vol\:\d{8}|FBC\:\S+|FlyBase\:FBim\d{7}|PMID\:\d+|http\:\/\/.+|CARO\:\S+|DOI\:\d+\.\d+\/\w+|FlyBrain_NDB\:\d+|CHEBI\:\d+|MeSH\:D\d+|GOC:\S+|Reactome\:\d+|UniProt\:P\d+/) {
     $legal_stat=1;
   } else {
     $legal_stat=0
