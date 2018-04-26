@@ -20,6 +20,14 @@ PMID:\d+;
 http://...;
 ISBN:<legal ISBN13>;
 CARO:<CARO curator initials>.
+VFB_vol\:\d{8}
+doi\:\d+\.\d+\/\w+
+FlyBrain_NDB\:\d+
+CHEBI\:\d+
+MeSH\:D\d+
+GOC:\S+
+Reactome\:\d+
+UniProt\:P\d+/
 
 Note - this is the allowable list for FBbt and FBdv.  FBcv terms that import def_dbxrefs from GO may have dbxrefs from the longer, GO approved list: https://flybase.org/svn/ontologies/CVS_versions/GO.xrf_abbs.  There are currently no scripted checks of this list.
 
