@@ -10,13 +10,13 @@ Make sure you have an ID range in the [idranges file](fbbt-idranges.owl)
 
 If you do not have one, get one from the head curator.
 
-The editors version is [fbbt-edit.owl](fbbt-edit.owl)
+The editors version is [fbbt-edit.obo](fbbt-edit.obo)
 
 ** DO NOT EDIT fbbt.obo OR fbbt.owl in the top level directory **
 
 [../../fbbt.owl](../../fbbt.owl) is the release version
 
-To edit, open the file in Protege. First make sure you have the repository cloned, see [the GitHub project](https://github.com/dosumis/drosophila-anatomy-ontology-test) for details.
+To edit, open the file in Protege. First make sure you have the repository cloned, see [the GitHub project](https://github.com/FlyBase/drosophila-anatomy-developmental-ontology) for details.
 
 ## ID Ranges
 
@@ -48,8 +48,7 @@ to release:
     cd src/ontology
     make
 
-If this looks goo
-d type:
+If this looks good type:
 
     make prepare_release
 
@@ -68,8 +67,8 @@ Finally type
 
 IMMEDIATELY AFTERWARDS (do *not* make further modifications) go here:
 
- * https://github.com/dosumis/drosophila-anatomy-ontology-test/releases
- * https://github.com/dosumis/drosophila-anatomy-ontology-test/releases/new
+ * https://github.com/FlyBase/drosophila-anatomy-developmental-ontology/releases
+ * https://github.com/FlyBase/drosophila-anatomy-developmental-ontology/releases/new
 
 The value of the "Tag version" field MUST be
 
