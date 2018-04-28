@@ -96,7 +96,6 @@ For questions on this contact Chris Mungall or email obo-admin AT obofoundry.org
 
 # Travis Continuous Integration System
 
-Check the build status here: [![Build Status](https://travis-ci.org/dosumis/drosophila-anatomy-ontology-test.svg?branch=master)](https://travis-ci.org/dosumis/drosophila-anatomy-ontology-test)
+Check the build status here: [![Build Status](https://travis-ci.org/FlyBase/drosophila-anatomy-developmental-ontology.svg?branch=master)](https://travis-ci.org/FlyBase/drosophila-anatomy-developmental-ontology)
 
-Note: if you have only just created this project you will need to authorize travis for this repo. Go to [https://travis-ci.org/profile/dosumis](https://travis-ci.org/profile/dosumis) for details
 
