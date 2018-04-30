@@ -7,11 +7,11 @@ use strict;
 
 This script runs the following checks:
 
-1. Are there multiple terms with the same name?
+1. HARD CHECK Are there multiple terms with the same name?
 
-2. Do all non-anonymous terms have names?
+2. HARD CHECK Do all non-anonymous terms have names?
 
-3. Are def_dbxrefs and synonym_dbxrefs one of the following:
+3. SOFT CHECK Are def_dbxrefs and synonym_dbxrefs one of the following:
 
 ISBN:.+
 FlyBase:FBrfnnnnnnn; 
@@ -113,6 +113,7 @@ sub chado_load_checks {
 	print STDERR "I don't know what namespaces are valid for $idp.\n"
       }
       my @def_dbxrefs = split /, /, $value->{def_dbxref};
+      # soft checks on def/synonym xrefs.
       for (@def_dbxrefs) {
 	print "$key \! $value->{name} has unnapproved def_dbxref type: $_\n",  unless (is_dbxref_legal($_))
       }
