@@ -27,6 +27,8 @@ matrix:
       before_script:
         - export PERL5LIB=$PWD/tools/perl_modules/trunk
         - wget -r http://purl.obolibrary.org/obo/fbbt/fbbt-simple.obo
+      install:
+        cpanm -l $PWD/tools/perl_modules/trunk --quiet --installdeps --notest .
       script:
         - perl -e'print @INC'
         - tools/release_and_checking_scripts/trunk/chado_load_checks.pl fbbt/src/ontology/fbbt-edit.obo
