@@ -13,6 +13,7 @@ This script runs the following checks:
 
 3. Are def_dbxrefs and synonym_dbxrefs one of the following:
 
+ISBN:.+
 FlyBase:FBrfnnnnnnn; 
 FlyBase:FBimnnnnnnn;
 FBC:\<curator initials\>;
@@ -140,7 +141,7 @@ sub is_dbxref_legal {
 #    &ISBN13_check($1)
 #  }
   # If not ISBN, does it follow one of the other legal dbxref syntaxes?
-  if ($_ =~ m/FlyBase\:FBrf\d{7}|VFB_vol\:\d{8}|FBC\:\S+|FlyBase\:FBim\d{7}|PMID\:\d+|http\:\/\/.+|CARO\:\S+|DOI\:\d+\.\d+\/\w+|FlyBrain_NDB\:\d+|CHEBI\:\d+|MeSH\:D\d+|GOC:\S+|Reactome\:\d+|UniProt\:P\d+/) {
+  if ($_ =~ m/ISBN:.+|FlyBase\:FBrf\d{7}|VFB_vol\:\d{8}|FBC\:\S+|FlyBase\:FBim\d{7}|PMID\:\d+|http\:\/\/.+|CARO\:\S+|doi\:\d+\.\d+\/\w+|FlyBrain_NDB\:\d+|CHEBI\:\d+|MeSH\:D\d+|GOC:\S+|Reactome\:\d+|UniProt\:P\d+/) {
     $legal_stat=1;
   } else {
     $legal_stat=0
