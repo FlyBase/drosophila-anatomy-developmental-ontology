@@ -25,14 +25,10 @@ matrix:
       language: perl
       perl: 5.24
       before_script:
-        - export PERL5LIB=$PWD/tools/perl_modules/trunk
         - wget -r http://purl.obolibrary.org/obo/fbbt/fbbt-simple.obo
-      install:
-        cpanm --quiet --installdeps --notest --skip-installed OboModel
       script:
-        - perl -e'print @INC'
-        - tools/release_and_checking_scripts/trunk/chado_load_checks.pl fbbt/src/ontology/fbbt-edit.obo
-        - tools/release_and_checking_scripts/trunk/obo_track.pl /fbbt-simple.obo fbbt/src/ontology/fbbt-edit.obo
+        - perl -I tools/perl_modules/trunk/ tools/release_and_checking_scripts/trunk/chado_load_checks.pl fbbt/src/ontology/fbbt-edit.obo
+        - perl -I tools/perl_modules/trunk/ tools/release_and_checking_scripts/trunk/obo_track.pl /fbbt-simple.obo fbbt/src/ontology/fbbt-edit.obo
           
 
 #after_success:
