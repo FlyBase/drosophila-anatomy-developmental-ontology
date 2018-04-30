@@ -4,45 +4,43 @@
 
 matrix:
   include:
-   -
+    -
       language: java
       jdk:
-           - oraclejdk8
-
+        - oraclejdk8
       before_script:
-           - mkdir -p bin
-           - export PATH=$PATH:$PWD/bin
-           - wget http://build.berkeleybop.org/userContent/owltools/owltools -O bin/owltools
-           - wget http://build.berkeleybop.org/userContent/owltools/ontology-release-runner -O bin/ontology-release-runner
-           - wget http://build.berkeleybop.org/userContent/owltools/owltools-runner-all.jar -O bin/owltools-runner-all.jar
-           - wget http://build.berkeleybop.org/userContent/owltools/owltools-oort-all.jar -O bin/owltools-oort-all.jar
-           - wget http://build.berkeleybop.org/job/robot/lastSuccessfulBuild/artifact/bin/robot -O bin/robot
-           - wget http://build.berkeleybop.org/job/robot/lastSuccessfulBuild/artifact/bin/robot.jar -O bin/robot.jar
-           - wget --no-check-certificate https://raw.githubusercontent.com/cmungall/pattern2owl/master/apply-pattern.py -O bin/apply-pattern.py
-           - chmod +x bin/*
+        - mkdir -p bin
+        - export PATH=$PATH:$PWD/bin
+        - wget http://build.berkeleybop.org/userContent/owltools/owltools -O bin/owltools
+        - wget http://build.berkeleybop.org/userContent/owltools/ontology-release-runner -O bin/ontology-release-runner
+        - wget http://build.berkeleybop.org/userContent/owltools/owltools-runner-all.jar -O bin/owltools-runner-all.jar
+        - wget http://build.berkeleybop.org/userContent/owltools/owltools-oort-all.jar -O bin/owltools-oort-all.jar
+        - wget http://build.berkeleybop.org/job/robot/lastSuccessfulBuild/artifact/bin/robot -O bin/robot
+        - wget http://build.berkeleybop.org/job/robot/lastSuccessfulBuild/artifact/bin/robot.jar -O bin/robot.jar
+        - wget --no-check-certificate https://raw.githubusercontent.com/cmungall/pattern2owl/master/apply-pattern.py -O bin/apply-pattern.py
+        - chmod +x bin/*
 
-          # command to run tests
+        # command to run tests
       script: cd fbbt/src/ontology && make test
     -
       language: perl
       perl: 5.24
       before_script:
-           - export PERL5LIB=$PWD/tools/perl_modules/trunk
-           - wget -r http://purl.obolibrary.org/obo/fbbt/fbbt-simple.obo
+        - export PERL5LIB=$PWD/tools/perl_modules/trunk
+        - wget -r http://purl.obolibrary.org/obo/fbbt/fbbt-simple.obo
       script:
-           - tools/release_and_checking_scripts/trunk/chado_load_checks.pl fbbt/src/ontology/fbbt-edit.obo
-           - tools/release_and_checking_scripts/trunk/obo_track.pl /fbbt-simple.obo fbbt/src/ontology/fbbt-edit.obo
+        - tools/release_and_checking_scripts/trunk/chado_load_checks.pl fbbt/src/ontology/fbbt-edit.obo
+        - tools/release_and_checking_scripts/trunk/obo_track.pl /fbbt-simple.obo fbbt/src/ontology/fbbt-edit.obo
           
 
 #after_success:
 #  coveralls
-
-# whitelist
-branches:
-  only:
-      - gh-pages
-      - /.*/
-
+#
+# branches
+#  only:
+#   - gh-pages
+#    - /.*/
+#
 ### Add your own lists here
 ### See https://github.com/INCATools/ontology-starter-kit/issues/35
 #notifications:
