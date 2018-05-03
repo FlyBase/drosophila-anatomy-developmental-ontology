@@ -120,6 +120,14 @@ synonym: "organ system process" EXACT []
 is_a: GO:0032501 ! multicellular organismal process
 
 [Term]
+id: GO:0003014
+name: renal system process
+def: "A organ system process carried out by any of the organs or tissues of the renal system. The renal system maintains fluid balance, and contributes to electrolyte balance, acid/base balance, and disposal of nitrogenous waste products. In humans, the renal system comprises a pair of kidneys, a pair of ureters, urinary bladder, urethra, sphincter muscle and associated blood vessels; in other species, the renal system may comprise related structures (e.g., nephrocytes and malpighian tubules in Drosophila)." [GOC:cjm, GOC:mtg_cardio, GOC:mtg_kidney_jan10]
+synonym: "excretory system process" EXACT []
+synonym: "kidney system process" RELATED []
+is_a: GO:0003008 ! system process
+
+[Term]
 id: GO:0003016
 name: respiratory system process
 def: "A system process carried out by the organs and tissues of the respiratory system. The respiratory system is an organ system responsible for respiratory gaseous exchange." [GOC:dph, GOC:mtg_cardio, GOC:tb]
@@ -132,18 +140,6 @@ id: GO:0003674
 name: molecular_function
 def: "A molecular process that can be carried out by the action of a single macromolecular machine, usually via direct physical interactions with other molecular entities. Function in this sense denotes an action, or activity, that a gene product (or a complex) performs. These actions are described from two distinct but related perspectives: (1) biochemical activity, and (2) role as a component in a larger system/process." [GOC:pdt]
 synonym: "molecular function" EXACT []
-
-[Term]
-id: GO:0004871
-name: signal transducer activity
-def: "Conveys a signal across a cell to trigger a change in cell function or state. A signal is a physical entity or change in state that is used to transfer information in order to trigger a response." [GOC:go_curators]
-synonym: "hematopoietin/interferon-class (D200-domain) cytokine receptor signal transducer activity" NARROW []
-synonym: "quorum sensing response regulator activity" NARROW []
-synonym: "quorum sensing signal generator activity" NARROW []
-is_a: GO:0003674 ! molecular_function
-intersection_of: GO:0003674 ! molecular_function
-intersection_of: BFO:0000050 GO:0007165 ! signal transduction
-relationship: BFO:0000050 GO:0007165 ! signal transduction
 
 [Term]
 id: GO:0004888
@@ -920,20 +916,6 @@ intersection_of: RO:0002211 GO:0001820 ! serotonin secretion
 relationship: RO:0002211 GO:0001820 ! serotonin secretion
 
 [Term]
-id: GO:0014069
-name: postsynaptic density
-def: "An electron dense network of proteins within and adjacent to the postsynaptic membrane of an asymetric, neuron-neuron synapse. Its major components include neurotransmitter receptors and the proteins that spatially and functionally organize them such as anchoring and scaffolding molecules, signaling enzymes and cytoskeletal components." [GOC:BHF, GOC:dos, GOC:ef, GOC:jid, GOC:pr, GOC:sjp, http://molneuro.kaist.ac.kr/psd, PMID:14532281, Wikipedia:Postsynaptic_density]
-synonym: "neuronal postsynaptic density" EXACT [GO:0097481]
-synonym: "post synaptic density" EXACT []
-synonym: "post-synaptic density" EXACT []
-synonym: "postsynaptic density of dendrite" NARROW []
-is_a: GO:0097458 ! neuron part
-is_a: GO:0099572 ! postsynaptic specialization
-intersection_of: GO:0099572 ! postsynaptic specialization
-intersection_of: BFO:0000050 GO:0032279 ! asymmetric synapse
-relationship: BFO:0000050 GO:0032279 ! asymmetric synapse
-
-[Term]
 id: GO:0015695
 name: organic cation transport
 def: "The directed movement of organic cations into, out of or within a cell, or between cells, by means of some agent such as a transporter or pore. Organic cations are atoms or small molecules with a positive charge which contain carbon in covalent linkage." [GOC:ai]
@@ -1289,16 +1271,6 @@ intersection_of: RO:0002211 GO:0051932 ! synaptic transmission, GABAergic
 relationship: RO:0002211 GO:0051932 ! synaptic transmission, GABAergic
 
 [Term]
-id: GO:0032279
-name: asymmetric synapse
-def: "A type of synapse occurring between an axon and a dendritic spine or dendritic shaft. Asymmetric synapses, the most abundant synapse type in the central nervous system, involve axons that contain predominantly spherical vesicles and contain a thickened postsynaptic density.  Most or all synapses of this type are excitatory." [GOC:dgh, GOC:ef]
-synonym: "Gray's type I synapse" EXACT []
-is_a: GO:0098984 ! neuron to neuron synapse
-intersection_of: GO:0098984 ! neuron to neuron synapse
-intersection_of: BFO:0000051 GO:0014069 ! postsynaptic density
-relationship: BFO:0000051 GO:0014069 ! postsynaptic density
-
-[Term]
 id: GO:0032501
 name: multicellular organismal process
 def: "Any biological process, occurring at the level of a multicellular organism, pertinent to its function." [GOC:curators, GOC:dph, GOC:isa_complete, GOC:tb]
@@ -1490,12 +1462,6 @@ is_a: GO:0009648 ! photoperiodism
 is_a: GO:0009649 ! entrainment of circadian clock
 
 [Term]
-id: GO:0043226
-name: organelle
-def: "Organized structure of distinctive morphology and function. Includes the nucleus, mitochondria, plastids, vacuoles, vesicles, ribosomes and the cytoskeleton, and prokaryotic structures such as anammoxosomes and pirellulosomes. Excludes the plasma membrane." [GOC:go_curators]
-is_a: GO:0005575 ! cellular_component
-
-[Term]
 id: GO:0043269
 name: regulation of ion transport
 def: "Any process that modulates the frequency, rate or extent of the directed movement of charged atoms or small charged molecules into, out of or within a cell, or between cells, by means of some agent such as a transporter or pore." [GOC:jl]
@@ -1572,15 +1538,6 @@ relationship: RO:0002211 GO:0006820 ! anion transport
 [Term]
 id: GO:0044240
 is_obsolete: true
-
-[Term]
-id: GO:0044422
-name: organelle part
-def: "Any constituent part of an organelle, an organized structure of distinctive morphology and function. Includes constituent parts of the nucleus, mitochondria, plastids, vacuoles, vesicles, ribosomes and the cytoskeleton, but excludes the plasma membrane." [GOC:jl]
-is_a: GO:0005575 ! cellular_component
-intersection_of: GO:0005575 ! cellular_component
-intersection_of: BFO:0000050 GO:0043226 ! organelle
-relationship: BFO:0000050 GO:0043226 ! organelle
 
 [Term]
 id: GO:0044425
@@ -1885,6 +1842,13 @@ id: GO:0050890
 name: cognition
 def: "The operation of the mind by which an organism becomes aware of objects of thought or perception; it includes the mental activities associated with thinking, learning, and memory." [http://www.onelook.com/, ISBN:0721619908]
 is_a: GO:0050877 ! nervous system process
+
+[Term]
+id: GO:0050892
+name: intestinal absorption
+def: "Any process in which nutrients are taken up from the contents of the intestine." [GOC:ai, GOC:dph]
+is_a: GO:0006810 ! transport
+is_a: GO:0022600 ! digestive system process
 
 [Term]
 id: GO:0050896
@@ -2477,7 +2441,8 @@ is_a: GO:0009605 ! response to external stimulus
 id: GO:0060089
 name: molecular transducer activity
 def: "A compound molecular function in which an effector function is controlled by one or more regulatory components." [GOC:dos, GOC:pdt]
-is_a: GO:0004871 ! signal transducer activity
+is_a: GO:0003674 ! molecular_function
+relationship: BFO:0000050 GO:0007165 ! signal transduction
 
 [Term]
 id: GO:0060096
@@ -2748,17 +2713,22 @@ intersection_of: GO:0098590 ! plasma membrane region
 intersection_of: BFO:0000050 GO:0045202 ! synapse
 
 [Term]
+id: GO:0097205
+name: renal filtration
+def: "A renal system process in which fluid circulating through the body is filtered through a barrier system." [GOC:pr, GOC:sart]
+is_a: GO:0003014 ! renal system process
+
+[Term]
+id: GO:0097206
+name: nephrocyte filtration
+def: "The process by which hemolymph is filtered based on size and charge through a nephrocyte filtration barrier formed by the basement membrane and nephrocyte diaphragm." [GOC:sart, PMID:18971929]
+is_a: GO:0097205 ! renal filtration
+
+[Term]
 id: GO:0097458
 name: neuron part
 def: "Any constituent part of a neuron, the basic cellular unit of nervous tissue. A typical neuron consists of a cell body (often called the soma), an axon, and dendrites. Their purpose is to receive, conduct, and transmit impulses in the nervous system." [GOC:pr, http://en.wikipedia.org/wiki/Neuron]
 is_a: GO:0044464 ! cell part
-
-[Term]
-id: GO:0097471
-name: mossy fiber rosette
-def: "A synapse of a mossy fiber onto the dendrite of a granule cell; each mossy fiber can have up to 50 rosettes." [http://en.wikipedia.org/wiki/Mossy_fiber_(cerebellum), NIF_Subcellular:nlx_subcell_091021]
-synonym: "cerebellar mossy fiber to granule cell synapse" EXACT []
-is_a: GO:0032279 ! asymmetric synapse
 
 [Term]
 id: GO:0098509
@@ -2803,23 +2773,19 @@ is_a: GO:0044456 ! synapse part
 is_a: GO:0097458 ! neuron part
 
 [Term]
-id: GO:0098794
-name: postsynapse
-def: "The part of a synapse that is part of the post-synaptic cell." [GOC:dos]
-is_a: GO:0044456 ! synapse part
-is_a: GO:0044464 ! cell part
+id: GO:0098801
+name: regulation of renal system process
+def: "Any process that modulates the frequency, rate or extent of a system process, a multicellular organismal process carried out by the renal system." [GOC:dos]
+is_a: GO:0044057 ! regulation of system process
+intersection_of: GO:0008150 ! biological_process
+intersection_of: RO:0002211 GO:0003014 ! renal system process
+relationship: RO:0002211 GO:0003014 ! renal system process
 
 [Term]
 id: GO:0098916
 name: anterograde trans-synaptic signaling
 def: "Cell-cell signaling from pre to post-synapse, across the synaptic cleft" [GOC:dos]
 is_a: GO:0099537 ! trans-synaptic signaling
-
-[Term]
-id: GO:0098984
-name: neuron to neuron synapse
-def: "A synapse in which pre and post-synaptic cells are neurons." [GOC:dos]
-is_a: GO:0045202 ! synapse
 
 [Term]
 id: GO:0099124
@@ -2832,15 +2798,6 @@ is_a: GO:0051649 ! establishment of localization in cell
 intersection_of: GO:0014046 ! dopamine secretion
 intersection_of: BFO:0000066 GO:0030424 ! axon
 relationship: BFO:0000066 GO:0030424 ! axon
-
-[Term]
-id: GO:0099170
-name: postsynaptic modulation of chemical synaptic transmission
-def: "Any process, acting in the postsynapse that results in modulation of chemical synaptic transmission." [GOC:dos]
-is_a: GO:0050804 ! modulation of chemical synaptic transmission
-intersection_of: GO:0050804 ! modulation of chemical synaptic transmission
-intersection_of: BFO:0000066 GO:0098794 ! postsynapse
-relationship: BFO:0000066 GO:0098794 ! postsynapse
 
 [Term]
 id: GO:0099171
@@ -2892,15 +2849,6 @@ is_a: GO:0050804 ! modulation of chemical synaptic transmission
 is_a: GO:0099537 ! trans-synaptic signaling
 intersection_of: GO:0099537 ! trans-synaptic signaling
 intersection_of: RO:0002211 GO:0007268 ! chemical synaptic transmission
-
-[Term]
-id: GO:0099572
-name: postsynaptic specialization
-def: "A network of proteins within and adjacent to the postsynaptic membrane. Its major components include neurotransmitter receptors and the proteins that spatially and functionally organize them such as anchoring and scaffolding molecules, signaling enzymes and cytoskeletal components." [PMID:22046028]
-is_a: GO:0043226 ! organelle
-is_a: GO:0044456 ! synapse part
-is_a: GO:0044464 ! cell part
-relationship: BFO:0000050 GO:0098794 ! postsynapse
 
 [Term]
 id: GO:0099643
@@ -2963,6 +2911,16 @@ is_a: GO:0051046 ! regulation of secretion
 intersection_of: GO:0008150 ! biological_process
 intersection_of: RO:0002211 GO:0032940 ! secretion by cell
 relationship: RO:0002211 GO:0032940 ! secretion by cell
+
+[Term]
+id: GO:1904478
+name: regulation of intestinal absorption
+def: "Any process that modulates the frequency, rate or extent of intestinal absorption." [GO_REF:0000058, GOC:BHF, GOC:rl, GOC:TermGenie, PMID:12469120]
+is_a: GO:0044058 ! regulation of digestive system process
+is_a: GO:0051049 ! regulation of transport
+intersection_of: GO:0008150 ! biological_process
+intersection_of: RO:0002211 GO:0050892 ! intestinal absorption
+relationship: RO:0002211 GO:0050892 ! intestinal absorption
 
 [Term]
 id: GO:1904656
