@@ -1,16 +1,16 @@
 echo ''
 echo '*** Checking -edit file ***'
 echo ''
-chado_load_checks.pl fbbt/src/ontologies/fbbt-edit.obo > fbbt-edit_checks.txt
+chado_load_checks.pl fbbt/src/ontology/fbbt-edit.obo > fbbt-edit_checks.txt
 echo ''
 echo '*** Generating potential release ***'
 echo ''
 echo '** Rolling autodefs **'
-update_EC_defs.pl fbbt/src/ontologies/fbbt-edit.obo > tmp.obo
+update_EC_defs.pl fbbt/src/ontology/fbbt-edit.obo > tmp.obo
 echo ''
 echo '*** Merging source file ***'
 echo ''
-owltools fbbt/src/ontologies/fbbt_auth_attrib_licence.owl --merge tmp.obo --merge fbbt/src/ontologies/fbbt-ext.owl -o file://`pwd`/tmp.owl
+owltools fbbt/src/ontology/fbbt_auth_attrib_licence.owl --merge tmp.obo --merge fbbt/src/ontology/fbbt-ext.owl -o file://`pwd`/tmp.owl
 rm tmp.obo # Cleaning up
 echo ''
 echo "*** Generating release files using the $REASONER reasoner ***"
