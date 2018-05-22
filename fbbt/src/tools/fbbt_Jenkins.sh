@@ -10,9 +10,9 @@ update_EC_defs.pl fbbt/src/ontology/fbbt-edit.obo > tmp.obo
 echo ''
 echo '*** Merging source files & imports ***'
 echo ''
-owltools --use-catalog-xml tmp.obo --merge-import-closure -o file://`pwd`/tmp2.obo
+owltools --catalog-xml fbbt/src/ontology/catalog-v001.xml tmp.obo --merge-import-closure -o file://`pwd`/tmp2.obo
 
-owltools fbbt/src/ontologies/fbbt_auth_attrib_licence.owl --merge tmp2.obo -o file://`pwd`/tmp.owl
+owltools fbbt/src/ontology/fbbt_auth_attrib_licence.owl --merge tmp2.obo -o file://`pwd`/tmp.owl
 
 rm tmp.obo
 rm tmp2.obo # Cleaning up
