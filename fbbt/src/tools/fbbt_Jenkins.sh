@@ -59,5 +59,5 @@ echo ''
 obo_track_new.pl purl.obolibrary.org/obo/fbbt/fbbt-simple.obo oort/fbbt-simple.obo > oort/obo_track_out.txt # Dump to oort folder so in-place for release.
 rm purl.obolibrary.org/obo/fbbt/fbbt-simple.obo # Cleaning up
 echo ''
-echo '*** Calculating new metrics ***'
-onto_metrics_calc.pl fly_anatomy.ontology oort/fbbt-non-classified.obo > oort/fbbt_metrics.txt  # Dump to oort folder so in-place for release.
+#echo '*** Calculating new metrics ***'
+#onto_metrics_calc.pl fly_anatomy.ontology oort/fbbt-non-classified.obo > oort/fbbt_metrics.txt  # Dump to oort folder so in-place for release.
