@@ -10,6 +10,7 @@ SRC=$(ONT)-edit.obo
 RELEASEDIR=../../releases/
 ROBOT= robot
 OWLTOOLS= owltools
+INFTOOL = java -jar inferencereport.jar
 USECAT= --use-catalog
 SPARQLDIR = ../sparql
 
@@ -28,7 +29,7 @@ prepare_release: all
 	echo "Release files are now in $(RELEASEDIR) - now you should commit, push and make a release on github"
 
 # merge in support ontologies
-enhanced.owl: fbbt_auth_attrib_licence.owl $(SRC) fbbt-ext.owl 
+enhanced.owl: fbbt_auth_attrib_licence.owl $(SRC) 
 	$(OWLTOOLS) $(USECAT) $^ --merge-support-ontologies -o $@  # TODO Switch this to ROBOT + check ROBOT treatment of ontology annotations.
 
 # ----------------------------------------
@@ -59,6 +60,9 @@ all_imports: $(IMPORTS_OWL)
 # generate seed with all referenced entities
 seed.txt: enhanced.owl
 	$(ROBOT) query -f csv -i $< --query ../sparql/terms.sparql $@
+
+inf_reports:enhanced.owl
+	$(INFTOOL) $< inf/fbbt-edit
 
 # Generate terms.txt for each import
 imports/%_terms.txt: seed.txt
