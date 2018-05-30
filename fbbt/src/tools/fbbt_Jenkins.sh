@@ -1,17 +1,22 @@
 echo ''
 echo '*** Checking -edit file ***'
 echo ''
-chado_load_checks.pl fbbt/src/ontologies/fbbt-edit.obo > fbbt-edit_checks.txt
+chado_load_checks.pl fbbt/src/ontology/fbbt-edit.obo > fbbt-edit_checks.txt
 echo ''
 echo '*** Generating potential release ***'
 echo ''
 echo '** Rolling autodefs **'
-update_EC_defs.pl fbbt/src/ontologies/fbbt-edit.obo > tmp.obo
+update_EC_defs.pl fbbt/src/ontology/fbbt-edit.obo > tmp.obo
 echo ''
-echo '*** Merging source file ***'
+echo '*** Merging source files & imports ***'
 echo ''
-owltools fbbt/src/ontologies/fbbt_auth_attrib_licence.owl --merge tmp.obo --merge fbbt/src/ontologies/fbbt-ext.owl -o file://`pwd`/tmp.owl
-rm tmp.obo # Cleaning up
+owltools --catalog-xml fbbt/src/ontology/catalog-v001.xml tmp.obo --merge-import-closure -o file://`pwd`/tmp2.obo
+
+owltools fbbt/src/ontology/fbbt_auth_attrib_licence.owl --merge tmp2.obo -o file://`pwd`/tmp.owl
+
+rm tmp.obo
+rm tmp2.obo # Cleaning up
+
 echo ''
 echo "*** Generating release files using the $REASONER reasoner ***"
 echo ''
@@ -54,5 +59,5 @@ echo ''
 obo_track_new.pl purl.obolibrary.org/obo/fbbt/fbbt-simple.obo oort/fbbt-simple.obo > oort/obo_track_out.txt # Dump to oort folder so in-place for release.
 rm purl.obolibrary.org/obo/fbbt/fbbt-simple.obo # Cleaning up
 echo ''
-echo '*** Calculating new metrics ***'
-onto_metrics_calc.pl fly_anatomy.ontology oort/fbbt-non-classified.obo > oort/fbbt_metrics.txt  # Dump to oort folder so in-place for release.
+#echo '*** Calculating new metrics ***'
+#onto_metrics_calc.pl fly_anatomy.ontology oort/fbbt-non-classified.obo > oort/fbbt_metrics.txt  # Dump to oort folder so in-place for release.
