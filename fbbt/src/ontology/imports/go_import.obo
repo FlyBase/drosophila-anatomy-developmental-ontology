@@ -2755,6 +2755,12 @@ def: "The series of events required for an organism to detect high environmental
 is_a: GO:0098509 ! sensory perception of humidity
 
 [Term]
+id: GO:0098511
+name: sensory perception of low humidity
+def: "The series of events required for an organism to detect low environmental humidity, convert this detection into a molecular signal, and recognize and characterize the signal. This is a neurological process." [PMID:18269908]
+is_a: GO:0098509 ! sensory perception of humidity
+
+[Term]
 id: GO:0098512
 name: detection of humidity stimulus involved in sensory perception
 def: "The series of events in which a humidity stimulus is received and converted into a molecular signal as part of the sensory perception of humidity." [GOC:dos, PMID:8650222]
@@ -2782,9 +2788,25 @@ intersection_of: BFO:0000050 GO:0098510 ! sensory perception of high humidity
 relationship: BFO:0000050 GO:0098510 ! sensory perception of high humidity
 
 [Term]
+id: GO:0098515
+name: detection of low humidity stimulus involved in sensory perception
+def: "The series of events in which a low humidity stimulus is detected and converted into a molecular signal as a part of the sensory detection of low humidity." [GOC:dos, PMID:18269908]
+is_a: GO:0098512 ! detection of humidity stimulus involved in sensory perception
+is_a: GO:0098517 ! detection of low humidity
+intersection_of: GO:0098517 ! detection of low humidity
+intersection_of: BFO:0000050 GO:0098511 ! sensory perception of low humidity
+relationship: BFO:0000050 GO:0098511 ! sensory perception of low humidity
+
+[Term]
 id: GO:0098516
 name: detection of high humidity
 def: "The series of events in which high humidity is detected and converted into a molecular signal." [GOC:dos]
+is_a: GO:0098513 ! detection of humidity
+
+[Term]
+id: GO:0098517
+name: detection of low humidity
+def: "The series of events in which low humidity is detected and converted into a molecular signal." [GOC:dos]
 is_a: GO:0098513 ! detection of humidity
 
 [Term]
