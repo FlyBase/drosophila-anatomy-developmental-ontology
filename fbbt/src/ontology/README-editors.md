@@ -45,7 +45,7 @@ committed and pushed, and the travis build passes.
 
 to release:
 
-    cd src/ontology
+    cd fbbt/src/ontology
     make
 
 If this looks good type:
