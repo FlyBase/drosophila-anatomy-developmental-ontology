@@ -1,0 +1,1288 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.w3.org/2002/07/owl"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <Ontology/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/1999/02/22-rdf-syntax-ns#type -->
+
+    <AnnotationProperty rdf:about="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0002103 -->
+
+    <ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002103"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FBbt_00002452 -->
+
+    <Class rdf:about="http://purl.obolibrary.org/obo/FBbt_00002452">
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002103"/>
+                <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FBbt_00047195"/>
+            </Restriction>
+        </rdfs:subClassOf>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FBbt_00047195 -->
+
+    <Class rdf:about="http://purl.obolibrary.org/obo/FBbt_00047195">
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002103"/>
+                <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FBbt_00002452"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002103"/>
+                <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FBbt_00047268"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002103"/>
+                <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FBbt_00047269"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002103"/>
+                <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FBbt_00100024"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002103"/>
+                <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FBbt_00111242"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002103"/>
+                <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FBbt_00111243"/>
+            </Restriction>
+        </rdfs:subClassOf>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FBbt_00047196 -->
+
+    <Class rdf:about="http://purl.obolibrary.org/obo/FBbt_00047196">
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002103"/>
+                <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FBbt_00047197"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002103"/>
+                <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FBbt_00047199"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002103"/>
+                <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FBbt_00047205"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002103"/>
+                <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FBbt_00047206"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002103"/>
+                <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FBbt_00047266"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002103"/>
+                <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FBbt_00047270"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002103"/>
+                <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FBbt_00111243"/>
+            </Restriction>
+        </rdfs:subClassOf>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FBbt_00047197 -->
+
+    <Class rdf:about="http://purl.obolibrary.org/obo/FBbt_00047197">
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002103"/>
+                <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FBbt_00047195"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002103"/>
+                <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FBbt_00047196"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002103"/>
+                <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FBbt_00047198"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002103"/>
+                <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FBbt_00047199"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002103"/>
+                <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FBbt_00047266"/>
+            </Restriction>
+        </rdfs:subClassOf>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FBbt_00047198 -->
+
+    <Class rdf:about="http://purl.obolibrary.org/obo/FBbt_00047198">
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002103"/>
+                <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FBbt_00002452"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002103"/>
+                <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FBbt_00047195"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002103"/>
+                <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FBbt_00047196"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002103"/>
+                <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FBbt_00047199"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002103"/>
+                <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FBbt_00047203"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002103"/>
+                <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FBbt_00047204"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002103"/>
+                <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FBbt_00047205"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002103"/>
+                <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FBbt_00047206"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002103"/>
+                <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FBbt_00047268"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002103"/>
+                <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FBbt_00047269"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002103"/>
+                <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FBbt_00047270"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002103"/>
+                <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FBbt_00100024"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002103"/>
+                <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FBbt_00111227"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002103"/>
+                <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FBbt_00111230"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002103"/>
+                <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FBbt_00111242"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002103"/>
+                <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FBbt_00111243"/>
+            </Restriction>
+        </rdfs:subClassOf>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FBbt_00047199 -->
+
+    <Class rdf:about="http://purl.obolibrary.org/obo/FBbt_00047199">
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002103"/>
+                <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FBbt_00002452"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002103"/>
+                <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FBbt_00047196"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002103"/>
+                <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FBbt_00047197"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002103"/>
+                <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FBbt_00047198"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002103"/>
+                <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FBbt_00047204"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002103"/>
+                <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FBbt_00047206"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002103"/>
+                <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FBbt_00047269"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002103"/>
+                <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FBbt_00047270"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002103"/>
+                <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FBbt_00111243"/>
+            </Restriction>
+        </rdfs:subClassOf>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FBbt_00047203 -->
+
+    <Class rdf:about="http://purl.obolibrary.org/obo/FBbt_00047203">
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002103"/>
+                <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FBbt_00047196"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002103"/>
+                <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FBbt_00047198"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002103"/>
+                <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FBbt_00047199"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002103"/>
+                <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FBbt_00047205"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002103"/>
+                <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FBbt_00047206"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002103"/>
+                <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FBbt_00047266"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002103"/>
+                <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FBbt_00047269"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002103"/>
+                <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FBbt_00047270"/>
+            </Restriction>
+        </rdfs:subClassOf>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FBbt_00047204 -->
+
+    <Class rdf:about="http://purl.obolibrary.org/obo/FBbt_00047204">
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002103"/>
+                <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FBbt_00047203"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002103"/>
+                <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FBbt_00047206"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002103"/>
+                <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FBbt_00047266"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002103"/>
+                <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FBbt_00047270"/>
+            </Restriction>
+        </rdfs:subClassOf>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FBbt_00047205 -->
+
+    <Class rdf:about="http://purl.obolibrary.org/obo/FBbt_00047205">
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002103"/>
+                <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FBbt_00047195"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002103"/>
+                <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FBbt_00047196"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002103"/>
+                <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FBbt_00047197"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002103"/>
+                <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FBbt_00047199"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002103"/>
+                <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FBbt_00047203"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002103"/>
+                <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FBbt_00047204"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002103"/>
+                <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FBbt_00047206"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002103"/>
+                <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FBbt_00047266"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002103"/>
+                <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FBbt_00047268"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002103"/>
+                <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FBbt_00047269"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002103"/>
+                <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FBbt_00047270"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002103"/>
+                <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FBbt_00100024"/>
+            </Restriction>
+        </rdfs:subClassOf>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FBbt_00047206 -->
+
+    <Class rdf:about="http://purl.obolibrary.org/obo/FBbt_00047206">
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002103"/>
+                <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FBbt_00047196"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002103"/>
+                <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FBbt_00047198"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002103"/>
+                <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FBbt_00047199"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002103"/>
+                <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FBbt_00047203"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002103"/>
+                <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FBbt_00047204"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002103"/>
+                <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FBbt_00047205"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002103"/>
+                <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FBbt_00047266"/>
+            </Restriction>
+        </rdfs:subClassOf>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FBbt_00047266 -->
+
+    <Class rdf:about="http://purl.obolibrary.org/obo/FBbt_00047266">
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002103"/>
+                <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FBbt_00047198"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002103"/>
+                <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FBbt_00047206"/>
+            </Restriction>
+        </rdfs:subClassOf>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FBbt_00047268 -->
+
+    <Class rdf:about="http://purl.obolibrary.org/obo/FBbt_00047268">
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002103"/>
+                <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FBbt_00047195"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002103"/>
+                <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FBbt_00047198"/>
+            </Restriction>
+        </rdfs:subClassOf>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FBbt_00047269 -->
+
+    <Class rdf:about="http://purl.obolibrary.org/obo/FBbt_00047269">
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002103"/>
+                <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FBbt_00047195"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002103"/>
+                <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FBbt_00047198"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002103"/>
+                <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FBbt_00047199"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002103"/>
+                <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FBbt_00047203"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002103"/>
+                <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FBbt_00047205"/>
+            </Restriction>
+        </rdfs:subClassOf>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FBbt_00047270 -->
+
+    <Class rdf:about="http://purl.obolibrary.org/obo/FBbt_00047270">
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002103"/>
+                <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FBbt_00047195"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002103"/>
+                <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FBbt_00047199"/>
+            </Restriction>
+        </rdfs:subClassOf>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FBbt_00100024 -->
+
+    <Class rdf:about="http://purl.obolibrary.org/obo/FBbt_00100024">
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002103"/>
+                <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FBbt_00047195"/>
+            </Restriction>
+        </rdfs:subClassOf>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FBbt_00111227 -->
+
+    <Class rdf:about="http://purl.obolibrary.org/obo/FBbt_00111227">
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002103"/>
+                <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FBbt_00002452"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002103"/>
+                <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FBbt_00047195"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002103"/>
+                <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FBbt_00047198"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002103"/>
+                <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FBbt_00047199"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002103"/>
+                <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FBbt_00047204"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002103"/>
+                <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FBbt_00047206"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002103"/>
+                <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FBbt_00047266"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002103"/>
+                <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FBbt_00047268"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002103"/>
+                <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FBbt_00047269"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002103"/>
+                <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FBbt_00100024"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002103"/>
+                <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FBbt_00111230"/>
+            </Restriction>
+        </rdfs:subClassOf>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FBbt_00111228 -->
+
+    <Class rdf:about="http://purl.obolibrary.org/obo/FBbt_00111228">
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002103"/>
+                <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FBbt_00002452"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002103"/>
+                <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FBbt_00047195"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002103"/>
+                <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FBbt_00047198"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002103"/>
+                <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FBbt_00047199"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002103"/>
+                <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FBbt_00047204"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002103"/>
+                <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FBbt_00047268"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002103"/>
+                <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FBbt_00100024"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002103"/>
+                <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FBbt_00111227"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002103"/>
+                <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FBbt_00111230"/>
+            </Restriction>
+        </rdfs:subClassOf>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FBbt_00111229 -->
+
+    <Class rdf:about="http://purl.obolibrary.org/obo/FBbt_00111229">
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002103"/>
+                <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FBbt_00047195"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002103"/>
+                <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FBbt_00047196"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002103"/>
+                <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FBbt_00047197"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002103"/>
+                <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FBbt_00047198"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002103"/>
+                <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FBbt_00047199"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002103"/>
+                <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FBbt_00047204"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002103"/>
+                <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FBbt_00047266"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002103"/>
+                <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FBbt_00047268"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002103"/>
+                <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FBbt_00047270"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002103"/>
+                <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FBbt_00100024"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002103"/>
+                <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FBbt_00111227"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002103"/>
+                <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FBbt_00111230"/>
+            </Restriction>
+        </rdfs:subClassOf>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FBbt_00111230 -->
+
+    <Class rdf:about="http://purl.obolibrary.org/obo/FBbt_00111230">
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002103"/>
+                <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FBbt_00047268"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002103"/>
+                <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FBbt_00111227"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002103"/>
+                <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FBbt_00111228"/>
+            </Restriction>
+        </rdfs:subClassOf>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FBbt_00111242 -->
+
+    <Class rdf:about="http://purl.obolibrary.org/obo/FBbt_00111242">
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002103"/>
+                <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FBbt_00047197"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002103"/>
+                <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FBbt_00047198"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002103"/>
+                <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FBbt_00047199"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002103"/>
+                <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FBbt_00047204"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002103"/>
+                <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FBbt_00047269"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002103"/>
+                <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FBbt_00047270"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002103"/>
+                <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FBbt_00100024"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002103"/>
+                <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FBbt_00111227"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002103"/>
+                <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FBbt_00111228"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002103"/>
+                <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FBbt_00111229"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002103"/>
+                <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FBbt_00111230"/>
+            </Restriction>
+        </rdfs:subClassOf>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FBbt_00111243 -->
+
+    <Class rdf:about="http://purl.obolibrary.org/obo/FBbt_00111243">
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002103"/>
+                <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FBbt_00047195"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002103"/>
+                <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FBbt_00047196"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002103"/>
+                <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FBbt_00047198"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002103"/>
+                <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FBbt_00047199"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002103"/>
+                <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FBbt_00047204"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002103"/>
+                <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FBbt_00047205"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002103"/>
+                <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FBbt_00047268"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002103"/>
+                <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FBbt_00047270"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002103"/>
+                <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FBbt_00100024"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002103"/>
+                <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FBbt_00111229"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002103"/>
+                <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FBbt_00111230"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002103"/>
+                <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FBbt_00111242"/>
+            </Restriction>
+        </rdfs:subClassOf>
+    </Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FBbt_00002452 -->
+
+    <NamedIndividual rdf:about="http://purl.obolibrary.org/obo/FBbt_00002452"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FBbt_00047195 -->
+
+    <NamedIndividual rdf:about="http://purl.obolibrary.org/obo/FBbt_00047195"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FBbt_00047196 -->
+
+    <NamedIndividual rdf:about="http://purl.obolibrary.org/obo/FBbt_00047196"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FBbt_00047197 -->
+
+    <NamedIndividual rdf:about="http://purl.obolibrary.org/obo/FBbt_00047197"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FBbt_00047198 -->
+
+    <NamedIndividual rdf:about="http://purl.obolibrary.org/obo/FBbt_00047198"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FBbt_00047199 -->
+
+    <NamedIndividual rdf:about="http://purl.obolibrary.org/obo/FBbt_00047199"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FBbt_00047203 -->
+
+    <NamedIndividual rdf:about="http://purl.obolibrary.org/obo/FBbt_00047203"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FBbt_00047204 -->
+
+    <NamedIndividual rdf:about="http://purl.obolibrary.org/obo/FBbt_00047204"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FBbt_00047205 -->
+
+    <NamedIndividual rdf:about="http://purl.obolibrary.org/obo/FBbt_00047205"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FBbt_00047206 -->
+
+    <NamedIndividual rdf:about="http://purl.obolibrary.org/obo/FBbt_00047206"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FBbt_00047266 -->
+
+    <NamedIndividual rdf:about="http://purl.obolibrary.org/obo/FBbt_00047266"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FBbt_00047268 -->
+
+    <NamedIndividual rdf:about="http://purl.obolibrary.org/obo/FBbt_00047268"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FBbt_00047269 -->
+
+    <NamedIndividual rdf:about="http://purl.obolibrary.org/obo/FBbt_00047269"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FBbt_00047270 -->
+
+    <NamedIndividual rdf:about="http://purl.obolibrary.org/obo/FBbt_00047270"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FBbt_00100024 -->
+
+    <NamedIndividual rdf:about="http://purl.obolibrary.org/obo/FBbt_00100024"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FBbt_00111227 -->
+
+    <NamedIndividual rdf:about="http://purl.obolibrary.org/obo/FBbt_00111227"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FBbt_00111228 -->
+
+    <NamedIndividual rdf:about="http://purl.obolibrary.org/obo/FBbt_00111228"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FBbt_00111229 -->
+
+    <NamedIndividual rdf:about="http://purl.obolibrary.org/obo/FBbt_00111229"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FBbt_00111230 -->
+
+    <NamedIndividual rdf:about="http://purl.obolibrary.org/obo/FBbt_00111230"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FBbt_00111242 -->
+
+    <NamedIndividual rdf:about="http://purl.obolibrary.org/obo/FBbt_00111242"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FBbt_00111243 -->
+
+    <NamedIndividual rdf:about="http://purl.obolibrary.org/obo/FBbt_00111243"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/FBbt_00002452">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#class"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/FBbt_00047195">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#class"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/FBbt_00047196">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#class"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/FBbt_00047197">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#class"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/FBbt_00047198">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#class"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/FBbt_00047199">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#class"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/FBbt_00047203">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#class"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/FBbt_00047204">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#class"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/FBbt_00047205">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#class"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/FBbt_00047206">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#class"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/FBbt_00047266">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#class"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/FBbt_00047268">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#class"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/FBbt_00047269">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#class"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/FBbt_00047270">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#class"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/FBbt_00100024">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#class"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/FBbt_00111227">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#class"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/FBbt_00111228">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#class"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/FBbt_00111229">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#class"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/FBbt_00111230">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#class"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/FBbt_00111242">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#class"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/FBbt_00111243">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#class"/>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.6) https://github.com/owlcs/owlapi -->
+
