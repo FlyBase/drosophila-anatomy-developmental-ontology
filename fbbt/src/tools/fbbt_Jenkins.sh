@@ -5,24 +5,33 @@ chado_load_checks.pl fbbt/src/ontology/fbbt-edit.obo > fbbt-edit_checks.txt
 echo ''
 echo '*** Generating potential release ***'
 echo ''
+echo '*** Merging source files & imports ***'
+echo ''
+owltools --catalog-xml fbbt/src/ontology/catalog-v001.xml fbbt/src/ontology/fbbt-edit.obo --merge-import-closure --output -f obo tmp.obo
+
 echo '** Rolling autodefs **'
-update_EC_defs.pl fbbt/src/ontology/fbbt-edit.obo > tmp.obo
+update_EC_defs.pl tmp.obo > tmp2.obo
 echo ''
-echo '*** Merging source file ***'
-echo ''
-owltools fbbt/src/ontology/fbbt_auth_attrib_licence.owl --merge tmp.obo --merge fbbt/src/ontology/fbbt-ext.owl -o file://`pwd`/tmp.owl
-rm tmp.obo # Cleaning up
+
+echo '*** Merging accessory files ***'
+robot merge --input fbbt/src/ontology/fbbt_auth_attrib_licence.owl --input tmp2.obo -o tmp.owl
+
+tmp.obo
+tmp2.obo # Cleaning up
+
 echo ''
 echo "*** Generating release files using the $REASONER reasoner ***"
 echo ''
 ontology-release-runner --reasoner $REASONER tmp.owl  --no-subsets --simple --relaxed --asserted --allow-overwrite --outdir oort
+
 rm tmp.owl # Cleaning up
 echo ''
 echo "*** Generating obograph JSON version***"
 owltools oort/fbbt.owl -o -f json oort/fbbt.json
 echo ''
 echo "*** Filtering relations to generating basic & FB versions ***"
-owltools oort/fbbt-simple.obo --make-subset-by-properties part_of develops_from // -o file://`pwd`/oort/fbbt-basic.owl
+owltools oort/fbbt-simple.obo --make-subset-by-properties part_of develops_from // -o file://`pwd`/oort/fbbt-basic.owl  # Basic avoids properties that might => cycles
+
 export FB_REL_WL="connected_to develops_directly_from develops_from electrically_synapsed_to fasciculates_with has_part has_postsynaptic_terminals_in has_presynaptic_terminals_in has_soma_location has_synaptic_terminals_in has_synaptic_terminals_of innervated_by innervates overlaps part_of partially_overlaps synapsed_by synapsed_by_type_III_bouton_of synapsed_by_type_II_bouton_of synapsed_by_type_Ib_bouton_of synapsed_by_type_Is_bouton_of positively_regulates regulates releases_neurotransmitter secretes_hormone located_in negatively_regulates occurs_in inheres_in has_quality has_function_in_part_of has_function_in expresses contained_in composed_primarily_of capable_of_part_of capable_of synapsed_to synapsed_via_type_III_bouton_to synapsed_via_type_II_bouton_to synapsed_via_type_Ib_bouton_to synapsed_via_type_Is_bouton_to tracheates //"
 #obolib-owl2obo oort/fbbt-basic.owl -o oort/fbbt-basic.obo 
 # TEMJ commented above line 20170906 because Java keeps throwing "NullPointerException" errors upon obolib use after moving from clara to flybase-vm machine. Changing to use owltools instead, which has a converter of owl to obo. May want to update in the future to use ROBOT or whatever tool becomes standard. 20170906.
