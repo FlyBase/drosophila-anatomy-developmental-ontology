@@ -285,10 +285,13 @@ relationship: BFO:0000050 GO:0051716 ! cellular response to stimulus
 id: GO:0007186
 name: G-protein coupled receptor signaling pathway
 def: "A series of molecular signals that proceeds with an activated receptor promoting the exchange of GDP for GTP on the alpha-subunit of an associated heterotrimeric G-protein complex. The GTP-bound activated alpha-G-protein then dissociates from the beta- and gamma-subunits to further transmit the signal within the cell. The pathway begins with receptor-ligand interaction, or for basal GPCR signaling the pathway begins with the receptor activating its G protein in the absence of an agonist, and ends with regulation of a downstream cellular process, e.g. transcription.  The pathway can start from the plasma membrane, Golgi or nuclear membrane (PMID:24568158 and PMID:16902576)." [GOC:bf, GOC:mah, PMID:16902576, PMID:24568158, Wikipedia:G_protein-coupled_receptor]
+synonym: "dimeric G-protein coupled receptor signaling pathway" NARROW []
+synonym: "dimeric G-protein coupled receptor signalling pathway" NARROW [GOC:mah]
 synonym: "G protein coupled receptor protein signaling pathway" EXACT []
 synonym: "G protein coupled receptor protein signalling pathway" EXACT []
 synonym: "G-protein coupled receptor protein signal transduction" EXACT []
 synonym: "G-protein coupled receptor protein signaling pathway" EXACT [GOC:bf]
+synonym: "G-protein coupled receptor signaling pathway via GPCR dimer" NARROW [GOC:bf]
 synonym: "G-protein coupled receptor signalling pathway" EXACT []
 synonym: "G-protein-coupled receptor protein signaling pathway" EXACT []
 synonym: "G-protein-coupled receptor protein signalling pathway" EXACT []
@@ -2036,16 +2039,12 @@ relationship: BFO:0000050 GO:0050885 ! neuromuscular process controlling balance
 id: GO:0050960
 name: detection of temperature stimulus involved in thermoception
 def: "The series of events in which a temperature stimulus is received and converted into a molecular signal as part of thermoception." [GOC:ai, GOC:dos]
-synonym: "sensory detection of heat stimulus during thermoception" NARROW []
 synonym: "sensory detection of temperature stimulus during thermoception" EXACT []
 synonym: "sensory detection of thermal stimulus during thermoception" EXACT []
-synonym: "sensory transduction of heat stimulus during thermoception" NARROW []
 synonym: "sensory transduction of temperature stimulus during thermoception" EXACT []
 synonym: "sensory transduction of thermal stimulus during thermoception" EXACT []
-synonym: "thermoception, sensory detection of heat stimulus" NARROW []
 synonym: "thermoception, sensory detection of temperature stimulus" EXACT []
 synonym: "thermoception, sensory detection of thermal stimulus" EXACT []
-synonym: "thermoception, sensory transduction of heat stimulus" NARROW []
 synonym: "thermoception, sensory transduction of temperature stimulus" EXACT []
 synonym: "thermoception, sensory transduction of thermal stimulus" EXACT []
 is_a: GO:0050961 ! detection of temperature stimulus involved in sensory perception
@@ -2565,6 +2564,18 @@ def: "The regulated release of a tyramine by a cell in which the tyramine acts a
 is_a: GO:0061532 ! primary amine secretion, neurotransmission
 
 [Term]
+id: GO:0062035
+name: sensory perception of cold stimulus
+def: "The series of events required for an organism to receive a cold temperature stimulus, convert it to a molecular signal, and recognize and characterize the signal." [PMID:21335241]
+is_a: GO:0050955 ! thermoception
+
+[Term]
+id: GO:0062036
+name: sensory perception of hot stimulus
+def: "The series of events required for an organism to receive a hot temperature stimulus, convert it to a molecular signal, and recognize and characterize the signal." [PMID:21335241]
+is_a: GO:0050955 ! thermoception
+
+[Term]
 id: GO:0065007
 name: biological regulation
 def: "Any process that modulates a measurable attribute of any biological process, quality or function." [GOC:dph, GOC:isa_complete, GOC:mah, GOC:pr, GOC:vw]
@@ -2738,6 +2749,12 @@ synonym: "hygrosensory perception" EXACT [PMID:8650222]
 is_a: GO:0007600 ! sensory perception
 
 [Term]
+id: GO:0098510
+name: sensory perception of high humidity
+def: "The series of events required for an organism to detect high environmental humidity, convert this detection into a molecular signal, and recognize and characterize the signal. This is a neurological process." [PMID:18269908]
+is_a: GO:0098509 ! sensory perception of humidity
+
+[Term]
 id: GO:0098512
 name: detection of humidity stimulus involved in sensory perception
 def: "The series of events in which a humidity stimulus is received and converted into a molecular signal as part of the sensory perception of humidity." [GOC:dos, PMID:8650222]
@@ -2753,6 +2770,22 @@ name: detection of humidity
 def: "The series of events in which a humidity stimulus is received and converted into a molecular signal." [GOC:dos]
 is_a: GO:0009581 ! detection of external stimulus
 is_a: GO:0009582 ! detection of abiotic stimulus
+
+[Term]
+id: GO:0098514
+name: detection of high humidity stimulus involved in sensory perception
+def: "The series of events in which a high humidity stimulus is detected and converted into a molecular signal as a part of the sensory detection of high humidity." [GOC:dos, PMID:18269908]
+is_a: GO:0098512 ! detection of humidity stimulus involved in sensory perception
+is_a: GO:0098516 ! detection of high humidity
+intersection_of: GO:0098516 ! detection of high humidity
+intersection_of: BFO:0000050 GO:0098510 ! sensory perception of high humidity
+relationship: BFO:0000050 GO:0098510 ! sensory perception of high humidity
+
+[Term]
+id: GO:0098516
+name: detection of high humidity
+def: "The series of events in which high humidity is detected and converted into a molecular signal." [GOC:dos]
+is_a: GO:0098513 ! detection of humidity
 
 [Term]
 id: GO:0098590
@@ -2883,6 +2916,32 @@ is_a: GO:0044463 ! cell projection part
 intersection_of: GO:0005575 ! cellular_component
 intersection_of: BFO:0000050 GO:0120025 ! plasma membrane bounded cell projection
 relationship: BFO:0000050 GO:0120025 ! plasma membrane bounded cell projection
+
+[Term]
+id: GO:0120168
+name: detection of hot stimulus involved in thermoception
+def: "The series of events in which a hot stimulus is received and converted into a molecular signal as part of thermoception." [PMID:21335241]
+synonym: "sensory detection of heat stimulus during thermoception" EXACT []
+synonym: "sensory detection of hot stimulus during thermoception" EXACT []
+synonym: "sensory transduction of heat stimulus during thermoception" EXACT []
+synonym: "sensory transduction of hot stimulus during thermoception" EXACT []
+synonym: "thermoception, sensory detection of heat stimulus" EXACT []
+synonym: "thermoception, sensory detection of hot stimulus" EXACT []
+synonym: "thermoception, sensory transduction of heat stimulus" EXACT []
+synonym: "thermoception, sensory transduction of hot stimulus" EXACT []
+is_a: GO:0050960 ! detection of temperature stimulus involved in thermoception
+relationship: BFO:0000050 GO:0062036 ! sensory perception of hot stimulus
+
+[Term]
+id: GO:0120169
+name: detection of cold stimulus involved in thermoception
+def: "The series of events in which a cold stimulus is received and converted into a molecular signal as part of thermoception." [PMID:21335241]
+synonym: "sensory detection of cold stimulus during thermoception" EXACT []
+synonym: "sensory transduction of cold stimulus during thermoception" EXACT []
+synonym: "thermoception, sensory detection of cold stimulus" EXACT []
+synonym: "thermoception, sensory transduction of cold stimulus" EXACT []
+is_a: GO:0050960 ! detection of temperature stimulus involved in thermoception
+relationship: BFO:0000050 GO:0062035 ! sensory perception of cold stimulus
 
 [Term]
 id: GO:1901374
