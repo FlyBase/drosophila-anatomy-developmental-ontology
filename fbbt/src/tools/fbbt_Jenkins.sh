@@ -44,13 +44,14 @@ export FB_REL_WL="connected_to develops_directly_from develops_from electrically
 #owltools oort/fbbt-basic.owl -o -f obo oort/fbbt-basic.obo #TEMJ added 20170906 to replace obolib command.
 #rm oort/fbbt-basic.owl  # Cleaning up.  No point in keeping OWL version
 owltools oort/fbbt-simple.obo --make-subset-by-properties $FB_REL_WL -o -f obo tmp5.obo
+
 #obolib-owl2obo tmp.owl -o oort/fbbt-flybase.obo
 # TEMJ commented above line 20170906 for same reason as above.
 echo ''
 echo '***Building FlyBase version***'
 echo ''
 # owltools tmp5.obo -o -f obo tmp2.obo #TEMJ added 20170906 to replace obolib command.
-cat tmp5.obo | sed 's/^xref: OBO_REL:part_of/xref_analog: OBO_REL:part_of/' | sed 's/^xref: OBO_REL:has_part/xref_analog: OBO_REL:has_part/' > oort/fly_anatomy.obo  # Perhaps just make a generic substitution for xref: OBO_REL ?
+cat tmp5.obo | sed 's/^xref: OBO_REL:part_of/xref_analog: OBO_REL:part_of/' | sed 's/^xref: OBO_REL:has_part/xref_analog: OBO_REL:has_part/' | egrep -v "^property_value: .+$" | egrep -v "^owl-axioms: .+$"  > oort/fly_anatomy.obo  # Perhaps just make a generic substitution for xref: OBO_REL ?
 #rm tmp.owl  # Cleaning up
 #rm tmp2.obo # Cleaning up
 echo ''
