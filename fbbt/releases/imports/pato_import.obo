@@ -1,7 +1,50 @@
 format-version: 1.2
 ontology: fbbt/imports/pato_import
 
-[Typedef]
-id: BFO:0000050
-is_transitive: true
+[Term]
+id: PATO:0000001
+name: quality
+def: "A dependent entity that inheres in a bearer by virtue of how the bearer is related to other entities" [PATOC:GVG]
+synonym: "trait" EXACT []
+
+[Term]
+id: PATO:0000051
+name: morphology
+def: "A quality of a single physical entity inhering in the bearer by virtue of the bearer's size or shape or structure." [PATOC:GVG]
+is_a: PATO:0001241 ! physical object quality
+
+[Term]
+id: PATO:0000141
+name: structure
+def: "A morphology quality inhering in a bearer by virtue of the bearer's relative position, shape, arrangements and connectivity of an organism's various parts; the pattern underlying its form." [PATOC:GVG]
+synonym: "conformation" BROAD [VT:1000738]
+synonym: "relational structural quality" EXACT []
+is_a: PATO:0000051 ! morphology
+
+[Term]
+id: PATO:0001241
+name: physical object quality
+def: "A quality which inheres in a continuant." [PATOC:GVG]
+synonym: "monadic quality of a continuant" EXACT []
+synonym: "monadic quality of an object" NARROW []
+synonym: "monadic quality of continuant" NARROW []
+synonym: "multiply inhering quality of a physical entity" EXACT []
+synonym: "quality of a continuant" EXACT []
+synonym: "quality of a single physical entity" EXACT []
+synonym: "quality of an object" EXACT []
+synonym: "quality of continuant" EXACT []
+is_a: PATO:0000001 ! quality
+
+[Term]
+id: PATO:0001861
+name: fasciculated
+def: "A structural quality inhering in a bearer by virtue of the bearer's forming a bundle of aligned anatomical fibers, as of muscle or nerve." [answers.com:answers.com]
+synonym: "fascicled" EXACT []
+is_a: PATO:0002013 ! fasciculation
+
+[Term]
+id: PATO:0002013
+name: fasciculation
+def: "A structural quality inhering in a bearer by virtue of whether the bearer forms a bundle of anatomical fibers, as of muscle or nerve." [answers.com:http\://www.answers.com/]
+is_a: PATO:0000141 ! structure
 
