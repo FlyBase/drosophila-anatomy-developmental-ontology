@@ -31,6 +31,22 @@ intersection_of: BFO:0000050 GO:0050913 ! sensory perception of bitter taste
 relationship: BFO:0000050 GO:0050913 ! sensory perception of bitter taste
 
 [Term]
+id: GO:0001581
+name: detection of chemical stimulus involved in sensory perception of sour taste
+def: "The series of events required for a sour taste stimulus to be received and converted to a molecular signal." [GOC:go_curators]
+synonym: "perception of sour taste, detection of chemical stimulus" EXACT []
+synonym: "perception of sour taste, sensory transduction of chemical stimulus" EXACT []
+synonym: "sensory detection of chemical stimulus during perception of sour taste" EXACT []
+synonym: "sensory detection of sour taste" EXACT []
+synonym: "sensory transduction of chemical stimulus during perception of sour taste" EXACT []
+synonym: "sensory transduction of sour taste" EXACT []
+synonym: "sour taste detection" EXACT []
+is_a: GO:0050912 ! detection of chemical stimulus involved in sensory perception of taste
+intersection_of: GO:0009593 ! detection of chemical stimulus
+intersection_of: BFO:0000050 GO:0050915 ! sensory perception of sour taste
+relationship: BFO:0000050 GO:0050915 ! sensory perception of sour taste
+
+[Term]
 id: GO:0001582
 name: detection of chemical stimulus involved in sensory perception of sweet taste
 def: "The series of events required for a sweet taste stimulus to be received and converted to a molecular signal." [GOC:go_curators]
@@ -1811,6 +1827,22 @@ is_a: GO:0008049 ! male courtship behavior
 relationship: BFO:0000050 GO:0016545 ! male courtship behavior, veined wing vibration
 
 [Term]
+id: GO:0046535
+name: detection of chemical stimulus involved in sensory perception of umami taste
+def: "The series of events required for a umami taste stimulus to be received and converted to a molecular signal. Umami taste is the savory taste of meats and other foods that are rich in glutamates." [GOC:ai, GOC:dos, PMID:11894099]
+synonym: "perception of umami taste, detection of chemical stimulus" EXACT []
+synonym: "perception of umami taste, sensory transduction of chemical stimulus" EXACT []
+synonym: "sensory detection of chemical stimulus during perception of umami taste" EXACT []
+synonym: "sensory detection of umami taste" EXACT []
+synonym: "sensory transduction of chemical stimulus during perception of umami taste" EXACT []
+synonym: "sensory transduction of umami taste" EXACT []
+synonym: "umami taste detection" EXACT []
+is_a: GO:0050912 ! detection of chemical stimulus involved in sensory perception of taste
+intersection_of: GO:0009593 ! detection of chemical stimulus
+intersection_of: BFO:0000050 GO:0050917 ! sensory perception of umami taste
+relationship: BFO:0000050 GO:0050917 ! sensory perception of umami taste
+
+[Term]
 id: GO:0046541
 name: saliva secretion
 def: "The regulated release of saliva from the salivary glands. In man, the saliva is a turbid and slightly viscous fluid, generally of an alkaline reaction, and is secreted by the parotid, submaxillary, and sublingual glands. In the mouth the saliva is mixed with the secretion from the buccal glands. In man and many animals, saliva is an important digestive fluid on account of the presence of the peculiar enzyme, ptyalin." [GOC:curators, UBERON:0001836]
@@ -2197,10 +2229,24 @@ synonym: "salty taste perception" EXACT []
 is_a: GO:0050909 ! sensory perception of taste
 
 [Term]
+id: GO:0050915
+name: sensory perception of sour taste
+def: "The series of events required to receive a sour taste stimulus, convert it to a molecular signal, and recognize and characterize the signal. This is a neurological process." [GOC:ai]
+synonym: "sour taste perception" EXACT []
+is_a: GO:0050909 ! sensory perception of taste
+
+[Term]
 id: GO:0050916
 name: sensory perception of sweet taste
 def: "The series of events required to receive a sweet taste stimulus, convert it to a molecular signal, and recognize and characterize the signal. This is a neurological process." [GOC:ai]
 synonym: "sweet taste perception" EXACT []
+is_a: GO:0050909 ! sensory perception of taste
+
+[Term]
+id: GO:0050917
+name: sensory perception of umami taste
+def: "The series of events required to receive an umami taste stimulus, convert it to a molecular signal, and recognize and characterize the signal. Umami taste is the savory taste of meats and other foods that are rich in glutamates. This is a neurological process." [GOC:ai]
+synonym: "umami taste perception" EXACT []
 is_a: GO:0050909 ! sensory perception of taste
 
 [Term]
