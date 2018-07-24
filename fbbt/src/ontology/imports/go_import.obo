@@ -31,6 +31,22 @@ intersection_of: BFO:0000050 GO:0050913 ! sensory perception of bitter taste
 relationship: BFO:0000050 GO:0050913 ! sensory perception of bitter taste
 
 [Term]
+id: GO:0001581
+name: detection of chemical stimulus involved in sensory perception of sour taste
+def: "The series of events required for a sour taste stimulus to be received and converted to a molecular signal." [GOC:go_curators]
+synonym: "perception of sour taste, detection of chemical stimulus" EXACT []
+synonym: "perception of sour taste, sensory transduction of chemical stimulus" EXACT []
+synonym: "sensory detection of chemical stimulus during perception of sour taste" EXACT []
+synonym: "sensory detection of sour taste" EXACT []
+synonym: "sensory transduction of chemical stimulus during perception of sour taste" EXACT []
+synonym: "sensory transduction of sour taste" EXACT []
+synonym: "sour taste detection" EXACT []
+is_a: GO:0050912 ! detection of chemical stimulus involved in sensory perception of taste
+intersection_of: GO:0009593 ! detection of chemical stimulus
+intersection_of: BFO:0000050 GO:0050915 ! sensory perception of sour taste
+relationship: BFO:0000050 GO:0050915 ! sensory perception of sour taste
+
+[Term]
 id: GO:0001582
 name: detection of chemical stimulus involved in sensory perception of sweet taste
 def: "The series of events required for a sweet taste stimulus to be received and converted to a molecular signal." [GOC:go_curators]
@@ -202,6 +218,14 @@ synonym: "plasmalemma" EXACT []
 is_a: GO:0016020 ! membrane
 is_a: GO:0044464 ! cell part
 relationship: BFO:0000050 GO:0071944 ! cell periphery
+
+[Term]
+id: GO:0006629
+name: lipid metabolic process
+def: "The chemical reactions and pathways involving lipids, compounds soluble in an organic solvent but not, or sparingly, in an aqueous solvent. Includes fatty acids; neutral fats, other fatty-acid esters, and soaps; long-chain (fatty) alcohols and waxes; sphingoids and other long-chain bases; glycolipids, phospholipids and sphingolipids; and carotenes, polyprenols, sterols, terpenes and other isoprenoids." [GOC:ma]
+synonym: "lipid metabolism" EXACT []
+is_a: GO:0044238 ! primary metabolic process
+is_a: GO:0071704 ! organic substance metabolic process
 
 [Term]
 id: GO:0006810
@@ -487,6 +511,13 @@ is_a: GO:0044703 ! multi-organism reproductive process
 relationship: BFO:0000050 GO:0019953 ! sexual reproduction
 
 [Term]
+id: GO:0007619
+name: courtship behavior
+def: "The behavioral interactions between organisms for the purpose of attracting sexual partners." [GOC:ai, GOC:dph]
+synonym: "courtship behaviour" EXACT []
+is_a: GO:0007617 ! mating behavior
+
+[Term]
 id: GO:0007620
 name: copulation
 def: "The act of sexual union between male and female, involving the transfer of sperm." [ISBN:0721662544]
@@ -575,6 +606,14 @@ is_a: GO:0051780 ! behavioral response to nutrient
 is_a: GO:0060004 ! reflex
 
 [Term]
+id: GO:0008049
+name: male courtship behavior
+def: "The behavior of a male, for the purpose of attracting a sexual partner. An example of this process is found in Drosophila melanogaster." [GOC:mtg_sensu, GOC:pr]
+synonym: "male courtship behaviour" EXACT []
+is_a: GO:0060179 ! male mating behavior
+relationship: BFO:0000050 GO:0007619 ! courtship behavior
+
+[Term]
 id: GO:0008150
 name: biological_process
 def: "A biological process represents a specific objective that the organism is genetically programmed to achieve. Biological processes are often described by their outcome or ending state, e.g., the biological process of cell division results in the creation of two daughter cells (a divided cell) from a single parent cell. A biological process is accomplished by a particular set of molecular functions carried out by specific gene products (or macromolecular complexes), often in a highly regulated manner and in a particular temporal sequence." [GOC:pdt]
@@ -582,6 +621,17 @@ synonym: "biological process" EXACT []
 synonym: "physiological process" EXACT []
 synonym: "single organism process" RELATED []
 synonym: "single-organism process" RELATED []
+
+[Term]
+id: GO:0008152
+name: metabolic process
+def: "The chemical reactions and pathways, including anabolism and catabolism, by which living organisms transform chemical substances. Metabolic processes typically transform small molecules, but also include macromolecular processes such as DNA repair and replication, and protein synthesis and degradation." [GOC:go_curators, ISBN:0198547684]
+synonym: "metabolic process resulting in cell growth" NARROW []
+synonym: "metabolism" EXACT []
+synonym: "metabolism resulting in cell growth" NARROW []
+synonym: "multicellular organism metabolic process" NARROW []
+synonym: "single-organism metabolic process" RELATED []
+is_a: GO:0008150 ! biological_process
 
 [Term]
 id: GO:0008277
@@ -633,6 +683,17 @@ is_a: GO:0008306 ! associative learning
 is_a: GO:0042048 ! olfactory behavior
 
 [Term]
+id: GO:0009056
+name: catabolic process
+def: "The chemical reactions and pathways resulting in the breakdown of substances, including the breakdown of carbon compounds with the liberation of energy for use by the cell or organism." [ISBN:0198547684]
+synonym: "breakdown" EXACT []
+synonym: "catabolism" EXACT []
+synonym: "degradation" EXACT []
+synonym: "multicellular organismal catabolic process" NARROW []
+synonym: "single-organism catabolic process" RELATED []
+is_a: GO:0008152 ! metabolic process
+
+[Term]
 id: GO:0009266
 name: response to temperature stimulus
 def: "Any process that results in a change in state or activity of a cell or an organism (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of a temperature stimulus." [GOC:hb]
@@ -646,6 +707,12 @@ def: "Any process that results in a change in state or activity of a cell or an 
 synonym: "response to electromagnetic radiation stimulus" EXACT []
 synonym: "response to radiation stimulus" EXACT []
 is_a: GO:0009628 ! response to abiotic stimulus
+
+[Term]
+id: GO:0009410
+name: response to xenobiotic stimulus
+def: "Any process that results in a change in state or activity of a cell or an organism (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of a xenobiotic compound stimulus. Xenobiotic compounds are compounds foreign to living organisms." [GOC:jl]
+is_a: GO:0042221 ! response to chemical
 
 [Term]
 id: GO:0009416
@@ -746,6 +813,24 @@ is_a: GO:0009605 ! response to external stimulus
 is_a: GO:0042752 ! regulation of circadian rhythm
 
 [Term]
+id: GO:0009719
+name: response to endogenous stimulus
+def: "Any process that results in a change in state or activity of a cell or an organism (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of a stimulus arising within the organism." [GOC:sm]
+is_a: GO:0050896 ! response to stimulus
+
+[Term]
+id: GO:0009894
+name: regulation of catabolic process
+def: "Any process that modulates the frequency, rate, or extent of the chemical reactions and pathways resulting in the breakdown of substances." [GOC:go_curators]
+synonym: "regulation of breakdown" EXACT []
+synonym: "regulation of catabolism" EXACT []
+synonym: "regulation of degradation" EXACT []
+is_a: GO:0019222 ! regulation of metabolic process
+intersection_of: GO:0008150 ! biological_process
+intersection_of: RO:0002211 GO:0009056 ! catabolic process
+relationship: RO:0002211 GO:0009056 ! catabolic process
+
+[Term]
 id: GO:0009914
 name: hormone transport
 def: "The directed movement of hormones into, out of or within a cell, or between cells, by means of some agent such as a transporter or pore." [GOC:tb]
@@ -780,6 +865,20 @@ id: GO:0009991
 name: response to extracellular stimulus
 def: "Any process that results in a change in state or activity of a cell or an organism (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of an extracellular stimulus." [GOC:go_curators]
 is_a: GO:0009605 ! response to external stimulus
+
+[Term]
+id: GO:0010033
+name: response to organic substance
+def: "Any process that results in a change in state or activity of a cell or an organism (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of an organic substance stimulus." [GOC:sm]
+is_a: GO:0042221 ! response to chemical
+
+[Term]
+id: GO:0010243
+name: response to organonitrogen compound
+def: "Any process that results in a change in state or activity of a cell or an organism (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of an organonitrogen stimulus. An organonitrogen compound is formally a compound containing at least one carbon-nitrogen bond." [CHEBI:35352, PMID:9869419]
+synonym: "response to organic nitrogen" EXACT []
+is_a: GO:0010033 ! response to organic substance
+is_a: GO:1901698 ! response to nitrogen compound
 
 [Term]
 id: GO:0010469
@@ -919,6 +1018,21 @@ intersection_of: RO:0002211 GO:0001820 ! serotonin secretion
 relationship: RO:0002211 GO:0001820 ! serotonin secretion
 
 [Term]
+id: GO:0014070
+name: response to organic cyclic compound
+def: "Any process that results in a change in state or activity of a cell or an organism (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of an organic cyclic compound stimulus." [CHEBI:33832, GOC:ef]
+synonym: "response to organic cyclic substance" EXACT [GOC:mah]
+is_a: GO:0010033 ! response to organic substance
+
+[Term]
+id: GO:0014074
+name: response to purine-containing compound
+def: "Any process that results in a change in state or activity of a cell or an organism (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of a purine-containing compound stimulus." [CHEBI:26401, GOC:ef]
+synonym: "response to purine" RELATED [GOC:curators]
+is_a: GO:0010243 ! response to organonitrogen compound
+is_a: GO:0014070 ! response to organic cyclic compound
+
+[Term]
 id: GO:0015695
 name: organic cation transport
 def: "The directed movement of organic cations into, out of or within a cell, or between cells, by means of some agent such as a transporter or pore. Organic cations are atoms or small molecules with a positive charge which contain carbon in covalent linkage." [GOC:ai]
@@ -1031,6 +1145,19 @@ def: "A lipid bilayer along with all the proteins and protein complexes embedded
 is_a: GO:0005575 ! cellular_component
 
 [Term]
+id: GO:0016042
+name: lipid catabolic process
+def: "The chemical reactions and pathways resulting in the breakdown of lipids, compounds soluble in an organic solvent but not, or sparingly, in an aqueous solvent." [GOC:go_curators]
+synonym: "lipid breakdown" EXACT []
+synonym: "lipid catabolism" EXACT []
+synonym: "lipid degradation" EXACT []
+synonym: "lipolysis" EXACT []
+synonym: "multicellular organism lipid catabolic process" NARROW []
+synonym: "multicellular organismal lipid catabolic process" NARROW []
+is_a: GO:0006629 ! lipid metabolic process
+is_a: GO:1901575 ! organic substance catabolic process
+
+[Term]
 id: GO:0016048
 name: detection of temperature stimulus
 def: "The series of events in which a temperature stimulus (hot or cold) is received and converted into a molecular signal." [GOC:hb]
@@ -1054,6 +1181,15 @@ is_a: GO:0071482 ! cellular response to light stimulus
 relationship: BFO:0000050 GO:0007603 ! phototransduction, visible light
 
 [Term]
+id: GO:0016545
+name: male courtship behavior, veined wing vibration
+def: "The process during courtship where the male insect vibrates his wings. An example of this is found in Drosophila melanogaster." [GOC:mtg_sensu, PMID:11092827]
+synonym: "male courtship behavior, wing vibration" RELATED []
+synonym: "male courtship behaviour, veined wing vibration" EXACT []
+synonym: "male courtship behaviour, wing vibration" RELATED []
+is_a: GO:0048065 ! male courtship behavior, veined wing extension
+
+[Term]
 id: GO:0019098
 name: reproductive behavior
 def: "The specific behavior of an organism that is associated with reproduction." [GOC:jl, GOC:pr]
@@ -1065,6 +1201,28 @@ is_a: GO:0007610 ! behavior
 is_a: GO:0048609 ! multicellular organismal reproductive process
 intersection_of: GO:0007610 ! behavior
 intersection_of: BFO:0000050 GO:0000003 ! reproduction
+
+[Term]
+id: GO:0019216
+name: regulation of lipid metabolic process
+def: "Any process that modulates the frequency, rate or extent of the chemical reactions and pathways involving lipids." [GOC:go_curators]
+synonym: "regulation of lipid metabolism" EXACT []
+is_a: GO:0080090 ! regulation of primary metabolic process
+intersection_of: GO:0008150 ! biological_process
+intersection_of: RO:0002211 GO:0006629 ! lipid metabolic process
+relationship: RO:0002211 GO:0006629 ! lipid metabolic process
+
+[Term]
+id: GO:0019222
+name: regulation of metabolic process
+def: "Any process that modulates the frequency, rate or extent of the chemical reactions and pathways within a cell or an organism." [GOC:go_curators]
+synonym: "regulation of metabolism" EXACT []
+synonym: "regulation of multicellular organismal metabolic process" NARROW []
+synonym: "regulation of organismal metabolic process" NARROW [GOC:tb]
+is_a: GO:0050789 ! regulation of biological process
+intersection_of: GO:0008150 ! biological_process
+intersection_of: RO:0002211 GO:0008152 ! metabolic process
+relationship: RO:0002211 GO:0008152 ! metabolic process
 
 [Term]
 id: GO:0019233
@@ -1191,6 +1349,15 @@ synonym: "adult behaviour" EXACT []
 synonym: "adult behavioural response to stimulus" EXACT []
 is_a: GO:0007610 ! behavior
 is_a: GO:0032501 ! multicellular organismal process
+
+[Term]
+id: GO:0031000
+name: response to caffeine
+def: "Any process that results in a change in state or activity of a cell or an organism (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of a caffeine stimulus. Caffeine is an alkaloid found in numerous plant species, where it acts as a natural pesticide that paralyzes and kills certain insects feeding upon them." [CHEBI:27732, GOC:ef, GOC:mah]
+is_a: GO:0009410 ! response to xenobiotic stimulus
+is_a: GO:0014074 ! response to purine-containing compound
+is_a: GO:0036270 ! response to diuretic
+is_a: GO:0043279 ! response to alkaloid
 
 [Term]
 id: GO:0031644
@@ -1342,10 +1509,29 @@ intersection_of: BFO:0000050 GO:0030424 ! axon
 relationship: BFO:0000050 GO:0030424 ! axon
 
 [Term]
+id: GO:0033993
+name: response to lipid
+def: "Any process that results in a change in state or activity of a cell or an organism (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of a lipid stimulus." [GOC:sl]
+is_a: GO:0010033 ! response to organic substance
+
+[Term]
 id: GO:0035249
 name: synaptic transmission, glutamatergic
 def: "The vesicular release of glutamate from a presynapse, across a chemical synapse, the subsequent activation of glutamate receptors at the postsynapse of a target cell (neuron, muscle, or secretory cell) and the effects of this activation on the postsynaptic membrane potential and ionic composition of the postsynaptic cytosol. This process encompasses both spontaneous and evoked release of neurotransmitter and all parts of synaptic vesicle exocytosis. Evoked transmission starts with the arrival of an action potential at the presynapse." [GOC:dos]
 is_a: GO:0007268 ! chemical synaptic transmission
+
+[Term]
+id: GO:0035690
+name: cellular response to drug
+def: "Any process that results in a change in state or activity of a cell (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of a drug stimulus. A drug is a substance used in the diagnosis, treatment or prevention of a disease." [GOC:sl]
+is_a: GO:0042493 ! response to drug
+is_a: GO:0070887 ! cellular response to chemical stimulus
+
+[Term]
+id: GO:0036270
+name: response to diuretic
+def: "Any process that results in a change in state or activity of a cell or an organism (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of a diuretic stimulus. A diuretic is an agent that promotes the excretion of urine through its effects on kidney function." [CHEBI:35498, GOC:hp]
+is_a: GO:0042493 ! response to drug
 
 [Term]
 id: GO:0038023
@@ -1474,6 +1660,12 @@ intersection_of: RO:0002211 GO:0006811 ! ion transport
 relationship: RO:0002211 GO:0006811 ! ion transport
 
 [Term]
+id: GO:0043279
+name: response to alkaloid
+def: "Any process that results in a change in state or activity of a cell or an organism (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of an alkaloid stimulus. Alkaloids are a large group of nitrogenous substances found in naturally in plants, many of which have extracts that are pharmacologically active." [CHEBI:22315, GOC:jl]
+is_a: GO:0010243 ! response to organonitrogen compound
+
+[Term]
 id: GO:0043576
 name: regulation of respiratory gaseous exchange
 def: "Any process that modulates the frequency, rate or extent of the process of gaseous exchange between an organism and its environment." [GOC:jl]
@@ -1539,8 +1731,11 @@ intersection_of: RO:0002211 GO:0006820 ! anion transport
 relationship: RO:0002211 GO:0006820 ! anion transport
 
 [Term]
-id: GO:0044240
-is_obsolete: true
+id: GO:0044238
+name: primary metabolic process
+def: "The chemical reactions and pathways involving those compounds which are formed as a part of the normal anabolic and catabolic processes. These processes take place in most, if not all, cells of the organism." [GOC:go_curators, http://www.metacyc.org]
+synonym: "primary metabolism" EXACT []
+is_a: GO:0008152 ! metabolic process
 
 [Term]
 id: GO:0044425
@@ -1622,6 +1817,32 @@ synonym: "synaptic junction" EXACT []
 is_a: GO:0005575 ! cellular_component
 
 [Term]
+id: GO:0045433
+name: male courtship behavior, veined wing generated song production
+def: "The process during wing vibration where the male insect produces a species-specific acoustic signal called a love song." [GOC:mtg_sensu, PMID:11092827]
+synonym: "male courtship behavior, song production" BROAD []
+synonym: "male courtship behaviour, song production" BROAD []
+synonym: "male courtship behaviour, veined wing generated song production" EXACT []
+is_a: GO:0008049 ! male courtship behavior
+relationship: BFO:0000050 GO:0016545 ! male courtship behavior, veined wing vibration
+
+[Term]
+id: GO:0046535
+name: detection of chemical stimulus involved in sensory perception of umami taste
+def: "The series of events required for a umami taste stimulus to be received and converted to a molecular signal. Umami taste is the savory taste of meats and other foods that are rich in glutamates." [GOC:ai, GOC:dos, PMID:11894099]
+synonym: "perception of umami taste, detection of chemical stimulus" EXACT []
+synonym: "perception of umami taste, sensory transduction of chemical stimulus" EXACT []
+synonym: "sensory detection of chemical stimulus during perception of umami taste" EXACT []
+synonym: "sensory detection of umami taste" EXACT []
+synonym: "sensory transduction of chemical stimulus during perception of umami taste" EXACT []
+synonym: "sensory transduction of umami taste" EXACT []
+synonym: "umami taste detection" EXACT []
+is_a: GO:0050912 ! detection of chemical stimulus involved in sensory perception of taste
+intersection_of: GO:0009593 ! detection of chemical stimulus
+intersection_of: BFO:0000050 GO:0050917 ! sensory perception of umami taste
+relationship: BFO:0000050 GO:0050917 ! sensory perception of umami taste
+
+[Term]
 id: GO:0046541
 name: saliva secretion
 def: "The regulated release of saliva from the salivary glands. In man, the saliva is a turbid and slightly viscous fluid, generally of an alkaline reaction, and is secreted by the parotid, submaxillary, and sublingual glands. In the mouth the saliva is mixed with the secretion from the buccal glands. In man and many animals, saliva is an important digestive fluid on account of the presence of the peculiar enzyme, ptyalin." [GOC:curators, UBERON:0001836]
@@ -1629,6 +1850,13 @@ synonym: "salivation" EXACT []
 is_a: GO:0007589 ! body fluid secretion
 is_a: GO:0022600 ! digestive system process
 is_a: GO:0032941 ! secretion by tissue
+
+[Term]
+id: GO:0046677
+name: response to antibiotic
+def: "Any process that results in a change in state or activity of a cell or an organism (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of an antibiotic stimulus. An antibiotic is a chemical substance produced by a microorganism which has the capacity to inhibit the growth of or to kill other microorganisms." [GOC:ai, GOC:ef]
+synonym: "antibiotic susceptibility/resistance" RELATED []
+is_a: GO:0042221 ! response to chemical
 
 [Term]
 id: GO:0046692
@@ -1725,6 +1953,15 @@ synonym: "negative gravitactic behaviour" EXACT []
 synonym: "negative taxis in response to gravity" EXACT []
 synonym: "negative taxis in response to gravitytaxis in response to gravitational stimulus" EXACT []
 is_a: GO:0042332 ! gravitaxis
+
+[Term]
+id: GO:0048065
+name: male courtship behavior, veined wing extension
+def: "The process during courtship where the male insect extends his wings. An example of this process is found in Drosophila melanogaster." [GOC:jid, GOC:mtg_sensu]
+synonym: "male courtship behavior, wing extension" BROAD []
+synonym: "male courtship behaviour, veined wing extension" EXACT []
+synonym: "male courtship behaviour, wing extension" BROAD []
+is_a: GO:0008049 ! male courtship behavior
 
 [Term]
 id: GO:0048511
@@ -1992,10 +2229,24 @@ synonym: "salty taste perception" EXACT []
 is_a: GO:0050909 ! sensory perception of taste
 
 [Term]
+id: GO:0050915
+name: sensory perception of sour taste
+def: "The series of events required to receive a sour taste stimulus, convert it to a molecular signal, and recognize and characterize the signal. This is a neurological process." [GOC:ai]
+synonym: "sour taste perception" EXACT []
+is_a: GO:0050909 ! sensory perception of taste
+
+[Term]
 id: GO:0050916
 name: sensory perception of sweet taste
 def: "The series of events required to receive a sweet taste stimulus, convert it to a molecular signal, and recognize and characterize the signal. This is a neurological process." [GOC:ai]
 synonym: "sweet taste perception" EXACT []
+is_a: GO:0050909 ! sensory perception of taste
+
+[Term]
+id: GO:0050917
+name: sensory perception of umami taste
+def: "The series of events required to receive an umami taste stimulus, convert it to a molecular signal, and recognize and characterize the signal. Umami taste is the savory taste of meats and other foods that are rich in glutamates. This is a neurological process." [GOC:ai]
+synonym: "umami taste perception" EXACT []
 is_a: GO:0050909 ! sensory perception of taste
 
 [Term]
@@ -2203,6 +2454,19 @@ def: "The series of events by which a mechanical stimulus is received and conver
 is_a: GO:0009581 ! detection of external stimulus
 is_a: GO:0009582 ! detection of abiotic stimulus
 is_a: GO:0009612 ! response to mechanical stimulus
+
+[Term]
+id: GO:0050994
+name: regulation of lipid catabolic process
+def: "Any process that modulates the frequency, rate, or extent of the chemical reactions and pathways resulting in the breakdown of lipids." [GOC:ai]
+synonym: "regulation of lipid breakdown" EXACT []
+synonym: "regulation of lipid catabolism" EXACT []
+synonym: "regulation of lipid degradation" EXACT []
+is_a: GO:0009894 ! regulation of catabolic process
+is_a: GO:0019216 ! regulation of lipid metabolic process
+intersection_of: GO:0008150 ! biological_process
+intersection_of: RO:0002211 GO:0016042 ! lipid catabolic process
+relationship: RO:0002211 GO:0016042 ! lipid catabolic process
 
 [Term]
 id: GO:0051046
@@ -2441,7 +2705,6 @@ id: GO:0060089
 name: molecular transducer activity
 def: "A compound molecular function in which an effector function is controlled by one or more regulatory components." [GOC:dos, GOC:pdt]
 is_a: GO:0003674 ! molecular_function
-relationship: BFO:0000050 GO:0007165 ! signal transduction
 
 [Term]
 id: GO:0060096
@@ -2450,6 +2713,12 @@ def: "The regulated release of serotonin by a cell, in which released serotonin 
 synonym: "serotonin release, neurotransmission" RELATED [GOC:tb]
 is_a: GO:0001820 ! serotonin secretion
 is_a: GO:0007269 ! neurotransmitter secretion
+
+[Term]
+id: GO:0060179
+name: male mating behavior
+def: "The specific behavior of a male organism that is associated with reproduction." [GOC:dph, GOC:pr, GOC:tb]
+is_a: GO:0007617 ! mating behavior
 
 [Term]
 id: GO:0060259
@@ -2601,6 +2870,13 @@ intersection_of: RO:0002211 GO:0003674 ! molecular_function
 relationship: RO:0002211 GO:0003674 ! molecular_function
 
 [Term]
+id: GO:0070887
+name: cellular response to chemical stimulus
+def: "Any process that results in a change in state or activity of a cell (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of a chemical stimulus." [GOC:mah]
+is_a: GO:0042221 ! response to chemical
+is_a: GO:0051716 ! cellular response to stimulus
+
+[Term]
 id: GO:0071063
 name: sensory perception of wind
 def: "The series of events required for an organism to receive sensory mechanical stimulus resulting from air flow, convert it to a molecular signal, and recognize and characterize the signal." [GOC:mah, PMID:19279637]
@@ -2635,6 +2911,78 @@ is_a: GO:0009628 ! response to abiotic stimulus
 is_a: GO:0104004 ! cellular response to environmental stimulus
 
 [Term]
+id: GO:0071236
+name: cellular response to antibiotic
+def: "Any process that results in a change in state or activity of a cell (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of an antibiotic stimulus. An antibiotic is a chemical substance produced by a microorganism which has the capacity to inhibit the growth of or to kill other microorganisms." [GOC:mah]
+is_a: GO:0046677 ! response to antibiotic
+is_a: GO:0070887 ! cellular response to chemical stimulus
+
+[Term]
+id: GO:0071310
+name: cellular response to organic substance
+def: "Any process that results in a change in state or activity of a cell (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of an organic substance stimulus." [GOC:mah]
+is_a: GO:0010033 ! response to organic substance
+is_a: GO:0070887 ! cellular response to chemical stimulus
+
+[Term]
+id: GO:0071312
+name: cellular response to alkaloid
+def: "Any process that results in a change in state or activity of a cell (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of an alkaloid stimulus. Alkaloids are a large group of nitrogenous substances found in naturally in plants, many of which have extracts that are pharmacologically active." [GOC:mah]
+is_a: GO:0043279 ! response to alkaloid
+is_a: GO:0071417 ! cellular response to organonitrogen compound
+
+[Term]
+id: GO:0071313
+name: cellular response to caffeine
+def: "Any process that results in a change in state or activity of a cell (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of a caffeine stimulus. Caffeine is an alkaloid found in numerous plant species, where it acts as a natural pesticide that paralyzes and kills certain insects feeding upon them." [GOC:mah]
+is_a: GO:0031000 ! response to caffeine
+is_a: GO:0035690 ! cellular response to drug
+is_a: GO:0071312 ! cellular response to alkaloid
+is_a: GO:0071415 ! cellular response to purine-containing compound
+is_a: GO:0071466 ! cellular response to xenobiotic stimulus
+
+[Term]
+id: GO:0071396
+name: cellular response to lipid
+def: "Any process that results in a change in state or activity of a cell (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of a lipid stimulus." [GOC:mah]
+is_a: GO:0033993 ! response to lipid
+is_a: GO:0071310 ! cellular response to organic substance
+
+[Term]
+id: GO:0071407
+name: cellular response to organic cyclic compound
+def: "Any process that results in a change in state or activity of a cell (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of an organic cyclic compound stimulus." [GOC:mah]
+synonym: "cellular response to organic cyclic substance" EXACT [GOC:mah]
+is_a: GO:0014070 ! response to organic cyclic compound
+is_a: GO:0071310 ! cellular response to organic substance
+
+[Term]
+id: GO:0071415
+name: cellular response to purine-containing compound
+def: "Any process that results in a change in state or activity of a cell (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of a purine-containing compound stimulus." [CHEBI:26401, GOC:mah]
+synonym: "cellular response to purine" RELATED [GOC:curators]
+is_a: GO:0014074 ! response to purine-containing compound
+is_a: GO:0071407 ! cellular response to organic cyclic compound
+is_a: GO:0071417 ! cellular response to organonitrogen compound
+
+[Term]
+id: GO:0071417
+name: cellular response to organonitrogen compound
+def: "Any process that results in a change in state or activity of a cell (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of an organonitrogen stimulus. An organonitrogen compound is formally a compound containing at least one carbon-nitrogen bond." [CHEBI:35352, GOC:mah]
+synonym: "cellular response to organic nitrogen" EXACT [GOC:mah]
+is_a: GO:0010243 ! response to organonitrogen compound
+is_a: GO:0071310 ! cellular response to organic substance
+is_a: GO:0071495 ! cellular response to endogenous stimulus
+is_a: GO:1901699 ! cellular response to nitrogen compound
+
+[Term]
+id: GO:0071466
+name: cellular response to xenobiotic stimulus
+def: "Any process that results in a change in state or activity of a cell (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of a xenobiotic compound stimulus. Xenobiotic compounds are compounds foreign to living organisms." [GOC:mah]
+is_a: GO:0009410 ! response to xenobiotic stimulus
+is_a: GO:0070887 ! cellular response to chemical stimulus
+
+[Term]
 id: GO:0071478
 name: cellular response to radiation
 def: "Any process that results in a change in state or activity of a cell (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of an electromagnetic radiation stimulus. Electromagnetic radiation is a propagating wave in space with electric and magnetic components. These components oscillate at right angles to each other and to the direction of propagation." [GOC:mah]
@@ -2651,6 +2999,12 @@ is_a: GO:0009416 ! response to light stimulus
 is_a: GO:0071478 ! cellular response to radiation
 
 [Term]
+id: GO:0071495
+name: cellular response to endogenous stimulus
+def: "Any process that results in a change in state or activity of a cell (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of a stimulus arising within the organism." [GOC:mah]
+is_a: GO:0009719 ! response to endogenous stimulus
+
+[Term]
 id: GO:0071632
 name: optomotor response
 def: "Eye, head or whole body movements that help to compensate movements of the environment in order to stabilize its image on the retina. In the case of whole body movements, these motor actions may also stabilize a locomotor course in response to some disturbance. Examples include: the optokinetic reflex, which allows human eyes to follow objects in motion while the head remains stationary reflex; the optomotor responses of flying insects and swimming fish." [GOC:dos, PMID:12726833, PMID:2469195]
@@ -2663,6 +3017,15 @@ def: "The directed movement of organic substances into, out of or within a cell,
 is_a: GO:0006810 ! transport
 
 [Term]
+id: GO:0071704
+name: organic substance metabolic process
+def: "The chemical reactions and pathways involving an organic substance, any molecular entity containing carbon." [CHEBI:50860, GOC:mah]
+synonym: "organic molecular entity metabolic process" EXACT []
+synonym: "organic molecular entity metabolism" EXACT []
+synonym: "organic substance metabolism" EXACT []
+is_a: GO:0008152 ! metabolic process
+
+[Term]
 id: GO:0071705
 name: nitrogen compound transport
 def: "The directed movement of nitrogen-containing compounds into, out of or within a cell, or between cells, by means of some agent such as a transporter or pore." [CHEBI:51143, GOC:mah]
@@ -2673,6 +3036,15 @@ id: GO:0071944
 name: cell periphery
 def: "The part of a cell encompassing the cell cortex, the plasma membrane, and any external encapsulating structures." [GOC:mah]
 is_a: GO:0044464 ! cell part
+
+[Term]
+id: GO:0080090
+name: regulation of primary metabolic process
+def: "Any process that modulates the frequency, rate or extent of the chemical reactions and pathways within a cell or an organism involving those compounds formed as a part of the normal anabolic and catabolic processes. These processes take place in most, if not all, cells of the organism." [PMID:19211694]
+is_a: GO:0019222 ! regulation of metabolic process
+intersection_of: GO:0008150 ! biological_process
+intersection_of: RO:0002211 GO:0044238 ! primary metabolic process
+relationship: RO:0002211 GO:0044238 ! primary metabolic process
 
 [Term]
 id: GO:0090087
@@ -2736,6 +3108,38 @@ def: "The process by which hemolymph is filtered based on size and charge throug
 is_a: GO:0097205 ! renal filtration
 
 [Term]
+id: GO:0097305
+name: response to alcohol
+def: "Any process that results in a change in state or activity of a cell or an organism (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of an alcohol stimulus." [CHEBI:30879, GOC:pr]
+is_a: GO:0010033 ! response to organic substance
+is_a: GO:1901700 ! response to oxygen-containing compound
+
+[Term]
+id: GO:0097306
+name: cellular response to alcohol
+def: "Any process that results in a change in state or activity of a cell (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of an alcohol stimulus." [CHEBI:30879, GOC:pr]
+is_a: GO:0071310 ! cellular response to organic substance
+is_a: GO:0097305 ! response to alcohol
+is_a: GO:1901701 ! cellular response to oxygen-containing compound
+
+[Term]
+id: GO:0097307
+name: response to farnesol
+def: "Any process that results in a change in state or activity of a cell or an organism (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of a farnesol stimulus." [CHEBI:28600, GOC:pr]
+is_a: GO:0033993 ! response to lipid
+is_a: GO:0046677 ! response to antibiotic
+is_a: GO:0097305 ! response to alcohol
+
+[Term]
+id: GO:0097308
+name: cellular response to farnesol
+def: "Any process that results in a change in state or activity of a cell (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of a farnesol stimulus." [CHEBI:28600, GOC:di, PMID:11425711]
+is_a: GO:0071236 ! cellular response to antibiotic
+is_a: GO:0071396 ! cellular response to lipid
+is_a: GO:0097306 ! cellular response to alcohol
+is_a: GO:0097307 ! response to farnesol
+
+[Term]
 id: GO:0097458
 name: neuron part
 def: "Any constituent part of a neuron, the basic cellular unit of nervous tissue. A typical neuron consists of a cell body (often called the soma), an axon, and dendrites. Their purpose is to receive, conduct, and transmit impulses in the nervous system." [GOC:pr, http://en.wikipedia.org/wiki/Neuron]
@@ -2752,6 +3156,12 @@ is_a: GO:0007600 ! sensory perception
 id: GO:0098510
 name: sensory perception of high humidity
 def: "The series of events required for an organism to detect high environmental humidity, convert this detection into a molecular signal, and recognize and characterize the signal. This is a neurological process." [PMID:18269908]
+is_a: GO:0098509 ! sensory perception of humidity
+
+[Term]
+id: GO:0098511
+name: sensory perception of low humidity
+def: "The series of events required for an organism to detect low environmental humidity, convert this detection into a molecular signal, and recognize and characterize the signal. This is a neurological process." [PMID:18269908]
 is_a: GO:0098509 ! sensory perception of humidity
 
 [Term]
@@ -2782,9 +3192,25 @@ intersection_of: BFO:0000050 GO:0098510 ! sensory perception of high humidity
 relationship: BFO:0000050 GO:0098510 ! sensory perception of high humidity
 
 [Term]
+id: GO:0098515
+name: detection of low humidity stimulus involved in sensory perception
+def: "The series of events in which a low humidity stimulus is detected and converted into a molecular signal as a part of the sensory detection of low humidity." [GOC:dos, PMID:18269908]
+is_a: GO:0098512 ! detection of humidity stimulus involved in sensory perception
+is_a: GO:0098517 ! detection of low humidity
+intersection_of: GO:0098517 ! detection of low humidity
+intersection_of: BFO:0000050 GO:0098511 ! sensory perception of low humidity
+relationship: BFO:0000050 GO:0098511 ! sensory perception of low humidity
+
+[Term]
 id: GO:0098516
 name: detection of high humidity
 def: "The series of events in which high humidity is detected and converted into a molecular signal." [GOC:dos]
+is_a: GO:0098513 ! detection of humidity
+
+[Term]
+id: GO:0098517
+name: detection of low humidity
+def: "The series of events in which low humidity is detected and converted into a molecular signal." [GOC:dos]
 is_a: GO:0098513 ! detection of humidity
 
 [Term]
@@ -2950,6 +3376,71 @@ def: "The directed movement of an acetate ester into, out of or within a cell, o
 is_a: GO:0071702 ! organic substance transport
 
 [Term]
+id: GO:1901419
+name: regulation of response to alcohol
+def: "Any process that modulates the frequency, rate or extent of response to alcohol." [GOC:mengo_curators, GOC:TermGenie]
+is_a: GO:0048583 ! regulation of response to stimulus
+intersection_of: GO:0008150 ! biological_process
+intersection_of: RO:0002211 GO:0097305 ! response to alcohol
+relationship: RO:0002211 GO:0097305 ! response to alcohol
+
+[Term]
+id: GO:1901575
+name: organic substance catabolic process
+def: "The chemical reactions and pathways resulting in the breakdown of an organic substance, any molecular entity containing carbon." [GOC:pr, GOC:TermGenie]
+synonym: "organic molecular entity breakdown" EXACT [GOC:TermGenie]
+synonym: "organic molecular entity catabolic process" EXACT []
+synonym: "organic molecular entity catabolism" EXACT [GOC:TermGenie]
+synonym: "organic molecular entity degradation" EXACT [GOC:TermGenie]
+synonym: "organic substance breakdown" EXACT []
+synonym: "organic substance catabolism" EXACT []
+synonym: "organic substance degradation" EXACT []
+is_a: GO:0009056 ! catabolic process
+is_a: GO:0071704 ! organic substance metabolic process
+
+[Term]
+id: GO:1901698
+name: response to nitrogen compound
+def: "Any process that results in a change in state or activity of a cell or an organism (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of a nitrogen compound stimulus." [GOC:pr, GOC:TermGenie]
+synonym: "response to nitrogen molecular entity" EXACT []
+is_a: GO:0042221 ! response to chemical
+
+[Term]
+id: GO:1901699
+name: cellular response to nitrogen compound
+def: "Any process that results in a change in state or activity of a cell (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of a nitrogen compound stimulus." [GOC:pr, GOC:TermGenie]
+synonym: "cellular response to nitrogen molecular entity" EXACT []
+is_a: GO:0070887 ! cellular response to chemical stimulus
+is_a: GO:1901698 ! response to nitrogen compound
+
+[Term]
+id: GO:1901700
+name: response to oxygen-containing compound
+def: "Any process that results in a change in state or activity of a cell or an organism (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of an oxygen-containing compound stimulus." [GOC:pr, GOC:TermGenie]
+synonym: "response to oxygen molecular entity" EXACT []
+is_a: GO:0042221 ! response to chemical
+
+[Term]
+id: GO:1901701
+name: cellular response to oxygen-containing compound
+def: "Any process that results in a change in state or activity of a cell (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of an oxygen-containing compound stimulus." [GOC:pr, GOC:TermGenie]
+synonym: "cellular response to oxygen molecular entity" EXACT []
+is_a: GO:0070887 ! cellular response to chemical stimulus
+is_a: GO:1901700 ! response to oxygen-containing compound
+
+[Term]
+id: GO:1902435
+name: regulation of male mating behavior
+def: "Any process that modulates the frequency, rate or extent of male mating behavior." [GOC:TermGenie, PMID:24089208]
+is_a: GO:0043900 ! regulation of multi-organism process
+is_a: GO:0050795 ! regulation of behavior
+is_a: GO:0051239 ! regulation of multicellular organismal process
+is_a: GO:2000241 ! regulation of reproductive process
+intersection_of: GO:0008150 ! biological_process
+intersection_of: RO:0002211 GO:0060179 ! male mating behavior
+relationship: RO:0002211 GO:0060179 ! male mating behavior
+
+[Term]
 id: GO:1903294
 name: regulation of glutamate secretion, neurotransmission
 def: "Any process that modulates the frequency, rate or extent of glutamate secretion, neurotransmission." [GO_REF:0000058, GOC:TermGenie, PMID:16782817]
@@ -3028,6 +3519,16 @@ intersection_of: RO:0002211 GO:0010876 ! lipid localization
 relationship: RO:0002211 GO:0010876 ! lipid localization
 
 [Term]
+id: GO:1905957
+name: regulation of cellular response to alcohol
+def: "Any process that modulates the frequency, rate or extent of cellular response to alcohol." [GO_REF:0000058, GOC:TermGenie, PMID:26434723]
+is_a: GO:0050794 ! regulation of cellular process
+is_a: GO:1901419 ! regulation of response to alcohol
+intersection_of: GO:0065007 ! biological regulation
+intersection_of: RO:0002211 GO:0097306 ! cellular response to alcohol
+relationship: RO:0002211 GO:0097306 ! cellular response to alcohol
+
+[Term]
 id: GO:2000241
 name: regulation of reproductive process
 def: "Any process that modulates the frequency, rate or extent of reproductive process." [GOC:mah]
@@ -3056,6 +3557,16 @@ is_a: GO:0048583 ! regulation of response to stimulus
 intersection_of: GO:0008150 ! biological_process
 intersection_of: RO:0002211 GO:0042493 ! response to drug
 relationship: RO:0002211 GO:0042493 ! response to drug
+
+[Term]
+id: GO:2001038
+name: regulation of cellular response to drug
+def: "Any process that modulates the frequency, rate or extent of cellular response to drug." [GOC:obol]
+is_a: GO:0050794 ! regulation of cellular process
+is_a: GO:2001023 ! regulation of response to drug
+intersection_of: GO:0008150 ! biological_process
+intersection_of: RO:0002211 GO:0035690 ! cellular response to drug
+relationship: RO:0002211 GO:0035690 ! cellular response to drug
 
 [Typedef]
 id: BFO:0000050
