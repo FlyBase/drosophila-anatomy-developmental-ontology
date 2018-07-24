@@ -1,0 +1,37 @@
+pattern_name: larval_VNCneuron_segments
+
+classes:
+  thing: owl:Thing
+
+relations:
+  has_soma_location: RO:0002100
+
+vars:
+  neuron: thing
+  neur_name: thing
+  neuromere: thing
+  mere_short: thing
+  mere_mid: thing
+  mere_name: thing
+
+data_list_vars:
+  def_dbxref: xsd:string
+
+name:
+  text: "larval %s %s neuron"
+  vars:
+    - mere_mid
+    - neur_name
+
+def:
+  text: "%s interneuron of the ventral nerve cord with a cell body in %s."
+  vars:
+    - neur_name
+    - mere_name
+  xrefs: def_dbxref
+
+equivalentTo:
+  text: "%s that 'has_soma_location' some %s"
+  vars:
+    - neuron
+    - neuromere
