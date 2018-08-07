@@ -190,6 +190,17 @@ is_a: GO:0004888 ! transmembrane signaling receptor activity
 relationship: BFO:0000050 GO:0007186 ! G-protein coupled receptor signaling pathway
 
 [Term]
+id: GO:0005513
+name: detection of calcium ion
+def: "The series of events in which a calcium ion stimulus is received by a cell and converted into a molecular signal." [GOC:pg]
+synonym: "Ca2+ ion detection" EXACT []
+synonym: "calcium ion detection" EXACT []
+synonym: "calcium ion sensing" EXACT []
+synonym: "detection of Ca2+ ion" EXACT []
+is_a: GO:0009593 ! detection of chemical stimulus
+is_a: GO:0051592 ! response to calcium ion
+
+[Term]
 id: GO:0005575
 name: cellular_component
 def: "A location, relative to cellular compartments and structures, occupied by a macromolecular machine when it carries out a molecular function. There are two ways in which the gene ontology describes locations of gene products: (1) relative to cellular structures (e.g., cytoplasmic side of plasma membrane) or compartments (e.g., mitochondrion), and (2) the stable macromolecular complexes of which they are parts (e.g., the ribosome)." [GOC:pdt, NIF_Subcellular:sao-1337158144]
@@ -871,6 +882,21 @@ id: GO:0010033
 name: response to organic substance
 def: "Any process that results in a change in state or activity of a cell or an organism (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of an organic substance stimulus." [GOC:sm]
 is_a: GO:0042221 ! response to chemical
+
+[Term]
+id: GO:0010035
+name: response to inorganic substance
+def: "Any process that results in a change in state or activity of a cell or an organism (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of an inorganic substance stimulus." [GOC:sm]
+is_a: GO:0042221 ! response to chemical
+
+[Term]
+id: GO:0010038
+name: response to metal ion
+def: "Any process that results in a change in state or activity of a cell or an organism (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of a metal ion stimulus." [GOC:sm]
+synonym: "heavy metal sensitivity/resistance" RELATED []
+synonym: "response to heavy metal" NARROW []
+synonym: "response to metal" EXACT []
+is_a: GO:0010035 ! response to inorganic substance
 
 [Term]
 id: GO:0010243
@@ -2549,6 +2575,13 @@ intersection_of: RO:0002211 GO:0006836 ! neurotransmitter transport
 relationship: RO:0002211 GO:0006836 ! neurotransmitter transport
 
 [Term]
+id: GO:0051592
+name: response to calcium ion
+def: "Any process that results in a change in state or activity of a cell or an organism (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of a calcium ion stimulus." [GOC:ai]
+synonym: "response to Ca2+ ion" EXACT []
+is_a: GO:0010038 ! response to metal ion
+
+[Term]
 id: GO:0051606
 name: detection of stimulus
 def: "The series of events in which a stimulus is received by a cell or organism and converted into a molecular signal." [GOC:add, GOC:ai, GOC:dph, GOC:mah]
@@ -3507,6 +3540,16 @@ is_a: GO:0051931 ! regulation of sensory perception
 intersection_of: GO:0008150 ! biological_process
 intersection_of: RO:0002211 GO:0050976 ! detection of mechanical stimulus involved in sensory perception of touch
 relationship: RO:0002211 GO:0050976 ! detection of mechanical stimulus involved in sensory perception of touch
+
+[Term]
+id: GO:1905945
+name: regulation of response to calcium ion
+def: "Any process that modulates the frequency, rate or extent of response to calcium ion." [GO_REF:0000058, GOC:aruk, GOC:bc, GOC:TermGenie, PMID:11404397]
+synonym: "regulation of response to Ca2+ ion" EXACT [GOC:TermGenie]
+is_a: GO:0048583 ! regulation of response to stimulus
+intersection_of: GO:0065007 ! biological regulation
+intersection_of: RO:0002211 GO:0051592 ! response to calcium ion
+relationship: RO:0002211 GO:0051592 ! response to calcium ion
 
 [Term]
 id: GO:1905952
