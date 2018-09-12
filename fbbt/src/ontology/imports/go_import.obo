@@ -687,6 +687,14 @@ is_a: GO:0007626 ! locomotory behavior
 is_a: GO:0030534 ! adult behavior
 
 [Term]
+id: GO:0008345
+name: larval locomotory behavior
+def: "Locomotory behavior in a larval (immature) organism." [GOC:ai]
+synonym: "larval locomotory behaviour" EXACT []
+is_a: GO:0007626 ! locomotory behavior
+is_a: GO:0030537 ! larval behavior
+
+[Term]
 id: GO:0008355
 name: olfactory learning
 def: "Any process in an organism in which a relatively long-lasting adaptive behavioral change occurs in response to (repeated) exposure to an olfactory cue." [ISBN:0582227089]
@@ -1377,6 +1385,14 @@ is_a: GO:0007610 ! behavior
 is_a: GO:0032501 ! multicellular organismal process
 
 [Term]
+id: GO:0030537
+name: larval behavior
+def: "Behavior in a larval form of an organism, an immature organism that must undergo metamorphosis to assume adult characteristics." [GOC:mah, ISBN:0877797099]
+synonym: "larval behaviour" EXACT []
+is_a: GO:0007610 ! behavior
+is_a: GO:0032501 ! multicellular organismal process
+
+[Term]
 id: GO:0031000
 name: response to caffeine
 def: "Any process that results in a change in state or activity of a cell or an organism (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of a caffeine stimulus. Caffeine is an alkaloid found in numerous plant species, where it acts as a natural pesticide that paralyzes and kills certain insects feeding upon them." [CHEBI:27732, GOC:ef, GOC:mah]
@@ -1539,6 +1555,31 @@ id: GO:0033993
 name: response to lipid
 def: "Any process that results in a change in state or activity of a cell or an organism (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of a lipid stimulus." [GOC:sl]
 is_a: GO:0010033 ! response to organic substance
+
+[Term]
+id: GO:0034607
+name: turning behavior involved in mating
+def: "The sharp ventral turn performed by the male as he approaches either the hermaphrodite head or tail, whilst trying to locate his partner's vulva. Turning occurs via a sharp ventral coil of the male's tail." [PMID:18050467, WB_REF:WBPaper00002109]
+synonym: "turning behavior during mating" EXACT []
+is_a: GO:0035178 ! turning behavior
+is_a: GO:0060179 ! male mating behavior
+intersection_of: GO:0035178 ! turning behavior
+intersection_of: BFO:0000050 GO:0007618 ! mating
+
+[Term]
+id: GO:0035178
+name: turning behavior
+def: "Fine-tuning the spatial position of an organism in response to variability in their environment. For example, reorientation of an organism in the direction of a food source." [PMID:10880478]
+synonym: "turning behaviour" EXACT []
+is_a: GO:0007626 ! locomotory behavior
+
+[Term]
+id: GO:0035179
+name: larval turning behavior
+def: "Fine-tuning the spatial position of a larva in response to variability in their environment. For example, reorientation of a larva in the direction of a food source." [PMID:10880478]
+synonym: "larval turning behaviour" EXACT []
+is_a: GO:0008345 ! larval locomotory behavior
+is_a: GO:0035178 ! turning behavior
 
 [Term]
 id: GO:0035249
@@ -2779,6 +2820,15 @@ name: endocrine hormone secretion
 def: "The regulated release of a hormone into the circulatory system." [GOC:dph]
 is_a: GO:0046879 ! hormone secretion
 relationship: BFO:0000050 GO:0050886 ! endocrine process
+
+[Term]
+id: GO:0061094
+name: regulation of turning behavior involved in mating
+def: "Any process that modulates the rate, frequency or extent of turning behavior involved in mating. Turning behavior is the sharp ventral turn performed by the male as he approaches either the hermaphrodite head or tail, whilst trying to locate his partner's vulva. Turning occurs via a sharp ventral coil of the male's tail." [GOC:dph, GOC:tb]
+is_a: GO:1902435 ! regulation of male mating behavior
+intersection_of: GO:0008150 ! biological_process
+intersection_of: RO:0002211 GO:0034607 ! turning behavior involved in mating
+relationship: RO:0002211 GO:0034607 ! turning behavior involved in mating
 
 [Term]
 id: GO:0061526
