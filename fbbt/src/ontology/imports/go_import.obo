@@ -167,15 +167,15 @@ is_a: GO:0038023 ! signaling receptor activity
 
 [Term]
 id: GO:0004930
-name: G-protein coupled receptor activity
+name: G protein-coupled receptor activity
 def: "Combining with an extracellular signal and transmitting the signal across the membrane by activating an associated G-protein; promotes the exchange of GDP for GTP on the alpha subunit of a heterotrimeric G-protein complex." [GOC:bf, http://www.iuphar-db.org, Wikipedia:GPCR]
 synonym: "EBV-induced receptor" NARROW []
 synonym: "Epstein-Barr Virus-induced receptor activity" NARROW []
 synonym: "G protein coupled receptor activity" EXACT []
 synonym: "G protein linked receptor activity" EXACT []
+synonym: "G-protein coupled receptor activity" EXACT []
 synonym: "G-protein coupled receptor activity, unknown ligand" NARROW []
 synonym: "G-protein linked receptor activity" EXACT []
-synonym: "G-protein-coupled receptor activity" EXACT []
 synonym: "GPCR activity" EXACT []
 synonym: "ligand-dependent GPCR activity" EXACT []
 synonym: "Mas proto-oncogene receptor activity" NARROW []
@@ -187,7 +187,7 @@ synonym: "receptor activity, G-protein coupled" EXACT [GOC:bf]
 synonym: "SREB receptor" NARROW []
 synonym: "super conserved receptor expressed in brain receptor activity" NARROW []
 is_a: GO:0004888 ! transmembrane signaling receptor activity
-relationship: BFO:0000050 GO:0007186 ! G-protein coupled receptor signaling pathway
+relationship: BFO:0000050 GO:0007186 ! G protein-coupled receptor signaling pathway
 
 [Term]
 id: GO:0005513
@@ -297,6 +297,14 @@ is_a: GO:0046942 ! carboxylic acid transport
 is_a: GO:0071705 ! nitrogen compound transport
 
 [Term]
+id: GO:0006950
+name: response to stress
+def: "Any process that results in a change in state or activity of a cell or an organism (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of a disturbance in organismal or cellular homeostasis, usually, but not necessarily, exogenous (e.g. temperature, humidity, ionizing radiation)." [GOC:mah]
+synonym: "response to abiotic stress" RELATED []
+synonym: "response to biotic stress" RELATED []
+is_a: GO:0050896 ! response to stimulus
+
+[Term]
 id: GO:0007154
 name: cell communication
 def: "Any process that mediates interactions between a cell and its surroundings. Encompasses interactions such as signaling or attachment between one cell and another cell, between a cell and an extracellular matrix, or between a cell and any other aspect of its environment." [GOC:mah]
@@ -318,7 +326,7 @@ relationship: BFO:0000050 GO:0051716 ! cellular response to stimulus
 
 [Term]
 id: GO:0007186
-name: G-protein coupled receptor signaling pathway
+name: G protein-coupled receptor signaling pathway
 def: "A series of molecular signals that proceeds with an activated receptor promoting the exchange of GDP for GTP on the alpha-subunit of an associated heterotrimeric G-protein complex. The GTP-bound activated alpha-G-protein then dissociates from the beta- and gamma-subunits to further transmit the signal within the cell. The pathway begins with receptor-ligand interaction, or for basal GPCR signaling the pathway begins with the receptor activating its G protein in the absence of an agonist, and ends with regulation of a downstream cellular process, e.g. transcription.  The pathway can start from the plasma membrane, Golgi or nuclear membrane (PMID:24568158 and PMID:16902576)." [GOC:bf, GOC:mah, PMID:16902576, PMID:24568158, Wikipedia:G_protein-coupled_receptor]
 synonym: "dimeric G-protein coupled receptor signaling pathway" NARROW []
 synonym: "dimeric G-protein coupled receptor signalling pathway" NARROW [GOC:mah]
@@ -328,12 +336,11 @@ synonym: "G-protein coupled receptor protein signal transduction" EXACT []
 synonym: "G-protein coupled receptor protein signaling pathway" EXACT [GOC:bf]
 synonym: "G-protein coupled receptor signaling pathway via GPCR dimer" NARROW [GOC:bf]
 synonym: "G-protein coupled receptor signalling pathway" EXACT []
-synonym: "G-protein-coupled receptor protein signaling pathway" EXACT []
 synonym: "G-protein-coupled receptor protein signalling pathway" EXACT []
 synonym: "GPCR signaling pathway" EXACT []
 synonym: "GPCR signalling pathway" EXACT []
 is_a: GO:0007165 ! signal transduction
-relationship: BFO:0000051 GO:0004930 ! G-protein coupled receptor activity
+relationship: BFO:0000051 GO:0004930 ! G protein-coupled receptor activity
 
 [Term]
 id: GO:0007267
@@ -646,19 +653,19 @@ is_a: GO:0008150 ! biological_process
 
 [Term]
 id: GO:0008277
-name: regulation of G-protein coupled receptor protein signaling pathway
-def: "Any process that modulates the frequency, rate or extent of G-protein coupled receptor protein signaling pathway activity." [GOC:go_curators]
+name: regulation of G protein-coupled receptor signaling pathway
+def: "Any process that modulates the frequency, rate or extent of G protein-coupled receptor signaling pathway." [GOC:go_curators]
 synonym: "regulation of G protein coupled receptor protein signaling pathway" EXACT []
 synonym: "regulation of G protein coupled receptor protein signalling pathway" EXACT []
+synonym: "regulation of G-protein coupled receptor protein signaling pathway" EXACT []
 synonym: "regulation of G-protein coupled receptor protein signalling pathway" EXACT []
-synonym: "regulation of G-protein-coupled receptor protein signaling pathway" EXACT []
 synonym: "regulation of G-protein-coupled receptor protein signalling pathway" EXACT []
 synonym: "regulation of GPCR protein signaling pathway" EXACT []
 synonym: "regulation of GPCR protein signalling pathway" EXACT []
 is_a: GO:0009966 ! regulation of signal transduction
 intersection_of: GO:0008150 ! biological_process
-intersection_of: RO:0002211 GO:0007186 ! G-protein coupled receptor signaling pathway
-relationship: RO:0002211 GO:0007186 ! G-protein coupled receptor signaling pathway
+intersection_of: RO:0002211 GO:0007186 ! G protein-coupled receptor signaling pathway
+relationship: RO:0002211 GO:0007186 ! G protein-coupled receptor signaling pathway
 
 [Term]
 id: GO:0008306
@@ -1209,7 +1216,7 @@ def: "The series of molecular signals generated as a consequence of excitation o
 synonym: "rhodopsin mediated phototransduction" EXACT [GOC:bf]
 synonym: "rhodopsin mediated signalling pathway" EXACT [GOC:dph, GOC:tb]
 synonym: "rhodopsin signaling" EXACT [GOC:bf]
-is_a: GO:0007186 ! G-protein coupled receptor signaling pathway
+is_a: GO:0007186 ! G protein-coupled receptor signaling pathway
 is_a: GO:0007602 ! phototransduction
 is_a: GO:0071482 ! cellular response to light stimulus
 relationship: BFO:0000050 GO:0007603 ! phototransduction, visible light
@@ -1293,7 +1300,7 @@ id: GO:0022400
 name: regulation of rhodopsin mediated signaling pathway
 def: "Any process that modulates the frequency, rate or extent of rhodopsin-mediated signaling." [GOC:mah]
 synonym: "regulation of rhodopsin mediated signalling" EXACT []
-is_a: GO:0008277 ! regulation of G-protein coupled receptor protein signaling pathway
+is_a: GO:0008277 ! regulation of G protein-coupled receptor signaling pathway
 is_a: GO:0032101 ! regulation of response to external stimulus
 intersection_of: GO:0008150 ! biological_process
 intersection_of: RO:0002211 GO:0016056 ! rhodopsin mediated signaling pathway
@@ -1549,6 +1556,13 @@ is_a: GO:0120038 ! plasma membrane bounded cell projection part
 intersection_of: GO:0005575 ! cellular_component
 intersection_of: BFO:0000050 GO:0030424 ! axon
 relationship: BFO:0000050 GO:0030424 ! axon
+
+[Term]
+id: GO:0033555
+name: multicellular organismal response to stress
+def: "Any process that results in a change in state or activity of a multicellular organism (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of a stimulus indicating the organism is under stress. The stress is usually, but not necessarily, exogenous (e.g. temperature, humidity, ionizing radiation)." [GOC:mah]
+is_a: GO:0006950 ! response to stress
+is_a: GO:0032501 ! multicellular organismal process
 
 [Term]
 id: GO:0033993
@@ -2029,6 +2043,21 @@ synonym: "male courtship behavior, wing extension" BROAD []
 synonym: "male courtship behaviour, veined wing extension" EXACT []
 synonym: "male courtship behaviour, wing extension" BROAD []
 is_a: GO:0008049 ! male courtship behavior
+
+[Term]
+id: GO:0048265
+name: response to pain
+def: "Any process that results in a change in state or activity of a cell or an organism (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of a pain stimulus. Pain stimuli cause activation of nociceptors, peripheral receptors for pain, include receptors which are sensitive to painful mechanical stimuli, extreme heat or cold, and chemical stimuli." [GOC:jid, PMID:10203867, PMID:12723742, PMID:12843304, Wikipedia:Pain]
+synonym: "physiological response to pain" EXACT []
+is_a: GO:0033555 ! multicellular organismal response to stress
+
+[Term]
+id: GO:0048266
+name: behavioral response to pain
+def: "Any process that results in a change in the behavior of an organism as a result of a pain stimulus. Pain stimuli cause activation of nociceptors, peripheral receptors for pain, include receptors which are sensitive to painful mechanical stimuli, extreme heat or cold, and chemical stimuli." [GOC:jid]
+synonym: "behavioural response to pain" EXACT []
+is_a: GO:0007610 ! behavior
+relationship: BFO:0000050 GO:0048265 ! response to pain
 
 [Term]
 id: GO:0048511
@@ -3128,6 +3157,15 @@ is_a: GO:0019222 ! regulation of metabolic process
 intersection_of: GO:0008150 ! biological_process
 intersection_of: RO:0002211 GO:0044238 ! primary metabolic process
 relationship: RO:0002211 GO:0044238 ! primary metabolic process
+
+[Term]
+id: GO:0080134
+name: regulation of response to stress
+def: "Any process that modulates the frequency, rate or extent of a response to stress. Response to stress is a change in state or activity of a cell or an organism (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of a disturbance in organismal or cellular homeostasis, usually, but not necessarily, exogenous (e.g. temperature, humidity, ionizing radiation)." [GOC:dhl]
+is_a: GO:0048583 ! regulation of response to stimulus
+intersection_of: GO:0008150 ! biological_process
+intersection_of: RO:0002211 GO:0006950 ! response to stress
+relationship: RO:0002211 GO:0006950 ! response to stress
 
 [Term]
 id: GO:0090087
