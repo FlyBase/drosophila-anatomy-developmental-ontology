@@ -1,0 +1,17 @@
+#Copy fbbt-edit.obo to working directory (as fbbt-edit-copy.obo and delete its import statements in Aquamacs. Fill in segment_fillers.csv (must be tab separated).
+
+
+#generate terms
+dosdp-tools generate --obo-prefixes --prefixes=prefix.yaml --infile=segment_fillers.tsv --template=lch5_subclasses.yaml --ontology=fbbt-edit-copy.obo --outfile=lch5.obo
+
+
+#copy to ontology folder:
+cp lch5.obo ~/git/drosophila-anatomy-developmental-ontology/fbbt/src/ontology/
+
+
+#navigate to ontology folder and merge this with fbbt-edit (without merging fbbt imports):
+cd ~/git/drosophila-anatomy-developmental-ontology/fbbt/src/ontology/
+
+robot merge --collapse-import-closure false --input fbbt-edit.obo --input lch5.obo --output merge.obo
+
+#check diff with fbbt-edit, then rename to fbbt-edit when satisfied and commit
