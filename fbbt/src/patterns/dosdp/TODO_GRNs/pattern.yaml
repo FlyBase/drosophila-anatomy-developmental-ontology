@@ -1,0 +1,54 @@
+pattern_name: pattern
+
+classes:
+  thing: owl:Thing
+
+relations:
+  part_of: BFO:0000050
+  has_soma_location: RO:0002100
+  has_synaptic_terminal_in: RO:0002130
+  capable_of: RO:0002215
+
+vars:
+  neuron: thing
+  organ_name: thing
+  subtype: thing
+  cell_body: thing
+  cb: thing
+  innervates: thing
+  organ: thing
+  detection: thing
+
+data_list_vars:
+  def_dbxref: xsd:string
+
+name:
+  text: "gustatory receptor neuron %s of the %s"
+  vars:
+    - subtype
+    - organ_name
+
+def:
+  text: "Larval gustatory receptor neuron of the %s. This neuron has a cell body in the %s and innervates the %s. This subclass represents one bilateral pair of cells that express."
+  vars:
+    - organ_name
+    - cell_body
+    - innervates
+  xrefs: def_dbxref
+
+logical_axioms:
+  - 
+    axiom_type: subClassOf
+    text: "has_soma_location some %s"
+    vars:
+      - cb
+  - 
+    axiom_type: subClassOf
+    text: "has_synaptic_terminal_in some %s"
+    vars:
+      - organ
+  - 
+    axiom_type: subClassOf
+    text: "capable_of some %s"
+    vars:
+      - detection
