@@ -30,16 +30,10 @@ fi
 
 owltools tmp4.obo --set-ontology-id -v 'http://purl.obolibrary.org/obo/fbbt/'$RELEASE'/fbbt.owl' 'http://purl.obolibrary.org/obo/fbbt.owl' -o tmp.owl
 
-
-#rm tmp.obo
-#rm tmp2.obo # Cleaning up
-
 echo ''
 echo "*** Generating release files using the $REASONER reasoner ***"
 echo ''
 ontology-release-runner --reasoner elk tmp.owl  --no-subsets --simple --relaxed --asserted --allow-overwrite --outdir oort
-
-# rm tmp3.obo # Cleaning up
 echo ''
 echo "*** Generating obograph JSON version***"
 owltools oort/fbbt.owl -o -f json oort/fbbt.json
@@ -54,14 +48,13 @@ owltools oort/fbbt-simple.obo --make-subset-by-properties $FB_REL_WL -o -f obo t
 echo ''
 echo '***Building FlyBase version***'
 echo ''
-robot remove --input tmp6.obo --select "owl:deprecated='true'^^xsd:boolean" --trim true --output tmp6-no-obsoletes.obo
-robot remove --input tmp6.obo --select object-properties --trim true --output tmp6-all-classes.obo
-robot merge --collapse-import-closure false --input tmp6-all-classes.obo --input tmp6-no-obsoletes.obo --output tmp7.obo
+#removal of obsolete typedefs using robot
+robot remove --input tmp6.obo --select "owl:deprecated='true'^^xsd:boolean" --trim true --output tmp6-no-obsoletes.obo #contains all non-obsolete terms, no obsoletes
+robot remove --input tmp6.obo --select object-properties --trim true --output tmp6-all-classes.obo #contains all classes, no typedefs
+robot merge --collapse-import-closure false --input tmp6-all-classes.obo --input tmp6-no-obsoletes.obo --output tmp7.obo #merge to create file with no obsolete typedefs
 rm tmp6-all-classes.obo #cleanup
-rm tmp6-no-obsoletes #cleanup
+rm tmp6-no-obsoletes.obo #cleanup
 cat tmp7.obo | sed 's/^xref: OBO_REL:part_of/xref_analog: OBO_REL:part_of/' | sed 's/^xref: OBO_REL:has_part/xref_analog: OBO_REL:has_part/' | egrep -v "^property_value: .+$" | egrep -v "^owl-axioms: .+$" | sed s'/^default-namespace: fly_anatomy.ontology/default-namespace: FlyBase anatomy CV/' | egrep -v "^expand_expression_to: .+$" > oort/fly_anatomy.obo  # Perhaps just make a generic substitution for xref: OBO_REL ?
-#rm tmp.owl  # Cleaning up
-#rm tmp2.obo # Cleaning up
 echo ''
 echo '*** Running tests on new fbbt-simple.obo ***'
 echo '*** chado load checks ***'
@@ -80,3 +73,11 @@ rm purl.obolibrary.org/obo/fbbt/fbbt-simple.obo # Cleaning up
 echo ''
 echo '*** Calculating new metrics ***'
 onto_metrics_calc.pl fly_anatomy.ontology oort/fbbt-non-classified.obo > oort/fbbt_metrics.txt  # Dump to oort folder so in-place for release.
+#cleanup of tmp ontologies
+rm tmp.obo
+rm tmp.owl
+rm tmp2.obo
+rm tmp3.obo
+rm tmp4.obo
+rm tmp6.obo
+rm tmp7.obo
