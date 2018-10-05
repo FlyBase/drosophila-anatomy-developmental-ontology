@@ -54,7 +54,14 @@ owltools oort/fbbt-simple.obo --make-subset-by-properties $FB_REL_WL -o -f obo t
 echo ''
 echo '***Building FlyBase version***'
 echo ''
-cat tmp6.obo | sed 's/^xref: OBO_REL:part_of/xref_analog: OBO_REL:part_of/' | sed 's/^xref: OBO_REL:has_part/xref_analog: OBO_REL:has_part/' | egrep -v "^property_value: .+$" | egrep -v "^owl-axioms: .+$" | sed s'/^default-namespace: fly_anatomy.ontology/default-namespace: FlyBase anatomy CV/' | egrep -v "^expand_expression_to: .+$" > oort/fly_anatomy.obo  # Perhaps just make a generic substitution for xref: OBO_REL ?
+robot remove --input tmp6.obo\
+--select "owl:deprecated='true'^^xsd:boolean" --trim true --output tmp6-no-obsoletes.obo
+robot remove --input tmp6.obo\
+--select object-properties --trim true --output tmp6-all-classes.obo
+robot merge --collapse-import-closure false --input tmp6-all-classes.obo\
+--input tmp6-no-obsoletes.obo --output tmp7.obo
+rm tmp6-all-classes.obo tmp6-no-obsoletes #cleanup
+cat tmp7.obo | sed 's/^xref: OBO_REL:part_of/xref_analog: OBO_REL:part_of/' | sed 's/^xref: OBO_REL:has_part/xref_analog: OBO_REL:has_part/' | egrep -v "^property_value: .+$" | egrep -v "^owl-axioms: .+$" | sed s'/^default-namespace: fly_anatomy.ontology/default-namespace: FlyBase anatomy CV/' | egrep -v "^expand_expression_to: .+$" > oort/fly_anatomy.obo  # Perhaps just make a generic substitution for xref: OBO_REL ?
 #rm tmp.owl  # Cleaning up
 #rm tmp2.obo # Cleaning up
 echo ''
