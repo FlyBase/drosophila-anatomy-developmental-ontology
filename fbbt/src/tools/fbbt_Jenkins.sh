@@ -60,7 +60,7 @@ echo ''
 echo '*** Running tests on new fbbt-simple.obo ***'
 echo '*** chado load checks ***'
 echo ''
-chado_load_checks.pl oort/fbbt-simple.obo > oort/chado_load_checks_out.txt # Dump to oort folder so in-place for release.git log
+chado_load_checks.pl oort/fbbt-simple.obo > oort/chado_load_checks_out.txt # Dump to oort folder so in-place for release.
 echo ''
 echo '*** Grabbing latest fbbt-simple.obo ***'
 echo ''
