@@ -52,14 +52,15 @@ echo ''
 robot remove --input tmp6.obo --select "owl:deprecated='true'^^xsd:boolean" --trim true --output tmp6-no-obsoletes.obo #contains all non-obsolete terms, no obsoletes
 robot remove --input tmp6.obo --select object-properties --trim true --output tmp6-all-classes.obo #contains all classes, no typedefs
 robot merge --collapse-import-closure false --input tmp6-all-classes.obo --input tmp6-no-obsoletes.obo --output tmp7.obo #merge to create file with no obsolete typedefs
-rm tmp6-all-classes.obo #cleanup
-rm tmp6-no-obsoletes.obo #cleanup
-cat tmp7.obo | sed 's/^xref: OBO_REL:part_of/xref_analog: OBO_REL:part_of/' | sed 's/^xref: OBO_REL:has_part/xref_analog: OBO_REL:has_part/' | egrep -v "^property_value: .+$" | egrep -v "^owl-axioms: .+$" | sed s'/^default-namespace: fly_anatomy.ontology/default-namespace: FlyBase anatomy CV/' | egrep -v "^expand_expression_to: .+$" > oort/fly_anatomy.obo  # Perhaps just make a generic substitution for xref: OBO_REL ?
+rm tmp6-all-classes.obo tmp6-no-obsoletes.obo #cleanup
+#removal of CC/DC annotaion properties using robot
+robot remove --input tmp7.obo --term http://creativecommons.org/ns#attributionURL remove --term http://purl.org/dc/elements/1.1/creator remove --term http://purl.org/dc/elements/1.1/rights --output tmp8.obo
+cat tmp8.obo | sed 's/^xref: OBO_REL:part_of/xref_analog: OBO_REL:part_of/' | sed 's/^xref: OBO_REL:has_part/xref_analog: OBO_REL:has_part/' | egrep -v "^property_value: .+$" | egrep -v "^owl-axioms: .+$" | sed s'/^default-namespace: fly_anatomy.ontology/default-namespace: FlyBase anatomy CV/' | egrep -v "^expand_expression_to: .+$" > oort/fly_anatomy.obo  # Perhaps just make a generic substitution for xref: OBO_REL ?
 echo ''
 echo '*** Running tests on new fbbt-simple.obo ***'
 echo '*** chado load checks ***'
 echo ''
-chado_load_checks.pl oort/fbbt-simple.obo > oort/chado_load_checks_out.txt # Dump to oort folder so in-place for release.
+chado_load_checks.pl oort/fbbt-simple.obo > oort/chado_load_checks_out.txt # Dump to oort folder so in-place for release.git log
 echo ''
 echo '*** Grabbing latest fbbt-simple.obo ***'
 echo ''
@@ -81,3 +82,4 @@ rm tmp3.obo
 rm tmp4.obo
 rm tmp6.obo
 rm tmp7.obo
+rm tmp8.obo
