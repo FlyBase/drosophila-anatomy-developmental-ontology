@@ -152,42 +152,10 @@ is_a: GO:0003008 ! system process
 is_a: GO:0007585 ! respiratory gaseous exchange
 
 [Term]
-id: GO:0003674
-name: molecular_function
-def: "A molecular process that can be carried out by the action of a single macromolecular machine, usually via direct physical interactions with other molecular entities. Function in this sense denotes an action, or activity, that a gene product (or a complex) performs. These actions are described from two distinct but related perspectives: (1) biochemical activity, and (2) role as a component in a larger system/process." [GOC:pdt]
-synonym: "molecular function" EXACT []
-
-[Term]
-id: GO:0004888
-name: transmembrane signaling receptor activity
-def: "Combining with an extracellular or intracellular signal and transmitting the signal from one side of the membrane to the other to initiate a change in cell activity or state as part of signal transduction." [GOC:go_curators, Wikipedia:Transmembrane_receptor]
-synonym: "transmembrane receptor activity" BROAD [GOC:bf, GOC:signaling]
-synonym: "transmembrane signalling receptor activity" EXACT [GOC:mah]
-is_a: GO:0038023 ! signaling receptor activity
-
-[Term]
-id: GO:0004930
-name: G protein-coupled receptor activity
-def: "Combining with an extracellular signal and transmitting the signal across the membrane by activating an associated G-protein; promotes the exchange of GDP for GTP on the alpha subunit of a heterotrimeric G-protein complex." [GOC:bf, http://www.iuphar-db.org, Wikipedia:GPCR]
-synonym: "EBV-induced receptor" NARROW []
-synonym: "Epstein-Barr Virus-induced receptor activity" NARROW []
-synonym: "G protein coupled receptor activity" EXACT []
-synonym: "G protein linked receptor activity" EXACT []
-synonym: "G-protein coupled receptor activity" EXACT []
-synonym: "G-protein coupled receptor activity, unknown ligand" NARROW []
-synonym: "G-protein linked receptor activity" EXACT []
-synonym: "GPCR activity" EXACT []
-synonym: "ligand-dependent GPCR activity" EXACT []
-synonym: "Mas proto-oncogene receptor activity" NARROW []
-synonym: "orphan G protein coupled receptor activity" NARROW []
-synonym: "orphan G-protein coupled receptor activity" NARROW []
-synonym: "orphan GPCR activity" NARROW []
-synonym: "RDC1 receptor activity" NARROW []
-synonym: "receptor activity, G-protein coupled" EXACT [GOC:bf]
-synonym: "SREB receptor" NARROW []
-synonym: "super conserved receptor expressed in brain receptor activity" NARROW []
-is_a: GO:0004888 ! transmembrane signaling receptor activity
-relationship: BFO:0000050 GO:0007186 ! G protein-coupled receptor signaling pathway
+id: GO:0003031
+name: detection of carbon dioxide
+def: "The series of events in which a carbon dioxide stimulus is received by a cell and converted into a molecular signal." [GOC:mtg_cardio]
+is_a: GO:0009593 ! detection of chemical stimulus
 
 [Term]
 id: GO:0005513
@@ -340,7 +308,6 @@ synonym: "G-protein-coupled receptor protein signalling pathway" EXACT []
 synonym: "GPCR signaling pathway" EXACT []
 synonym: "GPCR signalling pathway" EXACT []
 is_a: GO:0007165 ! signal transduction
-relationship: BFO:0000051 GO:0004930 ! G protein-coupled receptor activity
 
 [Term]
 id: GO:0007267
@@ -810,7 +777,7 @@ is_a: GO:0009628 ! response to abiotic stimulus
 [Term]
 id: GO:0009628
 name: response to abiotic stimulus
-def: "Any process that results in a change in state or activity of a cell or an organism (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of an abiotic (non-living) stimulus." [GOC:hb]
+def: "Any process that results in a change in state or activity of a cell or an organism (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of an abiotic (not derived from living organisms) stimulus." [GOC:hb]
 synonym: "response to abiotic stress" NARROW []
 is_a: GO:0050896 ! response to stimulus
 
@@ -920,17 +887,6 @@ def: "Any process that results in a change in state or activity of a cell or an 
 synonym: "response to organic nitrogen" EXACT []
 is_a: GO:0010033 ! response to organic substance
 is_a: GO:1901698 ! response to nitrogen compound
-
-[Term]
-id: GO:0010469
-name: regulation of signaling receptor activity
-def: "Any process that modulates the frequency, rate or extent of a signaling receptor activity. Receptor activity is when a molecule combines with an extracellular or intracellular messenger to initiate a change in cell activity." [GOC:dph, GOC:tb]
-synonym: "regulation of receptor activity" BROAD []
-is_a: GO:0009966 ! regulation of signal transduction
-is_a: GO:0065009 ! regulation of molecular function
-intersection_of: GO:0008150 ! biological_process
-intersection_of: RO:0002211 GO:0038023 ! signaling receptor activity
-relationship: RO:0002211 GO:0038023 ! signaling receptor activity
 
 [Term]
 id: GO:0010646
@@ -1613,14 +1569,6 @@ id: GO:0036270
 name: response to diuretic
 def: "Any process that results in a change in state or activity of a cell or an organism (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of a diuretic stimulus. A diuretic is an agent that promotes the excretion of urine through its effects on kidney function." [CHEBI:35498, GOC:hp]
 is_a: GO:0042493 ! response to drug
-
-[Term]
-id: GO:0038023
-name: signaling receptor activity
-def: "Receiving a signal and transmitting it in the cell to initiate a change in cell activity. A signal is a physical entity or change in state that is used to transfer information in order to trigger a response." [GOC:bf, GOC:signaling]
-synonym: "receptor activity" BROAD []
-synonym: "receptor activity involved in signal transduction" EXACT [GOC:bf]
-is_a: GO:0060089 ! molecular transducer activity
 
 [Term]
 id: GO:0040011
@@ -2804,12 +2752,6 @@ def: "An automatic response to a stimulus beginning with a nerve impulse from a 
 is_a: GO:0009605 ! response to external stimulus
 
 [Term]
-id: GO:0060089
-name: molecular transducer activity
-def: "A compound molecular function in which an effector function is controlled by one or more regulatory components." [GOC:dos, GOC:pdt]
-is_a: GO:0003674 ! molecular_function
-
-[Term]
 id: GO:0060096
 name: serotonin secretion, neurotransmission
 def: "The regulated release of serotonin by a cell, in which released serotonin acts as a neurotransmitter." [GOC:dph]
@@ -2970,16 +2912,6 @@ def: "Any process that modulates a qualitative or quantitative trait of a biolog
 synonym: "regulation of biological attribute" EXACT []
 synonym: "regulation of biological characteristic" EXACT []
 is_a: GO:0065007 ! biological regulation
-
-[Term]
-id: GO:0065009
-name: regulation of molecular function
-def: "Any process that modulates the frequency, rate or extent of a molecular function, an elemental biological activity occurring at the molecular level, such as catalysis or binding." [GOC:isa_complete]
-synonym: "regulation of a molecular function" EXACT []
-is_a: GO:0065007 ! biological regulation
-intersection_of: GO:0008150 ! biological_process
-intersection_of: RO:0002211 GO:0003674 ! molecular_function
-relationship: RO:0002211 GO:0003674 ! molecular_function
 
 [Term]
 id: GO:0070887
