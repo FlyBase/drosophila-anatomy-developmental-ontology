@@ -1,0 +1,43 @@
+#returns direct subclass part_of and is_a children
+#and direct equivalent class part_of and is_a children of ?y
+
+prefix obo: <http://purl.obolibrary.org/obo/> 
+prefix owl: <http://www.w3.org/2002/07/owl#>
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX FBbt: <http://purl.obolibrary.org/obo/FBbt_>
+PREFIX BFO: <http://purl.obolibrary.org/obo/BFO_>
+PREFIX oboInOwl: <http://www.geneontology.org/formats/oboInOwl#>
+PREFIX IAO: <http://purl.obolibrary.org/obo/IAO_>
+
+SELECT ?x ?label
+WHERE {
+      {?x rdfs:subClassOf [
+      	 a owl:Restriction ;
+      	 owl:onProperty BFO:0000050 ;
+      	 owl:someValuesFrom ?y ] .
+      ?x rdfs:label ?label .
+      ?x a owl:Class .
+      FILTER ( <search_term> ) .}
+      UNION
+      {?x rdfs:subClassOf ?y .
+      ?x rdfs:label ?label .
+      ?x a owl:Class .
+      FILTER ( <search_term> ) .}
+
+      UNION
+      {?x owl:equivalentClass [
+      a owl:Restriction ;
+      owl:onProperty BFO:0000050 ;
+      owl:someValuesFrom ?y ] .
+      ?x rdfs:label ?label .
+      ?x a owl:Class .
+      FILTER ( <search_term> ) .}
+      UNION
+      {?x owl:equivalentClass [
+      rdf:Description ?y ] .
+      ?x rdfs:label ?label .
+      ?x a owl:Class .
+      FILTER ( <search_term> ) .}
+      }
