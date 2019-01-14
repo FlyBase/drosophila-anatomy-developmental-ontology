@@ -1,0 +1,53 @@
+pattern_name: pattern
+
+classes:
+  thing: owl:Thing
+
+relations:
+  part_of: BFO:0000050
+#  has_soma_location: RO:0002100
+#  has_synaptic_terminal_in: RO:0002130
+#  capable_of: RO:0002215
+
+vars:
+  name: thing
+  superclass: thing
+  number: thing
+  designation: thing
+
+data_list_vars:
+  def_dbxref: xsd:string
+
+name:
+  text: "%s zone %s"
+  vars:
+    - name
+    - number
+
+def:
+  text: "Subregion of the %s."
+  vars:
+    - name
+  xrefs: def_dbxref
+  
+generated_synonyms:
+  -
+    exact_synonym:
+    text: "%s%s"
+    vars:
+      - designation
+      - number
+    xrefs: def_dbxref
+
+  
+logical_axioms:
+  - 
+    axiom_type: subClassOf
+    text: "part_of some %s"
+    vars:
+      - superclass
+  - 
+    axiom_type: subClassOf
+    text: "FBbt:00040006"
+
+    
