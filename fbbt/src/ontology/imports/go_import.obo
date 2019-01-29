@@ -96,6 +96,23 @@ is_a: GO:0046903 ! secretion
 is_a: GO:0051608 ! histamine transport
 
 [Term]
+id: GO:0001956
+name: positive regulation of neurotransmitter secretion
+def: "Any process that activates or increases the frequency, rate or extent of the regulated release of a neurotransmitter." [GOC:hjd]
+synonym: "activation of neurotransmitter secretion" NARROW []
+synonym: "stimulation of neurotransmitter secretion" NARROW []
+synonym: "up regulation of neurotransmitter secretion" EXACT []
+synonym: "up-regulation of neurotransmitter secretion" EXACT []
+synonym: "upregulation of neurotransmitter secretion" EXACT []
+is_a: GO:0046928 ! regulation of neurotransmitter secretion
+is_a: GO:0050806 ! positive regulation of synaptic transmission
+is_a: GO:0051590 ! positive regulation of neurotransmitter transport
+is_a: GO:1903532 ! positive regulation of secretion by cell
+intersection_of: GO:0008150 ! biological_process
+intersection_of: RO:0002213 GO:0007269 ! neurotransmitter secretion
+relationship: RO:0002213 GO:0007269 ! neurotransmitter secretion
+
+[Term]
 id: GO:0001963
 name: synaptic transmission, dopaminergic
 def: "The vesicular release of  dopamine. from a presynapse, across a chemical synapse, the subsequent activation of dopamine receptors at the postsynapse of a target cell (neuron, muscle, or secretory cell) and the effects of this activation on the postsynaptic membrane potential and ionic composition of the postsynaptic cytosol. This process encompasses both spontaneous and evoked release of neurotransmitter and all parts of synaptic vesicle exocytosis. Evoked transmission starts with the arrival of an action potential at the presynapse." [GOC:dos, GOC:dph]
@@ -129,6 +146,35 @@ intersection_of: RO:0002211 GO:0002790 ! peptide secretion
 relationship: RO:0002211 GO:0002790 ! peptide secretion
 
 [Term]
+id: GO:0002792
+name: negative regulation of peptide secretion
+def: "Any process that stops, prevents, or reduces the frequency, rate, or extent of peptide secretion." [GOC:add]
+synonym: "down regulation of peptide secretion" EXACT []
+synonym: "down-regulation of peptide secretion" EXACT []
+synonym: "downregulation of peptide secretion" EXACT []
+synonym: "inhibition of peptide secretion" NARROW []
+is_a: GO:0002791 ! regulation of peptide secretion
+is_a: GO:0051048 ! negative regulation of secretion
+intersection_of: GO:0008150 ! biological_process
+intersection_of: RO:0002212 GO:0002790 ! peptide secretion
+relationship: RO:0002212 GO:0002790 ! peptide secretion
+
+[Term]
+id: GO:0002793
+name: positive regulation of peptide secretion
+def: "Any process that activates or increases the frequency, rate, or extent of peptide secretion." [GOC:add]
+synonym: "activation of peptide secretion" NARROW []
+synonym: "stimulation of peptide secretion" NARROW []
+synonym: "up regulation of peptide secretion" EXACT []
+synonym: "up-regulation of peptide secretion" EXACT []
+synonym: "upregulation of peptide secretion" EXACT []
+is_a: GO:0002791 ! regulation of peptide secretion
+is_a: GO:0051047 ! positive regulation of secretion
+intersection_of: GO:0008150 ! biological_process
+intersection_of: RO:0002213 GO:0002790 ! peptide secretion
+relationship: RO:0002213 GO:0002790 ! peptide secretion
+
+[Term]
 id: GO:0003008
 name: system process
 def: "A multicellular organismal process carried out by any of the organs or tissues in an organ system. An organ system is a regularly interacting or interdependent group of organs or tissues that work together to carry out a biological objective." [GOC:mtg_cardio]
@@ -152,42 +198,10 @@ is_a: GO:0003008 ! system process
 is_a: GO:0007585 ! respiratory gaseous exchange
 
 [Term]
-id: GO:0003674
-name: molecular_function
-def: "A molecular process that can be carried out by the action of a single macromolecular machine, usually via direct physical interactions with other molecular entities. Function in this sense denotes an action, or activity, that a gene product (or a complex) performs. These actions are described from two distinct but related perspectives: (1) biochemical activity, and (2) role as a component in a larger system/process." [GOC:pdt]
-synonym: "molecular function" EXACT []
-
-[Term]
-id: GO:0004888
-name: transmembrane signaling receptor activity
-def: "Combining with an extracellular or intracellular signal and transmitting the signal from one side of the membrane to the other to initiate a change in cell activity or state as part of signal transduction." [GOC:go_curators, Wikipedia:Transmembrane_receptor]
-synonym: "transmembrane receptor activity" BROAD [GOC:bf, GOC:signaling]
-synonym: "transmembrane signalling receptor activity" EXACT [GOC:mah]
-is_a: GO:0038023 ! signaling receptor activity
-
-[Term]
-id: GO:0004930
-name: G protein-coupled receptor activity
-def: "Combining with an extracellular signal and transmitting the signal across the membrane by activating an associated G-protein; promotes the exchange of GDP for GTP on the alpha subunit of a heterotrimeric G-protein complex." [GOC:bf, http://www.iuphar-db.org, Wikipedia:GPCR]
-synonym: "EBV-induced receptor" NARROW []
-synonym: "Epstein-Barr Virus-induced receptor activity" NARROW []
-synonym: "G protein coupled receptor activity" EXACT []
-synonym: "G protein linked receptor activity" EXACT []
-synonym: "G-protein coupled receptor activity" EXACT []
-synonym: "G-protein coupled receptor activity, unknown ligand" NARROW []
-synonym: "G-protein linked receptor activity" EXACT []
-synonym: "GPCR activity" EXACT []
-synonym: "ligand-dependent GPCR activity" EXACT []
-synonym: "Mas proto-oncogene receptor activity" NARROW []
-synonym: "orphan G protein coupled receptor activity" NARROW []
-synonym: "orphan G-protein coupled receptor activity" NARROW []
-synonym: "orphan GPCR activity" NARROW []
-synonym: "RDC1 receptor activity" NARROW []
-synonym: "receptor activity, G-protein coupled" EXACT [GOC:bf]
-synonym: "SREB receptor" NARROW []
-synonym: "super conserved receptor expressed in brain receptor activity" NARROW []
-is_a: GO:0004888 ! transmembrane signaling receptor activity
-relationship: BFO:0000050 GO:0007186 ! G protein-coupled receptor signaling pathway
+id: GO:0003031
+name: detection of carbon dioxide
+def: "The series of events in which a carbon dioxide stimulus is received by a cell and converted into a molecular signal." [GOC:mtg_cardio]
+is_a: GO:0009593 ! detection of chemical stimulus
 
 [Term]
 id: GO:0005513
@@ -340,7 +354,6 @@ synonym: "G-protein-coupled receptor protein signalling pathway" EXACT []
 synonym: "GPCR signaling pathway" EXACT []
 synonym: "GPCR signalling pathway" EXACT []
 is_a: GO:0007165 ! signal transduction
-relationship: BFO:0000051 GO:0004930 ! G protein-coupled receptor activity
 
 [Term]
 id: GO:0007267
@@ -540,6 +553,16 @@ id: GO:0007620
 name: copulation
 def: "The act of sexual union between male and female, involving the transfer of sperm." [ISBN:0721662544]
 is_a: GO:0007618 ! mating
+
+[Term]
+id: GO:0007622
+name: rhythmic behavior
+def: "The specific behavior of an organism that recur with measured regularity." [GOC:jl, GOC:pr]
+synonym: "rhythmic behavioral response to stimulus" EXACT []
+synonym: "rhythmic behaviour" EXACT []
+synonym: "rhythmic behavioural response to stimulus" EXACT []
+is_a: GO:0007610 ! behavior
+is_a: GO:0048511 ! rhythmic process
 
 [Term]
 id: GO:0007623
@@ -810,7 +833,7 @@ is_a: GO:0009628 ! response to abiotic stimulus
 [Term]
 id: GO:0009628
 name: response to abiotic stimulus
-def: "Any process that results in a change in state or activity of a cell or an organism (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of an abiotic (non-living) stimulus." [GOC:hb]
+def: "Any process that results in a change in state or activity of a cell or an organism (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of an abiotic (not derived from living organisms) stimulus." [GOC:hb]
 synonym: "response to abiotic stress" NARROW []
 is_a: GO:0050896 ! response to stimulus
 
@@ -845,6 +868,44 @@ def: "Any process that results in a change in state or activity of a cell or an 
 is_a: GO:0050896 ! response to stimulus
 
 [Term]
+id: GO:0009892
+name: negative regulation of metabolic process
+def: "Any process that stops, prevents, or reduces the frequency, rate or extent of the chemical reactions and pathways within a cell or an organism." [GOC:go_curators]
+synonym: "down regulation of metabolic process" EXACT []
+synonym: "down-regulation of metabolic process" EXACT []
+synonym: "downregulation of metabolic process" EXACT []
+synonym: "inhibition of metabolic process" NARROW []
+synonym: "inhibition of organismal metabolic process" NARROW []
+synonym: "negative regulation of metabolism" EXACT []
+synonym: "negative regulation of multicellular organismal metabolic process" NARROW []
+synonym: "negative regulation of organismal metabolism" EXACT []
+is_a: GO:0019222 ! regulation of metabolic process
+is_a: GO:0048519 ! negative regulation of biological process
+intersection_of: GO:0008150 ! biological_process
+intersection_of: RO:0002212 GO:0008152 ! metabolic process
+relationship: RO:0002212 GO:0008152 ! metabolic process
+
+[Term]
+id: GO:0009893
+name: positive regulation of metabolic process
+def: "Any process that activates or increases the frequency, rate or extent of the chemical reactions and pathways within a cell or an organism." [GOC:go_curators]
+synonym: "activation of metabolic process" NARROW []
+synonym: "positive regulation of metabolism" EXACT []
+synonym: "positive regulation of multicellular organismal metabolic process" NARROW []
+synonym: "positive regulation of organismal metabolism" NARROW []
+synonym: "stimulation of metabolic process" NARROW []
+synonym: "stimulation of organismal metabolic process" NARROW []
+synonym: "up regulation of metabolic process" EXACT []
+synonym: "up-regulation of metabolic process" EXACT []
+synonym: "up-regulation of organismal metabolic process" NARROW []
+synonym: "upregulation of metabolic process" EXACT []
+is_a: GO:0019222 ! regulation of metabolic process
+is_a: GO:0048518 ! positive regulation of biological process
+intersection_of: GO:0008150 ! biological_process
+intersection_of: RO:0002213 GO:0008152 ! metabolic process
+relationship: RO:0002213 GO:0008152 ! metabolic process
+
+[Term]
 id: GO:0009894
 name: regulation of catabolic process
 def: "Any process that modulates the frequency, rate, or extent of the chemical reactions and pathways resulting in the breakdown of substances." [GOC:go_curators]
@@ -855,6 +916,41 @@ is_a: GO:0019222 ! regulation of metabolic process
 intersection_of: GO:0008150 ! biological_process
 intersection_of: RO:0002211 GO:0009056 ! catabolic process
 relationship: RO:0002211 GO:0009056 ! catabolic process
+
+[Term]
+id: GO:0009895
+name: negative regulation of catabolic process
+def: "Any process that stops, prevents, or reduces the frequency, rate or extent of the chemical reactions and pathways resulting in the breakdown of substances." [GOC:go_curators]
+synonym: "down regulation of catabolic process" EXACT []
+synonym: "down-regulation of catabolic process" EXACT []
+synonym: "downregulation of catabolic process" EXACT []
+synonym: "inhibition of catabolic process" NARROW []
+synonym: "negative regulation of breakdown" EXACT []
+synonym: "negative regulation of catabolism" EXACT []
+synonym: "negative regulation of degradation" EXACT []
+is_a: GO:0009892 ! negative regulation of metabolic process
+is_a: GO:0009894 ! regulation of catabolic process
+intersection_of: GO:0008150 ! biological_process
+intersection_of: RO:0002212 GO:0009056 ! catabolic process
+relationship: RO:0002212 GO:0009056 ! catabolic process
+
+[Term]
+id: GO:0009896
+name: positive regulation of catabolic process
+def: "Any process that activates or increases the frequency, rate or extent of the chemical reactions and pathways resulting in the breakdown of substances." [GOC:go_curators]
+synonym: "activation of catabolic process" NARROW []
+synonym: "positive regulation of breakdown" EXACT []
+synonym: "positive regulation of catabolism" EXACT []
+synonym: "positive regulation of degradation" EXACT []
+synonym: "stimulation of catabolic process" NARROW []
+synonym: "up regulation of catabolic process" EXACT []
+synonym: "up-regulation of catabolic process" EXACT []
+synonym: "upregulation of catabolic process" EXACT []
+is_a: GO:0009893 ! positive regulation of metabolic process
+is_a: GO:0009894 ! regulation of catabolic process
+intersection_of: GO:0008150 ! biological_process
+intersection_of: RO:0002213 GO:0009056 ! catabolic process
+relationship: RO:0002213 GO:0009056 ! catabolic process
 
 [Term]
 id: GO:0009914
@@ -875,6 +971,43 @@ is_a: GO:0048583 ! regulation of response to stimulus
 intersection_of: GO:0008150 ! biological_process
 intersection_of: RO:0002211 GO:0007165 ! signal transduction
 relationship: RO:0002211 GO:0007165 ! signal transduction
+
+[Term]
+id: GO:0009967
+name: positive regulation of signal transduction
+def: "Any process that activates or increases the frequency, rate or extent of signal transduction." [GOC:sm]
+synonym: "activation of signal transduction" NARROW []
+synonym: "positive regulation of signaling pathway" RELATED []
+synonym: "positive regulation of signalling pathway" RELATED [GOC:mah]
+synonym: "stimulation of signal transduction" NARROW []
+synonym: "up regulation of signal transduction" EXACT []
+synonym: "up-regulation of signal transduction" EXACT []
+synonym: "upregulation of signal transduction" EXACT []
+is_a: GO:0009966 ! regulation of signal transduction
+is_a: GO:0010647 ! positive regulation of cell communication
+is_a: GO:0023056 ! positive regulation of signaling
+is_a: GO:0048584 ! positive regulation of response to stimulus
+intersection_of: GO:0008150 ! biological_process
+intersection_of: RO:0002213 GO:0007165 ! signal transduction
+relationship: RO:0002213 GO:0007165 ! signal transduction
+
+[Term]
+id: GO:0009968
+name: negative regulation of signal transduction
+def: "Any process that stops, prevents, or reduces the frequency, rate or extent of signal transduction." [GOC:sm]
+synonym: "down regulation of signal transduction" EXACT []
+synonym: "down-regulation of signal transduction" EXACT []
+synonym: "downregulation of signal transduction" EXACT []
+synonym: "inhibition of signal transduction" NARROW []
+synonym: "negative regulation of signaling pathway" RELATED []
+synonym: "negative regulation of signalling pathway" RELATED [GOC:mah]
+is_a: GO:0009966 ! regulation of signal transduction
+is_a: GO:0010648 ! negative regulation of cell communication
+is_a: GO:0023057 ! negative regulation of signaling
+is_a: GO:0048585 ! negative regulation of response to stimulus
+intersection_of: GO:0008150 ! biological_process
+intersection_of: RO:0002212 GO:0007165 ! signal transduction
+relationship: RO:0002212 GO:0007165 ! signal transduction
 
 [Term]
 id: GO:0009987
@@ -922,17 +1055,6 @@ is_a: GO:0010033 ! response to organic substance
 is_a: GO:1901698 ! response to nitrogen compound
 
 [Term]
-id: GO:0010469
-name: regulation of signaling receptor activity
-def: "Any process that modulates the frequency, rate or extent of a signaling receptor activity. Receptor activity is when a molecule combines with an extracellular or intracellular messenger to initiate a change in cell activity." [GOC:dph, GOC:tb]
-synonym: "regulation of receptor activity" BROAD []
-is_a: GO:0009966 ! regulation of signal transduction
-is_a: GO:0065009 ! regulation of molecular function
-intersection_of: GO:0008150 ! biological_process
-intersection_of: RO:0002211 GO:0038023 ! signaling receptor activity
-relationship: RO:0002211 GO:0038023 ! signaling receptor activity
-
-[Term]
 id: GO:0010646
 name: regulation of cell communication
 def: "Any process that modulates the frequency, rate or extent of cell communication. Cell communication is the process that mediates interactions between a cell and its surroundings. Encompasses interactions such as signaling or attachment between one cell and another cell, between a cell and an extracellular matrix, or between a cell and any other aspect of its environment." [GOC:dph, GOC:tb]
@@ -940,6 +1062,26 @@ is_a: GO:0050794 ! regulation of cellular process
 intersection_of: GO:0008150 ! biological_process
 intersection_of: RO:0002211 GO:0007154 ! cell communication
 relationship: RO:0002211 GO:0007154 ! cell communication
+
+[Term]
+id: GO:0010647
+name: positive regulation of cell communication
+def: "Any process that increases the frequency, rate or extent of cell communication. Cell communication is the process that mediates interactions between a cell and its surroundings. Encompasses interactions such as signaling or attachment between one cell and another cell, between a cell and an extracellular matrix, or between a cell and any other aspect of its environment." [GOC:dph, GOC:tb]
+is_a: GO:0010646 ! regulation of cell communication
+is_a: GO:0048522 ! positive regulation of cellular process
+intersection_of: GO:0008150 ! biological_process
+intersection_of: RO:0002213 GO:0007154 ! cell communication
+relationship: RO:0002213 GO:0007154 ! cell communication
+
+[Term]
+id: GO:0010648
+name: negative regulation of cell communication
+def: "Any process that decreases the frequency, rate or extent of cell communication. Cell communication is the process that mediates interactions between a cell and its surroundings. Encompasses interactions such as signaling or attachment between one cell and another cell, between a cell and an extracellular matrix, or between a cell and any other aspect of its environment." [GOC:dph, GOC:tb]
+is_a: GO:0010646 ! regulation of cell communication
+is_a: GO:0048523 ! negative regulation of cellular process
+intersection_of: GO:0008150 ! biological_process
+intersection_of: RO:0002212 GO:0007154 ! cell communication
+relationship: RO:0002212 GO:0007154 ! cell communication
 
 [Term]
 id: GO:0010817
@@ -964,6 +1106,27 @@ is_a: GO:1905952 ! regulation of lipid localization
 intersection_of: GO:0008150 ! biological_process
 intersection_of: RO:0002211 GO:0019915 ! lipid storage
 relationship: RO:0002211 GO:0019915 ! lipid storage
+
+[Term]
+id: GO:0010884
+name: positive regulation of lipid storage
+def: "Any process that increases the rate, frequency or extent of lipid storage. Lipid storage is the accumulation and maintenance in cells or tissues of lipids, compounds soluble in organic solvents but insoluble or sparingly soluble in aqueous solvents. Lipid reserves can be accumulated during early developmental stages for mobilization and utilization at later stages of development." [GOC:BHF, GOC:dph, GOC:tb]
+synonym: "positive regulation of lipid sequestration" NARROW [GOC:dph, GOC:tb]
+is_a: GO:0010883 ! regulation of lipid storage
+is_a: GO:1905954 ! positive regulation of lipid localization
+intersection_of: GO:0008150 ! biological_process
+intersection_of: RO:0002213 GO:0019915 ! lipid storage
+relationship: RO:0002213 GO:0019915 ! lipid storage
+
+[Term]
+id: GO:0010888
+name: negative regulation of lipid storage
+def: "Any process that decreases the rate, frequency or extent of lipid storage. Lipid storage is the accumulation and maintenance in cells or tissues of lipids, compounds soluble in organic solvents but insoluble or sparingly soluble in aqueous solvents. Lipid reserves can be accumulated during early developmental stages for mobilization and utilization at later stages of development." [GOC:BHF, GOC:dph, GOC:tb]
+is_a: GO:0010883 ! regulation of lipid storage
+is_a: GO:1905953 ! negative regulation of lipid localization
+intersection_of: GO:0008150 ! biological_process
+intersection_of: RO:0002212 GO:0019915 ! lipid storage
+relationship: RO:0002212 GO:0019915 ! lipid storage
 
 [Term]
 id: GO:0014046
@@ -992,6 +1155,37 @@ intersection_of: RO:0002211 GO:0014047 ! glutamate secretion
 relationship: RO:0002211 GO:0014047 ! glutamate secretion
 
 [Term]
+id: GO:0014049
+name: positive regulation of glutamate secretion
+def: "Any process that activates or increases the frequency, rate or extent of the controlled release of glutamate." [GOC:ef]
+synonym: "activation of glutamate secretion" NARROW []
+synonym: "stimulation of glutamate secretion" NARROW []
+synonym: "up regulation of glutamate secretion" EXACT []
+synonym: "up-regulation of glutamate secretion" EXACT []
+synonym: "upregulation of glutamate secretion" EXACT []
+is_a: GO:0014048 ! regulation of glutamate secretion
+is_a: GO:0051957 ! positive regulation of amino acid transport
+is_a: GO:1903532 ! positive regulation of secretion by cell
+intersection_of: GO:0008150 ! biological_process
+intersection_of: RO:0002213 GO:0014047 ! glutamate secretion
+relationship: RO:0002213 GO:0014047 ! glutamate secretion
+
+[Term]
+id: GO:0014050
+name: negative regulation of glutamate secretion
+def: "Any process that stops, prevents, or reduces the frequency, rate or extent of the controlled release of glutamate." [GOC:ef]
+synonym: "down regulation of glutamate secretion" EXACT []
+synonym: "down-regulation of glutamate secretion" EXACT []
+synonym: "downregulation of glutamate secretion" EXACT []
+synonym: "inhibition of glutamate secretion" NARROW []
+is_a: GO:0014048 ! regulation of glutamate secretion
+is_a: GO:0051956 ! negative regulation of amino acid transport
+is_a: GO:1903531 ! negative regulation of secretion by cell
+intersection_of: GO:0008150 ! biological_process
+intersection_of: RO:0002212 GO:0014047 ! glutamate secretion
+relationship: RO:0002212 GO:0014047 ! glutamate secretion
+
+[Term]
 id: GO:0014051
 name: gamma-aminobutyric acid secretion
 def: "The regulated release of gamma-aminobutyric acid by a cell or a tissue. The gamma-aminobutyric acid is the principal inhibitory neurotransmitter in the brain but is also found in several extraneural tissues." [GOC:ef]
@@ -1010,6 +1204,41 @@ is_a: GO:0051955 ! regulation of amino acid transport
 intersection_of: GO:0008150 ! biological_process
 intersection_of: RO:0002211 GO:0014051 ! gamma-aminobutyric acid secretion
 relationship: RO:0002211 GO:0014051 ! gamma-aminobutyric acid secretion
+
+[Term]
+id: GO:0014053
+name: negative regulation of gamma-aminobutyric acid secretion
+def: "Any process that stops, prevents, or reduces the frequency, rate or extent of the regulated release of gamma-aminobutyric acid." [GOC:ef]
+synonym: "down regulation of gamma-aminobutyric acid secretion" EXACT []
+synonym: "down-regulation of gamma-aminobutyric acid secretion" EXACT []
+synonym: "downregulation of gamma-aminobutyric acid secretion" EXACT []
+synonym: "inhibition of gamma-aminobutyric acid secretion" NARROW []
+synonym: "negative regulation of GABA secretion" EXACT []
+is_a: GO:0014052 ! regulation of gamma-aminobutyric acid secretion
+is_a: GO:0051048 ! negative regulation of secretion
+is_a: GO:0051589 ! negative regulation of neurotransmitter transport
+is_a: GO:0051956 ! negative regulation of amino acid transport
+intersection_of: GO:0008150 ! biological_process
+intersection_of: RO:0002212 GO:0014051 ! gamma-aminobutyric acid secretion
+relationship: RO:0002212 GO:0014051 ! gamma-aminobutyric acid secretion
+
+[Term]
+id: GO:0014054
+name: positive regulation of gamma-aminobutyric acid secretion
+def: "Any process that activates or increases the frequency, rate or extent of the regulated release of gamma-aminobutyric acid." [GOC:ef]
+synonym: "activation of gamma-aminobutyric acid secretion" NARROW []
+synonym: "positive regulation of GABA secretion" EXACT []
+synonym: "stimulation of gamma-aminobutyric acid secretion" NARROW []
+synonym: "up regulation of gamma-aminobutyric acid secretion" EXACT []
+synonym: "up-regulation of gamma-aminobutyric acid secretion" EXACT []
+synonym: "upregulation of gamma-aminobutyric acid secretion" EXACT []
+is_a: GO:0014052 ! regulation of gamma-aminobutyric acid secretion
+is_a: GO:0051047 ! positive regulation of secretion
+is_a: GO:0051590 ! positive regulation of neurotransmitter transport
+is_a: GO:0051957 ! positive regulation of amino acid transport
+intersection_of: GO:0008150 ! biological_process
+intersection_of: RO:0002213 GO:0014051 ! gamma-aminobutyric acid secretion
+relationship: RO:0002213 GO:0014051 ! gamma-aminobutyric acid secretion
 
 [Term]
 id: GO:0014055
@@ -1036,6 +1265,45 @@ intersection_of: RO:0002211 GO:0014055 ! acetylcholine secretion, neurotransmiss
 relationship: RO:0002211 GO:0014055 ! acetylcholine secretion, neurotransmission
 
 [Term]
+id: GO:0014057
+name: positive regulation of acetylcholine secretion, neurotransmission
+def: "Any process that activates or increases the frequency, rate or extent of the regulated release of acetylcholine." [GOC:ef]
+synonym: "activation of acetylcholine secretion" NARROW []
+synonym: "stimulation of acetylcholine secretion" NARROW []
+synonym: "up regulation of acetylcholine secretion" EXACT []
+synonym: "up-regulation of acetylcholine secretion" EXACT []
+synonym: "upregulation of acetylcholine secretion" EXACT []
+is_a: GO:0001956 ! positive regulation of neurotransmitter secretion
+is_a: GO:0014056 ! regulation of acetylcholine secretion, neurotransmission
+is_a: GO:0032224 ! positive regulation of synaptic transmission, cholinergic
+is_a: GO:0043270 ! positive regulation of ion transport
+is_a: GO:0046887 ! positive regulation of hormone secretion
+is_a: GO:0051954 ! positive regulation of amine transport
+is_a: GO:2001025 ! positive regulation of response to drug
+intersection_of: GO:0008150 ! biological_process
+intersection_of: RO:0002213 GO:0014055 ! acetylcholine secretion, neurotransmission
+relationship: RO:0002213 GO:0014055 ! acetylcholine secretion, neurotransmission
+
+[Term]
+id: GO:0014058
+name: negative regulation of acetylcholine secretion, neurotransmission
+def: "Any process that stops, prevents, or reduces the frequency, rate or extent of the regulated release of acetylcholine." [GOC:ef]
+synonym: "down regulation of acetylcholine secretion" EXACT []
+synonym: "down-regulation of acetylcholine secretion" EXACT []
+synonym: "downregulation of acetylcholine secretion" EXACT []
+synonym: "inhibition of acetylcholine secretion" NARROW []
+is_a: GO:0014056 ! regulation of acetylcholine secretion, neurotransmission
+is_a: GO:0032223 ! negative regulation of synaptic transmission, cholinergic
+is_a: GO:0043271 ! negative regulation of ion transport
+is_a: GO:0046888 ! negative regulation of hormone secretion
+is_a: GO:0046929 ! negative regulation of neurotransmitter secretion
+is_a: GO:0051953 ! negative regulation of amine transport
+is_a: GO:2001024 ! negative regulation of response to drug
+intersection_of: GO:0008150 ! biological_process
+intersection_of: RO:0002212 GO:0014055 ! acetylcholine secretion, neurotransmission
+relationship: RO:0002212 GO:0014055 ! acetylcholine secretion, neurotransmission
+
+[Term]
 id: GO:0014059
 name: regulation of dopamine secretion
 def: "Any process that modulates the frequency, rate or extent of the regulated release of dopamine." [GOC:ef]
@@ -1057,6 +1325,41 @@ is_a: GO:1903530 ! regulation of secretion by cell
 intersection_of: GO:0008150 ! biological_process
 intersection_of: RO:0002211 GO:0001820 ! serotonin secretion
 relationship: RO:0002211 GO:0001820 ! serotonin secretion
+
+[Term]
+id: GO:0014063
+name: negative regulation of serotonin secretion
+def: "Any process that stops, prevents, or reduces the frequency, rate or extent of the regulated release of serotonin." [GOC:ef]
+synonym: "down regulation of serotonin secretion" EXACT []
+synonym: "down-regulation of serotonin secretion" EXACT []
+synonym: "downregulation of serotonin secretion" EXACT []
+synonym: "inhibition of serotonin secretion" NARROW []
+synonym: "positive regulation of serotonin release" RELATED [GOC:tb]
+is_a: GO:0014062 ! regulation of serotonin secretion
+is_a: GO:0043271 ! negative regulation of ion transport
+is_a: GO:0051589 ! negative regulation of neurotransmitter transport
+is_a: GO:1903531 ! negative regulation of secretion by cell
+intersection_of: GO:0008150 ! biological_process
+intersection_of: RO:0002212 GO:0001820 ! serotonin secretion
+relationship: RO:0002212 GO:0001820 ! serotonin secretion
+
+[Term]
+id: GO:0014064
+name: positive regulation of serotonin secretion
+def: "Any process that activates or increases the frequency, rate or extent of the regulated release of serotonin." [GOC:ef]
+synonym: "activation of serotonin secretion" NARROW []
+synonym: "positive regulation of serotonin release" RELATED [GOC:tb]
+synonym: "stimulation of serotonin secretion" NARROW []
+synonym: "up regulation of serotonin secretion" EXACT []
+synonym: "up-regulation of serotonin secretion" EXACT []
+synonym: "upregulation of serotonin secretion" EXACT []
+is_a: GO:0014062 ! regulation of serotonin secretion
+is_a: GO:0043270 ! positive regulation of ion transport
+is_a: GO:0051590 ! positive regulation of neurotransmitter transport
+is_a: GO:1903532 ! positive regulation of secretion by cell
+intersection_of: GO:0008150 ! biological_process
+intersection_of: RO:0002213 GO:0001820 ! serotonin secretion
+relationship: RO:0002213 GO:0001820 ! serotonin secretion
 
 [Term]
 id: GO:0014070
@@ -1307,6 +1610,13 @@ intersection_of: RO:0002211 GO:0016056 ! rhodopsin mediated signaling pathway
 relationship: RO:0002211 GO:0016056 ! rhodopsin mediated signaling pathway
 
 [Term]
+id: GO:0022410
+name: circadian sleep/wake cycle process
+def: "A behavioral process involved in the cycle from wakefulness through an orderly succession of sleep states and stages that occurs on an approximately 24 hour rhythm." [GOC:isa_complete]
+is_a: GO:0048512 ! circadian behavior
+relationship: BFO:0000050 GO:0042745 ! circadian sleep/wake cycle
+
+[Term]
 id: GO:0022412
 name: cellular process involved in reproduction in multicellular organism
 def: "A process, occurring at the cellular level, that is involved in the reproductive function of a multicellular organism." [GOC:isa_complete]
@@ -1359,6 +1669,30 @@ synonym: "single organism signaling" RELATED []
 is_a: GO:0008150 ! biological_process
 
 [Term]
+id: GO:0023056
+name: positive regulation of signaling
+def: "Any process that activates, maintains or increases the frequency, rate or extent of a signaling process." [GOC:mtg_signal]
+synonym: "positive regulation of signaling process" RELATED [GOC:bf]
+synonym: "positive regulation of signalling process" EXACT [GOC:mah]
+is_a: GO:0023051 ! regulation of signaling
+is_a: GO:0048518 ! positive regulation of biological process
+intersection_of: GO:0008150 ! biological_process
+intersection_of: RO:0002213 GO:0023052 ! signaling
+relationship: RO:0002213 GO:0023052 ! signaling
+
+[Term]
+id: GO:0023057
+name: negative regulation of signaling
+def: "Any process that stops, prevents, or reduces the frequency, rate or extent of a signaling process." [GOC:mtg_signal]
+synonym: "negative regulation of signaling process" RELATED [GOC:bf]
+synonym: "negative regulation of signalling process" RELATED [GOC:mah]
+is_a: GO:0023051 ! regulation of signaling
+is_a: GO:0048519 ! negative regulation of biological process
+intersection_of: GO:0008150 ! biological_process
+intersection_of: RO:0002212 GO:0023052 ! signaling
+relationship: RO:0002212 GO:0023052 ! signaling
+
+[Term]
 id: GO:0023061
 name: signal release
 def: "The process in which a signal is secreted or discharged into the extracellular medium from a cellular source." [GOC:mtg_signal]
@@ -1380,6 +1714,15 @@ id: GO:0030424
 name: axon
 def: "The long process of a neuron that conducts nerve impulses, usually away from the cell body to the terminals and varicosities, which are sites of storage and release of neurotransmitter." [GOC:nln, ISBN:0198506732]
 is_a: GO:0043005 ! neuron projection
+
+[Term]
+id: GO:0030431
+name: sleep
+def: "Any process in which an organism enters and maintains a periodic, readily reversible state of reduced awareness and metabolic activity. Usually accompanied by physical relaxation, the onset of sleep in humans and other mammals is marked by a change in the electrical activity of the brain." [ISBN:0192800981]
+synonym: "diapause" RELATED []
+synonym: "dormancy" RELATED []
+synonym: "lethargus" RELATED []
+is_a: GO:0032501 ! multicellular organismal process
 
 [Term]
 id: GO:0030534
@@ -1420,6 +1763,39 @@ intersection_of: RO:0002211 GO:0050877 ! nervous system process
 relationship: RO:0002211 GO:0050877 ! nervous system process
 
 [Term]
+id: GO:0031645
+name: negative regulation of neurological system process
+def: "Any process that stops, prevents, or reduces the frequency, rate or extent of a neurophysiological process." [GOC:dph, GOC:mah, GOC:tb]
+synonym: "down regulation of neurological process" EXACT []
+synonym: "down-regulation of neurological process" EXACT []
+synonym: "downregulation of neurological process" EXACT []
+synonym: "inhibition of neurological process" NARROW []
+synonym: "negative regulation of neurological process" EXACT [GOC:dph, GOC:tb]
+synonym: "negative regulation of neurophysiological process" EXACT []
+is_a: GO:0031644 ! regulation of neurological system process
+is_a: GO:0051241 ! negative regulation of multicellular organismal process
+intersection_of: GO:0008150 ! biological_process
+intersection_of: RO:0002212 GO:0050877 ! nervous system process
+relationship: RO:0002212 GO:0050877 ! nervous system process
+
+[Term]
+id: GO:0031646
+name: positive regulation of neurological system process
+def: "Any process that activates or increases the frequency, rate or extent of a neurophysiological process." [GOC:dph, GOC:mah, GOC:tb]
+synonym: "activation of neurological process" NARROW []
+synonym: "positive regulation of neurological process" EXACT [GOC:dph, GOC:tb]
+synonym: "positive regulation of neurophysiological process" EXACT []
+synonym: "stimulation of neurological process" NARROW []
+synonym: "up regulation of neurological process" EXACT []
+synonym: "up-regulation of neurological process" EXACT []
+synonym: "upregulation of neurological process" EXACT []
+is_a: GO:0031644 ! regulation of neurological system process
+is_a: GO:0051240 ! positive regulation of multicellular organismal process
+intersection_of: GO:0008150 ! biological_process
+intersection_of: RO:0002213 GO:0050877 ! nervous system process
+relationship: RO:0002213 GO:0050877 ! nervous system process
+
+[Term]
 id: GO:0031667
 name: response to nutrient levels
 def: "Any process that results in a change in state or activity of a cell or an organism (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of a stimulus reflecting the presence, absence, or concentration of nutrients." [GOC:mah]
@@ -1445,6 +1821,35 @@ intersection_of: RO:0002211 GO:0009605 ! response to external stimulus
 relationship: RO:0002211 GO:0009605 ! response to external stimulus
 
 [Term]
+id: GO:0032102
+name: negative regulation of response to external stimulus
+def: "Any process that stops, prevents, or reduces the frequency, rate or extent of a response to an external stimulus." [GOC:mah]
+synonym: "down regulation of response to external stimulus" EXACT []
+synonym: "down-regulation of response to external stimulus" EXACT []
+synonym: "downregulation of response to external stimulus" EXACT []
+synonym: "inhibition of response to external stimulus" NARROW []
+is_a: GO:0032101 ! regulation of response to external stimulus
+is_a: GO:0048585 ! negative regulation of response to stimulus
+intersection_of: GO:0008150 ! biological_process
+intersection_of: RO:0002212 GO:0009605 ! response to external stimulus
+relationship: RO:0002212 GO:0009605 ! response to external stimulus
+
+[Term]
+id: GO:0032103
+name: positive regulation of response to external stimulus
+def: "Any process that activates, maintains or increases the rate of a response to an external stimulus." [GOC:mah]
+synonym: "activation of response to external stimulus" NARROW []
+synonym: "stimulation of response to external stimulus" NARROW []
+synonym: "up regulation of response to external stimulus" EXACT []
+synonym: "up-regulation of response to external stimulus" EXACT []
+synonym: "upregulation of response to external stimulus" EXACT []
+is_a: GO:0032101 ! regulation of response to external stimulus
+is_a: GO:0048584 ! positive regulation of response to stimulus
+intersection_of: GO:0008150 ! biological_process
+intersection_of: RO:0002213 GO:0009605 ! response to external stimulus
+relationship: RO:0002213 GO:0009605 ! response to external stimulus
+
+[Term]
 id: GO:0032104
 name: regulation of response to extracellular stimulus
 def: "Any process that modulates the frequency, rate or extent of a response to an extracellular stimulus." [GOC:mah]
@@ -1452,6 +1857,35 @@ is_a: GO:0032101 ! regulation of response to external stimulus
 intersection_of: GO:0008150 ! biological_process
 intersection_of: RO:0002211 GO:0009991 ! response to extracellular stimulus
 relationship: RO:0002211 GO:0009991 ! response to extracellular stimulus
+
+[Term]
+id: GO:0032105
+name: negative regulation of response to extracellular stimulus
+def: "Any process that stops, prevents, or reduces the frequency, rate or extent of a response to an extracellular stimulus." [GOC:mah]
+synonym: "down regulation of response to extracellular stimulus" EXACT []
+synonym: "down-regulation of response to extracellular stimulus" EXACT []
+synonym: "downregulation of response to extracellular stimulus" EXACT []
+synonym: "inhibition of response to extracellular stimulus" NARROW []
+is_a: GO:0032102 ! negative regulation of response to external stimulus
+is_a: GO:0032104 ! regulation of response to extracellular stimulus
+intersection_of: GO:0008150 ! biological_process
+intersection_of: RO:0002212 GO:0009991 ! response to extracellular stimulus
+relationship: RO:0002212 GO:0009991 ! response to extracellular stimulus
+
+[Term]
+id: GO:0032106
+name: positive regulation of response to extracellular stimulus
+def: "Any process that activates, maintains or increases the rate of a response to an extracellular stimulus." [GOC:mah]
+synonym: "activation of response to extracellular stimulus" NARROW []
+synonym: "stimulation of response to extracellular stimulus" NARROW []
+synonym: "up regulation of response to extracellular stimulus" EXACT []
+synonym: "up-regulation of response to extracellular stimulus" EXACT []
+synonym: "upregulation of response to extracellular stimulus" EXACT []
+is_a: GO:0032103 ! positive regulation of response to external stimulus
+is_a: GO:0032104 ! regulation of response to extracellular stimulus
+intersection_of: GO:0008150 ! biological_process
+intersection_of: RO:0002213 GO:0009991 ! response to extracellular stimulus
+relationship: RO:0002213 GO:0009991 ! response to extracellular stimulus
 
 [Term]
 id: GO:0032107
@@ -1463,6 +1897,35 @@ intersection_of: RO:0002211 GO:0031667 ! response to nutrient levels
 relationship: RO:0002211 GO:0031667 ! response to nutrient levels
 
 [Term]
+id: GO:0032108
+name: negative regulation of response to nutrient levels
+def: "Any process that stops, prevents, or reduces the frequency, rate or extent of a response to nutrient levels." [GOC:mah]
+synonym: "down regulation of response to nutrient levels" EXACT []
+synonym: "down-regulation of response to nutrient levels" EXACT []
+synonym: "downregulation of response to nutrient levels" EXACT []
+synonym: "inhibition of response to nutrient levels" NARROW []
+is_a: GO:0032105 ! negative regulation of response to extracellular stimulus
+is_a: GO:0032107 ! regulation of response to nutrient levels
+intersection_of: GO:0008150 ! biological_process
+intersection_of: RO:0002212 GO:0031667 ! response to nutrient levels
+relationship: RO:0002212 GO:0031667 ! response to nutrient levels
+
+[Term]
+id: GO:0032109
+name: positive regulation of response to nutrient levels
+def: "Any process that activates or increases the frequency, rate or extent of a response to nutrient levels." [GOC:mah]
+synonym: "activation of response to nutrient levels" NARROW []
+synonym: "stimulation of response to nutrient levels" NARROW []
+synonym: "up regulation of response to nutrient levels" EXACT []
+synonym: "up-regulation of response to nutrient levels" EXACT []
+synonym: "upregulation of response to nutrient levels" EXACT []
+is_a: GO:0032106 ! positive regulation of response to extracellular stimulus
+is_a: GO:0032107 ! regulation of response to nutrient levels
+intersection_of: GO:0008150 ! biological_process
+intersection_of: RO:0002213 GO:0031667 ! response to nutrient levels
+relationship: RO:0002213 GO:0031667 ! response to nutrient levels
+
+[Term]
 id: GO:0032222
 name: regulation of synaptic transmission, cholinergic
 def: "Any process that modulates the frequency, rate or extent of cholinergic synaptic transmission, the process of communication from a neuron to another neuron across a synapse using the neurotransmitter acetylcholine." [GOC:mah]
@@ -1470,6 +1933,35 @@ is_a: GO:0050804 ! modulation of chemical synaptic transmission
 intersection_of: GO:0008150 ! biological_process
 intersection_of: RO:0002211 GO:0007271 ! synaptic transmission, cholinergic
 relationship: RO:0002211 GO:0007271 ! synaptic transmission, cholinergic
+
+[Term]
+id: GO:0032223
+name: negative regulation of synaptic transmission, cholinergic
+def: "Any process that stops, prevents, or reduces the frequency, rate or extent of cholinergic synaptic transmission, the process of communication from a neuron to another neuron across a synapse using the neurotransmitter acetylcholine." [GOC:mah]
+synonym: "down regulation of synaptic transmission, cholinergic" EXACT []
+synonym: "down-regulation of synaptic transmission, cholinergic" EXACT []
+synonym: "downregulation of synaptic transmission, cholinergic" EXACT []
+synonym: "inhibition of synaptic transmission, cholinergic" NARROW []
+is_a: GO:0032222 ! regulation of synaptic transmission, cholinergic
+is_a: GO:0050805 ! negative regulation of synaptic transmission
+intersection_of: GO:0008150 ! biological_process
+intersection_of: RO:0002212 GO:0007271 ! synaptic transmission, cholinergic
+relationship: RO:0002212 GO:0007271 ! synaptic transmission, cholinergic
+
+[Term]
+id: GO:0032224
+name: positive regulation of synaptic transmission, cholinergic
+def: "Any process that activates, maintains or increases the frequency, rate or extent of cholinergic synaptic transmission, the process of communication from a neuron to another neuron across a synapse using the neurotransmitter acetylcholine." [GOC:mah]
+synonym: "activation of synaptic transmission, cholinergic" NARROW []
+synonym: "stimulation of synaptic transmission, cholinergic" NARROW []
+synonym: "up regulation of synaptic transmission, cholinergic" EXACT []
+synonym: "up-regulation of synaptic transmission, cholinergic" EXACT []
+synonym: "upregulation of synaptic transmission, cholinergic" EXACT []
+is_a: GO:0032222 ! regulation of synaptic transmission, cholinergic
+is_a: GO:0050806 ! positive regulation of synaptic transmission
+intersection_of: GO:0008150 ! biological_process
+intersection_of: RO:0002213 GO:0007271 ! synaptic transmission, cholinergic
+relationship: RO:0002213 GO:0007271 ! synaptic transmission, cholinergic
 
 [Term]
 id: GO:0032225
@@ -1481,6 +1973,35 @@ intersection_of: RO:0002211 GO:0001963 ! synaptic transmission, dopaminergic
 relationship: RO:0002211 GO:0001963 ! synaptic transmission, dopaminergic
 
 [Term]
+id: GO:0032226
+name: positive regulation of synaptic transmission, dopaminergic
+def: "Any process that activates, maintains or increases the frequency, rate or extent of dopaminergic synaptic transmission, the process of communication from a neuron to another neuron across a synapse using the neurotransmitter dopamine." [GOC:mah]
+synonym: "activation of synaptic transmission, dopaminergic" NARROW []
+synonym: "stimulation of synaptic transmission, dopaminergic" NARROW []
+synonym: "up regulation of synaptic transmission, dopaminergic" EXACT []
+synonym: "up-regulation of synaptic transmission, dopaminergic" EXACT []
+synonym: "upregulation of synaptic transmission, dopaminergic" EXACT []
+is_a: GO:0032225 ! regulation of synaptic transmission, dopaminergic
+is_a: GO:0050806 ! positive regulation of synaptic transmission
+intersection_of: GO:0008150 ! biological_process
+intersection_of: RO:0002213 GO:0001963 ! synaptic transmission, dopaminergic
+relationship: RO:0002213 GO:0001963 ! synaptic transmission, dopaminergic
+
+[Term]
+id: GO:0032227
+name: negative regulation of synaptic transmission, dopaminergic
+def: "Any process that stops, prevents, or reduces the frequency, rate or extent of dopaminergic synaptic transmission, the process of communication from a neuron to another neuron across a synapse using the neurotransmitter dopamine." [GOC:mah]
+synonym: "down regulation of synaptic transmission, dopaminergic" EXACT []
+synonym: "down-regulation of synaptic transmission, dopaminergic" EXACT []
+synonym: "downregulation of synaptic transmission, dopaminergic" EXACT []
+synonym: "inhibition of synaptic transmission, dopaminergic" NARROW []
+is_a: GO:0032225 ! regulation of synaptic transmission, dopaminergic
+is_a: GO:0050805 ! negative regulation of synaptic transmission
+intersection_of: GO:0008150 ! biological_process
+intersection_of: RO:0002212 GO:0001963 ! synaptic transmission, dopaminergic
+relationship: RO:0002212 GO:0001963 ! synaptic transmission, dopaminergic
+
+[Term]
 id: GO:0032228
 name: regulation of synaptic transmission, GABAergic
 def: "Any process that modulates the frequency, rate or extent of GABAergic synaptic transmission, the process of communication from a neuron to another neuron across a synapse using the neurotransmitter gamma-aminobutyric acid (GABA)." [GOC:mah]
@@ -1488,6 +2009,35 @@ is_a: GO:0050804 ! modulation of chemical synaptic transmission
 intersection_of: GO:0008150 ! biological_process
 intersection_of: RO:0002211 GO:0051932 ! synaptic transmission, GABAergic
 relationship: RO:0002211 GO:0051932 ! synaptic transmission, GABAergic
+
+[Term]
+id: GO:0032229
+name: negative regulation of synaptic transmission, GABAergic
+def: "Any process that stops, prevents, or reduces the frequency, rate or extent of GABAergic synaptic transmission, the process of communication from a neuron to another neuron across a synapse using the neurotransmitter gamma-aminobutyric acid (GABA)." [GOC:mah]
+synonym: "down regulation of synaptic transmission, GABAergic" EXACT []
+synonym: "down-regulation of synaptic transmission, GABAergic" EXACT []
+synonym: "downregulation of synaptic transmission, GABAergic" EXACT []
+synonym: "inhibition of synaptic transmission, GABAergic" NARROW []
+is_a: GO:0032228 ! regulation of synaptic transmission, GABAergic
+is_a: GO:0050805 ! negative regulation of synaptic transmission
+intersection_of: GO:0008150 ! biological_process
+intersection_of: RO:0002212 GO:0051932 ! synaptic transmission, GABAergic
+relationship: RO:0002212 GO:0051932 ! synaptic transmission, GABAergic
+
+[Term]
+id: GO:0032230
+name: positive regulation of synaptic transmission, GABAergic
+def: "Any process that activates, maintains or increases the frequency, rate or extent of GABAergic synaptic transmission, the process of communication from a neuron to another neuron across a synapse using the neurotransmitter gamma-aminobutyric acid (GABA)." [GOC:mah]
+synonym: "activation of synaptic transmission, GABAergic" NARROW []
+synonym: "stimulation of synaptic transmission, GABAergic" NARROW []
+synonym: "up regulation of synaptic transmission, GABAergic" EXACT []
+synonym: "up-regulation of synaptic transmission, GABAergic" EXACT []
+synonym: "upregulation of synaptic transmission, GABAergic" EXACT []
+is_a: GO:0032228 ! regulation of synaptic transmission, GABAergic
+is_a: GO:0050806 ! positive regulation of synaptic transmission
+intersection_of: GO:0008150 ! biological_process
+intersection_of: RO:0002213 GO:0051932 ! synaptic transmission, GABAergic
+relationship: RO:0002213 GO:0051932 ! synaptic transmission, GABAergic
 
 [Term]
 id: GO:0032501
@@ -1522,6 +2072,35 @@ is_a: GO:0051049 ! regulation of transport
 intersection_of: GO:0008150 ! biological_process
 intersection_of: RO:0002211 GO:0015849 ! organic acid transport
 relationship: RO:0002211 GO:0015849 ! organic acid transport
+
+[Term]
+id: GO:0032891
+name: negative regulation of organic acid transport
+def: "Any process that stops, prevents, or reduces the frequency, rate or extent of the directed movement of organic acids into, out of or within a cell, or between cells, by means of some agent such as a transporter or pore." [GOC:mah]
+synonym: "down regulation of organic acid transport" EXACT []
+synonym: "down-regulation of organic acid transport" EXACT []
+synonym: "downregulation of organic acid transport" EXACT []
+synonym: "inhibition of organic acid transport" NARROW []
+is_a: GO:0032890 ! regulation of organic acid transport
+is_a: GO:0051051 ! negative regulation of transport
+intersection_of: GO:0008150 ! biological_process
+intersection_of: RO:0002212 GO:0015849 ! organic acid transport
+relationship: RO:0002212 GO:0015849 ! organic acid transport
+
+[Term]
+id: GO:0032892
+name: positive regulation of organic acid transport
+def: "Any process that activates or increases the frequency, rate or extent of the directed movement of organic acids into, out of or within a cell, or between cells, by means of some agent such as a transporter or pore." [GOC:mah]
+synonym: "activation of organic acid transport" NARROW []
+synonym: "stimulation of organic acid transport" NARROW []
+synonym: "up regulation of organic acid transport" EXACT []
+synonym: "up-regulation of organic acid transport" EXACT []
+synonym: "upregulation of organic acid transport" EXACT []
+is_a: GO:0032890 ! regulation of organic acid transport
+is_a: GO:0051050 ! positive regulation of transport
+intersection_of: GO:0008150 ! biological_process
+intersection_of: RO:0002213 GO:0015849 ! organic acid transport
+relationship: RO:0002213 GO:0015849 ! organic acid transport
 
 [Term]
 id: GO:0032940
@@ -1563,6 +2142,70 @@ name: multicellular organismal response to stress
 def: "Any process that results in a change in state or activity of a multicellular organism (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of a stimulus indicating the organism is under stress. The stress is usually, but not necessarily, exogenous (e.g. temperature, humidity, ionizing radiation)." [GOC:mah]
 is_a: GO:0006950 ! response to stress
 is_a: GO:0032501 ! multicellular organismal process
+
+[Term]
+id: GO:0033602
+name: negative regulation of dopamine secretion
+def: "Any process that stops, prevents, or reduces the frequency, rate or extent of the regulated release of dopamine." [GOC:sl]
+synonym: "down regulation of dopamine secretion" EXACT []
+synonym: "down-regulation of dopamine secretion" EXACT []
+synonym: "downregulation of dopamine secretion" EXACT []
+synonym: "inhibition of dopamine secretion" NARROW []
+is_a: GO:0014059 ! regulation of dopamine secretion
+is_a: GO:0033604 ! negative regulation of catecholamine secretion
+is_a: GO:0043271 ! negative regulation of ion transport
+is_a: GO:2001024 ! negative regulation of response to drug
+intersection_of: GO:0008150 ! biological_process
+intersection_of: RO:0002212 GO:0014046 ! dopamine secretion
+relationship: RO:0002212 GO:0014046 ! dopamine secretion
+
+[Term]
+id: GO:0033603
+name: positive regulation of dopamine secretion
+def: "Any process that activates or increases the frequency, rate or extent of the regulated release of dopamine." [GOC:sl]
+synonym: "activation of dopamine secretion" NARROW []
+synonym: "stimulation of dopamine secretion" NARROW []
+synonym: "up regulation of dopamine secretion" EXACT []
+synonym: "up-regulation of dopamine secretion" EXACT []
+synonym: "upregulation of dopamine secretion" EXACT []
+is_a: GO:0014059 ! regulation of dopamine secretion
+is_a: GO:0033605 ! positive regulation of catecholamine secretion
+is_a: GO:0043270 ! positive regulation of ion transport
+is_a: GO:2001025 ! positive regulation of response to drug
+intersection_of: GO:0008150 ! biological_process
+intersection_of: RO:0002213 GO:0014046 ! dopamine secretion
+relationship: RO:0002213 GO:0014046 ! dopamine secretion
+
+[Term]
+id: GO:0033604
+name: negative regulation of catecholamine secretion
+def: "Any process that stops, prevents, or reduces the frequency, rate or extent of the regulated release of a catecholamine." [GOC:mah]
+synonym: "down regulation of catecholamine secretion" EXACT []
+synonym: "down-regulation of catecholamine secretion" EXACT []
+synonym: "downregulation of catecholamine secretion" EXACT []
+synonym: "inhibition of catecholamine secretion" NARROW []
+is_a: GO:0050433 ! regulation of catecholamine secretion
+is_a: GO:0051953 ! negative regulation of amine transport
+is_a: GO:1903531 ! negative regulation of secretion by cell
+intersection_of: GO:0008150 ! biological_process
+intersection_of: RO:0002212 GO:0050432 ! catecholamine secretion
+relationship: RO:0002212 GO:0050432 ! catecholamine secretion
+
+[Term]
+id: GO:0033605
+name: positive regulation of catecholamine secretion
+def: "Any process that activates or increases the frequency, rate or extent of the regulated release of a catecholamine." [GOC:mah]
+synonym: "activation of catecholamine secretion" NARROW []
+synonym: "stimulation of catecholamine secretion" NARROW []
+synonym: "up regulation of catecholamine secretion" EXACT []
+synonym: "up-regulation of catecholamine secretion" EXACT []
+synonym: "upregulation of catecholamine secretion" EXACT []
+is_a: GO:0050433 ! regulation of catecholamine secretion
+is_a: GO:0051954 ! positive regulation of amine transport
+is_a: GO:1903532 ! positive regulation of secretion by cell
+intersection_of: GO:0008150 ! biological_process
+intersection_of: RO:0002213 GO:0050432 ! catecholamine secretion
+relationship: RO:0002213 GO:0050432 ! catecholamine secretion
 
 [Term]
 id: GO:0033993
@@ -1615,14 +2258,6 @@ def: "Any process that results in a change in state or activity of a cell or an 
 is_a: GO:0042493 ! response to drug
 
 [Term]
-id: GO:0038023
-name: signaling receptor activity
-def: "Receiving a signal and transmitting it in the cell to initiate a change in cell activity. A signal is a physical entity or change in state that is used to transfer information in order to trigger a response." [GOC:bf, GOC:signaling]
-synonym: "receptor activity" BROAD []
-synonym: "receptor activity involved in signal transduction" EXACT [GOC:bf]
-is_a: GO:0060089 ! molecular transducer activity
-
-[Term]
 id: GO:0040011
 name: locomotion
 def: "Self-propelled movement of a cell or organism from one location to another." [GOC:dgh]
@@ -1636,6 +2271,35 @@ is_a: GO:0050789 ! regulation of biological process
 intersection_of: GO:0008150 ! biological_process
 intersection_of: RO:0002211 GO:0040011 ! locomotion
 relationship: RO:0002211 GO:0040011 ! locomotion
+
+[Term]
+id: GO:0040013
+name: negative regulation of locomotion
+def: "Any process that stops, prevents, or reduces the frequency, rate or extent of locomotion of a cell or organism." [GOC:go_curators]
+synonym: "down regulation of locomotion" EXACT []
+synonym: "down-regulation of locomotion" EXACT []
+synonym: "downregulation of locomotion" EXACT []
+synonym: "inhibition of locomotion" NARROW []
+is_a: GO:0040012 ! regulation of locomotion
+is_a: GO:0048519 ! negative regulation of biological process
+intersection_of: GO:0008150 ! biological_process
+intersection_of: RO:0002212 GO:0040011 ! locomotion
+relationship: RO:0002212 GO:0040011 ! locomotion
+
+[Term]
+id: GO:0040017
+name: positive regulation of locomotion
+def: "Any process that activates or increases the frequency, rate or extent of locomotion of a cell or organism." [GOC:go_curators]
+synonym: "activation of locomotion" NARROW []
+synonym: "stimulation of locomotion" NARROW []
+synonym: "up regulation of locomotion" EXACT []
+synonym: "up-regulation of locomotion" EXACT []
+synonym: "upregulation of locomotion" EXACT []
+is_a: GO:0040012 ! regulation of locomotion
+is_a: GO:0048518 ! positive regulation of biological process
+intersection_of: GO:0008150 ! biological_process
+intersection_of: RO:0002213 GO:0040011 ! locomotion
+relationship: RO:0002213 GO:0040011 ! locomotion
 
 [Term]
 id: GO:0042048
@@ -1656,6 +2320,23 @@ def: "Any process that results in a change in state or activity of a cell or an 
 synonym: "response to chemical stimulus" EXACT [GOC:dos]
 synonym: "response to chemical substance" EXACT []
 is_a: GO:0050896 ! response to stimulus
+
+[Term]
+id: GO:0042321
+name: negative regulation of circadian sleep/wake cycle, sleep
+def: "Any process that stops, prevents or reduces the duration or quality of sleep, a readily reversible state of reduced awareness and metabolic activity that occurs periodically in many animals." [GOC:go_curators, GOC:jl, ISBN:0192800981]
+synonym: "down regulation of circadian sleep/wake cycle, sleep" EXACT []
+synonym: "down-regulation of circadian sleep/wake cycle, sleep" EXACT []
+synonym: "downregulation of circadian sleep/wake cycle, sleep" EXACT []
+synonym: "inhibition of circadian sleep/wake cycle, sleep" NARROW []
+synonym: "negative regulation of sleep" EXACT []
+is_a: GO:0042754 ! negative regulation of circadian rhythm
+is_a: GO:0045187 ! regulation of circadian sleep/wake cycle, sleep
+is_a: GO:0048521 ! negative regulation of behavior
+is_a: GO:0051241 ! negative regulation of multicellular organismal process
+intersection_of: GO:0008150 ! biological_process
+intersection_of: RO:0002212 GO:0050802 ! circadian sleep/wake cycle, sleep
+relationship: RO:0002212 GO:0050802 ! circadian sleep/wake cycle, sleep
 
 [Term]
 id: GO:0042330
@@ -1688,6 +2369,23 @@ synonym: "drug susceptibility/resistance" RELATED []
 is_a: GO:0042221 ! response to chemical
 
 [Term]
+id: GO:0042745
+name: circadian sleep/wake cycle
+def: "The cycle from wakefulness through an orderly succession of sleep states and stages that occurs on an approximately 24 hour rhythm." [GOC:jl, http://www.sleepquest.com]
+is_a: GO:0048512 ! circadian behavior
+
+[Term]
+id: GO:0042749
+name: regulation of circadian sleep/wake cycle
+def: "Any process that modulates the frequency, rate or extent of the circadian sleep/wake cycle." [GOC:jl]
+is_a: GO:0042752 ! regulation of circadian rhythm
+is_a: GO:0050795 ! regulation of behavior
+is_a: GO:0051239 ! regulation of multicellular organismal process
+intersection_of: GO:0008150 ! biological_process
+intersection_of: RO:0002211 GO:0042745 ! circadian sleep/wake cycle
+relationship: RO:0002211 GO:0042745 ! circadian sleep/wake cycle
+
+[Term]
 id: GO:0042752
 name: regulation of circadian rhythm
 def: "Any process that modulates the frequency, rate or extent of a circadian rhythm. A circadian rhythm is a biological process in an organism that recurs with a regularity of approximately 24 hours." [GOC:dph, GOC:jl, GOC:tb]
@@ -1695,6 +2393,35 @@ is_a: GO:0050789 ! regulation of biological process
 intersection_of: GO:0008150 ! biological_process
 intersection_of: RO:0002211 GO:0007623 ! circadian rhythm
 relationship: RO:0002211 GO:0007623 ! circadian rhythm
+
+[Term]
+id: GO:0042753
+name: positive regulation of circadian rhythm
+def: "Any process that activates or increases the frequency, rate or extent of a circadian rhythm behavior." [GOC:go_curators]
+synonym: "activation of circadian rhythm" NARROW []
+synonym: "stimulation of circadian rhythm" NARROW []
+synonym: "up regulation of circadian rhythm" EXACT []
+synonym: "up-regulation of circadian rhythm" EXACT []
+synonym: "upregulation of circadian rhythm" EXACT []
+is_a: GO:0042752 ! regulation of circadian rhythm
+is_a: GO:0048518 ! positive regulation of biological process
+intersection_of: GO:0008150 ! biological_process
+intersection_of: RO:0002213 GO:0007623 ! circadian rhythm
+relationship: RO:0002213 GO:0007623 ! circadian rhythm
+
+[Term]
+id: GO:0042754
+name: negative regulation of circadian rhythm
+def: "Any process that stops, prevents, or reduces the frequency, rate or extent of a circadian rhythm behavior." [GOC:go_curators]
+synonym: "down regulation of circadian rhythm" EXACT []
+synonym: "down-regulation of circadian rhythm" EXACT []
+synonym: "downregulation of circadian rhythm" EXACT []
+synonym: "inhibition of circadian rhythm" NARROW []
+is_a: GO:0042752 ! regulation of circadian rhythm
+is_a: GO:0048519 ! negative regulation of biological process
+intersection_of: GO:0008150 ! biological_process
+intersection_of: RO:0002212 GO:0007623 ! circadian rhythm
+relationship: RO:0002212 GO:0007623 ! circadian rhythm
 
 [Term]
 id: GO:0042886
@@ -1741,6 +2468,35 @@ intersection_of: RO:0002211 GO:0006811 ! ion transport
 relationship: RO:0002211 GO:0006811 ! ion transport
 
 [Term]
+id: GO:0043270
+name: positive regulation of ion transport
+def: "Any process that activates or increases the frequency, rate or extent of the directed movement of charged atoms or small charged molecules into, out of or within a cell, or between cells, by means of some agent such as a transporter or pore." [GOC:jl]
+synonym: "activation of ion transport" NARROW []
+synonym: "stimulation of ion transport" NARROW []
+synonym: "up regulation of ion transport" EXACT []
+synonym: "up-regulation of ion transport" EXACT []
+synonym: "upregulation of ion transport" EXACT []
+is_a: GO:0043269 ! regulation of ion transport
+is_a: GO:0051050 ! positive regulation of transport
+intersection_of: GO:0008150 ! biological_process
+intersection_of: RO:0002213 GO:0006811 ! ion transport
+relationship: RO:0002213 GO:0006811 ! ion transport
+
+[Term]
+id: GO:0043271
+name: negative regulation of ion transport
+def: "Any process that stops, prevents, or reduces the frequency, rate or extent of the directed movement of charged atoms or small charged molecules into, out of or within a cell, or between cells, by means of some agent such as a transporter or pore." [GOC:jl]
+synonym: "down regulation of ion transport" EXACT []
+synonym: "down-regulation of ion transport" EXACT []
+synonym: "downregulation of ion transport" EXACT []
+synonym: "inhibition of ion transport" NARROW []
+is_a: GO:0043269 ! regulation of ion transport
+is_a: GO:0051051 ! negative regulation of transport
+intersection_of: GO:0008150 ! biological_process
+intersection_of: RO:0002212 GO:0006811 ! ion transport
+relationship: RO:0002212 GO:0006811 ! ion transport
+
+[Term]
 id: GO:0043279
 name: response to alkaloid
 def: "Any process that results in a change in state or activity of a cell or an organism (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of an alkaloid stimulus. Alkaloids are a large group of nitrogenous substances found in naturally in plants, many of which have extracts that are pharmacologically active." [CHEBI:22315, GOC:jl]
@@ -1763,6 +2519,26 @@ is_a: GO:0050789 ! regulation of biological process
 intersection_of: GO:0008150 ! biological_process
 intersection_of: RO:0002211 GO:0051704 ! multi-organism process
 relationship: RO:0002211 GO:0051704 ! multi-organism process
+
+[Term]
+id: GO:0043901
+name: negative regulation of multi-organism process
+def: "Any process that stops, prevents, or reduces the frequency, rate or extent of a multi-organism process, a process in which an organism has an effect on another organism of the same or different species." [GOC:jl]
+is_a: GO:0043900 ! regulation of multi-organism process
+is_a: GO:0048519 ! negative regulation of biological process
+intersection_of: GO:0008150 ! biological_process
+intersection_of: RO:0002212 GO:0051704 ! multi-organism process
+relationship: RO:0002212 GO:0051704 ! multi-organism process
+
+[Term]
+id: GO:0043902
+name: positive regulation of multi-organism process
+def: "Any process that activates or increases the frequency, rate or extent of a multi-organism process, a process in which an organism has an effect on another organism of the same or different species." [GOC:jl]
+is_a: GO:0043900 ! regulation of multi-organism process
+is_a: GO:0048518 ! positive regulation of biological process
+intersection_of: GO:0008150 ! biological_process
+intersection_of: RO:0002213 GO:0051704 ! multi-organism process
+relationship: RO:0002213 GO:0051704 ! multi-organism process
 
 [Term]
 id: GO:0044057
@@ -1889,6 +2665,16 @@ is_a: GO:0071702 ! organic substance transport
 is_a: GO:0071705 ! nitrogen compound transport
 
 [Term]
+id: GO:0045187
+name: regulation of circadian sleep/wake cycle, sleep
+def: "Any process that modulates the frequency, rate or extent of sleep; a readily reversible state of reduced awareness and metabolic activity that occurs periodically in many animals." [GOC:jl, ISBN:0192800981]
+synonym: "regulation of sleep" EXACT []
+is_a: GO:0042749 ! regulation of circadian sleep/wake cycle
+intersection_of: GO:0008150 ! biological_process
+intersection_of: RO:0002211 GO:0050802 ! circadian sleep/wake cycle, sleep
+relationship: RO:0002211 GO:0050802 ! circadian sleep/wake cycle, sleep
+
+[Term]
 id: GO:0045202
 name: synapse
 def: "The junction between a nerve fiber of one neuron and another neuron, muscle fiber or glial cell. As the nerve fiber approaches the synapse it enlarges into a specialized structure, the presynaptic nerve ending, which contains mitochondria and synaptic vesicles. At the tip of the nerve ending is the presynaptic membrane; facing it, and separated from it by a minute cleft (the synaptic cleft) is a specialized area of membrane on the receiving cell, known as the postsynaptic membrane. In response to the arrival of nerve impulses, the presynaptic nerve ending secretes molecules of neurotransmitters into the synaptic cleft. These diffuse across the cleft and transmit the signal to the postsynaptic membrane." [ISBN:0198506732]
@@ -1906,6 +2692,99 @@ synonym: "male courtship behaviour, song production" BROAD []
 synonym: "male courtship behaviour, veined wing generated song production" EXACT []
 is_a: GO:0008049 ! male courtship behavior
 relationship: BFO:0000050 GO:0016545 ! male courtship behavior, veined wing vibration
+
+[Term]
+id: GO:0045744
+name: negative regulation of G protein-coupled receptor signaling pathway
+def: "Any process that stops, prevents, or reduces the frequency, rate or extent of G protein-coupled receptor signaling pathway." [GOC:go_curators]
+synonym: "down regulation of G-protein coupled receptor protein signaling pathway" EXACT []
+synonym: "down-regulation of G-protein coupled receptor protein signaling pathway" EXACT []
+synonym: "downregulation of G-protein coupled receptor protein signaling pathway" EXACT []
+synonym: "inhibition of G-protein coupled receptor protein signaling pathway" NARROW []
+synonym: "negative regulation of G protein coupled receptor protein signaling pathway" EXACT []
+synonym: "negative regulation of G protein coupled receptor protein signalling pathway" EXACT []
+synonym: "negative regulation of G-protein coupled receptor protein signaling pathway" EXACT []
+synonym: "negative regulation of G-protein coupled receptor protein signalling pathway" EXACT []
+synonym: "negative regulation of G-protein-coupled receptor protein signalling pathway" EXACT []
+synonym: "negative regulation of GPCR protein signaling pathway" EXACT []
+synonym: "negative regulation of GPCR protein signalling pathway" EXACT []
+is_a: GO:0008277 ! regulation of G protein-coupled receptor signaling pathway
+is_a: GO:0009968 ! negative regulation of signal transduction
+intersection_of: GO:0008150 ! biological_process
+intersection_of: RO:0002212 GO:0007186 ! G protein-coupled receptor signaling pathway
+relationship: RO:0002212 GO:0007186 ! G protein-coupled receptor signaling pathway
+
+[Term]
+id: GO:0045745
+name: positive regulation of G protein-coupled receptor signaling pathway
+def: "Any process that activates or increases the frequency, rate or extent of G protein-coupled receptor signaling pathway activity." [GOC:go_curators]
+synonym: "activation of G-protein coupled receptor protein signaling pathway" NARROW []
+synonym: "positive regulation of G protein coupled receptor protein signaling pathway" EXACT []
+synonym: "positive regulation of G protein coupled receptor protein signalling pathway" EXACT []
+synonym: "positive regulation of G-protein coupled receptor protein signaling pathway" EXACT []
+synonym: "positive regulation of G-protein coupled receptor protein signalling pathway" EXACT []
+synonym: "positive regulation of G-protein-coupled receptor protein signaling pathway" EXACT []
+synonym: "positive regulation of G-protein-coupled receptor protein signalling pathway" EXACT []
+synonym: "positive regulation of GPCR protein signaling pathway" EXACT []
+synonym: "positive regulation of GPCR protein signalling pathway" EXACT []
+synonym: "stimulation of G-protein coupled receptor protein signaling pathway" NARROW []
+synonym: "up regulation of G-protein coupled receptor protein signaling pathway" EXACT []
+synonym: "up-regulation of G-protein coupled receptor protein signaling pathway" EXACT []
+synonym: "upregulation of G-protein coupled receptor protein signaling pathway" EXACT []
+is_a: GO:0008277 ! regulation of G protein-coupled receptor signaling pathway
+is_a: GO:0009967 ! positive regulation of signal transduction
+intersection_of: GO:0008150 ! biological_process
+intersection_of: RO:0002213 GO:0007186 ! G protein-coupled receptor signaling pathway
+relationship: RO:0002213 GO:0007186 ! G protein-coupled receptor signaling pathway
+
+[Term]
+id: GO:0045833
+name: negative regulation of lipid metabolic process
+def: "Any process that stops, prevents, or reduces the frequency, rate or extent of the chemical reactions and pathways involving lipids." [GOC:go_curators]
+synonym: "down regulation of lipid metabolic process" EXACT []
+synonym: "down-regulation of lipid metabolic process" EXACT []
+synonym: "downregulation of lipid metabolic process" EXACT []
+synonym: "inhibition of lipid metabolic process" NARROW []
+synonym: "negative regulation of lipid metabolism" EXACT []
+is_a: GO:0009892 ! negative regulation of metabolic process
+is_a: GO:0019216 ! regulation of lipid metabolic process
+intersection_of: GO:0008150 ! biological_process
+intersection_of: RO:0002212 GO:0006629 ! lipid metabolic process
+relationship: RO:0002212 GO:0006629 ! lipid metabolic process
+
+[Term]
+id: GO:0045834
+name: positive regulation of lipid metabolic process
+def: "Any process that activates or increases the frequency, rate or extent of the chemical reactions and pathways involving lipids." [GOC:go_curators]
+synonym: "activation of lipid metabolic process" NARROW []
+synonym: "positive regulation of lipid metabolism" EXACT []
+synonym: "stimulation of lipid metabolic process" NARROW []
+synonym: "up regulation of lipid metabolic process" EXACT []
+synonym: "up-regulation of lipid metabolic process" EXACT []
+synonym: "upregulation of lipid metabolic process" EXACT []
+is_a: GO:0009893 ! positive regulation of metabolic process
+is_a: GO:0019216 ! regulation of lipid metabolic process
+intersection_of: GO:0008150 ! biological_process
+intersection_of: RO:0002213 GO:0006629 ! lipid metabolic process
+relationship: RO:0002213 GO:0006629 ! lipid metabolic process
+
+[Term]
+id: GO:0045938
+name: positive regulation of circadian sleep/wake cycle, sleep
+def: "Any process that activates or increases the duration or quality of sleep, a readily reversible state of reduced awareness and metabolic activity that occurs periodically in many animals." [GOC:go_curators]
+synonym: "activation of circadian sleep/wake cycle, sleep" NARROW []
+synonym: "positive regulation of sleep" EXACT []
+synonym: "stimulation of circadian sleep/wake cycle, sleep" NARROW []
+synonym: "up regulation of circadian sleep/wake cycle, sleep" EXACT []
+synonym: "up-regulation of circadian sleep/wake cycle, sleep" EXACT []
+synonym: "upregulation of circadian sleep/wake cycle, sleep" EXACT []
+is_a: GO:0042753 ! positive regulation of circadian rhythm
+is_a: GO:0045187 ! regulation of circadian sleep/wake cycle, sleep
+is_a: GO:0048520 ! positive regulation of behavior
+is_a: GO:0051240 ! positive regulation of multicellular organismal process
+intersection_of: GO:0008150 ! biological_process
+intersection_of: RO:0002213 GO:0050802 ! circadian sleep/wake cycle, sleep
+relationship: RO:0002213 GO:0050802 ! circadian sleep/wake cycle, sleep
 
 [Term]
 id: GO:0046535
@@ -1979,6 +2858,22 @@ intersection_of: RO:0002211 GO:0046541 ! saliva secretion
 relationship: RO:0002211 GO:0046541 ! saliva secretion
 
 [Term]
+id: GO:0046878
+name: positive regulation of saliva secretion
+def: "Any process that activates or increases the frequency, rate or extent of the regulated release of saliva." [GOC:ai]
+synonym: "activation of saliva secretion" NARROW []
+synonym: "stimulation of saliva secretion" NARROW []
+synonym: "up regulation of saliva secretion" EXACT []
+synonym: "up-regulation of saliva secretion" EXACT []
+synonym: "upregulation of saliva secretion" EXACT []
+is_a: GO:0046877 ! regulation of saliva secretion
+is_a: GO:0051047 ! positive regulation of secretion
+is_a: GO:0060456 ! positive regulation of digestive system process
+intersection_of: GO:0008150 ! biological_process
+intersection_of: RO:0002213 GO:0046541 ! saliva secretion
+relationship: RO:0002213 GO:0046541 ! saliva secretion
+
+[Term]
 id: GO:0046879
 name: hormone secretion
 def: "The regulated release of hormones, substances with a specific regulatory effect on a particular organ or group of cells." [ISBN:0198506732]
@@ -1998,6 +2893,39 @@ intersection_of: RO:0002211 GO:0046879 ! hormone secretion
 relationship: RO:0002211 GO:0046879 ! hormone secretion
 
 [Term]
+id: GO:0046887
+name: positive regulation of hormone secretion
+def: "Any process that activates or increases the frequency, rate or extent of the regulated release of a hormone from a cell." [GOC:ai]
+synonym: "activation of hormone secretion" NARROW []
+synonym: "stimulation of hormone secretion" NARROW []
+synonym: "up regulation of hormone secretion" EXACT []
+synonym: "up-regulation of hormone secretion" EXACT []
+synonym: "upregulation of hormone secretion" EXACT []
+is_a: GO:0010647 ! positive regulation of cell communication
+is_a: GO:0023056 ! positive regulation of signaling
+is_a: GO:0046883 ! regulation of hormone secretion
+is_a: GO:1903532 ! positive regulation of secretion by cell
+intersection_of: GO:0008150 ! biological_process
+intersection_of: RO:0002213 GO:0046879 ! hormone secretion
+relationship: RO:0002213 GO:0046879 ! hormone secretion
+
+[Term]
+id: GO:0046888
+name: negative regulation of hormone secretion
+def: "Any process that stops, prevents, or reduces the frequency, rate or extent of the regulated release of a hormone from a cell." [GOC:ai]
+synonym: "down regulation of hormone secretion" EXACT []
+synonym: "down-regulation of hormone secretion" EXACT []
+synonym: "downregulation of hormone secretion" EXACT []
+synonym: "inhibition of hormone secretion" NARROW []
+is_a: GO:0010648 ! negative regulation of cell communication
+is_a: GO:0023057 ! negative regulation of signaling
+is_a: GO:0046883 ! regulation of hormone secretion
+is_a: GO:1903531 ! negative regulation of secretion by cell
+intersection_of: GO:0008150 ! biological_process
+intersection_of: RO:0002212 GO:0046879 ! hormone secretion
+relationship: RO:0002212 GO:0046879 ! hormone secretion
+
+[Term]
 id: GO:0046903
 name: secretion
 def: "The controlled release of a substance by a cell or a tissue." [GOC:ai]
@@ -2015,6 +2943,23 @@ is_a: GO:1903530 ! regulation of secretion by cell
 intersection_of: GO:0008150 ! biological_process
 intersection_of: RO:0002211 GO:0007269 ! neurotransmitter secretion
 relationship: RO:0002211 GO:0007269 ! neurotransmitter secretion
+
+[Term]
+id: GO:0046929
+name: negative regulation of neurotransmitter secretion
+def: "Any process that stops, prevents, or reduces the frequency, rate or extent of the regulated release of a neurotransmitter." [GOC:ai]
+synonym: "conotoxin activity" NARROW []
+synonym: "down regulation of neurotransmitter secretion" EXACT []
+synonym: "down-regulation of neurotransmitter secretion" EXACT []
+synonym: "downregulation of neurotransmitter secretion" EXACT []
+synonym: "inhibition of neurotransmitter secretion" NARROW []
+is_a: GO:0046928 ! regulation of neurotransmitter secretion
+is_a: GO:0050805 ! negative regulation of synaptic transmission
+is_a: GO:0051589 ! negative regulation of neurotransmitter transport
+is_a: GO:1903531 ! negative regulation of secretion by cell
+intersection_of: GO:0008150 ! biological_process
+intersection_of: RO:0002212 GO:0007269 ! neurotransmitter secretion
+relationship: RO:0002212 GO:0007269 ! neurotransmitter secretion
 
 [Term]
 id: GO:0046942
@@ -2067,6 +3012,103 @@ synonym: "rhythm" RELATED []
 is_a: GO:0008150 ! biological_process
 
 [Term]
+id: GO:0048512
+name: circadian behavior
+def: "The specific behavior of an organism that recurs with a regularity of approximately 24 hours." [GOC:bf, GOC:go_curators, GOC:pr]
+synonym: "circadian rhythm behavior" EXACT []
+is_a: GO:0007622 ! rhythmic behavior
+is_a: GO:0007623 ! circadian rhythm
+
+[Term]
+id: GO:0048518
+name: positive regulation of biological process
+def: "Any process that activates or increases the frequency, rate or extent of a biological process. Biological processes are regulated by many means; examples include the control of gene expression, protein modification or interaction with a protein or substrate molecule." [GOC:jid]
+synonym: "activation of biological process" NARROW []
+synonym: "positive regulation of physiological process" EXACT []
+synonym: "stimulation of biological process" NARROW []
+synonym: "up regulation of biological process" EXACT []
+synonym: "up-regulation of biological process" EXACT []
+synonym: "upregulation of biological process" EXACT []
+is_a: GO:0050789 ! regulation of biological process
+intersection_of: GO:0008150 ! biological_process
+intersection_of: RO:0002213 GO:0008150 ! biological_process
+relationship: RO:0002213 GO:0008150 ! biological_process
+
+[Term]
+id: GO:0048519
+name: negative regulation of biological process
+def: "Any process that stops, prevents, or reduces the frequency, rate or extent of a biological process. Biological processes are regulated by many means; examples include the control of gene expression, protein modification or interaction with a protein or substrate molecule." [GOC:jid]
+synonym: "down regulation of biological process" EXACT []
+synonym: "down-regulation of biological process" EXACT []
+synonym: "downregulation of biological process" EXACT []
+synonym: "inhibition of biological process" NARROW []
+synonym: "negative regulation of physiological process" EXACT []
+is_a: GO:0050789 ! regulation of biological process
+intersection_of: GO:0008150 ! biological_process
+intersection_of: RO:0002212 GO:0008150 ! biological_process
+relationship: RO:0002212 GO:0008150 ! biological_process
+
+[Term]
+id: GO:0048520
+name: positive regulation of behavior
+def: "Any process that activates or increases the frequency, rate or extent of behavior, the internally coordinated responses (actions or inactions) of whole living organisms (individuals or groups) to internal or external stimuli." [GOC:jid, GOC:pr]
+synonym: "activation of behavior" NARROW []
+synonym: "stimulation of behavior" NARROW []
+synonym: "up regulation of behavior" EXACT []
+synonym: "up-regulation of behavior" EXACT []
+synonym: "upregulation of behavior" EXACT []
+is_a: GO:0048518 ! positive regulation of biological process
+is_a: GO:0050795 ! regulation of behavior
+intersection_of: GO:0008150 ! biological_process
+intersection_of: RO:0002213 GO:0007610 ! behavior
+relationship: RO:0002213 GO:0007610 ! behavior
+
+[Term]
+id: GO:0048521
+name: negative regulation of behavior
+def: "Any process that stops, prevents, or reduces the frequency, rate or extent of behavior, the internally coordinated responses (actions or inactions) of whole living organisms (individuals or groups) to internal or external stimuli." [GOC:jid, GOC:pr]
+synonym: "down regulation of behavior" EXACT []
+synonym: "down-regulation of behavior" EXACT []
+synonym: "downregulation of behavior" EXACT []
+synonym: "inhibition of behavior" NARROW []
+is_a: GO:0048519 ! negative regulation of biological process
+is_a: GO:0050795 ! regulation of behavior
+intersection_of: GO:0008150 ! biological_process
+intersection_of: RO:0002212 GO:0007610 ! behavior
+relationship: RO:0002212 GO:0007610 ! behavior
+
+[Term]
+id: GO:0048522
+name: positive regulation of cellular process
+def: "Any process that activates or increases the frequency, rate or extent of a cellular process, any of those that are carried out at the cellular level, but are not necessarily restricted to a single cell. For example, cell communication occurs among more than one cell, but occurs at the cellular level." [GOC:jid]
+synonym: "activation of cellular process" NARROW []
+synonym: "positive regulation of cellular physiological process" EXACT []
+synonym: "stimulation of cellular process" NARROW []
+synonym: "up regulation of cellular process" EXACT []
+synonym: "up-regulation of cellular process" EXACT []
+synonym: "upregulation of cellular process" EXACT []
+is_a: GO:0048518 ! positive regulation of biological process
+is_a: GO:0050794 ! regulation of cellular process
+intersection_of: GO:0008150 ! biological_process
+intersection_of: RO:0002213 GO:0009987 ! cellular process
+relationship: RO:0002213 GO:0009987 ! cellular process
+
+[Term]
+id: GO:0048523
+name: negative regulation of cellular process
+def: "Any process that stops, prevents, or reduces the frequency, rate or extent of a cellular process, any of those that are carried out at the cellular level, but are not necessarily restricted to a single cell. For example, cell communication occurs among more than one cell, but occurs at the cellular level." [GOC:jid]
+synonym: "down regulation of cellular process" EXACT []
+synonym: "down-regulation of cellular process" EXACT []
+synonym: "downregulation of cellular process" EXACT []
+synonym: "inhibition of cellular process" NARROW []
+synonym: "negative regulation of cellular physiological process" EXACT []
+is_a: GO:0048519 ! negative regulation of biological process
+is_a: GO:0050794 ! regulation of cellular process
+intersection_of: GO:0008150 ! biological_process
+intersection_of: RO:0002212 GO:0009987 ! cellular process
+relationship: RO:0002212 GO:0009987 ! cellular process
+
+[Term]
 id: GO:0048583
 name: regulation of response to stimulus
 def: "Any process that modulates the frequency, rate or extent of a response to a stimulus. Response to stimulus is a change in state or activity of a cell or an organism (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of a stimulus." [GOC:jid]
@@ -2074,6 +3116,35 @@ is_a: GO:0050789 ! regulation of biological process
 intersection_of: GO:0008150 ! biological_process
 intersection_of: RO:0002211 GO:0050896 ! response to stimulus
 relationship: RO:0002211 GO:0050896 ! response to stimulus
+
+[Term]
+id: GO:0048584
+name: positive regulation of response to stimulus
+def: "Any process that activates, maintains or increases the rate of a response to a stimulus. Response to stimulus is a change in state or activity of a cell or an organism (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of a stimulus." [GOC:jid]
+synonym: "activation of response to stimulus" NARROW []
+synonym: "stimulation of response to stimulus" NARROW []
+synonym: "up regulation of response to stimulus" EXACT []
+synonym: "up-regulation of response to stimulus" EXACT []
+synonym: "upregulation of response to stimulus" EXACT []
+is_a: GO:0048518 ! positive regulation of biological process
+is_a: GO:0048583 ! regulation of response to stimulus
+intersection_of: GO:0008150 ! biological_process
+intersection_of: RO:0002213 GO:0050896 ! response to stimulus
+relationship: RO:0002213 GO:0050896 ! response to stimulus
+
+[Term]
+id: GO:0048585
+name: negative regulation of response to stimulus
+def: "Any process that stops, prevents, or reduces the frequency, rate or extent of a response to a stimulus. Response to stimulus is a change in state or activity of a cell or an organism (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of a stimulus." [GOC:jid]
+synonym: "down regulation of response to stimulus" EXACT []
+synonym: "down-regulation of response to stimulus" EXACT []
+synonym: "downregulation of response to stimulus" EXACT []
+synonym: "inhibition of response to stimulus" NARROW []
+is_a: GO:0048519 ! negative regulation of biological process
+is_a: GO:0048583 ! regulation of response to stimulus
+intersection_of: GO:0008150 ! biological_process
+intersection_of: RO:0002212 GO:0050896 ! response to stimulus
+relationship: RO:0002212 GO:0050896 ! response to stimulus
 
 [Term]
 id: GO:0048609
@@ -2132,6 +3203,15 @@ intersection_of: RO:0002211 GO:0007610 ! behavior
 relationship: RO:0002211 GO:0007610 ! behavior
 
 [Term]
+id: GO:0050802
+name: circadian sleep/wake cycle, sleep
+def: "The part of the circadian sleep/wake cycle where the organism is asleep." [GOC:ai]
+is_a: GO:0022410 ! circadian sleep/wake cycle process
+is_a: GO:0030431 ! sleep
+intersection_of: GO:0030431 ! sleep
+intersection_of: BFO:0000050 GO:0042745 ! circadian sleep/wake cycle
+
+[Term]
 id: GO:0050804
 name: modulation of chemical synaptic transmission
 def: "Any process that modulates the frequency or amplitude of synaptic transmission, the process of communication from a neuron to a target (neuron, muscle, or secretory cell) across a synapse.  Amplitude, in this case, refers to the change in postsynaptic membrane potential due to a single instance of synaptic transmission." [GOC:ai]
@@ -2142,6 +3222,37 @@ is_a: GO:0099177 ! regulation of trans-synaptic signaling
 intersection_of: GO:0008150 ! biological_process
 intersection_of: RO:0002211 GO:0007268 ! chemical synaptic transmission
 relationship: RO:0002211 GO:0007268 ! chemical synaptic transmission
+
+[Term]
+id: GO:0050805
+name: negative regulation of synaptic transmission
+def: "Any process that stops, prevents, or reduces the frequency, rate or extent of synaptic transmission, the process of communication from a neuron to a target (neuron, muscle, or secretory cell) across a synapse." [GOC:ai]
+synonym: "down regulation of synaptic transmission" EXACT []
+synonym: "down-regulation of synaptic transmission" EXACT []
+synonym: "downregulation of synaptic transmission" EXACT []
+synonym: "inhibition of synaptic transmission" NARROW []
+is_a: GO:0010648 ! negative regulation of cell communication
+is_a: GO:0023057 ! negative regulation of signaling
+is_a: GO:0050804 ! modulation of chemical synaptic transmission
+intersection_of: GO:0008150 ! biological_process
+intersection_of: RO:0002212 GO:0007268 ! chemical synaptic transmission
+relationship: RO:0002212 GO:0007268 ! chemical synaptic transmission
+
+[Term]
+id: GO:0050806
+name: positive regulation of synaptic transmission
+def: "Any process that activates or increases the frequency, rate or extent of synaptic transmission, the process of communication from a neuron to a target (neuron, muscle, or secretory cell) across a synapse." [GOC:ai]
+synonym: "activation of synaptic transmission" NARROW []
+synonym: "stimulation of synaptic transmission" NARROW []
+synonym: "up regulation of synaptic transmission" EXACT []
+synonym: "up-regulation of synaptic transmission" EXACT []
+synonym: "upregulation of synaptic transmission" EXACT []
+is_a: GO:0010647 ! positive regulation of cell communication
+is_a: GO:0023056 ! positive regulation of signaling
+is_a: GO:0050804 ! modulation of chemical synaptic transmission
+intersection_of: GO:0008150 ! biological_process
+intersection_of: RO:0002213 GO:0007268 ! chemical synaptic transmission
+relationship: RO:0002213 GO:0007268 ! chemical synaptic transmission
 
 [Term]
 id: GO:0050877
@@ -2565,6 +3676,43 @@ intersection_of: RO:0002211 GO:0016042 ! lipid catabolic process
 relationship: RO:0002211 GO:0016042 ! lipid catabolic process
 
 [Term]
+id: GO:0050995
+name: negative regulation of lipid catabolic process
+def: "Any process that stops, prevents, or reduces the frequency, rate or extent of the chemical reactions and pathways resulting in the breakdown of lipids." [GOC:ai]
+synonym: "down regulation of lipid catabolic process" EXACT []
+synonym: "down-regulation of lipid catabolic process" EXACT []
+synonym: "downregulation of lipid catabolic process" EXACT []
+synonym: "inhibition of lipid catabolic process" NARROW []
+synonym: "negative regulation of lipid breakdown" EXACT []
+synonym: "negative regulation of lipid catabolism" EXACT []
+synonym: "negative regulation of lipid degradation" EXACT []
+is_a: GO:0009895 ! negative regulation of catabolic process
+is_a: GO:0045833 ! negative regulation of lipid metabolic process
+is_a: GO:0050994 ! regulation of lipid catabolic process
+intersection_of: GO:0008150 ! biological_process
+intersection_of: RO:0002212 GO:0016042 ! lipid catabolic process
+relationship: RO:0002212 GO:0016042 ! lipid catabolic process
+
+[Term]
+id: GO:0050996
+name: positive regulation of lipid catabolic process
+def: "Any process that activates or increases the frequency, rate or extent of the chemical reactions and pathways resulting in the breakdown of lipids." [GOC:ai]
+synonym: "activation of lipid catabolic process" NARROW []
+synonym: "positive regulation of lipid breakdown" EXACT []
+synonym: "positive regulation of lipid catabolism" EXACT []
+synonym: "positive regulation of lipid degradation" EXACT []
+synonym: "stimulation of lipid catabolic process" NARROW []
+synonym: "up regulation of lipid catabolic process" EXACT []
+synonym: "up-regulation of lipid catabolic process" EXACT []
+synonym: "upregulation of lipid catabolic process" EXACT []
+is_a: GO:0009896 ! positive regulation of catabolic process
+is_a: GO:0045834 ! positive regulation of lipid metabolic process
+is_a: GO:0050994 ! regulation of lipid catabolic process
+intersection_of: GO:0008150 ! biological_process
+intersection_of: RO:0002213 GO:0016042 ! lipid catabolic process
+relationship: RO:0002213 GO:0016042 ! lipid catabolic process
+
+[Term]
 id: GO:0051046
 name: regulation of secretion
 def: "Any process that modulates the frequency, rate or extent of the controlled release of a substance from a cell or a tissue." [GOC:ai]
@@ -2574,6 +3722,35 @@ intersection_of: RO:0002211 GO:0046903 ! secretion
 relationship: RO:0002211 GO:0046903 ! secretion
 
 [Term]
+id: GO:0051047
+name: positive regulation of secretion
+def: "Any process that activates or increases the frequency, rate or extent of the controlled release of a substance from a cell or a tissue." [GOC:ai]
+synonym: "activation of secretion" NARROW []
+synonym: "stimulation of secretion" NARROW []
+synonym: "up regulation of secretion" EXACT []
+synonym: "up-regulation of secretion" EXACT []
+synonym: "upregulation of secretion" EXACT []
+is_a: GO:0051046 ! regulation of secretion
+is_a: GO:0051050 ! positive regulation of transport
+intersection_of: GO:0008150 ! biological_process
+intersection_of: RO:0002213 GO:0046903 ! secretion
+relationship: RO:0002213 GO:0046903 ! secretion
+
+[Term]
+id: GO:0051048
+name: negative regulation of secretion
+def: "Any process that stops, prevents, or reduces the frequency, rate or extent of the controlled release of a substance from a cell or a tissue." [GOC:ai]
+synonym: "down regulation of secretion" EXACT []
+synonym: "down-regulation of secretion" EXACT []
+synonym: "downregulation of secretion" EXACT []
+synonym: "inhibition of secretion" NARROW []
+is_a: GO:0051046 ! regulation of secretion
+is_a: GO:0051051 ! negative regulation of transport
+intersection_of: GO:0008150 ! biological_process
+intersection_of: RO:0002212 GO:0046903 ! secretion
+relationship: RO:0002212 GO:0046903 ! secretion
+
+[Term]
 id: GO:0051049
 name: regulation of transport
 def: "Any process that modulates the frequency, rate or extent of the directed movement of substances (such as macromolecules, small molecules, ions) into, out of or within a cell, or between cells, by means of some agent such as a transporter or pore." [GOC:ai]
@@ -2581,6 +3758,35 @@ is_a: GO:0032879 ! regulation of localization
 intersection_of: GO:0008150 ! biological_process
 intersection_of: RO:0002211 GO:0006810 ! transport
 relationship: RO:0002211 GO:0006810 ! transport
+
+[Term]
+id: GO:0051050
+name: positive regulation of transport
+def: "Any process that activates or increases the frequency, rate or extent of the directed movement of substances (such as macromolecules, small molecules, ions) into, out of or within a cell, or between cells, by means of some agent such as a transporter or pore." [GOC:ai]
+synonym: "activation of transport" NARROW []
+synonym: "stimulation of transport" NARROW []
+synonym: "up regulation of transport" EXACT []
+synonym: "up-regulation of transport" EXACT []
+synonym: "upregulation of transport" EXACT []
+is_a: GO:0048518 ! positive regulation of biological process
+is_a: GO:0051049 ! regulation of transport
+intersection_of: GO:0008150 ! biological_process
+intersection_of: RO:0002213 GO:0006810 ! transport
+relationship: RO:0002213 GO:0006810 ! transport
+
+[Term]
+id: GO:0051051
+name: negative regulation of transport
+def: "Any process that stops, prevents, or reduces the frequency, rate or extent of the directed movement of substances (such as macromolecules, small molecules, ions) into, out of or within a cell, or between cells, by means of some agent such as a transporter or pore." [GOC:ai]
+synonym: "down regulation of transport" EXACT []
+synonym: "down-regulation of transport" EXACT []
+synonym: "downregulation of transport" EXACT []
+synonym: "inhibition of transport" NARROW []
+is_a: GO:0048519 ! negative regulation of biological process
+is_a: GO:0051049 ! regulation of transport
+intersection_of: GO:0008150 ! biological_process
+intersection_of: RO:0002212 GO:0006810 ! transport
+relationship: RO:0002212 GO:0006810 ! transport
 
 [Term]
 id: GO:0051179
@@ -2624,6 +3830,35 @@ intersection_of: RO:0002211 GO:0032501 ! multicellular organismal process
 relationship: RO:0002211 GO:0032501 ! multicellular organismal process
 
 [Term]
+id: GO:0051240
+name: positive regulation of multicellular organismal process
+def: "Any process that activates or increases the frequency, rate or extent of an organismal process, any of the processes pertinent to the function of an organism above the cellular level; includes the integrated processes of tissues and organs." [GOC:ai]
+synonym: "activation of multicellular organismal process" NARROW []
+synonym: "stimulation of multicellular organismal process" NARROW []
+synonym: "up regulation of multicellular organismal process" EXACT []
+synonym: "up-regulation of multicellular organismal process" EXACT []
+synonym: "upregulation of multicellular organismal process" EXACT []
+is_a: GO:0048518 ! positive regulation of biological process
+is_a: GO:0051239 ! regulation of multicellular organismal process
+intersection_of: GO:0008150 ! biological_process
+intersection_of: RO:0002213 GO:0032501 ! multicellular organismal process
+relationship: RO:0002213 GO:0032501 ! multicellular organismal process
+
+[Term]
+id: GO:0051241
+name: negative regulation of multicellular organismal process
+def: "Any process that stops, prevents, or reduces the frequency, rate or extent of an organismal process, the processes pertinent to the function of an organism above the cellular level; includes the integrated processes of tissues and organs." [GOC:ai]
+synonym: "down regulation of multicellular organismal process" EXACT []
+synonym: "down-regulation of multicellular organismal process" EXACT []
+synonym: "downregulation of multicellular organismal process" EXACT []
+synonym: "inhibition of multicellular organismal process" NARROW []
+is_a: GO:0048519 ! negative regulation of biological process
+is_a: GO:0051239 ! regulation of multicellular organismal process
+intersection_of: GO:0008150 ! biological_process
+intersection_of: RO:0002212 GO:0032501 ! multicellular organismal process
+relationship: RO:0002212 GO:0032501 ! multicellular organismal process
+
+[Term]
 id: GO:0051356
 name: visual perception involved in equilibrioception
 def: "The series of events during equilibrioception required for an organism to receive a visual stimulus, convert it to a molecular signal, and recognize and characterize the signal. Visual input plays an important role in the ability of an organism to perceive its orientation with respect to gravity." [GOC:ai]
@@ -2643,6 +3878,35 @@ is_a: GO:0051049 ! regulation of transport
 intersection_of: GO:0008150 ! biological_process
 intersection_of: RO:0002211 GO:0006836 ! neurotransmitter transport
 relationship: RO:0002211 GO:0006836 ! neurotransmitter transport
+
+[Term]
+id: GO:0051589
+name: negative regulation of neurotransmitter transport
+def: "Any process that stops, prevents, or reduces the frequency, rate or extent of the directed movement of a neurotransmitter into, out of or within a cell, or between cells, by means of some agent such as a transporter or pore." [GOC:ai]
+synonym: "down regulation of neurotransmitter transport" EXACT []
+synonym: "down-regulation of neurotransmitter transport" EXACT []
+synonym: "downregulation of neurotransmitter transport" EXACT []
+synonym: "inhibition of neurotransmitter transport" NARROW []
+is_a: GO:0051051 ! negative regulation of transport
+is_a: GO:0051588 ! regulation of neurotransmitter transport
+intersection_of: GO:0008150 ! biological_process
+intersection_of: RO:0002212 GO:0006836 ! neurotransmitter transport
+relationship: RO:0002212 GO:0006836 ! neurotransmitter transport
+
+[Term]
+id: GO:0051590
+name: positive regulation of neurotransmitter transport
+def: "Any process that activates or increases the frequency, rate or extent of the directed movement of a neurotransmitter into, out of or within a cell, or between cells, by means of some agent such as a transporter or pore." [GOC:ai]
+synonym: "activation of neurotransmitter transport" NARROW []
+synonym: "stimulation of neurotransmitter transport" NARROW []
+synonym: "up regulation of neurotransmitter transport" EXACT []
+synonym: "up-regulation of neurotransmitter transport" EXACT []
+synonym: "upregulation of neurotransmitter transport" EXACT []
+is_a: GO:0051050 ! positive regulation of transport
+is_a: GO:0051588 ! regulation of neurotransmitter transport
+intersection_of: GO:0008150 ! biological_process
+intersection_of: RO:0002213 GO:0006836 ! neurotransmitter transport
+relationship: RO:0002213 GO:0006836 ! neurotransmitter transport
 
 [Term]
 id: GO:0051592
@@ -2778,6 +4042,35 @@ intersection_of: RO:0002211 GO:0015837 ! amine transport
 relationship: RO:0002211 GO:0015837 ! amine transport
 
 [Term]
+id: GO:0051953
+name: negative regulation of amine transport
+def: "Any process that stops, prevents, or reduces the frequency, rate or extent of the directed movement of amines into, out of or within a cell, or between cells, by means of some agent such as a transporter or pore." [GOC:ai]
+synonym: "down regulation of amine transport" EXACT []
+synonym: "down-regulation of amine transport" EXACT []
+synonym: "downregulation of amine transport" EXACT []
+synonym: "inhibition of amine transport" NARROW []
+is_a: GO:0051051 ! negative regulation of transport
+is_a: GO:0051952 ! regulation of amine transport
+intersection_of: GO:0008150 ! biological_process
+intersection_of: RO:0002212 GO:0015837 ! amine transport
+relationship: RO:0002212 GO:0015837 ! amine transport
+
+[Term]
+id: GO:0051954
+name: positive regulation of amine transport
+def: "Any process that activates, maintains or increases the frequency, rate or extent of the directed movement of amines into, out of or within a cell, or between cells, by means of some agent such as a transporter or pore." [GOC:ai]
+synonym: "activation of amine transport" NARROW []
+synonym: "stimulation of amine transport" NARROW []
+synonym: "up regulation of amine transport" EXACT []
+synonym: "up-regulation of amine transport" EXACT []
+synonym: "upregulation of amine transport" EXACT []
+is_a: GO:0051050 ! positive regulation of transport
+is_a: GO:0051952 ! regulation of amine transport
+intersection_of: GO:0008150 ! biological_process
+intersection_of: RO:0002213 GO:0015837 ! amine transport
+relationship: RO:0002213 GO:0015837 ! amine transport
+
+[Term]
 id: GO:0051955
 name: regulation of amino acid transport
 def: "Any process that modulates the frequency, rate or extent of the directed movement of amino acids into, out of or within a cell, or between cells, by means of some agent such as a transporter or pore." [GOC:ai]
@@ -2789,6 +4082,41 @@ intersection_of: RO:0002211 GO:0006865 ! amino acid transport
 relationship: RO:0002211 GO:0006865 ! amino acid transport
 
 [Term]
+id: GO:0051956
+name: negative regulation of amino acid transport
+def: "Any process that stops, prevents, or reduces the frequency, rate or extent of the directed movement of amino acids into, out of or within a cell, or between cells, by means of some agent such as a transporter or pore." [GOC:ai]
+synonym: "down regulation of amino acid transport" EXACT []
+synonym: "down-regulation of amino acid transport" EXACT []
+synonym: "downregulation of amino acid transport" EXACT []
+synonym: "inhibition of amino acid transport" NARROW []
+synonym: "negative regulation of amino acid transmembrane transport" EXACT [GOC:mah]
+is_a: GO:0032891 ! negative regulation of organic acid transport
+is_a: GO:0051953 ! negative regulation of amine transport
+is_a: GO:0051955 ! regulation of amino acid transport
+is_a: GO:1903792 ! negative regulation of anion transport
+intersection_of: GO:0008150 ! biological_process
+intersection_of: RO:0002212 GO:0006865 ! amino acid transport
+relationship: RO:0002212 GO:0006865 ! amino acid transport
+
+[Term]
+id: GO:0051957
+name: positive regulation of amino acid transport
+def: "Any process that activates, maintains or increases the frequency, rate or extent of the directed movement of amino acids into, out of or within a cell, or between cells, by means of some agent such as a transporter or pore." [GOC:ai]
+synonym: "activation of amino acid transport" NARROW []
+synonym: "positive regulation of amino acid transmembrane transport" EXACT [GOC:mah]
+synonym: "stimulation of amino acid transport" NARROW []
+synonym: "up regulation of amino acid transport" EXACT []
+synonym: "up-regulation of amino acid transport" EXACT []
+synonym: "upregulation of amino acid transport" EXACT []
+is_a: GO:0032892 ! positive regulation of organic acid transport
+is_a: GO:0051954 ! positive regulation of amine transport
+is_a: GO:0051955 ! regulation of amino acid transport
+is_a: GO:1903793 ! positive regulation of anion transport
+intersection_of: GO:0008150 ! biological_process
+intersection_of: RO:0002213 GO:0006865 ! amino acid transport
+relationship: RO:0002213 GO:0006865 ! amino acid transport
+
+[Term]
 id: GO:0051966
 name: regulation of synaptic transmission, glutamatergic
 def: "Any process that modulates the frequency, rate or extent of glutamatergic synaptic transmission, the process of communication from a neuron to another neuron across a synapse using the neurotransmitter glutamate." [GOC:ai]
@@ -2798,16 +4126,39 @@ intersection_of: RO:0002211 GO:0035249 ! synaptic transmission, glutamatergic
 relationship: RO:0002211 GO:0035249 ! synaptic transmission, glutamatergic
 
 [Term]
+id: GO:0051967
+name: negative regulation of synaptic transmission, glutamatergic
+def: "Any process that stops, prevents, or reduces the frequency, rate or extent of glutamatergic synaptic transmission, the process of communication from a neuron to another neuron across a synapse using the neurotransmitter glutamate." [GOC:ai]
+synonym: "down regulation of synaptic transmission, glutamatergic" EXACT []
+synonym: "down-regulation of synaptic transmission, glutamatergic" EXACT []
+synonym: "downregulation of synaptic transmission, glutamatergic" EXACT []
+synonym: "inhibition of synaptic transmission, glutamatergic" NARROW []
+is_a: GO:0050805 ! negative regulation of synaptic transmission
+is_a: GO:0051966 ! regulation of synaptic transmission, glutamatergic
+intersection_of: GO:0008150 ! biological_process
+intersection_of: RO:0002212 GO:0035249 ! synaptic transmission, glutamatergic
+relationship: RO:0002212 GO:0035249 ! synaptic transmission, glutamatergic
+
+[Term]
+id: GO:0051968
+name: positive regulation of synaptic transmission, glutamatergic
+def: "Any process that activates, maintains or increases the frequency, rate or extent of glutamatergic synaptic transmission, the process of communication from a neuron to another neuron across a synapse using the neurotransmitter glutamate." [GOC:ai]
+synonym: "activation of synaptic transmission, glutamatergic" NARROW []
+synonym: "stimulation of synaptic transmission, glutamatergic" NARROW []
+synonym: "up regulation of synaptic transmission, glutamatergic" EXACT []
+synonym: "up-regulation of synaptic transmission, glutamatergic" EXACT []
+synonym: "upregulation of synaptic transmission, glutamatergic" EXACT []
+is_a: GO:0050806 ! positive regulation of synaptic transmission
+is_a: GO:0051966 ! regulation of synaptic transmission, glutamatergic
+intersection_of: GO:0008150 ! biological_process
+intersection_of: RO:0002213 GO:0035249 ! synaptic transmission, glutamatergic
+relationship: RO:0002213 GO:0035249 ! synaptic transmission, glutamatergic
+
+[Term]
 id: GO:0060004
 name: reflex
 def: "An automatic response to a stimulus beginning with a nerve impulse from a receptor and ending with the action of an effector such as a gland or a muscle. Signaling never reaches a level of consciousness." [GOC:dph, ISBN:087797099]
 is_a: GO:0009605 ! response to external stimulus
-
-[Term]
-id: GO:0060089
-name: molecular transducer activity
-def: "A compound molecular function in which an effector function is controlled by one or more regulatory components." [GOC:dos, GOC:pdt]
-is_a: GO:0003674 ! molecular_function
 
 [Term]
 id: GO:0060096
@@ -2844,6 +4195,26 @@ intersection_of: RO:0002211 GO:0051641 ! cellular localization
 relationship: RO:0002211 GO:0051641 ! cellular localization
 
 [Term]
+id: GO:0060456
+name: positive regulation of digestive system process
+def: "Any process that increases the frequency, rate or extent of a digestive system process, a physical, chemical, or biochemical process carried out by living organisms to break down ingested nutrients into components that may be easily absorbed and directed into metabolism." [GOC:dph, GOC:tb]
+is_a: GO:0044058 ! regulation of digestive system process
+is_a: GO:0051240 ! positive regulation of multicellular organismal process
+intersection_of: GO:0008150 ! biological_process
+intersection_of: RO:0002213 GO:0022600 ! digestive system process
+relationship: RO:0002213 GO:0022600 ! digestive system process
+
+[Term]
+id: GO:0060457
+name: negative regulation of digestive system process
+def: "Any process that decreases the frequency, rate or extent of a digestive system process, a physical, chemical, or biochemical process carried out by living organisms to break down ingested nutrients into components that may be easily absorbed and directed into metabolism." [GOC:dph, GOC:tb]
+is_a: GO:0044058 ! regulation of digestive system process
+is_a: GO:0051241 ! negative regulation of multicellular organismal process
+intersection_of: GO:0008150 ! biological_process
+intersection_of: RO:0002212 GO:0022600 ! digestive system process
+relationship: RO:0002212 GO:0022600 ! digestive system process
+
+[Term]
 id: GO:0060986
 name: endocrine hormone secretion
 def: "The regulated release of a hormone into the circulatory system." [GOC:dph]
@@ -2858,6 +4229,26 @@ is_a: GO:1902435 ! regulation of male mating behavior
 intersection_of: GO:0008150 ! biological_process
 intersection_of: RO:0002211 GO:0034607 ! turning behavior involved in mating
 relationship: RO:0002211 GO:0034607 ! turning behavior involved in mating
+
+[Term]
+id: GO:0061095
+name: positive regulation of turning behavior involved in mating
+def: "Any process that increases the rate, frequency or extent of turning behavior involved in mating. Turning behavior is the sharp ventral turn performed by the male as he approaches either the hermaphrodite head or tail, whilst trying to locate his partner's vulva. Turning occurs via a sharp ventral coil of the male's tail." [GOC:dph, GOC:tb]
+is_a: GO:0061094 ! regulation of turning behavior involved in mating
+is_a: GO:1902437 ! positive regulation of male mating behavior
+intersection_of: GO:0008150 ! biological_process
+intersection_of: RO:0002213 GO:0034607 ! turning behavior involved in mating
+relationship: RO:0002213 GO:0034607 ! turning behavior involved in mating
+
+[Term]
+id: GO:0061096
+name: negative regulation of turning behavior involved in mating
+def: "Any process that decreases the rate, frequency or extent of turning behavior involved in mating. Turning behavior is the sharp ventral turn performed by the male as he approaches either the hermaphrodite head or tail, whilst trying to locate his partner's vulva. Turning occurs via a sharp ventral coil of the male's tail." [GOC:dph, GOC:tb]
+is_a: GO:0061094 ! regulation of turning behavior involved in mating
+is_a: GO:1902436 ! negative regulation of male mating behavior
+intersection_of: GO:0008150 ! biological_process
+intersection_of: RO:0002212 GO:0034607 ! turning behavior involved in mating
+relationship: RO:0002212 GO:0034607 ! turning behavior involved in mating
 
 [Term]
 id: GO:0061526
@@ -2970,16 +4361,6 @@ def: "Any process that modulates a qualitative or quantitative trait of a biolog
 synonym: "regulation of biological attribute" EXACT []
 synonym: "regulation of biological characteristic" EXACT []
 is_a: GO:0065007 ! biological regulation
-
-[Term]
-id: GO:0065009
-name: regulation of molecular function
-def: "Any process that modulates the frequency, rate or extent of a molecular function, an elemental biological activity occurring at the molecular level, such as catalysis or binding." [GOC:isa_complete]
-synonym: "regulation of a molecular function" EXACT []
-is_a: GO:0065007 ! biological regulation
-intersection_of: GO:0008150 ! biological_process
-intersection_of: RO:0002211 GO:0003674 ! molecular_function
-relationship: RO:0002211 GO:0003674 ! molecular_function
 
 [Term]
 id: GO:0070887
@@ -3187,6 +4568,28 @@ intersection_of: RO:0002211 GO:0030072 ! peptide hormone secretion
 relationship: RO:0002211 GO:0030072 ! peptide hormone secretion
 
 [Term]
+id: GO:0090277
+name: positive regulation of peptide hormone secretion
+def: "Any process that increases the rate, frequency, or extent of the regulated release of a peptide hormone from secretory granules." [GOC:tb]
+is_a: GO:0002793 ! positive regulation of peptide secretion
+is_a: GO:0046887 ! positive regulation of hormone secretion
+is_a: GO:0090276 ! regulation of peptide hormone secretion
+intersection_of: GO:0008150 ! biological_process
+intersection_of: RO:0002213 GO:0030072 ! peptide hormone secretion
+relationship: RO:0002213 GO:0030072 ! peptide hormone secretion
+
+[Term]
+id: GO:0090278
+name: negative regulation of peptide hormone secretion
+def: "Any process that decreases the rate, frequency, or extent of the regulated release of a peptide hormone from secretory granules." [GOC:tb]
+is_a: GO:0002792 ! negative regulation of peptide secretion
+is_a: GO:0046888 ! negative regulation of hormone secretion
+is_a: GO:0090276 ! regulation of peptide hormone secretion
+intersection_of: GO:0008150 ! biological_process
+intersection_of: RO:0002212 GO:0030072 ! peptide hormone secretion
+relationship: RO:0002212 GO:0030072 ! peptide hormone secretion
+
+[Term]
 id: GO:0090325
 name: regulation of locomotion involved in locomotory behavior
 def: "Any process that modulates the frequency, rate, or extent of the self-propelled movement of a cell or organism from one location to another in a behavioral context; the aspect of locomotory behavior having to do with movement." [GOC:dph, GOC:kmv, GOC:tb]
@@ -3195,6 +4598,28 @@ is_a: GO:0050795 ! regulation of behavior
 intersection_of: GO:0008150 ! biological_process
 intersection_of: RO:0002211 GO:0031987 ! locomotion involved in locomotory behavior
 relationship: RO:0002211 GO:0031987 ! locomotion involved in locomotory behavior
+
+[Term]
+id: GO:0090326
+name: positive regulation of locomotion involved in locomotory behavior
+def: "Any process that increases the frequency, rate, or extent of the self-propelled movement of a cell or organism from one location to another in a behavioral context; the aspect of locomotory behavior having to do with movement." [GOC:dph, GOC:kmv, GOC:tb]
+is_a: GO:0040017 ! positive regulation of locomotion
+is_a: GO:0048520 ! positive regulation of behavior
+is_a: GO:0090325 ! regulation of locomotion involved in locomotory behavior
+intersection_of: GO:0050789 ! regulation of biological process
+intersection_of: RO:0002213 GO:0031987 ! locomotion involved in locomotory behavior
+relationship: RO:0002213 GO:0031987 ! locomotion involved in locomotory behavior
+
+[Term]
+id: GO:0090327
+name: negative regulation of locomotion involved in locomotory behavior
+def: "Any process that decreases the frequency, rate, or extent of the self-propelled movement of a cell or organism from one location to another in a behavioral context; the aspect of locomotory behavior having to do with movement." [GOC:dph, GOC:kmv, GOC:tb]
+is_a: GO:0040013 ! negative regulation of locomotion
+is_a: GO:0048521 ! negative regulation of behavior
+is_a: GO:0090325 ! regulation of locomotion involved in locomotory behavior
+intersection_of: GO:0008150 ! biological_process
+intersection_of: RO:0002212 GO:0031987 ! locomotion involved in locomotory behavior
+relationship: RO:0002212 GO:0031987 ! locomotion involved in locomotory behavior
 
 [Term]
 id: GO:0090328
@@ -3491,6 +4916,19 @@ is_a: GO:0050960 ! detection of temperature stimulus involved in thermoception
 relationship: BFO:0000050 GO:0062035 ! sensory perception of cold stimulus
 
 [Term]
+id: GO:1901181
+name: negative regulation of cellular response to caffeine
+def: "Any process that stops, prevents or reduces the frequency, rate or extent of cellular response to caffeine." [GOC:TermGenie]
+synonym: "down regulation of cellular response to caffeine" EXACT [GOC:TermGenie]
+synonym: "down-regulation of cellular response to caffeine" EXACT [GOC:TermGenie]
+synonym: "downregulation of cellular response to caffeine" EXACT [GOC:TermGenie]
+synonym: "inhibition of cellular response to caffeine" NARROW [GOC:TermGenie]
+is_a: GO:2001039 ! negative regulation of cellular response to drug
+intersection_of: GO:0008150 ! biological_process
+intersection_of: RO:0002212 GO:0071313 ! cellular response to caffeine
+relationship: RO:0002212 GO:0071313 ! cellular response to caffeine
+
+[Term]
 id: GO:1901374
 name: acetate ester transport
 def: "The directed movement of an acetate ester into, out of or within a cell, or between cells, by means of some agent such as a transporter or pore." [GOC:TermGenie]
@@ -3504,6 +4942,34 @@ is_a: GO:0048583 ! regulation of response to stimulus
 intersection_of: GO:0008150 ! biological_process
 intersection_of: RO:0002211 GO:0097305 ! response to alcohol
 relationship: RO:0002211 GO:0097305 ! response to alcohol
+
+[Term]
+id: GO:1901420
+name: negative regulation of response to alcohol
+def: "Any process that stops, prevents or reduces the frequency, rate or extent of response to alcohol." [GOC:mengo_curators, GOC:TermGenie]
+synonym: "down regulation of response to alcohol" EXACT [GOC:TermGenie]
+synonym: "down-regulation of response to alcohol" EXACT [GOC:TermGenie]
+synonym: "downregulation of response to alcohol" EXACT [GOC:TermGenie]
+synonym: "inhibition of response to alcohol" NARROW [GOC:TermGenie]
+is_a: GO:0048585 ! negative regulation of response to stimulus
+is_a: GO:1901419 ! regulation of response to alcohol
+intersection_of: GO:0008150 ! biological_process
+intersection_of: RO:0002212 GO:0097305 ! response to alcohol
+relationship: RO:0002212 GO:0097305 ! response to alcohol
+
+[Term]
+id: GO:1901421
+name: positive regulation of response to alcohol
+def: "Any process that activates or increases the frequency, rate or extent of response to alcohol." [GOC:mengo_curators, GOC:TermGenie]
+synonym: "activation of response to alcohol" NARROW [GOC:TermGenie]
+synonym: "up regulation of response to alcohol" EXACT [GOC:TermGenie]
+synonym: "up-regulation of response to alcohol" EXACT [GOC:TermGenie]
+synonym: "upregulation of response to alcohol" EXACT [GOC:TermGenie]
+is_a: GO:0048584 ! positive regulation of response to stimulus
+is_a: GO:1901419 ! regulation of response to alcohol
+intersection_of: GO:0008150 ! biological_process
+intersection_of: RO:0002213 GO:0097305 ! response to alcohol
+relationship: RO:0002213 GO:0097305 ! response to alcohol
 
 [Term]
 id: GO:1901575
@@ -3562,6 +5028,40 @@ intersection_of: RO:0002211 GO:0060179 ! male mating behavior
 relationship: RO:0002211 GO:0060179 ! male mating behavior
 
 [Term]
+id: GO:1902436
+name: negative regulation of male mating behavior
+def: "Any process that stops, prevents or reduces the frequency, rate or extent of male mating behavior." [GOC:TermGenie, PMID:24089208]
+synonym: "down regulation of male mating behavior" EXACT [GOC:TermGenie]
+synonym: "down-regulation of male mating behavior" EXACT [GOC:TermGenie]
+synonym: "downregulation of male mating behavior" EXACT [GOC:TermGenie]
+synonym: "inhibition of male mating behavior" NARROW [GOC:TermGenie]
+is_a: GO:0043901 ! negative regulation of multi-organism process
+is_a: GO:0048521 ! negative regulation of behavior
+is_a: GO:0051241 ! negative regulation of multicellular organismal process
+is_a: GO:1902435 ! regulation of male mating behavior
+is_a: GO:2000242 ! negative regulation of reproductive process
+intersection_of: GO:0008150 ! biological_process
+intersection_of: RO:0002212 GO:0060179 ! male mating behavior
+relationship: RO:0002212 GO:0060179 ! male mating behavior
+
+[Term]
+id: GO:1902437
+name: positive regulation of male mating behavior
+def: "Any process that activates or increases the frequency, rate or extent of male mating behavior." [GOC:TermGenie, PMID:24089208]
+synonym: "activation of male mating behavior" NARROW [GOC:TermGenie]
+synonym: "up regulation of male mating behavior" EXACT [GOC:TermGenie]
+synonym: "up-regulation of male mating behavior" EXACT [GOC:TermGenie]
+synonym: "upregulation of male mating behavior" EXACT [GOC:TermGenie]
+is_a: GO:0043902 ! positive regulation of multi-organism process
+is_a: GO:0048520 ! positive regulation of behavior
+is_a: GO:0051240 ! positive regulation of multicellular organismal process
+is_a: GO:1902435 ! regulation of male mating behavior
+is_a: GO:2000243 ! positive regulation of reproductive process
+intersection_of: GO:0008150 ! biological_process
+intersection_of: RO:0002213 GO:0060179 ! male mating behavior
+relationship: RO:0002213 GO:0060179 ! male mating behavior
+
+[Term]
 id: GO:1903294
 name: regulation of glutamate secretion, neurotransmission
 def: "Any process that modulates the frequency, rate or extent of glutamate secretion, neurotransmission." [GO_REF:0000058, GOC:TermGenie, PMID:16782817]
@@ -3571,6 +5071,38 @@ is_a: GO:0051966 ! regulation of synaptic transmission, glutamatergic
 intersection_of: GO:0008150 ! biological_process
 intersection_of: RO:0002211 GO:0061535 ! glutamate secretion, neurotransmission
 relationship: RO:0002211 GO:0061535 ! glutamate secretion, neurotransmission
+
+[Term]
+id: GO:1903295
+name: negative regulation of glutamate secretion, neurotransmission
+def: "Any process that stops, prevents or reduces the frequency, rate or extent of glutamate secretion, neurotransmission." [GO_REF:0000058, GOC:TermGenie, PMID:16782817]
+synonym: "down regulation of glutamate secretion, neurotransmission" EXACT [GOC:TermGenie]
+synonym: "down-regulation of glutamate secretion, neurotransmission" EXACT [GOC:TermGenie]
+synonym: "downregulation of glutamate secretion, neurotransmission" EXACT [GOC:TermGenie]
+synonym: "inhibition of glutamate secretion, neurotransmission" NARROW [GOC:TermGenie]
+is_a: GO:0014050 ! negative regulation of glutamate secretion
+is_a: GO:0046929 ! negative regulation of neurotransmitter secretion
+is_a: GO:0051967 ! negative regulation of synaptic transmission, glutamatergic
+is_a: GO:1903294 ! regulation of glutamate secretion, neurotransmission
+intersection_of: GO:0008150 ! biological_process
+intersection_of: RO:0002212 GO:0061535 ! glutamate secretion, neurotransmission
+relationship: RO:0002212 GO:0061535 ! glutamate secretion, neurotransmission
+
+[Term]
+id: GO:1903296
+name: positive regulation of glutamate secretion, neurotransmission
+def: "Any process that activates or increases the frequency, rate or extent of glutamate secretion, where glutamate acts as a neurotransmitter." [GO_REF:0000058, GOC:TermGenie, PMID:16782817]
+synonym: "activation of glutamate secretion, neurotransmission" NARROW [GOC:TermGenie]
+synonym: "up regulation of glutamate secretion, neurotransmission" EXACT [GOC:TermGenie]
+synonym: "up-regulation of glutamate secretion, neurotransmission" EXACT [GOC:TermGenie]
+synonym: "upregulation of glutamate secretion, neurotransmission" EXACT [GOC:TermGenie]
+is_a: GO:0001956 ! positive regulation of neurotransmitter secretion
+is_a: GO:0014049 ! positive regulation of glutamate secretion
+is_a: GO:0051968 ! positive regulation of synaptic transmission, glutamatergic
+is_a: GO:1903294 ! regulation of glutamate secretion, neurotransmission
+intersection_of: GO:0008150 ! biological_process
+intersection_of: RO:0002213 GO:0061535 ! glutamate secretion, neurotransmission
+relationship: RO:0002213 GO:0061535 ! glutamate secretion, neurotransmission
 
 [Term]
 id: GO:1903530
@@ -3584,6 +5116,150 @@ intersection_of: RO:0002211 GO:0032940 ! secretion by cell
 relationship: RO:0002211 GO:0032940 ! secretion by cell
 
 [Term]
+id: GO:1903531
+name: negative regulation of secretion by cell
+def: "Any process that stops, prevents or reduces the frequency, rate or extent of secretion by cell." [GO_REF:0000058, GOC:pm, GOC:TermGenie, PMID:12130530]
+synonym: "down regulation of cellular secretion" EXACT [GOC:TermGenie]
+synonym: "down regulation of secretion by cell" EXACT [GOC:TermGenie]
+synonym: "down-regulation of cellular secretion" EXACT [GOC:TermGenie]
+synonym: "down-regulation of secretion by cell" EXACT [GOC:TermGenie]
+synonym: "downregulation of cellular secretion" EXACT [GOC:TermGenie]
+synonym: "downregulation of secretion by cell" EXACT [GOC:TermGenie]
+synonym: "inhibition of cellular secretion" NARROW [GOC:TermGenie]
+synonym: "inhibition of secretion by cell" NARROW [GOC:TermGenie]
+synonym: "negative regulation of cellular secretion" EXACT [GOC:TermGenie]
+is_a: GO:0048523 ! negative regulation of cellular process
+is_a: GO:0051048 ! negative regulation of secretion
+is_a: GO:1903530 ! regulation of secretion by cell
+intersection_of: GO:0008150 ! biological_process
+intersection_of: RO:0002212 GO:0032940 ! secretion by cell
+relationship: RO:0002212 GO:0032940 ! secretion by cell
+
+[Term]
+id: GO:1903532
+name: positive regulation of secretion by cell
+def: "Any process that activates or increases the frequency, rate or extent of secretion by cell." [GO_REF:0000058, GOC:pm, GOC:TermGenie, PMID:12130530]
+synonym: "activation of cellular secretion" NARROW [GOC:TermGenie]
+synonym: "activation of secretion by cell" NARROW [GOC:TermGenie]
+synonym: "positive regulation of cellular secretion" EXACT [GOC:TermGenie]
+synonym: "up regulation of cellular secretion" EXACT [GOC:TermGenie]
+synonym: "up regulation of secretion by cell" EXACT [GOC:TermGenie]
+synonym: "up-regulation of cellular secretion" EXACT [GOC:TermGenie]
+synonym: "up-regulation of secretion by cell" EXACT [GOC:TermGenie]
+synonym: "upregulation of cellular secretion" EXACT [GOC:TermGenie]
+synonym: "upregulation of secretion by cell" EXACT [GOC:TermGenie]
+is_a: GO:0048522 ! positive regulation of cellular process
+is_a: GO:0051047 ! positive regulation of secretion
+is_a: GO:1903530 ! regulation of secretion by cell
+intersection_of: GO:0008150 ! biological_process
+intersection_of: RO:0002213 GO:0032940 ! secretion by cell
+relationship: RO:0002213 GO:0032940 ! secretion by cell
+
+[Term]
+id: GO:1903792
+name: negative regulation of anion transport
+def: "Any process that stops, prevents or reduces the frequency, rate or extent of anion transport." [GO_REF:0000058, GOC:TermGenie, PMID:11336802]
+synonym: "down regulation of anion transport" EXACT [GOC:TermGenie]
+synonym: "down-regulation of anion transport" EXACT [GOC:TermGenie]
+synonym: "downregulation of anion transport" EXACT [GOC:TermGenie]
+synonym: "inhibition of anion transport" NARROW [GOC:TermGenie]
+is_a: GO:0043271 ! negative regulation of ion transport
+is_a: GO:0044070 ! regulation of anion transport
+intersection_of: GO:0008150 ! biological_process
+intersection_of: RO:0002212 GO:0006820 ! anion transport
+relationship: RO:0002212 GO:0006820 ! anion transport
+
+[Term]
+id: GO:1903793
+name: positive regulation of anion transport
+def: "Any process that activates or increases the frequency, rate or extent of anion transport." [GO_REF:0000058, GOC:TermGenie, PMID:11336802]
+synonym: "activation of anion transport" NARROW [GOC:TermGenie]
+synonym: "up regulation of anion transport" EXACT [GOC:TermGenie]
+synonym: "up-regulation of anion transport" EXACT [GOC:TermGenie]
+synonym: "upregulation of anion transport" EXACT [GOC:TermGenie]
+is_a: GO:0043270 ! positive regulation of ion transport
+is_a: GO:0044070 ! regulation of anion transport
+intersection_of: GO:0008150 ! biological_process
+intersection_of: RO:0002213 GO:0006820 ! anion transport
+relationship: RO:0002213 GO:0006820 ! anion transport
+
+[Term]
+id: GO:1903941
+name: negative regulation of respiratory gaseous exchange
+def: "Any process that stops, prevents or reduces the frequency, rate or extent of respiratory gaseous exchange." [GO_REF:0000058, GOC:TermGenie, PMID:22819705]
+synonym: "down regulation of respiratory gaseous exchange" EXACT [GOC:TermGenie]
+synonym: "down-regulation of respiratory gaseous exchange" EXACT [GOC:TermGenie]
+synonym: "downregulation of respiratory gaseous exchange" EXACT [GOC:TermGenie]
+synonym: "inhibition of respiratory gaseous exchange" NARROW [GOC:TermGenie]
+is_a: GO:0043576 ! regulation of respiratory gaseous exchange
+is_a: GO:0051241 ! negative regulation of multicellular organismal process
+intersection_of: GO:0008150 ! biological_process
+intersection_of: RO:0002212 GO:0007585 ! respiratory gaseous exchange
+relationship: RO:0002212 GO:0007585 ! respiratory gaseous exchange
+
+[Term]
+id: GO:1903942
+name: positive regulation of respiratory gaseous exchange
+def: "Any process that activates or increases the frequency, rate or extent of respiratory gaseous exchange." [GO_REF:0000058, GOC:TermGenie, PMID:22819705]
+synonym: "activation of respiratory gaseous exchange" NARROW [GOC:TermGenie]
+synonym: "up regulation of respiratory gaseous exchange" EXACT [GOC:TermGenie]
+synonym: "up-regulation of respiratory gaseous exchange" EXACT [GOC:TermGenie]
+synonym: "upregulation of respiratory gaseous exchange" EXACT [GOC:TermGenie]
+is_a: GO:0043576 ! regulation of respiratory gaseous exchange
+is_a: GO:0051240 ! positive regulation of multicellular organismal process
+intersection_of: GO:0008150 ! biological_process
+intersection_of: RO:0002213 GO:0007585 ! respiratory gaseous exchange
+relationship: RO:0002213 GO:0007585 ! respiratory gaseous exchange
+
+[Term]
+id: GO:1904057
+name: negative regulation of sensory perception of pain
+def: "Any process that stops, prevents or reduces the frequency, rate or extent of sensory perception of pain." [GO_REF:0000058, GOC:TermGenie, PMID:17167094]
+synonym: "down regulation of nociception" EXACT [GOC:TermGenie]
+synonym: "down regulation of perception of physiological pain" NARROW [GOC:TermGenie]
+synonym: "down regulation of sensory perception of pain" EXACT [GOC:TermGenie]
+synonym: "down-regulation of nociception" EXACT [GOC:TermGenie]
+synonym: "down-regulation of perception of physiological pain" NARROW [GOC:TermGenie]
+synonym: "down-regulation of sensory perception of pain" EXACT [GOC:TermGenie]
+synonym: "downregulation of nociception" EXACT [GOC:TermGenie]
+synonym: "downregulation of perception of physiological pain" NARROW [GOC:TermGenie]
+synonym: "downregulation of sensory perception of pain" EXACT [GOC:TermGenie]
+synonym: "inhibition of nociception" NARROW [GOC:TermGenie]
+synonym: "inhibition of perception of physiological pain" NARROW [GOC:TermGenie]
+synonym: "inhibition of sensory perception of pain" NARROW [GOC:TermGenie]
+synonym: "negative regulation of nociception" EXACT [GOC:TermGenie]
+synonym: "negative regulation of perception of physiological pain" NARROW [GOC:TermGenie]
+is_a: GO:0031645 ! negative regulation of neurological system process
+is_a: GO:0051930 ! regulation of sensory perception of pain
+intersection_of: GO:0008150 ! biological_process
+intersection_of: RO:0002212 GO:0019233 ! sensory perception of pain
+relationship: RO:0002212 GO:0019233 ! sensory perception of pain
+
+[Term]
+id: GO:1904058
+name: positive regulation of sensory perception of pain
+def: "Any process that activates or increases the frequency, rate or extent of sensory perception of pain." [GO_REF:0000058, GOC:TermGenie, PMID:17167094]
+synonym: "activation of nociception" NARROW [GOC:TermGenie]
+synonym: "activation of perception of physiological pain" NARROW [GOC:TermGenie]
+synonym: "activation of sensory perception of pain" NARROW [GOC:TermGenie]
+synonym: "positive regulation of nociception" EXACT [GOC:TermGenie]
+synonym: "positive regulation of perception of physiological pain" NARROW [GOC:TermGenie]
+synonym: "up regulation of nociception" EXACT [GOC:TermGenie]
+synonym: "up regulation of perception of physiological pain" NARROW [GOC:TermGenie]
+synonym: "up regulation of sensory perception of pain" EXACT [GOC:TermGenie]
+synonym: "up-regulation of nociception" EXACT [GOC:TermGenie]
+synonym: "up-regulation of perception of physiological pain" NARROW [GOC:TermGenie]
+synonym: "up-regulation of sensory perception of pain" EXACT [GOC:TermGenie]
+synonym: "upregulation of nociception" EXACT [GOC:TermGenie]
+synonym: "upregulation of perception of physiological pain" NARROW [GOC:TermGenie]
+synonym: "upregulation of sensory perception of pain" EXACT [GOC:TermGenie]
+is_a: GO:0031646 ! positive regulation of neurological system process
+is_a: GO:0051930 ! regulation of sensory perception of pain
+intersection_of: GO:0008150 ! biological_process
+intersection_of: RO:0002213 GO:0019233 ! sensory perception of pain
+relationship: RO:0002213 GO:0019233 ! sensory perception of pain
+
+[Term]
 id: GO:1904478
 name: regulation of intestinal absorption
 def: "Any process that modulates the frequency, rate or extent of intestinal absorption." [GO_REF:0000058, GOC:BHF, GOC:rl, GOC:TermGenie, PMID:12469120]
@@ -3592,6 +5268,36 @@ is_a: GO:0051049 ! regulation of transport
 intersection_of: GO:0008150 ! biological_process
 intersection_of: RO:0002211 GO:0050892 ! intestinal absorption
 relationship: RO:0002211 GO:0050892 ! intestinal absorption
+
+[Term]
+id: GO:1904479
+name: negative regulation of intestinal absorption
+def: "Any process that stops, prevents or reduces the frequency, rate or extent of intestinal absorption." [GO_REF:0000058, GOC:BHF, GOC:rl, GOC:TermGenie, PMID:12469120]
+synonym: "down regulation of intestinal absorption" EXACT [GOC:TermGenie]
+synonym: "down-regulation of intestinal absorption" EXACT [GOC:TermGenie]
+synonym: "downregulation of intestinal absorption" EXACT [GOC:TermGenie]
+synonym: "inhibition of intestinal absorption" NARROW [GOC:TermGenie]
+is_a: GO:0051051 ! negative regulation of transport
+is_a: GO:0060457 ! negative regulation of digestive system process
+is_a: GO:1904478 ! regulation of intestinal absorption
+intersection_of: GO:0008150 ! biological_process
+intersection_of: RO:0002212 GO:0050892 ! intestinal absorption
+relationship: RO:0002212 GO:0050892 ! intestinal absorption
+
+[Term]
+id: GO:1904480
+name: positive regulation of intestinal absorption
+def: "Any process that activates or increases the frequency, rate or extent of intestinal absorption." [GO_REF:0000058, GOC:BHF, GOC:rl, GOC:TermGenie, PMID:12469120]
+synonym: "activation of intestinal absorption" NARROW [GOC:TermGenie]
+synonym: "up regulation of intestinal absorption" EXACT [GOC:TermGenie]
+synonym: "up-regulation of intestinal absorption" EXACT [GOC:TermGenie]
+synonym: "upregulation of intestinal absorption" EXACT [GOC:TermGenie]
+is_a: GO:0051050 ! positive regulation of transport
+is_a: GO:0060456 ! positive regulation of digestive system process
+is_a: GO:1904478 ! regulation of intestinal absorption
+intersection_of: GO:0008150 ! biological_process
+intersection_of: RO:0002213 GO:0050892 ! intestinal absorption
+relationship: RO:0002213 GO:0050892 ! intestinal absorption
 
 [Term]
 id: GO:1904656
@@ -3604,6 +5310,44 @@ intersection_of: RO:0002211 GO:0050916 ! sensory perception of sweet taste
 relationship: RO:0002211 GO:0050916 ! sensory perception of sweet taste
 
 [Term]
+id: GO:1904657
+name: negative regulation of sensory perception of sweet taste
+def: "Any process that stops, prevents or reduces the frequency, rate or extent of sensory perception of sweet taste." [GO_REF:0000058, GOC:mr, GOC:TermGenie, PMID:1716172]
+synonym: "down regulation of sensory perception of sweet taste" EXACT [GOC:TermGenie]
+synonym: "down regulation of sweet taste perception" EXACT [GOC:TermGenie]
+synonym: "down-regulation of sensory perception of sweet taste" EXACT [GOC:TermGenie]
+synonym: "down-regulation of sweet taste perception" EXACT [GOC:TermGenie]
+synonym: "downregulation of sensory perception of sweet taste" EXACT [GOC:TermGenie]
+synonym: "downregulation of sweet taste perception" EXACT [GOC:TermGenie]
+synonym: "inhibition of sensory perception of sweet taste" NARROW [GOC:TermGenie]
+synonym: "inhibition of sweet taste perception" NARROW [GOC:TermGenie]
+synonym: "negative regulation of sweet taste perception" EXACT [GOC:TermGenie]
+is_a: GO:0031645 ! negative regulation of neurological system process
+is_a: GO:1904656 ! regulation of sensory perception of sweet taste
+intersection_of: GO:0008150 ! biological_process
+intersection_of: RO:0002212 GO:0050916 ! sensory perception of sweet taste
+relationship: RO:0002212 GO:0050916 ! sensory perception of sweet taste
+
+[Term]
+id: GO:1904658
+name: positive regulation of sensory perception of sweet taste
+def: "Any process that activates or increases the frequency, rate or extent of sensory perception of sweet taste." [GO_REF:0000058, GOC:mr, GOC:TermGenie, PMID:1716172]
+synonym: "activation of sensory perception of sweet taste" NARROW [GOC:TermGenie]
+synonym: "activation of sweet taste perception" NARROW [GOC:TermGenie]
+synonym: "positive regulation of sweet taste perception" EXACT [GOC:TermGenie]
+synonym: "up regulation of sensory perception of sweet taste" EXACT [GOC:TermGenie]
+synonym: "up regulation of sweet taste perception" EXACT [GOC:TermGenie]
+synonym: "up-regulation of sensory perception of sweet taste" EXACT [GOC:TermGenie]
+synonym: "up-regulation of sweet taste perception" EXACT [GOC:TermGenie]
+synonym: "upregulation of sensory perception of sweet taste" EXACT [GOC:TermGenie]
+synonym: "upregulation of sweet taste perception" EXACT [GOC:TermGenie]
+is_a: GO:0031646 ! positive regulation of neurological system process
+is_a: GO:1904656 ! regulation of sensory perception of sweet taste
+intersection_of: GO:0008150 ! biological_process
+intersection_of: RO:0002213 GO:0050916 ! sensory perception of sweet taste
+relationship: RO:0002213 GO:0050916 ! sensory perception of sweet taste
+
+[Term]
 id: GO:1904660
 name: regulation of sensory perception of bitter taste
 def: "Any process that modulates the frequency, rate or extent of sensory perception of bitter taste." [GO_REF:0000058, GOC:mr, GOC:TermGenie, PMID:1716172]
@@ -3612,6 +5356,64 @@ is_a: GO:0051931 ! regulation of sensory perception
 intersection_of: GO:0008150 ! biological_process
 intersection_of: RO:0002211 GO:0050913 ! sensory perception of bitter taste
 relationship: RO:0002211 GO:0050913 ! sensory perception of bitter taste
+
+[Term]
+id: GO:1904661
+name: negative regulation of sensory perception of bitter taste
+def: "Any process that stops, prevents or reduces the frequency, rate or extent of sensory perception of bitter taste." [GO_REF:0000058, GOC:mr, GOC:TermGenie, PMID:1716172]
+synonym: "down regulation of bitter taste perception" EXACT [GOC:TermGenie]
+synonym: "down regulation of sensory perception of bitter taste" EXACT [GOC:TermGenie]
+synonym: "down-regulation of bitter taste perception" EXACT [GOC:TermGenie]
+synonym: "down-regulation of sensory perception of bitter taste" EXACT [GOC:TermGenie]
+synonym: "downregulation of bitter taste perception" EXACT [GOC:TermGenie]
+synonym: "downregulation of sensory perception of bitter taste" EXACT [GOC:TermGenie]
+synonym: "inhibition of bitter taste perception" NARROW [GOC:TermGenie]
+synonym: "inhibition of sensory perception of bitter taste" NARROW [GOC:TermGenie]
+synonym: "negative regulation of bitter taste perception" EXACT [GOC:TermGenie]
+is_a: GO:0031645 ! negative regulation of neurological system process
+is_a: GO:1904660 ! regulation of sensory perception of bitter taste
+intersection_of: GO:0008150 ! biological_process
+intersection_of: RO:0002212 GO:0050913 ! sensory perception of bitter taste
+relationship: RO:0002212 GO:0050913 ! sensory perception of bitter taste
+
+[Term]
+id: GO:1904662
+name: positive regulation of sensory perception of bitter taste
+def: "Any process that activates or increases the frequency, rate or extent of sensory perception of bitter taste." [GO_REF:0000058, GOC:mr, GOC:TermGenie, PMID:1716172]
+synonym: "activation of bitter taste perception" NARROW [GOC:TermGenie]
+synonym: "activation of sensory perception of bitter taste" NARROW [GOC:TermGenie]
+synonym: "positive regulation of bitter taste perception" EXACT [GOC:TermGenie]
+synonym: "up regulation of bitter taste perception" EXACT [GOC:TermGenie]
+synonym: "up regulation of sensory perception of bitter taste" EXACT [GOC:TermGenie]
+synonym: "up-regulation of bitter taste perception" EXACT [GOC:TermGenie]
+synonym: "up-regulation of sensory perception of bitter taste" EXACT [GOC:TermGenie]
+synonym: "upregulation of bitter taste perception" EXACT [GOC:TermGenie]
+synonym: "upregulation of sensory perception of bitter taste" EXACT [GOC:TermGenie]
+is_a: GO:0031646 ! positive regulation of neurological system process
+is_a: GO:1904660 ! regulation of sensory perception of bitter taste
+intersection_of: GO:0008150 ! biological_process
+intersection_of: RO:0002213 GO:0050913 ! sensory perception of bitter taste
+relationship: RO:0002213 GO:0050913 ! sensory perception of bitter taste
+
+[Term]
+id: GO:1905747
+name: negative regulation of saliva secretion
+def: "Any process that stops, prevents or reduces the frequency, rate or extent of saliva secretion." [GO_REF:0000058, GOC:TermGenie, PMID:23419067]
+synonym: "down regulation of saliva secretion" EXACT [GOC:TermGenie]
+synonym: "down regulation of salivation" EXACT [GOC:TermGenie]
+synonym: "down-regulation of saliva secretion" EXACT [GOC:TermGenie]
+synonym: "down-regulation of salivation" EXACT [GOC:TermGenie]
+synonym: "downregulation of saliva secretion" EXACT [GOC:TermGenie]
+synonym: "downregulation of salivation" EXACT [GOC:TermGenie]
+synonym: "inhibition of saliva secretion" NARROW [GOC:TermGenie]
+synonym: "inhibition of salivation" NARROW [GOC:TermGenie]
+synonym: "negative regulation of salivation" EXACT [GOC:TermGenie]
+is_a: GO:0046877 ! regulation of saliva secretion
+is_a: GO:0051048 ! negative regulation of secretion
+is_a: GO:0060457 ! negative regulation of digestive system process
+intersection_of: GO:0008150 ! biological_process
+intersection_of: RO:0002212 GO:0046541 ! saliva secretion
+relationship: RO:0002212 GO:0046541 ! saliva secretion
 
 [Term]
 id: GO:1905787
@@ -3630,6 +5432,96 @@ intersection_of: RO:0002211 GO:0050976 ! detection of mechanical stimulus involv
 relationship: RO:0002211 GO:0050976 ! detection of mechanical stimulus involved in sensory perception of touch
 
 [Term]
+id: GO:1905788
+name: negative regulation of detection of mechanical stimulus involved in sensory perception of touch
+def: "Any process that stops, prevents or reduces the frequency, rate or extent of detection of mechanical stimulus involved in sensory perception of touch." [GO_REF:0000058, GOC:TermGenie, PMID:8692859]
+synonym: "down regulation of detection of mechanical stimulus involved in sensory perception of touch" EXACT [GOC:TermGenie]
+synonym: "down regulation of perception of touch, detection of mechanical stimulus" EXACT [GOC:TermGenie]
+synonym: "down regulation of perception of touch, sensory detection of mechanical stimulus" EXACT [GOC:TermGenie]
+synonym: "down regulation of perception of touch, sensory transduction of mechanical stimulus" EXACT [GOC:TermGenie]
+synonym: "down regulation of sensory detection of mechanical stimulus during perception of touch" EXACT [GOC:TermGenie]
+synonym: "down regulation of sensory transduction of mechanical stimulus during perception of touch" EXACT [GOC:TermGenie]
+synonym: "down regulation of tactition, sensory detection of mechanical stimulus" EXACT [GOC:TermGenie]
+synonym: "down-regulation of detection of mechanical stimulus involved in sensory perception of touch" EXACT [GOC:TermGenie]
+synonym: "down-regulation of perception of touch, detection of mechanical stimulus" EXACT [GOC:TermGenie]
+synonym: "down-regulation of perception of touch, sensory detection of mechanical stimulus" EXACT [GOC:TermGenie]
+synonym: "down-regulation of perception of touch, sensory transduction of mechanical stimulus" EXACT [GOC:TermGenie]
+synonym: "down-regulation of sensory detection of mechanical stimulus during perception of touch" EXACT [GOC:TermGenie]
+synonym: "down-regulation of sensory transduction of mechanical stimulus during perception of touch" EXACT [GOC:TermGenie]
+synonym: "down-regulation of tactition, sensory detection of mechanical stimulus" EXACT [GOC:TermGenie]
+synonym: "downregulation of detection of mechanical stimulus involved in sensory perception of touch" EXACT [GOC:TermGenie]
+synonym: "downregulation of perception of touch, detection of mechanical stimulus" EXACT [GOC:TermGenie]
+synonym: "downregulation of perception of touch, sensory detection of mechanical stimulus" EXACT [GOC:TermGenie]
+synonym: "downregulation of perception of touch, sensory transduction of mechanical stimulus" EXACT [GOC:TermGenie]
+synonym: "downregulation of sensory detection of mechanical stimulus during perception of touch" EXACT [GOC:TermGenie]
+synonym: "downregulation of sensory transduction of mechanical stimulus during perception of touch" EXACT [GOC:TermGenie]
+synonym: "downregulation of tactition, sensory detection of mechanical stimulus" EXACT [GOC:TermGenie]
+synonym: "inhibition of detection of mechanical stimulus involved in sensory perception of touch" NARROW [GOC:TermGenie]
+synonym: "inhibition of perception of touch, detection of mechanical stimulus" NARROW [GOC:TermGenie]
+synonym: "inhibition of perception of touch, sensory detection of mechanical stimulus" NARROW [GOC:TermGenie]
+synonym: "inhibition of perception of touch, sensory transduction of mechanical stimulus" NARROW [GOC:TermGenie]
+synonym: "inhibition of sensory detection of mechanical stimulus during perception of touch" NARROW [GOC:TermGenie]
+synonym: "inhibition of sensory transduction of mechanical stimulus during perception of touch" NARROW [GOC:TermGenie]
+synonym: "inhibition of tactition, sensory detection of mechanical stimulus" NARROW [GOC:TermGenie]
+synonym: "negative regulation of perception of touch, detection of mechanical stimulus" EXACT [GOC:TermGenie]
+synonym: "negative regulation of perception of touch, sensory detection of mechanical stimulus" EXACT [GOC:TermGenie]
+synonym: "negative regulation of perception of touch, sensory transduction of mechanical stimulus" EXACT [GOC:TermGenie]
+synonym: "negative regulation of sensory detection of mechanical stimulus during perception of touch" EXACT [GOC:TermGenie]
+synonym: "negative regulation of sensory transduction of mechanical stimulus during perception of touch" EXACT [GOC:TermGenie]
+synonym: "negative regulation of tactition, sensory detection of mechanical stimulus" EXACT [GOC:TermGenie]
+is_a: GO:0031645 ! negative regulation of neurological system process
+is_a: GO:0032102 ! negative regulation of response to external stimulus
+is_a: GO:1905787 ! regulation of detection of mechanical stimulus involved in sensory perception of touch
+intersection_of: GO:0008150 ! biological_process
+intersection_of: RO:0002212 GO:0050976 ! detection of mechanical stimulus involved in sensory perception of touch
+relationship: RO:0002212 GO:0050976 ! detection of mechanical stimulus involved in sensory perception of touch
+
+[Term]
+id: GO:1905789
+name: positive regulation of detection of mechanical stimulus involved in sensory perception of touch
+def: "Any process that activates or increases the frequency, rate or extent of detection of mechanical stimulus involved in sensory perception of touch." [GO_REF:0000058, GOC:TermGenie, PMID:8692859]
+synonym: "activation of detection of mechanical stimulus involved in sensory perception of touch" NARROW [GOC:TermGenie]
+synonym: "activation of perception of touch, detection of mechanical stimulus" NARROW [GOC:TermGenie]
+synonym: "activation of perception of touch, sensory detection of mechanical stimulus" NARROW [GOC:TermGenie]
+synonym: "activation of perception of touch, sensory transduction of mechanical stimulus" NARROW [GOC:TermGenie]
+synonym: "activation of sensory detection of mechanical stimulus during perception of touch" NARROW [GOC:TermGenie]
+synonym: "activation of sensory transduction of mechanical stimulus during perception of touch" NARROW [GOC:TermGenie]
+synonym: "activation of tactition, sensory detection of mechanical stimulus" NARROW [GOC:TermGenie]
+synonym: "positive regulation of perception of touch, detection of mechanical stimulus" EXACT [GOC:TermGenie]
+synonym: "positive regulation of perception of touch, sensory detection of mechanical stimulus" EXACT [GOC:TermGenie]
+synonym: "positive regulation of perception of touch, sensory transduction of mechanical stimulus" EXACT [GOC:TermGenie]
+synonym: "positive regulation of sensory detection of mechanical stimulus during perception of touch" EXACT [GOC:TermGenie]
+synonym: "positive regulation of sensory transduction of mechanical stimulus during perception of touch" EXACT [GOC:TermGenie]
+synonym: "positive regulation of tactition, sensory detection of mechanical stimulus" EXACT [GOC:TermGenie]
+synonym: "up regulation of detection of mechanical stimulus involved in sensory perception of touch" EXACT [GOC:TermGenie]
+synonym: "up regulation of perception of touch, detection of mechanical stimulus" EXACT [GOC:TermGenie]
+synonym: "up regulation of perception of touch, sensory detection of mechanical stimulus" EXACT [GOC:TermGenie]
+synonym: "up regulation of perception of touch, sensory transduction of mechanical stimulus" EXACT [GOC:TermGenie]
+synonym: "up regulation of sensory detection of mechanical stimulus during perception of touch" EXACT [GOC:TermGenie]
+synonym: "up regulation of sensory transduction of mechanical stimulus during perception of touch" EXACT [GOC:TermGenie]
+synonym: "up regulation of tactition, sensory detection of mechanical stimulus" EXACT [GOC:TermGenie]
+synonym: "up-regulation of detection of mechanical stimulus involved in sensory perception of touch" EXACT [GOC:TermGenie]
+synonym: "up-regulation of perception of touch, detection of mechanical stimulus" EXACT [GOC:TermGenie]
+synonym: "up-regulation of perception of touch, sensory detection of mechanical stimulus" EXACT [GOC:TermGenie]
+synonym: "up-regulation of perception of touch, sensory transduction of mechanical stimulus" EXACT [GOC:TermGenie]
+synonym: "up-regulation of sensory detection of mechanical stimulus during perception of touch" EXACT [GOC:TermGenie]
+synonym: "up-regulation of sensory transduction of mechanical stimulus during perception of touch" EXACT [GOC:TermGenie]
+synonym: "up-regulation of tactition, sensory detection of mechanical stimulus" EXACT [GOC:TermGenie]
+synonym: "upregulation of detection of mechanical stimulus involved in sensory perception of touch" EXACT [GOC:TermGenie]
+synonym: "upregulation of perception of touch, detection of mechanical stimulus" EXACT [GOC:TermGenie]
+synonym: "upregulation of perception of touch, sensory detection of mechanical stimulus" EXACT [GOC:TermGenie]
+synonym: "upregulation of perception of touch, sensory transduction of mechanical stimulus" EXACT [GOC:TermGenie]
+synonym: "upregulation of sensory detection of mechanical stimulus during perception of touch" EXACT [GOC:TermGenie]
+synonym: "upregulation of sensory transduction of mechanical stimulus during perception of touch" EXACT [GOC:TermGenie]
+synonym: "upregulation of tactition, sensory detection of mechanical stimulus" EXACT [GOC:TermGenie]
+is_a: GO:0031646 ! positive regulation of neurological system process
+is_a: GO:0032103 ! positive regulation of response to external stimulus
+is_a: GO:1905787 ! regulation of detection of mechanical stimulus involved in sensory perception of touch
+intersection_of: GO:0008150 ! biological_process
+intersection_of: RO:0002213 GO:0050976 ! detection of mechanical stimulus involved in sensory perception of touch
+relationship: RO:0002213 GO:0050976 ! detection of mechanical stimulus involved in sensory perception of touch
+
+[Term]
 id: GO:1905945
 name: regulation of response to calcium ion
 def: "Any process that modulates the frequency, rate or extent of response to calcium ion." [GO_REF:0000058, GOC:aruk, GOC:bc, GOC:TermGenie, PMID:11404397]
@@ -3638,6 +5530,44 @@ is_a: GO:0048583 ! regulation of response to stimulus
 intersection_of: GO:0065007 ! biological regulation
 intersection_of: RO:0002211 GO:0051592 ! response to calcium ion
 relationship: RO:0002211 GO:0051592 ! response to calcium ion
+
+[Term]
+id: GO:1905946
+name: negative regulation of response to calcium ion
+def: "Any process that stops, prevents or reduces the frequency, rate or extent of response to calcium ion." [GO_REF:0000058, GOC:aruk, GOC:bc, GOC:TermGenie, PMID:11404397]
+synonym: "down regulation of response to Ca2+ ion" EXACT [GOC:TermGenie]
+synonym: "down regulation of response to calcium ion" EXACT [GOC:TermGenie]
+synonym: "down-regulation of response to Ca2+ ion" EXACT [GOC:TermGenie]
+synonym: "down-regulation of response to calcium ion" EXACT [GOC:TermGenie]
+synonym: "downregulation of response to Ca2+ ion" EXACT [GOC:TermGenie]
+synonym: "downregulation of response to calcium ion" EXACT [GOC:TermGenie]
+synonym: "inhibition of response to Ca2+ ion" NARROW [GOC:TermGenie]
+synonym: "inhibition of response to calcium ion" NARROW [GOC:TermGenie]
+synonym: "negative regulation of response to Ca2+ ion" EXACT [GOC:TermGenie]
+is_a: GO:0048585 ! negative regulation of response to stimulus
+is_a: GO:1905945 ! regulation of response to calcium ion
+intersection_of: GO:0065007 ! biological regulation
+intersection_of: RO:0002212 GO:0051592 ! response to calcium ion
+relationship: RO:0002212 GO:0051592 ! response to calcium ion
+
+[Term]
+id: GO:1905947
+name: positive regulation of response to calcium ion
+def: "Any process that activates or increases the frequency, rate or extent of response to calcium ion." [GO_REF:0000058, GOC:aruk, GOC:bc, GOC:TermGenie, PMID:11404397]
+synonym: "activation of response to Ca2+ ion" NARROW [GOC:TermGenie]
+synonym: "activation of response to calcium ion" NARROW [GOC:TermGenie]
+synonym: "positive regulation of response to Ca2+ ion" EXACT [GOC:TermGenie]
+synonym: "up regulation of response to Ca2+ ion" EXACT [GOC:TermGenie]
+synonym: "up regulation of response to calcium ion" EXACT [GOC:TermGenie]
+synonym: "up-regulation of response to Ca2+ ion" EXACT [GOC:TermGenie]
+synonym: "up-regulation of response to calcium ion" EXACT [GOC:TermGenie]
+synonym: "upregulation of response to Ca2+ ion" EXACT [GOC:TermGenie]
+synonym: "upregulation of response to calcium ion" EXACT [GOC:TermGenie]
+is_a: GO:0048584 ! positive regulation of response to stimulus
+is_a: GO:1905945 ! regulation of response to calcium ion
+intersection_of: GO:0065007 ! biological regulation
+intersection_of: RO:0002213 GO:0051592 ! response to calcium ion
+relationship: RO:0002213 GO:0051592 ! response to calcium ion
 
 [Term]
 id: GO:1905952
@@ -3650,6 +5580,44 @@ intersection_of: RO:0002211 GO:0010876 ! lipid localization
 relationship: RO:0002211 GO:0010876 ! lipid localization
 
 [Term]
+id: GO:1905953
+name: negative regulation of lipid localization
+def: "Any process that stops, prevents or reduces the frequency, rate or extent of lipid localization." [GO_REF:0000058, GOC:TermGenie, PMID:17564681]
+synonym: "down regulation of lipid localisation" EXACT [GOC:TermGenie]
+synonym: "down regulation of lipid localization" EXACT [GOC:TermGenie]
+synonym: "down-regulation of lipid localisation" EXACT [GOC:TermGenie]
+synonym: "down-regulation of lipid localization" EXACT [GOC:TermGenie]
+synonym: "downregulation of lipid localisation" EXACT [GOC:TermGenie]
+synonym: "downregulation of lipid localization" EXACT [GOC:TermGenie]
+synonym: "inhibition of lipid localisation" NARROW [GOC:TermGenie]
+synonym: "inhibition of lipid localization" NARROW [GOC:TermGenie]
+synonym: "negative regulation of lipid localisation" EXACT [GOC:TermGenie]
+is_a: GO:0048519 ! negative regulation of biological process
+is_a: GO:1905952 ! regulation of lipid localization
+intersection_of: GO:0065007 ! biological regulation
+intersection_of: RO:0002212 GO:0010876 ! lipid localization
+relationship: RO:0002212 GO:0010876 ! lipid localization
+
+[Term]
+id: GO:1905954
+name: positive regulation of lipid localization
+def: "Any process that activates or increases the frequency, rate or extent of lipid localization." [GO_REF:0000058, GOC:TermGenie, PMID:17564681]
+synonym: "activation of lipid localisation" NARROW [GOC:TermGenie]
+synonym: "activation of lipid localization" NARROW [GOC:TermGenie]
+synonym: "positive regulation of lipid localisation" EXACT [GOC:TermGenie]
+synonym: "up regulation of lipid localisation" EXACT [GOC:TermGenie]
+synonym: "up regulation of lipid localization" EXACT [GOC:TermGenie]
+synonym: "up-regulation of lipid localisation" EXACT [GOC:TermGenie]
+synonym: "up-regulation of lipid localization" EXACT [GOC:TermGenie]
+synonym: "upregulation of lipid localisation" EXACT [GOC:TermGenie]
+synonym: "upregulation of lipid localization" EXACT [GOC:TermGenie]
+is_a: GO:0048518 ! positive regulation of biological process
+is_a: GO:1905952 ! regulation of lipid localization
+intersection_of: GO:0065007 ! biological regulation
+intersection_of: RO:0002213 GO:0010876 ! lipid localization
+relationship: RO:0002213 GO:0010876 ! lipid localization
+
+[Term]
 id: GO:1905957
 name: regulation of cellular response to alcohol
 def: "Any process that modulates the frequency, rate or extent of cellular response to alcohol." [GO_REF:0000058, GOC:TermGenie, PMID:26434723]
@@ -3660,6 +5628,36 @@ intersection_of: RO:0002211 GO:0097306 ! cellular response to alcohol
 relationship: RO:0002211 GO:0097306 ! cellular response to alcohol
 
 [Term]
+id: GO:1905958
+name: negative regulation of cellular response to alcohol
+def: "Any process that stops, prevents or reduces the frequency, rate or extent of cellular response to alcohol." [GO_REF:0000058, GOC:TermGenie, PMID:26434723]
+synonym: "down regulation of cellular response to alcohol" EXACT [GOC:TermGenie]
+synonym: "down-regulation of cellular response to alcohol" EXACT [GOC:TermGenie]
+synonym: "downregulation of cellular response to alcohol" EXACT [GOC:TermGenie]
+synonym: "inhibition of cellular response to alcohol" NARROW [GOC:TermGenie]
+is_a: GO:0048523 ! negative regulation of cellular process
+is_a: GO:1901420 ! negative regulation of response to alcohol
+is_a: GO:1905957 ! regulation of cellular response to alcohol
+intersection_of: GO:0065007 ! biological regulation
+intersection_of: RO:0002212 GO:0097306 ! cellular response to alcohol
+relationship: RO:0002212 GO:0097306 ! cellular response to alcohol
+
+[Term]
+id: GO:1905959
+name: positive regulation of cellular response to alcohol
+def: "Any process that activates or increases the frequency, rate or extent of cellular response to alcohol." [GO_REF:0000058, GOC:TermGenie, PMID:26434723]
+synonym: "activation of cellular response to alcohol" NARROW [GOC:TermGenie]
+synonym: "up regulation of cellular response to alcohol" EXACT [GOC:TermGenie]
+synonym: "up-regulation of cellular response to alcohol" EXACT [GOC:TermGenie]
+synonym: "upregulation of cellular response to alcohol" EXACT [GOC:TermGenie]
+is_a: GO:0048522 ! positive regulation of cellular process
+is_a: GO:1901421 ! positive regulation of response to alcohol
+is_a: GO:1905957 ! regulation of cellular response to alcohol
+intersection_of: GO:0065007 ! biological regulation
+intersection_of: RO:0002213 GO:0097306 ! cellular response to alcohol
+relationship: RO:0002213 GO:0097306 ! cellular response to alcohol
+
+[Term]
 id: GO:2000241
 name: regulation of reproductive process
 def: "Any process that modulates the frequency, rate or extent of reproductive process." [GOC:mah]
@@ -3667,6 +5665,56 @@ is_a: GO:0050789 ! regulation of biological process
 intersection_of: GO:0008150 ! biological_process
 intersection_of: RO:0002211 GO:0022414 ! reproductive process
 relationship: RO:0002211 GO:0022414 ! reproductive process
+
+[Term]
+id: GO:2000242
+name: negative regulation of reproductive process
+def: "Any process that stops, prevents, or reduces the frequency, rate or extent of reproductive process." [GOC:mah]
+is_a: GO:0048519 ! negative regulation of biological process
+is_a: GO:2000241 ! regulation of reproductive process
+intersection_of: GO:0008150 ! biological_process
+intersection_of: RO:0002212 GO:0022414 ! reproductive process
+relationship: RO:0002212 GO:0022414 ! reproductive process
+
+[Term]
+id: GO:2000243
+name: positive regulation of reproductive process
+def: "Any process that activates or increases the frequency, rate or extent of reproductive process." [GOC:mah]
+is_a: GO:0048518 ! positive regulation of biological process
+is_a: GO:2000241 ! regulation of reproductive process
+intersection_of: GO:0008150 ! biological_process
+intersection_of: RO:0002213 GO:0022414 ! reproductive process
+relationship: RO:0002213 GO:0022414 ! reproductive process
+
+[Term]
+id: GO:2000252
+name: negative regulation of feeding behavior
+def: "Any process that stops, prevents or reduces the frequency, rate or extent of feeding behavior." [GOC:obol]
+synonym: "negative regulation of behavioral response to food" EXACT [GOC:obol]
+synonym: "negative regulation of behavioural response to food" EXACT [GOC:obol]
+synonym: "negative regulation of drinking" RELATED [GOC:obol]
+synonym: "negative regulation of eating" RELATED [GOC:obol]
+synonym: "negative regulation of feeding behaviour" EXACT [GOC:obol]
+is_a: GO:0048521 ! negative regulation of behavior
+is_a: GO:0060259 ! regulation of feeding behavior
+intersection_of: GO:0008150 ! biological_process
+intersection_of: RO:0002212 GO:0007631 ! feeding behavior
+relationship: RO:0002212 GO:0007631 ! feeding behavior
+
+[Term]
+id: GO:2000253
+name: positive regulation of feeding behavior
+def: "Any process that activates or increases the frequency, rate or extent of feeding behavior." [GOC:obol]
+synonym: "positive regulation of behavioral response to food" EXACT [GOC:obol]
+synonym: "positive regulation of behavioural response to food" EXACT [GOC:obol]
+synonym: "positive regulation of drinking" RELATED [GOC:obol]
+synonym: "positive regulation of eating" RELATED [GOC:obol]
+synonym: "positive regulation of feeding behaviour" EXACT [GOC:obol]
+is_a: GO:0048520 ! positive regulation of behavior
+is_a: GO:0060259 ! regulation of feeding behavior
+intersection_of: GO:0008150 ! biological_process
+intersection_of: RO:0002213 GO:0007631 ! feeding behavior
+relationship: RO:0002213 GO:0007631 ! feeding behavior
 
 [Term]
 id: GO:2000821
@@ -3690,6 +5738,30 @@ intersection_of: RO:0002211 GO:0042493 ! response to drug
 relationship: RO:0002211 GO:0042493 ! response to drug
 
 [Term]
+id: GO:2001024
+name: negative regulation of response to drug
+def: "Any process that stops, prevents or reduces the frequency, rate or extent of response to drug." [GOC:obol]
+synonym: "negative regulation of drug resistance" RELATED [GOC:obol]
+synonym: "negative regulation of drug susceptibility/resistance" RELATED [GOC:obol]
+is_a: GO:0048585 ! negative regulation of response to stimulus
+is_a: GO:2001023 ! regulation of response to drug
+intersection_of: GO:0008150 ! biological_process
+intersection_of: RO:0002212 GO:0042493 ! response to drug
+relationship: RO:0002212 GO:0042493 ! response to drug
+
+[Term]
+id: GO:2001025
+name: positive regulation of response to drug
+def: "Any process that activates or increases the frequency, rate or extent of response to drug." [GOC:obol]
+synonym: "positive regulation of drug resistance" RELATED [GOC:obol]
+synonym: "positive regulation of drug susceptibility/resistance" RELATED [GOC:obol]
+is_a: GO:0048584 ! positive regulation of response to stimulus
+is_a: GO:2001023 ! regulation of response to drug
+intersection_of: GO:0008150 ! biological_process
+intersection_of: RO:0002213 GO:0042493 ! response to drug
+relationship: RO:0002213 GO:0042493 ! response to drug
+
+[Term]
 id: GO:2001038
 name: regulation of cellular response to drug
 def: "Any process that modulates the frequency, rate or extent of cellular response to drug." [GOC:obol]
@@ -3698,6 +5770,28 @@ is_a: GO:2001023 ! regulation of response to drug
 intersection_of: GO:0008150 ! biological_process
 intersection_of: RO:0002211 GO:0035690 ! cellular response to drug
 relationship: RO:0002211 GO:0035690 ! cellular response to drug
+
+[Term]
+id: GO:2001039
+name: negative regulation of cellular response to drug
+def: "Any process that stops, prevents or reduces the frequency, rate or extent of cellular response to drug." [GOC:obol]
+is_a: GO:0048523 ! negative regulation of cellular process
+is_a: GO:2001024 ! negative regulation of response to drug
+is_a: GO:2001038 ! regulation of cellular response to drug
+intersection_of: GO:0008150 ! biological_process
+intersection_of: RO:0002212 GO:0035690 ! cellular response to drug
+relationship: RO:0002212 GO:0035690 ! cellular response to drug
+
+[Term]
+id: GO:2001040
+name: positive regulation of cellular response to drug
+def: "Any process that activates or increases the frequency, rate or extent of cellular response to drug." [GOC:obol]
+is_a: GO:0048522 ! positive regulation of cellular process
+is_a: GO:2001025 ! positive regulation of response to drug
+is_a: GO:2001038 ! regulation of cellular response to drug
+intersection_of: GO:0008150 ! biological_process
+intersection_of: RO:0002213 GO:0035690 ! cellular response to drug
+relationship: RO:0002213 GO:0035690 ! cellular response to drug
 
 [Typedef]
 id: BFO:0000050
@@ -3716,5 +5810,16 @@ transitive_over: BFO:0000050
 [Typedef]
 id: RO:0002211
 is_transitive: true
+transitive_over: BFO:0000050
+
+[Typedef]
+id: RO:0002212
+is_a: RO:0002211
+transitive_over: BFO:0000050
+
+[Typedef]
+id: RO:0002213
+holds_over_chain: RO:0002212 RO:0002212
+is_a: RO:0002211
 transitive_over: BFO:0000050
 
