@@ -1577,6 +1577,13 @@ synonym: "perception of physiological pain" NARROW []
 is_a: GO:0007600 ! sensory perception
 
 [Term]
+id: GO:0019236
+name: response to pheromone
+def: "Any process that results in a change in state or activity of a cell or an organism (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of a pheromone stimulus." [GOC:jl]
+synonym: "pheromone response" EXACT []
+is_a: GO:0010033 ! response to organic substance
+
+[Term]
 id: GO:0019915
 name: lipid storage
 def: "The accumulation and maintenance in cells or tissues of lipids, compounds soluble in organic solvents but insoluble or sparingly soluble in aqueous solvents. Lipid reserves can be accumulated during early developmental stages for mobilization and utilization at later stages of development." [GOC:dph, GOC:mah, GOC:tb, PMID:11102830]
@@ -2510,6 +2517,13 @@ is_a: GO:0051239 ! regulation of multicellular organismal process
 intersection_of: GO:0008150 ! biological_process
 intersection_of: RO:0002211 GO:0007585 ! respiratory gaseous exchange
 relationship: RO:0002211 GO:0007585 ! respiratory gaseous exchange
+
+[Term]
+id: GO:0043695
+name: detection of pheromone
+def: "The series of events in which a pheromone stimulus is received by a cell and converted into a molecular signal." [GOC:mah]
+is_a: GO:0009593 ! detection of chemical stimulus
+is_a: GO:0019236 ! response to pheromone
 
 [Term]
 id: GO:0043900
