@@ -175,6 +175,17 @@ intersection_of: RO:0002213 GO:0002790 ! peptide secretion
 relationship: RO:0002213 GO:0002790 ! peptide secretion
 
 [Term]
+id: GO:0003006
+name: developmental process involved in reproduction
+def: "A developmental process in which a progressive change in the state of some part of an organism specifically contributes to its ability to form offspring." [GOC:dph, GOC:isa_complete]
+synonym: "puberty" NARROW [GOC:dph]
+synonym: "reproductive developmental process" RELATED [GOC:dph, GOC:tb]
+is_a: GO:0022414 ! reproductive process
+is_a: GO:0032502 ! developmental process
+intersection_of: GO:0032502 ! developmental process
+intersection_of: BFO:0000050 GO:0000003 ! reproduction
+
+[Term]
 id: GO:0003008
 name: system process
 def: "A multicellular organismal process carried out by any of the organs or tissues in an organ system. An organ system is a regularly interacting or interdependent group of organs or tissues that work together to carry out a biological objective." [GOC:mtg_cardio]
@@ -392,6 +403,13 @@ def: "The vesicular release of acetylcholine from a presynapse, across a chemica
 is_a: GO:0007268 ! chemical synaptic transmission
 
 [Term]
+id: GO:0007275
+name: multicellular organism development
+def: "The biological process whose specific outcome is the progression of a multicellular organism over time from an initial condition (e.g. a zygote or a young adult) to a later condition (e.g. a multicellular animal or an aged adult)." [GOC:dph, GOC:ems, GOC:isa_complete, GOC:tb]
+is_a: GO:0032501 ! multicellular organismal process
+is_a: GO:0048856 ! anatomical structure development
+
+[Term]
 id: GO:0007320
 name: insemination
 def: "The introduction of semen or sperm into the genital tract of a female." [ISBN:0582227089]
@@ -399,6 +417,22 @@ is_a: GO:0044703 ! multi-organism reproductive process
 is_a: GO:0044706 ! multi-multicellular organism process
 is_a: GO:0048609 ! multicellular organismal reproductive process
 relationship: BFO:0000050 GO:0007620 ! copulation
+
+[Term]
+id: GO:0007562
+name: eclosion
+def: "The emergence of an adult insect from a pupa case." [GOC:dgh, GOC:dos, GOC:mah, ISBN:0198600461]
+is_a: GO:0071684 ! organism emergence from protective structure
+relationship: BFO:0000050 GO:0007275 ! multicellular organism development
+
+[Term]
+id: GO:0007563
+name: regulation of eclosion
+def: "Any process that modulates the frequency, rate or extent of the emergence of an insect from a pupa-case or of a larva from an egg." [GOC:go_curators, ISBN:0198600461]
+is_a: GO:2000026 ! regulation of multicellular organismal development
+intersection_of: GO:0008150 ! biological_process
+intersection_of: RO:0002211 GO:0007562 ! eclosion
+relationship: RO:0002211 GO:0007562 ! eclosion
 
 [Term]
 id: GO:0007584
@@ -498,6 +532,7 @@ synonym: "behaviour" EXACT []
 synonym: "behavioural response to stimulus" EXACT []
 synonym: "single-organism behavior" RELATED []
 is_a: GO:0008150 ! biological_process
+disjoint_from: GO:0032502 ! developmental process
 
 [Term]
 id: GO:0007611
@@ -2055,6 +2090,14 @@ synonym: "single-multicellular organism process" RELATED []
 is_a: GO:0008150 ! biological_process
 
 [Term]
+id: GO:0032502
+name: developmental process
+def: "A biological process whose specific outcome is the progression of an integrated living unit: an anatomical structure (which may be a subcellular structure, cell, tissue, or organ), or organism over time from an initial condition to a later condition." [GOC:isa_complete]
+synonym: "development" NARROW []
+synonym: "single-organism developmental process" RELATED []
+is_a: GO:0008150 ! biological_process
+
+[Term]
 id: GO:0032504
 name: multicellular organism reproduction
 def: "The biological process in which new individuals are produced by one or two multicellular organisms. The new individuals inherit some proportion of their genetic material from the parent or parents." [GOC:isa_complete, GOC:jid]
@@ -2752,6 +2795,37 @@ intersection_of: RO:0002213 GO:0007186 ! G protein-coupled receptor signaling pa
 relationship: RO:0002213 GO:0007186 ! G protein-coupled receptor signaling pathway
 
 [Term]
+id: GO:0045804
+name: negative regulation of eclosion
+def: "Any process that stops, prevents, or reduces the frequency, rate or extent of eclosion." [GOC:go_curators]
+synonym: "down regulation of eclosion" EXACT []
+synonym: "down-regulation of eclosion" EXACT []
+synonym: "downregulation of eclosion" EXACT []
+synonym: "inhibition of eclosion" NARROW []
+is_a: GO:0007563 ! regulation of eclosion
+is_a: GO:0051093 ! negative regulation of developmental process
+is_a: GO:0051241 ! negative regulation of multicellular organismal process
+intersection_of: GO:0008150 ! biological_process
+intersection_of: RO:0002212 GO:0007562 ! eclosion
+relationship: RO:0002212 GO:0007562 ! eclosion
+
+[Term]
+id: GO:0045805
+name: positive regulation of eclosion
+def: "Any process that activates or increases the frequency, rate or extent of eclosion." [GOC:go_curators]
+synonym: "activation of eclosion" NARROW []
+synonym: "stimulation of eclosion" NARROW []
+synonym: "up regulation of eclosion" EXACT []
+synonym: "up-regulation of eclosion" EXACT []
+synonym: "upregulation of eclosion" EXACT []
+is_a: GO:0007563 ! regulation of eclosion
+is_a: GO:0051094 ! positive regulation of developmental process
+is_a: GO:0051240 ! positive regulation of multicellular organismal process
+intersection_of: GO:0008150 ! biological_process
+intersection_of: RO:0002213 GO:0007562 ! eclosion
+relationship: RO:0002213 GO:0007562 ! eclosion
+
+[Term]
 id: GO:0045833
 name: negative regulation of lipid metabolic process
 def: "Any process that stops, prevents, or reduces the frequency, rate or extent of the chemical reactions and pathways involving lipids." [GOC:go_curators]
@@ -3170,6 +3244,13 @@ is_a: GO:0022414 ! reproductive process
 relationship: BFO:0000050 GO:0032504 ! multicellular organism reproduction
 
 [Term]
+id: GO:0048856
+name: anatomical structure development
+def: "The biological process whose specific outcome is the progression of an anatomical structure from an initial condition to its mature state. This process begins with the formation of the structure and ends with the mature structure, whatever form that may be including its natural destruction. An anatomical structure is any biological entity that occupies space and is distinguished from its surroundings. Anatomical structures can be macroscopic such as a carpel, or microscopic such as an acrosome." [GO_REF:0000021, GOC:mtg_15jun06]
+synonym: "development of an anatomical structure" EXACT []
+is_a: GO:0032502 ! developmental process
+
+[Term]
 id: GO:0050432
 name: catecholamine secretion
 def: "The regulated release of catecholamines by a cell. The catecholamines are a group of physiologically important biogenic amines that possess a catechol (3,4-dihydroxyphenyl) nucleus and are derivatives of 3,4-dihydroxyphenylethylamine." [GOC:ai, GOC:ef]
@@ -3195,6 +3276,15 @@ is_a: GO:0065007 ! biological regulation
 intersection_of: GO:0008150 ! biological_process
 intersection_of: RO:0002211 GO:0008150 ! biological_process
 relationship: RO:0002211 GO:0008150 ! biological_process
+
+[Term]
+id: GO:0050793
+name: regulation of developmental process
+def: "Any process that modulates the frequency, rate or extent of development, the biological process whose specific outcome is the progression of a multicellular organism over time from an initial condition (e.g. a zygote, or a young adult) to a later condition (e.g. a multicellular animal or an aged adult)." [GOC:go_curators]
+is_a: GO:0050789 ! regulation of biological process
+intersection_of: GO:0008150 ! biological_process
+intersection_of: RO:0002211 GO:0032502 ! developmental process
+relationship: RO:0002211 GO:0032502 ! developmental process
 
 [Term]
 id: GO:0050794
@@ -3801,6 +3891,35 @@ is_a: GO:0051049 ! regulation of transport
 intersection_of: GO:0008150 ! biological_process
 intersection_of: RO:0002212 GO:0006810 ! transport
 relationship: RO:0002212 GO:0006810 ! transport
+
+[Term]
+id: GO:0051093
+name: negative regulation of developmental process
+def: "Any process that stops, prevents or reduces the rate or extent of development, the biological process whose specific outcome is the progression of an organism over time from an initial condition (e.g. a zygote, or a young adult) to a later condition (e.g. a multicellular animal or an aged adult)." [GOC:ai]
+synonym: "down regulation of developmental process" EXACT []
+synonym: "down-regulation of developmental process" EXACT []
+synonym: "downregulation of developmental process" EXACT []
+synonym: "inhibition of developmental process" NARROW []
+is_a: GO:0048519 ! negative regulation of biological process
+is_a: GO:0050793 ! regulation of developmental process
+intersection_of: GO:0008150 ! biological_process
+intersection_of: RO:0002212 GO:0032502 ! developmental process
+relationship: RO:0002212 GO:0032502 ! developmental process
+
+[Term]
+id: GO:0051094
+name: positive regulation of developmental process
+def: "Any process that activates or increases the rate or extent of development, the biological process whose specific outcome is the progression of an organism over time from an initial condition (e.g. a zygote, or a young adult) to a later condition (e.g. a multicellular animal or an aged adult)." [GOC:ai]
+synonym: "activation of developmental process" NARROW []
+synonym: "stimulation of developmental process" NARROW []
+synonym: "up regulation of developmental process" EXACT []
+synonym: "up-regulation of developmental process" EXACT []
+synonym: "upregulation of developmental process" EXACT []
+is_a: GO:0048518 ! positive regulation of biological process
+is_a: GO:0050793 ! regulation of developmental process
+intersection_of: GO:0008150 ! biological_process
+intersection_of: RO:0002213 GO:0032502 ! developmental process
+relationship: RO:0002213 GO:0032502 ! developmental process
 
 [Term]
 id: GO:0051179
@@ -4516,6 +4635,12 @@ id: GO:0071632
 name: optomotor response
 def: "Eye, head or whole body movements that help to compensate movements of the environment in order to stabilize its image on the retina. In the case of whole body movements, these motor actions may also stabilize a locomotor course in response to some disturbance. Examples include: the optokinetic reflex, which allows human eyes to follow objects in motion while the head remains stationary reflex; the optomotor responses of flying insects and swimming fish." [GOC:dos, PMID:12726833, PMID:2469195]
 is_a: GO:0007634 ! optokinetic behavior
+
+[Term]
+id: GO:0071684
+name: organism emergence from protective structure
+def: "The developmental process in which an organism emerges from a surrounding protective structure such as an egg or pupa case." [GOC:mah]
+is_a: GO:0032501 ! multicellular organismal process
 
 [Term]
 id: GO:0071702
@@ -5670,6 +5795,16 @@ is_a: GO:1905957 ! regulation of cellular response to alcohol
 intersection_of: GO:0065007 ! biological regulation
 intersection_of: RO:0002213 GO:0097306 ! cellular response to alcohol
 relationship: RO:0002213 GO:0097306 ! cellular response to alcohol
+
+[Term]
+id: GO:2000026
+name: regulation of multicellular organismal development
+def: "Any process that modulates the frequency, rate or extent of multicellular organismal development." [GOC:obol]
+is_a: GO:0050793 ! regulation of developmental process
+is_a: GO:0051239 ! regulation of multicellular organismal process
+intersection_of: GO:0008150 ! biological_process
+intersection_of: RO:0002211 GO:0007275 ! multicellular organism development
+relationship: RO:0002211 GO:0007275 ! multicellular organism development
 
 [Term]
 id: GO:2000241
