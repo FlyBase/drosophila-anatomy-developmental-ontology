@@ -13,6 +13,4 @@ cd /Users/clare/git/drosophila-anatomy-developmental-ontology/fbbt/src/ontology
 #merge without losing imports
 robot merge --collapse-import-closure false --input fbbt-edit.obo --input terms.owl --output merge.obo
 
-#unmerge - this strips all annotations(!)
-robot unmerge --input fbbt-edit.obo --input terms.owl --output unmerge.obo
 
