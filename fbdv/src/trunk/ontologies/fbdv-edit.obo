@@ -2526,7 +2526,7 @@ namespace: relationship
 xref: BFO:0000051
 xref: OBO_REL:has_part
 is_transitive: true
-inverse_of: part_of ! part_of
+inverse_of: part_of ! substage of
 
 [Typedef]
 id: immediately_preceded_by
@@ -2544,7 +2544,8 @@ expand_expression_to: "BFO_0000051 some (BFO_0000050 some ?Y)" []
 
 [Typedef]
 id: part_of
-name: part_of
+name: substage of
+comment: Creating this relation as a temporary fix, pending adding the axiom occurent_part_of subpropertyof happens_during to RO
 is_transitive: true
 is_a: RO:0002012
 is_a: RO:0002092
