@@ -3,6 +3,9 @@ data-version: 2016-10-14
 date: 14:10:2016 17:30
 saved-by: mmc46
 auto-generated-by: OBO-Edit 2.3
+import: http://purl.obolibrary.org/obo/fbdv/imports/go_import.owl
+import: http://purl.obolibrary.org/obo/fbdv/imports/ro_import.owl
+import: http://purl.obolibrary.org/obo/fbdv/patterns/definitions.owl
 subsetdef: gocheck_do_not_annotate "Term not to be used for direct annotation"
 subsetdef: gocheck_do_not_manually_annotate "Term not to be used for direct manual annotation"
 subsetdef: goslim_aspergillus "Aspergillus GO slim"
@@ -2546,6 +2549,7 @@ expand_expression_to: "BFO_0000051 some (BFO_0000050 some ?Y)" []
 id: part_of
 name: substage of
 comment: Creating this relation as a temporary fix, pending adding the axiom occurent_part_of subpropertyof happens_during to RO
+xref: FBdv:00018001
 is_transitive: true
 is_a: RO:0002012
 is_a: RO:0002092
@@ -2555,7 +2559,6 @@ id: preceded_by
 name: preceded_by
 xref: BFO:0000062
 xref: OBO_REL:preceded_by
-is_transitive: true
 created_by: djs93
 creation_date: 2009-10-09T10:00:53Z
 
