@@ -126,7 +126,7 @@ synonym: "neurological control of breathing" EXACT [GOC:dph, GOC:tb]
 is_a: GO:0044065 ! regulation of respiratory system process
 is_a: GO:0050877 ! nervous system process
 intersection_of: GO:0050877 ! nervous system process
-intersection_of: RO:0002211 GO:0007585 ! respiratory gaseous exchange
+intersection_of: RO:0002211 GO:0007585 ! respiratory gaseous exchange by respiratory system
 
 [Term]
 id: GO:0002790
@@ -203,10 +203,10 @@ is_a: GO:0003008 ! system process
 [Term]
 id: GO:0003016
 name: respiratory system process
-def: "A system process carried out by the organs and tissues of the respiratory system. The respiratory system is an organ system responsible for respiratory gaseous exchange." [GOC:dph, GOC:mtg_cardio, GOC:tb]
-synonym: "respiratory gaseous exchange by respiratory system" EXACT []
+def: "A process carried out by the organs or tissues of the respiratory system. The respiratory system is an organ system responsible for respiratory gaseous exchange." [GOC:dph, GOC:mtg_cardio, GOC:tb]
+synonym: "respiratory gaseous exchange" EXACT []
 is_a: GO:0003008 ! system process
-is_a: GO:0007585 ! respiratory gaseous exchange
+relationship: BFO:0000050 GO:0007585 ! respiratory gaseous exchange by respiratory system
 
 [Term]
 id: GO:0003031
@@ -445,7 +445,7 @@ is_a: GO:0042221 ! response to chemical
 
 [Term]
 id: GO:0007585
-name: respiratory gaseous exchange
+name: respiratory gaseous exchange by respiratory system
 def: "The process of gaseous exchange between an organism and its environment. In plants, microorganisms, and many small animals, air or water makes direct contact with the organism's cells or tissue fluids, and the processes of diffusion supply the organism with dioxygen (O2) and remove carbon dioxide (CO2). In larger animals the efficiency of gaseous exchange is improved by specialized respiratory organs, such as lungs and gills, which are ventilated by breathing mechanisms." [ISBN:0198506732]
 synonym: "breathing" BROAD []
 synonym: "respiration" BROAD []
@@ -1291,7 +1291,6 @@ name: regulation of acetylcholine secretion, neurotransmission
 def: "Any process that modulates the frequency, rate or extent of the regulated release of acetylcholine." [GOC:ef]
 is_a: GO:0032222 ! regulation of synaptic transmission, cholinergic
 is_a: GO:0043269 ! regulation of ion transport
-is_a: GO:0046883 ! regulation of hormone secretion
 is_a: GO:0046928 ! regulation of neurotransmitter secretion
 is_a: GO:0051952 ! regulation of amine transport
 is_a: GO:2001023 ! regulation of response to drug
@@ -1312,7 +1311,6 @@ is_a: GO:0001956 ! positive regulation of neurotransmitter secretion
 is_a: GO:0014056 ! regulation of acetylcholine secretion, neurotransmission
 is_a: GO:0032224 ! positive regulation of synaptic transmission, cholinergic
 is_a: GO:0043270 ! positive regulation of ion transport
-is_a: GO:0046887 ! positive regulation of hormone secretion
 is_a: GO:0051954 ! positive regulation of amine transport
 is_a: GO:2001025 ! positive regulation of response to drug
 intersection_of: GO:0008150 ! biological_process
@@ -1330,7 +1328,6 @@ synonym: "inhibition of acetylcholine secretion" NARROW []
 is_a: GO:0014056 ! regulation of acetylcholine secretion, neurotransmission
 is_a: GO:0032223 ! negative regulation of synaptic transmission, cholinergic
 is_a: GO:0043271 ! negative regulation of ion transport
-is_a: GO:0046888 ! negative regulation of hormone secretion
 is_a: GO:0046929 ! negative regulation of neurotransmitter secretion
 is_a: GO:0051953 ! negative regulation of amine transport
 is_a: GO:2001024 ! negative regulation of response to drug
@@ -1496,7 +1493,6 @@ id: GO:0015870
 name: acetylcholine transport
 def: "The directed movement of acetylcholine into, out of or within a cell, or between cells, by means of some agent such as a transporter or pore. Acetylcholine is an acetic acid ester of the organic base choline and functions as a neurotransmitter, released at the synapses of parasympathetic nerves and at neuromuscular junctions." [GOC:ai]
 is_a: GO:0006836 ! neurotransmitter transport
-is_a: GO:0009914 ! hormone transport
 is_a: GO:0015695 ! organic cation transport
 is_a: GO:0015696 ! ammonium transport
 is_a: GO:0015893 ! drug transport
@@ -2558,8 +2554,8 @@ name: regulation of respiratory gaseous exchange
 def: "Any process that modulates the frequency, rate or extent of the process of gaseous exchange between an organism and its environment." [GOC:jl]
 is_a: GO:0051239 ! regulation of multicellular organismal process
 intersection_of: GO:0008150 ! biological_process
-intersection_of: RO:0002211 GO:0007585 ! respiratory gaseous exchange
-relationship: RO:0002211 GO:0007585 ! respiratory gaseous exchange
+intersection_of: RO:0002211 GO:0007585 ! respiratory gaseous exchange by respiratory system
+relationship: RO:0002211 GO:0007585 ! respiratory gaseous exchange by respiratory system
 
 [Term]
 id: GO:0043695
@@ -4290,7 +4286,7 @@ relationship: RO:0002213 GO:0035249 ! synaptic transmission, glutamatergic
 [Term]
 id: GO:0060004
 name: reflex
-def: "An automatic response to a stimulus beginning with a nerve impulse from a receptor and ending with the action of an effector such as a gland or a muscle. Signaling never reaches a level of consciousness." [GOC:dph, ISBN:087797099]
+def: "An automatic response to a stimulus beginning with a nerve impulse from a receptor and ending with the action of an effector such as a gland or a muscle. Signaling never reaches a level of consciousness." [GOC:dph, ISBN:0877797099]
 is_a: GO:0009605 ! response to external stimulus
 
 [Term]
@@ -4388,7 +4384,7 @@ id: GO:0061526
 name: acetylcholine secretion
 def: "The regulated release of acetylcholine by a cell." [GOC:dph]
 is_a: GO:0015870 ! acetylcholine transport
-is_a: GO:0046879 ! hormone secretion
+is_a: GO:0032940 ! secretion by cell
 
 [Term]
 id: GO:0061527
@@ -5333,8 +5329,8 @@ synonym: "inhibition of respiratory gaseous exchange" NARROW [GOC:TermGenie]
 is_a: GO:0043576 ! regulation of respiratory gaseous exchange
 is_a: GO:0051241 ! negative regulation of multicellular organismal process
 intersection_of: GO:0008150 ! biological_process
-intersection_of: RO:0002212 GO:0007585 ! respiratory gaseous exchange
-relationship: RO:0002212 GO:0007585 ! respiratory gaseous exchange
+intersection_of: RO:0002212 GO:0007585 ! respiratory gaseous exchange by respiratory system
+relationship: RO:0002212 GO:0007585 ! respiratory gaseous exchange by respiratory system
 
 [Term]
 id: GO:1903942
@@ -5347,8 +5343,8 @@ synonym: "upregulation of respiratory gaseous exchange" EXACT [GOC:TermGenie]
 is_a: GO:0043576 ! regulation of respiratory gaseous exchange
 is_a: GO:0051240 ! positive regulation of multicellular organismal process
 intersection_of: GO:0008150 ! biological_process
-intersection_of: RO:0002213 GO:0007585 ! respiratory gaseous exchange
-relationship: RO:0002213 GO:0007585 ! respiratory gaseous exchange
+intersection_of: RO:0002213 GO:0007585 ! respiratory gaseous exchange by respiratory system
+relationship: RO:0002213 GO:0007585 ! respiratory gaseous exchange by respiratory system
 
 [Term]
 id: GO:1904057
@@ -5953,7 +5949,6 @@ is_transitive: true
 
 [Typedef]
 id: BFO:0000066
-holds_over_chain: BFO:0000050 BFO:0000066
 transitive_over: BFO:0000050
 
 [Typedef]
