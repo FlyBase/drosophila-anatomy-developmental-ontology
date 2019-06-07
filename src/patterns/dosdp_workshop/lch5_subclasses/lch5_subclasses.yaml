@@ -1,0 +1,34 @@
+pattern_name: lch5_subclasses
+
+classes:
+  thing: owl:Thing
+
+relations:
+  part_of: BFO:0000050
+
+vars:
+  neuron: thing
+  chordotonal_organ: thing
+  chor_no: thing
+  neur_no: thing
+  chor_name: thing
+  neur_name: thing
+  
+
+name:
+  text: "abdominal %s lch5-%s neuron"
+  vars:
+    - chor_no
+    - neur_no
+
+def:
+  text: "."
+
+equivalentTo:
+  text: "%s that 'part_of' some %s"
+  vars:
+    - neuron
+    - chordotonal_organ
+    
+def:
+  text: "."
