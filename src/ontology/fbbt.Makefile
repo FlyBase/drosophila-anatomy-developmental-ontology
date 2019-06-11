@@ -7,7 +7,12 @@ tmp/fbbt-obj.obo: fbbt-simple.obo
 	$(ROBOT) remove -i $< --select object-properties --trim true -o $@.tmp.obo && grep -v ^owl-axioms $@.tmp.obo > $@ && rm $@.tmp.obo
 
 ASSETS := $(ASSETS) fly-anatomy.obo
+
 prepare_release: $(ASSETS) $(PATTERN_RELEASE_FILES)
+	rsync -R $(ASSETS) $(RELEASEDIR) &&\
+	mkdir -p $(RELEASEDIR)/patterns &&\
+	cp $(PATTERN_RELEASE_FILES) $(RELEASEDIR)/patterns &&\
+	echo "Release files are now in $(RELEASEDIR) - now you should commit, push and make a release on github"
 
 	# Perhaps replace last step with a generic substitution for xref: OBO_REL ?
 fly-anatomy.obo: fbbt-simple.obo tmp/fbbt-obj.obo rem_flybase.txt
