@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: fbbt/releases/2019-06-10/imports/go_import.owl
+data-version: fbbt/releases/2019-06-11/imports/go_import.owl
 ontology: fbbt/imports/go_import
 
 [Term]
@@ -140,10 +140,11 @@ is_a: GO:0007268 ! chemical synaptic transmission
 
 [Term]
 id: GO:0002087
-name: regulation of respiratory gaseous exchange by neurological system process
+name: regulation of respiratory gaseous exchange by nervous system process
 namespace: biological_process
 def: "A process carried out by the nervous system that is required for the proper control of respiratory gaseous exchange. This process occurs in the respiratory center of the brain in vertebrates." [GOC:dph, GOC:tb, PMID:12458206]
 synonym: "neurological control of breathing" EXACT [GOC:dph, GOC:tb]
+synonym: "regulation of respiratory gaseous exchange by neurological system process" EXACT []
 is_a: GO:0044065 ! regulation of respiratory system process
 is_a: GO:0050877 ! nervous system process
 intersection_of: GO:0050877 ! nervous system process
@@ -2543,10 +2544,11 @@ relationship: positively_regulates GO:0044237 ! cellular metabolic process
 
 [Term]
 id: GO:0031644
-name: regulation of neurological system process
+name: regulation of nervous system process
 namespace: biological_process
-def: "Any process that modulates the frequency, rate or extent of a neurophysiological process, an organ system process carried out by any of the organs or tissues of neurological system." [GOC:dph, GOC:mah, GOC:tb]
+def: "Any process that modulates the frequency, rate or extent of a neurophysiological process, an organ system process carried out by any of the organs or tissues of the nervous system." [GOC:dph, GOC:mah, GOC:tb]
 synonym: "regulation of neurological process" EXACT [GOC:dph, GOC:tb]
+synonym: "regulation of neurological system process" EXACT []
 synonym: "regulation of neurophysiological process" EXACT []
 is_a: GO:0044057 ! regulation of system process
 intersection_of: GO:0008150 ! biological_process
@@ -2555,7 +2557,7 @@ relationship: regulates GO:0050877 ! nervous system process
 
 [Term]
 id: GO:0031645
-name: negative regulation of neurological system process
+name: negative regulation of nervous system process
 namespace: biological_process
 def: "Any process that stops, prevents, or reduces the frequency, rate or extent of a neurophysiological process." [GOC:dph, GOC:mah, GOC:tb]
 synonym: "down regulation of neurological process" EXACT []
@@ -2563,8 +2565,9 @@ synonym: "down-regulation of neurological process" EXACT []
 synonym: "downregulation of neurological process" EXACT []
 synonym: "inhibition of neurological process" NARROW []
 synonym: "negative regulation of neurological process" EXACT [GOC:dph, GOC:tb]
+synonym: "negative regulation of neurological system process" EXACT []
 synonym: "negative regulation of neurophysiological process" EXACT []
-is_a: GO:0031644 ! regulation of neurological system process
+is_a: GO:0031644 ! regulation of nervous system process
 is_a: GO:0051241 ! negative regulation of multicellular organismal process
 intersection_of: GO:0008150 ! biological_process
 intersection_of: negatively_regulates GO:0050877 ! nervous system process
@@ -2572,17 +2575,18 @@ relationship: negatively_regulates GO:0050877 ! nervous system process
 
 [Term]
 id: GO:0031646
-name: positive regulation of neurological system process
+name: positive regulation of nervous system process
 namespace: biological_process
 def: "Any process that activates or increases the frequency, rate or extent of a neurophysiological process." [GOC:dph, GOC:mah, GOC:tb]
 synonym: "activation of neurological process" NARROW []
 synonym: "positive regulation of neurological process" EXACT [GOC:dph, GOC:tb]
+synonym: "positive regulation of neurological system process" EXACT []
 synonym: "positive regulation of neurophysiological process" EXACT []
 synonym: "stimulation of neurological process" NARROW []
 synonym: "up regulation of neurological process" EXACT []
 synonym: "up-regulation of neurological process" EXACT []
 synonym: "upregulation of neurological process" EXACT []
-is_a: GO:0031644 ! regulation of neurological system process
+is_a: GO:0031644 ! regulation of nervous system process
 is_a: GO:0051240 ! positive regulation of multicellular organismal process
 intersection_of: GO:0008150 ! biological_process
 intersection_of: positively_regulates GO:0050877 ! nervous system process
@@ -5663,7 +5667,7 @@ id: GO:0051931
 name: regulation of sensory perception
 namespace: biological_process
 def: "Any process that modulates the frequency, rate or extent of sensory perception, the series of events required for an organism to receive a sensory stimulus, convert it to a molecular signal, and recognize and characterize the signal." [GOC:ai]
-is_a: GO:0031644 ! regulation of neurological system process
+is_a: GO:0031644 ! regulation of nervous system process
 intersection_of: GO:0008150 ! biological_process
 intersection_of: regulates GO:0007600 ! sensory perception
 relationship: regulates GO:0007600 ! sensory perception
@@ -6487,7 +6491,7 @@ id: GO:0090328
 name: regulation of olfactory learning
 namespace: biological_process
 def: "Any process that modulates the rate, frequency, or extent of olfactory learning. Olfactory learning is any process in an organism in which a relatively long-lasting adaptive behavioral change occurs in response to (repeated) exposure to an olfactory cue." [GOC:dph, GOC:tb]
-is_a: GO:0031644 ! regulation of neurological system process
+is_a: GO:0031644 ! regulation of nervous system process
 is_a: GO:0048583 ! regulation of response to stimulus
 is_a: GO:0050795 ! regulation of behavior
 intersection_of: GO:0008150 ! biological_process
@@ -7331,7 +7335,7 @@ synonym: "inhibition of perception of physiological pain" NARROW [GOC:TermGenie]
 synonym: "inhibition of sensory perception of pain" NARROW [GOC:TermGenie]
 synonym: "negative regulation of nociception" EXACT [GOC:TermGenie]
 synonym: "negative regulation of perception of physiological pain" NARROW [GOC:TermGenie]
-is_a: GO:0031645 ! negative regulation of neurological system process
+is_a: GO:0031645 ! negative regulation of nervous system process
 is_a: GO:0051930 ! regulation of sensory perception of pain
 intersection_of: GO:0008150 ! biological_process
 intersection_of: negatively_regulates GO:0019233 ! sensory perception of pain
@@ -7358,7 +7362,7 @@ synonym: "up-regulation of sensory perception of pain" EXACT [GOC:TermGenie]
 synonym: "upregulation of nociception" EXACT [GOC:TermGenie]
 synonym: "upregulation of perception of physiological pain" NARROW [GOC:TermGenie]
 synonym: "upregulation of sensory perception of pain" EXACT [GOC:TermGenie]
-is_a: GO:0031646 ! positive regulation of neurological system process
+is_a: GO:0031646 ! positive regulation of nervous system process
 is_a: GO:0051930 ! regulation of sensory perception of pain
 intersection_of: GO:0008150 ! biological_process
 intersection_of: positively_regulates GO:0019233 ! sensory perception of pain
@@ -7442,7 +7446,7 @@ synonym: "downregulation of sweet taste perception" EXACT [GOC:TermGenie]
 synonym: "inhibition of sensory perception of sweet taste" NARROW [GOC:TermGenie]
 synonym: "inhibition of sweet taste perception" NARROW [GOC:TermGenie]
 synonym: "negative regulation of sweet taste perception" EXACT [GOC:TermGenie]
-is_a: GO:0031645 ! negative regulation of neurological system process
+is_a: GO:0031645 ! negative regulation of nervous system process
 is_a: GO:1904656 ! regulation of sensory perception of sweet taste
 intersection_of: GO:0008150 ! biological_process
 intersection_of: negatively_regulates GO:0050916 ! sensory perception of sweet taste
@@ -7464,7 +7468,7 @@ synonym: "up-regulation of sensory perception of sweet taste" EXACT [GOC:TermGen
 synonym: "up-regulation of sweet taste perception" EXACT [GOC:TermGenie]
 synonym: "upregulation of sensory perception of sweet taste" EXACT [GOC:TermGenie]
 synonym: "upregulation of sweet taste perception" EXACT [GOC:TermGenie]
-is_a: GO:0031646 ! positive regulation of neurological system process
+is_a: GO:0031646 ! positive regulation of nervous system process
 is_a: GO:1904656 ! regulation of sensory perception of sweet taste
 intersection_of: GO:0008150 ! biological_process
 intersection_of: positively_regulates GO:0050916 ! sensory perception of sweet taste
@@ -7499,7 +7503,7 @@ synonym: "downregulation of sensory perception of bitter taste" EXACT [GOC:TermG
 synonym: "inhibition of bitter taste perception" NARROW [GOC:TermGenie]
 synonym: "inhibition of sensory perception of bitter taste" NARROW [GOC:TermGenie]
 synonym: "negative regulation of bitter taste perception" EXACT [GOC:TermGenie]
-is_a: GO:0031645 ! negative regulation of neurological system process
+is_a: GO:0031645 ! negative regulation of nervous system process
 is_a: GO:1904660 ! regulation of sensory perception of bitter taste
 intersection_of: GO:0008150 ! biological_process
 intersection_of: negatively_regulates GO:0050913 ! sensory perception of bitter taste
@@ -7521,7 +7525,7 @@ synonym: "up-regulation of bitter taste perception" EXACT [GOC:TermGenie]
 synonym: "up-regulation of sensory perception of bitter taste" EXACT [GOC:TermGenie]
 synonym: "upregulation of bitter taste perception" EXACT [GOC:TermGenie]
 synonym: "upregulation of sensory perception of bitter taste" EXACT [GOC:TermGenie]
-is_a: GO:0031646 ! positive regulation of neurological system process
+is_a: GO:0031646 ! positive regulation of nervous system process
 is_a: GO:1904660 ! regulation of sensory perception of bitter taste
 intersection_of: GO:0008150 ! biological_process
 intersection_of: positively_regulates GO:0050913 ! sensory perception of bitter taste
@@ -7610,7 +7614,7 @@ synonym: "negative regulation of perception of touch, sensory transduction of me
 synonym: "negative regulation of sensory detection of mechanical stimulus during perception of touch" EXACT [GOC:TermGenie]
 synonym: "negative regulation of sensory transduction of mechanical stimulus during perception of touch" EXACT [GOC:TermGenie]
 synonym: "negative regulation of tactition, sensory detection of mechanical stimulus" EXACT [GOC:TermGenie]
-is_a: GO:0031645 ! negative regulation of neurological system process
+is_a: GO:0031645 ! negative regulation of nervous system process
 is_a: GO:0032102 ! negative regulation of response to external stimulus
 is_a: GO:1905787 ! regulation of detection of mechanical stimulus involved in sensory perception of touch
 intersection_of: GO:0008150 ! biological_process
@@ -7658,7 +7662,7 @@ synonym: "upregulation of perception of touch, sensory transduction of mechanica
 synonym: "upregulation of sensory detection of mechanical stimulus during perception of touch" EXACT [GOC:TermGenie]
 synonym: "upregulation of sensory transduction of mechanical stimulus during perception of touch" EXACT [GOC:TermGenie]
 synonym: "upregulation of tactition, sensory detection of mechanical stimulus" EXACT [GOC:TermGenie]
-is_a: GO:0031646 ! positive regulation of neurological system process
+is_a: GO:0031646 ! positive regulation of nervous system process
 is_a: GO:0032103 ! positive regulation of response to external stimulus
 is_a: GO:1905787 ! regulation of detection of mechanical stimulus involved in sensory perception of touch
 intersection_of: GO:0008150 ! biological_process

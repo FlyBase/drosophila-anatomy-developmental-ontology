@@ -11,7 +11,7 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/fbbt/imports/go_import.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/fbbt/releases/2019-06-10/imports/go_import.owl"/>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/fbbt/releases/2019-06-11/imports/go_import.owl"/>
     </owl:Ontology>
     
 
@@ -811,9 +811,10 @@
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0050877"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A process carried out by the nervous system that is required for the proper control of respiratory gaseous exchange. This process occurs in the respiratory center of the brain in vertebrates.</obo:IAO_0000115>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">neurological control of breathing</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">regulation of respiratory gaseous exchange by neurological system process</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">biological_process</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GO:0002087</oboInOwl:id>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">regulation of respiratory gaseous exchange by neurological system process</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">regulation of respiratory gaseous exchange by nervous system process</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0002087"/>
@@ -6679,17 +6680,18 @@
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0050877"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Any process that modulates the frequency, rate or extent of a neurophysiological process, an organ system process carried out by any of the organs or tissues of neurological system.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Any process that modulates the frequency, rate or extent of a neurophysiological process, an organ system process carried out by any of the organs or tissues of the nervous system.</obo:IAO_0000115>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">regulation of neurological process</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">regulation of neurological system process</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">regulation of neurophysiological process</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">biological_process</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GO:0031644</oboInOwl:id>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">regulation of neurological system process</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">regulation of nervous system process</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0031644"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Any process that modulates the frequency, rate or extent of a neurophysiological process, an organ system process carried out by any of the organs or tissues of neurological system.</owl:annotatedTarget>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Any process that modulates the frequency, rate or extent of a neurophysiological process, an organ system process carried out by any of the organs or tissues of the nervous system.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:dph</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:mah</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:tb</oboInOwl:hasDbXref>
@@ -6731,11 +6733,12 @@
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">down-regulation of neurological process</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">downregulation of neurological process</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">negative regulation of neurological process</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">negative regulation of neurological system process</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">negative regulation of neurophysiological process</oboInOwl:hasExactSynonym>
         <oboInOwl:hasNarrowSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">inhibition of neurological process</oboInOwl:hasNarrowSynonym>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">biological_process</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GO:0031645</oboInOwl:id>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">negative regulation of neurological system process</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">negative regulation of nervous system process</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0031645"/>
@@ -6779,6 +6782,7 @@
         </rdfs:subClassOf>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Any process that activates or increases the frequency, rate or extent of a neurophysiological process.</obo:IAO_0000115>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">positive regulation of neurological process</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">positive regulation of neurological system process</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">positive regulation of neurophysiological process</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">up regulation of neurological process</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">up-regulation of neurological process</oboInOwl:hasExactSynonym>
@@ -6787,7 +6791,7 @@
         <oboInOwl:hasNarrowSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stimulation of neurological process</oboInOwl:hasNarrowSynonym>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">biological_process</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GO:0031646</oboInOwl:id>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">positive regulation of neurological system process</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">positive regulation of nervous system process</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0031646"/>
