@@ -7,10 +7,11 @@ tmp/fbbt-obj.obo: fbbt-simple.obo
 	$(ROBOT) remove -i $< --select object-properties --trim true -o $@.tmp.obo && grep -v ^owl-axioms $@.tmp.obo > $@ && rm $@.tmp.obo
 
 ASSETS := $(ASSETS) fly-anatomy.obo
+prepare_release: $(ASSETS) $(PATTERN_RELEASE_FILES)
 
 	# Perhaps replace last step with a generic substitution for xref: OBO_REL ?
-fly-anatomy.obo: #fbbt-simple.obo tmp/fbbt-obj.obo rem_flybase.txt
-	cat fbbt-simple.obo | perl -0777 -e '$$_ = <>; s/name[:].*?\nname[:]/name:/g; print' | perl -0777 -e '$$_ = <>; s/def[:].*?\ndef[:]/def:/g; print' > tmp/fbbt-simple-stripped.obo &&\
+fly-anatomy.obo: fbbt-simple.obo tmp/fbbt-obj.obo rem_flybase.txt
+	cat $< | perl -0777 -e '$$_ = <>; s/name[:].*?\nname[:]/name:/g; print' | perl -0777 -e '$$_ = <>; s/def[:].*?\ndef[:]/def:/g; print' > tmp/fbbt-simple-stripped.obo &&\
 	$(ROBOT) remove -vv -i tmp/fbbt-simple-stripped.obo --select "owl:deprecated='true'^^xsd:boolean" --trim true \
 		merge --collapse-import-closure false --input tmp/fbbt-obj.obo -o $@.tmp.obo
 		#remove --term-file rem_flybase.txt --trim false 
