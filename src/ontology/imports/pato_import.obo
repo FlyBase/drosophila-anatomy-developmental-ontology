@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: fbbt/releases/2019-06-11/imports/pato_import.owl
+data-version: fbbt/releases/2019-07-07/imports/pato_import.owl
 ontology: fbbt/imports/pato_import
 
 [Term]
@@ -57,19 +57,7 @@ synonym: "atypia" RELATED []
 synonym: "atypical" RELATED []
 synonym: "defective" RELATED []
 is_a: PATO:0000069 ! deviation(from_normal)
-relationship: is_opposite_of PATO:0000461 ! normal
-
-[Term]
-id: PATO:0000461
-name: normal
-namespace: quality
-def: "A quality inhering in a bearer by virtue of the bearer's exhibiting no deviation from normal or average." [PATOC:GVG]
-subset: abnormal_slim
-subset: mpath_slim
-subset: value_slim
-synonym: "average" RELATED []
-is_a: PATO:0000069 ! deviation(from_normal)
-relationship: is_opposite_of PATO:0000460 ! abnormal
+property_value: RO:0002604 PATO:0000461
 
 [Term]
 id: PATO:0001241
@@ -99,17 +87,7 @@ subset: mpath_slim
 subset: value_slim
 synonym: "fascicled" EXACT []
 is_a: PATO:0002013 ! fasciculation
-disjoint_from: PATO:0001959 ! defasciculated
-relationship: is_opposite_of PATO:0001959 ! defasciculated
-
-[Term]
-id: PATO:0001959
-name: defasciculated
-namespace: quality
-def: "A structural quality inhering in a bearer by virtue of the bearer's in which bundles of aligned anatomical fibers have become separated." [PATOC:mw]
-subset: value_slim
-is_a: PATO:0002013 ! fasciculation
-relationship: is_opposite_of PATO:0001861 ! fasciculated
+property_value: RO:0002604 PATO:0001959
 
 [Term]
 id: PATO:0002013
@@ -126,14 +104,6 @@ namespace: quality
 def: "Q1 has_part Q2 if and only if: every instance of Q1 is a quality_of an entity that has_quality some Q2." [PATOC:CJM]
 comment: We use the has_part relation to relate complex qualities to more primitive ones. A complex quality is a collection of qualities. The complex quality cannot exist without the sub-qualities. For example, the quality 'swollen' necessarily comes with the qualities of 'protruding' and 'increased size'.
 xref: BFO:0000051
-
-[Typedef]
-id: is_opposite_of
-name: is opposite of
-namespace: quality
-xref: RO:0002604
-is_metadata_tag: true
-is_class_level: true
 
 [Typedef]
 id: part_of
