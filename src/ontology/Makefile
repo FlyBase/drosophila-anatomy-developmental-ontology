@@ -249,7 +249,7 @@ $(ONT)-simple.owl: $(SRC) simple_seed.txt $(OTHER_SRC)
 # These live in the imports/ folder
 
 tmp/%_logical.owl: mirror/%.owl
-	@if [ $(IMP) = true ]; then $(ROBOT) remove -i $< --term rdfs:label --select complement --select annotation-properties -o $@ --output $@.tmp.owl && mv $@.tmp.owl $@; fi
+	@if [ $(IMP) = true ]; then $(ROBOT) remove -i $< --term rdfs:label --select complement --select annotation-properties --output $@.tmp.owl && mv $@.tmp.owl $@; fi
 .PRECIOUS: tmp/%_logical.owl
 
 tmp/logical_dependencies_merged.owl: $(MIRROR_LOGICAL)
