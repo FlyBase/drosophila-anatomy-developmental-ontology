@@ -9,7 +9,8 @@ DATE   ?= $(shell date +%Y-%m-%d)
 ### Code for generating additional FlyBase reports ###
 ######################################################
 
-REPORT_FILES := $(REPORT_FILES) reports/obo_track_new_simple.txt  reports/robot_simple_diff.txt reports/onto_metrics_calc.txt reports/chado_load_check_simple.txt
+# Illegal division by 0 problem: reports/onto_metrics_calc.txt 
+REPORT_FILES := $(REPORT_FILES) reports/obo_track_new_simple.txt  reports/robot_simple_diff.txt reports/chado_load_check_simple.txt
 
 SIMPLE_PURL =	http://purl.obolibrary.org/obo/fbbt/fbbt-simple.obo
 LAST_DEPLOYED_SIMPLE=tmp/$(ONT)-simple-last.obo
@@ -42,11 +43,10 @@ reports/robot_simple_diff.txt: $(LAST_DEPLOYED_SIMPLE) $(ONT)-simple.obo
 reports/onto_metrics_calc.txt: $(ONT)-simple.obo install_flybase_scripts
 	../scripts/onto_metrics_calc.pl 'phenotypic_class' $(ONT)-simple.obo > $@
 	
-reports/chado_load_check_simple.txt: install_flybase_scripts $(ONT)-flybase.obo 
-	../scripts/chado_load_checks.pl $(ONT)-flybase.obo > $@
+reports/chado_load_check_simple.txt: install_flybase_scripts $(ONT)-simple.obo 
+	../scripts/chado_load_checks.pl $(ONT)-simple.obo > $@
 
 all_reports: all_reports_onestep $(REPORT_FILES)
-ASSETS := $(ASSETS) components/dpo-simple.owl
 
 prepare_release: $(ASSETS) $(PATTERN_RELEASE_FILES)
 	rsync -R $(ASSETS) $(RELEASEDIR) &&\
