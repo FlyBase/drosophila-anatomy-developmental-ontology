@@ -1,6 +1,7 @@
 # ----------------------------------------
 # Makefile for fbbt
 # Generated using ontology-starter-kit
+# ODK Version: v1.2.16
 # ----------------------------------------
 # <do not edit above this line>
 
@@ -24,6 +25,7 @@ REPORT_FAIL_ON =            none
 OBO_FORMAT_OPTIONS =        
 SPARQL_VALIDATION_CHECKS =  equivalent-classes trailing-whitespace owldef-self-reference xref-syntax nolabels
 SPARQL_EXPORTS =            basic-report class-count-by-prefix edges xrefs obsoletes synonyms
+ODK_VERSION =               v1.2.16
 
 TODAY ?= $(shell date +%Y-%m-%d)
 OBODATE ?= $(shell date +'%d:%m:%Y %H:%M')
@@ -43,9 +45,13 @@ RELEASE_ARTEFACTS = $(sort  base simple non-classified full base full)
 # ----------------------------------------
 
 .PHONY: .FORCE
-all: all_imports patterns all_main all_subsets sparql_test all_reports all_assets
-test: sparql_test all_reports
+all: odkversion all_imports patterns all_main all_subsets sparql_test all_reports all_assets
+test: odkversion sparql_test all_reports
 	$(ROBOT) reason --input $(SRC) --reasoner ELK  --equivalent-classes-allowed asserted-only --output test.owl && rm test.owl && echo "Success"
+
+odkversion:
+	echo "ODK Makefile version: $(ODK_VERSION) (this is the version of the ODK with which this Makefile was generated, not the version of the ODK you are running)" &&\
+	echo "ROBOT version (ODK): " && $(ROBOT) --version
 
 ## -- main targets --
 ##

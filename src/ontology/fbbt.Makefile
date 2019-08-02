@@ -121,12 +121,18 @@ tmp/auto_generated_definitions_sub.owl: tmp/merged-source-pre.owl tmp/auto_gener
 tmp/replaced_defs.txt:
 	cat tmp/auto_generated_definitions_seed_sub.txt tmp/auto_generated_definitions_seed_dot.txt | sort | uniq > $@
 
-pre_release: $(ONT)-edit.obo tmp/auto_generated_definitions_dot.owl tmp/auto_generated_definitions_sub.owl
+tmp/remove_dot_defs.txt: tmp/auto_generated_definitions_seed_dot.txt
+	cp $< $@
+	echo "http://purl.obolibrary.org/obo/IAO_0000115" >> $@
+	echo "http://www.geneontology.org/formats/oboInOwl#hasDbXref" >> $@
+
+pre_release: $(ONT)-edit.obo tmp/auto_generated_definitions_dot.owl tmp/auto_generated_definitions_sub.owl tmp/remove_dot_defs.txt
 	cp $(ONT)-edit.obo tmp/$(ONT)-edit-release.obo
-	sed -i '/def[:] \"[.]\"/d' tmp/$(ONT)-edit-release.obo
+	$(ROBOT) query -i tmp/$(ONT)-edit-release.obo --update ../sparql/remove-dot-definitions.ru -o tmp/$(ONT)-edit-release.obo
 	sed -i '/sub_/d' tmp/$(ONT)-edit-release.obo
 	$(ROBOT) merge -i tmp/$(ONT)-edit-release.obo -i tmp/auto_generated_definitions_dot.owl -i tmp/auto_generated_definitions_sub.owl --collapse-import-closure false -o $(ONT)-edit-release.ofn && mv $(ONT)-edit-release.ofn $(ONT)-edit-release.owl
 	echo "Preprocessing done. Make sure that NO CHANGES TO THE EDIT FILE ARE COMMITTED!"
+
 
 
 #####################################################################################
@@ -137,10 +143,12 @@ tmp/fbbt-obj.obo:
 	$(ROBOT) remove -i fbbt-simple.obo --select object-properties --trim true -o $@.tmp.obo && grep -v ^owl-axioms $@.tmp.obo > $@ && rm $@.tmp.obo
 
 fly-anatomy.obo: tmp/fbbt-obj.obo rem_flybase.txt
-	cat fbbt-simple.obo | perl -0777 -e '$$_ = <>; s/name[:].*\nname[:]/name:/g; print' | perl -0777 -e '$$_ = <>; s/def[:].*\ndef[:]/def:/g; print' > tmp/fbbt-simple-stripped.obo &&\
+	cp fbbt-simple.obo tmp/fbbt-simple-stripped.obo
+	#cat fbbt-simple.obo | perl -0777 -e '$$_ = <>; s/name[:].*\nname[:]/name:/g; print' | perl -0777 -e '$$_ = <>; s/def[:].*\ndef[:]/def:/g; print' > tmp/fbbt-simple-stripped.obo &&\
 	$(ROBOT) remove -vv -i tmp/fbbt-simple-stripped.obo --select "owl:deprecated='true'^^xsd:boolean" --trim true \
 		merge --collapse-import-closure false --input tmp/fbbt-obj.obo \
-		remove --term-file rem_flybase.txt --trim false -o $@.tmp.obo
+		remove --term-file rem_flybase.txt --trim false \
+		query --update ../sparql/force-obo.ru -o $@.tmp.obo
 	cat $@.tmp.obo | sed 's/^xref: OBO_REL:part_of/xref_analog: OBO_REL:part_of/' | sed 's/^xref: OBO_REL:has_part/xref_analog: OBO_REL:has_part/' | grep -v property_value: | grep -v ^owl-axioms | sed s'/^default-namespace: fly_anatomy.ontology/default-namespace: FlyBase anatomy CV/' | grep -v ^expand_expression_to > $@  && rm $@.tmp.obo
 
 post_release: fly-anatomy.obo
