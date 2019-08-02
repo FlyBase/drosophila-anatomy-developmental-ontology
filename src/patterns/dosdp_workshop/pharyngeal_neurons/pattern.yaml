@@ -1,0 +1,32 @@
+pattern_name: pattern
+
+classes:
+  thing: owl:Thing
+
+#relations:
+#  part_of: BFO:0000050
+
+vars:
+  neuron: thing
+  organ_name: thing
+  subtype: thing
+
+data_list_vars:
+  def_dbxref: xsd:string
+
+name:
+  text: "larval gustatory receptor neuron of the %s %s"
+  vars:
+    - organ_name
+    - subtype
+
+def:
+  text: "Gustatory receptor neuron of the larval %s. This subclass represents one bilateral pair of cells that expresses."
+  vars:
+    - organ_name
+  xrefs: def_dbxref
+
+subClassOf:
+  text: "%s"
+  vars:
+    - neuron

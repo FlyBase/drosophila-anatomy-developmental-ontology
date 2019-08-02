@@ -1,0 +1,56 @@
+pattern_name: pattern
+
+classes:
+  thing: owl:Thing
+
+relations:
+  part_of: BFO:0000050
+
+vars:
+  segment_name: thing
+  leg_segment: thing
+  leg_name: thing
+  short_name: thing
+  leg_taste_bristle_ID: thing
+
+data_list_vars:
+  def_dbxref: xsd:string
+
+name:
+  text: "%s leg tarsal taste bristle %s"
+  vars:
+    - leg_name
+    - short_name
+
+def:
+  text: "Taste bristle of %s of the %s leg."
+  vars:
+    - segment_name
+    - leg_name
+  xrefs: def_dbxref
+
+generated_synonyms:
+  -
+    exact_synonym:
+    text: "m%s"
+    vars:
+      - short_name
+    xrefs: def_dbxref
+  -
+    exact_synonym:
+    text: "f%s"
+    vars:
+      - short_name
+    xrefs: def_dbxref
+    
+logical_axioms:
+  - 
+    axiom_type: subClassOf
+    text: "%s"
+    vars:
+      - leg_taste_bristle_ID
+  - 
+    axiom_type: subClassOf
+    text: "part_of some %s"
+    vars:
+      - leg_segment
