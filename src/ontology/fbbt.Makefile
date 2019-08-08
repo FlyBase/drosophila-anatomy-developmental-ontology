@@ -148,7 +148,8 @@ fly-anatomy.obo: tmp/fbbt-obj.obo rem_flybase.txt
 	$(ROBOT) remove -vv -i tmp/fbbt-simple-stripped.obo --select "owl:deprecated='true'^^xsd:boolean" --trim true \
 		merge --collapse-import-closure false --input tmp/fbbt-obj.obo \
 		remove --term-file rem_flybase.txt --trim false \
-		query --update ../sparql/force-obo.ru -o $@.tmp.obo
+		query --update ../sparql/force-obo.ru \
+		convert -f obo --check false -o $@.tmp.obo
 	cat $@.tmp.obo | sed 's/^xref: OBO_REL:part_of/xref_analog: OBO_REL:part_of/' | sed 's/^xref: OBO_REL:has_part/xref_analog: OBO_REL:has_part/' | grep -v property_value: | grep -v ^owl-axioms | sed s'/^default-namespace: fly_anatomy.ontology/default-namespace: FlyBase anatomy CV/' | grep -v ^expand_expression_to > $@  && rm $@.tmp.obo
 
 post_release: fly-anatomy.obo
@@ -159,10 +160,10 @@ post_release: fly-anatomy.obo
 ##    TRAVIS       #####
 ########################
 
-flybase_sparql_test: $(ont)-simple.owl
+flybase_sparql_test: $(ONT)-simple.owl
 	$(ROBOT) verify -i $< --queries $(SPARQL_VALIDATION_QUERIES) -O reports/	
 
-flybase_all_reports_onestep: $(ont)-simple.owl
+flybase_all_reports_onestep: $(ONT)-simple.owl
 	$(ROBOT) query -f tsv -i $< $(SPARQL_EXPORTS_ARGS)
 
 # Run his with OBO_REPORT=fbdv-simple.owl IMP=false
