@@ -160,13 +160,16 @@ post_release: fly-anatomy.obo
 ##    TRAVIS       #####
 ########################
 
-flybase_sparql_test: $(ONT)-simple.owl
-	$(ROBOT) verify -i $< --queries $(SPARQL_VALIDATION_QUERIES) -O reports/	
+$(ONT)-test.owl: $(SRC)
+	$(ROBOT) convert -i $< -o $@
 
-flybase_all_reports_onestep: $(ONT)-simple.owl
+flybase_sparql_test: $(ONT)-test.owl
+	$(ROBOT) convert -i $< --queries $(SPARQL_VALIDATION_QUERIES) -O reports/	
+
+flybase_all_reports_onestep: $(ONT)-test.owl
 	$(ROBOT) query -f tsv -i $< $(SPARQL_EXPORTS_ARGS)
 
 # Run his with OBO_REPORT=fbdv-simple.owl IMP=false
 
 flybase_test: odkversion flybase_sparql_test flybase_all_reports_onestep $(REPORT_FILES)
-	$(ROBOT) reason --input $(SRC) --reasoner ELK  --equivalent-classes-allowed asserted-only --output test.owl && rm test.owl && echo "Success"
+	$(ROBOT) reason --input $(ONT)-test.owl --reasoner ELK  --equivalent-classes-allowed asserted-only --output test.owl && rm test.owl && echo "Success"
