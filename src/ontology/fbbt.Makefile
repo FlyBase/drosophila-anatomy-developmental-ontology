@@ -161,15 +161,11 @@ post_release: fly-anatomy.obo
 ########################
 
 $(ONT)-test.owl: $(SRC)
-	$(ROBOT) convert -i $< -o $@
-
-flybase_sparql_test: $(ONT)-test.owl
-	$(ROBOT) verify -i $< --queries $(SPARQL_VALIDATION_QUERIES) -O reports/
-
-flybase_all_reports_onestep: $(ONT)-test.owl
-	$(ROBOT) query -f tsv -i $< $(SPARQL_EXPORTS_ARGS)
+	$(ROBOT) query -i $(SRC) --update ../sparql/remove-filler-defs-for-qc.ru convert -o $@
 
 # Run his with OBO_REPORT=fbdv-simple.owl IMP=false
+reports/simpletest-obo-report.tsv: $(ONT)-test.owl
+	$(ROBOT) report -i $< --fail-on $(REPORT_FAIL_ON) --print 5 -o $@
 
-flybase_test: odkversion flybase_sparql_test flybase_all_reports_onestep $(REPORT_FILES)
+flybase_test: odkversion reports/simpletest-obo-report.tsv
 	$(ROBOT) reason --input $(ONT)-test.owl --reasoner ELK  --equivalent-classes-allowed asserted-only --output test.owl && rm test.owl && echo "Success"
