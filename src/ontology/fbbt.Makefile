@@ -164,7 +164,7 @@ $(ONT)-test.owl: $(SRC)
 	$(ROBOT) convert -i $< -o $@
 
 flybase_sparql_test: $(ONT)-test.owl
-	$(ROBOT) convert -i $< --queries $(SPARQL_VALIDATION_QUERIES) -O reports/	
+	$(ROBOT) verify -i $< --queries $(SPARQL_VALIDATION_QUERIES) -O reports/
 
 flybase_all_reports_onestep: $(ONT)-test.owl
 	$(ROBOT) query -f tsv -i $< $(SPARQL_EXPORTS_ARGS)
