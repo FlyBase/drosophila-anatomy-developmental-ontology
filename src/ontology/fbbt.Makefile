@@ -76,13 +76,13 @@ $(ONT).obo: $(ONT)-simple.owl
 	cat $@.tmp | perl -0777 -e '$$_ = <>; s/name[:].*\nname[:]/name:/g; print' | perl -0777 -e '$$_ = <>; s/def[:].*\ndef[:]/def:/g; print' > $@
 	rm -f $@.tmp.obo $@.tmp
 	
-ont.obo:
-	$(ROBOT) annotate --input $(ONT)-simple.owl --ontology-iri $(URIBASE)/$@ --version-iri $(ONTBASE)/releases/$(TODAY) \
-	convert --check false -f obo $(OBO_FORMAT_OPTIONS) -o $@.tmp.obo &&\
-	grep -v ^owl-axioms $@.tmp.obo > $@.tmp &&\
-	sed -i '/subset[:] ro[-]eco/d' $@.tmp &&\
-	cat $@.tmp | perl -0777 -e '$$_ = <>; s/name[:].*\nname[:]/name:/g; print' | perl -0777 -e '$$_ = <>; s/def[:].*\ndef[:]/def:/g; print' > $@
-	rm -f $@.tmp.obo $@.tmp
+#ont.obo:
+#	$(ROBOT) annotate --input $(ONT)-simple.owl --ontology-iri $(URIBASE)/$@ --version-iri $(ONTBASE)/releases/$(TODAY) \
+#	convert --check false -f obo $(OBO_FORMAT_OPTIONS) -o $@.tmp.obo &&\
+#	grep -v ^owl-axioms $@.tmp.obo > $@.tmp &&\
+#	sed -i '/subset[:] ro[-]eco/d' $@.tmp &&\
+#	cat $@.tmp | perl -0777 -e '$$_ = <>; s/name[:].*\nname[:]/name:/g; print' | perl -0777 -e '$$_ = <>; s/def[:].*\ndef[:]/def:/g; print' > $@
+#	rm -f $@.tmp.obo $@.tmp
 
 #non_native_classes.txt: $(SRC)
 #	$(ROBOT) query --use-graphs true -f csv -i $< --query ../sparql/non-native-classes.sparql $@.tmp &&\
@@ -153,3 +153,19 @@ fly-anatomy.obo: tmp/fbbt-obj.obo rem_flybase.txt
 
 post_release: fly-anatomy.obo
 	cp fly-anatomy.obo ../..
+	
+	
+########################
+##    TRAVIS       #####
+########################
+
+flybase_sparql_test: $(ont)-simple.owl
+	$(ROBOT) verify -i $< --queries $(SPARQL_VALIDATION_QUERIES) -O reports/	
+
+flybase_all_reports_onestep: $(ont)-simple.owl
+	$(ROBOT) query -f tsv -i $< $(SPARQL_EXPORTS_ARGS)
+
+# Run his with OBO_REPORT=fbdv-simple.owl IMP=false
+
+flybase_test: odkversion flybase_sparql_test flybase_all_reports_onestep $(REPORT_FILES)
+	$(ROBOT) reason --input $(SRC) --reasoner ELK  --equivalent-classes-allowed asserted-only --output test.owl && rm test.owl && echo "Success"
