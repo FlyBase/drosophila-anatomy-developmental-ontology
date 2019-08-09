@@ -161,7 +161,11 @@ post_release: fly-anatomy.obo
 ########################
 
 $(ONT)-test.owl: $(SRC)
-	$(ROBOT) query -i $(SRC) --update ../sparql/remove-filler-defs-for-qc.ru convert -o $@
+	$(ROBOT) convert -i $(SRC) -o $@
+	$(ROBOT) query -i $@ --update ../sparql/remove-filler-defs-for-qc.ru -o $@
+	
+$(ONT)-test.txt: $(SRC)
+	$(ROBOT) query -i $(SRC) --query ../sparql/get-filler-defs-for-qc.sparql $@
 
 # Run his with OBO_REPORT=fbdv-simple.owl IMP=false
 reports/simpletest-obo-report.tsv: $(ONT)-test.owl
