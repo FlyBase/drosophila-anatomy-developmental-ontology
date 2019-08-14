@@ -1,0 +1,27 @@
+# PURL configuration for http://purl.obolibrary.org/obo/fbbt
+
+idspace: FBBT
+base_url: /obo/fbbt
+
+products:
+- fbbt.owl: https://raw.githubusercontent.com/FlyBase/drosophila-anatomy-ontology/master/fbbt.owl
+- fbbt.obo: https://raw.githubusercontent.com/FlyBase/drosophila-anatomy-ontology/master/fbbt.obo
+
+term_browser: ontobee
+example_terms:
+- fbbt_0000000
+
+entries:
+
+- prefix: /releases/
+  replacement: https://raw.githubusercontent.com/FlyBase/drosophila-anatomy-ontology/v
+
+- prefix: /tracker/
+  replacement: https://github.com/FlyBase/drosophila-anatomy-ontology/issues
+
+- prefix: /about/
+  replacement: http://www.ontobee.org/ontology/FBBT?iri=http://purl.obolibrary.org/obo/
+
+## generic fall-through, serve direct from github by default
+- prefix: /
+  replacement: https://raw.githubusercontent.com/FlyBase/drosophila-anatomy-ontology/master/

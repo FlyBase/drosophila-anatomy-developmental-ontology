@@ -91,10 +91,6 @@
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/BFO_0000066">
         <owl:propertyChainAxiom rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000050"/>
-            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000066"/>
-        </owl:propertyChainAxiom>
-        <owl:propertyChainAxiom rdf:parseType="Collection">
             <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000066"/>
             <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000050"/>
         </owl:propertyChainAxiom>
@@ -693,15 +689,20 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0003016">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0003008"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0007585"/>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A system process carried out by the organs and tissues of the respiratory system. The respiratory system is an organ system responsible for respiratory gaseous exchange.</obo:IAO_0000115>
-        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">respiratory gaseous exchange by respiratory system</oboInOwl:hasExactSynonym>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0007585"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A process carried out by the organs or tissues of the respiratory system. The respiratory system is an organ system responsible for respiratory gaseous exchange.</obo:IAO_0000115>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">respiratory gaseous exchange</oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">respiratory system process</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0003016"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A system process carried out by the organs and tissues of the respiratory system. The respiratory system is an organ system responsible for respiratory gaseous exchange.</owl:annotatedTarget>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A process carried out by the organs or tissues of the respiratory system. The respiratory system is an organ system responsible for respiratory gaseous exchange.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:dph</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:mtg_cardio</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:tb</oboInOwl:hasDbXref>
@@ -1349,7 +1350,7 @@
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The process of gaseous exchange between an organism and its environment. In plants, microorganisms, and many small animals, air or water makes direct contact with the organism&apos;s cells or tissue fluids, and the processes of diffusion supply the organism with dioxygen (O2) and remove carbon dioxide (CO2). In larger animals the efficiency of gaseous exchange is improved by specialized respiratory organs, such as lungs and gills, which are ventilated by breathing mechanisms.</obo:IAO_0000115>
         <oboInOwl:hasBroadSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">breathing</oboInOwl:hasBroadSynonym>
         <oboInOwl:hasBroadSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">respiration</oboInOwl:hasBroadSynonym>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">respiratory gaseous exchange</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">respiratory gaseous exchange by respiratory system</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0007585"/>
@@ -3523,7 +3524,6 @@
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0032222"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0043269"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0046883"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0046928"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0051952"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_2001023"/>
@@ -3563,7 +3563,6 @@
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0014056"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0032224"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0043270"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0046887"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0051954"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_2001025"/>
         <rdfs:subClassOf>
@@ -3606,7 +3605,6 @@
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0014056"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0032223"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0043271"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0046888"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0046929"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0051953"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_2001024"/>
@@ -4058,7 +4056,6 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0015870">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0006836"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0009914"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0015695"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0015696"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0015893"/>
@@ -11928,7 +11925,7 @@
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An automatic response to a stimulus beginning with a nerve impulse from a receptor and ending with the action of an effector such as a gland or a muscle. Signaling never reaches a level of consciousness.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:dph</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ISBN:087797099</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ISBN:0877797099</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -12259,7 +12256,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0061526">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0015870"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0046879"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0032940"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The regulated release of acetylcholine by a cell.</obo:IAO_0000115>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">acetylcholine secretion</rdfs:label>
     </owl:Class>

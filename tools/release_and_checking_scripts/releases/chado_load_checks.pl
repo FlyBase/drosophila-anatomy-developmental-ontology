@@ -2,7 +2,7 @@
 use warnings;
 require OboModel;
 use strict;
-use Business::ISBN; 
+#use Business::ISBN; 
 
 =use chado_load_checks.pl <file to check>
 
@@ -144,22 +144,22 @@ sub is_dbxref_legal {
 
 sub ISBN13_check { 
   # Checking ISBN validity
-  my $isbn_2_test = $_[0];
-  my $isbn = Business::ISBN->new($isbn_2_test);
-  if ($isbn) {
-    print "ISBN\:$isbn_2_test is not a valid ISBN.\n", unless (my $isbn_stat = $isbn->is_valid)
-  } else {
-    print "ISBN\:$isbn_2_test is not a valid ISBN\n";
-    return
-  }
-  my $isbn13 = $isbn->as_isbn13;
-   unless ($isbn->as_string eq $isbn13->as_string) {
-     print "Please change ISBN\:$isbn_2_test to ISBN\:".$isbn13->as_string.", to conform to ISBN13 standard.\n";
-     return
-   }
-  unless (($isbn_2_test eq $isbn->as_string)&&($isbn_2_test eq $isbn13->as_string)) {
-    print "Hyphenation of ISBN\:$isbn_2_test is incorrect, please use ISBN:".$isbn13->as_string."\n";
-    return
-  }
+  #my $isbn_2_test = $_[0];
+  #my $isbn = Business::ISBN->new($isbn_2_test);
+  #if ($isbn) {
+  #  print "ISBN\:$isbn_2_test is not a valid ISBN.\n", unless (my $isbn_stat = $isbn->is_valid)
+  #} else {
+  #  print "ISBN\:$isbn_2_test is not a valid ISBN\n";
+  #  return
+  #}
+  #my $isbn13 = $isbn->as_isbn13;
+  # unless ($isbn->as_string eq $isbn13->as_string) {
+  #   print "Please change ISBN\:$isbn_2_test to ISBN\:".$isbn13->as_string.", to conform to ISBN13 standard.\n";
+  #   return
+  #}
+  #unless (($isbn_2_test eq $isbn->as_string)&&($isbn_2_test eq $isbn13->as_string)) {
+  #  print "Hyphenation of ISBN\:$isbn_2_test is incorrect, please use ISBN:".$isbn13->as_string."\n";
+  #  return
+  #}
 }
   

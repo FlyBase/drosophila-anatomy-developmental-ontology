@@ -7,11 +7,11 @@ echo '*** Generating potential release ***'
 echo ''
 echo '*** Merging source files & imports ***'
 echo ''
-owltools --catalog-xml fbbt/src/ontology/catalog-v001.xml fbbt/src/ontology/fbbt-edit.obo --merge-import-closure --output -f obo tmp.obo
+owltools --catalog-xml fbbt/src/ontology/catalog-v001.xml fbbt/src/ontology/fbbt-edit.obo --merge-import-closure --output -f obo tmp2.obo
 
-echo '** Rolling autodefs **'
-update_EC_defs.pl tmp.obo > tmp2.obo
-echo ''
+#echo '** Rolling autodefs **'
+#update_EC_defs.pl tmp.obo > tmp2.obo
+#echo ''
 
 echo '*** Merging accessory files ***'
 owltools fbbt/src/ontology/fbbt_auth_attrib_licence.owl --merge tmp2.obo -o -f obo tmp3.obo
