@@ -113,7 +113,7 @@ tmp/auto_generated_definitions_seed_sub.txt: $(SRC)
 	cat $@.tmp | sort | uniq >  $@
 	rm -f $@.tmp
 
-tmp/merged-source-pre.owl: $(SRC)
+tmp/merged-source-pre.owl: $(SRC) mirror/go.owl
 	$(ROBOT) merge -i $(SRC) -i mirror/go.owl --output $@
 
 tmp/auto_generated_definitions_dot.owl: tmp/merged-source-pre.owl tmp/auto_generated_definitions_seed_dot.txt
