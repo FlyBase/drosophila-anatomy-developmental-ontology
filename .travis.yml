@@ -9,7 +9,7 @@ before_install:
   - docker pull obolibrary/odkfull
 
 # command to run tests
-script: cd src/ontology && sh run_release_no_imp.sh && sh run.sh make flybase_qc -B
+script: cd src/ontology && sh run_release.sh && sh run.sh make flybase_qc -B
 
 #after_success:
 #  coveralls
