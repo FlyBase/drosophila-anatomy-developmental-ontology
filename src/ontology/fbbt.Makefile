@@ -167,16 +167,10 @@ post_release: fly-anatomy.obo
 ##    TRAVIS       #####
 ########################
 
-$(ONT)-test.owl: $(SRC)
-	$(ROBOT) convert -i $(SRC) -o $@
-	$(ROBOT) query -i $@ --update ../sparql/remove-filler-defs-for-qc.ru -o $@
-	
-$(ONT)-test.txt: $(SRC)
-	$(ROBOT) query -i $(SRC) --query ../sparql/get-filler-defs-for-qc.sparql $@
+obo_qc_%:
+	$(ROBOT) report -i $* --profile qc-profile.txt --fail-on ERROR --print 5 -o $@.txt
 
-# Run his with OBO_REPORT=fbdv-simple.owl IMP=false
-reports/simpletest-obo-report.tsv: $(ONT)-test.owl
-	$(ROBOT) report -i $< --fail-on $(REPORT_FAIL_ON) --print 5 -o $@
+obo_qc: obo_qc_$(ONT).obo obo_qc_$(ONT).owl
 
-flybase_test: odkversion reports/simpletest-obo-report.tsv
-	$(ROBOT) reason --input $(ONT)-test.owl --reasoner ELK  --equivalent-classes-allowed asserted-only --output test.owl && rm test.owl && echo "Success"
+flybase_qc: odkversion obo_qc
+	$(ROBOT) reason --input $(ONT)-full.owl --reasoner ELK  --equivalent-classes-allowed asserted-only --output test.owl && rm test.owl && echo "Success"
