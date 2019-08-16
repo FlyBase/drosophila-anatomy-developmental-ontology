@@ -137,6 +137,9 @@ pre_release: $(ONT)-edit.obo tmp/auto_generated_definitions_dot.owl tmp/auto_gen
 	$(ROBOT) merge -i tmp/$(ONT)-edit-release.obo -i tmp/auto_generated_definitions_dot.owl -i tmp/auto_generated_definitions_sub.owl --collapse-import-closure false -o $(ONT)-edit-release.ofn && mv $(ONT)-edit-release.ofn $(ONT)-edit-release.owl
 	echo "Preprocessing done. Make sure that NO CHANGES TO THE EDIT FILE ARE COMMITTED!"
 
+#t:
+#	$(ROBOT) query -i tmp/$(ONT)-edit-release.obo --update ../sparql/remove-dot-definitions.ru -o tmp/$(ONT)-edit-release3.obo
+#	diff tmp/$(ONT)-edit-release.obo tmp/$(ONT)-edit-release3.obo > diff.txt
 
 
 #####################################################################################
@@ -172,5 +175,10 @@ obo_qc_%:
 
 obo_qc: obo_qc_$(ONT).obo obo_qc_$(ONT).owl
 
-flybase_qc: odkversion obo_qc
-	$(ROBOT) reason --input $(ONT)-full.owl --reasoner ELK  --equivalent-classes-allowed asserted-only --output test.owl && rm test.owl && echo "Success"
+# All this removing is necessary to avoid problems with remove --term CARO:0000013 remove --term GO:0005623 
+flybase_qc.owl: odkversion obo_qc
+	$(ROBOT) merge -i $(ONT)-full.owl $@
+
+flybase_qc: flybase_qc.owl
+	$(ROBOT) reason -i $< --reasoner ELK  --equivalent-classes-allowed asserted-only -o test.owl &&\
+	rm test.owl && echo "Success"
