@@ -170,15 +170,20 @@ post_release: fly-anatomy.obo
 ##    TRAVIS       #####
 ########################
 
-obo_qc_%:
-	$(ROBOT) report -i $* --profile qc-profile.txt --fail-on ERROR --print 5 -o $@.txt
+obo_qc_%.obo:
+	$(ROBOT) report -i $*.obo --profile qc-profile.txt --fail-on ERROR --print 5 -o $@.txt
+
+obo_qc_%.owl:
+	$(ROBOT) merge -i $*.owl -i components/qc_assertions.owl unmerge -i components/qc_assertions_unmerge.owl -o $@ &&\
+	$(ROBOT) report -i $@ --profile qc-profile.txt --fail-on ERROR --print 5 -o $@.txt
 
 obo_qc: obo_qc_$(ONT).obo obo_qc_$(ONT).owl
 
-# All this removing is necessary to avoid problems with remove --term CARO:0000013 remove --term GO:0005623 
 flybase_qc.owl: odkversion obo_qc
-	$(ROBOT) merge -i $(ONT)-full.owl $@
+	$(ROBOT) merge -i $(ONT)-full.owl -i components/qc_assertions.owl -o $@
 
 flybase_qc: flybase_qc.owl
-	$(ROBOT) reason -i $< --reasoner ELK  --equivalent-classes-allowed asserted-only -o test.owl &&\
-	rm test.owl && echo "Success"
+	$(ROBOT) reason --input $< --reasoner ELK  --equivalent-classes-allowed asserted-only --output test.owl &&\
+	rm test.owl &&\
+	echo "Success"
+
