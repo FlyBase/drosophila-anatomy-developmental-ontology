@@ -13,6 +13,7 @@ robot extract --method MIREOT \
     --branch-from-term http://purl.obolibrary.org/obo/GO_0005575 \
     --output GO_cellcomponent_module_mireot.owl
 
+## Merge this module into fbbt-simple.obo and annotate with github location
 robot merge --input fbbt-simple.obo \
     --input GO_cellcomponent_module_mireot.owl \
 annotate --ontology-iri "https://github.com/FlyBase/drosophila-anatomy-developmental-ontology/for_canto/fbbt-GO.obo" \
