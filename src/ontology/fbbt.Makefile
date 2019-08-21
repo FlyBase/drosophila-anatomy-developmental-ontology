@@ -149,7 +149,7 @@ pre_release: $(ONT)-edit.obo tmp/auto_generated_definitions_dot.owl tmp/auto_gen
 tmp/fbbt-obj.obo:
 	$(ROBOT) remove -i fbbt-simple.obo --select object-properties --trim true -o $@.tmp.obo && grep -v ^owl-axioms $@.tmp.obo > $@ && rm $@.tmp.obo
 
-fly-anatomy.obo: tmp/fbbt-obj.obo rem_flybase.txt
+fly_anatomy.obo: tmp/fbbt-obj.obo rem_flybase.txt
 	cp fbbt-simple.obo tmp/fbbt-simple-stripped.obo
 	#cat fbbt-simple.obo | perl -0777 -e '$$_ = <>; s/name[:].*\nname[:]/name:/g; print' | perl -0777 -e '$$_ = <>; s/def[:].*\ndef[:]/def:/g; print' > tmp/fbbt-simple-stripped.obo &&\
 	$(ROBOT) remove -vv -i tmp/fbbt-simple-stripped.obo --select "owl:deprecated='true'^^xsd:boolean" --trim true \
@@ -162,8 +162,8 @@ fly-anatomy.obo: tmp/fbbt-obj.obo rem_flybase.txt
 	sed -i '/^data-version[:]/c\data-version: $(DATE)' $@
 	sed -i '/FlyBase_miscellaneous_CV/d' $@
 
-post_release: fly-anatomy.obo
-	cp fly-anatomy.obo ../..
+post_release: fly_anatomy.obo
+	cp fly_anatomy.obo ../..
 	
 	
 ########################
