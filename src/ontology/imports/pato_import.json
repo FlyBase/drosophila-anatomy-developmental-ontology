@@ -1,6 +1,24 @@
 {
   "graphs" : [ {
     "nodes" : [ {
+      "id" : "http://purl.obolibrary.org/obo/PATO_0001959",
+      "meta" : {
+        "definition" : {
+          "val" : "A structural quality inhering in a bearer by virtue of the bearer's in which bundles of aligned anatomical fibers have become separated.",
+          "xrefs" : [ "PATOC:mw" ]
+        },
+        "subsets" : [ "http://purl.obolibrary.org/obo/pato#value_slim" ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "quality"
+        }, {
+          "pred" : "http://purl.obolibrary.org/obo/RO_0002604",
+          "val" : "http://purl.obolibrary.org/obo/PATO_0001861"
+        } ]
+      },
+      "type" : "CLASS",
+      "lbl" : "defasciculated"
+    }, {
       "id" : "http://www.geneontology.org/formats/oboInOwl#hasExactSynonym",
       "type" : "PROPERTY",
       "lbl" : "has_exact_synonym"
@@ -23,6 +41,37 @@
       },
       "type" : "CLASS",
       "lbl" : "deviation(from_normal)"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/pato#abnormal_slim",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
+          "val" : "Abnormal/normal slim"
+        } ]
+      },
+      "type" : "PROPERTY"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/RO_0002604",
+      "meta" : {
+        "xrefs" : [ {
+          "val" : "RO:0002604"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#is_class_level",
+          "val" : "true"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#shorthand",
+          "val" : "is_opposite_of"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "quality"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#is_metadata_tag",
+          "val" : "true"
+        } ]
+      },
+      "type" : "PROPERTY",
+      "lbl" : "is opposite of"
     }, {
       "id" : "http://purl.obolibrary.org/obo/PATO_0000460",
       "meta" : {
@@ -106,9 +155,41 @@
       "type" : "PROPERTY",
       "lbl" : "shorthand"
     }, {
+      "id" : "http://purl.obolibrary.org/obo/PATO_0000461",
+      "meta" : {
+        "definition" : {
+          "val" : "A quality inhering in a bearer by virtue of the bearer's exhibiting no deviation from normal or average.",
+          "xrefs" : [ "PATOC:GVG" ]
+        },
+        "subsets" : [ "http://purl.obolibrary.org/obo/pato#mpath_slim", "http://purl.obolibrary.org/obo/pato#value_slim", "http://purl.obolibrary.org/obo/pato#abnormal_slim" ],
+        "synonyms" : [ {
+          "pred" : "hasRelatedSynonym",
+          "val" : "average",
+          "xrefs" : [ ]
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/RO_0002604",
+          "val" : "http://purl.obolibrary.org/obo/PATO_0000460"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "quality"
+        } ]
+      },
+      "type" : "CLASS",
+      "lbl" : "normal"
+    }, {
       "id" : "http://www.geneontology.org/formats/oboInOwl#inSubset",
       "type" : "PROPERTY",
       "lbl" : "in_subset"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/pato#mpath_slim",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
+          "val" : "Pathology slim"
+        } ]
+      },
+      "type" : "PROPERTY"
     }, {
       "id" : "http://purl.obolibrary.org/obo/PATO_0000068",
       "meta" : {
@@ -179,6 +260,15 @@
       },
       "type" : "PROPERTY",
       "lbl" : "has_part"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/pato#value_slim",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
+          "val" : "Value slim"
+        } ]
+      },
+      "type" : "PROPERTY"
     }, {
       "id" : "http://purl.obolibrary.org/obo/IAO_0100001",
       "type" : "PROPERTY",
@@ -308,6 +398,15 @@
       "type" : "PROPERTY",
       "lbl" : "has_broad_synonym"
     }, {
+      "id" : "http://purl.obolibrary.org/obo/pato#attribute_slim",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
+          "val" : "Attribute slim"
+        } ]
+      },
+      "type" : "PROPERTY"
+    }, {
       "id" : "http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym",
       "type" : "PROPERTY",
       "lbl" : "has_narrow_synonym"
@@ -324,6 +423,10 @@
       "sub" : "http://purl.obolibrary.org/obo/PATO_0000069",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PATO_0000068"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PATO_0001959",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PATO_0002013"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0000141",
       "pred" : "is_a",
@@ -345,6 +448,10 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PATO_0000141"
     }, {
+      "sub" : "http://purl.obolibrary.org/obo/PATO_0000461",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PATO_0000069"
+    }, {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0000051",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PATO_0001241"
@@ -358,7 +465,7 @@
       "subsets" : [ ],
       "xrefs" : [ ],
       "basicPropertyValues" : [ ],
-      "version" : "http://purl.obolibrary.org/obo/fbbt/releases/2019-07-07/imports/pato_import.owl"
+      "version" : "http://purl.obolibrary.org/obo/fbbt/releases/2019-08-21/imports/pato_import.owl"
     },
     "equivalentNodesSets" : [ ],
     "logicalDefinitionAxioms" : [ ],
