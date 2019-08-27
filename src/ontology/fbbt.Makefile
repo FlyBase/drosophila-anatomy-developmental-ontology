@@ -43,8 +43,8 @@ reports/robot_simple_diff.txt: $(LAST_DEPLOYED_SIMPLE) $(ONT)-simple.obo
 reports/onto_metrics_calc.txt: $(ONT)-simple.obo install_flybase_scripts
 	../scripts/onto_metrics_calc.pl 'phenotypic_class' $(ONT)-simple.obo > $@
 	
-reports/chado_load_check_simple.txt: install_flybase_scripts $(ONT)-simple.obo 
-	../scripts/chado_load_checks.pl $(ONT)-simple.obo > $@
+reports/chado_load_check_simple.txt: install_flybase_scripts fly_anatomy.obo 
+	../scripts/chado_load_checks.pl fly_anatomy.obo > $@
 
 all_reports: all_reports_onestep $(REPORT_FILES)
 
