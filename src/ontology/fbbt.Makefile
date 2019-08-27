@@ -10,7 +10,7 @@ DATE   ?= $(shell date +%Y-%m-%d)
 ######################################################
 
 # Illegal division by 0 problem: reports/onto_metrics_calc.txt 
-REPORT_FILES := $(REPORT_FILES) reports/obo_track_new_simple.txt  reports/robot_simple_diff.txt reports/chado_load_check_simple.txt
+REPORT_FILES := $(REPORT_FILES) reports/obo_track_new_simple.txt  reports/robot_simple_diff.txt
 
 SIMPLE_PURL =	http://purl.obolibrary.org/obo/fbbt/fbbt-simple.obo
 LAST_DEPLOYED_SIMPLE=tmp/$(ONT)-simple-last.obo
@@ -162,7 +162,7 @@ fly_anatomy.obo: tmp/fbbt-obj.obo rem_flybase.txt
 	sed -i '/^data-version[:]/c\data-version: $(DATE)' $@
 	sed -i '/FlyBase_miscellaneous_CV/d' $@
 
-post_release: fly_anatomy.obo
+post_release: fly_anatomy.obo reports/chado_load_check_simple.txt
 	cp fly_anatomy.obo ../..
 	
 	
