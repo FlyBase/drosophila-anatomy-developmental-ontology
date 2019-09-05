@@ -2,7 +2,7 @@
 use warnings;
 require OboModel;
 use strict;
-#use Business::ISBN; 
+#use Business::ISBN;
 
 =use chado_load_checks.pl <file to check>
 
@@ -14,10 +14,10 @@ This script runs the following checks:
 
 3. Are def_dbxrefs and synonym_dbxrefs one of the following:
 
-FlyBase:FBrfnnnnnnn; 
+FlyBase:FBrfnnnnnnn;
 FlyBase:FBimnnnnnnn;
 FBC:\<curator initials\>;
-PMID:\d+; 
+PMID:\d+;
 http://...;
 ISBN:<legal ISBN13>;
 CARO:<CARO curator initials>.
@@ -34,7 +34,7 @@ It is legal in OBO 1.2 format for synonym  or def dbxref lists to include quoted
 
 =cut
 
-# TODO: 
+# TODO:
 # Extend to deal with relations
 
 
@@ -56,7 +56,7 @@ sub chado_load_checks {
 	my $obj = ($_->{obj});
 	if ($_->{estat} eq 'alt_id') {
 	  $alt_id{$_->{obj}} = 1
-	} elsif ($obo_stag->{$obj}->{is_obsolete}) {  
+	} elsif ($obo_stag->{$obj}->{is_obsolete}) {
 	  $fail_stat = 1;
 	  print "$key ; $obo_stag->{$key}->{name} has relationship to an obsolete term, $obj ; $obo_stag->{$obj}->{name}\n";
 	}
@@ -70,7 +70,7 @@ sub chado_load_checks {
 	 $fail_stat = 1;
        }
       if ((!$value->{name})&&(!$value->{is_anonymous})) {  # Do all non-anonymous terms have names?
-	$fail_stat = 1;	  
+	$fail_stat = 1;
 	print "$key does not have anonymous term status but has no name\!\n";
       }
       my $name = $value->{name}; # Are there multiple terms with the same name?
@@ -85,19 +85,19 @@ sub chado_load_checks {
       $key =~ m/(\w+)\:\d+/;
       my $idp = $1;
       if ($idp eq 'FBbt') {
-	unless ($value->{namespace} eq 'fly_anatomy.ontology') {
+	unless ($value->{namespace} eq 'FlyBase anatomy CV') {
 	  $fail_stat = 1;
 	  print "$value->{namespace} is not a valid namespace for $key.\n"
 	}
       }
       elsif ($idp eq 'FBdv') {
-	unless ($value->{namespace} eq 'FlyBase_development_CV') {
+	unless ($value->{namespace} eq 'FlyBase development CV') {
 	  $fail_stat = 1;
 	  print "$value->{namespace} is not a valid namespace for $key.\n"
 	}
       }
       elsif ($idp eq 'FBcv') {
-	unless ($value->{namespace} =~ m/FlyBase miscellaneous CV$|^allele_class$|^biological_process$|^clone_qualifier$|^disease_qualifier$|^dominance_qualifier$|^embryonic_pattern_qualifier$|^environmental_qualifier$|^expression_qualifier$|^extent$|^fly_anatomy.ontology$|^genetic_interaction_type$|^genotype_to_phenotype_relation$|^group_descriptor$|^homeotic$|^intensity_qualifier$|^language$|^mode_of_assay$|^origin_of_mutation$|^phenotypic_class$|^pub_type$|^quality$|^scorability$|^sex_qualifier$|^spatial_qualifier$|^structural_qualifier$|^temporal_qualifier$|^precursor_qualifier$|^progressive_qualifier$|^assay_attribute$|^assay_type$|^biosample_attribute$|^biosample_type$|^dataset_entity_type$|^project_attribute$|^project_type$|^reagent_collection_type$|^result_attribute$|^result_type$|^experimental_tool_descriptor$/) { 
+	unless ($value->{namespace} =~ m/FlyBase miscellaneous CV$|^allele_class$|^biological_process$|^clone_qualifier$|^disease_qualifier$|^dominance_qualifier$|^embryonic_pattern_qualifier$|^environmental_qualifier$|^expression_qualifier$|^extent$|^fly_anatomy.ontology$|^genetic_interaction_type$|^genotype_to_phenotype_relation$|^group_descriptor$|^homeotic$|^intensity_qualifier$|^language$|^mode_of_assay$|^origin_of_mutation$|^phenotypic_class$|^pub_type$|^quality$|^scorability$|^sex_qualifier$|^spatial_qualifier$|^structural_qualifier$|^temporal_qualifier$|^precursor_qualifier$|^progressive_qualifier$|^assay_attribute$|^assay_type$|^biosample_attribute$|^biosample_type$|^dataset_entity_type$|^project_attribute$|^project_type$|^reagent_collection_type$|^result_attribute$|^result_type$|^experimental_tool_descriptor$/) {
 	  $fail_stat = 1;
 	  print "$value->{namespace} is not a valid namespace for $key.\n"
 	}
@@ -133,7 +133,7 @@ sub is_dbxref_legal {
     &ISBN13_check($1)
   }
   # If not ISBN, does it follow one of the other legal dbxref syntaxes?
-  elsif ($_ =~ m/FlyBase\:FBrf\d{7}|VFB_vol\:\d{8}|FBC\:\S+|SO\:ma|FlyBase\:FBim\d{7}|PMID\:\d+|http\:\/\/.+|CARO\:\S+|doi\:\d+\.\d+\/\w+|FlyBrain_NDB\:\d+|CHEBI\:\d+|MeSH\:D\d+|GOC:\S+|GO_REF\:\d+|Reactome\:\d+|SO\:\S+|UniProt\:P\d+|UniProt\:Q\S+|WB_REF\:\S+|FB\:FBrfd{7}|Wikipedia\:\S+/) {
+  elsif ($_ =~ m/FlyBase\:FBrf\d{7}|VFB_vol\:\d{8}|FBC\:\S+|SO\:ma|FlyBase\:FBim\d{7}|PMID\:\d+|http\:\/\/.+|CARO\:\S+|doi\:\d+\.\d+\/\w+|FlyBrain_NDB\:\d+|FlyPNS\:\S+|DoOR\:\S+|CHEBI\:\d+|MeSH\:D\d+|GOC:\S+|GO_REF\:\d+|Reactome\:\d+|SO\:\S+|UniProt\:P\d+|UniProt\:Q\S+|WB_REF\:\S+|FB\:FBrfd{7}|Wikipedia\:\S+/) {
     $legal_stat=1;
   } else {
     $legal_stat=0
@@ -142,7 +142,7 @@ sub is_dbxref_legal {
 }
 
 
-sub ISBN13_check { 
+sub ISBN13_check {
   # Checking ISBN validity
   #my $isbn_2_test = $_[0];
   #my $isbn = Business::ISBN->new($isbn_2_test);
@@ -162,4 +162,3 @@ sub ISBN13_check {
   #  return
   #}
 }
-  
