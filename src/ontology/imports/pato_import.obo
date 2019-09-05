@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: fbbt/releases/2019-09-03/imports/pato_import.owl
+data-version: fbbt/releases/2019-09-05/imports/pato_import.owl
 subsetdef: abnormal_slim "Abnormal/normal slim"
 subsetdef: attribute_slim "Attribute slim"
 subsetdef: mpath_slim "Pathology slim"
@@ -12,7 +12,6 @@ name: quality
 namespace: quality
 alt_id: PATO:0000072
 def: "A dependent entity that inheres in a bearer by virtue of how the bearer is related to other entities" [PATOC:GVG]
-synonym: "trait" EXACT []
 
 [Term]
 id: PATO:0000051
@@ -72,7 +71,7 @@ subset: abnormal_slim
 subset: mpath_slim
 subset: value_slim
 synonym: "average" RELATED []
-is_a: PATO:0000069 ! deviation(from_normal)
+is_a: PATO:0000068 ! qualitative
 relationship: is_opposite_of PATO:0000460 ! abnormal
 
 [Term]
@@ -116,12 +115,56 @@ is_a: PATO:0002013 ! fasciculation
 relationship: is_opposite_of PATO:0001861 ! fasciculated
 
 [Term]
+id: PATO:0001995
+name: organismal quality
+namespace: quality
+def: "A quality that inheres in an entire organism or part of an organism." [PATOC:CJM]
+is_a: PATO:0001241 ! physical object quality
+
+[Term]
 id: PATO:0002013
 name: fasciculation
 namespace: quality
 def: "A structural quality inhering in a bearer by virtue of whether the bearer forms a bundle of anatomical fibers, as of muscle or nerve." [answers.com:http\://www.answers.com/]
 subset: attribute_slim
 is_a: PATO:0000141 ! structure
+
+[Term]
+id: PATO:0002451
+name: sexually dimorphic
+namespace: quality
+def: "A quality inhering in a bearer by virtue of the bearer's exhibiting a phenotypic difference between males and females of the same species." [PATOC:WC]
+subset: value_slim
+is_a: PATO:0001995 ! organismal quality
+created_by: gkoutos
+creation_date: 2013-03-11T09:22:04Z
+
+[Term]
+id: PATO:0060001
+name: sex-specific
+namespace: quality
+def: "A quality inhering in a bearer by virtue of the bearer's being present in one sex and absent from the other in members of the same species." [http://orcid.org/0000-0002-1373-1705]
+is_a: PATO:0002451 ! sexually dimorphic
+created_by: http://orcid.org/0000-0002-1373-1705
+creation_date: 2019-08-23T08:46:30Z
+
+[Term]
+id: PATO:0060002
+name: male-specific
+namespace: quality
+def: "A quality inhering in a bearer by virtue of the bearer's being present in males and absent from females in members of the same species." [http://orcid.org/0000-0002-1373-1705]
+is_a: PATO:0060001 ! sex-specific
+created_by: http://orcid.org/0000-0002-1373-1705
+creation_date: 2019-08-23T08:49:59Z
+
+[Term]
+id: PATO:0060003
+name: female-specific
+namespace: quality
+def: "A quality inhering in a bearer by virtue of the bearer's being present in females and absent from males in members of the same species." [http://orcid.org/0000-0002-1373-1705]
+is_a: PATO:0060001 ! sex-specific
+created_by: http://orcid.org/0000-0002-1373-1705
+creation_date: 2019-08-23T08:51:22Z
 
 [Typedef]
 id: has_part
