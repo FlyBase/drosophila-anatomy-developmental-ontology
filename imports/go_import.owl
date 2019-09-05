@@ -11,7 +11,7 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/fbbt/imports/go_import.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/fbbt/releases/2019-08-21/imports/go_import.owl"/>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/fbbt/releases/2019-09-05/imports/go_import.owl"/>
     </owl:Ontology>
     
 
@@ -1421,7 +1421,7 @@
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0005886"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
         <owl:annotatedTarget>cellular membrane</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NIF_Subcellular:sao6433132645</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>NIF_Subcellular:sao6433132645</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0005886"/>
@@ -3382,10 +3382,10 @@
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Any process that results in a change in state or activity of an organism (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of detection of, or exposure to, a period of light or dark of a given length, measured relative to a particular duration known as the &apos;critical day length&apos;. The critical day length varies between species.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:jid</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>GOC:pj</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>ISBN:0582015952</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>ISBN:0697037754</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>ISBN:0709408862</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:pj</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ISBN:0582015952</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ISBN:0697037754</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ISBN:0709408862</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -6463,7 +6463,7 @@
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Behavior in a fully developed and mature organism.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:mah</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ISBN:0877797099</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>ISBN:0877797099</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -6486,7 +6486,7 @@
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Behavior in a larval form of an organism, an immature organism that must undergo metamorphosis to assume adult characteristics.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:mah</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ISBN:0877797099</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>ISBN:0877797099</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -15270,7 +15270,7 @@
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>An automatic response to a stimulus beginning with a nerve impulse from a receptor and ending with the action of an effector such as a gland or a muscle. Signaling never reaches a level of consciousness.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:dph</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ISBN:0877797099</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>ISBN:0877797099</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -15426,6 +15426,24 @@
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
         <owl:annotatedTarget>regulation of cellular localisation</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:mah</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GO_0060361 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0060361">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0040011"/>
+        <obo:IAO_0000115>Self-propelled movement of an organism from one location to another through the air, usually by means of active wing movement.</obo:IAO_0000115>
+        <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>GO:0060361</oboInOwl:id>
+        <rdfs:label>flight</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0060361"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>Self-propelled movement of an organism from one location to another through the air, usually by means of active wing movement.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:dph</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
