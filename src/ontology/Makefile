@@ -1,7 +1,7 @@
 # ----------------------------------------
 # Makefile for fbbt
 # Generated using ontology-starter-kit
-# ODK Version: v1.2.17
+# ODK Version: v1.2.18
 # ----------------------------------------
 # <do not edit above this line>
 
@@ -19,13 +19,14 @@ CATALOG=                    catalog-v001.xml
 ROBOT=                      robot --catalog $(CATALOG)
 RELEASEDIR=                 ../..
 PATTERNDIR=                 ../patterns
-REPORTDIR=                 reports
+REPORTDIR=                  reports
+TMPDIR=                     tmp
 SPARQLDIR =                 ../sparql
 REPORT_FAIL_ON =            none
 OBO_FORMAT_OPTIONS =        
 SPARQL_VALIDATION_CHECKS =  equivalent-classes trailing-whitespace owldef-self-reference xref-syntax nolabels
 SPARQL_EXPORTS =            basic-report class-count-by-prefix edges xrefs obsoletes synonyms
-ODK_VERSION =               v1.2.17
+ODK_VERSION =               v1.2.18
 
 TODAY ?= $(shell date +%Y-%m-%d)
 OBODATE ?= $(shell date +'%d:%m:%Y %H:%M')
@@ -52,6 +53,9 @@ test: odkversion sparql_test all_reports
 odkversion:
 	echo "ODK Makefile version: $(ODK_VERSION) (this is the version of the ODK with which this Makefile was generated, not the version of the ODK you are running)" &&\
 	echo "ROBOT version (ODK): " && $(ROBOT) --version
+
+$TMPDIR:
+	mkdir -p $@
 
 ## -- main targets --
 ##
@@ -177,7 +181,7 @@ $(ONT)-full.json: $(ONT)-full.owl
 		convert --check false -f json -o $@.tmp.json && mv $@.tmp.json $@
 # Main release artefacts
 $(ONT).owl: $(ONT)-full.owl
-	$(ROBOT) annotate --input $< --ontology-iri $(URIBASE)/$@ --version-iri $(ONTBASE)/releases/$(TODAY) \
+	$(ROBOT) annotate --input $< --ontology-iri $(URIBASE)/$@ --version-iri $(ONTBASE)/releases/$(TODAY)/$@ \
 		convert -o $@.tmp.owl && mv $@.tmp.owl $@
 
 $(ONT).obo: $(ONT).owl
@@ -446,49 +450,7 @@ prepare_patterns:
 
 
 
-# ----------------------------------------
-# GitHub release (HIGHLY experimental)
-# ----------------------------------------
 
-RELEASEFILES=$(ASSETS)
-TAGNAME=v$(TODAY)
-
-
-
-USER=unknown
-GH_ASSETS = $(patsubst %, tmp/gh_release_asset_%.txt, $(RELEASEFILES))
-GITHUB_REPO=FlyBase/drosophila-anatomy-ontology
-
-tmp/release_get.txt:
-	curl -s https://api.github.com/repos/${GITHUB_REPO}/releases/tags/${TAGNAME} > $@
-
-tmp/release_op.txt: tmp/release_get.txt
-	$(eval RELEASEID=$(shell cat tmp/release_get.txt | jq '.id'))
-	if ! [ "$(RELEASEID)" -eq "$(RELEASEID)" ] ; then \
-		curl -s -X POST \
-			https://api.github.com/repos/${GITHUB_REPO}/releases \
-			-H 'Accept: */*' \
-			-H 'Content-Type: application/json' \
-			-u ${USER} \
-			-d '{ "tag_name": "${TAGNAME}", "target_commitish": "master", "name": "${TAGNAME}", "body": "Ontology release ${TODAY}", "draft": false, "prerelease": false }' > $@; \
-	else \
-		cp $< $@; \
-	fi;
-
-tmp/gh_release_id.txt: tmp/release_op.txt
-	echo $(shell cat tmp/release_op.txt | jq '.id') > $@;
-
-tmp/gh_release_asset_%.txt: tmp/gh_release_id.txt %
-	curl -X POST \
-		"https://uploads.github.com/repos/${GITHUB_REPO}/releases/$(shell cat tmp/gh_release_id.txt)/assets?name=$*&label=$*" \
-		--data-binary @$* \
-		-u ${USER} \
-		-H 'Accept: */*' \
-		-H 'Cache-Control: no-cache' \
-		-H 'Connection: keep-alive' \
-		-H 'Content-Type: application/octet-stream' > $@
-
-public_release: tmp/gh_release_id.txt $(GH_ASSETS)
 
 
 
