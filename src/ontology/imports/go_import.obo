@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: fbbt/releases/2019-08-21/imports/go_import.owl
+data-version: fbbt/releases/2019-09-05/imports/go_import.owl
 subsetdef: gocheck_do_not_annotate "Term not to be used for direct annotation"
 subsetdef: gocheck_do_not_manually_annotate "Term not to be used for direct manual annotation"
 subsetdef: goslim_agr "AGR slim"
@@ -5890,6 +5890,13 @@ is_a: GO:0032879 ! regulation of localization
 intersection_of: GO:0008150 ! biological_process
 intersection_of: regulates GO:0051641 ! cellular localization
 relationship: regulates GO:0051641 ! cellular localization
+
+[Term]
+id: GO:0060361
+name: flight
+namespace: biological_process
+def: "Self-propelled movement of an organism from one location to another through the air, usually by means of active wing movement." [GOC:dph]
+is_a: GO:0040011 ! locomotion
 
 [Term]
 id: GO:0060456
