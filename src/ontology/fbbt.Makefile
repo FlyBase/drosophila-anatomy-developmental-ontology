@@ -176,7 +176,10 @@ post_release: fly_anatomy.obo reports/chado_load_check_simple.txt
 
 obo_qc_%.obo:
 	$(ROBOT) report -i $*.obo --profile qc-profile.txt --fail-on ERROR --print 5 -o $@.txt
-
+	
+obo_qc_$(ONT).owl:
+	$(ROBOT) report -i $(ONT).owl --profile qc-profile.txt --fail-on None --print 5 -o $@.txt
+			
 obo_qc_%.owl:
 	$(ROBOT) merge -i $*.owl -i components/qc_assertions.owl unmerge -i components/qc_assertions_unmerge.owl -o $@ &&\
 	$(ROBOT) report -i $@ --profile qc-profile.txt --fail-on ERROR --print 5 -o $@.txt
