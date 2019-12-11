@@ -11,7 +11,7 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/fbbt/imports/go_import.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/fbbt/releases/2019-11-26/imports/go_import.owl"/>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/fbbt/releases/2019-12-11/imports/go_import.owl"/>
     </owl:Ontology>
     
 
@@ -1810,6 +1810,30 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/GO_0006970 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0006970">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0006950"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0009628"/>
+        <obo:IAO_0000115>Any process that results in a change in state or activity of a cell or an organism (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of a stimulus indicating an increase or decrease in the concentration of solutes outside the organism or cell.</obo:IAO_0000115>
+        <oboInOwl:hasDbXref>MIPS_funcat:32.01.03</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>MIPS_funcat:36.20.35.09.05</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>osmotic response</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>osmotic stress response</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>GO:0006970</oboInOwl:id>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_yeast"/>
+        <rdfs:label>response to osmotic stress</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0006970"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>Any process that results in a change in state or activity of a cell or an organism (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of a stimulus indicating an increase or decrease in the concentration of solutes outside the organism or cell.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:jl</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/GO_0007154 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0007154">
@@ -2603,7 +2627,7 @@
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>The pairwise union of individuals for the purpose of sexual reproduction, ultimately resulting in the formation of zygotes.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:jl</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ISBN:0387520546</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>ISBN:0387520546</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -2822,7 +2846,7 @@
         <owl:annotatedTarget>The behavior of an organism pertaining to movement of the eyes and of objects in the visual field, as in nystagmus.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:jid</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:pr</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.mercksource.com</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>http://www.mercksource.com</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -6033,7 +6057,7 @@
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:kmv</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:krc</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:tb</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ISBN:0387520546</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>ISBN:0387520546</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>http://en.wikipedia.org/wiki/Sexual_reproduction</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -6514,7 +6538,7 @@
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0030431"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Any process in which an organism enters and maintains a periodic, readily reversible state of reduced awareness and metabolic activity. Usually accompanied by physical relaxation, the onset of sleep in humans and other mammals is marked by a change in the electrical activity of the brain.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ISBN:0192800981</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>ISBN:0192800981</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -8960,7 +8984,7 @@
         <owl:annotatedTarget>Any process that stops, prevents or reduces the duration or quality of sleep, a readily reversible state of reduced awareness and metabolic activity that occurs periodically in many animals.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:go_curators</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:jl</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ISBN:0192800981</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>ISBN:0192800981</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -9864,6 +9888,26 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/GO_0043575 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0043575">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0006970"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0009582"/>
+        <obo:IAO_0000115>The series of events in which a stimulus indicating an increase or decrease in the concentration of solutes outside the organism or cell is received and converted into a molecular signal.</obo:IAO_0000115>
+        <oboInOwl:hasDbXref>MIPS_funcat:34.11.03.13</oboInOwl:hasDbXref>
+        <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>GO:0043575</oboInOwl:id>
+        <rdfs:label>detection of osmotic stimulus</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0043575"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>The series of events in which a stimulus indicating an increase or decrease in the concentration of solutes outside the organism or cell is received and converted into a molecular signal.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:jl</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/GO_0043576 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0043576">
@@ -10235,7 +10279,7 @@
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0044092"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Any process that stops or reduces the rate or extent of a molecular function, an elemental biological activity occurring at the molecular level, such as catalysis or binding.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GO:jl</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>GO:jl</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -10272,7 +10316,7 @@
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0044093"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Any process that activates or increases the rate or extent of a molecular function, an elemental biological activity occurring at the molecular level, such as catalysis or binding.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GO:jl</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>GO:jl</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -10549,7 +10593,7 @@
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Any process that modulates the frequency, rate or extent of sleep; a readily reversible state of reduced awareness and metabolic activity that occurs periodically in many animals.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:jl</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ISBN:0192800981</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>ISBN:0192800981</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -11552,6 +11596,41 @@
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0046942"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>The directed movement of carboxylic acids into, out of or within a cell, or between cells, by means of some agent such as a transporter or pore. Carboxylic acids are organic acids containing one or more carboxyl (COOH) groups or anions (COO-).</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:ai</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GO_0047484 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0047484">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/GO_0008150"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002211"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0006970"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0080134"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002211"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0006970"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115>Any process that modulates the rate or extent of the response to osmotic stress.</obo:IAO_0000115>
+        <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>GO:0047484</oboInOwl:id>
+        <rdfs:label>regulation of response to osmotic stress</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0047484"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>Any process that modulates the rate or extent of the response to osmotic stress.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:ai</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -17421,7 +17500,7 @@
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A specialized area of membrane on either the presynaptic or the postsynaptic side of a synapse, the junction between a nerve fiber of one neuron and another neuron or muscle fiber or glial cell.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:BHF</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>PMID:20410104</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PMID:20410104</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -22335,7 +22414,7 @@
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:aruk</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:bc</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GO_REF:0000058</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>PMID:11404397</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PMID:11404397</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_1905945"/>
@@ -22392,7 +22471,7 @@
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:aruk</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:bc</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GO_REF:0000058</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>PMID:11404397</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PMID:11404397</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_1905946"/>
@@ -22497,7 +22576,7 @@
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:aruk</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:bc</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GO_REF:0000058</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>PMID:11404397</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PMID:11404397</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_1905947"/>

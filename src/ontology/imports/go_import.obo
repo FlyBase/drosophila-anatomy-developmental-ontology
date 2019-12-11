@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: fbbt/releases/2019-11-26/imports/go_import.owl
+data-version: fbbt/releases/2019-12-11/imports/go_import.owl
 subsetdef: gocheck_do_not_annotate "Term not to be used for direct annotation"
 subsetdef: gocheck_do_not_manually_annotate "Term not to be used for direct manual annotation"
 subsetdef: goslim_agr "AGR slim"
@@ -611,6 +611,19 @@ synonym: "response to abiotic stress" RELATED []
 synonym: "response to biotic stress" RELATED []
 xref: MIPS_funcat:32.01
 is_a: GO:0050896 ! response to stimulus
+
+[Term]
+id: GO:0006970
+name: response to osmotic stress
+namespace: biological_process
+def: "Any process that results in a change in state or activity of a cell or an organism (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of a stimulus indicating an increase or decrease in the concentration of solutes outside the organism or cell." [GOC:jl]
+subset: goslim_yeast
+synonym: "osmotic response" EXACT []
+synonym: "osmotic stress response" EXACT []
+xref: MIPS_funcat:32.01.03
+xref: MIPS_funcat:36.20.35.09.05
+is_a: GO:0006950 ! response to stress
+is_a: GO:0009628 ! response to abiotic stimulus
 
 [Term]
 id: GO:0007154
@@ -3780,6 +3793,15 @@ intersection_of: regulates GO:0016301 ! kinase activity
 relationship: regulates GO:0016301 ! kinase activity
 
 [Term]
+id: GO:0043575
+name: detection of osmotic stimulus
+namespace: biological_process
+def: "The series of events in which a stimulus indicating an increase or decrease in the concentration of solutes outside the organism or cell is received and converted into a molecular signal." [GOC:jl]
+xref: MIPS_funcat:34.11.03.13
+is_a: GO:0006970 ! response to osmotic stress
+is_a: GO:0009582 ! detection of abiotic stimulus
+
+[Term]
 id: GO:0043576
 name: regulation of respiratory gaseous exchange
 namespace: biological_process
@@ -4429,6 +4451,16 @@ namespace: biological_process
 def: "The directed movement of carboxylic acids into, out of or within a cell, or between cells, by means of some agent such as a transporter or pore. Carboxylic acids are organic acids containing one or more carboxyl (COOH) groups or anions (COO-)." [GOC:ai]
 is_a: GO:0015711 ! organic anion transport
 is_a: GO:0015849 ! organic acid transport
+
+[Term]
+id: GO:0047484
+name: regulation of response to osmotic stress
+namespace: biological_process
+def: "Any process that modulates the rate or extent of the response to osmotic stress." [GOC:ai]
+is_a: GO:0080134 ! regulation of response to stress
+intersection_of: GO:0008150 ! biological_process
+intersection_of: regulates GO:0006970 ! response to osmotic stress
+relationship: regulates GO:0006970 ! response to osmotic stress
 
 [Term]
 id: GO:0048018
