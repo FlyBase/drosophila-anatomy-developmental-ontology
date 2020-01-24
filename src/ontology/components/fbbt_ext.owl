@@ -52,6 +52,12 @@
         <Class IRI="http://purl.obolibrary.org/obo/FBbt_00048301"/>
     </Declaration>
     <Declaration>
+        <Class IRI="http://purl.obolibrary.org/obo/FBbt_00048490"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://purl.obolibrary.org/obo/FBbt_00048491"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="http://purl.obolibrary.org/obo/PATO_0060002"/>
     </Declaration>
     <Declaration>
@@ -112,11 +118,28 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
     </Declaration>
     <Declaration>
+        <Class IRI="http://purl.obolibrary.org/obo/FBbt_10000000"/>
+    </Declaration>
+    <SubClassOf>
+        <ObjectIntersectionOf>
+            <Class IRI="http://purl.obolibrary.org/obo/FBbt_10000000"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="http://purl.obolibrary.org/obo/BFO_0000050"/>
+                <Class IRI="http://purl.obolibrary.org/obo/FBbt_00048490"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
         <Class IRI="http://purl.obolibrary.org/obo/FBbt_00048490"/>
-    </Declaration>
-    <Declaration>
+    </SubClassOf>
+    <SubClassOf>
+        <ObjectIntersectionOf>
+            <Class IRI="http://purl.obolibrary.org/obo/FBbt_10000000"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="http://purl.obolibrary.org/obo/BFO_0000050"/>
+                <Class IRI="http://purl.obolibrary.org/obo/FBbt_00048491"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
         <Class IRI="http://purl.obolibrary.org/obo/FBbt_00048491"/>
-    </Declaration>
+    </SubClassOf>
     <SubClassOf>
         <ObjectIntersectionOf>
             <Class IRI="http://purl.obolibrary.org/obo/FBbt_00005106"/>
@@ -201,20 +224,6 @@
             <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0002101"/>
             <Class IRI="http://purl.obolibrary.org/obo/FBbt_00004019"/>
         </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="http://purl.obolibrary.org/obo/BFO_0000050"/>
-            <Class IRI="http://purl.obolibrary.org/obo/FBbt_00048490"/>
-        </ObjectSomeValuesFrom>
-        <Class IRI="http://purl.obolibrary.org/obo/FBbt_00048490"/>
-    </SubClassOf>
-    <SubClassOf>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="http://purl.obolibrary.org/obo/BFO_0000050"/>
-            <Class IRI="http://purl.obolibrary.org/obo/FBbt_00048491"/>
-        </ObjectSomeValuesFrom>
-        <Class IRI="http://purl.obolibrary.org/obo/FBbt_00048491"/>
     </SubClassOf>
     <SubClassOf>
         <ObjectSomeValuesFrom>
