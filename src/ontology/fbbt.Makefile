@@ -25,9 +25,9 @@ chado_load_checks=$(flybase_script_base)chado_load_checks.pl
 obo_track_new=$(flybase_script_base)obo_track_new.pl
 auto_def_sub=$(flybase_script_base)auto_def_sub.pl
 
+export PERL5LIB := ${realpath ../scripts}
 install_flybase_scripts:
 	wget -O ../scripts/OboModel.pm $(obo_model)
-	cp ../scripts/OboModel.pm /usr/local/lib/perl5/site_perl
 	wget -O ../scripts/onto_metrics_calc.pl $(onto_metrics_calc) && chmod +x ../scripts/onto_metrics_calc.pl
 	wget -O ../scripts/chado_load_checks.pl $(chado_load_checks) && chmod +x ../scripts/chado_load_checks.pl
 	wget -O ../scripts/obo_track_new.pl $(obo_track_new) && chmod +x ../scripts/obo_track_new.pl
