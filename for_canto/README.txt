@@ -30,8 +30,10 @@ robot remove --input fbbt-simple.obo \
 robot merge --input fbbt-no-GO.obo \
     --input GO_cellcomponent_module_mireot.owl \
 annotate --ontology-iri "https://github.com/FlyBase/drosophila-anatomy-developmental-ontology/for_canto/fbbt-GO.obo" \
-    --output FBbt-GO.obo
+    --output pre-FBbt-GO.obo
 
-## Cleanup - Delete the two original ontologies, GO module, term lists and temp fbbt file with no GO terms
-rm go.obo fbbt-simple.obo GO_cellcomponent_module_mireot.owl GO_labels.csv fbbt_labels.csv duplicate_terms.txt fbbt-no-GO.obo
+## Delete all lines "namespace: cellular_component"
+grep -v "namespace: cellular_component"  pre-FBbt-GO.obo > FBbt-GO.obo
 
+## Cleanup - Delete the two original ontologies, GO module, term lists and temp files
+rm go.obo fbbt-simple.obo GO_cellcomponent_module_mireot.owl GO_labels.csv fbbt_labels.csv duplicate_terms.txt fbbt-no-GO.obo pre-FBbt-GO.obo
