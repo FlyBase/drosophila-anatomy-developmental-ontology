@@ -5,7 +5,7 @@
 
 ## Download the two ontologies
 wget http://purl.obolibrary.org/obo/go.obo
-wget http://purl.obolibrary.org/obo/fbbt/fbbt-simple.obo
+wget http://purl.obolibrary.org/obo/fbbt/fly_anatomy.obo
 
 ## Extract everything that is a subclass of 'GO: cellular component'
 robot extract --method MIREOT \
@@ -16,18 +16,18 @@ robot extract --method MIREOT \
 ## Get all labels in each ontology
 robot query --input GO_cellcomponent_module_mireot.owl \
     --query get_labels.sparql GO_labels.csv
-robot query --input fbbt-simple.obo \
+robot query --input fly_anatomy.obo \
     --query get_labels.sparql fbbt_labels.csv
 
 ## Make a list of fbbt IDs that have same labels as GO terms and remove these from fbbt-simple
 python duplicate_label_id_finder.py
-robot remove --input fbbt-simple.obo \
+robot remove --input fly_anatomy.obo \
     --term-file duplicate_terms.txt \
     --select classes \
     --output fbbt-no-GO.obo
 
 ## Merge this module into fbbt-simple.obo and annotate with github location
-robot merge --input fbbt-no-GO.obo \
+robot merge --input fly_anatomy.obo \
     --input GO_cellcomponent_module_mireot.owl \
 annotate --ontology-iri "https://github.com/FlyBase/drosophila-anatomy-developmental-ontology/for_canto/fbbt-GO.obo" \
     --output pre-FBbt-GO.obo
@@ -36,4 +36,4 @@ annotate --ontology-iri "https://github.com/FlyBase/drosophila-anatomy-developme
 grep -v "namespace: cellular_component"  pre-FBbt-GO.obo > FBbt-GO.obo
 
 ## Cleanup - Delete the two original ontologies, GO module, term lists and temp files
-rm go.obo fbbt-simple.obo GO_cellcomponent_module_mireot.owl GO_labels.csv fbbt_labels.csv duplicate_terms.txt fbbt-no-GO.obo pre-FBbt-GO.obo
+rm go.obo fly_anatomy.obo GO_cellcomponent_module_mireot.owl GO_labels.csv fbbt_labels.csv duplicate_terms.txt fbbt-no-GO.obo pre-FBbt-GO.obo
