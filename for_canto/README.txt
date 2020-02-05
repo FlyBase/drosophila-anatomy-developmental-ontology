@@ -27,7 +27,7 @@ robot remove --input fly_anatomy.obo \
     --output fbbt-no-GO.obo
 
 ## Merge this module into fbbt-simple.obo and annotate with github location
-robot merge --input fly_anatomy.obo \
+robot merge --input fbbt-no-GO.obo \
     --input GO_cellcomponent_module_mireot.owl \
 annotate --ontology-iri "https://github.com/FlyBase/drosophila-anatomy-developmental-ontology/for_canto/fbbt-GO.obo" \
     --output pre-FBbt-GO.obo
