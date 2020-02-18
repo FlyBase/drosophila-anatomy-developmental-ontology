@@ -17,11 +17,10 @@ vars:
   slice_no: thing
 
 data_list_vars:
-  synonyms: 'xsd:string'
   def_dbxref: xsd:string
 
 name:
-  text: "mushroom body % layer of %s lobe slice %s"
+  text: "mushroom body %s layer of %s lobe slice %s"
   vars:
     - layer_name
     - lobe_name
@@ -51,11 +50,11 @@ generated_synonyms:
       - slice_no
       - layer_short
     xrefs: def_dbxref
-
+    
 logical_axioms:
   - 
     axiom_type: equivalentTo
-    text: "layer_of_slice that 'part_of' some %s and 'part_of' some %s"
+    text: "'layer_of_slice' that 'part_of' some %s and 'part_of' some %s"
     vars:
       - layer_ID
       - slice_ID
