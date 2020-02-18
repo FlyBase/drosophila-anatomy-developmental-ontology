@@ -1,0 +1,61 @@
+pattern_name: pattern
+
+classes:
+  thing: owl:Thing
+  layer_of_slice: FBbt:00047309
+
+relations:
+  part_of: BFO:0000050
+
+vars:
+  layer_ID: thing
+  layer_name: thing
+  layer_short: thing
+  lobe_name: thing
+  lobe_short: thing
+  slice_ID: thing
+  slice_no: thing
+
+data_list_vars:
+  synonyms: 'xsd:string'
+  def_dbxref: xsd:string
+
+name:
+  text: "mushroom body % layer of %s lobe slice %s"
+  vars:
+    - layer_name
+    - lobe_name
+    - slice_no
+
+def:
+  text: "A subdomain of the adult mushroom body %s lobe where slice %s intersects with the %s layer (Aso et al., 2014)."
+  vars:
+    - lobe_name
+    - slice_no
+    - layer_name
+  xrefs: def_dbxref
+
+generated_synonyms:
+  -
+    exact_synonym:
+    text: "%s%s%s"
+    vars:
+      - lobe_short
+      - slice_no
+      - layer_short
+  -
+    exact_synonym:
+    text: "%s%s%s"
+    vars:
+      - lobe_name
+      - slice_no
+      - layer_short
+    xrefs: def_dbxref
+
+logical_axioms:
+  - 
+    axiom_type: equivalentTo
+    text: "layer_of_slice that 'part_of' some %s and 'part_of' some %s"
+    vars:
+      - layer_ID
+      - slice_ID
