@@ -53,8 +53,15 @@ generated_synonyms:
     
 logical_axioms:
   - 
-    axiom_type: equivalentTo
-    text: "'layer_of_slice' that 'part_of' some %s and 'part_of' some %s"
+    axiom_type: subClassOf
+    text: "'layer_of_slice'"
+  - 
+    axiom_type: subClassOf
+    text: "'part_of' some %s"
     vars:
       - layer_ID
+  - 
+    axiom_type: subClassOf
+    text: "'part_of' some %s"
+    vars:
       - slice_ID
