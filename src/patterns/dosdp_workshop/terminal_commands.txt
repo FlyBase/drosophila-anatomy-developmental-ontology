@@ -6,11 +6,11 @@ dosdp-tools generate --obo-prefixes --prefixes=prefix.yaml --infile=fillers.csv 
 
 
 #copy to ontology folder:
-cp new_terms.obo ~/git/drosophila-anatomy-developmental-ontology/fbbt/src/ontology/
+cp new_terms.obo ~/git/drosophila-anatomy-developmental-ontology/src/ontology/
 
 
 #navigate to ontology folder and merge this with fbbt-edit (without merging fbbt imports):
-cd ~/git/drosophila-anatomy-developmental-ontology/fbbt/src/ontology/
+cd ~/git/drosophila-anatomy-developmental-ontology/src/ontology/
 
 robot merge --collapse-import-closure false --input fbbt-edit.obo --input new_terms.obo --output merge.obo
 

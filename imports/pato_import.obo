@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: fbbt/releases/2019-11-26/imports/pato_import.owl
+data-version: fbbt/releases/2020-02-19/imports/pato_import.owl
 subsetdef: abnormal_slim "Abnormal/normal slim"
 subsetdef: attribute_slim "Attribute slim"
 subsetdef: cell_quality "cell_quality"
@@ -8,7 +8,6 @@ subsetdef: ro-eco ""
 subsetdef: scalar_slim "Scalar slim"
 subsetdef: value_slim "Value slim"
 ontology: fbbt/imports/pato_import
-owl-axioms: Prefix(owl:=<http://www.w3.org/2002/07/owl#>)\nPrefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)\nPrefix(xml:=<http://www.w3.org/XML/1998/namespace>)\nPrefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)\nPrefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)\n\n\nOntology(\nDeclaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#id>))\n\n\nAnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/RO_0002473> \"RO:0002473\")\n)
 
 [Term]
 id: PATO:0000001
@@ -16,7 +15,6 @@ name: quality
 namespace: quality
 alt_id: PATO:0000072
 def: "A dependent entity that inheres in a bearer by virtue of how the bearer is related to other entities" [PATOC:GVG]
-synonym: "trait" EXACT []
 property_value: IAO:0000589 "quality (PATO)" xsd:string
 
 [Term]
@@ -255,24 +253,9 @@ created_by: http://orcid.org/0000-0002-1373-1705
 creation_date: 2019-08-23T08:51:22Z
 
 [Typedef]
-id: RO:0000057
-name: has participant
-def: "a relation between a process and a continuant, in which the continuant is somehow involved in the process" []
-property_value: http://purl.org/dc/elements/1.1/source http://www.obofoundry.org/ro/#OBO_REL:has_participant xsd:string
-property_value: IAO:0000111 "has participant" xsd:string
-property_value: IAO:0000112 "this blood coagulation has participant this blood clot" xsd:string
-property_value: IAO:0000112 "this investigation has participant this investigator" xsd:string
-property_value: IAO:0000112 "this process has participant this input material (or this output material)" xsd:string
-property_value: IAO:0000116 "Has_participant is a primitive instance-level relation between a process, a continuant, and a time at which the continuant participates in some way in the process. The relation obtains, for example, when this particular process of oxygen exchange across this particular alveolar membrane has_participant this particular sample of hemoglobin at this particular time." xsd:string
-property_value: IAO:0000118 "has_participant" xsd:string
-holds_over_chain: has_part RO:0000057
-
-[Typedef]
-id: bearer_of
+id: RO:0000053
 name: bearer of
-namespace: uberon
 def: "a relation between an independent continuant (the bearer) and a specifically dependent continuant (the dependent), in which the dependent specifically depends on the bearer for its existence" []
-xref: RO:0000053
 property_value: IAO:0000111 "bearer of" xsd:string
 property_value: IAO:0000112 "this apple is bearer of this red color" xsd:string
 property_value: IAO:0000112 "this vase is bearer of this fragility" xsd:string
@@ -282,26 +265,10 @@ property_value: IAO:0000118 "is bearer of" xsd:string
 property_value: RO:0001900 RO:0001901
 
 [Typedef]
-id: composed_primarily_of
-name: composed primarily of
-namespace: uberon
-def: "x composed_primarily_of y if and only if more than half of the mass of x is made from y or units of the same type as y." []
-def: "x composed_primarily_of y iff: more than half of the mass of x is made from parts of y" []
-subset: ro-eco
-xref: RO:0002473
-property_value: IAO:0000112 "'otolith organ' SubClassOf 'composed primarily of' some 'calcium carbonate'" xsd:string
-property_value: IAO:0000117 "Chris Mungall" xsd:string
-property_value: IAO:0000119 http://www.ncbi.nlm.nih.gov/pubmed/22293552
-property_value: RO:0001900 RO:0001901
-is_a: has_part ! has part
-
-[Typedef]
-id: has_component
+id: RO:0002180
 name: has component
-namespace: uberon
 def: "w 'has component' p if w 'has part' p and w is such that it can be directly disassembled into into n parts p, p2, p3, ..., pn, where these parts are of similar type." []
 subset: ro-eco
-xref: RO:0002180
 property_value: IAO:0000114 IAO:0000125
 property_value: IAO:0000116 "The definition of 'has component' is still under discussion. The challenge is in providing a definition that does not imply transitivity." xsd:string
 property_value: IAO:0000232 "For use in recording has_part with a cardinality constraint, because OWL does not permit cardinality constraints to be used in combination with transitive object properties. In situations where you would want to say something like 'has part exactly 5 digit, you would instead use has_component exactly 5 digit." xsd:string
@@ -313,10 +280,8 @@ is_a: has_part ! has part
 id: has_part
 name: has part
 name: has_part
-namespace: chebi_ontology
 namespace: external
 namespace: quality
-namespace: uberon
 def: "a core relation that holds between a whole and its part" []
 def: "Q1 has_part Q2 if and only if: every instance of Q1 is a quality_of an entity that has_quality some Q2." [PATOC:CJM]
 comment: We use the has_part relation to relate complex qualities to more primitive ones. A complex quality is a collection of qualities. The complex quality cannot exist without the sub-qualities. For example, the quality 'swollen' necessarily comes with the qualities of 'protruding' and 'increased size'.
@@ -330,7 +295,6 @@ property_value: IAO:0000116 "Occurrents are not subject to change and so parthoo
 property_value: IAO:0000116 "Parthood requires the part and the whole to have compatible classes: only an occurrent have an occurrent as part; only a process can have a process as part; only a continuant can have a continuant as part; only an independent continuant can have an independent continuant as part; only a specifically dependent continuant can have a specifically dependent continuant as part; only a generically dependent continuant can have a generically dependent continuant as part. (This list is not exhaustive.)\n\nA continuant cannot have an occurrent as part: use 'participates in'. An occurrent cannot have a continuant as part: use 'has participant'. An immaterial entity cannot have a material entity as part: use 'location of'. An independent continuant cannot have a specifically dependent continuant as part: use 'bearer of'. A specifically dependent continuant cannot have an independent continuant as part: use 'inheres in'." xsd:string
 property_value: IAO:0000118 "has_part" xsd:string
 property_value: RO:0001900 RO:0001901
-is_cyclic: false
 is_transitive: true
 
 [Typedef]
@@ -351,7 +315,6 @@ name: part of
 name: part_of
 namespace: external
 namespace: quality
-namespace: uberon
 def: "a core relation that holds between a part and its whole" []
 xref: BFO:0000050
 property_value: IAO:0000111 "is part of" xsd:string
