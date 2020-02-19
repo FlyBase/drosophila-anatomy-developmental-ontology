@@ -1,14 +1,14 @@
 #edit locations as required
 
-cd ~/git/drosophila-anatomy-developmental-ontology/fbbt/src/patterns/robot_template_projects/
+cd ~/git/drosophila-anatomy-developmental-ontology/src/patterns/robot_template_projects
 #change path as required
 
 robot template --input-iri http://purl.obolibrary.org/obo/ro.owl --template template.tsv --output terms.owl
 #doesn't work with .obo as output
 
-cp terms.owl ~/git/drosophila-anatomy-developmental-ontology/fbbt/src/ontology/terms.owl
+cp terms.owl ~/git/drosophila-anatomy-developmental-ontology/src/ontology/terms.owl
 
-cd ~/git/drosophila-anatomy-developmental-ontology/fbbt/src/ontology
+cd ~/git/drosophila-anatomy-developmental-ontology/src/ontology
 
 #merge without losing imports
 robot merge --collapse-import-closure false --input fbbt-edit.obo --input terms.owl --output merge.obo
