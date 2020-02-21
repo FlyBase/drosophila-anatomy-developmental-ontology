@@ -5,9 +5,11 @@ classes:
   thing: owl:Thing
   neuroblast: FBbt:00005146
   neuron: FBbt:00005106
+  VNS: FBbt:00005097
 
 relations:
   develops_from: RO:0002202
+  has_soma_location: RO:0002100
 
 vars:
   nb_class: neuroblast
@@ -42,3 +44,6 @@ logical_axioms:
     text: "'neuron' that 'develops_from' some %s"
     vars:
       - nb_class
+  - 
+    axiom_type: subClassOf
+    text: "'has_soma_location' some 'VNS'"
