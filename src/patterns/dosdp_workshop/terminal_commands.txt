@@ -1,5 +1,7 @@
-#Copy fbbt-edit.obo to working directory (as fbbt-edit-copy.obo and delete its import statements in Aquamacs. Fill in fillers.csv (must be tab separated).
+#Copy fbbt-edit.obo to working directory (as fbbt-edit-copy.obo and delete its import statements. Fill in fillers.csv (must be tab separated).
 
+#navigate to appropriate pattern directory
+cd ~/git/drosophila-anatomy-developmental-ontology/src/patterns/dosdp_workshop/
 
 #generate terms
 dosdp-tools generate --obo-prefixes --prefixes=prefix.yaml --infile=fillers.csv --template=pattern.yaml --ontology=fbbt-edit-copy.obo --outfile=new_terms.obo
@@ -7,7 +9,6 @@ dosdp-tools generate --obo-prefixes --prefixes=prefix.yaml --infile=fillers.csv 
 
 #copy to ontology folder:
 cp new_terms.obo ~/git/drosophila-anatomy-developmental-ontology/src/ontology/
-
 
 #navigate to ontology folder and merge this with fbbt-edit (without merging fbbt imports):
 cd ~/git/drosophila-anatomy-developmental-ontology/src/ontology/
