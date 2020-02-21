@@ -1,0 +1,56 @@
+pattern_name: pattern1
+description: for primary neurons
+
+classes:
+  thing: owl:Thing
+  neuroblast: FBbt:00005146
+  primary_neuron: FBbt:00047097
+
+relations:
+  develops_from: RO:0002202
+
+vars:
+  nb_class: neuroblast
+  lineage_short: thing
+  alt_lineage_name: thing
+
+data_list_vars:
+  def_dbxref: xsd:string
+
+name:
+  text: "lineage %s primary neuron"
+  vars:
+    - lineage_short
+
+def:
+  text: "Any neuron that develops from %s during the embryonic phase of neurogenesis."
+  vars:
+    - nb_class
+  xrefs: def_dbxref
+
+generated_synonyms:
+  -
+    exact_synonym:
+    text: "lineage %s primary neuron"
+    vars:
+      - alt_lineage_name
+    xrefs: def_dbxref
+  -
+    exact_synonym:
+    text: "embryonic lineage %s neuron"
+    vars:
+      - lineage_short
+    xrefs: def_dbxref
+  -
+    exact_synonym:
+    text: "embryonic lineage %s neuron"
+    vars:
+      - alt_lineage_name
+    xrefs: def_dbxref
+    
+logical_axioms:
+  - 
+    axiom_type: equivalentTo
+    text: "'primary_neuron' that 'develops_from' some %s"
+    vars:
+      - nb_class
