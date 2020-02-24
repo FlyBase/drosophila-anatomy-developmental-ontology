@@ -1,0 +1,49 @@
+pattern_name: pattern2
+description: for all neurons of a lineage
+
+classes:
+  thing: owl:Thing
+  neuroblast: FBbt:00005146
+  neuron: FBbt:00005106
+  VNS: FBbt:00005097
+
+relations:
+  develops_from: RO:0002202
+  has_soma_location: RO:0002100
+
+vars:
+  nb_class: neuroblast
+  lineage_short: thing
+  alt_lineage_name: thing
+
+data_list_vars:
+  def_dbxref: xsd:string
+
+name:
+  text: "lineage %s neuron"
+  vars:
+    - lineage_short
+
+def:
+  text: "Any neuron that develops from %s at any stage of life."
+  vars:
+    - nb_class
+  xrefs: def_dbxref
+
+generated_synonyms:
+  -
+    exact_synonym:
+    text: "lineage %s neuron"
+    vars:
+      - alt_lineage_name
+    xrefs: def_dbxref
+    
+logical_axioms:
+  - 
+    axiom_type: equivalentTo
+    text: "'neuron' that 'develops_from' some %s"
+    vars:
+      - nb_class
+  - 
+    axiom_type: subClassOf
+    text: "'has_soma_location' some 'VNS'"
