@@ -1,0 +1,62 @@
+pattern_name: pattern1
+description: for secondary neurons
+
+classes:
+  thing: owl:Thing
+  neuroblast: FBbt:00005146
+  secondary_neuron: FBbt:00047096
+  VNS: FBbt:00005097
+
+relations:
+  develops_from: RO:0002202
+  has_soma_location: RO:0002100
+
+vars:
+  nb_class: neuroblast
+  lineage_short: thing
+  alt_lineage_name: thing
+
+data_list_vars:
+  def_dbxref: xsd:string
+
+name:
+  text: "lineage %s secondary neuron"
+  vars:
+    - alt_lineage_name
+
+def:
+  text: "Any neuron that develops from %s during the postembryonic phase of neurogenesis."
+  vars:
+    - nb_class
+  xrefs: def_dbxref
+
+generated_synonyms:
+  -
+    exact_synonym:
+    text: "lineage %s secondary neuron"
+    vars:
+      - lineage_short
+    xrefs: def_dbxref
+  -
+    exact_synonym:
+    text: "postembryonic lineage %s neuron"
+    vars:
+      - lineage_short
+    xrefs: def_dbxref
+  -
+    exact_synonym:
+    text: "postembryonic lineage %s neuron"
+    vars:
+      - alt_lineage_name
+    xrefs: def_dbxref
+    
+logical_axioms:
+  - 
+    axiom_type: equivalentTo
+    text: "'secondary_neuron' that 'develops_from' some %s"
+    vars:
+      - nb_class
+  - 
+    axiom_type: subClassOf
+    text: "'has_soma_location' some 'VNS'"
+
