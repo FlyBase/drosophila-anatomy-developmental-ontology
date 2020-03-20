@@ -1,431 +1,117 @@
-<?xml version="1.0"?>
-<Ontology xmlns="http://www.w3.org/2002/07/owl#"
-     xml:base="http://purl.obolibrary.org/obo/fbbt/components/fbbt_ext.owl"
-     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-     xmlns:xml="http://www.w3.org/XML/1998/namespace"
-     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     ontologyIRI="http://purl.obolibrary.org/obo/fbbt/components/fbbt_ext.owl">
-    <Prefix name="" IRI="http://purl.obolibrary.org/obo/fbbt/components/fbbt_ext.owl"/>
-    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
-    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
-    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
-    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
-    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
-    <Declaration>
-        <Class IRI="http://purl.obolibrary.org/obo/FBbt_00001727"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="http://purl.obolibrary.org/obo/FBbt_00001911"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="http://purl.obolibrary.org/obo/FBbt_00003004"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="http://purl.obolibrary.org/obo/FBbt_00003018"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="http://purl.obolibrary.org/obo/FBbt_00003023"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="http://purl.obolibrary.org/obo/FBbt_00003559"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="http://purl.obolibrary.org/obo/FBbt_00003624"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="http://purl.obolibrary.org/obo/FBbt_00004019"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="http://purl.obolibrary.org/obo/FBbt_00004052"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="http://purl.obolibrary.org/obo/FBbt_00005106"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="http://purl.obolibrary.org/obo/FBbt_00007004"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="http://purl.obolibrary.org/obo/FBbt_00007011"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="http://purl.obolibrary.org/obo/FBbt_00048301"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="http://purl.obolibrary.org/obo/FBbt_00048490"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="http://purl.obolibrary.org/obo/FBbt_00048491"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="http://purl.obolibrary.org/obo/PATO_0060002"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="http://purl.obolibrary.org/obo/PATO_0060003"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="http://purl.obolibrary.org/obo/BFO_0000050"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0000053"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0000300"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0000301"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0000302"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0002003"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0002100"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0002101"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0002103"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0002120"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0002131"/>
-    </Declaration>
-    <Declaration>
-        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_0000115"/>
-    </Declaration>
-    <Declaration>
-        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_0000424"/>
-    </Declaration>
-    <Declaration>
-        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_creation_date"/>
-    </Declaration>
-    <Declaration>
-        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_format-version"/>
-    </Declaration>
-    <Declaration>
-        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_id"/>
-    </Declaration>
-    <Declaration>
-        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_xref"/>
-    </Declaration>
-    <Declaration>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="http://purl.obolibrary.org/obo/FBbt_10000000"/>
-    </Declaration>
-    <SubClassOf>
-        <ObjectIntersectionOf>
-            <Class IRI="http://purl.obolibrary.org/obo/FBbt_10000000"/>
-            <ObjectSomeValuesFrom>
-                <ObjectProperty IRI="http://purl.obolibrary.org/obo/BFO_0000050"/>
-                <Class IRI="http://purl.obolibrary.org/obo/FBbt_00048490"/>
-            </ObjectSomeValuesFrom>
-        </ObjectIntersectionOf>
-        <Class IRI="http://purl.obolibrary.org/obo/FBbt_00048490"/>
-    </SubClassOf>
-    <SubClassOf>
-        <ObjectIntersectionOf>
-            <Class IRI="http://purl.obolibrary.org/obo/FBbt_10000000"/>
-            <ObjectSomeValuesFrom>
-                <ObjectProperty IRI="http://purl.obolibrary.org/obo/BFO_0000050"/>
-                <Class IRI="http://purl.obolibrary.org/obo/FBbt_00048491"/>
-            </ObjectSomeValuesFrom>
-        </ObjectIntersectionOf>
-        <Class IRI="http://purl.obolibrary.org/obo/FBbt_00048491"/>
-    </SubClassOf>
-    <SubClassOf>
-        <ObjectIntersectionOf>
-            <Class IRI="http://purl.obolibrary.org/obo/FBbt_00005106"/>
-            <ObjectSomeValuesFrom>
-                <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0002100"/>
-                <Class IRI="http://purl.obolibrary.org/obo/FBbt_00003018"/>
-            </ObjectSomeValuesFrom>
-            <ObjectSomeValuesFrom>
-                <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0002101"/>
-                <Class IRI="http://purl.obolibrary.org/obo/FBbt_00004019"/>
-            </ObjectSomeValuesFrom>
-        </ObjectIntersectionOf>
-        <Class IRI="http://purl.obolibrary.org/obo/FBbt_00048301"/>
-    </SubClassOf>
-    <SubClassOf>
-        <ObjectIntersectionOf>
-            <Class IRI="http://purl.obolibrary.org/obo/FBbt_00005106"/>
-            <ObjectSomeValuesFrom>
-                <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0002100"/>
-                <Class IRI="http://purl.obolibrary.org/obo/FBbt_00003023"/>
-            </ObjectSomeValuesFrom>
-            <ObjectSomeValuesFrom>
-                <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0002101"/>
-                <Class IRI="http://purl.obolibrary.org/obo/FBbt_00004019"/>
-            </ObjectSomeValuesFrom>
-        </ObjectIntersectionOf>
-        <Class IRI="http://purl.obolibrary.org/obo/FBbt_00048301"/>
-    </SubClassOf>
-    <SubClassOf>
-        <ObjectIntersectionOf>
-            <Class IRI="http://purl.obolibrary.org/obo/FBbt_00005106"/>
-            <ObjectSomeValuesFrom>
-                <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0002100"/>
-                <Class IRI="http://purl.obolibrary.org/obo/FBbt_00004052"/>
-            </ObjectSomeValuesFrom>
-            <ObjectSomeValuesFrom>
-                <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0002101"/>
-                <Class IRI="http://purl.obolibrary.org/obo/FBbt_00004019"/>
-            </ObjectSomeValuesFrom>
-        </ObjectIntersectionOf>
-        <Class IRI="http://purl.obolibrary.org/obo/FBbt_00048301"/>
-    </SubClassOf>
-    <SubClassOf>
-        <ObjectIntersectionOf>
-            <Class IRI="http://purl.obolibrary.org/obo/FBbt_00005106"/>
-            <ObjectSomeValuesFrom>
-                <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0002131"/>
-                <Class IRI="http://purl.obolibrary.org/obo/FBbt_00001727"/>
-            </ObjectSomeValuesFrom>
-        </ObjectIntersectionOf>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="http://purl.obolibrary.org/obo/BFO_0000050"/>
-            <Class IRI="http://purl.obolibrary.org/obo/FBbt_00001911"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <ObjectIntersectionOf>
-            <Class IRI="http://purl.obolibrary.org/obo/FBbt_00005106"/>
-            <ObjectSomeValuesFrom>
-                <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0002131"/>
-                <Class IRI="http://purl.obolibrary.org/obo/FBbt_00003004"/>
-            </ObjectSomeValuesFrom>
-        </ObjectIntersectionOf>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="http://purl.obolibrary.org/obo/BFO_0000050"/>
-            <Class IRI="http://purl.obolibrary.org/obo/FBbt_00003559"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <ObjectIntersectionOf>
-            <Class IRI="http://purl.obolibrary.org/obo/FBbt_00005106"/>
-            <ObjectSomeValuesFrom>
-                <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0002131"/>
-                <Class IRI="http://purl.obolibrary.org/obo/FBbt_00003624"/>
-            </ObjectSomeValuesFrom>
-            <ObjectSomeValuesFrom>
-                <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0002131"/>
-                <Class IRI="http://purl.obolibrary.org/obo/FBbt_00004052"/>
-            </ObjectSomeValuesFrom>
-        </ObjectIntersectionOf>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0002101"/>
-            <Class IRI="http://purl.obolibrary.org/obo/FBbt_00004019"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0000053"/>
-            <Class IRI="http://purl.obolibrary.org/obo/PATO_0060002"/>
-        </ObjectSomeValuesFrom>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="http://purl.obolibrary.org/obo/BFO_0000050"/>
-            <Class IRI="http://purl.obolibrary.org/obo/FBbt_00007004"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0000053"/>
-            <Class IRI="http://purl.obolibrary.org/obo/PATO_0060003"/>
-        </ObjectSomeValuesFrom>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="http://purl.obolibrary.org/obo/BFO_0000050"/>
-            <Class IRI="http://purl.obolibrary.org/obo/FBbt_00007011"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <DisjointClasses>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="http://purl.obolibrary.org/obo/BFO_0000050"/>
-            <Class IRI="http://purl.obolibrary.org/obo/FBbt_00007004"/>
-        </ObjectSomeValuesFrom>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="http://purl.obolibrary.org/obo/BFO_0000050"/>
-            <Class IRI="http://purl.obolibrary.org/obo/FBbt_00007011"/>
-        </ObjectSomeValuesFrom>
-    </DisjointClasses>
-    <DisjointClasses>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0002131"/>
-            <Class IRI="http://purl.obolibrary.org/obo/FBbt_00001727"/>
-        </ObjectSomeValuesFrom>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0002131"/>
-            <Class IRI="http://purl.obolibrary.org/obo/FBbt_00003004"/>
-        </ObjectSomeValuesFrom>
-    </DisjointClasses>
-    <SubObjectPropertyOf>
-        <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0000301"/>
-        <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0000300"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0000302"/>
-        <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0000300"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0002003"/>
-        <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0000300"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0002103"/>
-        <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0000302"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0002120"/>
-        <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0000301"/>
-    </SubObjectPropertyOf>
-    <TransitiveObjectProperty>
-        <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0000300"/>
-    </TransitiveObjectProperty>
-    <TransitiveObjectProperty>
-        <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0000301"/>
-    </TransitiveObjectProperty>
-    <TransitiveObjectProperty>
-        <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0000302"/>
-    </TransitiveObjectProperty>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0002003"/>
-        <Class IRI="http://purl.obolibrary.org/obo/FBbt_00005106"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0002120"/>
-        <Class IRI="http://purl.obolibrary.org/obo/FBbt_00005106"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0002103"/>
-        <Class IRI="http://purl.obolibrary.org/obo/FBbt_00005106"/>
-    </ObjectPropertyRange>
-    <AnnotationAssertion>
-        <Annotation>
-            <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_xref"/>
-            <Literal>FBC:DOS</Literal>
-        </Annotation>
-        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <IRI>http://purl.obolibrary.org/obo/RO_0000300</IRI>
-        <Literal>A relation that holds between two neurons connected directly via a synapse, or indirectly via a series of synaptically connected neurons.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_id"/>
-        <IRI>http://purl.obolibrary.org/obo/RO_0000300</IRI>
-        <Literal>in_neural_circuit_with</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_xref"/>
-        <IRI>http://purl.obolibrary.org/obo/RO_0000300</IRI>
-        <Literal>RO:0000300</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>http://purl.obolibrary.org/obo/RO_0000300</IRI>
-        <Literal>in_neural_circuit_with</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <Annotation>
-            <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_xref"/>
-            <Literal>FBC:DOS</Literal>
-        </Annotation>
-        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <IRI>http://purl.obolibrary.org/obo/RO_0000301</IRI>
-        <Literal>A relation that holds between a neuron that is synapsed_to another neuron or a neuron that is connected indirectly to another by a chain of neurons, each synapsed_to the next.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_id"/>
-        <IRI>http://purl.obolibrary.org/obo/RO_0000301</IRI>
-        <Literal>upstream_in_neural_circuit_with</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_xref"/>
-        <IRI>http://purl.obolibrary.org/obo/RO_0000301</IRI>
-        <Literal>RO:0000301</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>http://purl.obolibrary.org/obo/RO_0000301</IRI>
-        <Literal>upstream_in_neural_circuit_with</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <Annotation>
-            <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_xref"/>
-            <Literal>FBC:DOS</Literal>
-        </Annotation>
-        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <IRI>http://purl.obolibrary.org/obo/RO_0000302</IRI>
-        <Literal>A relation that holds between a neuron that is synapsed_to another neuron or a neuron that is connected indirectly to another by a chain of neurons, each synapsed_to the next.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_id"/>
-        <IRI>http://purl.obolibrary.org/obo/RO_0000302</IRI>
-        <Literal>downstream_in_neural_circuit_with</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_xref"/>
-        <IRI>http://purl.obolibrary.org/obo/RO_0000302</IRI>
-        <Literal>RO:0000302</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>http://purl.obolibrary.org/obo/RO_0000302</IRI>
-        <Literal>downstream_in_neural_circuit_with</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_creation_date"/>
-        <IRI>http://purl.obolibrary.org/obo/RO_0002003</IRI>
-        <Literal>2010-01-06T06:53:45Z</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_id"/>
-        <IRI>http://purl.obolibrary.org/obo/RO_0002003</IRI>
-        <Literal>electrically_synapsed_to</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>http://purl.obolibrary.org/obo/RO_0002003</IRI>
-        <Literal>electrically_synapsed_to</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_id"/>
-        <IRI>http://purl.obolibrary.org/obo/RO_0002103</IRI>
-        <Literal>synapsed_by</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_xref"/>
-        <IRI>http://purl.obolibrary.org/obo/RO_0002103</IRI>
-        <Literal>RO:0002103</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>http://purl.obolibrary.org/obo/RO_0002103</IRI>
-        <Literal>synapsed_by</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_id"/>
-        <IRI>http://purl.obolibrary.org/obo/RO_0002120</IRI>
-        <Literal>synapsed_to</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_xref"/>
-        <IRI>http://purl.obolibrary.org/obo/RO_0002120</IRI>
-        <Literal>RO:0002120</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>http://purl.obolibrary.org/obo/RO_0002120</IRI>
-        <Literal>synapsed_to</Literal>
-    </AnnotationAssertion>
-</Ontology>
+Prefix(:=<http://purl.obolibrary.org/obo/fbbt/components/fbbt_ext.owl>)
+Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
+Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
+Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
+Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
+Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
+
+
+Ontology(<http://purl.obolibrary.org/obo/fbbt/components/fbbt_ext.owl>
+
+Declaration(Class(<http://purl.obolibrary.org/obo/FBbt_00001727>))
+Declaration(Class(<http://purl.obolibrary.org/obo/FBbt_00001911>))
+Declaration(Class(<http://purl.obolibrary.org/obo/FBbt_00003004>))
+Declaration(Class(<http://purl.obolibrary.org/obo/FBbt_00003018>))
+Declaration(Class(<http://purl.obolibrary.org/obo/FBbt_00003023>))
+Declaration(Class(<http://purl.obolibrary.org/obo/FBbt_00003559>))
+Declaration(Class(<http://purl.obolibrary.org/obo/FBbt_00003624>))
+Declaration(Class(<http://purl.obolibrary.org/obo/FBbt_00004019>))
+Declaration(Class(<http://purl.obolibrary.org/obo/FBbt_00004052>))
+Declaration(Class(<http://purl.obolibrary.org/obo/FBbt_00005106>))
+Declaration(Class(<http://purl.obolibrary.org/obo/FBbt_00007004>))
+Declaration(Class(<http://purl.obolibrary.org/obo/FBbt_00007011>))
+Declaration(Class(<http://purl.obolibrary.org/obo/FBbt_00048301>))
+Declaration(Class(<http://purl.obolibrary.org/obo/FBbt_00048490>))
+Declaration(Class(<http://purl.obolibrary.org/obo/FBbt_00048491>))
+Declaration(Class(<http://purl.obolibrary.org/obo/FBbt_10000000>))
+Declaration(Class(<http://purl.obolibrary.org/obo/PATO_0060002>))
+Declaration(Class(<http://purl.obolibrary.org/obo/PATO_0060003>))
+Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/BFO_0000050>))
+Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0000053>))
+Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0000300>))
+Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0000301>))
+Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0000302>))
+Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002003>))
+Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002100>))
+Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002101>))
+Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002103>))
+Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002120>))
+Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002131>))
+Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/IAO_0000115>))
+Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/IAO_0000424>))
+Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/IAO_creation_date>))
+Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/IAO_format-version>))
+Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/IAO_id>))
+Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/IAO_xref>))
+Declaration(AnnotationProperty(rdfs:label))
+
+############################
+#   Object Properties
+############################
+
+# Object Property: <http://purl.obolibrary.org/obo/RO_0000300> (in_neural_circuit_with)
+
+AnnotationAssertion(Annotation(<http://purl.obolibrary.org/obo/IAO_xref> "FBC:DOS") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/RO_0000300> "A relation that holds between two neurons connected directly via a synapse, or indirectly via a series of synaptically connected neurons.")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_id> <http://purl.obolibrary.org/obo/RO_0000300> "in_neural_circuit_with")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_xref> <http://purl.obolibrary.org/obo/RO_0000300> "RO:0000300")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/RO_0000300> "in_neural_circuit_with")
+TransitiveObjectProperty(<http://purl.obolibrary.org/obo/RO_0000300>)
+
+# Object Property: <http://purl.obolibrary.org/obo/RO_0000301> (upstream_in_neural_circuit_with)
+
+AnnotationAssertion(Annotation(<http://purl.obolibrary.org/obo/IAO_xref> "FBC:DOS") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/RO_0000301> "A relation that holds between a neuron that is synapsed_to another neuron or a neuron that is connected indirectly to another by a chain of neurons, each synapsed_to the next.")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_id> <http://purl.obolibrary.org/obo/RO_0000301> "upstream_in_neural_circuit_with")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_xref> <http://purl.obolibrary.org/obo/RO_0000301> "RO:0000301")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/RO_0000301> "upstream_in_neural_circuit_with")
+SubObjectPropertyOf(<http://purl.obolibrary.org/obo/RO_0000301> <http://purl.obolibrary.org/obo/RO_0000300>)
+TransitiveObjectProperty(<http://purl.obolibrary.org/obo/RO_0000301>)
+
+# Object Property: <http://purl.obolibrary.org/obo/RO_0000302> (downstream_in_neural_circuit_with)
+
+AnnotationAssertion(Annotation(<http://purl.obolibrary.org/obo/IAO_xref> "FBC:DOS") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/RO_0000302> "A relation that holds between a neuron that is synapsed_to another neuron or a neuron that is connected indirectly to another by a chain of neurons, each synapsed_to the next.")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_id> <http://purl.obolibrary.org/obo/RO_0000302> "downstream_in_neural_circuit_with")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_xref> <http://purl.obolibrary.org/obo/RO_0000302> "RO:0000302")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/RO_0000302> "downstream_in_neural_circuit_with")
+SubObjectPropertyOf(<http://purl.obolibrary.org/obo/RO_0000302> <http://purl.obolibrary.org/obo/RO_0000300>)
+TransitiveObjectProperty(<http://purl.obolibrary.org/obo/RO_0000302>)
+
+# Object Property: <http://purl.obolibrary.org/obo/RO_0002003> (electrically_synapsed_to)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_creation_date> <http://purl.obolibrary.org/obo/RO_0002003> "2010-01-06T06:53:45Z")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_id> <http://purl.obolibrary.org/obo/RO_0002003> "electrically_synapsed_to")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/RO_0002003> "electrically_synapsed_to")
+SubObjectPropertyOf(<http://purl.obolibrary.org/obo/RO_0002003> <http://purl.obolibrary.org/obo/RO_0000300>)
+ObjectPropertyDomain(<http://purl.obolibrary.org/obo/RO_0002003> <http://purl.obolibrary.org/obo/FBbt_00005106>)
+
+# Object Property: <http://purl.obolibrary.org/obo/RO_0002103> (synapsed_by)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_id> <http://purl.obolibrary.org/obo/RO_0002103> "synapsed_by")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_xref> <http://purl.obolibrary.org/obo/RO_0002103> "RO:0002103")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/RO_0002103> "synapsed_by")
+SubObjectPropertyOf(<http://purl.obolibrary.org/obo/RO_0002103> <http://purl.obolibrary.org/obo/RO_0000302>)
+ObjectPropertyRange(<http://purl.obolibrary.org/obo/RO_0002103> <http://purl.obolibrary.org/obo/FBbt_00005106>)
+
+# Object Property: <http://purl.obolibrary.org/obo/RO_0002120> (synapsed_to)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_id> <http://purl.obolibrary.org/obo/RO_0002120> "synapsed_to")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_xref> <http://purl.obolibrary.org/obo/RO_0002120> "RO:0002120")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/RO_0002120> "synapsed_to")
+SubObjectPropertyOf(<http://purl.obolibrary.org/obo/RO_0002120> <http://purl.obolibrary.org/obo/RO_0000301>)
+ObjectPropertyDomain(<http://purl.obolibrary.org/obo/RO_0002120> <http://purl.obolibrary.org/obo/FBbt_00005106>)
 
 
 
-<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
 
+SubClassOf(ObjectIntersectionOf(<http://purl.obolibrary.org/obo/FBbt_00005106> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002100> <http://purl.obolibrary.org/obo/FBbt_00003018>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002101> <http://purl.obolibrary.org/obo/FBbt_00004019>)) <http://purl.obolibrary.org/obo/FBbt_00048301>)
+SubClassOf(ObjectIntersectionOf(<http://purl.obolibrary.org/obo/FBbt_00005106> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002100> <http://purl.obolibrary.org/obo/FBbt_00003023>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002101> <http://purl.obolibrary.org/obo/FBbt_00004019>)) <http://purl.obolibrary.org/obo/FBbt_00048301>)
+SubClassOf(ObjectIntersectionOf(<http://purl.obolibrary.org/obo/FBbt_00005106> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002100> <http://purl.obolibrary.org/obo/FBbt_00004052>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002101> <http://purl.obolibrary.org/obo/FBbt_00004019>)) <http://purl.obolibrary.org/obo/FBbt_00048301>)
+SubClassOf(ObjectIntersectionOf(<http://purl.obolibrary.org/obo/FBbt_00005106> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002131> <http://purl.obolibrary.org/obo/FBbt_00001727>)) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000050> <http://purl.obolibrary.org/obo/FBbt_00001911>))
+SubClassOf(ObjectIntersectionOf(<http://purl.obolibrary.org/obo/FBbt_00005106> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002131> <http://purl.obolibrary.org/obo/FBbt_00003004>)) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000050> <http://purl.obolibrary.org/obo/FBbt_00003559>))
+SubClassOf(ObjectIntersectionOf(<http://purl.obolibrary.org/obo/FBbt_00005106> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002131> <http://purl.obolibrary.org/obo/FBbt_00003624>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002131> <http://purl.obolibrary.org/obo/FBbt_00004052>)) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002101> <http://purl.obolibrary.org/obo/FBbt_00004019>))
+SubClassOf(ObjectIntersectionOf(<http://purl.obolibrary.org/obo/FBbt_10000000> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000050> <http://purl.obolibrary.org/obo/FBbt_00048490>)) <http://purl.obolibrary.org/obo/FBbt_00048490>)
+SubClassOf(ObjectIntersectionOf(<http://purl.obolibrary.org/obo/FBbt_10000000> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000050> <http://purl.obolibrary.org/obo/FBbt_00048491>)) <http://purl.obolibrary.org/obo/FBbt_00048491>)
+SubClassOf(ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000053> <http://purl.obolibrary.org/obo/PATO_0060002>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000050> <http://purl.obolibrary.org/obo/FBbt_00007004>))
+SubClassOf(ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000053> <http://purl.obolibrary.org/obo/PATO_0060003>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000050> <http://purl.obolibrary.org/obo/FBbt_00007011>))
+DisjointClasses(ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000050> <http://purl.obolibrary.org/obo/FBbt_00007004>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000050> <http://purl.obolibrary.org/obo/FBbt_00007011>))
+DisjointClasses(ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002131> <http://purl.obolibrary.org/obo/FBbt_00001727>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002131> <http://purl.obolibrary.org/obo/FBbt_00003004>))
+)
