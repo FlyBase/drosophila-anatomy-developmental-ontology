@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: fbbt/releases/2020-02-19/imports/go_import.owl
+data-version: fbbt/releases/2020-03-26/imports/go_import.owl
 subsetdef: gocheck_do_not_annotate "Term not to be used for direct annotation"
 subsetdef: gocheck_do_not_manually_annotate "Term not to be used for direct manual annotation"
 subsetdef: goslim_agr "AGR slim"
@@ -119,7 +119,7 @@ synonym: "5-HT secretion" EXACT []
 synonym: "5-hydroxytryptamine secretion" EXACT []
 synonym: "serotonin release" RELATED [GOC:tb]
 is_a: GO:0006837 ! serotonin transport
-is_a: GO:0032940 ! secretion by cell
+is_a: GO:0023061 ! signal release
 
 [Term]
 id: GO:0001821
@@ -152,6 +152,7 @@ id: GO:0001963
 name: synaptic transmission, dopaminergic
 namespace: biological_process
 def: "The vesicular release of  dopamine. from a presynapse, across a chemical synapse, the subsequent activation of dopamine receptors at the postsynapse of a target cell (neuron, muscle, or secretory cell) and the effects of this activation on the postsynaptic membrane potential and ionic composition of the postsynaptic cytosol. This process encompasses both spontaneous and evoked release of neurotransmitter and all parts of synaptic vesicle exocytosis. Evoked transmission starts with the arrival of an action potential at the presynapse." [GOC:dos, GOC:dph]
+synonym: "dopaminergic synaptic transmission" EXACT []
 is_a: GO:0007268 ! chemical synaptic transmission
 
 [Term]
@@ -351,8 +352,6 @@ subset: goslim_pir
 subset: goslim_plant
 synonym: "glycoprotein binding" NARROW []
 synonym: "protein amino acid binding" EXACT []
-xref: MIPS_funcat:16.01
-xref: MIPS_funcat:18.01.07
 xref: Reactome:R-HSA-170835 "An anchoring protein, ZFYVE9 (SARA), recruits SMAD2/3"
 xref: Reactome:R-HSA-170846 "TGFBR2 recruits TGFBR1"
 is_a: GO:0005488 ! binding
@@ -426,7 +425,6 @@ subset: goslim_plant
 subset: goslim_yeast
 synonym: "cell nucleus" EXACT []
 synonym: "horsetail nucleus" NARROW [GOC:al, GOC:mah, GOC:vw, PMID:15030757]
-xref: MIPS_funcat:70.10
 xref: NIF_Subcellular:sao1702920020
 xref: Wikipedia:Cell_nucleus
 is_a: GO:0043231 ! intracellular membrane-bounded organelle
@@ -478,7 +476,6 @@ subset: goslim_plant
 subset: goslim_pombe
 subset: goslim_yeast
 synonym: "lipid metabolism" EXACT []
-xref: MIPS_funcat:01.06
 xref: Wikipedia:Lipid_metabolism
 is_a: GO:0044238 ! primary metabolic process
 is_a: GO:0071704 ! organic substance metabolic process
@@ -499,7 +496,6 @@ namespace: biological_process
 def: "The chemical reactions and pathways involving the phosphate group, the anion or salt of any phosphoric acid." [GOC:ai]
 synonym: "phosphate metabolic process" RELATED []
 synonym: "phosphate metabolism" EXACT []
-xref: MIPS_funcat:01.04
 is_a: GO:0006793 ! phosphorus metabolic process
 
 [Term]
@@ -522,7 +518,6 @@ subset: goslim_plant
 synonym: "single-organism transport" RELATED []
 synonym: "small molecule transport" NARROW []
 synonym: "solute:solute exchange" NARROW []
-xref: MIPS_funcat:20
 is_a: GO:0051234 ! establishment of localization
 created_by: janelomax
 creation_date: 2012-12-13T16:25:32Z
@@ -535,7 +530,6 @@ def: "The directed movement of charged atoms or small charged molecules into, ou
 subset: goslim_drosophila
 subset: goslim_pir
 subset: goslim_yeast
-xref: MIPS_funcat:20.01.01
 is_a: GO:0006810 ! transport
 
 [Term]
@@ -546,7 +540,6 @@ alt_id: GO:0006819
 alt_id: GO:0015674
 def: "The directed movement of cations, atoms or small molecules with a net positive charge, into, out of or within a cell, or between cells, by means of some agent such as a transporter or pore." [GOC:ai]
 synonym: "di-, tri-valent inorganic cation transport" NARROW [GOC:mah]
-xref: MIPS_funcat:20.01.01.01
 is_a: GO:0006811 ! ion transport
 
 [Term]
@@ -555,7 +548,6 @@ name: anion transport
 namespace: biological_process
 alt_id: GO:0006822
 def: "The directed movement of anions, atoms or small molecules with a net negative charge, into, out of or within a cell, or between cells, by means of some agent such as a transporter or pore." [GOC:ai]
-xref: MIPS_funcat:20.01.01.07
 is_a: GO:0006811 ! ion transport
 
 [Term]
@@ -574,7 +566,6 @@ namespace: biological_process
 def: "The directed movement of a neurotransmitter into, out of or within a cell, or between cells, by means of some agent such as a transporter or pore. Neurotransmitters are any chemical substance that is capable of transmitting (or inhibiting the transmission of) a nerve impulse from a neuron to another cell." [GOC:ai]
 subset: goslim_pir
 synonym: "sodium:neurotransmitter transport" NARROW []
-xref: MIPS_funcat:20.01.26
 is_a: GO:0006810 ! transport
 
 [Term]
@@ -582,8 +573,8 @@ id: GO:0006837
 name: serotonin transport
 namespace: biological_process
 def: "The directed movement of serotonin into, out of or within a cell, or between cells, by means of some agent such as a transporter or pore. Serotonin (5-hydroxytryptamine) is a monoamine neurotransmitter occurring in the peripheral and central nervous systems." [GOC:ai]
+is_a: GO:0006812 ! cation transport
 is_a: GO:0006836 ! neurotransmitter transport
-is_a: GO:0015696 ! ammonium transport
 is_a: GO:0015844 ! monoamine transport
 is_a: GO:0015850 ! organic hydroxy compound transport
 
@@ -595,7 +586,6 @@ alt_id: GO:0006866
 def: "The directed movement of amino acids, organic acids containing one or more amino substituents, into, out of or within a cell, or between cells, by means of some agent such as a transporter or pore." [GOC:ai]
 subset: goslim_pir
 subset: goslim_yeast
-xref: MIPS_funcat:20.01.07
 is_a: GO:0046942 ! carboxylic acid transport
 is_a: GO:0071705 ! nitrogen compound transport
 
@@ -615,7 +605,6 @@ subset: goslim_metagenomics
 subset: goslim_plant
 synonym: "response to abiotic stress" RELATED []
 synonym: "response to biotic stress" RELATED []
-xref: MIPS_funcat:32.01
 is_a: GO:0050896 ! response to stimulus
 
 [Term]
@@ -626,8 +615,6 @@ def: "Any process that results in a change in state or activity of a cell or an 
 subset: goslim_yeast
 synonym: "osmotic response" EXACT []
 synonym: "osmotic stress response" EXACT []
-xref: MIPS_funcat:32.01.03
-xref: MIPS_funcat:36.20.35.09.05
 is_a: GO:0006950 ! response to stress
 is_a: GO:0009628 ! response to abiotic stimulus
 
@@ -658,7 +645,6 @@ synonym: "signaling cascade" NARROW []
 synonym: "signaling pathway" RELATED []
 synonym: "signalling cascade" NARROW []
 synonym: "signalling pathway" RELATED [GOC:mah]
-xref: MIPS_funcat:30
 xref: Wikipedia:Signal_transduction
 is_a: GO:0009987 ! cellular process
 is_a: GO:0050794 ! regulation of cellular process
@@ -684,8 +670,6 @@ synonym: "G-protein coupled receptor signalling pathway" EXACT []
 synonym: "G-protein-coupled receptor protein signalling pathway" EXACT []
 synonym: "GPCR signaling pathway" EXACT []
 synonym: "GPCR signalling pathway" EXACT []
-xref: MIPS_funcat:30.01.05.05
-xref: MIPS_funcat:30.05.02.24
 is_a: GO:0007165 ! signal transduction
 
 [Term]
@@ -709,7 +693,6 @@ subset: goslim_synapse
 synonym: "neurotransmission" RELATED [GOC:dph]
 synonym: "signal transmission across a synapse" BROAD []
 synonym: "synaptic transmission" BROAD []
-xref: MIPS_funcat:34.03.01
 xref: Wikipedia:Neurotransmission
 is_a: GO:0098916 ! anterograde trans-synaptic signaling
 
@@ -725,6 +708,7 @@ synonym: "neurotransmitter release" EXACT []
 synonym: "neurotransmitter secretory pathway" EXACT []
 is_a: GO:0001505 ! regulation of neurotransmitter levels
 is_a: GO:0006836 ! neurotransmitter transport
+is_a: GO:0051649 ! establishment of localization in cell
 is_a: GO:0099643 ! signal release from synapse
 relationship: occurs_in GO:0098793 ! presynapse
 relationship: part_of GO:0007268 ! chemical synaptic transmission
@@ -734,6 +718,7 @@ id: GO:0007271
 name: synaptic transmission, cholinergic
 namespace: biological_process
 def: "The vesicular release of acetylcholine from a presynapse, across a chemical synapse, the subsequent activation of dopamine receptors at the postsynapse of a target cell (neuron, muscle, or secretory cell) and the effects of this activation on the postsynaptic membrane potential and ionic composition of the postsynaptic cytosol. This process encompasses both spontaneous and evoked release of neurotransmitter and all parts of synaptic vesicle exocytosis. Evoked transmission starts with the arrival of an action potential at the presynapse." [GOC:dos, Wikipedia:Cholinergic]
+synonym: "cholinergic synaptic transmission" EXACT []
 is_a: GO:0007268 ! chemical synaptic transmission
 
 [Term]
@@ -744,7 +729,6 @@ def: "The biological process whose specific outcome is the progression of a mult
 comment: Note that this term was 'developmental process'.
 subset: goslim_chembl
 subset: goslim_plant
-xref: MIPS_funcat:41
 is_a: GO:0032501 ! multicellular organismal process
 is_a: GO:0048856 ! anatomical structure development
 
@@ -796,7 +780,6 @@ def: "The process of gaseous exchange between an organism and its environment. I
 subset: goslim_chembl
 synonym: "breathing" BROAD []
 synonym: "respiration" BROAD []
-xref: MIPS_funcat:36.07.01
 is_a: GO:0032501 ! multicellular organismal process
 
 [Term]
@@ -806,7 +789,6 @@ namespace: biological_process
 def: "The whole of the physical, chemical, and biochemical processes carried out by multicellular organisms to break down ingested nutrients into components that may be easily absorbed and directed into metabolism." [GOC:isa_complete, ISBN:0198506732]
 subset: goslim_chembl
 subset: goslim_pir
-xref: MIPS_funcat:36.03
 xref: Wikipedia:Digestion
 is_a: GO:0032501 ! multicellular organismal process
 
@@ -835,8 +817,6 @@ def: "The series of events required for an organism to receive a visual stimulus
 synonym: "sense of sight" EXACT []
 synonym: "sensory visual perception" EXACT []
 synonym: "vision" EXACT []
-xref: MIPS_funcat:34.11.01.03
-xref: MIPS_funcat:36.25.01.01
 xref: Wikipedia:Visual_perception
 is_a: GO:0050953 ! sensory perception of light stimulus
 
@@ -869,7 +849,6 @@ namespace: biological_process
 def: "The series of events required for an organism to receive an auditory stimulus, convert it to a molecular signal, and recognize and characterize the signal. Sonic stimuli are detected in the form of vibrations and are processed to form a sound." [GOC:ai]
 synonym: "hearing" EXACT []
 synonym: "perception of sound" EXACT []
-xref: MIPS_funcat:36.25.01.03
 xref: Wikipedia:Hearing_(sense)
 is_a: GO:0050954 ! sensory perception of mechanical stimulus
 
@@ -890,7 +869,6 @@ synonym: "olfaction" EXACT []
 synonym: "scent perception" EXACT []
 synonym: "sense of smell" EXACT []
 synonym: "smell perception" EXACT []
-xref: MIPS_funcat:36.25.01.13
 xref: Wikipedia:Olfaction
 is_a: GO:0007606 ! sensory perception of chemical stimulus
 
@@ -898,7 +876,9 @@ is_a: GO:0007606 ! sensory perception of chemical stimulus
 id: GO:0007610
 name: behavior
 namespace: biological_process
+alt_id: GO:0023032
 alt_id: GO:0044708
+alt_id: GO:0044709
 def: "The internally coordinated responses (actions or inactions) of animals (individuals or groups) to internal or external stimuli, via a mechanism that involves nervous system activity." [GOC:ems, GOC:jl, ISBN:0395448956, PMID:20160973]
 comment: 1. Note that this term is in the subset of terms that should not be used for direct gene product annotation. Instead, select a child term or, if no appropriate child term exists, please request a new term. Direct annotations to this term may be amended during annotation reviews.\n2. While a broader definition of behavior encompassing plants and single cell organisms would be justified on the basis of some usage (see PMID:20160973 for discussion), GO uses a tight definition that limits behavior to animals and to responses involving the nervous system, excluding plant responses that GO classifies under development, and responses of unicellular organisms that has general classifications for covering the responses of cells in multicellular organisms (e.g. cell chemotaxis).
 subset: gocheck_do_not_manually_annotate
@@ -919,7 +899,6 @@ id: GO:0007611
 name: learning or memory
 namespace: biological_process
 def: "The acquisition and processing of information and/or the storage and retrieval of this information over time." [GOC:jid, PMID:8938125]
-xref: MIPS_funcat:36.25.03.04.01
 is_a: GO:0007610 ! behavior
 is_a: GO:0050890 ! cognition
 
@@ -1039,16 +1018,35 @@ is_a: GO:0008344 ! adult locomotory behavior
 id: GO:0007631
 name: feeding behavior
 namespace: biological_process
+alt_id: GO:0044366
+alt_id: GO:0044367
+alt_id: GO:0044368
+alt_id: GO:0044369
+alt_id: GO:0044370
+alt_id: GO:0044371
+alt_id: GO:0044372
 def: "Behavior associated with the intake of food." [GOC:mah]
 comment: See also the biological process term 'behavior ; GO:0007610'.
 synonym: "behavioral response to food" EXACT []
 synonym: "behavioural response to food" EXACT []
-synonym: "drinking" NARROW []
 synonym: "eating" NARROW []
 synonym: "feeding behaviour" EXACT []
-xref: MIPS_funcat:36.03
+synonym: "feeding from phloem of other organism" NARROW []
+synonym: "feeding from plant phloem" NARROW []
+synonym: "feeding from tissue of other organism" NARROW []
+synonym: "feeding from vascular tissue of another organism" NARROW []
+synonym: "feeding from xylem of other organism" NARROW []
+synonym: "feeding on blood of other organism" NARROW []
+synonym: "feeding on or from other organism" NARROW []
+synonym: "feeding on plant sap" NARROW []
+synonym: "hematophagy" NARROW []
+synonym: "injection of substance into other organism during feeding on blood of other organism" NARROW []
+synonym: "taking of blood meal" NARROW []
 xref: Wikipedia:List_of_feeding_behaviours
 is_a: GO:0007610 ! behavior
+property_value: IAO:0000233 https://github.com/geneontology/go-ontology/issues/18547 xsd:anyURI
+created_by: janelomax
+creation_date: 2011-10-27T03:53:33Z
 
 [Term]
 id: GO:0007632
@@ -1146,7 +1144,6 @@ synonym: "metabolism" EXACT []
 synonym: "metabolism resulting in cell growth" NARROW []
 synonym: "multicellular organism metabolic process" NARROW []
 synonym: "single-organism metabolic process" RELATED []
-xref: MIPS_funcat:01
 xref: Wikipedia:Metabolism
 is_a: GO:0008150 ! biological_process
 created_by: janelomax
@@ -1246,7 +1243,6 @@ name: response to temperature stimulus
 namespace: biological_process
 def: "Any process that results in a change in state or activity of a cell or an organism (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of a temperature stimulus." [GOC:hb]
 synonym: "response to thermal stimulus" EXACT []
-xref: MIPS_funcat:34.11.09
 is_a: GO:0009628 ! response to abiotic stimulus
 
 [Term]
@@ -1257,7 +1253,6 @@ def: "Any process that results in a change in state or activity of a cell or an 
 comment: Note that 'radiation' refers to electromagnetic radiation of any wavelength.
 synonym: "response to electromagnetic radiation stimulus" EXACT []
 synonym: "response to radiation stimulus" EXACT []
-xref: MIPS_funcat:32.01.13
 is_a: GO:0009628 ! response to abiotic stimulus
 
 [Term]
@@ -1274,9 +1269,6 @@ name: response to light stimulus
 namespace: biological_process
 def: "Any process that results in a change in state or activity of a cell or an organism (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of a light stimulus, electromagnetic radiation of wavelengths classified as infrared, visible or ultraviolet light." [GOC:go_curators, ISBN:0582227089]
 subset: goslim_plant
-xref: MIPS_funcat:34.11.01
-xref: MIPS_funcat:34.11.01.01
-xref: MIPS_funcat:36.20.35.11
 is_a: GO:0009314 ! response to radiation
 
 [Term]
@@ -1304,8 +1296,6 @@ namespace: biological_process
 def: "The series of events in which a light stimulus (in the form of photons) is received and converted into a molecular signal." [GOC:go_curators]
 synonym: "detection of light" EXACT []
 synonym: "perception of light" RELATED []
-xref: MIPS_funcat:34.11.01
-xref: MIPS_funcat:36.20.35.11
 is_a: GO:0009416 ! response to light stimulus
 is_a: GO:0009581 ! detection of external stimulus
 is_a: GO:0009582 ! detection of abiotic stimulus
@@ -1328,7 +1318,6 @@ synonym: "chemoreception" RELATED []
 synonym: "detection of chemical substance" EXACT []
 synonym: "perception of chemical stimulus" RELATED []
 synonym: "perception of chemical substance" RELATED []
-xref: MIPS_funcat:34.11.03
 is_a: GO:0051606 ! detection of stimulus
 relationship: part_of GO:0042221 ! response to chemical
 
@@ -1342,7 +1331,6 @@ subset: gocheck_do_not_manually_annotate
 subset: goslim_drosophila
 subset: goslim_plant
 synonym: "response to environmental stimulus" EXACT []
-xref: MIPS_funcat:36.20.35
 is_a: GO:0050896 ! response to stimulus
 
 [Term]
@@ -1352,8 +1340,6 @@ namespace: biological_process
 def: "Any process that results in a change in state or activity of a cell or an organism (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of a mechanical stimulus." [GOC:hb]
 synonym: "chemi-mechanical coupling" RELATED []
 synonym: "mechanical stimulus response" EXACT []
-xref: MIPS_funcat:34.11.05
-xref: MIPS_funcat:36.20.35.15
 is_a: GO:0009605 ! response to external stimulus
 is_a: GO:0009628 ! response to abiotic stimulus
 
@@ -1362,12 +1348,13 @@ id: GO:0009628
 name: response to abiotic stimulus
 namespace: biological_process
 def: "Any process that results in a change in state or activity of a cell or an organism (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of an abiotic (not derived from living organisms) stimulus." [GOC:hb]
-comment: Note that this term is in the subset of terms that should not be used for direct gene product annotation. Instead, select a child term or, if no appropriate child term exists, please request a new term. Direct annotations to this term may be amended during annotation QC. Changed definition as requested in https://github.com/geneontology/go-ontology/issues/16572.
+comment: Note that this term is in the subset of terms that should not be used for direct gene product annotation. Instead, select a child term or, if no appropriate child term exists, please request a new term. Direct annotations to this term may be amended during annotation QC.
 subset: gocheck_do_not_manually_annotate
 subset: goslim_metagenomics
 subset: goslim_plant
 synonym: "response to abiotic stress" NARROW []
 is_a: GO:0050896 ! response to stimulus
+property_value: IAO:0000233 https://github.com/geneontology/go-ontology/issues/16572 xsd:anyURI
 
 [Term]
 id: GO:0009629
@@ -1375,8 +1362,6 @@ name: response to gravity
 namespace: biological_process
 def: "Any process that results in a change in state or activity of a cell or an organism (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of a gravitational stimulus." [GOC:hb]
 synonym: "response to gravitational stimulus" EXACT []
-xref: MIPS_funcat:34.11.07
-xref: MIPS_funcat:36.20.35.13
 is_a: GO:0009628 ! response to abiotic stimulus
 
 [Term]
@@ -1594,7 +1579,9 @@ is_a: GO:0009605 ! response to external stimulus
 id: GO:0010033
 name: response to organic substance
 namespace: biological_process
-def: "Any process that results in a change in state or activity of a cell or an organism (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of an organic substance stimulus." [GOC:sm]
+alt_id: GO:1990367
+def: "Any process that results in a change in state or activity of a cell or an organism (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of an organic substance stimulus." [GOC:sm, PMID:23356676]
+synonym: "process resulting in tolerance to organic substance" NARROW []
 is_a: GO:0042221 ! response to chemical
 
 [Term]
@@ -1745,6 +1732,7 @@ name: dopamine secretion
 namespace: biological_process
 def: "The regulated release of dopamine by a cell. Dopamine is a catecholamine and a precursor of adrenaline and noradrenaline. It acts as a neurotransmitter in the central nervous system but it is also produced peripherally and acts as a hormone." [GOC:ef]
 is_a: GO:0015872 ! dopamine transport
+is_a: GO:0023061 ! signal release
 is_a: GO:0050432 ! catecholamine secretion
 
 [Term]
@@ -1929,6 +1917,8 @@ id: GO:0014059
 name: regulation of dopamine secretion
 namespace: biological_process
 def: "Any process that modulates the frequency, rate or extent of the regulated release of dopamine." [GOC:ef]
+is_a: GO:0010646 ! regulation of cell communication
+is_a: GO:0023051 ! regulation of signaling
 is_a: GO:0043269 ! regulation of ion transport
 is_a: GO:0050433 ! regulation of catecholamine secretion
 is_a: GO:2001023 ! regulation of response to drug
@@ -1942,6 +1932,8 @@ name: regulation of serotonin secretion
 namespace: biological_process
 def: "Any process that modulates the frequency, rate or extent of the regulated release of serotonin." [GOC:ef]
 synonym: "regulation of serotonin release" RELATED [GOC:tb]
+is_a: GO:0010646 ! regulation of cell communication
+is_a: GO:0023051 ! regulation of signaling
 is_a: GO:0043269 ! regulation of ion transport
 is_a: GO:0051588 ! regulation of neurotransmitter transport
 is_a: GO:1903530 ! regulation of secretion by cell
@@ -1959,7 +1951,9 @@ synonym: "down-regulation of serotonin secretion" EXACT []
 synonym: "downregulation of serotonin secretion" EXACT []
 synonym: "inhibition of serotonin secretion" NARROW []
 synonym: "positive regulation of serotonin release" RELATED [GOC:tb]
+is_a: GO:0010648 ! negative regulation of cell communication
 is_a: GO:0014062 ! regulation of serotonin secretion
+is_a: GO:0023057 ! negative regulation of signaling
 is_a: GO:0043271 ! negative regulation of ion transport
 is_a: GO:0051589 ! negative regulation of neurotransmitter transport
 is_a: GO:1903531 ! negative regulation of secretion by cell
@@ -1978,7 +1972,9 @@ synonym: "stimulation of serotonin secretion" NARROW []
 synonym: "up regulation of serotonin secretion" EXACT []
 synonym: "up-regulation of serotonin secretion" EXACT []
 synonym: "upregulation of serotonin secretion" EXACT []
+is_a: GO:0010647 ! positive regulation of cell communication
 is_a: GO:0014062 ! regulation of serotonin secretion
+is_a: GO:0023056 ! positive regulation of signaling
 is_a: GO:0043270 ! positive regulation of ion transport
 is_a: GO:0051590 ! positive regulation of neurotransmitter transport
 is_a: GO:1903532 ! positive regulation of secretion by cell
@@ -2004,6 +2000,13 @@ is_a: GO:0010243 ! response to organonitrogen compound
 is_a: GO:0014070 ! response to organic cyclic compound
 
 [Term]
+id: GO:0015672
+name: monovalent inorganic cation transport
+namespace: biological_process
+def: "The directed movement of inorganic cations with a valency of one into, out of or within a cell, or between cells, by means of some agent such as a transporter or pore. Inorganic cations are atoms or small molecules with a positive charge which do not contain carbon in covalent linkage." [GOC:ai]
+is_a: GO:0006812 ! cation transport
+
+[Term]
 id: GO:0015695
 name: organic cation transport
 namespace: biological_process
@@ -2017,7 +2020,7 @@ name: ammonium transport
 namespace: biological_process
 def: "The directed movement of ammonium into, out of or within a cell, or between cells, by means of some agent such as a transporter or pore. Ammonium is the cation NH4+ which is formed from N2 by root-nodule bacteria in leguminous plants and is an excretory product in ammonotelic animals." [ISBN:0198506732]
 synonym: "ammonia transport" RELATED []
-is_a: GO:0006812 ! cation transport
+is_a: GO:0015672 ! monovalent inorganic cation transport
 is_a: GO:0071705 ! nitrogen compound transport
 
 [Term]
@@ -2061,7 +2064,6 @@ name: peptide transport
 namespace: biological_process
 def: "The directed movement of peptides, compounds of two or more amino acids where the alpha carboxyl group of one is bound to the alpha amino group of another, into, out of or within a cell, or between cells, by means of some agent such as a transporter or pore." [GOC:ai]
 subset: goslim_pir
-xref: MIPS_funcat:20.01.09
 is_a: GO:0042886 ! amide transport
 is_a: GO:0071702 ! organic substance transport
 
@@ -2072,7 +2074,6 @@ namespace: biological_process
 def: "The directed movement of amines, including polyamines, organic compounds containing one or more amino groups, into, out of or within a cell, or between cells, by means of some agent such as a transporter or pore." [GOC:ai, ISBN:0198506732]
 subset: goslim_pir
 synonym: "amine/polyamine transport" RELATED []
-xref: MIPS_funcat:20.01.11
 is_a: GO:0071702 ! organic substance transport
 is_a: GO:0071705 ! nitrogen compound transport
 
@@ -2108,8 +2109,8 @@ namespace: biological_process
 def: "The directed movement of acetylcholine into, out of or within a cell, or between cells, by means of some agent such as a transporter or pore. Acetylcholine is an acetic acid ester of the organic base choline and functions as a neurotransmitter, released at the synapses of parasympathetic nerves and at neuromuscular junctions." [GOC:ai]
 is_a: GO:0006836 ! neurotransmitter transport
 is_a: GO:0015695 ! organic cation transport
-is_a: GO:0015696 ! ammonium transport
 is_a: GO:0015893 ! drug transport
+is_a: GO:0071705 ! nitrogen compound transport
 is_a: GO:1901374 ! acetate ester transport
 
 [Term]
@@ -2117,7 +2118,7 @@ id: GO:0015872
 name: dopamine transport
 namespace: biological_process
 def: "The directed movement of dopamine into, out of or within a cell, or between cells, by means of some agent such as a transporter or pore. Dopamine is a catecholamine neurotransmitter and a metabolic precursor of noradrenaline and adrenaline." [GOC:ai]
-is_a: GO:0015696 ! ammonium transport
+is_a: GO:0006812 ! cation transport
 is_a: GO:0015893 ! drug transport
 is_a: GO:0051937 ! catecholamine transport
 
@@ -2127,7 +2128,6 @@ name: drug transport
 namespace: biological_process
 def: "The directed movement of a drug, a substance used in the diagnosis, treatment or prevention of a disease, into, out of or within a cell, or between cells, by means of some agent such as a transporter or pore." [GOC:ai]
 subset: goslim_pir
-xref: MIPS_funcat:20.01.27
 is_a: GO:0006810 ! transport
 relationship: part_of GO:0042493 ! response to drug
 
@@ -2160,7 +2160,6 @@ synonym: "lipid degradation" EXACT []
 synonym: "lipolysis" EXACT []
 synonym: "multicellular organism lipid catabolic process" NARROW []
 synonym: "multicellular organismal lipid catabolic process" NARROW []
-xref: MIPS_funcat:01.06.04
 xref: Wikipedia:Lipid_catabolism
 is_a: GO:0006629 ! lipid metabolic process
 is_a: GO:1901575 ! organic substance catabolic process
@@ -2173,7 +2172,6 @@ def: "The series of events in which a temperature stimulus (hot or cold) is rece
 synonym: "detection of temperature" EXACT []
 synonym: "detection of thermal stimulus" EXACT []
 synonym: "perception of temperature" RELATED []
-xref: MIPS_funcat:34.11.09
 is_a: GO:0009266 ! response to temperature stimulus
 is_a: GO:0009581 ! detection of external stimulus
 is_a: GO:0009582 ! detection of abiotic stimulus
@@ -2286,7 +2284,6 @@ name: regulation of lipid metabolic process
 namespace: biological_process
 def: "Any process that modulates the frequency, rate or extent of the chemical reactions and pathways involving lipids." [GOC:go_curators]
 synonym: "regulation of lipid metabolism" EXACT []
-xref: MIPS_funcat:01.06.10
 is_a: GO:0080090 ! regulation of primary metabolic process
 intersection_of: GO:0008150 ! biological_process
 intersection_of: regulates GO:0006629 ! lipid metabolic process
@@ -2325,7 +2322,6 @@ namespace: biological_process
 def: "The series of events required for an organism to receive a painful stimulus, convert it to a molecular signal, and recognize and characterize the signal. Pain is medically defined as the physical sensation of discomfort or distress caused by injury or illness, so can hence be described as a harmful stimulus which signals current (or impending) tissue damage. Pain may come from extremes of temperature, mechanical damage, electricity or from noxious chemical substances. This is a neurological process." [GOC:curators]
 synonym: "nociception" EXACT []
 synonym: "perception of physiological pain" NARROW []
-xref: MIPS_funcat:36.25.01.15
 xref: Wikipedia:Nociception
 is_a: GO:0007600 ! sensory perception
 
@@ -2335,7 +2331,6 @@ name: response to pheromone
 namespace: biological_process
 def: "Any process that results in a change in state or activity of a cell or an organism (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of a pheromone stimulus." [GOC:jl]
 synonym: "pheromone response" EXACT []
-xref: MIPS_funcat:34.11.03.07
 is_a: GO:0010033 ! response to organic substance
 
 [Term]
@@ -2358,7 +2353,7 @@ relationship: part_of GO:0010876 ! lipid localization
 id: GO:0019953
 name: sexual reproduction
 namespace: biological_process
-def: "A reproduction process that creates a new organism by combining the genetic material of two gametes, which may come from two organisms or from a single organism, in the case of self-fertilizing hermaphrodites, e.g. C. elegans, or self-fertilization in plants. It occurs both in eukaryotes and prokaryotes: in multicellular eukaryotic organisms, an individual is created anew; in prokaryotes, the initial cell has additional or transformed genetic material. In a process called genetic recombination, genetic material (DNA) originating from two gametes join up so that homologous sequences are aligned with each other, and this is followed by exchange of genetic information. After the new recombinant chromosome is formed, it is passed on to progeny." [GOC:jl, GOC:kmv, GOC:krc, GOC:tb, http://en.wikipedia.org/wiki/Sexual_reproduction, ISBN:0387520546]
+def: "A reproduction process that creates a new organism by combining the genetic material of two gametes, which may come from two organisms or from a single organism, in the case of self-fertilizing hermaphrodites, e.g. C. elegans, or self-fertilization in plants. It occurs both in eukaryotes and prokaryotes: in multicellular eukaryotic organisms, an individual is created anew; in prokaryotes, the initial cell has additional or transformed genetic material. In a process called genetic recombination, genetic material (DNA) originating from two gametes join up so that homologous sequences are aligned with each other, and this is followed by exchange of genetic information. After the new recombinant chromosome is formed, it is passed on to progeny." [GOC:jl, GOC:kmv, GOC:krc, GOC:tb, ISBN:0387520546, Wikipedia:Sexual_reproduction]
 comment: Sexual reproduction may be seen as the regular alternation, in the life cycle of haplontic, diplontic and diplohaplontic organisms, of meiosis and fertilization which provides for the production offspring. In diplontic organisms there is a life cycle in which the products of meiosis behave directly as gametes, fusing to form a zygote from which the diploid, or sexually reproductive polyploid, adult organism will develop. In diplohaplontic organisms a haploid phase (gametophyte) exists in the life cycle between meiosis and fertilization (e.g. higher plants, many algae and Fungi); the products of meiosis are spores that develop as haploid individuals from which haploid gametes develop to form a diploid zygote; diplohaplontic organisms show an alternation of haploid and diploid generations. In haplontic organisms meiosis occurs in the zygote, giving rise to four haploid cells (e.g. many algae and protozoa), only the zygote is diploid and this may form a resistant spore, tiding organisms over hard times.
 xref: Wikipedia:Sexual_reproduction
 is_a: GO:0000003 ! reproduction
@@ -2496,6 +2491,18 @@ relationship: part_of GO:0007267 ! cell-cell signaling
 creation_date: 2010-02-16T09:30:50Z
 
 [Term]
+id: GO:0030054
+name: cell junction
+namespace: cellular_component
+def: "A cellular component that forms a specialized region of connection between two or more cells, or between a cell and the extracellular matrix, or between two membrane-bound components of a cell, such as flagella." [GOC:aruk, GOC:bc, GOC:mah, http://www.vivo.colostate.edu/hbooks/cmb/cells/pmemb/junctions_a.html, ISBN:0198506732, PMID:26820516, PMID:28096264]
+subset: goslim_agr
+subset: goslim_drosophila
+subset: goslim_flybase_ribbon
+xref: Wikipedia:Cell_junction
+is_a: GO:0110165 ! cellular anatomical entity
+property_value: RO:0002161 NCBITaxon:4751
+
+[Term]
 id: GO:0030072
 name: peptide hormone secretion
 namespace: biological_process
@@ -2552,7 +2559,6 @@ id: GO:0030545
 name: receptor regulator activity
 namespace: molecular_function
 def: "The function of interacting (directly or indirectly) with receptors such that the proportion of receptors in the active form is changed." [GOC:ceb]
-xref: MIPS_funcat:18.02.07
 is_a: GO:0098772 ! molecular function regulator
 
 [Term]
@@ -2992,6 +2998,7 @@ synonym: "down-regulation of intracellular transport" EXACT []
 synonym: "downregulation of intracellular transport" EXACT []
 synonym: "inhibition of intracellular transport" NARROW []
 is_a: GO:0032386 ! regulation of intracellular transport
+is_a: GO:0048523 ! negative regulation of cellular process
 is_a: GO:0051051 ! negative regulation of transport
 intersection_of: GO:0008150 ! biological_process
 intersection_of: negatively_regulates GO:0046907 ! intracellular transport
@@ -3008,6 +3015,7 @@ synonym: "up regulation of intracellular transport" EXACT []
 synonym: "up-regulation of intracellular transport" EXACT []
 synonym: "upregulation of intracellular transport" EXACT []
 is_a: GO:0032386 ! regulation of intracellular transport
+is_a: GO:0048522 ! positive regulation of cellular process
 is_a: GO:0051050 ! positive regulation of transport
 intersection_of: GO:0008150 ! biological_process
 intersection_of: positively_regulates GO:0046907 ! intracellular transport
@@ -3024,6 +3032,8 @@ subset: goslim_pir
 synonym: "organismal physiological process" EXACT []
 synonym: "single-multicellular organism process" RELATED []
 is_a: GO:0008150 ! biological_process
+property_value: RO:0002161 NCBITaxon:4896
+property_value: RO:0002161 NCBITaxon:4932
 created_by: janelomax
 creation_date: 2012-09-19T16:07:47Z
 
@@ -3160,7 +3170,9 @@ synonym: "down regulation of dopamine secretion" EXACT []
 synonym: "down-regulation of dopamine secretion" EXACT []
 synonym: "downregulation of dopamine secretion" EXACT []
 synonym: "inhibition of dopamine secretion" NARROW []
+is_a: GO:0010648 ! negative regulation of cell communication
 is_a: GO:0014059 ! regulation of dopamine secretion
+is_a: GO:0023057 ! negative regulation of signaling
 is_a: GO:0033604 ! negative regulation of catecholamine secretion
 is_a: GO:0043271 ! negative regulation of ion transport
 is_a: GO:2001024 ! negative regulation of response to drug
@@ -3178,7 +3190,9 @@ synonym: "stimulation of dopamine secretion" NARROW []
 synonym: "up regulation of dopamine secretion" EXACT []
 synonym: "up-regulation of dopamine secretion" EXACT []
 synonym: "upregulation of dopamine secretion" EXACT []
+is_a: GO:0010647 ! positive regulation of cell communication
 is_a: GO:0014059 ! regulation of dopamine secretion
+is_a: GO:0023056 ! positive regulation of signaling
 is_a: GO:0033605 ! positive regulation of catecholamine secretion
 is_a: GO:0043270 ! positive regulation of ion transport
 is_a: GO:2001025 ! positive regulation of response to drug
@@ -3277,6 +3291,7 @@ name: regulation of transmembrane transport
 namespace: biological_process
 def: "Any process that modulates the frequency, rate or extent of the directed movement of a solute from one side of a membrane to the other." [GOC:mah]
 synonym: "regulation of membrane transport" EXACT []
+is_a: GO:0050794 ! regulation of cellular process
 is_a: GO:0051049 ! regulation of transport
 intersection_of: GO:0008150 ! biological_process
 intersection_of: regulates GO:0055085 ! transmembrane transport
@@ -3293,6 +3308,7 @@ synonym: "downregulation of transmembrane transport" EXACT []
 synonym: "inhibition of transmembrane transport" NARROW []
 synonym: "negative regulation of membrane transport" EXACT []
 is_a: GO:0034762 ! regulation of transmembrane transport
+is_a: GO:0048523 ! negative regulation of cellular process
 is_a: GO:0051051 ! negative regulation of transport
 intersection_of: GO:0008150 ! biological_process
 intersection_of: negatively_regulates GO:0055085 ! transmembrane transport
@@ -3310,6 +3326,7 @@ synonym: "up regulation of transmembrane transport" EXACT []
 synonym: "up-regulation of transmembrane transport" EXACT []
 synonym: "upregulation of transmembrane transport" EXACT []
 is_a: GO:0034762 ! regulation of transmembrane transport
+is_a: GO:0048522 ! positive regulation of cellular process
 is_a: GO:0051050 ! positive regulation of transport
 intersection_of: GO:0008150 ! biological_process
 intersection_of: positively_regulates GO:0055085 ! transmembrane transport
@@ -3337,6 +3354,7 @@ id: GO:0035249
 name: synaptic transmission, glutamatergic
 namespace: biological_process
 def: "The vesicular release of glutamate from a presynapse, across a chemical synapse, the subsequent activation of glutamate receptors at the postsynapse of a target cell (neuron, muscle, or secretory cell) and the effects of this activation on the postsynaptic membrane potential and ionic composition of the postsynaptic cytosol. This process encompasses both spontaneous and evoked release of neurotransmitter and all parts of synaptic vesicle exocytosis. Evoked transmission starts with the arrival of an action potential at the presynapse." [GOC:dos]
+synonym: "glutamatergic synaptic transmission" EXACT []
 is_a: GO:0007268 ! chemical synaptic transmission
 
 [Term]
@@ -3415,8 +3433,8 @@ def: "Self-propelled movement of a cell or organism from one location to another
 subset: goslim_chembl
 subset: goslim_generic
 subset: goslim_pir
-xref: MIPS_funcat:02.45.11
 is_a: GO:0008150 ! biological_process
+property_value: RO:0002161 NCBITaxon:451864
 
 [Term]
 id: GO:0040012
@@ -3487,9 +3505,6 @@ subset: goslim_plant
 subset: goslim_yeast
 synonym: "response to chemical stimulus" EXACT [GOC:dos]
 synonym: "response to chemical substance" EXACT []
-xref: MIPS_funcat:34.11.03
-xref: MIPS_funcat:34.11.03.05
-xref: MIPS_funcat:36.20.35.09
 is_a: GO:0050896 ! response to stimulus
 
 [Term]
@@ -3703,7 +3718,6 @@ synonym: "up-regulation of enzyme activity" EXACT []
 synonym: "up-regulation of metalloenzyme activity" NARROW []
 synonym: "upregulation of enzyme activity" EXACT []
 synonym: "upregulation of metalloenzyme activity" NARROW []
-xref: MIPS_funcat:18.02.01.01
 is_a: GO:0044093 ! positive regulation of molecular function
 is_a: GO:0050790 ! regulation of catalytic activity
 intersection_of: GO:0008150 ! biological_process
@@ -3857,7 +3871,6 @@ id: GO:0043575
 name: detection of osmotic stimulus
 namespace: biological_process
 def: "The series of events in which a stimulus indicating an increase or decrease in the concentration of solutes outside the organism or cell is received and converted into a molecular signal." [GOC:jl]
-xref: MIPS_funcat:34.11.03.13
 is_a: GO:0006970 ! response to osmotic stress
 is_a: GO:0009582 ! detection of abiotic stimulus
 
@@ -3866,7 +3879,6 @@ id: GO:0043576
 name: regulation of respiratory gaseous exchange
 namespace: biological_process
 def: "Any process that modulates the frequency, rate or extent of the process of gaseous exchange between an organism and its environment." [GOC:jl]
-xref: MIPS_funcat:36.07.03
 is_a: GO:0051239 ! regulation of multicellular organismal process
 intersection_of: GO:0008150 ! biological_process
 intersection_of: regulates GO:0007585 ! respiratory gaseous exchange by respiratory system
@@ -4108,7 +4120,7 @@ relationship: regulates GO:0050802 ! circadian sleep/wake cycle, sleep
 id: GO:0045202
 name: synapse
 namespace: cellular_component
-def: "The junction between a nerve fiber of one neuron and another neuron, muscle fiber or glial cell. As the nerve fiber approaches the synapse it enlarges into a specialized structure, the presynaptic nerve ending, which contains mitochondria and synaptic vesicles. At the tip of the nerve ending is the presynaptic membrane; facing it, and separated from it by a minute cleft (the synaptic cleft) is a specialized area of membrane on the receiving cell, known as the postsynaptic membrane. In response to the arrival of nerve impulses, the presynaptic nerve ending secretes molecules of neurotransmitters into the synaptic cleft. These diffuse across the cleft and transmit the signal to the postsynaptic membrane." [ISBN:0198506732]
+def: "The junction between an axon of one neuron and a dendrite of another neuron, a muscle fiber or a glial cell. As the axon approaches the synapse it enlarges into a specialized structure, the presynaptic terminal bouton, which contains mitochondria and synaptic vesicles. At the tip of the terminal bouton is the presynaptic membrane; facing it, and separated from it by a minute cleft (the synaptic cleft) is a specialized area of membrane on the receiving cell, known as the postsynaptic membrane. In response to the arrival of nerve impulses, the presynaptic terminal bouton secretes molecules of neurotransmitters into the synaptic cleft. These diffuse across the cleft and transmit the signal to the postsynaptic membrane." [GOC:aruk, ISBN:0198506732, PMID:24619342, PMID:29383328, PMID:31998110]
 subset: goslim_agr
 subset: goslim_drosophila
 subset: goslim_flybase_ribbon
@@ -4120,7 +4132,7 @@ synonym: "mixed synapse" NARROW [NIF_Subcellular:sao1506103497]
 synonym: "synaptic junction" EXACT []
 xref: NIF_Subcellular:sao914572699
 xref: Wikipedia:Chemical_synapse
-is_a: GO:0110165 ! cellular anatomical entity
+is_a: GO:0030054 ! cell junction
 
 [Term]
 id: GO:0045433
@@ -4457,7 +4469,6 @@ name: secretion
 namespace: biological_process
 def: "The controlled release of a substance by a cell or a tissue." [GOC:ai]
 subset: goslim_pir
-xref: MIPS_funcat:20.09.16
 is_a: GO:0006810 ! transport
 
 [Term]
@@ -4470,6 +4481,7 @@ synonym: "single organism intracellular transport" RELATED [GOC:TermGenie]
 synonym: "single-organism intracellular transport" RELATED []
 is_a: GO:0006810 ! transport
 is_a: GO:0051641 ! cellular localization
+is_a: GO:0051649 ! establishment of localization in cell
 intersection_of: GO:0006810 ! transport
 intersection_of: occurs_in GO:0005622 ! intracellular
 relationship: occurs_in GO:0005622 ! intracellular
@@ -4484,6 +4496,7 @@ def: "Any process that modulates the frequency, rate or extent of the regulated 
 is_a: GO:0001505 ! regulation of neurotransmitter levels
 is_a: GO:0050804 ! modulation of chemical synaptic transmission
 is_a: GO:0051588 ! regulation of neurotransmitter transport
+is_a: GO:0060341 ! regulation of cellular localization
 is_a: GO:1903530 ! regulation of secretion by cell
 intersection_of: GO:0008150 ! biological_process
 intersection_of: regulates GO:0007269 ! neurotransmitter secretion
@@ -4531,7 +4544,6 @@ name: receptor ligand activity
 namespace: molecular_function
 alt_id: GO:0071884
 def: "The activity of a gene product that interacts with a receptor to effect a change in the activity of the receptor. Ligands may be produced by the same, or different, cell that expresses the receptor. Ligands may diffuse extracellularly from their point of origin to the receiving cell, or remain attached to an adjacent cell surface (e.g. Notch ligands)." [GOC:kv, GOC:molecular_function_refactoring, GOC:pdt]
-comment: Definition discussed in https://github.com/geneontology/go-ontology/issues/14220
 subset: goslim_chembl
 subset: goslim_drosophila
 synonym: "receptor agonist activity" BROAD [GOC:molecular_function_refactoring]
@@ -4541,6 +4553,7 @@ synonym: "vitamin D receptor activator activity" NARROW []
 is_a: GO:0005102 ! signaling receptor binding
 is_a: GO:0030546 ! signaling receptor activator activity
 relationship: part_of GO:0007165 ! signal transduction
+property_value: IAO:0000233 https://github.com/geneontology/go-ontology/issues/14220 xsd:anyURI
 created_by: midori
 creation_date: 2010-09-13T04:51:59Z
 
@@ -4593,7 +4606,6 @@ namespace: biological_process
 def: "Any process pertinent to the generation and maintenance of rhythms in the physiology of an organism." [GOC:jid]
 subset: goslim_pir
 synonym: "rhythm" RELATED []
-xref: MIPS_funcat:34.11.11
 is_a: GO:0008150 ! biological_process
 
 [Term]
@@ -4767,8 +4779,7 @@ relationship: part_of GO:0032504 ! multicellular organism reproduction
 id: GO:0048856
 name: anatomical structure development
 namespace: biological_process
-def: "The biological process whose specific outcome is the progression of an anatomical structure from an initial condition to its mature state. This process begins with the formation of the structure and ends with the mature structure, whatever form that may be including its natural destruction. An anatomical structure is any biological entity that occupies space and is distinguished from its surroundings. Anatomical structures can be macroscopic such as a carpel, or microscopic such as an acrosome." [GO_REF:0000021, GOC:mtg_15jun06]
-comment: This term was added by GO_REF:0000021.
+def: "The biological process whose specific outcome is the progression of an anatomical structure from an initial condition to its mature state. This process begins with the formation of the structure and ends with the mature structure, whatever form that may be including its natural destruction. An anatomical structure is any biological entity that occupies space and is distinguished from its surroundings. Anatomical structures can be macroscopic such as a carpel, or microscopic such as an acrosome." [GO_REF:0000021]
 subset: goslim_chembl
 subset: goslim_generic
 subset: goslim_plant
@@ -4819,7 +4830,6 @@ def: "Any process that modulates the activity of an enzyme." [GOC:ai, GOC:ebc, G
 subset: goslim_chembl
 synonym: "regulation of enzyme activity" EXACT []
 synonym: "regulation of metalloenzyme activity" NARROW []
-xref: MIPS_funcat:18.02.01
 is_a: GO:0065009 ! regulation of molecular function
 intersection_of: GO:0008150 ! biological_process
 intersection_of: regulates GO:0003824 ! catalytic activity
@@ -4920,7 +4930,6 @@ id: GO:0050877
 name: nervous system process
 namespace: biological_process
 def: "A organ system process carried out by any of the organs or tissues of neurological system." [GOC:ai, GOC:mtg_cardio]
-comment: Discussion of class label and synonyms: https://github.com/geneontology/go-ontology/issues/13824
 subset: goslim_agr
 subset: goslim_chembl
 subset: goslim_flybase_ribbon
@@ -4929,8 +4938,8 @@ subset: goslim_pir
 synonym: "neurological system process" EXACT []
 synonym: "neurophysiological process" EXACT []
 synonym: "pan-neural process" RELATED []
-xref: MIPS_funcat:36.25.03
 is_a: GO:0003008 ! system process
+property_value: IAO:0000233 https://github.com/geneontology/go-ontology/issues/13824 xsd:anyURI
 
 [Term]
 id: GO:0050878
@@ -4946,7 +4955,6 @@ name: neuromuscular process controlling balance
 namespace: biological_process
 def: "Any process that an organism uses to control its balance, the orientation of the organism (or the head of the organism) in relation to the source of gravity. In humans and animals, balance is perceived through visual cues, the labyrinth system of the inner ears and information from skin pressure receptors and muscle and joint receptors." [GOC:ai, GOC:dph]
 synonym: "regulation of balance" RELATED []
-xref: MIPS_funcat:36.25.03.03.03
 is_a: GO:0050905 ! neuromuscular process
 
 [Term]
@@ -4989,7 +4997,6 @@ subset: goslim_flybase_ribbon
 subset: goslim_mouse
 subset: goslim_pir
 synonym: "physiological response to stimulus" EXACT []
-xref: MIPS_funcat:34.11
 is_a: GO:0008150 ! biological_process
 
 [Term]
@@ -4999,7 +5006,6 @@ namespace: biological_process
 def: "Any process pertaining to the functions of the nervous and muscular systems of an organism." [GOC:ai]
 synonym: "neuromotor process" EXACT []
 synonym: "neuromuscular physiological process" EXACT []
-xref: MIPS_funcat:36.25.03.03
 is_a: GO:0050877 ! nervous system process
 
 [Term]
@@ -5061,7 +5067,6 @@ synonym: "gustation" EXACT []
 synonym: "sense of taste" EXACT []
 synonym: "taste" EXACT []
 synonym: "taste perception" EXACT []
-xref: MIPS_funcat:36.25.01.11
 xref: Wikipedia:Taste
 is_a: GO:0007606 ! sensory perception of chemical stimulus
 
@@ -5203,7 +5208,6 @@ name: equilibrioception
 namespace: biological_process
 def: "The series of events required for an organism to receive an orientational stimulus, convert it to a molecular signal, and recognize and characterize the signal. Equilibrioception refers to a combination of processes by which an organism can perceive its orientation with respect to gravity. In animals, stimuli come from labyrinth system of the inner ears, monitoring the direction of motion; visual stimuli, with information on orientation and motion; pressure receptors, which tell the organism which body surfaces are in contact with the ground; and proprioceptive cues, which report which parts of the body are in motion." [http://www.medterms.com]
 synonym: "sensory perception of orientation with respect to gravity" EXACT []
-xref: MIPS_funcat:36.25.01.07
 xref: Wikipedia:Equilibrioception
 is_a: GO:0007600 ! sensory perception
 relationship: part_of GO:0050885 ! neuromuscular process controlling balance
@@ -5361,7 +5365,6 @@ synonym: "perception of touch" EXACT []
 synonym: "tactile sense" EXACT []
 synonym: "taction" EXACT []
 synonym: "tactition" EXACT []
-xref: MIPS_funcat:36.25.01.05
 xref: Wikipedia:Touch
 is_a: GO:0050954 ! sensory perception of mechanical stimulus
 
@@ -5386,7 +5389,6 @@ id: GO:0050982
 name: detection of mechanical stimulus
 namespace: biological_process
 def: "The series of events by which a mechanical stimulus is received and converted into a molecular signal." [GOC:ai, GOC:dos]
-xref: MIPS_funcat:34.11.05
 is_a: GO:0009581 ! detection of external stimulus
 is_a: GO:0009582 ! detection of abiotic stimulus
 is_a: GO:0009612 ! response to mechanical stimulus
@@ -5815,7 +5817,6 @@ subset: goslim_pir
 synonym: "perception of stimulus" RELATED []
 synonym: "stimulus detection" EXACT []
 synonym: "stimulus sensing" RELATED []
-xref: MIPS_funcat:34.11
 is_a: GO:0050896 ! response to stimulus
 
 [Term]
@@ -5823,9 +5824,10 @@ id: GO:0051608
 name: histamine transport
 namespace: biological_process
 def: "The directed movement of histamine into, out of or within a cell, or between cells, by means of some agent such as a transporter or pore. Histamine is a physiologically active amine, found in plant and animal tissue and released from mast cells as part of an allergic reaction in humans." [GOC:ai]
+is_a: GO:0006812 ! cation transport
 is_a: GO:0006836 ! neurotransmitter transport
-is_a: GO:0015696 ! ammonium transport
 is_a: GO:0071702 ! organic substance transport
+is_a: GO:0071705 ! nitrogen compound transport
 
 [Term]
 id: GO:0051641
@@ -5841,6 +5843,7 @@ synonym: "intracellular localization" NARROW []
 synonym: "localization within cell" NARROW []
 synonym: "single organism cellular localization" EXACT [GOC:TermGenie]
 synonym: "single-organism cellular localization" RELATED []
+is_a: GO:0009987 ! cellular process
 is_a: GO:0051179 ! localization
 created_by: jl
 creation_date: 2013-12-18T14:04:32Z
@@ -5856,9 +5859,6 @@ synonym: "establishment of localisation in cell" EXACT [GOC:mah]
 synonym: "establishment of localization within cell" NARROW []
 synonym: "positioning within cell" NARROW []
 is_a: GO:0051234 ! establishment of localization
-intersection_of: GO:0051234 ! establishment of localization
-intersection_of: occurs_in GO:0005623 ! cell
-relationship: occurs_in GO:0005623 ! cell
 relationship: part_of GO:0051641 ! cellular localization
 
 [Term]
@@ -5933,6 +5933,7 @@ id: GO:0051932
 name: synaptic transmission, GABAergic
 namespace: biological_process
 def: "The vesicular release of  gamma-aminobutyric acid (GABA). from a presynapse, across a chemical synapse, the subsequent activation of GABA receptors at the postsynapse of a target cell (neuron, muscle, or secretory cell) and the effects of this activation on the postsynaptic membrane potential and ionic composition of the postsynaptic cytosol. This process encompasses both spontaneous and evoked release of neurotransmitter and all parts of synaptic vesicle exocytosis. Evoked transmission starts with the arrival of an action potential at the presynapse." [GOC:dos, ISBN:0126603030]
+synonym: "GABAergic synaptic transmission" EXACT []
 synonym: "synaptic transmission, GABA mediated" EXACT []
 synonym: "synaptic transmission, gamma-aminobutyric acid mediated" EXACT []
 synonym: "synaptic transmission, gamma-aminobutyric acid-ergic" EXACT []
@@ -6091,6 +6092,7 @@ subset: goslim_yeast
 synonym: "ATP hydrolysis coupled transmembrane transport" NARROW []
 synonym: "membrane transport" EXACT []
 is_a: GO:0006810 ! transport
+is_a: GO:0009987 ! cellular process
 created_by: tanyaberardini
 creation_date: 2015-10-21T13:22:47Z
 
@@ -6145,6 +6147,7 @@ namespace: biological_process
 def: "Any process that modulates the frequency, rate or extent of a process in which a cell, a substance, or a cellular entity is transported to, or maintained in a specific location within or in the membrane of a cell." [GOC:dph, GOC:tb]
 synonym: "regulation of cellular localisation" EXACT [GOC:mah]
 is_a: GO:0032879 ! regulation of localization
+is_a: GO:0050794 ! regulation of cellular process
 intersection_of: GO:0008150 ! biological_process
 intersection_of: regulates GO:0051641 ! cellular localization
 relationship: regulates GO:0051641 ! cellular localization
@@ -6232,7 +6235,7 @@ name: acetylcholine secretion
 namespace: biological_process
 def: "The regulated release of acetylcholine by a cell." [GOC:dph]
 is_a: GO:0015870 ! acetylcholine transport
-is_a: GO:0032940 ! secretion by cell
+is_a: GO:0023061 ! signal release
 created_by: dph
 creation_date: 2013-06-21T15:40:39Z
 
@@ -6253,7 +6256,6 @@ name: primary amine secretion
 namespace: biological_process
 def: "The regulated release of a primary amine by a cell." [GOC:dph]
 is_a: GO:0015695 ! organic cation transport
-is_a: GO:0015696 ! ammonium transport
 is_a: GO:0015837 ! amine transport
 is_a: GO:0032940 ! secretion by cell
 created_by: dph
@@ -6307,9 +6309,9 @@ namespace: biological_process
 def: "The controlled release of octopamine by a cell." [GOC:dph]
 is_a: GO:0006836 ! neurotransmitter transport
 is_a: GO:0015695 ! organic cation transport
-is_a: GO:0015696 ! ammonium transport
 is_a: GO:0015850 ! organic hydroxy compound transport
 is_a: GO:0032940 ! secretion by cell
+is_a: GO:0071705 ! nitrogen compound transport
 created_by: dph
 creation_date: 2013-06-21T16:24:02Z
 
@@ -6533,7 +6535,7 @@ creation_date: 2009-12-14T02:55:58Z
 id: GO:0071415
 name: cellular response to purine-containing compound
 namespace: biological_process
-def: "Any process that results in a change in state or activity of a cell (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of a purine-containing compound stimulus." [CHEBI:26401, GOC:mah]
+def: "Any process that results in a change in state or activity of a cell (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of a purine-containing compound stimulus." [GOC:mah]
 synonym: "cellular response to purine" RELATED []
 is_a: GO:0014074 ! response to purine-containing compound
 is_a: GO:0071407 ! cellular response to organic cyclic compound
@@ -6545,7 +6547,7 @@ creation_date: 2009-12-14T03:12:20Z
 id: GO:0071417
 name: cellular response to organonitrogen compound
 namespace: biological_process
-def: "Any process that results in a change in state or activity of a cell (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of an organonitrogen stimulus. An organonitrogen compound is formally a compound containing at least one carbon-nitrogen bond." [CHEBI:35352, GOC:mah]
+def: "Any process that results in a change in state or activity of a cell (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of an organonitrogen stimulus. An organonitrogen compound is formally a compound containing at least one carbon-nitrogen bond." [GOC:mah]
 synonym: "cellular response to organic nitrogen" EXACT [GOC:mah]
 is_a: GO:0010243 ! response to organonitrogen compound
 is_a: GO:0071310 ! cellular response to organic substance
@@ -6621,7 +6623,7 @@ creation_date: 2010-02-19T04:23:55Z
 id: GO:0071702
 name: organic substance transport
 namespace: biological_process
-def: "The directed movement of organic substances into, out of or within a cell, or between cells, or within a multicellular organism by means of some agent such as a transporter or pore. An organic substance is a molecular entity that contains carbon." [CHEBI:50860, GOC:mah]
+def: "The directed movement of organic substances into, out of or within a cell, or between cells, or within a multicellular organism by means of some agent such as a transporter or pore. An organic substance is a molecular entity that contains carbon." [GOC:mah]
 is_a: GO:0006810 ! transport
 created_by: midori
 creation_date: 2010-03-08T02:15:14Z
@@ -6630,7 +6632,7 @@ creation_date: 2010-03-08T02:15:14Z
 id: GO:0071704
 name: organic substance metabolic process
 namespace: biological_process
-def: "The chemical reactions and pathways involving an organic substance, any molecular entity containing carbon." [CHEBI:50860, GOC:mah]
+def: "The chemical reactions and pathways involving an organic substance, any molecular entity containing carbon." [GOC:mah]
 synonym: "organic molecular entity metabolic process" EXACT []
 synonym: "organic molecular entity metabolism" EXACT []
 synonym: "organic substance metabolism" EXACT []
@@ -6642,7 +6644,7 @@ creation_date: 2010-03-08T03:32:18Z
 id: GO:0071705
 name: nitrogen compound transport
 namespace: biological_process
-def: "The directed movement of nitrogen-containing compounds into, out of or within a cell, or between cells, by means of some agent such as a transporter or pore." [CHEBI:51143, GOC:mah]
+def: "The directed movement of nitrogen-containing compounds into, out of or within a cell, or between cells, by means of some agent such as a transporter or pore." [GOC:mah]
 is_a: GO:0006810 ! transport
 created_by: midori
 creation_date: 2010-03-08T03:56:28Z
@@ -6826,7 +6828,9 @@ creation_date: 2012-01-03T03:13:31Z
 id: GO:0097305
 name: response to alcohol
 namespace: biological_process
-def: "Any process that results in a change in state or activity of a cell or an organism (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of an alcohol stimulus." [CHEBI:30879, GOC:pr]
+alt_id: GO:1990335
+def: "Any process that results in a change in state or activity of a cell or an organism (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of an alcohol stimulus." [GOC:pr, PMID:24014527]
+synonym: "process resulting in tolerance to alcohol" NARROW []
 is_a: GO:0010033 ! response to organic substance
 is_a: GO:1901700 ! response to oxygen-containing compound
 created_by: paola
@@ -6836,7 +6840,7 @@ creation_date: 2012-05-15T03:48:45Z
 id: GO:0097306
 name: cellular response to alcohol
 namespace: biological_process
-def: "Any process that results in a change in state or activity of a cell (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of an alcohol stimulus." [CHEBI:30879, GOC:pr]
+def: "Any process that results in a change in state or activity of a cell (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of an alcohol stimulus." [GOC:pr]
 is_a: GO:0071310 ! cellular response to organic substance
 is_a: GO:0097305 ! response to alcohol
 is_a: GO:1901701 ! cellular response to oxygen-containing compound
@@ -6847,7 +6851,7 @@ creation_date: 2012-05-15T03:49:51Z
 id: GO:0097307
 name: response to farnesol
 namespace: biological_process
-def: "Any process that results in a change in state or activity of a cell or an organism (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of a farnesol stimulus." [CHEBI:28600, GOC:pr]
+def: "Any process that results in a change in state or activity of a cell or an organism (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of a farnesol stimulus." [GOC:pr]
 is_a: GO:0033993 ! response to lipid
 is_a: GO:0046677 ! response to antibiotic
 is_a: GO:0097305 ! response to alcohol
@@ -6858,7 +6862,7 @@ creation_date: 2012-05-15T03:51:31Z
 id: GO:0097308
 name: cellular response to farnesol
 namespace: biological_process
-def: "Any process that results in a change in state or activity of a cell (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of a farnesol stimulus." [CHEBI:28600, GOC:di, PMID:11425711]
+def: "Any process that results in a change in state or activity of a cell (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of a farnesol stimulus." [GOC:di, PMID:11425711]
 is_a: GO:0071236 ! cellular response to antibiotic
 is_a: GO:0071396 ! cellular response to lipid
 is_a: GO:0097306 ! cellular response to alcohol
@@ -6870,7 +6874,7 @@ creation_date: 2012-05-15T03:54:01Z
 id: GO:0097458
 name: obsolete neuron part
 namespace: cellular_component
-def: "OBSOLETE. Any constituent part of a neuron, the basic cellular unit of nervous tissue. A typical neuron consists of a cell body (often called the soma), an axon, and dendrites. Their purpose is to receive, conduct, and transmit impulses in the nervous system." [GOC:pr, http://en.wikipedia.org/wiki/Neuron]
+def: "OBSOLETE. Any constituent part of a neuron, the basic cellular unit of nervous tissue. A typical neuron consists of a cell body (often called the soma), an axon, and dendrites. Their purpose is to receive, conduct, and transmit impulses in the nervous system." [GOC:pr, Wikipedia:Neuron]
 subset: gocheck_do_not_annotate
 subset: goslim_flybase_ribbon
 is_obsolete: true
@@ -7033,6 +7037,7 @@ def: "The regulated release of dopamine from an axon." [GOC:bf, GOC:PARL, PMID:2
 synonym: "axonal DA release" EXACT [PMID:21576241]
 synonym: "axonal dopamine release" EXACT [PMID:21576241]
 is_a: GO:0014046 ! dopamine secretion
+is_a: GO:0051649 ! establishment of localization in cell
 intersection_of: GO:0014046 ! dopamine secretion
 intersection_of: occurs_in GO:0030424 ! axon
 relationship: occurs_in GO:0030424 ! axon
@@ -7085,6 +7090,7 @@ is_a: GO:0007267 ! cell-cell signaling
 intersection_of: GO:0007267 ! cell-cell signaling
 intersection_of: occurs_in GO:0045202 ! synapse
 relationship: occurs_in GO:0045202 ! synapse
+property_value: RO:0002161 NCBITaxon:4895
 
 [Term]
 id: GO:0099537
