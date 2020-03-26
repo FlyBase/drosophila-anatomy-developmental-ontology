@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: fbbt/releases/2020-02-19/imports/pato_import.owl
+data-version: fbbt/releases/2020-03-26/imports/pato_import.owl
 subsetdef: abnormal_slim "Abnormal/normal slim"
 subsetdef: attribute_slim "Attribute slim"
 subsetdef: cell_quality "cell_quality"
@@ -34,7 +34,7 @@ is_a: PATO:0000001 ! quality
 
 [Term]
 id: PATO:0000069
-name: deviation(from_normal)
+name: deviation (from_normal)
 namespace: quality
 def: "A quality inhering in a bearer by virtue of the whether the bearer differs from normal or average." [PATOC:GVG]
 subset: attribute_slim
@@ -63,7 +63,7 @@ synonym: "aberrant" RELATED []
 synonym: "atypia" RELATED []
 synonym: "atypical" RELATED []
 synonym: "defective" RELATED []
-is_a: PATO:0000069 ! deviation(from_normal)
+is_a: PATO:0000069 ! deviation (from_normal)
 relationship: is_opposite_of PATO:0000461 ! normal
 
 [Term]
