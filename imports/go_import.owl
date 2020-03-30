@@ -11,7 +11,7 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/fbbt/imports/go_import.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/fbbt/releases/2020-02-19/imports/go_import.owl"/>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/fbbt/releases/2020-03-26/imports/go_import.owl"/>
     </owl:Ontology>
     
 
@@ -41,6 +41,12 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/IAO_0000233 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000233"/>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/IAO_0000589 -->
 
     <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000589"/>
@@ -52,6 +58,12 @@
     <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0100001">
         <rdfs:label>term replaced by</rdfs:label>
     </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0002161 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002161"/>
     
 
 
@@ -708,7 +720,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0001820">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0006837"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0032940"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0023061"/>
         <obo:IAO_0000115>The regulated release of serotonin by a cell. Serotonin (5-hydroxytryptamine, or 5-HT) is a monoamine synthesised in serotonergic neurons in the central nervous system, enterochromaffin cells in the gastrointestinal tract and some immune system cells.</obo:IAO_0000115>
         <oboInOwl:hasExactSynonym>5-HT secretion</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>5-hydroxytryptamine secretion</oboInOwl:hasExactSynonym>
@@ -803,6 +815,7 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0001963">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0007268"/>
         <obo:IAO_0000115>The vesicular release of  dopamine. from a presynapse, across a chemical synapse, the subsequent activation of dopamine receptors at the postsynapse of a target cell (neuron, muscle, or secretory cell) and the effects of this activation on the postsynaptic membrane potential and ionic composition of the postsynaptic cytosol. This process encompasses both spontaneous and evoked release of neurotransmitter and all parts of synaptic vesicle exocytosis. Evoked transmission starts with the arrival of an action potential at the presynapse.</obo:IAO_0000115>
+        <oboInOwl:hasExactSynonym>dopaminergic synaptic transmission</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
         <oboInOwl:id>GO:0001963</oboInOwl:id>
         <rdfs:label>synaptic transmission, dopaminergic</rdfs:label>
@@ -1285,8 +1298,6 @@
         <obo:IAO_0000115>Interacting selectively and non-covalently with any protein or protein complex (a complex of two or more proteins that may include other nonprotein molecules).</obo:IAO_0000115>
         <oboInOwl:hasAlternativeId>GO:0001948</oboInOwl:hasAlternativeId>
         <oboInOwl:hasAlternativeId>GO:0045308</oboInOwl:hasAlternativeId>
-        <oboInOwl:hasDbXref>MIPS_funcat:16.01</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>MIPS_funcat:18.01.07</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>Reactome:R-HSA-170835</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>Reactome:R-HSA-170846</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym>protein amino acid binding</oboInOwl:hasExactSynonym>
@@ -1429,7 +1440,6 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0005634">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0043231"/>
         <obo:IAO_0000115>A membrane-bounded organelle of eukaryotic cells in which chromosomes are housed and replicated. In most cells, the nucleus contains all of the cell&apos;s chromosomes except the organellar chromosomes, and is the site of RNA synthesis and processing. In some species, or in specialized cell types, RNA metabolism or DNA replication may be absent.</obo:IAO_0000115>
-        <oboInOwl:hasDbXref>MIPS_funcat:70.10</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>NIF_Subcellular:sao1702920020</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>Wikipedia:Cell_nucleus</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym>cell nucleus</oboInOwl:hasExactSynonym>
@@ -1531,7 +1541,6 @@
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0044238"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0071704"/>
         <obo:IAO_0000115>The chemical reactions and pathways involving lipids, compounds soluble in an organic solvent but not, or sparingly, in an aqueous solvent. Includes fatty acids; neutral fats, other fatty-acid esters, and soaps; long-chain (fatty) alcohols and waxes; sphingoids and other long-chain bases; glycolipids, phospholipids and sphingolipids; and carotenes, polyprenols, sterols, terpenes and other isoprenoids.</obo:IAO_0000115>
-        <oboInOwl:hasDbXref>MIPS_funcat:01.06</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>Wikipedia:Lipid_metabolism</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym>lipid metabolism</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
@@ -1584,7 +1593,6 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0006796">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0006793"/>
         <obo:IAO_0000115>The chemical reactions and pathways involving the phosphate group, the anion or salt of any phosphoric acid.</obo:IAO_0000115>
-        <oboInOwl:hasDbXref>MIPS_funcat:01.04</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym>phosphate metabolism</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
         <oboInOwl:hasRelatedSynonym>phosphate metabolic process</oboInOwl:hasRelatedSynonym>
@@ -1610,7 +1618,6 @@
         <oboInOwl:hasAlternativeId>GO:0015457</oboInOwl:hasAlternativeId>
         <oboInOwl:hasAlternativeId>GO:0015460</oboInOwl:hasAlternativeId>
         <oboInOwl:hasAlternativeId>GO:0044765</oboInOwl:hasAlternativeId>
-        <oboInOwl:hasDbXref>MIPS_funcat:20</oboInOwl:hasDbXref>
         <oboInOwl:hasNarrowSynonym>small molecule transport</oboInOwl:hasNarrowSynonym>
         <oboInOwl:hasNarrowSynonym>solute:solute exchange</oboInOwl:hasNarrowSynonym>
         <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
@@ -1644,7 +1651,6 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0006811">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0006810"/>
         <obo:IAO_0000115>The directed movement of charged atoms or small charged molecules into, out of or within a cell, or between cells, by means of some agent such as a transporter or pore.</obo:IAO_0000115>
-        <oboInOwl:hasDbXref>MIPS_funcat:20.01.01</oboInOwl:hasDbXref>
         <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
         <oboInOwl:id>GO:0006811</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_drosophila"/>
@@ -1668,7 +1674,6 @@
         <obo:IAO_0000115>The directed movement of cations, atoms or small molecules with a net positive charge, into, out of or within a cell, or between cells, by means of some agent such as a transporter or pore.</obo:IAO_0000115>
         <oboInOwl:hasAlternativeId>GO:0006819</oboInOwl:hasAlternativeId>
         <oboInOwl:hasAlternativeId>GO:0015674</oboInOwl:hasAlternativeId>
-        <oboInOwl:hasDbXref>MIPS_funcat:20.01.01.01</oboInOwl:hasDbXref>
         <oboInOwl:hasNarrowSynonym>di-, tri-valent inorganic cation transport</oboInOwl:hasNarrowSynonym>
         <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
         <oboInOwl:id>GO:0006812</oboInOwl:id>
@@ -1695,7 +1700,6 @@
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0006811"/>
         <obo:IAO_0000115>The directed movement of anions, atoms or small molecules with a net negative charge, into, out of or within a cell, or between cells, by means of some agent such as a transporter or pore.</obo:IAO_0000115>
         <oboInOwl:hasAlternativeId>GO:0006822</oboInOwl:hasAlternativeId>
-        <oboInOwl:hasDbXref>MIPS_funcat:20.01.01.07</oboInOwl:hasDbXref>
         <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
         <oboInOwl:id>GO:0006820</oboInOwl:id>
         <rdfs:label>anion transport</rdfs:label>
@@ -1734,7 +1738,6 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0006836">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0006810"/>
         <obo:IAO_0000115>The directed movement of a neurotransmitter into, out of or within a cell, or between cells, by means of some agent such as a transporter or pore. Neurotransmitters are any chemical substance that is capable of transmitting (or inhibiting the transmission of) a nerve impulse from a neuron to another cell.</obo:IAO_0000115>
-        <oboInOwl:hasDbXref>MIPS_funcat:20.01.26</oboInOwl:hasDbXref>
         <oboInOwl:hasNarrowSynonym>sodium:neurotransmitter transport</oboInOwl:hasNarrowSynonym>
         <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
         <oboInOwl:id>GO:0006836</oboInOwl:id>
@@ -1753,8 +1756,8 @@
     <!-- http://purl.obolibrary.org/obo/GO_0006837 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0006837">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0006812"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0006836"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0015696"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0015844"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0015850"/>
         <obo:IAO_0000115>The directed movement of serotonin into, out of or within a cell, or between cells, by means of some agent such as a transporter or pore. Serotonin (5-hydroxytryptamine) is a monoamine neurotransmitter occurring in the peripheral and central nervous systems.</obo:IAO_0000115>
@@ -1778,7 +1781,6 @@
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0071705"/>
         <obo:IAO_0000115>The directed movement of amino acids, organic acids containing one or more amino substituents, into, out of or within a cell, or between cells, by means of some agent such as a transporter or pore.</obo:IAO_0000115>
         <oboInOwl:hasAlternativeId>GO:0006866</oboInOwl:hasAlternativeId>
-        <oboInOwl:hasDbXref>MIPS_funcat:20.01.07</oboInOwl:hasDbXref>
         <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
         <oboInOwl:id>GO:0006865</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_pir"/>
@@ -1799,7 +1801,6 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0006950">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0050896"/>
         <obo:IAO_0000115>Any process that results in a change in state or activity of a cell or an organism (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of a disturbance in organismal or cellular homeostasis, usually, but not necessarily, exogenous (e.g. temperature, humidity, ionizing radiation).</obo:IAO_0000115>
-        <oboInOwl:hasDbXref>MIPS_funcat:32.01</oboInOwl:hasDbXref>
         <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
         <oboInOwl:hasRelatedSynonym>response to abiotic stress</oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasRelatedSynonym>response to biotic stress</oboInOwl:hasRelatedSynonym>
@@ -1830,8 +1831,6 @@
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0006950"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0009628"/>
         <obo:IAO_0000115>Any process that results in a change in state or activity of a cell or an organism (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of a stimulus indicating an increase or decrease in the concentration of solutes outside the organism or cell.</obo:IAO_0000115>
-        <oboInOwl:hasDbXref>MIPS_funcat:32.01.03</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>MIPS_funcat:36.20.35.09.05</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym>osmotic response</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>osmotic stress response</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
@@ -1894,7 +1893,6 @@
         </rdfs:subClassOf>
         <obo:IAO_0000115>The cellular process in which a signal is conveyed to trigger a change in the activity or state of a cell. Signal transduction begins with reception of a signal (e.g. a ligand binding to a receptor or receptor activation by a stimulus such as light), or for signal transduction in the absence of ligand, signal-withdrawal or the activity of a constitutively active receptor. Signal transduction ends with regulation of a downstream cellular process, e.g. regulation of transcription or regulation of a metabolic process. Signal transduction covers signaling from receptors located on the surface of the cell and signaling via molecules located within the cell. For signaling between cells, signal transduction is restricted to events at and within the receiving cell.</obo:IAO_0000115>
         <oboInOwl:hasAlternativeId>GO:0023033</oboInOwl:hasAlternativeId>
-        <oboInOwl:hasDbXref>MIPS_funcat:30</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>Wikipedia:Signal_transduction</oboInOwl:hasDbXref>
         <oboInOwl:hasNarrowSynonym>signaling cascade</oboInOwl:hasNarrowSynonym>
         <oboInOwl:hasNarrowSynonym>signalling cascade</oboInOwl:hasNarrowSynonym>
@@ -1933,8 +1931,6 @@
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0007165"/>
         <obo:IAO_0000115>A series of molecular signals that proceeds with an activated receptor promoting the exchange of GDP for GTP on the alpha-subunit of an associated heterotrimeric G-protein complex. The GTP-bound activated alpha-G-protein then dissociates from the beta- and gamma-subunits to further transmit the signal within the cell. The pathway begins with receptor-ligand interaction, or for basal GPCR signaling the pathway begins with the receptor activating its G protein in the absence of an agonist, and ends with regulation of a downstream cellular process, e.g. transcription.  The pathway can start from the plasma membrane, Golgi or nuclear membrane.</obo:IAO_0000115>
         <oboInOwl:hasAlternativeId>GO:0038042</oboInOwl:hasAlternativeId>
-        <oboInOwl:hasDbXref>MIPS_funcat:30.01.05.05</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>MIPS_funcat:30.05.02.24</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym>G protein coupled receptor protein signaling pathway</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>G protein coupled receptor protein signalling pathway</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>G-protein coupled receptor protein signal transduction</oboInOwl:hasExactSynonym>
@@ -2013,7 +2009,6 @@
         <obo:IAO_0000115>The vesicular release of classical neurotransmitter molecules from a presynapse, across a chemical synapse, the subsequent activation of neurotransmitter receptors at the postsynapse of a target cell (neuron, muscle, or secretory cell) and the effects of this activation on the postsynaptic membrane potential and ionic composition of the postsynaptic cytosol. This process encompasses both spontaneous and evoked release of neurotransmitter and all parts of synaptic vesicle exocytosis. Evoked transmission starts with the arrival of an action potential at the presynapse.</obo:IAO_0000115>
         <oboInOwl:hasBroadSynonym>signal transmission across a synapse</oboInOwl:hasBroadSynonym>
         <oboInOwl:hasBroadSynonym>synaptic transmission</oboInOwl:hasBroadSynonym>
-        <oboInOwl:hasDbXref>MIPS_funcat:34.03.01</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>Wikipedia:Neurotransmission</oboInOwl:hasDbXref>
         <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
         <oboInOwl:hasRelatedSynonym>neurotransmission</oboInOwl:hasRelatedSynonym>
@@ -2042,6 +2037,7 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0007269">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0001505"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0006836"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0051649"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0099643"/>
         <rdfs:subClassOf>
             <owl:Restriction>
@@ -2079,6 +2075,7 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0007271">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0007268"/>
         <obo:IAO_0000115>The vesicular release of acetylcholine from a presynapse, across a chemical synapse, the subsequent activation of dopamine receptors at the postsynapse of a target cell (neuron, muscle, or secretory cell) and the effects of this activation on the postsynaptic membrane potential and ionic composition of the postsynaptic cytosol. This process encompasses both spontaneous and evoked release of neurotransmitter and all parts of synaptic vesicle exocytosis. Evoked transmission starts with the arrival of an action potential at the presynapse.</obo:IAO_0000115>
+        <oboInOwl:hasExactSynonym>cholinergic synaptic transmission</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
         <oboInOwl:id>GO:0007271</oboInOwl:id>
         <rdfs:label>synaptic transmission, cholinergic</rdfs:label>
@@ -2099,7 +2096,6 @@
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0032501"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0048856"/>
         <obo:IAO_0000115>The biological process whose specific outcome is the progression of a multicellular organism over time from an initial condition (e.g. a zygote or a young adult) to a later condition (e.g. a multicellular animal or an aged adult).</obo:IAO_0000115>
-        <oboInOwl:hasDbXref>MIPS_funcat:41</oboInOwl:hasDbXref>
         <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
         <oboInOwl:id>GO:0007275</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_chembl"/>
@@ -2238,7 +2234,6 @@
         <obo:IAO_0000115>The process of gaseous exchange between an organism and its environment. In plants, microorganisms, and many small animals, air or water makes direct contact with the organism&apos;s cells or tissue fluids, and the processes of diffusion supply the organism with dioxygen (O2) and remove carbon dioxide (CO2). In larger animals the efficiency of gaseous exchange is improved by specialized respiratory organs, such as lungs and gills, which are ventilated by breathing mechanisms.</obo:IAO_0000115>
         <oboInOwl:hasBroadSynonym>breathing</oboInOwl:hasBroadSynonym>
         <oboInOwl:hasBroadSynonym>respiration</oboInOwl:hasBroadSynonym>
-        <oboInOwl:hasDbXref>MIPS_funcat:36.07.01</oboInOwl:hasDbXref>
         <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
         <oboInOwl:id>GO:0007585</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_chembl"/>
@@ -2258,7 +2253,6 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0007586">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0032501"/>
         <obo:IAO_0000115>The whole of the physical, chemical, and biochemical processes carried out by multicellular organisms to break down ingested nutrients into components that may be easily absorbed and directed into metabolism.</obo:IAO_0000115>
-        <oboInOwl:hasDbXref>MIPS_funcat:36.03</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>Wikipedia:Digestion</oboInOwl:hasDbXref>
         <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
         <oboInOwl:id>GO:0007586</oboInOwl:id>
@@ -2324,8 +2318,6 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0007601">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0050953"/>
         <obo:IAO_0000115>The series of events required for an organism to receive a visual stimulus, convert it to a molecular signal, and recognize and characterize the signal. Visual stimuli are detected in the form of photons and are processed to form an image.</obo:IAO_0000115>
-        <oboInOwl:hasDbXref>MIPS_funcat:34.11.01.03</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>MIPS_funcat:36.25.01.01</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>Wikipedia:Visual_perception</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym>sense of sight</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>sensory visual perception</oboInOwl:hasExactSynonym>
@@ -2406,7 +2398,6 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0007605">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0050954"/>
         <obo:IAO_0000115>The series of events required for an organism to receive an auditory stimulus, convert it to a molecular signal, and recognize and characterize the signal. Sonic stimuli are detected in the form of vibrations and are processed to form a sound.</obo:IAO_0000115>
-        <oboInOwl:hasDbXref>MIPS_funcat:36.25.01.03</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>Wikipedia:Hearing_(sense)</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym>hearing</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>perception of sound</oboInOwl:hasExactSynonym>
@@ -2447,7 +2438,6 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0007608">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0007606"/>
         <obo:IAO_0000115>The series of events required for an organism to receive an olfactory stimulus, convert it to a molecular signal, and recognize and characterize the signal. Olfaction involves the detection of chemical composition of an organism&apos;s ambient medium by chemoreceptors. This is a neurological process.</obo:IAO_0000115>
-        <oboInOwl:hasDbXref>MIPS_funcat:36.25.01.13</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>Wikipedia:Olfaction</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym>olfaction</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>scent perception</oboInOwl:hasExactSynonym>
@@ -2474,7 +2464,9 @@
         <obo:IAO_0000115>The internally coordinated responses (actions or inactions) of animals (individuals or groups) to internal or external stimuli, via a mechanism that involves nervous system activity.</obo:IAO_0000115>
         <oboInOwl:created_by>janelomax</oboInOwl:created_by>
         <oboInOwl:creation_date>2012-09-20T14:06:08Z</oboInOwl:creation_date>
+        <oboInOwl:hasAlternativeId>GO:0023032</oboInOwl:hasAlternativeId>
         <oboInOwl:hasAlternativeId>GO:0044708</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasAlternativeId>GO:0044709</oboInOwl:hasAlternativeId>
         <oboInOwl:hasDbXref>Wikipedia:Behavior</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym>behavioral response to stimulus</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>behaviour</oboInOwl:hasExactSynonym>
@@ -2507,7 +2499,6 @@
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0007610"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0050890"/>
         <obo:IAO_0000115>The acquisition and processing of information and/or the storage and retrieval of this information over time.</obo:IAO_0000115>
-        <oboInOwl:hasDbXref>MIPS_funcat:36.25.03.04.01</oboInOwl:hasDbXref>
         <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
         <oboInOwl:id>GO:0007611</oboInOwl:id>
         <rdfs:label>learning or memory</rdfs:label>
@@ -2640,7 +2631,7 @@
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>The pairwise union of individuals for the purpose of sexual reproduction, ultimately resulting in the formation of zygotes.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:jl</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ISBN:0387520546</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>ISBN:0387520546</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -2800,13 +2791,32 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0007631">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0007610"/>
         <obo:IAO_0000115>Behavior associated with the intake of food.</obo:IAO_0000115>
-        <oboInOwl:hasDbXref>MIPS_funcat:36.03</oboInOwl:hasDbXref>
+        <obo:IAO_0000233 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://github.com/geneontology/go-ontology/issues/18547</obo:IAO_0000233>
+        <oboInOwl:created_by>janelomax</oboInOwl:created_by>
+        <oboInOwl:creation_date>2011-10-27T03:53:33Z</oboInOwl:creation_date>
+        <oboInOwl:hasAlternativeId>GO:0044366</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasAlternativeId>GO:0044367</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasAlternativeId>GO:0044368</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasAlternativeId>GO:0044369</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasAlternativeId>GO:0044370</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasAlternativeId>GO:0044371</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasAlternativeId>GO:0044372</oboInOwl:hasAlternativeId>
         <oboInOwl:hasDbXref>Wikipedia:List_of_feeding_behaviours</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym>behavioral response to food</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>behavioural response to food</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>feeding behaviour</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasNarrowSynonym>drinking</oboInOwl:hasNarrowSynonym>
         <oboInOwl:hasNarrowSynonym>eating</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasNarrowSynonym>feeding from phloem of other organism</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasNarrowSynonym>feeding from plant phloem</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasNarrowSynonym>feeding from tissue of other organism</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasNarrowSynonym>feeding from vascular tissue of another organism</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasNarrowSynonym>feeding from xylem of other organism</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasNarrowSynonym>feeding on blood of other organism</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasNarrowSynonym>feeding on or from other organism</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasNarrowSynonym>feeding on plant sap</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasNarrowSynonym>hematophagy</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasNarrowSynonym>injection of substance into other organism during feeding on blood of other organism</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasNarrowSynonym>taking of blood meal</oboInOwl:hasNarrowSynonym>
         <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
         <oboInOwl:id>GO:0007631</oboInOwl:id>
         <rdfs:comment>See also the biological process term &apos;behavior ; GO:0007610&apos;.</rdfs:comment>
@@ -2984,7 +2994,6 @@
         <oboInOwl:creation_date>2012-10-17T15:46:40Z</oboInOwl:creation_date>
         <oboInOwl:hasAlternativeId>GO:0044236</oboInOwl:hasAlternativeId>
         <oboInOwl:hasAlternativeId>GO:0044710</oboInOwl:hasAlternativeId>
-        <oboInOwl:hasDbXref>MIPS_funcat:01</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>Wikipedia:Metabolism</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym>metabolism</oboInOwl:hasExactSynonym>
         <oboInOwl:hasNarrowSynonym>metabolic process resulting in cell growth</oboInOwl:hasNarrowSynonym>
@@ -3195,7 +3204,6 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0009266">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0009628"/>
         <obo:IAO_0000115>Any process that results in a change in state or activity of a cell or an organism (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of a temperature stimulus.</obo:IAO_0000115>
-        <oboInOwl:hasDbXref>MIPS_funcat:34.11.09</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym>response to thermal stimulus</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
         <oboInOwl:id>GO:0009266</oboInOwl:id>
@@ -3215,7 +3223,6 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0009314">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0009628"/>
         <obo:IAO_0000115>Any process that results in a change in state or activity of a cell or an organism (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of an electromagnetic radiation stimulus. Electromagnetic radiation is a propagating wave in space with electric and magnetic components. These components oscillate at right angles to each other and to the direction of propagation.</obo:IAO_0000115>
-        <oboInOwl:hasDbXref>MIPS_funcat:32.01.13</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym>response to electromagnetic radiation stimulus</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>response to radiation stimulus</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
@@ -3257,9 +3264,6 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0009416">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0009314"/>
         <obo:IAO_0000115>Any process that results in a change in state or activity of a cell or an organism (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of a light stimulus, electromagnetic radiation of wavelengths classified as infrared, visible or ultraviolet light.</obo:IAO_0000115>
-        <oboInOwl:hasDbXref>MIPS_funcat:34.11.01</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>MIPS_funcat:34.11.01.01</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>MIPS_funcat:36.20.35.11</oboInOwl:hasDbXref>
         <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
         <oboInOwl:id>GO:0009416</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_plant"/>
@@ -3322,8 +3326,6 @@
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0009581"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0009582"/>
         <obo:IAO_0000115>The series of events in which a light stimulus (in the form of photons) is received and converted into a molecular signal.</obo:IAO_0000115>
-        <oboInOwl:hasDbXref>MIPS_funcat:34.11.01</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>MIPS_funcat:36.20.35.11</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym>detection of light</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
         <oboInOwl:hasRelatedSynonym>perception of light</oboInOwl:hasRelatedSynonym>
@@ -3370,7 +3372,6 @@
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115>The series of events in which a chemical stimulus is received by a cell and converted into a molecular signal.</obo:IAO_0000115>
-        <oboInOwl:hasDbXref>MIPS_funcat:34.11.03</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym>chemoperception</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>detection of chemical substance</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
@@ -3394,7 +3395,6 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0009605">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0050896"/>
         <obo:IAO_0000115>Any process that results in a change in state or activity of a cell or an organism (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of an external stimulus.</obo:IAO_0000115>
-        <oboInOwl:hasDbXref>MIPS_funcat:36.20.35</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym>response to environmental stimulus</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
         <oboInOwl:id>GO:0009605</oboInOwl:id>
@@ -3419,8 +3419,6 @@
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0009605"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0009628"/>
         <obo:IAO_0000115>Any process that results in a change in state or activity of a cell or an organism (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of a mechanical stimulus.</obo:IAO_0000115>
-        <oboInOwl:hasDbXref>MIPS_funcat:34.11.05</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>MIPS_funcat:36.20.35.15</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym>mechanical stimulus response</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
         <oboInOwl:hasRelatedSynonym>chemi-mechanical coupling</oboInOwl:hasRelatedSynonym>
@@ -3441,13 +3439,14 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0009628">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0050896"/>
         <obo:IAO_0000115>Any process that results in a change in state or activity of a cell or an organism (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of an abiotic (not derived from living organisms) stimulus.</obo:IAO_0000115>
+        <obo:IAO_0000233 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://github.com/geneontology/go-ontology/issues/16572</obo:IAO_0000233>
         <oboInOwl:hasNarrowSynonym>response to abiotic stress</oboInOwl:hasNarrowSynonym>
         <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
         <oboInOwl:id>GO:0009628</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#gocheck_do_not_manually_annotate"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_metagenomics"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_plant"/>
-        <rdfs:comment>Note that this term is in the subset of terms that should not be used for direct gene product annotation. Instead, select a child term or, if no appropriate child term exists, please request a new term. Direct annotations to this term may be amended during annotation QC. Changed definition as requested in https://github.com/geneontology/go-ontology/issues/16572.</rdfs:comment>
+        <rdfs:comment>Note that this term is in the subset of terms that should not be used for direct gene product annotation. Instead, select a child term or, if no appropriate child term exists, please request a new term. Direct annotations to this term may be amended during annotation QC.</rdfs:comment>
         <rdfs:label>response to abiotic stimulus</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -3464,8 +3463,6 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0009629">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0009628"/>
         <obo:IAO_0000115>Any process that results in a change in state or activity of a cell or an organism (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of a gravitational stimulus.</obo:IAO_0000115>
-        <oboInOwl:hasDbXref>MIPS_funcat:34.11.07</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>MIPS_funcat:36.20.35.13</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym>response to gravitational stimulus</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
         <oboInOwl:id>GO:0009629</oboInOwl:id>
@@ -3498,10 +3495,10 @@
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Any process that results in a change in state or activity of an organism (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of detection of, or exposure to, a period of light or dark of a given length, measured relative to a particular duration known as the &apos;critical day length&apos;. The critical day length varies between species.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:jid</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:pj</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ISBN:0582015952</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ISBN:0697037754</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ISBN:0709408862</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>GOC:pj</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>ISBN:0582015952</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>ISBN:0697037754</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>ISBN:0709408862</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -3985,6 +3982,8 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0010033">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0042221"/>
         <obo:IAO_0000115>Any process that results in a change in state or activity of a cell or an organism (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of an organic substance stimulus.</obo:IAO_0000115>
+        <oboInOwl:hasAlternativeId>GO:1990367</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasNarrowSynonym>process resulting in tolerance to organic substance</oboInOwl:hasNarrowSynonym>
         <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
         <oboInOwl:id>GO:0010033</oboInOwl:id>
         <rdfs:label>response to organic substance</rdfs:label>
@@ -3994,6 +3993,7 @@
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Any process that results in a change in state or activity of a cell or an organism (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of an organic substance stimulus.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:sm</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>PMID:23356676</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -4460,6 +4460,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0014046">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0015872"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0023061"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0050432"/>
         <obo:IAO_0000115>The regulated release of dopamine by a cell. Dopamine is a catecholamine and a precursor of adrenaline and noradrenaline. It acts as a neurotransmitter in the central nervous system but it is also produced peripherally and acts as a hormone.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
@@ -4938,6 +4939,8 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0010646"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0023051"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0043269"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0050433"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_2001023"/>
@@ -4975,6 +4978,8 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0010646"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0023051"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0043269"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0051588"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_1903530"/>
@@ -5019,7 +5024,9 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0010648"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0014062"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0023057"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0043271"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0051589"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_1903531"/>
@@ -5068,7 +5075,9 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0010647"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0014062"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0023056"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0043270"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0051590"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_1903532"/>
@@ -5149,6 +5158,24 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/GO_0015672 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0015672">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0006812"/>
+        <obo:IAO_0000115>The directed movement of inorganic cations with a valency of one into, out of or within a cell, or between cells, by means of some agent such as a transporter or pore. Inorganic cations are atoms or small molecules with a positive charge which do not contain carbon in covalent linkage.</obo:IAO_0000115>
+        <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>GO:0015672</oboInOwl:id>
+        <rdfs:label>monovalent inorganic cation transport</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0015672"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>The directed movement of inorganic cations with a valency of one into, out of or within a cell, or between cells, by means of some agent such as a transporter or pore. Inorganic cations are atoms or small molecules with a positive charge which do not contain carbon in covalent linkage.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:ai</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/GO_0015695 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0015695">
@@ -5171,7 +5198,7 @@
     <!-- http://purl.obolibrary.org/obo/GO_0015696 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0015696">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0006812"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0015672"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0071705"/>
         <obo:IAO_0000115>The directed movement of ammonium into, out of or within a cell, or between cells, by means of some agent such as a transporter or pore. Ammonium is the cation NH4+ which is formed from N2 by root-nodule bacteria in leguminous plants and is an excretory product in ammonotelic animals.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
@@ -5275,7 +5302,6 @@
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0042886"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0071702"/>
         <obo:IAO_0000115>The directed movement of peptides, compounds of two or more amino acids where the alpha carboxyl group of one is bound to the alpha amino group of another, into, out of or within a cell, or between cells, by means of some agent such as a transporter or pore.</obo:IAO_0000115>
-        <oboInOwl:hasDbXref>MIPS_funcat:20.01.09</oboInOwl:hasDbXref>
         <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
         <oboInOwl:id>GO:0015833</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_pir"/>
@@ -5296,7 +5322,6 @@
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0071702"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0071705"/>
         <obo:IAO_0000115>The directed movement of amines, including polyamines, organic compounds containing one or more amino groups, into, out of or within a cell, or between cells, by means of some agent such as a transporter or pore.</obo:IAO_0000115>
-        <oboInOwl:hasDbXref>MIPS_funcat:20.01.11</oboInOwl:hasDbXref>
         <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
         <oboInOwl:hasRelatedSynonym>amine/polyamine transport</oboInOwl:hasRelatedSynonym>
         <oboInOwl:id>GO:0015837</oboInOwl:id>
@@ -5376,8 +5401,8 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0015870">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0006836"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0015695"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0015696"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0015893"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0071705"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_1901374"/>
         <obo:IAO_0000115>The directed movement of acetylcholine into, out of or within a cell, or between cells, by means of some agent such as a transporter or pore. Acetylcholine is an acetic acid ester of the organic base choline and functions as a neurotransmitter, released at the synapses of parasympathetic nerves and at neuromuscular junctions.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
@@ -5396,7 +5421,7 @@
     <!-- http://purl.obolibrary.org/obo/GO_0015872 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0015872">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0015696"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0006812"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0015893"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0051937"/>
         <obo:IAO_0000115>The directed movement of dopamine into, out of or within a cell, or between cells, by means of some agent such as a transporter or pore. Dopamine is a catecholamine neurotransmitter and a metabolic precursor of noradrenaline and adrenaline.</obo:IAO_0000115>
@@ -5424,7 +5449,6 @@
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115>The directed movement of a drug, a substance used in the diagnosis, treatment or prevention of a disease, into, out of or within a cell, or between cells, by means of some agent such as a transporter or pore.</obo:IAO_0000115>
-        <oboInOwl:hasDbXref>MIPS_funcat:20.01.27</oboInOwl:hasDbXref>
         <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
         <oboInOwl:id>GO:0015893</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_pir"/>
@@ -5476,7 +5500,6 @@
         <obo:IAO_0000115>The chemical reactions and pathways resulting in the breakdown of lipids, compounds soluble in an organic solvent but not, or sparingly, in an aqueous solvent.</obo:IAO_0000115>
         <oboInOwl:hasAlternativeId>GO:0006724</oboInOwl:hasAlternativeId>
         <oboInOwl:hasAlternativeId>GO:0044240</oboInOwl:hasAlternativeId>
-        <oboInOwl:hasDbXref>MIPS_funcat:01.06.04</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>Wikipedia:Lipid_catabolism</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym>lipid breakdown</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>lipid catabolism</oboInOwl:hasExactSynonym>
@@ -5504,7 +5527,6 @@
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0009581"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0009582"/>
         <obo:IAO_0000115>The series of events in which a temperature stimulus (hot or cold) is received and converted into a molecular signal.</obo:IAO_0000115>
-        <oboInOwl:hasDbXref>MIPS_funcat:34.11.09</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym>detection of temperature</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>detection of thermal stimulus</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
@@ -5809,7 +5831,6 @@
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115>Any process that modulates the frequency, rate or extent of the chemical reactions and pathways involving lipids.</obo:IAO_0000115>
-        <oboInOwl:hasDbXref>MIPS_funcat:01.06.10</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym>regulation of lipid metabolism</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
         <oboInOwl:id>GO:0019216</oboInOwl:id>
@@ -5911,7 +5932,6 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0019233">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0007600"/>
         <obo:IAO_0000115>The series of events required for an organism to receive a painful stimulus, convert it to a molecular signal, and recognize and characterize the signal. Pain is medically defined as the physical sensation of discomfort or distress caused by injury or illness, so can hence be described as a harmful stimulus which signals current (or impending) tissue damage. Pain may come from extremes of temperature, mechanical damage, electricity or from noxious chemical substances. This is a neurological process.</obo:IAO_0000115>
-        <oboInOwl:hasDbXref>MIPS_funcat:36.25.01.15</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>Wikipedia:Nociception</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym>nociception</oboInOwl:hasExactSynonym>
         <oboInOwl:hasNarrowSynonym>perception of physiological pain</oboInOwl:hasNarrowSynonym>
@@ -5933,7 +5953,6 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0019236">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0010033"/>
         <obo:IAO_0000115>Any process that results in a change in state or activity of a cell or an organism (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of a pheromone stimulus.</obo:IAO_0000115>
-        <oboInOwl:hasDbXref>MIPS_funcat:34.11.03.07</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym>pheromone response</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
         <oboInOwl:id>GO:0019236</oboInOwl:id>
@@ -6052,8 +6071,8 @@
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:kmv</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:krc</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:tb</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ISBN:0387520546</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>http://en.wikipedia.org/wiki/Sexual_reproduction</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>ISBN:0387520546</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>Wikipedia:Sexual_reproduction</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -6469,6 +6488,35 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/GO_0030054 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0030054">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0110165"/>
+        <obo:IAO_0000115>A cellular component that forms a specialized region of connection between two or more cells, or between a cell and the extracellular matrix, or between two membrane-bound components of a cell, such as flagella.</obo:IAO_0000115>
+        <obo:RO_0002161 rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_4751"/>
+        <oboInOwl:hasDbXref>Wikipedia:Cell_junction</oboInOwl:hasDbXref>
+        <oboInOwl:hasOBONamespace>cellular_component</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>GO:0030054</oboInOwl:id>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_agr"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_drosophila"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_flybase_ribbon"/>
+        <rdfs:label>cell junction</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0030054"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A cellular component that forms a specialized region of connection between two or more cells, or between a cell and the extracellular matrix, or between two membrane-bound components of a cell, such as flagella.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:aruk</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:bc</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:mah</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ISBN:0198506732</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>PMID:26820516</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>PMID:28096264</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>http://www.vivo.colostate.edu/hbooks/cmb/cells/pmemb/junctions_a.html</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/GO_0030072 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0030072">
@@ -6584,7 +6632,6 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0030545">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0098772"/>
         <obo:IAO_0000115>The function of interacting (directly or indirectly) with receptors such that the proportion of receptors in the active form is changed.</obo:IAO_0000115>
-        <oboInOwl:hasDbXref>MIPS_funcat:18.02.07</oboInOwl:hasDbXref>
         <oboInOwl:hasOBONamespace>molecular_function</oboInOwl:hasOBONamespace>
         <oboInOwl:id>GO:0030545</oboInOwl:id>
         <rdfs:label>receptor regulator activity</rdfs:label>
@@ -7801,6 +7848,7 @@
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0032386"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0048523"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0051051"/>
         <rdfs:subClassOf>
             <owl:Restriction>
@@ -7841,6 +7889,7 @@
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0032386"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0048522"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0051050"/>
         <rdfs:subClassOf>
             <owl:Restriction>
@@ -7872,6 +7921,8 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0032501">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0008150"/>
         <obo:IAO_0000115>Any biological process, occurring at the level of a multicellular organism, pertinent to its function.</obo:IAO_0000115>
+        <obo:RO_0002161 rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_4896"/>
+        <obo:RO_0002161 rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_4932"/>
         <oboInOwl:created_by>janelomax</oboInOwl:created_by>
         <oboInOwl:creation_date>2012-09-19T16:07:47Z</oboInOwl:creation_date>
         <oboInOwl:hasAlternativeId>GO:0044707</oboInOwl:hasAlternativeId>
@@ -8229,7 +8280,9 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0010648"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0014059"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0023057"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0033604"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0043271"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_2001024"/>
@@ -8271,7 +8324,9 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0010647"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0014059"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0023056"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0033605"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0043270"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_2001025"/>
@@ -8531,6 +8586,7 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0050794"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0051049"/>
         <rdfs:subClassOf>
             <owl:Restriction>
@@ -8568,6 +8624,7 @@
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0034762"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0048523"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0051051"/>
         <rdfs:subClassOf>
             <owl:Restriction>
@@ -8609,6 +8666,7 @@
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0034762"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0048522"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0051050"/>
         <rdfs:subClassOf>
             <owl:Restriction>
@@ -8680,6 +8738,7 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0035249">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0007268"/>
         <obo:IAO_0000115>The vesicular release of glutamate from a presynapse, across a chemical synapse, the subsequent activation of glutamate receptors at the postsynapse of a target cell (neuron, muscle, or secretory cell) and the effects of this activation on the postsynaptic membrane potential and ionic composition of the postsynaptic cytosol. This process encompasses both spontaneous and evoked release of neurotransmitter and all parts of synaptic vesicle exocytosis. Evoked transmission starts with the arrival of an action potential at the presynapse.</obo:IAO_0000115>
+        <oboInOwl:hasExactSynonym>glutamatergic synaptic transmission</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
         <oboInOwl:id>GO:0035249</oboInOwl:id>
         <rdfs:label>synaptic transmission, glutamatergic</rdfs:label>
@@ -8741,13 +8800,13 @@
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:bf</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:jl</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:signaling</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ISBN:3527303782</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>ISBN:3527303782</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0035556"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
         <owl:annotatedTarget>intracellular signaling chain</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ISBN:3527303782</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>ISBN:3527303782</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0035556"/>
@@ -8858,7 +8917,7 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0040011">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0008150"/>
         <obo:IAO_0000115>Self-propelled movement of a cell or organism from one location to another.</obo:IAO_0000115>
-        <oboInOwl:hasDbXref>MIPS_funcat:02.45.11</oboInOwl:hasDbXref>
+        <obo:RO_0002161 rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_451864"/>
         <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
         <oboInOwl:id>GO:0040011</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_chembl"/>
@@ -9021,9 +9080,6 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0042221">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0050896"/>
         <obo:IAO_0000115>Any process that results in a change in state or activity of a cell or an organism (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of a chemical stimulus.</obo:IAO_0000115>
-        <oboInOwl:hasDbXref>MIPS_funcat:34.11.03</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>MIPS_funcat:34.11.03.05</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>MIPS_funcat:36.20.35.09</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym>response to chemical stimulus</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>response to chemical substance</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
@@ -9236,7 +9292,7 @@
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>The directed movement of a motile cell or organism in response to an external stimulus.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:jl</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ISBN:0192801023</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>ISBN:0192801023</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -9573,7 +9629,6 @@
         </rdfs:subClassOf>
         <obo:IAO_0000115>Any process that activates or increases the activity of an enzyme.</obo:IAO_0000115>
         <oboInOwl:hasAlternativeId>GO:0048554</oboInOwl:hasAlternativeId>
-        <oboInOwl:hasDbXref>MIPS_funcat:18.02.01.01</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym>positive regulation of enzyme activity</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>up regulation of enzyme activity</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>up-regulation of enzyme activity</oboInOwl:hasExactSynonym>
@@ -10002,7 +10057,6 @@
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0006970"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0009582"/>
         <obo:IAO_0000115>The series of events in which a stimulus indicating an increase or decrease in the concentration of solutes outside the organism or cell is received and converted into a molecular signal.</obo:IAO_0000115>
-        <oboInOwl:hasDbXref>MIPS_funcat:34.11.03.13</oboInOwl:hasDbXref>
         <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
         <oboInOwl:id>GO:0043575</oboInOwl:id>
         <rdfs:label>detection of osmotic stimulus</rdfs:label>
@@ -10038,7 +10092,6 @@
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115>Any process that modulates the frequency, rate or extent of the process of gaseous exchange between an organism and its environment.</obo:IAO_0000115>
-        <oboInOwl:hasDbXref>MIPS_funcat:36.07.03</oboInOwl:hasDbXref>
         <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
         <oboInOwl:id>GO:0043576</oboInOwl:id>
         <rdfs:label>regulation of respiratory gaseous exchange</rdfs:label>
@@ -10711,8 +10764,8 @@
     <!-- http://purl.obolibrary.org/obo/GO_0045202 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0045202">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0110165"/>
-        <obo:IAO_0000115>The junction between a nerve fiber of one neuron and another neuron, muscle fiber or glial cell. As the nerve fiber approaches the synapse it enlarges into a specialized structure, the presynaptic nerve ending, which contains mitochondria and synaptic vesicles. At the tip of the nerve ending is the presynaptic membrane; facing it, and separated from it by a minute cleft (the synaptic cleft) is a specialized area of membrane on the receiving cell, known as the postsynaptic membrane. In response to the arrival of nerve impulses, the presynaptic nerve ending secretes molecules of neurotransmitters into the synaptic cleft. These diffuse across the cleft and transmit the signal to the postsynaptic membrane.</obo:IAO_0000115>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0030054"/>
+        <obo:IAO_0000115>The junction between an axon of one neuron and a dendrite of another neuron, a muscle fiber or a glial cell. As the axon approaches the synapse it enlarges into a specialized structure, the presynaptic terminal bouton, which contains mitochondria and synaptic vesicles. At the tip of the terminal bouton is the presynaptic membrane; facing it, and separated from it by a minute cleft (the synaptic cleft) is a specialized area of membrane on the receiving cell, known as the postsynaptic membrane. In response to the arrival of nerve impulses, the presynaptic terminal bouton secretes molecules of neurotransmitters into the synaptic cleft. These diffuse across the cleft and transmit the signal to the postsynaptic membrane.</obo:IAO_0000115>
         <oboInOwl:hasDbXref>NIF_Subcellular:sao914572699</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>Wikipedia:Chemical_synapse</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym>synaptic junction</oboInOwl:hasExactSynonym>
@@ -10731,8 +10784,12 @@
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0045202"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>The junction between a nerve fiber of one neuron and another neuron, muscle fiber or glial cell. As the nerve fiber approaches the synapse it enlarges into a specialized structure, the presynaptic nerve ending, which contains mitochondria and synaptic vesicles. At the tip of the nerve ending is the presynaptic membrane; facing it, and separated from it by a minute cleft (the synaptic cleft) is a specialized area of membrane on the receiving cell, known as the postsynaptic membrane. In response to the arrival of nerve impulses, the presynaptic nerve ending secretes molecules of neurotransmitters into the synaptic cleft. These diffuse across the cleft and transmit the signal to the postsynaptic membrane.</owl:annotatedTarget>
+        <owl:annotatedTarget>The junction between an axon of one neuron and a dendrite of another neuron, a muscle fiber or a glial cell. As the axon approaches the synapse it enlarges into a specialized structure, the presynaptic terminal bouton, which contains mitochondria and synaptic vesicles. At the tip of the terminal bouton is the presynaptic membrane; facing it, and separated from it by a minute cleft (the synaptic cleft) is a specialized area of membrane on the receiving cell, known as the postsynaptic membrane. In response to the arrival of nerve impulses, the presynaptic terminal bouton secretes molecules of neurotransmitters into the synaptic cleft. These diffuse across the cleft and transmit the signal to the postsynaptic membrane.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:aruk</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ISBN:0198506732</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>PMID:24619342</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>PMID:29383328</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>PMID:31998110</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0045202"/>
@@ -11550,7 +11607,6 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0046903">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0006810"/>
         <obo:IAO_0000115>The controlled release of a substance by a cell or a tissue.</obo:IAO_0000115>
-        <oboInOwl:hasDbXref>MIPS_funcat:20.09.16</oboInOwl:hasDbXref>
         <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
         <oboInOwl:id>GO:0046903</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_pir"/>
@@ -11581,6 +11637,7 @@
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0006810"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0051641"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0051649"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000066"/>
@@ -11629,6 +11686,7 @@
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0001505"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0050804"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0051588"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0060341"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_1903530"/>
         <rdfs:subClassOf>
             <owl:Restriction>
@@ -11759,6 +11817,7 @@
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115>The activity of a gene product that interacts with a receptor to effect a change in the activity of the receptor. Ligands may be produced by the same, or different, cell that expresses the receptor. Ligands may diffuse extracellularly from their point of origin to the receiving cell, or remain attached to an adjacent cell surface (e.g. Notch ligands).</obo:IAO_0000115>
+        <obo:IAO_0000233 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://github.com/geneontology/go-ontology/issues/14220</obo:IAO_0000233>
         <oboInOwl:created_by>midori</oboInOwl:created_by>
         <oboInOwl:creation_date>2010-09-13T04:51:59Z</oboInOwl:creation_date>
         <oboInOwl:hasAlternativeId>GO:0071884</oboInOwl:hasAlternativeId>
@@ -11770,7 +11829,6 @@
         <oboInOwl:id>GO:0048018</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_chembl"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_drosophila"/>
-        <rdfs:comment>Definition discussed in https://github.com/geneontology/go-ontology/issues/14220</rdfs:comment>
         <rdfs:label>receptor ligand activity</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -11891,7 +11949,6 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0048511">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0008150"/>
         <obo:IAO_0000115>Any process pertinent to the generation and maintenance of rhythms in the physiology of an organism.</obo:IAO_0000115>
-        <oboInOwl:hasDbXref>MIPS_funcat:34.11.11</oboInOwl:hasDbXref>
         <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
         <oboInOwl:hasRelatedSynonym>rhythm</oboInOwl:hasRelatedSynonym>
         <oboInOwl:id>GO:0048511</oboInOwl:id>
@@ -12343,15 +12400,13 @@
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_chembl"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_generic"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_plant"/>
-        <rdfs:comment>This term was added by GO_REF:0000021.</rdfs:comment>
         <rdfs:label>anatomical structure development</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0048856"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>The biological process whose specific outcome is the progression of an anatomical structure from an initial condition to its mature state. This process begins with the formation of the structure and ends with the mature structure, whatever form that may be including its natural destruction. An anatomical structure is any biological entity that occupies space and is distinguished from its surroundings. Anatomical structures can be macroscopic such as a carpel, or microscopic such as an acrosome.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:mtg_15jun06</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GO_REF:0000021</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>GO_REF:0000021</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -12477,7 +12532,6 @@
         </rdfs:subClassOf>
         <obo:IAO_0000115>Any process that modulates the activity of an enzyme.</obo:IAO_0000115>
         <oboInOwl:hasAlternativeId>GO:0048552</oboInOwl:hasAlternativeId>
-        <oboInOwl:hasDbXref>MIPS_funcat:18.02.01</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym>regulation of enzyme activity</oboInOwl:hasExactSynonym>
         <oboInOwl:hasNarrowSynonym>regulation of metalloenzyme activity</oboInOwl:hasNarrowSynonym>
         <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
@@ -12762,7 +12816,7 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0050877">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0003008"/>
         <obo:IAO_0000115>A organ system process carried out by any of the organs or tissues of neurological system.</obo:IAO_0000115>
-        <oboInOwl:hasDbXref>MIPS_funcat:36.25.03</oboInOwl:hasDbXref>
+        <obo:IAO_0000233 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://github.com/geneontology/go-ontology/issues/13824</obo:IAO_0000233>
         <oboInOwl:hasExactSynonym>neurological system process</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>neurophysiological process</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
@@ -12773,7 +12827,6 @@
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_flybase_ribbon"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_generic"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_pir"/>
-        <rdfs:comment>Discussion of class label and synonyms: https://github.com/geneontology/go-ontology/issues/13824</rdfs:comment>
         <rdfs:label>nervous system process</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -12812,7 +12865,6 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0050885">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0050905"/>
         <obo:IAO_0000115>Any process that an organism uses to control its balance, the orientation of the organism (or the head of the organism) in relation to the source of gravity. In humans and animals, balance is perceived through visual cues, the labyrinth system of the inner ears and information from skin pressure receptors and muscle and joint receptors.</obo:IAO_0000115>
-        <oboInOwl:hasDbXref>MIPS_funcat:36.25.03.03.03</oboInOwl:hasDbXref>
         <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
         <oboInOwl:hasRelatedSynonym>regulation of balance</oboInOwl:hasRelatedSynonym>
         <oboInOwl:id>GO:0050885</oboInOwl:id>
@@ -12895,7 +12947,6 @@
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0008150"/>
         <obo:IAO_0000115>Any process that results in a change in state or activity of a cell or an organism (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of a stimulus. The process begins with detection of the stimulus and ends with a change in state or activity or the cell or organism.</obo:IAO_0000115>
         <oboInOwl:hasAlternativeId>GO:0051869</oboInOwl:hasAlternativeId>
-        <oboInOwl:hasDbXref>MIPS_funcat:34.11</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym>physiological response to stimulus</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
         <oboInOwl:id>GO:0050896</oboInOwl:id>
@@ -12922,7 +12973,6 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0050905">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0050877"/>
         <obo:IAO_0000115>Any process pertaining to the functions of the nervous and muscular systems of an organism.</obo:IAO_0000115>
-        <oboInOwl:hasDbXref>MIPS_funcat:36.25.03.03</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym>neuromotor process</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>neuromuscular physiological process</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
@@ -13072,7 +13122,6 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0050909">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0007606"/>
         <obo:IAO_0000115>The series of events required for an organism to receive a gustatory stimulus, convert it to a molecular signal, and recognize and characterize the signal. Gustation involves the direct detection of chemical composition, usually through contact with chemoreceptor cells. This is a neurological process.</obo:IAO_0000115>
-        <oboInOwl:hasDbXref>MIPS_funcat:36.25.01.11</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>Wikipedia:Taste</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym>gustation</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>sense of taste</oboInOwl:hasExactSynonym>
@@ -13409,7 +13458,6 @@
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115>The series of events required for an organism to receive an orientational stimulus, convert it to a molecular signal, and recognize and characterize the signal. Equilibrioception refers to a combination of processes by which an organism can perceive its orientation with respect to gravity. In animals, stimuli come from labyrinth system of the inner ears, monitoring the direction of motion; visual stimuli, with information on orientation and motion; pressure receptors, which tell the organism which body surfaces are in contact with the ground; and proprioceptive cues, which report which parts of the body are in motion.</obo:IAO_0000115>
-        <oboInOwl:hasDbXref>MIPS_funcat:36.25.01.07</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>Wikipedia:Equilibrioception</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym>sensory perception of orientation with respect to gravity</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
@@ -13784,7 +13832,6 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0050975">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0050954"/>
         <obo:IAO_0000115>The series of events required for an organism to receive a touch stimulus, convert it to a molecular signal, and recognize and characterize the signal. This is a neurological process. The perception of touch in animals is mediated by mechanoreceptors in the skin and mucous membranes and is the sense by which contact with objects gives evidence as to certain of their qualities. Different types of touch can be perceived (for example, light, coarse, pressure and tickling) and the stimulus may be external or internal (e.g. the feeling of a full stomach).</obo:IAO_0000115>
-        <oboInOwl:hasDbXref>MIPS_funcat:36.25.01.05</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>Wikipedia:Touch</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym>perception of touch</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>tactile sense</oboInOwl:hasExactSynonym>
@@ -13852,7 +13899,6 @@
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0009582"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0009612"/>
         <obo:IAO_0000115>The series of events by which a mechanical stimulus is received and converted into a molecular signal.</obo:IAO_0000115>
-        <oboInOwl:hasDbXref>MIPS_funcat:34.11.05</oboInOwl:hasDbXref>
         <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
         <oboInOwl:id>GO:0050982</oboInOwl:id>
         <rdfs:label>detection of mechanical stimulus</rdfs:label>
@@ -14988,7 +15034,6 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0051606">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0050896"/>
         <obo:IAO_0000115>The series of events in which a stimulus is received by a cell or organism and converted into a molecular signal.</obo:IAO_0000115>
-        <oboInOwl:hasDbXref>MIPS_funcat:34.11</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym>stimulus detection</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
         <oboInOwl:hasRelatedSynonym>perception of stimulus</oboInOwl:hasRelatedSynonym>
@@ -15012,9 +15057,10 @@
     <!-- http://purl.obolibrary.org/obo/GO_0051608 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0051608">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0006812"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0006836"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0015696"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0071702"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0071705"/>
         <obo:IAO_0000115>The directed movement of histamine into, out of or within a cell, or between cells, by means of some agent such as a transporter or pore. Histamine is a physiologically active amine, found in plant and animal tissue and released from mast cells as part of an allergic reaction in humans.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
         <oboInOwl:id>GO:0051608</oboInOwl:id>
@@ -15032,6 +15078,7 @@
     <!-- http://purl.obolibrary.org/obo/GO_0051641 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0051641">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0009987"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0051179"/>
         <obo:IAO_0000115>A cellular localization process whereby a substance or cellular entity, such as a protein complex or organelle, is transported to, and/or maintained in, a specific location within a cell including the localization of substances or cellular entities to the cell membrane.</obo:IAO_0000115>
         <oboInOwl:created_by>jl</oboInOwl:created_by>
@@ -15074,28 +15121,11 @@
     <!-- http://purl.obolibrary.org/obo/GO_0051649 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0051649">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/GO_0051234"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000066"/>
-                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0005623"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0051234"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0051641"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000066"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0005623"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115>Any process, occuring in a cell, that localizes a substance or cellular component. This may occur via movement, tethering or selective degradation.</obo:IAO_0000115>
@@ -15325,6 +15355,7 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0051932">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0007268"/>
         <obo:IAO_0000115>The vesicular release of  gamma-aminobutyric acid (GABA). from a presynapse, across a chemical synapse, the subsequent activation of GABA receptors at the postsynapse of a target cell (neuron, muscle, or secretory cell) and the effects of this activation on the postsynaptic membrane potential and ionic composition of the postsynaptic cytosol. This process encompasses both spontaneous and evoked release of neurotransmitter and all parts of synaptic vesicle exocytosis. Evoked transmission starts with the arrival of an action potential at the presynapse.</obo:IAO_0000115>
+        <oboInOwl:hasExactSynonym>GABAergic synaptic transmission</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>synaptic transmission, GABA mediated</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>synaptic transmission, gamma-aminobutyric acid mediated</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>synaptic transmission, gamma-aminobutyric acid-ergic</oboInOwl:hasExactSynonym>
@@ -15734,6 +15765,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0055085">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0006810"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0009987"/>
         <obo:IAO_0000115>The process in which a solute is transported across a lipid bilayer, from one side of a membrane to the other.</obo:IAO_0000115>
         <oboInOwl:created_by>tanyaberardini</oboInOwl:created_by>
         <oboInOwl:creation_date>2015-10-21T13:22:47Z</oboInOwl:creation_date>
@@ -15906,6 +15938,7 @@
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0032879"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0050794"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002211"/>
@@ -16172,7 +16205,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0061526">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0015870"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0032940"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0023061"/>
         <obo:IAO_0000115>The regulated release of acetylcholine by a cell.</obo:IAO_0000115>
         <oboInOwl:created_by>dph</oboInOwl:created_by>
         <oboInOwl:creation_date>2013-06-21T15:40:39Z</oboInOwl:creation_date>
@@ -16220,7 +16253,6 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0061531">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0015695"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0015696"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0015837"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0032940"/>
         <obo:IAO_0000115>The regulated release of a primary amine by a cell.</obo:IAO_0000115>
@@ -16339,9 +16371,9 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0061539">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0006836"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0015695"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0015696"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0015850"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0032940"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0071705"/>
         <obo:IAO_0000115>The controlled release of octopamine by a cell.</obo:IAO_0000115>
         <oboInOwl:created_by>dph</oboInOwl:created_by>
         <oboInOwl:creation_date>2013-06-21T16:24:02Z</oboInOwl:creation_date>
@@ -16927,7 +16959,6 @@
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0071415"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Any process that results in a change in state or activity of a cell (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of a purine-containing compound stimulus.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>CHEBI:26401</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:mah</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -16952,7 +16983,6 @@
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0071417"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Any process that results in a change in state or activity of a cell (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of an organonitrogen stimulus. An organonitrogen compound is formally a compound containing at least one carbon-nitrogen bond.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>CHEBI:35352</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:mah</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
@@ -17122,7 +17152,6 @@
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0071702"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>The directed movement of organic substances into, out of or within a cell, or between cells, or within a multicellular organism by means of some agent such as a transporter or pore. An organic substance is a molecular entity that contains carbon.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>CHEBI:50860</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:mah</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -17146,7 +17175,6 @@
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0071704"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>The chemical reactions and pathways involving an organic substance, any molecular entity containing carbon.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>CHEBI:50860</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:mah</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -17167,7 +17195,6 @@
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0071705"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>The directed movement of nitrogen-containing compounds into, out of or within a cell, or between cells, by means of some agent such as a transporter or pore.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>CHEBI:51143</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:mah</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -17675,6 +17702,8 @@
         <obo:IAO_0000115>Any process that results in a change in state or activity of a cell or an organism (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of an alcohol stimulus.</obo:IAO_0000115>
         <oboInOwl:created_by>paola</oboInOwl:created_by>
         <oboInOwl:creation_date>2012-05-15T03:48:45Z</oboInOwl:creation_date>
+        <oboInOwl:hasAlternativeId>GO:1990335</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasNarrowSynonym>process resulting in tolerance to alcohol</oboInOwl:hasNarrowSynonym>
         <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
         <oboInOwl:id>GO:0097305</oboInOwl:id>
         <rdfs:label>response to alcohol</rdfs:label>
@@ -17683,8 +17712,8 @@
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0097305"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Any process that results in a change in state or activity of a cell or an organism (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of an alcohol stimulus.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>CHEBI:30879</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:pr</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>PMID:24014527</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -17706,7 +17735,6 @@
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0097306"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Any process that results in a change in state or activity of a cell (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of an alcohol stimulus.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>CHEBI:30879</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:pr</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -17729,7 +17757,6 @@
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0097307"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Any process that results in a change in state or activity of a cell or an organism (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of a farnesol stimulus.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>CHEBI:28600</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:pr</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -17753,7 +17780,6 @@
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0097308"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Any process that results in a change in state or activity of a cell (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of a farnesol stimulus.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>CHEBI:28600</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:di</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>PMID:11425711</oboInOwl:hasDbXref>
     </owl:Axiom>
@@ -17779,7 +17805,7 @@
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>OBSOLETE. Any constituent part of a neuron, the basic cellular unit of nervous tissue. A typical neuron consists of a cell body (often called the soma), an axon, and dendrites. Their purpose is to receive, conduct, and transmit impulses in the nervous system.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:pr</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>http://en.wikipedia.org/wiki/Neuron</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>Wikipedia:Neuron</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -18191,6 +18217,7 @@
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0014046"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0051649"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000066"/>
@@ -18370,6 +18397,7 @@
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115>Cell-cell signaling to, from or within a synapse.</obo:IAO_0000115>
+        <obo:RO_0002161 rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_4895"/>
         <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
         <oboInOwl:id>GO:0099536</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_synapse"/>
@@ -22534,7 +22562,7 @@
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:aruk</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:bc</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GO_REF:0000058</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>PMID:11404397</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PMID:11404397</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_1905945"/>
@@ -22591,7 +22619,7 @@
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:aruk</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:bc</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GO_REF:0000058</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>PMID:11404397</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PMID:11404397</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_1905946"/>
@@ -22696,7 +22724,7 @@
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:aruk</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:bc</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GO_REF:0000058</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>PMID:11404397</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PMID:11404397</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_1905947"/>

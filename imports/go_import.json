@@ -21,9 +21,6 @@
           "val" : "The series of events in which a stimulus indicating an increase or decrease in the concentration of solutes outside the organism or cell is received and converted into a molecular signal.",
           "xrefs" : [ "GOC:jl" ]
         },
-        "xrefs" : [ {
-          "val" : "MIPS_funcat:34.11.03.13"
-        } ],
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "biological_process"
@@ -89,9 +86,6 @@
           "val" : "Any process that modulates the frequency, rate or extent of the process of gaseous exchange between an organism and its environment.",
           "xrefs" : [ "GOC:jl" ]
         },
-        "xrefs" : [ {
-          "val" : "MIPS_funcat:36.07.03"
-        } ],
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "biological_process"
@@ -158,6 +152,26 @@
       "type" : "CLASS",
       "lbl" : "regulation of biological quality"
     }, {
+      "id" : "http://purl.obolibrary.org/obo/GO_0065009",
+      "meta" : {
+        "definition" : {
+          "val" : "Any process that modulates the frequency, rate or extent of a molecular function, an elemental biological activity occurring at the molecular level, such as catalysis or binding.",
+          "xrefs" : [ "GOC:isa_complete" ]
+        },
+        "subsets" : [ "http://purl.obolibrary.org/obo/go#goslim_pir", "http://purl.obolibrary.org/obo/go#goslim_plant", "http://purl.obolibrary.org/obo/go#gocheck_do_not_annotate" ],
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "regulation of a molecular function",
+          "xrefs" : [ ]
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "biological_process"
+        } ]
+      },
+      "type" : "CLASS",
+      "lbl" : "regulation of molecular function"
+    }, {
       "id" : "http://purl.obolibrary.org/obo/GO_0009892",
       "meta" : {
         "definition" : {
@@ -207,26 +221,6 @@
       },
       "type" : "CLASS",
       "lbl" : "negative regulation of metabolic process"
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/GO_0065009",
-      "meta" : {
-        "definition" : {
-          "val" : "Any process that modulates the frequency, rate or extent of a molecular function, an elemental biological activity occurring at the molecular level, such as catalysis or binding.",
-          "xrefs" : [ "GOC:isa_complete" ]
-        },
-        "subsets" : [ "http://purl.obolibrary.org/obo/go#goslim_pir", "http://purl.obolibrary.org/obo/go#goslim_plant", "http://purl.obolibrary.org/obo/go#gocheck_do_not_annotate" ],
-        "synonyms" : [ {
-          "pred" : "hasExactSynonym",
-          "val" : "regulation of a molecular function",
-          "xrefs" : [ ]
-        } ],
-        "basicPropertyValues" : [ {
-          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
-          "val" : "biological_process"
-        } ]
-      },
-      "type" : "CLASS",
-      "lbl" : "regulation of molecular function"
     }, {
       "id" : "http://purl.obolibrary.org/obo/GO_0090328",
       "meta" : {
@@ -549,9 +543,6 @@
           "val" : "Any process that modulates the frequency, rate or extent of the chemical reactions and pathways involving lipids.",
           "xrefs" : [ "GOC:go_curators" ]
         },
-        "xrefs" : [ {
-          "val" : "MIPS_funcat:01.06.10"
-        } ],
         "synonyms" : [ {
           "pred" : "hasExactSynonym",
           "val" : "regulation of lipid metabolism",
@@ -600,13 +591,6 @@
           "xrefs" : [ "GOC:go_curators", "ISBN:0582227089" ]
         },
         "subsets" : [ "http://purl.obolibrary.org/obo/go#goslim_plant" ],
-        "xrefs" : [ {
-          "val" : "MIPS_funcat:36.20.35.11"
-        }, {
-          "val" : "MIPS_funcat:34.11.01"
-        }, {
-          "val" : "MIPS_funcat:34.11.01.01"
-        } ],
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "biological_process"
@@ -1123,7 +1107,7 @@
       "meta" : {
         "definition" : {
           "val" : "The directed movement of nitrogen-containing compounds into, out of or within a cell, or between cells, by means of some agent such as a transporter or pore.",
-          "xrefs" : [ "CHEBI:51143", "GOC:mah" ]
+          "xrefs" : [ "GOC:mah" ]
         },
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
@@ -1145,9 +1129,6 @@
           "val" : "The series of events in which a temperature stimulus (hot or cold) is received and converted into a molecular signal.",
           "xrefs" : [ "GOC:hb" ]
         },
-        "xrefs" : [ {
-          "val" : "MIPS_funcat:34.11.09"
-        } ],
         "synonyms" : [ {
           "pred" : "hasRelatedSynonym",
           "val" : "perception of temperature",
@@ -1173,7 +1154,7 @@
       "meta" : {
         "definition" : {
           "val" : "The chemical reactions and pathways involving an organic substance, any molecular entity containing carbon.",
-          "xrefs" : [ "CHEBI:50860", "GOC:mah" ]
+          "xrefs" : [ "GOC:mah" ]
         },
         "synonyms" : [ {
           "pred" : "hasExactSynonym",
@@ -1267,7 +1248,7 @@
       "meta" : {
         "definition" : {
           "val" : "The directed movement of organic substances into, out of or within a cell, or between cells, or within a multicellular organism by means of some agent such as a transporter or pore. An organic substance is a molecular entity that contains carbon.",
-          "xrefs" : [ "CHEBI:50860", "GOC:mah" ]
+          "xrefs" : [ "GOC:mah" ]
         },
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
@@ -1411,8 +1392,6 @@
         },
         "xrefs" : [ {
           "val" : "Wikipedia:Lipid_catabolism"
-        }, {
-          "val" : "MIPS_funcat:01.06.04"
         } ],
         "synonyms" : [ {
           "pred" : "hasNarrowSynonym",
@@ -1706,8 +1685,6 @@
         "subsets" : [ "http://purl.obolibrary.org/obo/go#goslim_pir", "http://purl.obolibrary.org/obo/go#goslim_chembl" ],
         "xrefs" : [ {
           "val" : "Wikipedia:Digestion"
-        }, {
-          "val" : "MIPS_funcat:36.03"
         } ],
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
@@ -1724,9 +1701,6 @@
           "xrefs" : [ "ISBN:0198506732" ]
         },
         "subsets" : [ "http://purl.obolibrary.org/obo/go#goslim_chembl" ],
-        "xrefs" : [ {
-          "val" : "MIPS_funcat:36.07.01"
-        } ],
         "synonyms" : [ {
           "pred" : "hasBroadSynonym",
           "val" : "breathing",
@@ -2449,9 +2423,6 @@
           "val" : "Any process pertaining to the functions of the nervous and muscular systems of an organism.",
           "xrefs" : [ "GOC:ai" ]
         },
-        "xrefs" : [ {
-          "val" : "MIPS_funcat:36.25.03.03"
-        } ],
         "synonyms" : [ {
           "pred" : "hasExactSynonym",
           "val" : "neuromotor process",
@@ -2509,11 +2480,6 @@
           "val" : "Any process that results in a change in state or activity of a cell or an organism (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of a mechanical stimulus.",
           "xrefs" : [ "GOC:hb" ]
         },
-        "xrefs" : [ {
-          "val" : "MIPS_funcat:34.11.05"
-        }, {
-          "val" : "MIPS_funcat:36.20.35.15"
-        } ],
         "synonyms" : [ {
           "pred" : "hasExactSynonym",
           "val" : "mechanical stimulus response",
@@ -2726,11 +2692,17 @@
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "biological_process"
         }, {
+          "pred" : "http://purl.obolibrary.org/obo/RO_0002161",
+          "val" : "http://purl.obolibrary.org/obo/NCBITaxon_4932"
+        }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
           "val" : "janelomax"
         }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
           "val" : "2012-09-19T16:07:47Z"
+        }, {
+          "pred" : "http://purl.obolibrary.org/obo/RO_0002161",
+          "val" : "http://purl.obolibrary.org/obo/NCBITaxon_4896"
         } ]
       },
       "type" : "CLASS",
@@ -2843,8 +2815,8 @@
       "id" : "http://purl.obolibrary.org/obo/GO_0045202",
       "meta" : {
         "definition" : {
-          "val" : "The junction between a nerve fiber of one neuron and another neuron, muscle fiber or glial cell. As the nerve fiber approaches the synapse it enlarges into a specialized structure, the presynaptic nerve ending, which contains mitochondria and synaptic vesicles. At the tip of the nerve ending is the presynaptic membrane; facing it, and separated from it by a minute cleft (the synaptic cleft) is a specialized area of membrane on the receiving cell, known as the postsynaptic membrane. In response to the arrival of nerve impulses, the presynaptic nerve ending secretes molecules of neurotransmitters into the synaptic cleft. These diffuse across the cleft and transmit the signal to the postsynaptic membrane.",
-          "xrefs" : [ "ISBN:0198506732" ]
+          "val" : "The junction between an axon of one neuron and a dendrite of another neuron, a muscle fiber or a glial cell. As the axon approaches the synapse it enlarges into a specialized structure, the presynaptic terminal bouton, which contains mitochondria and synaptic vesicles. At the tip of the terminal bouton is the presynaptic membrane; facing it, and separated from it by a minute cleft (the synaptic cleft) is a specialized area of membrane on the receiving cell, known as the postsynaptic membrane. In response to the arrival of nerve impulses, the presynaptic terminal bouton secretes molecules of neurotransmitters into the synaptic cleft. These diffuse across the cleft and transmit the signal to the postsynaptic membrane.",
+          "xrefs" : [ "GOC:aruk", "ISBN:0198506732", "PMID:24619342", "PMID:29383328", "PMID:31998110" ]
         },
         "subsets" : [ "http://purl.obolibrary.org/obo/go#goslim_mouse", "http://purl.obolibrary.org/obo/go#goslim_flybase_ribbon", "http://purl.obolibrary.org/obo/go#goslim_pir", "http://purl.obolibrary.org/obo/go#goslim_drosophila", "http://purl.obolibrary.org/obo/go#goslim_agr", "http://purl.obolibrary.org/obo/go#goslim_synapse" ],
         "xrefs" : [ {
@@ -3075,8 +3047,6 @@
           "xrefs" : [ "GOC:ai" ]
         },
         "xrefs" : [ {
-          "val" : "MIPS_funcat:36.25.01.11"
-        }, {
           "val" : "Wikipedia:Taste"
         } ],
         "synonyms" : [ {
@@ -3184,11 +3154,14 @@
           "xrefs" : [ ]
         } ],
         "basicPropertyValues" : [ {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
-          "val" : "Note that this term is in the subset of terms that should not be used for direct gene product annotation. Instead, select a child term or, if no appropriate child term exists, please request a new term. Direct annotations to this term may be amended during annotation QC. Changed definition as requested in https://github.com/geneontology/go-ontology/issues/16572."
-        }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "biological_process"
+        }, {
+          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
+          "val" : "Note that this term is in the subset of terms that should not be used for direct gene product annotation. Instead, select a child term or, if no appropriate child term exists, please request a new term. Direct annotations to this term may be amended during annotation QC."
+        }, {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000233",
+          "val" : "https://github.com/geneontology/go-ontology/issues/16572"
         } ]
       },
       "type" : "CLASS",
@@ -3200,11 +3173,6 @@
           "val" : "Any process that results in a change in state or activity of a cell or an organism (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of a gravitational stimulus.",
           "xrefs" : [ "GOC:hb" ]
         },
-        "xrefs" : [ {
-          "val" : "MIPS_funcat:34.11.07"
-        }, {
-          "val" : "MIPS_funcat:36.20.35.13"
-        } ],
         "synonyms" : [ {
           "pred" : "hasExactSynonym",
           "val" : "response to gravitational stimulus",
@@ -3890,9 +3858,6 @@
           "val" : "The function of interacting (directly or indirectly) with receptors such that the proportion of receptors in the active form is changed.",
           "xrefs" : [ "GOC:ceb" ]
         },
-        "xrefs" : [ {
-          "val" : "MIPS_funcat:18.02.07"
-        } ],
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "molecular_function"
@@ -3950,7 +3915,7 @@
       "meta" : {
         "definition" : {
           "val" : "The biological process whose specific outcome is the progression of an anatomical structure from an initial condition to its mature state. This process begins with the formation of the structure and ends with the mature structure, whatever form that may be including its natural destruction. An anatomical structure is any biological entity that occupies space and is distinguished from its surroundings. Anatomical structures can be macroscopic such as a carpel, or microscopic such as an acrosome.",
-          "xrefs" : [ "GOC:mtg_15jun06", "GO_REF:0000021" ]
+          "xrefs" : [ "GO_REF:0000021" ]
         },
         "subsets" : [ "http://purl.obolibrary.org/obo/go#goslim_chembl", "http://purl.obolibrary.org/obo/go#goslim_generic", "http://purl.obolibrary.org/obo/go#goslim_plant" ],
         "synonyms" : [ {
@@ -3959,9 +3924,6 @@
           "xrefs" : [ ]
         } ],
         "basicPropertyValues" : [ {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
-          "val" : "This term was added by GO_REF:0000021."
-        }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "biological_process"
         } ]
@@ -4268,9 +4230,6 @@
           "xrefs" : [ "GOC:hb" ]
         },
         "subsets" : [ "http://purl.obolibrary.org/obo/go#gocheck_do_not_manually_annotate", "http://purl.obolibrary.org/obo/go#goslim_drosophila", "http://purl.obolibrary.org/obo/go#goslim_plant" ],
-        "xrefs" : [ {
-          "val" : "MIPS_funcat:36.20.35"
-        } ],
         "synonyms" : [ {
           "pred" : "hasExactSynonym",
           "val" : "response to environmental stimulus",
@@ -4696,6 +4655,9 @@
         },
         "subsets" : [ "http://purl.obolibrary.org/obo/go#goslim_synapse" ],
         "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/RO_0002161",
+          "val" : "http://purl.obolibrary.org/obo/NCBITaxon_4895"
+        }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "biological_process"
         } ]
@@ -4740,9 +4702,6 @@
           "val" : "Any process that results in a change in state or activity of a cell or an organism (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of a temperature stimulus.",
           "xrefs" : [ "GOC:hb" ]
         },
-        "xrefs" : [ {
-          "val" : "MIPS_funcat:34.11.09"
-        } ],
         "synonyms" : [ {
           "pred" : "hasExactSynonym",
           "val" : "response to thermal stimulus",
@@ -5041,8 +5000,6 @@
         "subsets" : [ "http://purl.obolibrary.org/obo/go#gocheck_do_not_manually_annotate", "http://purl.obolibrary.org/obo/go#goslim_chembl", "http://purl.obolibrary.org/obo/go#goslim_plant", "http://purl.obolibrary.org/obo/go#goslim_metagenomics", "http://purl.obolibrary.org/obo/go#goslim_pir" ],
         "xrefs" : [ {
           "val" : "Wikipedia:Metabolism"
-        }, {
-          "val" : "MIPS_funcat:01"
         } ],
         "synonyms" : [ {
           "pred" : "hasRelatedSynonym",
@@ -5529,9 +5486,6 @@
           "xrefs" : [ "GOC:ai" ]
         },
         "subsets" : [ "http://purl.obolibrary.org/obo/go#goslim_pir" ],
-        "xrefs" : [ {
-          "val" : "MIPS_funcat:20.09.16"
-        } ],
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "biological_process"
@@ -5705,7 +5659,7 @@
       "meta" : {
         "definition" : {
           "val" : "OBSOLETE. Any constituent part of a neuron, the basic cellular unit of nervous tissue. A typical neuron consists of a cell body (often called the soma), an axon, and dendrites. Their purpose is to receive, conduct, and transmit impulses in the nervous system.",
-          "xrefs" : [ "GOC:pr", "http://en.wikipedia.org/wiki/Neuron" ]
+          "xrefs" : [ "GOC:pr", "Wikipedia:Neuron" ]
         },
         "subsets" : [ "http://purl.obolibrary.org/obo/go#goslim_flybase_ribbon", "http://purl.obolibrary.org/obo/go#gocheck_do_not_annotate" ],
         "basicPropertyValues" : [ {
@@ -5770,12 +5724,12 @@
           "xrefs" : [ "GOC:dgh" ]
         },
         "subsets" : [ "http://purl.obolibrary.org/obo/go#goslim_pir", "http://purl.obolibrary.org/obo/go#goslim_chembl", "http://purl.obolibrary.org/obo/go#goslim_generic" ],
-        "xrefs" : [ {
-          "val" : "MIPS_funcat:02.45.11"
-        } ],
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "biological_process"
+        }, {
+          "pred" : "http://purl.obolibrary.org/obo/RO_0002161",
+          "val" : "http://purl.obolibrary.org/obo/NCBITaxon_451864"
         } ]
       },
       "type" : "CLASS",
@@ -5876,11 +5830,6 @@
           "xrefs" : [ "GOC:bf", "GOC:mah", "PMID:16902576", "PMID:24568158", "Wikipedia:G_protein-coupled_receptor" ]
         },
         "subsets" : [ "http://purl.obolibrary.org/obo/go#goslim_drosophila" ],
-        "xrefs" : [ {
-          "val" : "MIPS_funcat:30.01.05.05"
-        }, {
-          "val" : "MIPS_funcat:30.05.02.24"
-        } ],
         "synonyms" : [ {
           "pred" : "hasExactSynonym",
           "val" : "G-protein coupled receptor protein signal transduction",
@@ -6141,27 +6090,6 @@
       "type" : "CLASS",
       "lbl" : "negative regulation of intestinal absorption"
     }, {
-      "id" : "http://purl.obolibrary.org/obo/GO_0007275",
-      "meta" : {
-        "definition" : {
-          "val" : "The biological process whose specific outcome is the progression of a multicellular organism over time from an initial condition (e.g. a zygote or a young adult) to a later condition (e.g. a multicellular animal or an aged adult).",
-          "xrefs" : [ "GOC:dph", "GOC:ems", "GOC:isa_complete", "GOC:tb" ]
-        },
-        "subsets" : [ "http://purl.obolibrary.org/obo/go#goslim_plant", "http://purl.obolibrary.org/obo/go#goslim_chembl" ],
-        "xrefs" : [ {
-          "val" : "MIPS_funcat:41"
-        } ],
-        "basicPropertyValues" : [ {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
-          "val" : "Note that this term was 'developmental process'."
-        }, {
-          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
-          "val" : "biological_process"
-        } ]
-      },
-      "type" : "CLASS",
-      "lbl" : "multicellular organism development"
-    }, {
       "id" : "http://purl.obolibrary.org/obo/GO_1904478",
       "meta" : {
         "definition" : {
@@ -6199,6 +6127,24 @@
       },
       "type" : "CLASS",
       "lbl" : "cell communication"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/GO_0007275",
+      "meta" : {
+        "definition" : {
+          "val" : "The biological process whose specific outcome is the progression of a multicellular organism over time from an initial condition (e.g. a zygote or a young adult) to a later condition (e.g. a multicellular animal or an aged adult).",
+          "xrefs" : [ "GOC:dph", "GOC:ems", "GOC:isa_complete", "GOC:tb" ]
+        },
+        "subsets" : [ "http://purl.obolibrary.org/obo/go#goslim_plant", "http://purl.obolibrary.org/obo/go#goslim_chembl" ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
+          "val" : "Note that this term was 'developmental process'."
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "biological_process"
+        } ]
+      },
+      "type" : "CLASS",
+      "lbl" : "multicellular organism development"
     }, {
       "id" : "http://purl.obolibrary.org/obo/GO_0009581",
       "meta" : {
@@ -6509,6 +6455,27 @@
       },
       "type" : "CLASS",
       "lbl" : "positive regulation of lipid metabolic process"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/GO_0030054",
+      "meta" : {
+        "definition" : {
+          "val" : "A cellular component that forms a specialized region of connection between two or more cells, or between a cell and the extracellular matrix, or between two membrane-bound components of a cell, such as flagella.",
+          "xrefs" : [ "GOC:aruk", "GOC:bc", "GOC:mah", "ISBN:0198506732", "PMID:26820516", "PMID:28096264", "http://www.vivo.colostate.edu/hbooks/cmb/cells/pmemb/junctions_a.html" ]
+        },
+        "subsets" : [ "http://purl.obolibrary.org/obo/go#goslim_flybase_ribbon", "http://purl.obolibrary.org/obo/go#goslim_drosophila", "http://purl.obolibrary.org/obo/go#goslim_agr" ],
+        "xrefs" : [ {
+          "val" : "Wikipedia:Cell_junction"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/RO_0002161",
+          "val" : "http://purl.obolibrary.org/obo/NCBITaxon_4751"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "cellular_component"
+        } ]
+      },
+      "type" : "CLASS",
+      "lbl" : "cell junction"
     }, {
       "id" : "http://purl.obolibrary.org/obo/GO_0032230",
       "meta" : {
@@ -6938,8 +6905,6 @@
         "subsets" : [ "http://purl.obolibrary.org/obo/go#goslim_chembl", "http://purl.obolibrary.org/obo/go#goslim_candida", "http://purl.obolibrary.org/obo/go#goslim_metagenomics", "http://purl.obolibrary.org/obo/go#goslim_aspergillus", "http://purl.obolibrary.org/obo/go#goslim_plant", "http://purl.obolibrary.org/obo/go#goslim_generic" ],
         "xrefs" : [ {
           "val" : "Wikipedia:Signal_transduction"
-        }, {
-          "val" : "MIPS_funcat:30"
         } ],
         "synonyms" : [ {
           "pred" : "hasNarrowSynonym",
@@ -7000,9 +6965,6 @@
           "val" : "The series of events in which a chemical stimulus is received by a cell and converted into a molecular signal.",
           "xrefs" : [ "GOC:jl" ]
         },
-        "xrefs" : [ {
-          "val" : "MIPS_funcat:34.11.03"
-        } ],
         "synonyms" : [ {
           "pred" : "hasExactSynonym",
           "val" : "chemoperception",
@@ -7038,11 +7000,6 @@
           "val" : "The series of events in which a light stimulus (in the form of photons) is received and converted into a molecular signal.",
           "xrefs" : [ "GOC:go_curators" ]
         },
-        "xrefs" : [ {
-          "val" : "MIPS_funcat:34.11.01"
-        }, {
-          "val" : "MIPS_funcat:36.20.35.11"
-        } ],
         "synonyms" : [ {
           "pred" : "hasRelatedSynonym",
           "val" : "perception of light",
@@ -7631,13 +7588,6 @@
           "xrefs" : [ "GOC:jl" ]
         },
         "subsets" : [ "http://purl.obolibrary.org/obo/go#goslim_drosophila", "http://purl.obolibrary.org/obo/go#goslim_yeast", "http://purl.obolibrary.org/obo/go#goslim_metagenomics", "http://purl.obolibrary.org/obo/go#goslim_plant", "http://purl.obolibrary.org/obo/go#gocheck_do_not_manually_annotate", "http://purl.obolibrary.org/obo/go#goslim_aspergillus", "http://purl.obolibrary.org/obo/go#goslim_candida" ],
-        "xrefs" : [ {
-          "val" : "MIPS_funcat:34.11.03.05"
-        }, {
-          "val" : "MIPS_funcat:34.11.03"
-        }, {
-          "val" : "MIPS_funcat:36.20.35.09"
-        } ],
         "synonyms" : [ {
           "pred" : "hasExactSynonym",
           "val" : "response to chemical substance",
@@ -7842,9 +7792,6 @@
           "val" : "Any process that results in a change in state or activity of a cell or an organism (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of an electromagnetic radiation stimulus. Electromagnetic radiation is a propagating wave in space with electric and magnetic components. These components oscillate at right angles to each other and to the direction of propagation.",
           "xrefs" : [ "GOC:jl", "Wikipedia:Electromagnetic_radiation" ]
         },
-        "xrefs" : [ {
-          "val" : "MIPS_funcat:32.01.13"
-        } ],
         "synonyms" : [ {
           "pred" : "hasExactSynonym",
           "val" : "response to radiation stimulus",
@@ -7871,9 +7818,6 @@
           "val" : "Any process that results in a change in state or activity of a cell or an organism (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of a pheromone stimulus.",
           "xrefs" : [ "GOC:jl" ]
         },
-        "xrefs" : [ {
-          "val" : "MIPS_funcat:34.11.03.07"
-        } ],
         "synonyms" : [ {
           "pred" : "hasExactSynonym",
           "val" : "pheromone response",
@@ -8008,8 +7952,6 @@
         },
         "xrefs" : [ {
           "val" : "Wikipedia:Nociception"
-        }, {
-          "val" : "MIPS_funcat:36.25.01.15"
         } ],
         "synonyms" : [ {
           "pred" : "hasExactSynonym",
@@ -8083,6 +8025,11 @@
           "val" : "The vesicular release of  dopamine. from a presynapse, across a chemical synapse, the subsequent activation of dopamine receptors at the postsynapse of a target cell (neuron, muscle, or secretory cell) and the effects of this activation on the postsynaptic membrane potential and ionic composition of the postsynaptic cytosol. This process encompasses both spontaneous and evoked release of neurotransmitter and all parts of synaptic vesicle exocytosis. Evoked transmission starts with the arrival of an action potential at the presynapse.",
           "xrefs" : [ "GOC:dos", "GOC:dph" ]
         },
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "dopaminergic synaptic transmission",
+          "xrefs" : [ ]
+        } ],
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "biological_process"
@@ -8177,8 +8124,6 @@
         },
         "subsets" : [ "http://purl.obolibrary.org/obo/go#goslim_synapse" ],
         "xrefs" : [ {
-          "val" : "MIPS_funcat:34.03.01"
-        }, {
           "val" : "Wikipedia:Neurotransmission"
         } ],
         "synonyms" : [ {
@@ -8361,6 +8306,11 @@
           "val" : "The vesicular release of acetylcholine from a presynapse, across a chemical synapse, the subsequent activation of dopamine receptors at the postsynapse of a target cell (neuron, muscle, or secretory cell) and the effects of this activation on the postsynaptic membrane potential and ionic composition of the postsynaptic cytosol. This process encompasses both spontaneous and evoked release of neurotransmitter and all parts of synaptic vesicle exocytosis. Evoked transmission starts with the arrival of an action potential at the presynapse.",
           "xrefs" : [ "GOC:dos", "Wikipedia:Cholinergic" ]
         },
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "cholinergic synaptic transmission",
+          "xrefs" : [ ]
+        } ],
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "biological_process"
@@ -8626,9 +8576,6 @@
           "val" : "The directed movement of anions, atoms or small molecules with a net negative charge, into, out of or within a cell, or between cells, by means of some agent such as a transporter or pore.",
           "xrefs" : [ "GOC:ai" ]
         },
-        "xrefs" : [ {
-          "val" : "MIPS_funcat:20.01.01.07"
-        } ],
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "biological_process"
@@ -9055,9 +9002,6 @@
           "xrefs" : [ "GOC:ai" ]
         },
         "subsets" : [ "http://purl.obolibrary.org/obo/go#goslim_pir" ],
-        "xrefs" : [ {
-          "val" : "MIPS_funcat:20.01.27"
-        } ],
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "biological_process"
@@ -9073,9 +9017,6 @@
           "xrefs" : [ "GOC:ai" ]
         },
         "subsets" : [ "http://purl.obolibrary.org/obo/go#goslim_pir" ],
-        "xrefs" : [ {
-          "val" : "MIPS_funcat:20.01.26"
-        } ],
         "synonyms" : [ {
           "pred" : "hasNarrowSynonym",
           "val" : "sodium:neurotransmitter transport",
@@ -9337,9 +9278,6 @@
           "xrefs" : [ "GOC:mah" ]
         },
         "subsets" : [ "http://purl.obolibrary.org/obo/go#goslim_metagenomics", "http://purl.obolibrary.org/obo/go#goslim_candida", "http://purl.obolibrary.org/obo/go#goslim_drosophila", "http://purl.obolibrary.org/obo/go#goslim_chembl", "http://purl.obolibrary.org/obo/go#goslim_plant", "http://purl.obolibrary.org/obo/go#gocheck_do_not_manually_annotate", "http://purl.obolibrary.org/obo/go#goslim_aspergillus", "http://purl.obolibrary.org/obo/go#goslim_generic" ],
-        "xrefs" : [ {
-          "val" : "MIPS_funcat:32.01"
-        } ],
         "synonyms" : [ {
           "pred" : "hasRelatedSynonym",
           "val" : "response to abiotic stress",
@@ -9714,9 +9652,6 @@
           "xrefs" : [ "GOC:ai", "GOC:ebc", "GOC:vw" ]
         },
         "subsets" : [ "http://purl.obolibrary.org/obo/go#goslim_chembl" ],
-        "xrefs" : [ {
-          "val" : "MIPS_funcat:18.02.01"
-        } ],
         "synonyms" : [ {
           "pred" : "hasNarrowSynonym",
           "val" : "regulation of metalloenzyme activity",
@@ -10041,6 +9976,11 @@
           "val" : "The vesicular release of glutamate from a presynapse, across a chemical synapse, the subsequent activation of glutamate receptors at the postsynapse of a target cell (neuron, muscle, or secretory cell) and the effects of this activation on the postsynaptic membrane potential and ionic composition of the postsynaptic cytosol. This process encompasses both spontaneous and evoked release of neurotransmitter and all parts of synaptic vesicle exocytosis. Evoked transmission starts with the arrival of an action potential at the presynapse.",
           "xrefs" : [ "GOC:dos" ]
         },
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "glutamatergic synaptic transmission",
+          "xrefs" : [ ]
+        } ],
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "biological_process"
@@ -10207,9 +10147,6 @@
           "val" : "The directed movement of cations, atoms or small molecules with a net positive charge, into, out of or within a cell, or between cells, by means of some agent such as a transporter or pore.",
           "xrefs" : [ "GOC:ai" ]
         },
-        "xrefs" : [ {
-          "val" : "MIPS_funcat:20.01.01.01"
-        } ],
         "synonyms" : [ {
           "pred" : "hasNarrowSynonym",
           "val" : "di-, tri-valent inorganic cation transport",
@@ -10236,9 +10173,6 @@
           "xrefs" : [ "GOC:dos", "GOC:dph", "GOC:jl", "GOC:mah" ]
         },
         "subsets" : [ "http://purl.obolibrary.org/obo/go#goslim_generic", "http://purl.obolibrary.org/obo/go#goslim_plant", "http://purl.obolibrary.org/obo/go#gocheck_do_not_annotate", "http://purl.obolibrary.org/obo/go#goslim_metagenomics", "http://purl.obolibrary.org/obo/go#goslim_chembl", "http://purl.obolibrary.org/obo/go#goslim_pir", "http://purl.obolibrary.org/obo/go#goslim_aspergillus", "http://purl.obolibrary.org/obo/go#goslim_candida" ],
-        "xrefs" : [ {
-          "val" : "MIPS_funcat:20"
-        } ],
         "synonyms" : [ {
           "pred" : "hasNarrowSynonym",
           "val" : "small molecule transport",
@@ -10300,9 +10234,6 @@
           "xrefs" : [ "GOC:ai" ]
         },
         "subsets" : [ "http://purl.obolibrary.org/obo/go#goslim_drosophila", "http://purl.obolibrary.org/obo/go#goslim_pir", "http://purl.obolibrary.org/obo/go#goslim_yeast" ],
-        "xrefs" : [ {
-          "val" : "MIPS_funcat:20.01.01"
-        } ],
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "biological_process"
@@ -10377,8 +10308,8 @@
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "molecular_function"
         }, {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
-          "val" : "Definition discussed in https://github.com/geneontology/go-ontology/issues/14220"
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000233",
+          "val" : "https://github.com/geneontology/go-ontology/issues/14220"
         }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
           "val" : "midori"
@@ -11852,9 +11783,6 @@
           "xrefs" : [ "GOC:ai", "ISBN:0198506732" ]
         },
         "subsets" : [ "http://purl.obolibrary.org/obo/go#goslim_pir" ],
-        "xrefs" : [ {
-          "val" : "MIPS_funcat:20.01.11"
-        } ],
         "synonyms" : [ {
           "pred" : "hasRelatedSynonym",
           "val" : "amine/polyamine transport",
@@ -12010,24 +11938,6 @@
       "type" : "CLASS",
       "lbl" : "negative regulation of sensory perception of bitter taste"
     }, {
-      "id" : "http://purl.obolibrary.org/obo/GO_0015833",
-      "meta" : {
-        "definition" : {
-          "val" : "The directed movement of peptides, compounds of two or more amino acids where the alpha carboxyl group of one is bound to the alpha amino group of another, into, out of or within a cell, or between cells, by means of some agent such as a transporter or pore.",
-          "xrefs" : [ "GOC:ai" ]
-        },
-        "subsets" : [ "http://purl.obolibrary.org/obo/go#goslim_pir" ],
-        "xrefs" : [ {
-          "val" : "MIPS_funcat:20.01.09"
-        } ],
-        "basicPropertyValues" : [ {
-          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
-          "val" : "biological_process"
-        } ]
-      },
-      "type" : "CLASS",
-      "lbl" : "peptide transport"
-    }, {
       "id" : "http://purl.obolibrary.org/obo/go#goslim_synapse",
       "meta" : {
         "basicPropertyValues" : [ {
@@ -12036,6 +11946,21 @@
         } ]
       },
       "type" : "PROPERTY"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/GO_0015833",
+      "meta" : {
+        "definition" : {
+          "val" : "The directed movement of peptides, compounds of two or more amino acids where the alpha carboxyl group of one is bound to the alpha amino group of another, into, out of or within a cell, or between cells, by means of some agent such as a transporter or pore.",
+          "xrefs" : [ "GOC:ai" ]
+        },
+        "subsets" : [ "http://purl.obolibrary.org/obo/go#goslim_pir" ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "biological_process"
+        } ]
+      },
+      "type" : "CLASS",
+      "lbl" : "peptide transport"
     }, {
       "id" : "http://purl.obolibrary.org/obo/GO_1904660",
       "meta" : {
@@ -12462,11 +12387,19 @@
       "meta" : {
         "definition" : {
           "val" : "Any process that results in a change in state or activity of a cell or an organism (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of an organic substance stimulus.",
-          "xrefs" : [ "GOC:sm" ]
+          "xrefs" : [ "GOC:sm", "PMID:23356676" ]
         },
+        "synonyms" : [ {
+          "pred" : "hasNarrowSynonym",
+          "val" : "process resulting in tolerance to organic substance",
+          "xrefs" : [ ]
+        } ],
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "biological_process"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasAlternativeId",
+          "val" : "GO:1990367"
         } ]
       },
       "type" : "CLASS",
@@ -12677,7 +12610,7 @@
       "meta" : {
         "definition" : {
           "val" : "Any process that results in a change in state or activity of a cell or an organism (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of a farnesol stimulus.",
-          "xrefs" : [ "CHEBI:28600", "GOC:pr" ]
+          "xrefs" : [ "GOC:pr" ]
         },
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
@@ -12739,7 +12672,7 @@
       "meta" : {
         "definition" : {
           "val" : "Any process that results in a change in state or activity of a cell (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of an alcohol stimulus.",
-          "xrefs" : [ "CHEBI:30879", "GOC:pr" ]
+          "xrefs" : [ "GOC:pr" ]
         },
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
@@ -12799,7 +12732,7 @@
       "meta" : {
         "definition" : {
           "val" : "Any process that results in a change in state or activity of a cell (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of a farnesol stimulus.",
-          "xrefs" : [ "CHEBI:28600", "GOC:di", "PMID:11425711" ]
+          "xrefs" : [ "GOC:di", "PMID:11425711" ]
         },
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
@@ -12914,11 +12847,19 @@
       "meta" : {
         "definition" : {
           "val" : "Any process that results in a change in state or activity of a cell or an organism (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of an alcohol stimulus.",
-          "xrefs" : [ "CHEBI:30879", "GOC:pr" ]
+          "xrefs" : [ "GOC:pr", "PMID:24014527" ]
         },
+        "synonyms" : [ {
+          "pred" : "hasNarrowSynonym",
+          "val" : "process resulting in tolerance to alcohol",
+          "xrefs" : [ ]
+        } ],
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
           "val" : "2012-05-15T03:48:45Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasAlternativeId",
+          "val" : "GO:1990335"
         }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
           "val" : "paola"
@@ -13148,10 +13089,32 @@
         },
         "xrefs" : [ {
           "val" : "Wikipedia:List_of_feeding_behaviours"
-        }, {
-          "val" : "MIPS_funcat:36.03"
         } ],
         "synonyms" : [ {
+          "pred" : "hasNarrowSynonym",
+          "val" : "feeding from plant phloem",
+          "xrefs" : [ ]
+        }, {
+          "pred" : "hasNarrowSynonym",
+          "val" : "feeding on or from other organism",
+          "xrefs" : [ ]
+        }, {
+          "pred" : "hasNarrowSynonym",
+          "val" : "taking of blood meal",
+          "xrefs" : [ ]
+        }, {
+          "pred" : "hasNarrowSynonym",
+          "val" : "feeding on blood of other organism",
+          "xrefs" : [ ]
+        }, {
+          "pred" : "hasNarrowSynonym",
+          "val" : "feeding from vascular tissue of another organism",
+          "xrefs" : [ ]
+        }, {
+          "pred" : "hasNarrowSynonym",
+          "val" : "feeding from xylem of other organism",
+          "xrefs" : [ ]
+        }, {
           "pred" : "hasExactSynonym",
           "val" : "behavioural response to food",
           "xrefs" : [ ]
@@ -13161,7 +13124,23 @@
           "xrefs" : [ ]
         }, {
           "pred" : "hasNarrowSynonym",
-          "val" : "drinking",
+          "val" : "feeding from tissue of other organism",
+          "xrefs" : [ ]
+        }, {
+          "pred" : "hasNarrowSynonym",
+          "val" : "feeding from phloem of other organism",
+          "xrefs" : [ ]
+        }, {
+          "pred" : "hasNarrowSynonym",
+          "val" : "hematophagy",
+          "xrefs" : [ ]
+        }, {
+          "pred" : "hasNarrowSynonym",
+          "val" : "injection of substance into other organism during feeding on blood of other organism",
+          "xrefs" : [ ]
+        }, {
+          "pred" : "hasNarrowSynonym",
+          "val" : "feeding on plant sap",
           "xrefs" : [ ]
         }, {
           "pred" : "hasNarrowSynonym",
@@ -13173,11 +13152,41 @@
           "xrefs" : [ ]
         } ],
         "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
+          "val" : "2011-10-27T03:53:33Z"
+        }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "biological_process"
         }, {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000233",
+          "val" : "https://github.com/geneontology/go-ontology/issues/18547"
+        }, {
           "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
           "val" : "See also the biological process term 'behavior ; GO:0007610'."
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasAlternativeId",
+          "val" : "GO:0044370"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasAlternativeId",
+          "val" : "GO:0044371"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasAlternativeId",
+          "val" : "GO:0044372"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
+          "val" : "janelomax"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasAlternativeId",
+          "val" : "GO:0044366"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasAlternativeId",
+          "val" : "GO:0044367"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasAlternativeId",
+          "val" : "GO:0044368"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasAlternativeId",
+          "val" : "GO:0044369"
         } ]
       },
       "type" : "CLASS",
@@ -13640,9 +13649,6 @@
           "val" : "The chemical reactions and pathways involving the phosphate group, the anion or salt of any phosphoric acid.",
           "xrefs" : [ "GOC:ai" ]
         },
-        "xrefs" : [ {
-          "val" : "MIPS_funcat:01.04"
-        } ],
         "synonyms" : [ {
           "pred" : "hasRelatedSynonym",
           "val" : "phosphate metabolic process",
@@ -13687,8 +13693,6 @@
           "xrefs" : [ "http://www.medterms.com" ]
         },
         "xrefs" : [ {
-          "val" : "MIPS_funcat:36.25.01.07"
-        }, {
           "val" : "Wikipedia:Equilibrioception"
         } ],
         "synonyms" : [ {
@@ -13730,9 +13734,6 @@
           "xrefs" : [ "GOC:jid" ]
         },
         "subsets" : [ "http://purl.obolibrary.org/obo/go#goslim_pir" ],
-        "xrefs" : [ {
-          "val" : "MIPS_funcat:34.11.11"
-        } ],
         "synonyms" : [ {
           "pred" : "hasRelatedSynonym",
           "val" : "rhythm",
@@ -14585,9 +14586,6 @@
           "val" : "The acquisition and processing of information and/or the storage and retrieval of this information over time.",
           "xrefs" : [ "GOC:jid", "PMID:8938125" ]
         },
-        "xrefs" : [ {
-          "val" : "MIPS_funcat:36.25.03.04.01"
-        } ],
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "biological_process"
@@ -14609,6 +14607,10 @@
         }, {
           "pred" : "hasExactSynonym",
           "val" : "synaptic transmission, gamma-aminobutyric acid-ergic",
+          "xrefs" : [ ]
+        }, {
+          "pred" : "hasExactSynonym",
+          "val" : "GABAergic synaptic transmission",
           "xrefs" : [ ]
         }, {
           "pred" : "hasExactSynonym",
@@ -14654,6 +14656,9 @@
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "biological_process"
         }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasAlternativeId",
+          "val" : "GO:0023032"
+        }, {
           "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
           "val" : "1. Note that this term is in the subset of terms that should not be used for direct gene product annotation. Instead, select a child term or, if no appropriate child term exists, please request a new term. Direct annotations to this term may be amended during annotation reviews.\n2. While a broader definition of behavior encompassing plants and single cell organisms would be justified on the basis of some usage (see PMID:20160973 for discussion), GO uses a tight definition that limits behavior to animals and to responses involving the nervous system, excluding plant responses that GO classifies under development, and responses of unicellular organisms that has general classifications for covering the responses of cells in multicellular organisms (e.g. cell chemotaxis)."
         }, {
@@ -14662,6 +14667,9 @@
         }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
           "val" : "2012-09-20T14:06:08Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasAlternativeId",
+          "val" : "GO:0044709"
         }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasAlternativeId",
           "val" : "GO:0044708"
@@ -14897,7 +14905,7 @@
       "meta" : {
         "definition" : {
           "val" : "A reproduction process that creates a new organism by combining the genetic material of two gametes, which may come from two organisms or from a single organism, in the case of self-fertilizing hermaphrodites, e.g. C. elegans, or self-fertilization in plants. It occurs both in eukaryotes and prokaryotes: in multicellular eukaryotic organisms, an individual is created anew; in prokaryotes, the initial cell has additional or transformed genetic material. In a process called genetic recombination, genetic material (DNA) originating from two gametes join up so that homologous sequences are aligned with each other, and this is followed by exchange of genetic information. After the new recombinant chromosome is formed, it is passed on to progeny.",
-          "xrefs" : [ "GOC:jl", "GOC:kmv", "GOC:krc", "GOC:tb", "ISBN:0387520546", "http://en.wikipedia.org/wiki/Sexual_reproduction" ]
+          "xrefs" : [ "GOC:jl", "GOC:kmv", "GOC:krc", "GOC:tb", "ISBN:0387520546", "Wikipedia:Sexual_reproduction" ]
         },
         "xrefs" : [ {
           "val" : "Wikipedia:Sexual_reproduction"
@@ -14993,9 +15001,6 @@
           "xrefs" : [ "GOC:ebc", "GOC:jl", "GOC:tb", "GOC:vw" ]
         },
         "subsets" : [ "http://purl.obolibrary.org/obo/go#goslim_chembl" ],
-        "xrefs" : [ {
-          "val" : "MIPS_funcat:18.02.01.01"
-        } ],
         "synonyms" : [ {
           "pred" : "hasNarrowSynonym",
           "val" : "activation of enzyme activity",
@@ -15267,8 +15272,6 @@
         },
         "xrefs" : [ {
           "val" : "Wikipedia:Touch"
-        }, {
-          "val" : "MIPS_funcat:36.25.01.05"
         } ],
         "synonyms" : [ {
           "pred" : "hasExactSynonym",
@@ -15430,7 +15433,7 @@
       "meta" : {
         "definition" : {
           "val" : "Any process that results in a change in state or activity of a cell (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of an organonitrogen stimulus. An organonitrogen compound is formally a compound containing at least one carbon-nitrogen bond.",
-          "xrefs" : [ "CHEBI:35352", "GOC:mah" ]
+          "xrefs" : [ "GOC:mah" ]
         },
         "synonyms" : [ {
           "pred" : "hasExactSynonym",
@@ -15455,7 +15458,7 @@
       "meta" : {
         "definition" : {
           "val" : "Any process that results in a change in state or activity of a cell (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of a purine-containing compound stimulus.",
-          "xrefs" : [ "CHEBI:26401", "GOC:mah" ]
+          "xrefs" : [ "GOC:mah" ]
         },
         "synonyms" : [ {
           "pred" : "hasRelatedSynonym",
@@ -15581,9 +15584,6 @@
           "val" : "The series of events by which a mechanical stimulus is received and converted into a molecular signal.",
           "xrefs" : [ "GOC:ai", "GOC:dos" ]
         },
-        "xrefs" : [ {
-          "val" : "MIPS_funcat:34.11.05"
-        } ],
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "biological_process"
@@ -15599,9 +15599,6 @@
           "xrefs" : [ "GOC:ai" ]
         },
         "subsets" : [ "http://purl.obolibrary.org/obo/go#goslim_yeast", "http://purl.obolibrary.org/obo/go#goslim_pir" ],
-        "xrefs" : [ {
-          "val" : "MIPS_funcat:20.01.07"
-        } ],
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasAlternativeId",
           "val" : "GO:0006866"
@@ -16107,8 +16104,6 @@
         "subsets" : [ "http://purl.obolibrary.org/obo/go#goslim_generic", "http://purl.obolibrary.org/obo/go#goslim_agr", "http://purl.obolibrary.org/obo/go#goslim_plant", "http://purl.obolibrary.org/obo/go#goslim_drosophila", "http://purl.obolibrary.org/obo/go#goslim_yeast", "http://purl.obolibrary.org/obo/go#goslim_metagenomics", "http://purl.obolibrary.org/obo/go#goslim_aspergillus", "http://purl.obolibrary.org/obo/go#goslim_chembl", "http://purl.obolibrary.org/obo/go#goslim_pir", "http://purl.obolibrary.org/obo/go#goslim_mouse", "http://purl.obolibrary.org/obo/go#goslim_pombe", "http://purl.obolibrary.org/obo/go#goslim_candida" ],
         "xrefs" : [ {
           "val" : "Wikipedia:Lipid_metabolism"
-        }, {
-          "val" : "MIPS_funcat:01.06"
         } ],
         "synonyms" : [ {
           "pred" : "hasExactSynonym",
@@ -16282,8 +16277,6 @@
           "xrefs" : [ "GOC:ai" ]
         },
         "xrefs" : [ {
-          "val" : "MIPS_funcat:36.25.01.03"
-        }, {
           "val" : "Wikipedia:Hearing_(sense)"
         } ],
         "synonyms" : [ {
@@ -16366,9 +16359,6 @@
           "xrefs" : [ "GOC:ai", "GOC:mtg_cardio" ]
         },
         "subsets" : [ "http://purl.obolibrary.org/obo/go#goslim_pir", "http://purl.obolibrary.org/obo/go#goslim_flybase_ribbon", "http://purl.obolibrary.org/obo/go#goslim_generic", "http://purl.obolibrary.org/obo/go#goslim_chembl", "http://purl.obolibrary.org/obo/go#goslim_agr" ],
-        "xrefs" : [ {
-          "val" : "MIPS_funcat:36.25.03"
-        } ],
         "synonyms" : [ {
           "pred" : "hasExactSynonym",
           "val" : "neurological system process",
@@ -16386,8 +16376,8 @@
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "biological_process"
         }, {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
-          "val" : "Discussion of class label and synonyms: https://github.com/geneontology/go-ontology/issues/13824"
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000233",
+          "val" : "https://github.com/geneontology/go-ontology/issues/13824"
         } ]
       },
       "type" : "CLASS",
@@ -16538,10 +16528,6 @@
         },
         "xrefs" : [ {
           "val" : "Wikipedia:Visual_perception"
-        }, {
-          "val" : "MIPS_funcat:34.11.01.03"
-        }, {
-          "val" : "MIPS_funcat:36.25.01.01"
         } ],
         "synonyms" : [ {
           "pred" : "hasExactSynonym",
@@ -16638,9 +16624,6 @@
           "xrefs" : [ "GOC:add", "GOC:ai", "GOC:dph", "GOC:mah" ]
         },
         "subsets" : [ "http://purl.obolibrary.org/obo/go#goslim_pir" ],
-        "xrefs" : [ {
-          "val" : "MIPS_funcat:34.11"
-        } ],
         "synonyms" : [ {
           "pred" : "hasRelatedSynonym",
           "val" : "stimulus sensing",
@@ -16871,8 +16854,6 @@
         },
         "xrefs" : [ {
           "val" : "Wikipedia:Olfaction"
-        }, {
-          "val" : "MIPS_funcat:36.25.01.13"
         } ],
         "synonyms" : [ {
           "pred" : "hasExactSynonym",
@@ -16905,9 +16886,6 @@
           "val" : "Any process that an organism uses to control its balance, the orientation of the organism (or the head of the organism) in relation to the source of gravity. In humans and animals, balance is perceived through visual cues, the labyrinth system of the inner ears and information from skin pressure receptors and muscle and joint receptors.",
           "xrefs" : [ "GOC:ai", "GOC:dph" ]
         },
-        "xrefs" : [ {
-          "val" : "MIPS_funcat:36.25.03.03.03"
-        } ],
         "synonyms" : [ {
           "pred" : "hasRelatedSynonym",
           "val" : "regulation of balance",
@@ -16930,10 +16908,6 @@
         "subsets" : [ "http://purl.obolibrary.org/obo/go#goslim_plant", "http://purl.obolibrary.org/obo/go#goslim_metagenomics", "http://purl.obolibrary.org/obo/go#goslim_pir", "http://purl.obolibrary.org/obo/go#goslim_chembl", "http://purl.obolibrary.org/obo/go#goslim_aspergillus", "http://purl.obolibrary.org/obo/go#goslim_candida" ],
         "xrefs" : [ {
           "val" : "Reactome:R-HSA-170835"
-        }, {
-          "val" : "MIPS_funcat:16.01"
-        }, {
-          "val" : "MIPS_funcat:18.01.07"
         }, {
           "val" : "Reactome:R-HSA-170846"
         } ],
@@ -16973,8 +16947,6 @@
         "subsets" : [ "http://purl.obolibrary.org/obo/go#goslim_mouse", "http://purl.obolibrary.org/obo/go#goslim_aspergillus", "http://purl.obolibrary.org/obo/go#goslim_drosophila", "http://purl.obolibrary.org/obo/go#goslim_generic", "http://purl.obolibrary.org/obo/go#goslim_plant", "http://purl.obolibrary.org/obo/go#goslim_agr", "http://purl.obolibrary.org/obo/go#goslim_yeast", "http://purl.obolibrary.org/obo/go#goslim_candida", "http://purl.obolibrary.org/obo/go#goslim_metagenomics", "http://purl.obolibrary.org/obo/go#goslim_pir", "http://purl.obolibrary.org/obo/go#goslim_flybase_ribbon", "http://purl.obolibrary.org/obo/go#goslim_chembl" ],
         "xrefs" : [ {
           "val" : "Wikipedia:Cell_nucleus"
-        }, {
-          "val" : "MIPS_funcat:70.10"
         }, {
           "val" : "NIF_Subcellular:sao1702920020"
         } ],
@@ -17290,6 +17262,20 @@
       },
       "type" : "PROPERTY"
     }, {
+      "id" : "http://purl.obolibrary.org/obo/GO_0015672",
+      "meta" : {
+        "definition" : {
+          "val" : "The directed movement of inorganic cations with a valency of one into, out of or within a cell, or between cells, by means of some agent such as a transporter or pore. Inorganic cations are atoms or small molecules with a positive charge which do not contain carbon in covalent linkage.",
+          "xrefs" : [ "GOC:ai" ]
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "biological_process"
+        } ]
+      },
+      "type" : "CLASS",
+      "lbl" : "monovalent inorganic cation transport"
+    }, {
       "id" : "http://purl.obolibrary.org/obo/go#goslim_pir",
       "meta" : {
         "basicPropertyValues" : [ {
@@ -17352,9 +17338,6 @@
           "xrefs" : [ "GOC:ai", "GOC:bf" ]
         },
         "subsets" : [ "http://purl.obolibrary.org/obo/go#gocheck_do_not_manually_annotate", "http://purl.obolibrary.org/obo/go#goslim_flybase_ribbon", "http://purl.obolibrary.org/obo/go#goslim_pir", "http://purl.obolibrary.org/obo/go#goslim_mouse", "http://purl.obolibrary.org/obo/go#goslim_agr" ],
-        "xrefs" : [ {
-          "val" : "MIPS_funcat:34.11"
-        } ],
         "synonyms" : [ {
           "pred" : "hasExactSynonym",
           "val" : "physiological response to stimulus",
@@ -17517,11 +17500,6 @@
           "xrefs" : [ "GOC:jl" ]
         },
         "subsets" : [ "http://purl.obolibrary.org/obo/go#goslim_yeast" ],
-        "xrefs" : [ {
-          "val" : "MIPS_funcat:32.01.03"
-        }, {
-          "val" : "MIPS_funcat:36.20.35.09.05"
-        } ],
         "synonyms" : [ {
           "pred" : "hasExactSynonym",
           "val" : "osmotic stress response",
@@ -17995,10 +17973,6 @@
       "pred" : "http://purl.obolibrary.org/obo/RO_0002211",
       "obj" : "http://purl.obolibrary.org/obo/GO_0050802"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/GO_0006837",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/GO_0015696"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/GO_0042332",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/GO_0042330"
@@ -18067,6 +18041,14 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/GO_0051050"
     }, {
+      "sub" : "http://purl.obolibrary.org/obo/GO_0046907",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/GO_0051649"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/GO_0044237",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/GO_0009987"
+    }, {
       "sub" : "http://purl.obolibrary.org/obo/GO_0051100",
       "pred" : "http://purl.obolibrary.org/obo/RO_0002212",
       "obj" : "http://purl.obolibrary.org/obo/GO_0005488"
@@ -18074,10 +18056,6 @@
       "sub" : "http://purl.obolibrary.org/obo/GO_0010883",
       "pred" : "http://purl.obolibrary.org/obo/RO_0002211",
       "obj" : "http://purl.obolibrary.org/obo/GO_0019915"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/GO_0044237",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/GO_0009987"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/GO_0045938",
       "pred" : "is_a",
@@ -18150,10 +18128,6 @@
       "sub" : "http://purl.obolibrary.org/obo/GO_0010648",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/GO_0048523"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/GO_0051649",
-      "pred" : "http://purl.obolibrary.org/obo/BFO_0000066",
-      "obj" : "http://purl.obolibrary.org/obo/GO_0005623"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/GO_0033604",
       "pred" : "is_a",
@@ -18359,6 +18333,10 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/GO_0048519"
     }, {
+      "sub" : "http://purl.obolibrary.org/obo/GO_0032387",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/GO_0048523"
+    }, {
       "sub" : "http://purl.obolibrary.org/obo/GO_0007562",
       "pred" : "http://purl.obolibrary.org/obo/BFO_0000050",
       "obj" : "http://purl.obolibrary.org/obo/GO_0007275"
@@ -18415,16 +18393,20 @@
       "pred" : "http://purl.obolibrary.org/obo/RO_0002211",
       "obj" : "http://purl.obolibrary.org/obo/GO_0009987"
     }, {
+      "sub" : "http://purl.obolibrary.org/obo/GO_0014062",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/GO_0023051"
+    }, {
       "sub" : "http://purl.obolibrary.org/obo/GO_0050794",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/GO_0050789"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/GO_0032226",
-      "pred" : "http://purl.obolibrary.org/obo/RO_0002213",
-      "obj" : "http://purl.obolibrary.org/obo/GO_0001963"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/GO_0032227",
       "pred" : "http://purl.obolibrary.org/obo/RO_0002212",
+      "obj" : "http://purl.obolibrary.org/obo/GO_0001963"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/GO_0032226",
+      "pred" : "http://purl.obolibrary.org/obo/RO_0002213",
       "obj" : "http://purl.obolibrary.org/obo/GO_0001963"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/GO_0045937",
@@ -18723,6 +18705,10 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/GO_0010469"
     }, {
+      "sub" : "http://purl.obolibrary.org/obo/GO_0015872",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/GO_0006812"
+    }, {
       "sub" : "http://purl.obolibrary.org/obo/GO_0010876",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/GO_0033036"
@@ -18798,6 +18784,10 @@
       "sub" : "http://purl.obolibrary.org/obo/GO_0033555",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/GO_0032501"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/GO_0014063",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/GO_0023057"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/GO_0034607",
       "pred" : "is_a",
@@ -18879,13 +18869,13 @@
       "pred" : "http://purl.obolibrary.org/obo/RO_0002212",
       "obj" : "http://purl.obolibrary.org/obo/GO_0006865"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/GO_0015812",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/GO_0015718"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/GO_0010883",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/GO_0065008"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/GO_0015812",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/GO_0015718"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/GO_0001581",
       "pred" : "http://purl.obolibrary.org/obo/BFO_0000050",
@@ -18902,10 +18892,6 @@
       "sub" : "http://purl.obolibrary.org/obo/GO_0071482",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/GO_0071478"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/GO_0045202",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/GO_0110165"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/GO_0014055",
       "pred" : "is_a",
@@ -18967,13 +18953,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/GO_0031323"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/GO_0001505",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/GO_0065008"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/GO_0048519",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/GO_0050789"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/GO_0001505",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/GO_0065008"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/GO_0032386",
       "pred" : "is_a",
@@ -19015,6 +19001,10 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/GO_0050960"
     }, {
+      "sub" : "http://purl.obolibrary.org/obo/GO_0051641",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/GO_0009987"
+    }, {
       "sub" : "http://purl.obolibrary.org/obo/GO_0014055",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/GO_0061526"
@@ -19043,13 +19033,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/GO_0007600"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/GO_0031324",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/GO_0031323"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/GO_0051179",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/GO_0008150"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/GO_0031324",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/GO_0031323"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/GO_2000242",
       "pred" : "http://purl.obolibrary.org/obo/RO_0002212",
@@ -19130,6 +19120,10 @@
       "sub" : "http://purl.obolibrary.org/obo/GO_0043900",
       "pred" : "http://purl.obolibrary.org/obo/RO_0002211",
       "obj" : "http://purl.obolibrary.org/obo/GO_0051704"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/GO_0014064",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/GO_0023056"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/GO_0043086",
       "pred" : "is_a",
@@ -19247,9 +19241,17 @@
       "pred" : "subPropertyOf",
       "obj" : "http://purl.obolibrary.org/obo/RO_0002211"
     }, {
+      "sub" : "http://purl.obolibrary.org/obo/GO_0034762",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/GO_0050794"
+    }, {
       "sub" : "http://purl.obolibrary.org/obo/GO_0051668",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/GO_0051641"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/GO_0099124",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/GO_0051649"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/GO_0014064",
       "pred" : "http://purl.obolibrary.org/obo/RO_0002213",
@@ -19603,6 +19605,10 @@
       "pred" : "http://purl.obolibrary.org/obo/BFO_0000050",
       "obj" : "http://purl.obolibrary.org/obo/GO_0050914"
     }, {
+      "sub" : "http://purl.obolibrary.org/obo/GO_0033603",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/GO_0023056"
+    }, {
       "sub" : "http://purl.obolibrary.org/obo/GO_0016042",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/GO_0006629"
@@ -19827,13 +19833,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/GO_0008277"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/GO_2000253",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/GO_0048520"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/GO_0006837",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/GO_0006836"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/GO_2000253",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/GO_0048520"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/GO_0051930",
       "pred" : "is_a",
@@ -19998,6 +20004,10 @@
       "sub" : "http://purl.obolibrary.org/obo/GO_0051050",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/GO_0051049"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/GO_0030054",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/GO_0110165"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/GO_0050974",
       "pred" : "is_a",
@@ -20195,6 +20205,10 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/GO_0097307"
     }, {
+      "sub" : "http://purl.obolibrary.org/obo/GO_0061526",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/GO_0023061"
+    }, {
       "sub" : "http://purl.obolibrary.org/obo/BFO_0000050",
       "pred" : "inverseOf",
       "obj" : "http://purl.obolibrary.org/obo/BFO_0000051"
@@ -20263,10 +20277,6 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/GO_2001038"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/GO_0061531",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/GO_0015696"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/GO_0046928",
       "pred" : "http://purl.obolibrary.org/obo/RO_0002211",
       "obj" : "http://purl.obolibrary.org/obo/GO_0007269"
@@ -20279,13 +20289,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/GO_0007610"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/GO_0061531",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/GO_0015695"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/GO_0061535",
       "pred" : "http://purl.obolibrary.org/obo/BFO_0000050",
       "obj" : "http://purl.obolibrary.org/obo/GO_0035249"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/GO_0061531",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/GO_0015695"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/GO_0050885",
       "pred" : "is_a",
@@ -20294,6 +20304,10 @@
       "sub" : "http://purl.obolibrary.org/obo/GO_2000242",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/GO_0048519"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/GO_0014064",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/GO_0010647"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/GO_0050790",
       "pred" : "http://purl.obolibrary.org/obo/RO_0002211",
@@ -20307,13 +20321,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/GO_0006820"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/GO_0010888",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/GO_0010883"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/GO_0044060",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/GO_0044057"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/GO_0010888",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/GO_0010883"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/GO_1905747",
       "pred" : "is_a",
@@ -20371,13 +20385,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/GO_0048585"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/GO_1902435",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/GO_0043900"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/GO_0023052",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/GO_0008150"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/GO_1902435",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/GO_0043900"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/GO_0050892",
       "pred" : "is_a",
@@ -20386,6 +20400,10 @@
       "sub" : "http://purl.obolibrary.org/obo/GO_0015893",
       "pred" : "http://purl.obolibrary.org/obo/BFO_0000050",
       "obj" : "http://purl.obolibrary.org/obo/GO_0042493"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/GO_0032388",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/GO_0048522"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/GO_0090325",
       "pred" : "is_a",
@@ -20455,10 +20473,6 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/GO_0048519"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/GO_0045805",
-      "pred" : "http://purl.obolibrary.org/obo/RO_0002213",
-      "obj" : "http://purl.obolibrary.org/obo/GO_0007562"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/GO_2001040",
       "pred" : "http://purl.obolibrary.org/obo/RO_0002213",
       "obj" : "http://purl.obolibrary.org/obo/GO_0035690"
@@ -20466,6 +20480,10 @@
       "sub" : "http://purl.obolibrary.org/obo/GO_0007589",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/GO_0046903"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/GO_0045805",
+      "pred" : "http://purl.obolibrary.org/obo/RO_0002213",
+      "obj" : "http://purl.obolibrary.org/obo/GO_0007562"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/GO_0014064",
       "pred" : "is_a",
@@ -20591,6 +20609,10 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/GO_0009892"
     }, {
+      "sub" : "http://purl.obolibrary.org/obo/GO_0006837",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/GO_0006812"
+    }, {
       "sub" : "http://purl.obolibrary.org/obo/GO_0051590",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/GO_0051050"
@@ -20611,17 +20633,21 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/GO_0002790"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/GO_0016301",
-      "pred" : "http://purl.obolibrary.org/obo/BFO_0000050",
-      "obj" : "http://purl.obolibrary.org/obo/GO_0016310"
+      "sub" : "http://purl.obolibrary.org/obo/GO_0010648",
+      "pred" : "http://purl.obolibrary.org/obo/RO_0002212",
+      "obj" : "http://purl.obolibrary.org/obo/GO_0007154"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/GO_0010647",
       "pred" : "http://purl.obolibrary.org/obo/RO_0002213",
       "obj" : "http://purl.obolibrary.org/obo/GO_0007154"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/GO_0010648",
-      "pred" : "http://purl.obolibrary.org/obo/RO_0002212",
-      "obj" : "http://purl.obolibrary.org/obo/GO_0007154"
+      "sub" : "http://purl.obolibrary.org/obo/GO_0016301",
+      "pred" : "http://purl.obolibrary.org/obo/BFO_0000050",
+      "obj" : "http://purl.obolibrary.org/obo/GO_0016310"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/GO_0033602",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/GO_0023057"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/GO_0007602",
       "pred" : "is_a",
@@ -20635,13 +20661,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/GO_1903530"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/GO_0033605",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/GO_0051954"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/GO_0014057",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/GO_2001025"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/GO_0033605",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/GO_0051954"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/GO_0035690",
       "pred" : "is_a",
@@ -20739,6 +20765,14 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/GO_0019216"
     }, {
+      "sub" : "http://purl.obolibrary.org/obo/GO_0014063",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/GO_0010648"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/GO_0046928",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/GO_0060341"
+    }, {
       "sub" : "http://purl.obolibrary.org/obo/GO_0033603",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/GO_0014059"
@@ -20791,6 +20825,10 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/GO_0005575"
     }, {
+      "sub" : "http://purl.obolibrary.org/obo/GO_0001820",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/GO_0023061"
+    }, {
       "sub" : "http://purl.obolibrary.org/obo/GO_0051093",
       "pred" : "http://purl.obolibrary.org/obo/RO_0002212",
       "obj" : "http://purl.obolibrary.org/obo/GO_0032502"
@@ -20810,6 +20848,10 @@
       "sub" : "http://purl.obolibrary.org/obo/GO_0014048",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/GO_0051955"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/GO_0060341",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/GO_0050794"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/GO_0019220",
       "pred" : "is_a",
@@ -21047,6 +21089,10 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/GO_0022414"
     }, {
+      "sub" : "http://purl.obolibrary.org/obo/GO_0014062",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/GO_0010646"
+    }, {
       "sub" : "http://purl.obolibrary.org/obo/GO_0050802",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/GO_0030431"
@@ -21127,13 +21173,13 @@
       "pred" : "http://purl.obolibrary.org/obo/RO_0002211",
       "obj" : "http://purl.obolibrary.org/obo/GO_0050916"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/GO_0031323",
-      "pred" : "http://purl.obolibrary.org/obo/RO_0002211",
-      "obj" : "http://purl.obolibrary.org/obo/GO_0044237"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/GO_0040017",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/GO_0048518"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/GO_0031323",
+      "pred" : "http://purl.obolibrary.org/obo/RO_0002211",
+      "obj" : "http://purl.obolibrary.org/obo/GO_0044237"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/GO_0007275",
       "pred" : "is_a",
@@ -21223,6 +21269,10 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/GO_0097305"
     }, {
+      "sub" : "http://purl.obolibrary.org/obo/GO_0015870",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/GO_0071705"
+    }, {
       "sub" : "http://purl.obolibrary.org/obo/GO_0051099",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/GO_0044093"
@@ -21267,10 +21317,6 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/GO_0034762"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/GO_0015870",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/GO_0015696"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/GO_2001040",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/GO_2001025"
@@ -21303,13 +21349,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/GO_0009584"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/GO_0046883",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/GO_0010817"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/GO_0051338",
       "pred" : "http://purl.obolibrary.org/obo/RO_0002211",
       "obj" : "http://purl.obolibrary.org/obo/GO_0016740"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/GO_0046883",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/GO_0010817"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/GO_0051049",
       "pred" : "http://purl.obolibrary.org/obo/RO_0002211",
@@ -21366,6 +21412,10 @@
       "sub" : "http://purl.obolibrary.org/obo/GO_0050916",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/GO_0050909"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/GO_0034764",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/GO_0048522"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/GO_0014056",
       "pred" : "is_a",
@@ -21527,6 +21577,10 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/GO_0050877"
     }, {
+      "sub" : "http://purl.obolibrary.org/obo/GO_0033602",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/GO_0010648"
+    }, {
       "sub" : "http://purl.obolibrary.org/obo/GO_0014055",
       "pred" : "http://purl.obolibrary.org/obo/BFO_0000050",
       "obj" : "http://purl.obolibrary.org/obo/GO_0007271"
@@ -21567,13 +21621,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/GO_0044238"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/GO_0051966",
-      "pred" : "http://purl.obolibrary.org/obo/RO_0002211",
-      "obj" : "http://purl.obolibrary.org/obo/GO_0035249"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/GO_0014053",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/GO_0051048"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/GO_0051966",
+      "pred" : "http://purl.obolibrary.org/obo/RO_0002211",
+      "obj" : "http://purl.obolibrary.org/obo/GO_0035249"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/GO_0051953",
       "pred" : "is_a",
@@ -21719,13 +21773,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/GO_0015844"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/GO_1901575",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/GO_0009056"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/GO_0030424",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/GO_0043005"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/GO_1901575",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/GO_0009056"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/GO_0090325",
       "pred" : "http://purl.obolibrary.org/obo/RO_0002211",
@@ -21750,6 +21804,10 @@
       "sub" : "http://purl.obolibrary.org/obo/GO_0014047",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/GO_0015800"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/GO_0014059",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/GO_0023051"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/GO_0051098",
       "pred" : "http://purl.obolibrary.org/obo/RO_0002211",
@@ -21794,6 +21852,10 @@
       "sub" : "http://purl.obolibrary.org/obo/GO_1902532",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/GO_0009968"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/GO_0034763",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/GO_0048523"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/GO_0043269",
       "pred" : "http://purl.obolibrary.org/obo/RO_0002211",
@@ -21883,13 +21945,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/GO_1902435"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/GO_0098515",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/GO_0098517"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/GO_1902533",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/GO_1902531"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/GO_0098515",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/GO_0098517"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/GO_0046692",
       "pred" : "http://purl.obolibrary.org/obo/BFO_0000050",
@@ -21939,13 +22001,13 @@
       "pred" : "http://purl.obolibrary.org/obo/BFO_0000050",
       "obj" : "http://purl.obolibrary.org/obo/GO_0050954"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/GO_1905747",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/GO_0060457"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/GO_0050961",
       "pred" : "http://purl.obolibrary.org/obo/BFO_0000050",
       "obj" : "http://purl.obolibrary.org/obo/GO_0050951"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/GO_1905747",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/GO_0060457"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/GO_0061527",
       "pred" : "is_a",
@@ -21990,6 +22052,10 @@
       "sub" : "http://purl.obolibrary.org/obo/GO_1904480",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/GO_0051050"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/GO_0051608",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/GO_0071705"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/GO_0014064",
       "pred" : "is_a",
@@ -22039,10 +22105,6 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/GO_1903530"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/GO_0061526",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/GO_0032940"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/GO_0071466",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/GO_0070887"
@@ -22075,10 +22137,6 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/GO_0050878"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/GO_0015872",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/GO_0015696"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/GO_0051608",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/GO_0071702"
@@ -22094,6 +22152,10 @@
       "sub" : "http://purl.obolibrary.org/obo/GO_0010562",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/GO_0031325"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/GO_0014046",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/GO_0023061"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/GO_0007632",
       "pred" : "is_a",
@@ -22127,6 +22189,10 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/GO_0009967"
     }, {
+      "sub" : "http://purl.obolibrary.org/obo/GO_0055085",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/GO_0009987"
+    }, {
       "sub" : "http://purl.obolibrary.org/obo/GO_0030431",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/GO_0032501"
@@ -22158,6 +22224,10 @@
       "sub" : "http://purl.obolibrary.org/obo/GO_0061539",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/GO_0032940"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/GO_0015696",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/GO_0015672"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/GO_0032940",
       "pred" : "is_a",
@@ -22239,13 +22309,13 @@
       "pred" : "http://purl.obolibrary.org/obo/RO_0002213",
       "obj" : "http://purl.obolibrary.org/obo/GO_0007631"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/GO_0033673",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/GO_0043549"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/GO_0009968",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/GO_0048585"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/GO_0033673",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/GO_0043549"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/GO_0046929",
       "pred" : "is_a",
@@ -22267,6 +22337,10 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/GO_0050877"
     }, {
+      "sub" : "http://purl.obolibrary.org/obo/GO_0051608",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/GO_0006812"
+    }, {
       "sub" : "http://purl.obolibrary.org/obo/GO_0030534",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/GO_0007610"
@@ -22275,13 +22349,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/GO_0051589"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/GO_0033673",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/GO_0051348"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/GO_1902437",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/GO_1902435"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/GO_0033673",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/GO_0051348"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/GO_0016056",
       "pred" : "http://purl.obolibrary.org/obo/BFO_0000050",
@@ -22351,13 +22425,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/GO_0032502"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/GO_0090276",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/GO_0046883"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/GO_0010469",
       "pred" : "http://purl.obolibrary.org/obo/RO_0002211",
       "obj" : "http://purl.obolibrary.org/obo/GO_0038023"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/GO_0090276",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/GO_0046883"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/GO_0003016",
       "pred" : "is_a",
@@ -22423,13 +22497,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/GO_0048519"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/GO_0014064",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/GO_0014062"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/GO_2000026",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/GO_0051239"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/GO_0014064",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/GO_0014062"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/GO_0046883",
       "pred" : "is_a",
@@ -22474,6 +22548,10 @@
       "sub" : "http://purl.obolibrary.org/obo/GO_0007320",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/GO_0044706"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/GO_0061539",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/GO_0071705"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/GO_0051588",
       "pred" : "http://purl.obolibrary.org/obo/RO_0002211",
@@ -22587,13 +22665,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/GO_0031667"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/GO_0033674",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/GO_0042327"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/GO_0046877",
       "pred" : "http://purl.obolibrary.org/obo/RO_0002211",
       "obj" : "http://purl.obolibrary.org/obo/GO_0046541"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/GO_0033674",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/GO_0042327"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/GO_0051590",
       "pred" : "is_a",
@@ -22675,10 +22753,6 @@
       "pred" : "http://purl.obolibrary.org/obo/RO_0002212",
       "obj" : "http://purl.obolibrary.org/obo/GO_0055085"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/GO_0061539",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/GO_0015696"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/GO_0045834",
       "pred" : "http://purl.obolibrary.org/obo/RO_0002213",
       "obj" : "http://purl.obolibrary.org/obo/GO_0006629"
@@ -22690,6 +22764,10 @@
       "sub" : "http://purl.obolibrary.org/obo/GO_2000272",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/GO_0010469"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/GO_0045202",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/GO_0030054"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/GO_0043086",
       "pred" : "is_a",
@@ -22723,13 +22801,13 @@
       "pred" : "http://purl.obolibrary.org/obo/RO_0002211",
       "obj" : "http://purl.obolibrary.org/obo/GO_0022414"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/GO_0120168",
-      "pred" : "http://purl.obolibrary.org/obo/BFO_0000050",
-      "obj" : "http://purl.obolibrary.org/obo/GO_0062036"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/GO_0048266",
       "pred" : "http://purl.obolibrary.org/obo/BFO_0000050",
       "obj" : "http://purl.obolibrary.org/obo/GO_0048265"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/GO_0120168",
+      "pred" : "http://purl.obolibrary.org/obo/BFO_0000050",
+      "obj" : "http://purl.obolibrary.org/obo/GO_0062036"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/GO_0045937",
       "pred" : "is_a",
@@ -22751,13 +22829,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/GO_0044058"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/GO_0008345",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/GO_0030537"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/GO_0023057",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/GO_0023051"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/GO_0008345",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/GO_0030537"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/GO_0045117",
       "pred" : "is_a",
@@ -22867,6 +22945,10 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/GO_0060259"
     }, {
+      "sub" : "http://purl.obolibrary.org/obo/GO_0015672",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/GO_0006812"
+    }, {
       "sub" : "http://purl.obolibrary.org/obo/GO_0043270",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/GO_0051050"
@@ -22899,6 +22981,10 @@
       "pred" : "http://purl.obolibrary.org/obo/RO_0002212",
       "obj" : "http://purl.obolibrary.org/obo/GO_0035690"
     }, {
+      "sub" : "http://purl.obolibrary.org/obo/GO_0033603",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/GO_0010647"
+    }, {
       "sub" : "http://purl.obolibrary.org/obo/GO_0050906",
       "pred" : "http://purl.obolibrary.org/obo/BFO_0000050",
       "obj" : "http://purl.obolibrary.org/obo/GO_0007600"
@@ -22915,13 +23001,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/GO_0051931"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/GO_0043902",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/GO_0048518"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/GO_1904480",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/GO_0060456"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/GO_0043902",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/GO_0048518"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/GO_0099536",
       "pred" : "is_a",
@@ -23011,13 +23097,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/GO_0051588"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/GO_0007563",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/GO_2000026"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/GO_0032109",
       "pred" : "http://purl.obolibrary.org/obo/RO_0002213",
       "obj" : "http://purl.obolibrary.org/obo/GO_0031667"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/GO_0007563",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/GO_2000026"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/GO_0032879",
       "pred" : "is_a",
@@ -23183,13 +23269,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/GO_0007154"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/GO_0045805",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/GO_0051240"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/GO_0050896",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/GO_0008150"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/GO_0045805",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/GO_0051240"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/GO_0050961",
       "pred" : "is_a",
@@ -23251,6 +23337,10 @@
       "pred" : "http://purl.obolibrary.org/obo/BFO_0000050",
       "obj" : "http://purl.obolibrary.org/obo/GO_0042745"
     }, {
+      "sub" : "http://purl.obolibrary.org/obo/GO_0007269",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/GO_0051649"
+    }, {
       "sub" : "http://purl.obolibrary.org/obo/GO_0050966",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/GO_0062149"
@@ -23271,13 +23361,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/GO_0044057"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/GO_0090325",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/GO_0040012"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/GO_1904661",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/GO_1904660"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/GO_0090325",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/GO_0040012"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/GO_0007613",
       "pred" : "is_a",
@@ -23387,10 +23477,6 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/GO_2001023"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/GO_0051608",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/GO_0015696"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/GO_1904657",
       "pred" : "http://purl.obolibrary.org/obo/RO_0002212",
       "obj" : "http://purl.obolibrary.org/obo/GO_0050916"
@@ -23430,6 +23516,10 @@
       "sub" : "http://purl.obolibrary.org/obo/GO_0015837",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/GO_0071702"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/GO_0014059",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/GO_0010646"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/GO_0015837",
       "pred" : "is_a",
@@ -23479,13 +23569,13 @@
       "pred" : "http://purl.obolibrary.org/obo/RO_0002213",
       "obj" : "http://purl.obolibrary.org/obo/GO_0060179"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/GO_0014059",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/GO_0050433"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/GO_1905945",
       "pred" : "http://purl.obolibrary.org/obo/RO_0002211",
       "obj" : "http://purl.obolibrary.org/obo/GO_0051592"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/GO_0014059",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/GO_0050433"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/GO_0048520",
       "pred" : "is_a",
@@ -23571,10 +23661,6 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/GO_0006950"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/GO_0015696",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/GO_0006812"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/GO_0045804",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/GO_0051241"
@@ -23651,13 +23737,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/GO_0007611"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/GO_0002792",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/GO_0051048"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/GO_0050805",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/GO_0010648"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/GO_0002792",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/GO_0051048"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/GO_1905959",
       "pred" : "is_a",
@@ -23666,10 +23752,6 @@
       "sub" : "http://purl.obolibrary.org/obo/GO_1905952",
       "pred" : "http://purl.obolibrary.org/obo/RO_0002211",
       "obj" : "http://purl.obolibrary.org/obo/GO_0010876"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/GO_0001820",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/GO_0032940"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/GO_0033673",
       "pred" : "is_a",
@@ -23699,13 +23781,13 @@
       "pred" : "http://purl.obolibrary.org/obo/RO_0002212",
       "obj" : "http://purl.obolibrary.org/obo/GO_0019915"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/GO_0062149",
-      "pred" : "http://purl.obolibrary.org/obo/BFO_0000050",
-      "obj" : "http://purl.obolibrary.org/obo/GO_0019233"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/GO_0009582",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/GO_0009628"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/GO_0062149",
+      "pred" : "http://purl.obolibrary.org/obo/BFO_0000050",
+      "obj" : "http://purl.obolibrary.org/obo/GO_0019233"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/GO_0007625",
       "pred" : "is_a",
@@ -23720,7 +23802,7 @@
       "subsets" : [ ],
       "xrefs" : [ ],
       "basicPropertyValues" : [ ],
-      "version" : "http://purl.obolibrary.org/obo/fbbt/releases/2020-02-19/imports/go_import.owl"
+      "version" : "http://purl.obolibrary.org/obo/fbbt/releases/2020-03-26/imports/go_import.owl"
     },
     "equivalentNodesSets" : [ ],
     "logicalDefinitionAxioms" : [ {
@@ -23864,18 +23946,18 @@
         "fillerId" : "http://purl.obolibrary.org/obo/GO_0005622"
       } ]
     }, {
-      "definedClassId" : "http://purl.obolibrary.org/obo/GO_0045744",
-      "genusIds" : [ "http://purl.obolibrary.org/obo/GO_0008150" ],
-      "restrictions" : [ {
-        "propertyId" : "http://purl.obolibrary.org/obo/RO_0002212",
-        "fillerId" : "http://purl.obolibrary.org/obo/GO_0007186"
-      } ]
-    }, {
       "definedClassId" : "http://purl.obolibrary.org/obo/GO_0034607",
       "genusIds" : [ "http://purl.obolibrary.org/obo/GO_0035178" ],
       "restrictions" : [ {
         "propertyId" : "http://purl.obolibrary.org/obo/BFO_0000050",
         "fillerId" : "http://purl.obolibrary.org/obo/GO_0007618"
+      } ]
+    }, {
+      "definedClassId" : "http://purl.obolibrary.org/obo/GO_0045744",
+      "genusIds" : [ "http://purl.obolibrary.org/obo/GO_0008150" ],
+      "restrictions" : [ {
+        "propertyId" : "http://purl.obolibrary.org/obo/RO_0002212",
+        "fillerId" : "http://purl.obolibrary.org/obo/GO_0007186"
       } ]
     }, {
       "definedClassId" : "http://purl.obolibrary.org/obo/GO_0043549",
@@ -24102,17 +24184,17 @@
         "fillerId" : "http://purl.obolibrary.org/obo/GO_0007186"
       } ]
     }, {
-      "definedClassId" : "http://purl.obolibrary.org/obo/GO_0014058",
-      "genusIds" : [ "http://purl.obolibrary.org/obo/GO_0008150" ],
-      "restrictions" : [ {
-        "propertyId" : "http://purl.obolibrary.org/obo/RO_0002212",
-        "fillerId" : "http://purl.obolibrary.org/obo/GO_0014055"
-      } ]
-    }, {
       "definedClassId" : "http://purl.obolibrary.org/obo/GO_0014057",
       "genusIds" : [ "http://purl.obolibrary.org/obo/GO_0008150" ],
       "restrictions" : [ {
         "propertyId" : "http://purl.obolibrary.org/obo/RO_0002213",
+        "fillerId" : "http://purl.obolibrary.org/obo/GO_0014055"
+      } ]
+    }, {
+      "definedClassId" : "http://purl.obolibrary.org/obo/GO_0014058",
+      "genusIds" : [ "http://purl.obolibrary.org/obo/GO_0008150" ],
+      "restrictions" : [ {
+        "propertyId" : "http://purl.obolibrary.org/obo/RO_0002212",
         "fillerId" : "http://purl.obolibrary.org/obo/GO_0014055"
       } ]
     }, {
@@ -24249,17 +24331,17 @@
         "fillerId" : "http://purl.obolibrary.org/obo/GO_0007610"
       } ]
     }, {
-      "definedClassId" : "http://purl.obolibrary.org/obo/GO_0051240",
-      "genusIds" : [ "http://purl.obolibrary.org/obo/GO_0008150" ],
-      "restrictions" : [ {
-        "propertyId" : "http://purl.obolibrary.org/obo/RO_0002213",
-        "fillerId" : "http://purl.obolibrary.org/obo/GO_0032501"
-      } ]
-    }, {
       "definedClassId" : "http://purl.obolibrary.org/obo/GO_0051241",
       "genusIds" : [ "http://purl.obolibrary.org/obo/GO_0008150" ],
       "restrictions" : [ {
         "propertyId" : "http://purl.obolibrary.org/obo/RO_0002212",
+        "fillerId" : "http://purl.obolibrary.org/obo/GO_0032501"
+      } ]
+    }, {
+      "definedClassId" : "http://purl.obolibrary.org/obo/GO_0051240",
+      "genusIds" : [ "http://purl.obolibrary.org/obo/GO_0008150" ],
+      "restrictions" : [ {
+        "propertyId" : "http://purl.obolibrary.org/obo/RO_0002213",
         "fillerId" : "http://purl.obolibrary.org/obo/GO_0032501"
       } ]
     }, {
@@ -24543,18 +24625,18 @@
         "fillerId" : "http://purl.obolibrary.org/obo/GO_0045202"
       } ]
     }, {
-      "definedClassId" : "http://purl.obolibrary.org/obo/GO_1901421",
-      "genusIds" : [ "http://purl.obolibrary.org/obo/GO_0008150" ],
-      "restrictions" : [ {
-        "propertyId" : "http://purl.obolibrary.org/obo/RO_0002213",
-        "fillerId" : "http://purl.obolibrary.org/obo/GO_0097305"
-      } ]
-    }, {
       "definedClassId" : "http://purl.obolibrary.org/obo/GO_0032388",
       "genusIds" : [ "http://purl.obolibrary.org/obo/GO_0008150" ],
       "restrictions" : [ {
         "propertyId" : "http://purl.obolibrary.org/obo/RO_0002213",
         "fillerId" : "http://purl.obolibrary.org/obo/GO_0046907"
+      } ]
+    }, {
+      "definedClassId" : "http://purl.obolibrary.org/obo/GO_1901421",
+      "genusIds" : [ "http://purl.obolibrary.org/obo/GO_0008150" ],
+      "restrictions" : [ {
+        "propertyId" : "http://purl.obolibrary.org/obo/RO_0002213",
+        "fillerId" : "http://purl.obolibrary.org/obo/GO_0097305"
       } ]
     }, {
       "definedClassId" : "http://purl.obolibrary.org/obo/GO_1905947",
@@ -24613,17 +24695,17 @@
         "fillerId" : "http://purl.obolibrary.org/obo/GO_0005488"
       } ]
     }, {
-      "definedClassId" : "http://purl.obolibrary.org/obo/GO_0048518",
-      "genusIds" : [ "http://purl.obolibrary.org/obo/GO_0008150" ],
-      "restrictions" : [ {
-        "propertyId" : "http://purl.obolibrary.org/obo/RO_0002213",
-        "fillerId" : "http://purl.obolibrary.org/obo/GO_0008150"
-      } ]
-    }, {
       "definedClassId" : "http://purl.obolibrary.org/obo/GO_0048519",
       "genusIds" : [ "http://purl.obolibrary.org/obo/GO_0008150" ],
       "restrictions" : [ {
         "propertyId" : "http://purl.obolibrary.org/obo/RO_0002212",
+        "fillerId" : "http://purl.obolibrary.org/obo/GO_0008150"
+      } ]
+    }, {
+      "definedClassId" : "http://purl.obolibrary.org/obo/GO_0048518",
+      "genusIds" : [ "http://purl.obolibrary.org/obo/GO_0008150" ],
+      "restrictions" : [ {
+        "propertyId" : "http://purl.obolibrary.org/obo/RO_0002213",
         "fillerId" : "http://purl.obolibrary.org/obo/GO_0008150"
       } ]
     }, {
@@ -24648,17 +24730,17 @@
         "fillerId" : "http://purl.obolibrary.org/obo/GO_0014047"
       } ]
     }, {
-      "definedClassId" : "http://purl.obolibrary.org/obo/GO_0010647",
-      "genusIds" : [ "http://purl.obolibrary.org/obo/GO_0008150" ],
-      "restrictions" : [ {
-        "propertyId" : "http://purl.obolibrary.org/obo/RO_0002213",
-        "fillerId" : "http://purl.obolibrary.org/obo/GO_0007154"
-      } ]
-    }, {
       "definedClassId" : "http://purl.obolibrary.org/obo/GO_0010648",
       "genusIds" : [ "http://purl.obolibrary.org/obo/GO_0008150" ],
       "restrictions" : [ {
         "propertyId" : "http://purl.obolibrary.org/obo/RO_0002212",
+        "fillerId" : "http://purl.obolibrary.org/obo/GO_0007154"
+      } ]
+    }, {
+      "definedClassId" : "http://purl.obolibrary.org/obo/GO_0010647",
+      "genusIds" : [ "http://purl.obolibrary.org/obo/GO_0008150" ],
+      "restrictions" : [ {
+        "propertyId" : "http://purl.obolibrary.org/obo/RO_0002213",
         "fillerId" : "http://purl.obolibrary.org/obo/GO_0007154"
       } ]
     }, {
@@ -24795,17 +24877,17 @@
         "fillerId" : "http://purl.obolibrary.org/obo/GO_0051641"
       } ]
     }, {
-      "definedClassId" : "http://purl.obolibrary.org/obo/GO_0023056",
-      "genusIds" : [ "http://purl.obolibrary.org/obo/GO_0008150" ],
-      "restrictions" : [ {
-        "propertyId" : "http://purl.obolibrary.org/obo/RO_0002213",
-        "fillerId" : "http://purl.obolibrary.org/obo/GO_0023052"
-      } ]
-    }, {
       "definedClassId" : "http://purl.obolibrary.org/obo/GO_0023057",
       "genusIds" : [ "http://purl.obolibrary.org/obo/GO_0008150" ],
       "restrictions" : [ {
         "propertyId" : "http://purl.obolibrary.org/obo/RO_0002212",
+        "fillerId" : "http://purl.obolibrary.org/obo/GO_0023052"
+      } ]
+    }, {
+      "definedClassId" : "http://purl.obolibrary.org/obo/GO_0023056",
+      "genusIds" : [ "http://purl.obolibrary.org/obo/GO_0008150" ],
+      "restrictions" : [ {
+        "propertyId" : "http://purl.obolibrary.org/obo/RO_0002213",
         "fillerId" : "http://purl.obolibrary.org/obo/GO_0023052"
       } ]
     }, {
@@ -24931,17 +25013,17 @@
         "fillerId" : "http://purl.obolibrary.org/obo/GO_0051179"
       } ]
     }, {
-      "definedClassId" : "http://purl.obolibrary.org/obo/GO_0051047",
-      "genusIds" : [ "http://purl.obolibrary.org/obo/GO_0008150" ],
-      "restrictions" : [ {
-        "propertyId" : "http://purl.obolibrary.org/obo/RO_0002213",
-        "fillerId" : "http://purl.obolibrary.org/obo/GO_0046903"
-      } ]
-    }, {
       "definedClassId" : "http://purl.obolibrary.org/obo/GO_0051048",
       "genusIds" : [ "http://purl.obolibrary.org/obo/GO_0008150" ],
       "restrictions" : [ {
         "propertyId" : "http://purl.obolibrary.org/obo/RO_0002212",
+        "fillerId" : "http://purl.obolibrary.org/obo/GO_0046903"
+      } ]
+    }, {
+      "definedClassId" : "http://purl.obolibrary.org/obo/GO_0051047",
+      "genusIds" : [ "http://purl.obolibrary.org/obo/GO_0008150" ],
+      "restrictions" : [ {
+        "propertyId" : "http://purl.obolibrary.org/obo/RO_0002213",
         "fillerId" : "http://purl.obolibrary.org/obo/GO_0046903"
       } ]
     }, {
@@ -25141,17 +25223,17 @@
         "fillerId" : "http://purl.obolibrary.org/obo/GO_0008355"
       } ]
     }, {
-      "definedClassId" : "http://purl.obolibrary.org/obo/GO_0010563",
-      "genusIds" : [ "http://purl.obolibrary.org/obo/GO_0008150" ],
-      "restrictions" : [ {
-        "propertyId" : "http://purl.obolibrary.org/obo/RO_0002212",
-        "fillerId" : "http://purl.obolibrary.org/obo/GO_0006793"
-      } ]
-    }, {
       "definedClassId" : "http://purl.obolibrary.org/obo/GO_0010562",
       "genusIds" : [ "http://purl.obolibrary.org/obo/GO_0008150" ],
       "restrictions" : [ {
         "propertyId" : "http://purl.obolibrary.org/obo/RO_0002213",
+        "fillerId" : "http://purl.obolibrary.org/obo/GO_0006793"
+      } ]
+    }, {
+      "definedClassId" : "http://purl.obolibrary.org/obo/GO_0010563",
+      "genusIds" : [ "http://purl.obolibrary.org/obo/GO_0008150" ],
+      "restrictions" : [ {
+        "propertyId" : "http://purl.obolibrary.org/obo/RO_0002212",
         "fillerId" : "http://purl.obolibrary.org/obo/GO_0006793"
       } ]
     }, {
@@ -25183,17 +25265,17 @@
         "fillerId" : "http://purl.obolibrary.org/obo/GO_0060179"
       } ]
     }, {
-      "definedClassId" : "http://purl.obolibrary.org/obo/GO_0009967",
-      "genusIds" : [ "http://purl.obolibrary.org/obo/GO_0008150" ],
-      "restrictions" : [ {
-        "propertyId" : "http://purl.obolibrary.org/obo/RO_0002213",
-        "fillerId" : "http://purl.obolibrary.org/obo/GO_0007165"
-      } ]
-    }, {
       "definedClassId" : "http://purl.obolibrary.org/obo/GO_0009968",
       "genusIds" : [ "http://purl.obolibrary.org/obo/GO_0008150" ],
       "restrictions" : [ {
         "propertyId" : "http://purl.obolibrary.org/obo/RO_0002212",
+        "fillerId" : "http://purl.obolibrary.org/obo/GO_0007165"
+      } ]
+    }, {
+      "definedClassId" : "http://purl.obolibrary.org/obo/GO_0009967",
+      "genusIds" : [ "http://purl.obolibrary.org/obo/GO_0008150" ],
+      "restrictions" : [ {
+        "propertyId" : "http://purl.obolibrary.org/obo/RO_0002213",
         "fillerId" : "http://purl.obolibrary.org/obo/GO_0007165"
       } ]
     }, {
@@ -25664,13 +25746,6 @@
       "restrictions" : [ {
         "propertyId" : "http://purl.obolibrary.org/obo/RO_0002212",
         "fillerId" : "http://purl.obolibrary.org/obo/GO_0007585"
-      } ]
-    }, {
-      "definedClassId" : "http://purl.obolibrary.org/obo/GO_0051649",
-      "genusIds" : [ "http://purl.obolibrary.org/obo/GO_0051234" ],
-      "restrictions" : [ {
-        "propertyId" : "http://purl.obolibrary.org/obo/BFO_0000066",
-        "fillerId" : "http://purl.obolibrary.org/obo/GO_0005623"
       } ]
     }, {
       "definedClassId" : "http://purl.obolibrary.org/obo/GO_0023051",
