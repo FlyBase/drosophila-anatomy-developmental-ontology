@@ -15,38 +15,134 @@ Ontology: <http://purl.obolibrary.org/obo/fbbt/fbbt-idranges.owl>
 
 
 Annotations: 
-    idsfor: "FBBT",
-    idprefix: "http://purl.obolibrary.org/obo/FBBT_",
-    iddigits: 7
+    idsfor: "FBbt",
+    idprefix: "http://purl.obolibrary.org/obo/FBbt_",
+    iddigits: 8
 
 AnnotationProperty: idprefix:
-
-    
 AnnotationProperty: iddigits:
-
-    
 AnnotationProperty: idsfor:
-
-    
 AnnotationProperty: allocatedto:
 
 Datatype: idrange:1
 
     Annotations: 
-        allocatedto: "ONTOLOGY-CREATOR"
+        allocatedto: "DOS"
     
     EquivalentTo: 
-        xsd:integer[>= 0 , <= 999999]
+        xsd:integer[>= 00007000 , <= 00017000]
 
-    
 Datatype: idrange:2
 
     Annotations: 
-        allocatedto: "ADDITIONAL EDITOR"
+        allocatedto: "Arnim"
     
     EquivalentTo: 
-        xsd:integer[>= 1000000 , <= 1999999]
+        xsd:integer[>= 00020000 , <= 00025000]
+
+Datatype: idrange:3
+
+    Annotations: 
+        allocatedto: "Volker"
     
+    EquivalentTo: 
+        xsd:integer[>= 00030000 , <= 00035000]
+
+Datatype: idrange:4
+
+    Annotations: 
+        allocatedto: "BrainName"
+    
+    EquivalentTo: 
+        xsd:integer[>= 00040000 , <= 00045000]
+
+Datatype: idrange:5
+
+    Annotations: 
+        allocatedto: "Sian"
+    
+    EquivalentTo: 
+        xsd:integer[>= 00045001 , <= 00046000]
+
+Datatype: idrange:6
+
+    Annotations: 
+        allocatedto: "Tamsin"
+    
+    EquivalentTo: 
+        xsd:integer[>= 00046001 , <= 00047000]
+
+Datatype: idrange:7
+
+    Annotations: 
+        allocatedto: "Clare"
+    
+    EquivalentTo: 
+        xsd:integer[>= 00047001 , <= 00049999]
+
+Datatype: idrange:8
+
+    Annotations: 
+        allocatedto: "Lineage_terms"
+    
+    EquivalentTo: 
+        xsd:integer[>= 00050000 , <= 00050281]
+
+Datatype: idrange:9
+
+    Annotations: 
+        allocatedto: "FlyTed"
+    
+    EquivalentTo: 
+        xsd:integer[>= 00057000 , <= 00058000]
+
+Datatype: idrange:10
+
+    Annotations: 
+        allocatedto: "OlSys"
+    
+    EquivalentTo: 
+        xsd:integer[>= 00067000 , <= 00068000]
+
+Datatype: idrange:11
+
+    Annotations: 
+        allocatedto: "Simon"
+    
+    EquivalentTo: 
+        xsd:integer[>= 00100000 , <= 00106000]
+
+Datatype: idrange:12
+
+    Annotations: 
+        allocatedto: "Marta"
+    
+    EquivalentTo: 
+        xsd:integer[>= 00110000 , <= 00115000]
+
+Datatype: idrange:13
+
+    Annotations: 
+        allocatedto: "VFB"
+    
+    EquivalentTo: 
+        xsd:integer[>= 00115001 , <= 00120000]
+
+Datatype: idrange:14
+
+    Annotations: 
+        allocatedto: "XP"
+    
+    EquivalentTo: 
+        xsd:integer[>= 00200000 , <= 00210000]
+
+Datatype: idrange:15
+
+    Annotations: 
+        allocatedto: "EM_data"
+    
+    EquivalentTo: 
+        xsd:integer[>= 20000000 , <= 20049999]
     
 Datatype: xsd:integer
 Datatype: rdf:PlainLiteral
