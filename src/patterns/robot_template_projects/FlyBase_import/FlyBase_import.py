@@ -5,14 +5,23 @@ from collections import OrderedDict
 
 fm = FeatureMover('http://pdb.virtualflybrain.org', 'neo4j', 'neo4j')  # expects some neo connection, not used here
 
+# create list of FBgns from seed.txt
+
+with open('../../../ontology/seed.txt', 'r') as f:
+    terms = f.readlines()
+
+FBgn_list = [str(term.rstrip()).lstrip('http://flybase.org/reports/') for term in terms if "FBgn" in term]
+
+"""
+# Make template from a file of FBgns
 with open('FBgns.txt', 'r') as f:
     FBgns = f.readlines()
 
 FBgn_list = [gene.rstrip() for gene in FBgns]
+"""
 
+# Get dictionary of Nodes for list of FBgns
 fb_output = fm.name_synonym_lookup(FBgn_list)
-print(fb_output['FBgn0000137'])
-print(type(fb_output['FBgn0000137']))
 
 # Make a dictionary with key - column header & value = template specification (first row of table).
 template_seed = OrderedDict([ ('ID' , 'ID'), ('CLASS_TYPE' , 'CLASS_TYPE'),
