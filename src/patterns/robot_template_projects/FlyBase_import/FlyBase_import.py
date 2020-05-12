@@ -53,8 +53,8 @@ for g in FBgn_list:
     #synonyms
     syn_string = ""
     for syn in gene.synonyms:
-        syn_string += (syn + " | ")
-    syn_string = syn_string.rstrip(" | ")
+        syn_string += (syn + "|")
+    syn_string = syn_string.rstrip("|")
     row_od["Synonyms"] = syn_string
 
     #make new row into a DataFrame and add it to template
