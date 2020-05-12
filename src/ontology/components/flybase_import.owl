@@ -1,13 +1,13 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="http://www.w3.org/2002/07/owl#"
-     xml:base="http://www.w3.org/2002/07/owl"
+<rdf:RDF xmlns="http://purl.obolibrary.org/obo/fbbt/components/flybase_import.owl#"
+     xml:base="http://purl.obolibrary.org/obo/fbbt/components/flybase_import.owl"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
-    <Ontology/>
+    <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/fbbt/components/flybase_import.owl"/>
     
 
 
@@ -24,7 +24,7 @@
 
     <!-- http://www.geneontology.org/formats/oboInOwl#hasExactSynonym -->
 
-    <AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
     
 
 
@@ -41,7 +41,7 @@
 
     <!-- http://flybase.org/reports/FBgn0000137 -->
 
-    <Class rdf:about="http://flybase.org/reports/FBgn0000137">
+    <owl:Class rdf:about="http://flybase.org/reports/FBgn0000137">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0000704"/>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> AS-C T8 </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> AS-C T8ase</oboInOwl:hasExactSynonym>
@@ -62,13 +62,13 @@
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> sc/T8 </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CG3258 </oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ase</rdfs:label>
-    </Class>
+    </owl:Class>
     
 
 
     <!-- http://flybase.org/reports/FBgn0000395 -->
 
-    <Class rdf:about="http://flybase.org/reports/FBgn0000395">
+    <owl:Class rdf:about="http://flybase.org/reports/FBgn0000395">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0000704"/>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> BMPER </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> CG15671 </oboInOwl:hasExactSynonym>
@@ -83,13 +83,13 @@
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> cv 2 </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cv-2 </oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cv-2</rdfs:label>
-    </Class>
+    </owl:Class>
     
 
 
     <!-- http://flybase.org/reports/FBgn0000463 -->
 
-    <Class rdf:about="http://flybase.org/reports/FBgn0000463">
+    <owl:Class rdf:about="http://flybase.org/reports/FBgn0000463">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0000704"/>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> 0495/20 </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> 0926/11 </oboInOwl:hasExactSynonym>
@@ -120,13 +120,13 @@
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> l(3)j8C3 </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CG3619 </oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dl</rdfs:label>
-    </Class>
+    </owl:Class>
     
 
 
     <!-- http://flybase.org/reports/FBgn0000490 -->
 
-    <Class rdf:about="http://flybase.org/reports/FBgn0000490">
+    <owl:Class rdf:about="http://flybase.org/reports/FBgn0000490">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0000704"/>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> BMP </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> CG9885 </oboInOwl:hasExactSynonym>
@@ -163,13 +163,13 @@
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> shv </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">l(2)22Fa </oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">dpp</rdfs:label>
-    </Class>
+    </owl:Class>
     
 
 
     <!-- http://flybase.org/reports/FBgn0000500 -->
 
-    <Class rdf:about="http://flybase.org/reports/FBgn0000500">
+    <owl:Class rdf:about="http://flybase.org/reports/FBgn0000500">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0000704"/>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> BcDNA:RH46857 </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> CCK </oboInOwl:hasExactSynonym>
@@ -203,13 +203,13 @@
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> sulfakinin-0 </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">sulfakinin </oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dsk</rdfs:label>
-    </Class>
+    </owl:Class>
     
 
 
     <!-- http://flybase.org/reports/FBgn0000504 -->
 
-    <Class rdf:about="http://flybase.org/reports/FBgn0000504">
+    <owl:Class rdf:about="http://flybase.org/reports/FBgn0000504">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0000704"/>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> CG11094</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> DSX </oboInOwl:hasExactSynonym>
@@ -228,13 +228,13 @@
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> ix-62c </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">dsx </oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">dsx</rdfs:label>
-    </Class>
+    </owl:Class>
     
 
 
     <!-- http://flybase.org/reports/FBgn0000546 -->
 
-    <Class rdf:about="http://flybase.org/reports/FBgn0000546">
+    <owl:Class rdf:about="http://flybase.org/reports/FBgn0000546">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0000704"/>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> CG1765 </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> CG8347 </oboInOwl:hasExactSynonym>
@@ -281,13 +281,13 @@
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> snt </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ms(2)06410 </oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EcR</rdfs:label>
-    </Class>
+    </owl:Class>
     
 
 
     <!-- http://flybase.org/reports/FBgn0000564 -->
 
-    <Class rdf:about="http://flybase.org/reports/FBgn0000564">
+    <owl:Class rdf:about="http://flybase.org/reports/FBgn0000564">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0000704"/>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> CG5400 </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> DMEHAB</oboInOwl:hasExactSynonym>
@@ -299,13 +299,13 @@
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> eh </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">eclosion hormone </oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Eh</rdfs:label>
-    </Class>
+    </owl:Class>
     
 
 
     <!-- http://flybase.org/reports/FBgn0000577 -->
 
-    <Class rdf:about="http://flybase.org/reports/FBgn0000577">
+    <owl:Class rdf:about="http://flybase.org/reports/FBgn0000577">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0000704"/>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> 153867_at </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> Apa </oboInOwl:hasExactSynonym>
@@ -333,13 +333,13 @@
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> transcript group V </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">vasodilator-stimulated phosphoprotein </oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">en</rdfs:label>
-    </Class>
+    </owl:Class>
     
 
 
     <!-- http://flybase.org/reports/FBgn0000606 -->
 
-    <Class rdf:about="http://flybase.org/reports/FBgn0000606">
+    <owl:Class rdf:about="http://flybase.org/reports/FBgn0000606">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0000704"/>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> 10.5 </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> 10.9 </oboInOwl:hasExactSynonym>
@@ -379,13 +379,13 @@
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> lethal(2)46Ce </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Even-skipped </oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">eve</rdfs:label>
-    </Class>
+    </owl:Class>
     
 
 
     <!-- http://flybase.org/reports/FBgn0000636 -->
 
-    <Class rdf:about="http://flybase.org/reports/FBgn0000636">
+    <owl:Class rdf:about="http://flybase.org/reports/FBgn0000636">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0000704"/>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> CG5803 </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> FAS3 </oboInOwl:hasExactSynonym>
@@ -424,13 +424,13 @@
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> fasiclin III </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FAS III </oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fas3</rdfs:label>
-    </Class>
+    </owl:Class>
     
 
 
     <!-- http://flybase.org/reports/FBgn0000964 -->
 
-    <Class rdf:about="http://flybase.org/reports/FBgn0000964">
+    <owl:Class rdf:about="http://flybase.org/reports/FBgn0000964">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0000704"/>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> CG10034 </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> DM13 </oboInOwl:hasExactSynonym>
@@ -451,13 +451,13 @@
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> traffic jam</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PL3 </oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tj</rdfs:label>
-    </Class>
+    </owl:Class>
     
 
 
     <!-- http://flybase.org/reports/FBgn0001981 -->
 
-    <Class rdf:about="http://flybase.org/reports/FBgn0001981">
+    <owl:Class rdf:about="http://flybase.org/reports/FBgn0001981">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0000704"/>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> 4B7 </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> BG:DS07851.7 </oboInOwl:hasExactSynonym>
@@ -486,13 +486,13 @@
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> wizard </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">D.m.Escargot </oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">esg</rdfs:label>
-    </Class>
+    </owl:Class>
     
 
 
     <!-- http://flybase.org/reports/FBgn0002522 -->
 
-    <Class rdf:about="http://flybase.org/reports/FBgn0002522">
+    <owl:Class rdf:about="http://flybase.org/reports/FBgn0002522">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0000704"/>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> BG:DS00004.9 </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> CG1264 </oboInOwl:hasExactSynonym>
@@ -513,13 +513,13 @@
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> lb </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">F90 </oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">lab</rdfs:label>
-    </Class>
+    </owl:Class>
     
 
 
     <!-- http://flybase.org/reports/FBgn0002985 -->
 
-    <Class rdf:about="http://flybase.org/reports/FBgn0002985">
+    <owl:Class rdf:about="http://flybase.org/reports/FBgn0002985">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0000704"/>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> CG3851 </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> ODD </oboInOwl:hasExactSynonym>
@@ -537,13 +537,13 @@
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> ods </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Odd-Skipped </oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">odd</rdfs:label>
-    </Class>
+    </owl:Class>
     
 
 
     <!-- http://flybase.org/reports/FBgn0003249 -->
 
-    <Class rdf:about="http://flybase.org/reports/FBgn0003249">
+    <owl:Class rdf:about="http://flybase.org/reports/FBgn0003249">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0000704"/>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> CG10888 </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> DMELRH3 </oboInOwl:hasExactSynonym>
@@ -557,13 +557,13 @@
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> rhodopsin </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rh3 </oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rh3</rdfs:label>
-    </Class>
+    </owl:Class>
     
 
 
     <!-- http://flybase.org/reports/FBgn0003250 -->
 
-    <Class rdf:about="http://flybase.org/reports/FBgn0003250">
+    <owl:Class rdf:about="http://flybase.org/reports/FBgn0003250">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0000704"/>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> CG9668 </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> DMELRH4 </oboInOwl:hasExactSynonym>
@@ -578,13 +578,13 @@
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> rhodopsin 4 </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rh4 </oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rh4</rdfs:label>
-    </Class>
+    </owl:Class>
     
 
 
     <!-- http://flybase.org/reports/FBgn0003463 -->
 
-    <Class rdf:about="http://flybase.org/reports/FBgn0003463">
+    <owl:Class rdf:about="http://flybase.org/reports/FBgn0003463">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0000704"/>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> Chordin </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> Dm sog </oboInOwl:hasExactSynonym>
@@ -601,13 +601,13 @@
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> sog </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CG9224 </oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">sog</rdfs:label>
-    </Class>
+    </owl:Class>
     
 
 
     <!-- http://flybase.org/reports/FBgn0003651 -->
 
-    <Class rdf:about="http://flybase.org/reports/FBgn0003651">
+    <owl:Class rdf:about="http://flybase.org/reports/FBgn0003651">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0000704"/>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> 0005/12 </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> 0042/01 </oboInOwl:hasExactSynonym>
@@ -645,13 +645,13 @@
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> svp </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SVP-1 </oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">svp</rdfs:label>
-    </Class>
+    </owl:Class>
     
 
 
     <!-- http://flybase.org/reports/FBgn0004228 -->
 
-    <Class rdf:about="http://flybase.org/reports/FBgn0004228">
+    <owl:Class rdf:about="http://flybase.org/reports/FBgn0004228">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0000704"/>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> MEX </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> Midgut expression 1 </oboInOwl:hasExactSynonym>
@@ -659,13 +659,13 @@
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> midgut expression 1</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CG7936 </oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mex1</rdfs:label>
-    </Class>
+    </owl:Class>
     
 
 
     <!-- http://flybase.org/reports/FBgn0004595 -->
 
-    <Class rdf:about="http://flybase.org/reports/FBgn0004595">
+    <owl:Class rdf:about="http://flybase.org/reports/FBgn0004595">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0000704"/>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> 0244/09 </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> 0320/10 </oboInOwl:hasExactSynonym>
@@ -711,13 +711,13 @@
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> voila </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">prospero </oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pros</rdfs:label>
-    </Class>
+    </owl:Class>
     
 
 
     <!-- http://flybase.org/reports/FBgn0004606 -->
 
-    <Class rdf:about="http://flybase.org/reports/FBgn0004606">
+    <owl:Class rdf:about="http://flybase.org/reports/FBgn0004606">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0000704"/>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> CG1322 </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> ZFH-1 </oboInOwl:hasExactSynonym>
@@ -742,13 +742,13 @@
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> zinc-finger homeodomain1 </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Zfh-1 </oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">zfh1</rdfs:label>
-    </Class>
+    </owl:Class>
     
 
 
     <!-- http://flybase.org/reports/FBgn0004644 -->
 
-    <Class rdf:about="http://flybase.org/reports/FBgn0004644">
+    <owl:Class rdf:about="http://flybase.org/reports/FBgn0004644">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0000704"/>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> CG4637 </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> Dmhh </oboInOwl:hasExactSynonym>
@@ -776,13 +776,13 @@
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> l(3)neo57 </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">l(3)neo56 </oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hh</rdfs:label>
-    </Class>
+    </owl:Class>
     
 
 
     <!-- http://flybase.org/reports/FBgn0004652 -->
 
-    <Class rdf:about="http://flybase.org/reports/FBgn0004652">
+    <owl:Class rdf:about="http://flybase.org/reports/FBgn0004652">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0000704"/>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> BTB-VI </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> BTB-protein-VI </oboInOwl:hasExactSynonym>
@@ -810,13 +810,13 @@
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> satori </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">fru-satori </oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">fru</rdfs:label>
-    </Class>
+    </owl:Class>
     
 
 
     <!-- http://flybase.org/reports/FBgn0004666 -->
 
-    <Class rdf:about="http://flybase.org/reports/FBgn0004666">
+    <owl:Class rdf:about="http://flybase.org/reports/FBgn0004666">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0000704"/>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> 0716/08 </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> 0899/14 </oboInOwl:hasExactSynonym>
@@ -850,13 +850,13 @@
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> singleminded </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0483/09 </oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">sim</rdfs:label>
-    </Class>
+    </owl:Class>
     
 
 
     <!-- http://flybase.org/reports/FBgn0004956 -->
 
-    <Class rdf:about="http://flybase.org/reports/FBgn0004956">
+    <owl:Class rdf:about="http://flybase.org/reports/FBgn0004956">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0000704"/>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> CG5993 </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> OS </oboInOwl:hasExactSynonym>
@@ -890,13 +890,13 @@
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> upd1 </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">odsy </oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">upd1</rdfs:label>
-    </Class>
+    </owl:Class>
     
 
 
     <!-- http://flybase.org/reports/FBgn0005638 -->
 
-    <Class rdf:about="http://flybase.org/reports/FBgn0005638">
+    <owl:Class rdf:about="http://flybase.org/reports/FBgn0005638">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0000704"/>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> C/EBP </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> CCAAT/enhancer binding protein </oboInOwl:hasExactSynonym>
@@ -917,13 +917,13 @@
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> slow border cells </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Slow border cells </oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">slbo</rdfs:label>
-    </Class>
+    </owl:Class>
     
 
 
     <!-- http://flybase.org/reports/FBgn0005775 -->
 
-    <Class rdf:about="http://flybase.org/reports/FBgn0005775">
+    <owl:Class rdf:about="http://flybase.org/reports/FBgn0005775">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0000704"/>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> CG7503 </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> CON</oboInOwl:hasExactSynonym>
@@ -937,13 +937,13 @@
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> transcript-35 </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Connectin </oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Con</rdfs:label>
-    </Class>
+    </owl:Class>
     
 
 
     <!-- http://flybase.org/reports/FBgn0010226 -->
 
-    <Class rdf:about="http://flybase.org/reports/FBgn0010226">
+    <owl:Class rdf:about="http://flybase.org/reports/FBgn0010226">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0000704"/>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> CG8938 </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> DmGST-2 </oboInOwl:hasExactSynonym>
@@ -982,13 +982,13 @@
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> n(2)06253 </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Glutathione S-transferase </oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GstS1</rdfs:label>
-    </Class>
+    </owl:Class>
     
 
 
     <!-- http://flybase.org/reports/FBgn0010397 -->
 
-    <Class rdf:about="http://flybase.org/reports/FBgn0010397">
+    <owl:Class rdf:about="http://flybase.org/reports/FBgn0010397">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0000704"/>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> DmC </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> G intermediate filament </oboInOwl:hasExactSynonym>
@@ -1006,13 +1006,13 @@
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> pG-IF </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CG10119 </oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">LamC</rdfs:label>
-    </Class>
+    </owl:Class>
     
 
 
     <!-- http://flybase.org/reports/FBgn0010433 -->
 
-    <Class rdf:about="http://flybase.org/reports/FBgn0010433">
+    <owl:Class rdf:about="http://flybase.org/reports/FBgn0010433">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0000704"/>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> ATO </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> At </oboInOwl:hasExactSynonym>
@@ -1026,13 +1026,13 @@
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> bHLHa10 </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Atonal </oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ato</rdfs:label>
-    </Class>
+    </owl:Class>
     
 
 
     <!-- http://flybase.org/reports/FBgn0010453 -->
 
-    <Class rdf:about="http://flybase.org/reports/FBgn0010453">
+    <owl:Class rdf:about="http://flybase.org/reports/FBgn0010453">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0000704"/>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> DWnt-4 </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> DWnt4 </oboInOwl:hasExactSynonym>
@@ -1051,13 +1051,13 @@
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> wnt4 </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CG4698 </oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wnt4</rdfs:label>
-    </Class>
+    </owl:Class>
     
 
 
     <!-- http://flybase.org/reports/FBgn0011581 -->
 
-    <Class rdf:about="http://flybase.org/reports/FBgn0011581">
+    <owl:Class rdf:about="http://flybase.org/reports/FBgn0011581">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0000704"/>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> CG6440 </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> DMS </oboInOwl:hasExactSynonym>
@@ -1080,13 +1080,13 @@
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> myosuppressin </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dms </oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ms</rdfs:label>
-    </Class>
+    </owl:Class>
     
 
 
     <!-- http://flybase.org/reports/FBgn0011701 -->
 
-    <Class rdf:about="http://flybase.org/reports/FBgn0011701">
+    <owl:Class rdf:about="http://flybase.org/reports/FBgn0011701">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0000704"/>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> 3702 </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> AbRK2 </oboInOwl:hasExactSynonym>
@@ -1105,13 +1105,13 @@
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> rk2 </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CT24072 </oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">repo</rdfs:label>
-    </Class>
+    </owl:Class>
     
 
 
     <!-- http://flybase.org/reports/FBgn0011723 -->
 
-    <Class rdf:about="http://flybase.org/reports/FBgn0011723">
+    <owl:Class rdf:about="http://flybase.org/reports/FBgn0011723">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0000704"/>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> Bra </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> Brachyenteron </oboInOwl:hasExactSynonym>
@@ -1135,13 +1135,13 @@
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> trg </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">byn </oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">byn</rdfs:label>
-    </Class>
+    </owl:Class>
     
 
 
     <!-- http://flybase.org/reports/FBgn0012344 -->
 
-    <Class rdf:about="http://flybase.org/reports/FBgn0012344">
+    <owl:Class rdf:about="http://flybase.org/reports/FBgn0012344">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0000704"/>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> CG8348 </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> CRF </oboInOwl:hasExactSynonym>
@@ -1161,13 +1161,13 @@
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> drome-DH44 </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Diuretic hormone </oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dh44</rdfs:label>
-    </Class>
+    </owl:Class>
     
 
 
     <!-- http://flybase.org/reports/FBgn0013469 -->
 
-    <Class rdf:about="http://flybase.org/reports/FBgn0013469">
+    <owl:Class rdf:about="http://flybase.org/reports/FBgn0013469">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0000704"/>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> KLU </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> Klu </oboInOwl:hasExactSynonym>
@@ -1180,13 +1180,13 @@
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> l(3)10052 </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CG12296 </oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">klu</rdfs:label>
-    </Class>
+    </owl:Class>
     
 
 
     <!-- http://flybase.org/reports/FBgn0013767 -->
 
-    <Class rdf:about="http://flybase.org/reports/FBgn0013767">
+    <owl:Class rdf:about="http://flybase.org/reports/FBgn0013767">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0000704"/>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> CG3302 </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> COR </oboInOwl:hasExactSynonym>
@@ -1202,13 +1202,13 @@
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> preprocorazonin </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CRZ </oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Crz</rdfs:label>
-    </Class>
+    </owl:Class>
     
 
 
     <!-- http://flybase.org/reports/FBgn0014019 -->
 
-    <Class rdf:about="http://flybase.org/reports/FBgn0014019">
+    <owl:Class rdf:about="http://flybase.org/reports/FBgn0014019">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0000704"/>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> CG5279 </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> DMELRH5 </oboInOwl:hasExactSynonym>
@@ -1224,13 +1224,13 @@
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> rhodopsin-5 </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rh5 </oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rh5</rdfs:label>
-    </Class>
+    </owl:Class>
     
 
 
     <!-- http://flybase.org/reports/FBgn0014163 -->
 
-    <Class rdf:about="http://flybase.org/reports/FBgn0014163">
+    <owl:Class rdf:about="http://flybase.org/reports/FBgn0014163">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0000704"/>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> CG4609 </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> FAX </oboInOwl:hasExactSynonym>
@@ -1250,13 +1250,13 @@
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> fax </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Failed axon connections </oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">fax</rdfs:label>
-    </Class>
+    </owl:Class>
     
 
 
     <!-- http://flybase.org/reports/FBgn0014179 -->
 
-    <Class rdf:about="http://flybase.org/reports/FBgn0014179">
+    <owl:Class rdf:about="http://flybase.org/reports/FBgn0014179">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0000704"/>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> CG12245 </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> GCM </oboInOwl:hasExactSynonym>
@@ -1277,13 +1277,13 @@
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> ucc </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">upper class chordotonals </oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">gcm</rdfs:label>
-    </Class>
+    </owl:Class>
     
 
 
     <!-- http://flybase.org/reports/FBgn0015591 -->
 
-    <Class rdf:about="http://flybase.org/reports/FBgn0015591">
+    <owl:Class rdf:about="http://flybase.org/reports/FBgn0015591">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0000704"/>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> ALLS </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> AS </oboInOwl:hasExactSynonym>
@@ -1340,13 +1340,13 @@
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> drostatin-A4 </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Drostatin-A4 </oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AstA</rdfs:label>
-    </Class>
+    </owl:Class>
     
 
 
     <!-- http://flybase.org/reports/FBgn0019940 -->
 
-    <Class rdf:about="http://flybase.org/reports/FBgn0019940">
+    <owl:Class rdf:about="http://flybase.org/reports/FBgn0019940">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0000704"/>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> CG5192 </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> DMELRH6 </oboInOwl:hasExactSynonym>
@@ -1364,13 +1364,13 @@
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> rhodopsin-6 </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">R8 rhodopsin </oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rh6</rdfs:label>
-    </Class>
+    </owl:Class>
     
 
 
     <!-- http://flybase.org/reports/FBgn0020299 -->
 
-    <Class rdf:about="http://flybase.org/reports/FBgn0020299">
+    <owl:Class rdf:about="http://flybase.org/reports/FBgn0020299">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0000704"/>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> 0837/10 </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> C </oboInOwl:hasExactSynonym>
@@ -1411,13 +1411,13 @@
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> stumps/dof </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">downstream of FGFR </oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stumps</rdfs:label>
-    </Class>
+    </owl:Class>
     
 
 
     <!-- http://flybase.org/reports/FBgn0020386 -->
 
-    <Class rdf:about="http://flybase.org/reports/FBgn0020386">
+    <owl:Class rdf:about="http://flybase.org/reports/FBgn0020386">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0000704"/>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> 1210 </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> CG1201 </oboInOwl:hasExactSynonym>
@@ -1449,13 +1449,13 @@
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> serine/threonine protein kinase </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PDK1 </oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pdk1</rdfs:label>
-    </Class>
+    </owl:Class>
     
 
 
     <!-- http://flybase.org/reports/FBgn0023091 -->
 
-    <Class rdf:about="http://flybase.org/reports/FBgn0023091">
+    <owl:Class rdf:about="http://flybase.org/reports/FBgn0023091">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0000704"/>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> CG8667 </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> DIMM</oboInOwl:hasExactSynonym>
@@ -1470,13 +1470,13 @@
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> dimmed </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mist 1-related </oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">dimm</rdfs:label>
-    </Class>
+    </owl:Class>
     
 
 
     <!-- http://flybase.org/reports/FBgn0023178 -->
 
-    <Class rdf:about="http://flybase.org/reports/FBgn0023178">
+    <owl:Class rdf:about="http://flybase.org/reports/FBgn0023178">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0000704"/>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> BcDNA:RH08487 </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> CG6496 </oboInOwl:hasExactSynonym>
@@ -1507,13 +1507,13 @@
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> pigment-dispersing hormone </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Drm-PDH </oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pdf</rdfs:label>
-    </Class>
+    </owl:Class>
     
 
 
     <!-- http://flybase.org/reports/FBgn0023523 -->
 
-    <Class rdf:about="http://flybase.org/reports/FBgn0023523">
+    <owl:Class rdf:about="http://flybase.org/reports/FBgn0023523">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0000704"/>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> 2F.1 </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> 2a </oboInOwl:hasExactSynonym>
@@ -1532,13 +1532,13 @@
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> or2a </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AN4 </oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Or2a</rdfs:label>
-    </Class>
+    </owl:Class>
     
 
 
     <!-- http://flybase.org/reports/FBgn0025360 -->
 
-    <Class rdf:about="http://flybase.org/reports/FBgn0025360">
+    <owl:Class rdf:about="http://flybase.org/reports/FBgn0025360">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0000704"/>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> CG18455 </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> Dsix3 </oboInOwl:hasExactSynonym>
@@ -1552,13 +1552,13 @@
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> six3 </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">D-Six3 </oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Optix</rdfs:label>
-    </Class>
+    </owl:Class>
     
 
 
     <!-- http://flybase.org/reports/FBgn0025525 -->
 
-    <Class rdf:about="http://flybase.org/reports/FBgn0025525">
+    <owl:Class rdf:about="http://flybase.org/reports/FBgn0025525">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0000704"/>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> BAB </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> BAB2 </oboInOwl:hasExactSynonym>
@@ -1582,13 +1582,13 @@
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> bric-a-brac2 </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">bric a brac </oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">bab2</rdfs:label>
-    </Class>
+    </owl:Class>
     
 
 
     <!-- http://flybase.org/reports/FBgn0025680 -->
 
-    <Class rdf:about="http://flybase.org/reports/FBgn0025680">
+    <owl:Class rdf:about="http://flybase.org/reports/FBgn0025680">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0000704"/>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> Blue-light receptor </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> CG3772 </oboInOwl:hasExactSynonym>
@@ -1616,13 +1616,13 @@
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> dcry </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">anon-WO0140519.17 </oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cry</rdfs:label>
-    </Class>
+    </owl:Class>
     
 
 
     <!-- http://flybase.org/reports/FBgn0025697 -->
 
-    <Class rdf:about="http://flybase.org/reports/FBgn0025697">
+    <owl:Class rdf:about="http://flybase.org/reports/FBgn0025697">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0000704"/>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> CG12789 </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> CK01577 </oboInOwl:hasExactSynonym>
@@ -1633,13 +1633,13 @@
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> scavenger receptor acting in neural tissue and majority of rhodopsin is absent </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BEST:CK01577 </oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">santa-maria</rdfs:label>
-    </Class>
+    </owl:Class>
     
 
 
     <!-- http://flybase.org/reports/FBgn0025739 -->
 
-    <Class rdf:about="http://flybase.org/reports/FBgn0025739">
+    <owl:Class rdf:about="http://flybase.org/reports/FBgn0025739">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0000704"/>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> CG3346 </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> PON </oboInOwl:hasExactSynonym>
@@ -1650,13 +1650,13 @@
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> pon </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Partner of numb </oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pon</rdfs:label>
-    </Class>
+    </owl:Class>
     
 
 
     <!-- http://flybase.org/reports/FBgn0026384 -->
 
-    <Class rdf:about="http://flybase.org/reports/FBgn0026384">
+    <owl:Class rdf:about="http://flybase.org/reports/FBgn0026384">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0000704"/>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> 59D.1</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> 59a </oboInOwl:hasExactSynonym>
@@ -1672,13 +1672,13 @@
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> dor46 </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Olfactory receptor 59D.1 </oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Or59a</rdfs:label>
-    </Class>
+    </owl:Class>
     
 
 
     <!-- http://flybase.org/reports/FBgn0026385 -->
 
-    <Class rdf:about="http://flybase.org/reports/FBgn0026385">
+    <owl:Class rdf:about="http://flybase.org/reports/FBgn0026385">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0000704"/>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> 47E.2 </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> 47b </oboInOwl:hasExactSynonym>
@@ -1694,13 +1694,13 @@
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> or47b </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Olfactory receptor 47E.2 </oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Or47b</rdfs:label>
-    </Class>
+    </owl:Class>
     
 
 
     <!-- http://flybase.org/reports/FBgn0026386 -->
 
-    <Class rdf:about="http://flybase.org/reports/FBgn0026386">
+    <owl:Class rdf:about="http://flybase.org/reports/FBgn0026386">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0000704"/>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> 47E.1 </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> 47a </oboInOwl:hasExactSynonym>
@@ -1717,13 +1717,13 @@
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> or47a </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOR47E.1 </oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Or47a</rdfs:label>
-    </Class>
+    </owl:Class>
     
 
 
     <!-- http://flybase.org/reports/FBgn0026388 -->
 
-    <Class rdf:about="http://flybase.org/reports/FBgn0026388">
+    <owl:Class rdf:about="http://flybase.org/reports/FBgn0026388">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0000704"/>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> 46F.1 </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> 46a </oboInOwl:hasExactSynonym>
@@ -1753,13 +1753,13 @@
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> dor19 </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CG17848 </oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Or46a</rdfs:label>
-    </Class>
+    </owl:Class>
     
 
 
     <!-- http://flybase.org/reports/FBgn0026389 -->
 
-    <Class rdf:about="http://flybase.org/reports/FBgn0026389">
+    <owl:Class rdf:about="http://flybase.org/reports/FBgn0026389">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0000704"/>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> 43B.1 </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> 43B1 </oboInOwl:hasExactSynonym>
@@ -1782,13 +1782,13 @@
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> or43a </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Or43B.1 </oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Or43a</rdfs:label>
-    </Class>
+    </owl:Class>
     
 
 
     <!-- http://flybase.org/reports/FBgn0026390 -->
 
-    <Class rdf:about="http://flybase.org/reports/FBgn0026390">
+    <owl:Class rdf:about="http://flybase.org/reports/FBgn0026390">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0000704"/>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> 33B.3 </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> 33c</oboInOwl:hasExactSynonym>
@@ -1803,13 +1803,13 @@
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> dor71 </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Or33B.3 </oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Or33c</rdfs:label>
-    </Class>
+    </owl:Class>
     
 
 
     <!-- http://flybase.org/reports/FBgn0026391 -->
 
-    <Class rdf:about="http://flybase.org/reports/FBgn0026391">
+    <owl:Class rdf:about="http://flybase.org/reports/FBgn0026391">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0000704"/>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> 33B.2 </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> 33b </oboInOwl:hasExactSynonym>
@@ -1824,13 +1824,13 @@
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> dor72 </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CG16961 </oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Or33b</rdfs:label>
-    </Class>
+    </owl:Class>
     
 
 
     <!-- http://flybase.org/reports/FBgn0026392 -->
 
-    <Class rdf:about="http://flybase.org/reports/FBgn0026392">
+    <owl:Class rdf:about="http://flybase.org/reports/FBgn0026392">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0000704"/>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> 33a </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> AN3 </oboInOwl:hasExactSynonym>
@@ -1845,13 +1845,13 @@
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> dor73 </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">33B.1 </oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Or33a</rdfs:label>
-    </Class>
+    </owl:Class>
     
 
 
     <!-- http://flybase.org/reports/FBgn0026393 -->
 
-    <Class rdf:about="http://flybase.org/reports/FBgn0026393">
+    <owl:Class rdf:about="http://flybase.org/reports/FBgn0026393">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0000704"/>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> 25A.1/43 </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> 43b </oboInOwl:hasExactSynonym>
@@ -1865,13 +1865,13 @@
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> Or43b </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Odorant receptor 43b </oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Or43b</rdfs:label>
-    </Class>
+    </owl:Class>
     
 
 
     <!-- http://flybase.org/reports/FBgn0026394 -->
 
-    <Class rdf:about="http://flybase.org/reports/FBgn0026394">
+    <owl:Class rdf:about="http://flybase.org/reports/FBgn0026394">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0000704"/>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> 24D.1 </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> 24a </oboInOwl:hasExactSynonym>
@@ -1883,13 +1883,13 @@
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> Or24a </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Olfactory receptor 24D.1 </oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Or24a</rdfs:label>
-    </Class>
+    </owl:Class>
     
 
 
     <!-- http://flybase.org/reports/FBgn0026395 -->
 
-    <Class rdf:about="http://flybase.org/reports/FBgn0026395">
+    <owl:Class rdf:about="http://flybase.org/reports/FBgn0026395">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0000704"/>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> 23A.1 </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> 23a </oboInOwl:hasExactSynonym>
@@ -1908,13 +1908,13 @@
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> or23a </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOR23A.1 </oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Or23a</rdfs:label>
-    </Class>
+    </owl:Class>
     
 
 
     <!-- http://flybase.org/reports/FBgn0026396 -->
 
-    <Class rdf:about="http://flybase.org/reports/FBgn0026396">
+    <owl:Class rdf:about="http://flybase.org/reports/FBgn0026396">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0000704"/>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> 22C.1 </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> 22c </oboInOwl:hasExactSynonym>
@@ -1926,13 +1926,13 @@
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> Or22c </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOR16 </oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Or22c</rdfs:label>
-    </Class>
+    </owl:Class>
     
 
 
     <!-- http://flybase.org/reports/FBgn0026397 -->
 
-    <Class rdf:about="http://flybase.org/reports/FBgn0026397">
+    <owl:Class rdf:about="http://flybase.org/reports/FBgn0026397">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0000704"/>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> 22A.2</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> 22b </oboInOwl:hasExactSynonym>
@@ -1956,13 +1956,13 @@
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> or22b </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Olfactory receptor 22A.2 </oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Or22b</rdfs:label>
-    </Class>
+    </owl:Class>
     
 
 
     <!-- http://flybase.org/reports/FBgn0026398 -->
 
-    <Class rdf:about="http://flybase.org/reports/FBgn0026398">
+    <owl:Class rdf:about="http://flybase.org/reports/FBgn0026398">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0000704"/>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> 22A.1 </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> 22a </oboInOwl:hasExactSynonym>
@@ -1987,13 +1987,13 @@
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> dor53 </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AN11 </oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Or22a</rdfs:label>
-    </Class>
+    </owl:Class>
     
 
 
     <!-- http://flybase.org/reports/FBgn0026399 -->
 
-    <Class rdf:about="http://flybase.org/reports/FBgn0026399">
+    <owl:Class rdf:about="http://flybase.org/reports/FBgn0026399">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0000704"/>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> 85B.1 </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> 85e </oboInOwl:hasExactSynonym>
@@ -2010,13 +2010,13 @@
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> dor104 </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CG9700 </oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Or85e</rdfs:label>
-    </Class>
+    </owl:Class>
     
 
 
     <!-- http://flybase.org/reports/FBgn0027109 -->
 
-    <Class rdf:about="http://flybase.org/reports/FBgn0027109">
+    <owl:Class rdf:about="http://flybase.org/reports/FBgn0027109">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0000704"/>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> CG10342 </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> Dm-NPF </oboInOwl:hasExactSynonym>
@@ -2038,13 +2038,13 @@
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> npf </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Neuropeptide F </oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NPF</rdfs:label>
-    </Class>
+    </owl:Class>
     
 
 
     <!-- http://flybase.org/reports/FBgn0028374 -->
 
-    <Class rdf:about="http://flybase.org/reports/FBgn0028374">
+    <owl:Class rdf:about="http://flybase.org/reports/FBgn0028374">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0000704"/>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> CG6371 </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> Drm-MT2 </oboInOwl:hasExactSynonym>
@@ -2083,13 +2083,13 @@
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> pyrokinin-2 </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pyrokinin/PBAN-like </oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hug</rdfs:label>
-    </Class>
+    </owl:Class>
     
 
 
     <!-- http://flybase.org/reports/FBgn0028418 -->
 
-    <Class rdf:about="http://flybase.org/reports/FBgn0028418">
+    <owl:Class rdf:about="http://flybase.org/reports/FBgn0028418">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0000704"/>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> CG13480 </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> DLK </oboInOwl:hasExactSynonym>
@@ -2115,13 +2115,13 @@
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> pp </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Leucokinin-like </oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lk</rdfs:label>
-    </Class>
+    </owl:Class>
     
 
 
     <!-- http://flybase.org/reports/FBgn0028946 -->
 
-    <Class rdf:about="http://flybase.org/reports/FBgn0028946">
+    <owl:Class rdf:about="http://flybase.org/reports/FBgn0028946">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0000704"/>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> 35a </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> 36E.1 </oboInOwl:hasExactSynonym>
@@ -2133,13 +2133,13 @@
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> Or35a</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Odorant receptor 35a </oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Or35a</rdfs:label>
-    </Class>
+    </owl:Class>
     
 
 
     <!-- http://flybase.org/reports/FBgn0028963 -->
 
-    <Class rdf:about="http://flybase.org/reports/FBgn0028963">
+    <owl:Class rdf:about="http://flybase.org/reports/FBgn0028963">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0000704"/>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> 49D.1 </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> 49b </oboInOwl:hasExactSynonym>
@@ -2150,13 +2150,13 @@
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> Or49b</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CG17584 </oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Or49b</rdfs:label>
-    </Class>
+    </owl:Class>
     
 
 
     <!-- http://flybase.org/reports/FBgn0029521 -->
 
-    <Class rdf:about="http://flybase.org/reports/FBgn0029521">
+    <owl:Class rdf:about="http://flybase.org/reports/FBgn0029521">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0000704"/>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> 1A.1 </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> 1a </oboInOwl:hasExactSynonym>
@@ -2166,13 +2166,13 @@
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> Or1a </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOR68 </oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Or1a</rdfs:label>
-    </Class>
+    </owl:Class>
     
 
 
     <!-- http://flybase.org/reports/FBgn0030016 -->
 
-    <Class rdf:about="http://flybase.org/reports/FBgn0030016">
+    <owl:Class rdf:about="http://flybase.org/reports/FBgn0030016">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0000704"/>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> 7D.1 </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> 7a </oboInOwl:hasExactSynonym>
@@ -2185,13 +2185,13 @@
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> Or7a </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CG10759 </oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Or7a</rdfs:label>
-    </Class>
+    </owl:Class>
     
 
 
     <!-- http://flybase.org/reports/FBgn0030204 -->
 
-    <Class rdf:about="http://flybase.org/reports/FBgn0030204">
+    <owl:Class rdf:about="http://flybase.org/reports/FBgn0030204">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0000704"/>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> 9E.1 </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> 9a </oboInOwl:hasExactSynonym>
@@ -2203,13 +2203,13 @@
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> or9a </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Odorant receptor 9a </oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Or9a</rdfs:label>
-    </Class>
+    </owl:Class>
     
 
 
     <!-- http://flybase.org/reports/FBgn0030298 -->
 
-    <Class rdf:about="http://flybase.org/reports/FBgn0030298">
+    <owl:Class rdf:about="http://flybase.org/reports/FBgn0030298">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0000704"/>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> 10B.1 </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> 10a </oboInOwl:hasExactSynonym>
@@ -2221,13 +2221,13 @@
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> odorant receptor 10a </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Odorant receptor 10a </oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Or10a</rdfs:label>
-    </Class>
+    </owl:Class>
     
 
 
     <!-- http://flybase.org/reports/FBgn0030715 -->
 
-    <Class rdf:about="http://flybase.org/reports/FBgn0030715">
+    <owl:Class rdf:about="http://flybase.org/reports/FBgn0030715">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0000704"/>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> 13F.1 </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> 13a </oboInOwl:hasExactSynonym>
@@ -2238,13 +2238,13 @@
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> or13a </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Or13a </oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Or13a</rdfs:label>
-    </Class>
+    </owl:Class>
     
 
 
     <!-- http://flybase.org/reports/FBgn0030795 -->
 
-    <Class rdf:about="http://flybase.org/reports/FBgn0030795">
+    <owl:Class rdf:about="http://flybase.org/reports/FBgn0030795">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0000704"/>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> CG4805 </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> PPK-28</oboInOwl:hasExactSynonym>
@@ -2253,13 +2253,13 @@
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> ppk28 </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ppk-28 </oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ppk28</rdfs:label>
-    </Class>
+    </owl:Class>
     
 
 
     <!-- http://flybase.org/reports/FBgn0030900 -->
 
-    <Class rdf:about="http://flybase.org/reports/FBgn0030900">
+    <owl:Class rdf:about="http://flybase.org/reports/FBgn0030900">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0000704"/>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> CG15064 </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> Him </oboInOwl:hasExactSynonym>
@@ -2268,13 +2268,13 @@
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> holes-in-muscle </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">him </oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Him</rdfs:label>
-    </Class>
+    </owl:Class>
     
 
 
     <!-- http://flybase.org/reports/FBgn0031209 -->
 
-    <Class rdf:about="http://flybase.org/reports/FBgn0031209">
+    <owl:Class rdf:about="http://flybase.org/reports/FBgn0031209">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0000704"/>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> CG2657 </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> DmelIR21a </oboInOwl:hasExactSynonym>
@@ -2285,13 +2285,13 @@
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> ir21a </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CT8983 </oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ir21a</rdfs:label>
-    </Class>
+    </owl:Class>
     
 
 
     <!-- http://flybase.org/reports/FBgn0032096 -->
 
-    <Class rdf:about="http://flybase.org/reports/FBgn0032096">
+    <owl:Class rdf:about="http://flybase.org/reports/FBgn0032096">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0000704"/>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> 30a</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> CG13106 </oboInOwl:hasExactSynonym>
@@ -2300,13 +2300,13 @@
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> Or30a </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">30A.1 </oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Or30a</rdfs:label>
-    </Class>
+    </owl:Class>
     
 
 
     <!-- http://flybase.org/reports/FBgn0032840 -->
 
-    <Class rdf:about="http://flybase.org/reports/FBgn0032840">
+    <owl:Class rdf:about="http://flybase.org/reports/FBgn0032840">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0000704"/>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> 38B.2 </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> CG13968 </oboInOwl:hasExactSynonym>
@@ -2351,13 +2351,13 @@
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> snpf </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Short Neuropeptide F </oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">sNPF</rdfs:label>
-    </Class>
+    </owl:Class>
     
 
 
     <!-- http://flybase.org/reports/FBgn0033041 -->
 
-    <Class rdf:about="http://flybase.org/reports/FBgn0033041">
+    <owl:Class rdf:about="http://flybase.org/reports/FBgn0033041">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0000704"/>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> 41E.2 </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> 42a </oboInOwl:hasExactSynonym>
@@ -2368,13 +2368,13 @@
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> Or42a </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OR42a </oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Or42a</rdfs:label>
-    </Class>
+    </owl:Class>
     
 
 
     <!-- http://flybase.org/reports/FBgn0033043 -->
 
-    <Class rdf:about="http://flybase.org/reports/FBgn0033043">
+    <owl:Class rdf:about="http://flybase.org/reports/FBgn0033043">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0000704"/>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> 41E.1 </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> 42b </oboInOwl:hasExactSynonym>
@@ -2384,13 +2384,13 @@
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> Or42b</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OR42b </oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Or42b</rdfs:label>
-    </Class>
+    </owl:Class>
     
 
 
     <!-- http://flybase.org/reports/FBgn0033327 -->
 
-    <Class rdf:about="http://flybase.org/reports/FBgn0033327">
+    <owl:Class rdf:about="http://flybase.org/reports/FBgn0033327">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0000704"/>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> CT8705 </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> PGRP SC </oboInOwl:hasExactSynonym>
@@ -2405,13 +2405,13 @@
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> pgrp-sc1</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CG8577 </oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PGRP-SC1b</rdfs:label>
-    </Class>
+    </owl:Class>
     
 
 
     <!-- http://flybase.org/reports/FBgn0033404 -->
 
-    <Class rdf:about="http://flybase.org/reports/FBgn0033404">
+    <owl:Class rdf:about="http://flybase.org/reports/FBgn0033404">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0000704"/>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> 45a</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> CG1978 </oboInOwl:hasExactSynonym>
@@ -2420,13 +2420,13 @@
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> Or45a </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">45C.1 </oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Or45a</rdfs:label>
-    </Class>
+    </owl:Class>
     
 
 
     <!-- http://flybase.org/reports/FBgn0033422 -->
 
-    <Class rdf:about="http://flybase.org/reports/FBgn0033422">
+    <owl:Class rdf:about="http://flybase.org/reports/FBgn0033422">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0000704"/>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> 45F.1 </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> 45b </oboInOwl:hasExactSynonym>
@@ -2435,13 +2435,13 @@
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> Odorant receptor 45b </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Or45b </oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Or45b</rdfs:label>
-    </Class>
+    </owl:Class>
     
 
 
     <!-- http://flybase.org/reports/FBgn0033652 -->
 
-    <Class rdf:about="http://flybase.org/reports/FBgn0033652">
+    <owl:Class rdf:about="http://flybase.org/reports/FBgn0033652">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0000704"/>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> CG12443</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> DFGF8-1 </oboInOwl:hasExactSynonym>
@@ -2454,25 +2454,25 @@
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> thisbe </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ths </oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ths</rdfs:label>
-    </Class>
+    </owl:Class>
     
 
 
     <!-- http://flybase.org/reports/FBgn0033725 -->
 
-    <Class rdf:about="http://flybase.org/reports/FBgn0033725">
+    <owl:Class rdf:about="http://flybase.org/reports/FBgn0033725">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0000704"/>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> Cpr49Ac</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> Cuticular protein 49Ac </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CG8502 </oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cpr49Ac</rdfs:label>
-    </Class>
+    </owl:Class>
     
 
 
     <!-- http://flybase.org/reports/FBgn0033727 -->
 
-    <Class rdf:about="http://flybase.org/reports/FBgn0033727">
+    <owl:Class rdf:about="http://flybase.org/reports/FBgn0033727">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0000704"/>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> 49A.1 </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> 49a </oboInOwl:hasExactSynonym>
@@ -2483,13 +2483,13 @@
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> Or49a </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Odorant receptor 49a </oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Or49a</rdfs:label>
-    </Class>
+    </owl:Class>
     
 
 
     <!-- http://flybase.org/reports/FBgn0033744 -->
 
-    <Class rdf:about="http://flybase.org/reports/FBgn0033744">
+    <owl:Class rdf:about="http://flybase.org/reports/FBgn0033744">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0000704"/>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> CG13156</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> CRF-like diuretic hormonereceptor 2 </oboInOwl:hasExactSynonym>
@@ -2505,13 +2505,13 @@
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> anon-WO0170980.104 </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CG12370 </oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dh44-R2</rdfs:label>
-    </Class>
+    </owl:Class>
     
 
 
     <!-- http://flybase.org/reports/FBgn0034458 -->
 
-    <Class rdf:about="http://flybase.org/reports/FBgn0034458">
+    <owl:Class rdf:about="http://flybase.org/reports/FBgn0034458">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0000704"/>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> CG15904 </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> IR56d </oboInOwl:hasExactSynonym>
@@ -2520,13 +2520,13 @@
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> ionotropic receptor 56d </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DmelIR56d </oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ir56d</rdfs:label>
-    </Class>
+    </owl:Class>
     
 
 
     <!-- http://flybase.org/reports/FBgn0034473 -->
 
-    <Class rdf:about="http://flybase.org/reports/FBgn0034473">
+    <owl:Class rdf:about="http://flybase.org/reports/FBgn0034473">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0000704"/>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> 56a </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> CG12501 </oboInOwl:hasExactSynonym>
@@ -2539,13 +2539,13 @@
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> odorant receptor 56a</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">56E.1 </oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Or56a</rdfs:label>
-    </Class>
+    </owl:Class>
     
 
 
     <!-- http://flybase.org/reports/FBgn0034865 -->
 
-    <Class rdf:about="http://flybase.org/reports/FBgn0034865">
+    <owl:Class rdf:about="http://flybase.org/reports/FBgn0034865">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0000704"/>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> 59E.1 </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> CG3569 </oboInOwl:hasExactSynonym>
@@ -2558,13 +2558,13 @@
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> Or59b </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">59b </oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Or59b</rdfs:label>
-    </Class>
+    </owl:Class>
     
 
 
     <!-- http://flybase.org/reports/FBgn0034866 -->
 
-    <Class rdf:about="http://flybase.org/reports/FBgn0034866">
+    <owl:Class rdf:about="http://flybase.org/reports/FBgn0034866">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0000704"/>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> 59E.2 </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> 59c </oboInOwl:hasExactSynonym>
@@ -2573,13 +2573,13 @@
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> Odorant receptor 59c </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Or59c </oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Or59c</rdfs:label>
-    </Class>
+    </owl:Class>
     
 
 
     <!-- http://flybase.org/reports/FBgn0035023 -->
 
-    <Class rdf:about="http://flybase.org/reports/FBgn0035023">
+    <owl:Class rdf:about="http://flybase.org/reports/FBgn0035023">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0000704"/>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> BcDNA:SD05282 </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> CG13586 </oboInOwl:hasExactSynonym>
@@ -2597,13 +2597,13 @@
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> itp</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ION TRANSPORT PEPTIDE </oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ITP</rdfs:label>
-    </Class>
+    </owl:Class>
     
 
 
     <!-- http://flybase.org/reports/FBgn0035382 -->
 
-    <Class rdf:about="http://flybase.org/reports/FBgn0035382">
+    <owl:Class rdf:about="http://flybase.org/reports/FBgn0035382">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0000704"/>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> 63B.1 </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> 63a </oboInOwl:hasExactSynonym>
@@ -2613,13 +2613,13 @@
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> Or63a </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Or63aA </oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Or63a</rdfs:label>
-    </Class>
+    </owl:Class>
     
 
 
     <!-- http://flybase.org/reports/FBgn0035468 -->
 
-    <Class rdf:about="http://flybase.org/reports/FBgn0035468">
+    <owl:Class rdf:about="http://flybase.org/reports/FBgn0035468">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0000704"/>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> CG14979 </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> DmGr63a</oboInOwl:hasExactSynonym>
@@ -2630,13 +2630,13 @@
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> gr63a </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gustatory receptor 63F1 </oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gr63a</rdfs:label>
-    </Class>
+    </owl:Class>
     
 
 
     <!-- http://flybase.org/reports/FBgn0035604 -->
 
-    <Class rdf:about="http://flybase.org/reports/FBgn0035604">
+    <owl:Class rdf:about="http://flybase.org/reports/FBgn0035604">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0000704"/>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> CG10633 </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> CT29782</oboInOwl:hasExactSynonym>
@@ -2649,13 +2649,13 @@
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> ir64a </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IR64a </oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ir64a</rdfs:label>
-    </Class>
+    </owl:Class>
     
 
 
     <!-- http://flybase.org/reports/FBgn0035610 -->
 
-    <Class rdf:about="http://flybase.org/reports/FBgn0035610">
+    <owl:Class rdf:about="http://flybase.org/reports/FBgn0035610">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0000704"/>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> CG10626 </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> DLKR</oboInOwl:hasExactSynonym>
@@ -2673,13 +2673,13 @@
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> lkr </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">dLKR </oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lkr</rdfs:label>
-    </Class>
+    </owl:Class>
     
 
 
     <!-- http://flybase.org/reports/FBgn0035934 -->
 
-    <Class rdf:about="http://flybase.org/reports/FBgn0035934">
+    <owl:Class rdf:about="http://flybase.org/reports/FBgn0035934">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0000704"/>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> ANKTM1 </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> Anktm1 </oboInOwl:hasExactSynonym>
@@ -2710,13 +2710,13 @@
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> trpA1 </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">dTRPA1 </oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TrpA1</rdfs:label>
-    </Class>
+    </owl:Class>
     
 
 
     <!-- http://flybase.org/reports/FBgn0036009 -->
 
-    <Class rdf:about="http://flybase.org/reports/FBgn0036009">
+    <owl:Class rdf:about="http://flybase.org/reports/FBgn0036009">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0000704"/>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> 67B.1 </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> 67a </oboInOwl:hasExactSynonym>
@@ -2728,13 +2728,13 @@
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> odorant receptor 67a </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Or67a </oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Or67a</rdfs:label>
-    </Class>
+    </owl:Class>
     
 
 
     <!-- http://flybase.org/reports/FBgn0036019 -->
 
-    <Class rdf:about="http://flybase.org/reports/FBgn0036019">
+    <owl:Class rdf:about="http://flybase.org/reports/FBgn0036019">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0000704"/>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> 67B.2</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> 67b </oboInOwl:hasExactSynonym>
@@ -2743,13 +2743,13 @@
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> Or67b </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DmOr67b </oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Or67b</rdfs:label>
-    </Class>
+    </owl:Class>
     
 
 
     <!-- http://flybase.org/reports/FBgn0036046 -->
 
-    <Class rdf:about="http://flybase.org/reports/FBgn0036046">
+    <owl:Class rdf:about="http://flybase.org/reports/FBgn0036046">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0000704"/>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> CG8167</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> DILP </oboInOwl:hasExactSynonym>
@@ -2785,13 +2785,13 @@
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> insulin-like peptide-2 </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ilp2 </oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ilp2</rdfs:label>
-    </Class>
+    </owl:Class>
     
 
 
     <!-- http://flybase.org/reports/FBgn0036078 -->
 
-    <Class rdf:about="http://flybase.org/reports/FBgn0036078">
+    <owl:Class rdf:about="http://flybase.org/reports/FBgn0036078">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0000704"/>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> 67D.1</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> 67c </oboInOwl:hasExactSynonym>
@@ -2801,13 +2801,13 @@
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> Or67c </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DmOR67C </oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Or67c</rdfs:label>
-    </Class>
+    </owl:Class>
     
 
 
     <!-- http://flybase.org/reports/FBgn0036080 -->
 
-    <Class rdf:about="http://flybase.org/reports/FBgn0036080">
+    <owl:Class rdf:about="http://flybase.org/reports/FBgn0036080">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0000704"/>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> 67d </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> CG14157 </oboInOwl:hasExactSynonym>
@@ -2818,13 +2818,13 @@
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> Or67d </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Olfactory receptor 67d </oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Or67d</rdfs:label>
-    </Class>
+    </owl:Class>
     
 
 
     <!-- http://flybase.org/reports/FBgn0036150 -->
 
-    <Class rdf:about="http://flybase.org/reports/FBgn0036150">
+    <owl:Class rdf:about="http://flybase.org/reports/FBgn0036150">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0000704"/>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> CT19410 </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> DmelIR68a </oboInOwl:hasExactSynonym>
@@ -2834,13 +2834,13 @@
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> ionotropic receptor 68a</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CG6185 </oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ir68a</rdfs:label>
-    </Class>
+    </owl:Class>
     
 
 
     <!-- http://flybase.org/reports/FBgn0036260 -->
 
-    <Class rdf:about="http://flybase.org/reports/FBgn0036260">
+    <owl:Class rdf:about="http://flybase.org/reports/FBgn0036260">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0000704"/>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> CG5638 </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> DMELRH7 </oboInOwl:hasExactSynonym>
@@ -2854,13 +2854,13 @@
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> rhodopsin </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rh7 </oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rh7</rdfs:label>
-    </Class>
+    </owl:Class>
     
 
 
     <!-- http://flybase.org/reports/FBgn0036414 -->
 
-    <Class rdf:about="http://flybase.org/reports/FBgn0036414">
+    <owl:Class rdf:about="http://flybase.org/reports/FBgn0036414">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0000704"/>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> CG5842 </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> CT18317 </oboInOwl:hasExactSynonym>
@@ -2876,13 +2876,13 @@
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> transient receptor potential vanilloid</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DmNan </oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">nan</rdfs:label>
-    </Class>
+    </owl:Class>
     
 
 
     <!-- http://flybase.org/reports/FBgn0036474 -->
 
-    <Class rdf:about="http://flybase.org/reports/FBgn0036474">
+    <owl:Class rdf:about="http://flybase.org/reports/FBgn0036474">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0000704"/>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> 71a</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> CG17871 </oboInOwl:hasExactSynonym>
@@ -2897,13 +2897,13 @@
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> or71a </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">71B.1 </oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Or71a</rdfs:label>
-    </Class>
+    </owl:Class>
     
 
 
     <!-- http://flybase.org/reports/FBgn0036709 -->
 
-    <Class rdf:about="http://flybase.org/reports/FBgn0036709">
+    <owl:Class rdf:about="http://flybase.org/reports/FBgn0036709">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0000704"/>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> 74A.1 </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> 74a</oboInOwl:hasExactSynonym>
@@ -2912,13 +2912,13 @@
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> Or74a </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CG13726 </oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Or74a</rdfs:label>
-    </Class>
+    </owl:Class>
     
 
 
     <!-- http://flybase.org/reports/FBgn0036757 -->
 
-    <Class rdf:about="http://flybase.org/reports/FBgn0036757">
+    <owl:Class rdf:about="http://flybase.org/reports/FBgn0036757">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0000704"/>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> CG14585 </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> DmIr75a </oboInOwl:hasExactSynonym>
@@ -2930,13 +2930,13 @@
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> Ir75abc </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ionotropic receptor 75a </oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ir75a</rdfs:label>
-    </Class>
+    </owl:Class>
     
 
 
     <!-- http://flybase.org/reports/FBgn0036829 -->
 
-    <Class rdf:about="http://flybase.org/reports/FBgn0036829">
+    <owl:Class rdf:about="http://flybase.org/reports/FBgn0036829">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0000704"/>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> CG14076 </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> CT33663 </oboInOwl:hasExactSynonym>
@@ -2947,13 +2947,13 @@
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> lr75d </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ionotropic receptor 75d </oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ir75d</rdfs:label>
-    </Class>
+    </owl:Class>
     
 
 
     <!-- http://flybase.org/reports/FBgn0036937 -->
 
-    <Class rdf:about="http://flybase.org/reports/FBgn0036937">
+    <owl:Class rdf:about="http://flybase.org/reports/FBgn0036937">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0000704"/>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> CG7385 </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> CT22733 </oboInOwl:hasExactSynonym>
@@ -2965,13 +2965,13 @@
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> ionotropic receptor 76b </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ir76b </oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ir76b</rdfs:label>
-    </Class>
+    </owl:Class>
     
 
 
     <!-- http://flybase.org/reports/FBgn0037322 -->
 
-    <Class rdf:about="http://flybase.org/reports/FBgn0037322">
+    <owl:Class rdf:about="http://flybase.org/reports/FBgn0037322">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0000704"/>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> 83a </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> CG10612 </oboInOwl:hasExactSynonym>
@@ -2980,13 +2980,13 @@
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> Or83a</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">83A.1 </oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Or83a</rdfs:label>
-    </Class>
+    </owl:Class>
     
 
 
     <!-- http://flybase.org/reports/FBgn0037399 -->
 
-    <Class rdf:about="http://flybase.org/reports/FBgn0037399">
+    <owl:Class rdf:about="http://flybase.org/reports/FBgn0037399">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0000704"/>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> 83D.1</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> 83c </oboInOwl:hasExactSynonym>
@@ -2995,13 +2995,13 @@
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> Or83c </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOR116 </oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Or83c</rdfs:label>
-    </Class>
+    </owl:Class>
     
 
 
     <!-- http://flybase.org/reports/FBgn0037501 -->
 
-    <Class rdf:about="http://flybase.org/reports/FBgn0037501">
+    <owl:Class rdf:about="http://flybase.org/reports/FBgn0037501">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0000704"/>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> CG10101 </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> CT28433</oboInOwl:hasExactSynonym>
@@ -3011,13 +3011,13 @@
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> Ir84a </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ionotropic receptor 84a </oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ir84a</rdfs:label>
-    </Class>
+    </owl:Class>
     
 
 
     <!-- http://flybase.org/reports/FBgn0037576 -->
 
-    <Class rdf:about="http://flybase.org/reports/FBgn0037576">
+    <owl:Class rdf:about="http://flybase.org/reports/FBgn0037576">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0000704"/>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> 85A.4 </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> 85a</oboInOwl:hasExactSynonym>
@@ -3031,13 +3031,13 @@
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> Or85a </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">or85a </oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Or85a</rdfs:label>
-    </Class>
+    </owl:Class>
     
 
 
     <!-- http://flybase.org/reports/FBgn0037590 -->
 
-    <Class rdf:about="http://flybase.org/reports/FBgn0037590">
+    <owl:Class rdf:about="http://flybase.org/reports/FBgn0037590">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0000704"/>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> 85A.1 </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> 85b</oboInOwl:hasExactSynonym>
@@ -3048,13 +3048,13 @@
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> Or85b </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DmOr85b </oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Or85b</rdfs:label>
-    </Class>
+    </owl:Class>
     
 
 
     <!-- http://flybase.org/reports/FBgn0037591 -->
 
-    <Class rdf:about="http://flybase.org/reports/FBgn0037591">
+    <owl:Class rdf:about="http://flybase.org/reports/FBgn0037591">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0000704"/>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> 85A.3 </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> 85c </oboInOwl:hasExactSynonym>
@@ -3063,13 +3063,13 @@
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> Or85c </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CG17911 </oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Or85c</rdfs:label>
-    </Class>
+    </owl:Class>
     
 
 
     <!-- http://flybase.org/reports/FBgn0037594 -->
 
-    <Class rdf:about="http://flybase.org/reports/FBgn0037594">
+    <owl:Class rdf:about="http://flybase.org/reports/FBgn0037594">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0000704"/>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> 85.2</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> 85A.2 </oboInOwl:hasExactSynonym>
@@ -3079,13 +3079,13 @@
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> Or85d </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOR114 </oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Or85d</rdfs:label>
-    </Class>
+    </owl:Class>
     
 
 
     <!-- http://flybase.org/reports/FBgn0037685 -->
 
-    <Class rdf:about="http://flybase.org/reports/FBgn0037685">
+    <owl:Class rdf:about="http://flybase.org/reports/FBgn0037685">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0000704"/>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> 85D.1 </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> 85f </oboInOwl:hasExactSynonym>
@@ -3096,13 +3096,13 @@
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> Or85f </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OR85f </oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Or85f</rdfs:label>
-    </Class>
+    </owl:Class>
     
 
 
     <!-- http://flybase.org/reports/FBgn0037976 -->
 
-    <Class rdf:about="http://flybase.org/reports/FBgn0037976">
+    <owl:Class rdf:about="http://flybase.org/reports/FBgn0037976">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0000704"/>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> CG14734 </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> DTK </oboInOwl:hasExactSynonym>
@@ -3143,13 +3143,13 @@
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> tachykinin-like peptide </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">dtk </oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tk</rdfs:label>
-    </Class>
+    </owl:Class>
     
 
 
     <!-- http://flybase.org/reports/FBgn0038203 -->
 
-    <Class rdf:about="http://flybase.org/reports/FBgn0038203">
+    <owl:Class rdf:about="http://flybase.org/reports/FBgn0038203">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0000704"/>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> 88A.1</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> 88a </oboInOwl:hasExactSynonym>
@@ -3161,13 +3161,13 @@
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> or88a </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Odorant receptor 88a </oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Or88a</rdfs:label>
-    </Class>
+    </owl:Class>
     
 
 
     <!-- http://flybase.org/reports/FBgn0038789 -->
 
-    <Class rdf:about="http://flybase.org/reports/FBgn0038789">
+    <owl:Class rdf:about="http://flybase.org/reports/FBgn0038789">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0000704"/>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> DmelIR92a</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> IR92a </oboInOwl:hasExactSynonym>
@@ -3176,13 +3176,13 @@
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> ionotropic receptor 92a </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CG15685 </oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ir92a</rdfs:label>
-    </Class>
+    </owl:Class>
     
 
 
     <!-- http://flybase.org/reports/FBgn0038798 -->
 
-    <Class rdf:about="http://flybase.org/reports/FBgn0038798">
+    <owl:Class rdf:about="http://flybase.org/reports/FBgn0038798">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0000704"/>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> 92E.1 </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> 92a </oboInOwl:hasExactSynonym>
@@ -3193,13 +3193,13 @@
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> Or92A </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Or92a </oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Or92a</rdfs:label>
-    </Class>
+    </owl:Class>
     
 
 
     <!-- http://flybase.org/reports/FBgn0039007 -->
 
-    <Class rdf:about="http://flybase.org/reports/FBgn0039007">
+    <owl:Class rdf:about="http://flybase.org/reports/FBgn0039007">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0000704"/>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> CCAP </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> CCAP prepropeptide</oboInOwl:hasExactSynonym>
@@ -3212,13 +3212,13 @@
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> ccap </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">crustacean cardioactive peptide </oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CCAP</rdfs:label>
-    </Class>
+    </owl:Class>
     
 
 
     <!-- http://flybase.org/reports/FBgn0039033 -->
 
-    <Class rdf:about="http://flybase.org/reports/FBgn0039033">
+    <owl:Class rdf:about="http://flybase.org/reports/FBgn0039033">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0000704"/>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> 94D.1</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> 94a </oboInOwl:hasExactSynonym>
@@ -3227,13 +3227,13 @@
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> Odorant receptor 94a </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Or94a </oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Or94a</rdfs:label>
-    </Class>
+    </owl:Class>
     
 
 
     <!-- http://flybase.org/reports/FBgn0039034 -->
 
-    <Class rdf:about="http://flybase.org/reports/FBgn0039034">
+    <owl:Class rdf:about="http://flybase.org/reports/FBgn0039034">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0000704"/>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> 94D.2 </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> 94b </oboInOwl:hasExactSynonym>
@@ -3245,13 +3245,13 @@
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> anon-JP2002534971-A.31 </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">anon-JP2002534971-A.32 </oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Or94b</rdfs:label>
-    </Class>
+    </owl:Class>
     
 
 
     <!-- http://flybase.org/reports/FBgn0039080 -->
 
-    <Class rdf:about="http://flybase.org/reports/FBgn0039080">
+    <owl:Class rdf:about="http://flybase.org/reports/FBgn0039080">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0000704"/>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> CG17382 </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> DmelIR94h </oboInOwl:hasExactSynonym>
@@ -3260,13 +3260,13 @@
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> Ir94h </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ionotropic receptor 94h </oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ir94h</rdfs:label>
-    </Class>
+    </owl:Class>
     
 
 
     <!-- http://flybase.org/reports/FBgn0039551 -->
 
-    <Class rdf:about="http://flybase.org/reports/FBgn0039551">
+    <owl:Class rdf:about="http://flybase.org/reports/FBgn0039551">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0000704"/>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> 98B.1 </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> CG5540 </oboInOwl:hasExactSynonym>
@@ -3279,13 +3279,13 @@
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> Or98a </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">98a </oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Or98a</rdfs:label>
-    </Class>
+    </owl:Class>
     
 
 
     <!-- http://flybase.org/reports/FBgn0039582 -->
 
-    <Class rdf:about="http://flybase.org/reports/FBgn0039582">
+    <owl:Class rdf:about="http://flybase.org/reports/FBgn0039582">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0000704"/>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> 98C.1 </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> 98b </oboInOwl:hasExactSynonym>
@@ -3296,13 +3296,13 @@
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> or98b</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOR121 </oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Or98b</rdfs:label>
-    </Class>
+    </owl:Class>
     
 
 
     <!-- http://flybase.org/reports/FBgn0039722 -->
 
-    <Class rdf:about="http://flybase.org/reports/FBgn0039722">
+    <owl:Class rdf:about="http://flybase.org/reports/FBgn0039722">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0000704"/>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> CAP </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> CAP-2b </oboInOwl:hasExactSynonym>
@@ -3364,13 +3364,13 @@
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> pyrokinin-like </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pyrokinin/PBAN-like </oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Capa</rdfs:label>
-    </Class>
+    </owl:Class>
     
 
 
     <!-- http://flybase.org/reports/FBgn0040849 -->
 
-    <Class rdf:about="http://flybase.org/reports/FBgn0040849">
+    <owl:Class rdf:about="http://flybase.org/reports/FBgn0040849">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0000704"/>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> CG17587 </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> CG33492 </oboInOwl:hasExactSynonym>
@@ -3380,13 +3380,13 @@
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> ionotropic receptor 41a </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IR41a </oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ir41a</rdfs:label>
-    </Class>
+    </owl:Class>
     
 
 
     <!-- http://flybase.org/reports/FBgn0041229 -->
 
-    <Class rdf:about="http://flybase.org/reports/FBgn0041229">
+    <owl:Class rdf:about="http://flybase.org/reports/FBgn0041229">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0000704"/>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> 93F.1 </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> GR93 </oboInOwl:hasExactSynonym>
@@ -3398,13 +3398,13 @@
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> Gustatory receptor 93a </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CG13417 </oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gr93a</rdfs:label>
-    </Class>
+    </owl:Class>
     
 
 
     <!-- http://flybase.org/reports/FBgn0041231 -->
 
-    <Class rdf:about="http://flybase.org/reports/FBgn0041231">
+    <owl:Class rdf:about="http://flybase.org/reports/FBgn0041231">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0000704"/>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> 68D.1</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> GR68D.1 </oboInOwl:hasExactSynonym>
@@ -3415,13 +3415,13 @@
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> Gustatory receptor 68a </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CG7303 </oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gr68a</rdfs:label>
-    </Class>
+    </owl:Class>
     
 
 
     <!-- http://flybase.org/reports/FBgn0041243 -->
 
-    <Class rdf:about="http://flybase.org/reports/FBgn0041243">
+    <owl:Class rdf:about="http://flybase.org/reports/FBgn0041243">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0000704"/>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> 43C.1 </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> 43C1 </oboInOwl:hasExactSynonym>
@@ -3435,13 +3435,13 @@
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> gr43a </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GR43a </oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gr43a</rdfs:label>
-    </Class>
+    </owl:Class>
     
 
 
     <!-- http://flybase.org/reports/FBgn0041247 -->
 
-    <Class rdf:about="http://flybase.org/reports/FBgn0041247">
+    <owl:Class rdf:about="http://flybase.org/reports/FBgn0041247">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0000704"/>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> 28A.1 </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> CG13787 </oboInOwl:hasExactSynonym>
@@ -3454,13 +3454,13 @@
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> Gustatory receptor 28a </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GR28a </oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gr28a</rdfs:label>
-    </Class>
+    </owl:Class>
     
 
 
     <!-- http://flybase.org/reports/FBgn0041250 -->
 
-    <Class rdf:about="http://flybase.org/reports/FBgn0041250">
+    <owl:Class rdf:about="http://flybase.org/reports/FBgn0041250">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0000704"/>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> (GR) 21a </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> 21D.1 </oboInOwl:hasExactSynonym>
@@ -3475,13 +3475,13 @@
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> gr21a </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GR21a </oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gr21a</rdfs:label>
-    </Class>
+    </owl:Class>
     
 
 
     <!-- http://flybase.org/reports/FBgn0041621 -->
 
-    <Class rdf:about="http://flybase.org/reports/FBgn0041621">
+    <owl:Class rdf:about="http://flybase.org/reports/FBgn0041621">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0000704"/>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> 82a </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> DOR61 </oboInOwl:hasExactSynonym>
@@ -3491,13 +3491,13 @@
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> Or82a </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CG31519 </oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Or82a</rdfs:label>
-    </Class>
+    </owl:Class>
     
 
 
     <!-- http://flybase.org/reports/FBgn0041622 -->
 
-    <Class rdf:about="http://flybase.org/reports/FBgn0041622">
+    <owl:Class rdf:about="http://flybase.org/reports/FBgn0041622">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0000704"/>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> 69F.1 </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> 69a </oboInOwl:hasExactSynonym>
@@ -3518,13 +3518,13 @@
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> or69a </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Odorant receptor 69b </oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Or69a</rdfs:label>
-    </Class>
+    </owl:Class>
     
 
 
     <!-- http://flybase.org/reports/FBgn0041623 -->
 
-    <Class rdf:about="http://flybase.org/reports/FBgn0041623">
+    <owl:Class rdf:about="http://flybase.org/reports/FBgn0041623">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0000704"/>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> CG32403 </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> DOR65 </oboInOwl:hasExactSynonym>
@@ -3533,13 +3533,13 @@
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> Or65c </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">65c </oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Or65c</rdfs:label>
-    </Class>
+    </owl:Class>
     
 
 
     <!-- http://flybase.org/reports/FBgn0041624 -->
 
-    <Class rdf:about="http://flybase.org/reports/FBgn0041624">
+    <owl:Class rdf:about="http://flybase.org/reports/FBgn0041624">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0000704"/>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> 65b </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> CG32402</oboInOwl:hasExactSynonym>
@@ -3548,13 +3548,13 @@
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> Odorant receptor 65b </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Or65b </oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Or65b</rdfs:label>
-    </Class>
+    </owl:Class>
     
 
 
     <!-- http://flybase.org/reports/FBgn0041625 -->
 
-    <Class rdf:about="http://flybase.org/reports/FBgn0041625">
+    <owl:Class rdf:about="http://flybase.org/reports/FBgn0041625">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0000704"/>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> 65a </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> CG32401 </oboInOwl:hasExactSynonym>
@@ -3565,13 +3565,13 @@
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> odorant receptor 65a </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Odorant receptor 65a </oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Or65a</rdfs:label>
-    </Class>
+    </owl:Class>
     
 
 
     <!-- http://flybase.org/reports/FBgn0041626 -->
 
-    <Class rdf:about="http://flybase.org/reports/FBgn0041626">
+    <owl:Class rdf:about="http://flybase.org/reports/FBgn0041626">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0000704"/>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> 19A.1 </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> 19a </oboInOwl:hasExactSynonym>
@@ -3583,13 +3583,13 @@
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> Or19a-1 </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Or19a </oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Or19a</rdfs:label>
-    </Class>
+    </owl:Class>
     
 
 
     <!-- http://flybase.org/reports/FBgn0043576 -->
 
-    <Class rdf:about="http://flybase.org/reports/FBgn0043576">
+    <owl:Class rdf:about="http://flybase.org/reports/FBgn0043576">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0000704"/>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> CG14746 </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> PGRP SC </oboInOwl:hasExactSynonym>
@@ -3603,13 +3603,13 @@
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> picky </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Peptidoglycan-recognition protein-SC1a precursor </oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PGRP-SC1a</rdfs:label>
-    </Class>
+    </owl:Class>
     
 
 
     <!-- http://flybase.org/reports/FBgn0044046 -->
 
-    <Class rdf:about="http://flybase.org/reports/FBgn0044046">
+    <owl:Class rdf:about="http://flybase.org/reports/FBgn0044046">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0000704"/>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> CG13317 </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> DILP </oboInOwl:hasExactSynonym>
@@ -3633,13 +3633,13 @@
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> insulin-like peptide </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">insulin-like peptide 7 </oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ilp7</rdfs:label>
-    </Class>
+    </owl:Class>
     
 
 
     <!-- http://flybase.org/reports/FBgn0045477 -->
 
-    <Class rdf:about="http://flybase.org/reports/FBgn0045477">
+    <owl:Class rdf:about="http://flybase.org/reports/FBgn0045477">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0000704"/>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> CG14986 </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> CG32256 </oboInOwl:hasExactSynonym>
@@ -3650,13 +3650,13 @@
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> gr64c </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gr64 </oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gr64c</rdfs:label>
-    </Class>
+    </owl:Class>
     
 
 
     <!-- http://flybase.org/reports/FBgn0045498 -->
 
-    <Class rdf:about="http://flybase.org/reports/FBgn0045498">
+    <owl:Class rdf:about="http://flybase.org/reports/FBgn0045498">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0000704"/>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> CG31930 </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> CR31930 </oboInOwl:hasExactSynonym>
@@ -3667,13 +3667,13 @@
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> Gustatory receptor 2940.2 </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gr22dP </oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gr22d</rdfs:label>
-    </Class>
+    </owl:Class>
     
 
 
     <!-- http://flybase.org/reports/FBgn0045502 -->
 
-    <Class rdf:about="http://flybase.org/reports/FBgn0045502">
+    <owl:Class rdf:about="http://flybase.org/reports/FBgn0045502">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0000704"/>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> CG32664 </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> GR10a </oboInOwl:hasExactSynonym>
@@ -3683,13 +3683,13 @@
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> gr10a</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gr10B1 </oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gr10a</rdfs:label>
-    </Class>
+    </owl:Class>
     
 
 
     <!-- http://flybase.org/reports/FBgn0051718 -->
 
-    <Class rdf:about="http://flybase.org/reports/FBgn0051718">
+    <owl:Class rdf:about="http://flybase.org/reports/FBgn0051718">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0000704"/>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> CG31718 </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> DmelIR31a</oboInOwl:hasExactSynonym>
@@ -3698,13 +3698,13 @@
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> ionotropic receptor 31a </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ir31a </oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ir31a</rdfs:label>
-    </Class>
+    </owl:Class>
     
 
 
     <!-- http://flybase.org/reports/FBgn0051956 -->
 
-    <Class rdf:about="http://flybase.org/reports/FBgn0051956">
+    <owl:Class rdf:about="http://flybase.org/reports/FBgn0051956">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0000704"/>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> CG8845</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> CG8845b </oboInOwl:hasExactSynonym>
@@ -3714,26 +3714,26 @@
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> polypeptide GalNAc transferase 4 </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CG31956 </oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pgant4</rdfs:label>
-    </Class>
+    </owl:Class>
     
 
 
     <!-- http://flybase.org/reports/FBgn0052693 -->
 
-    <Class rdf:about="http://flybase.org/reports/FBgn0052693">
+    <owl:Class rdf:about="http://flybase.org/reports/FBgn0052693">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0000704"/>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> GR9a </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> Gr9a </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> Gustatory receptor 9a</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CG32693 </oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gr9a</rdfs:label>
-    </Class>
+    </owl:Class>
     
 
 
     <!-- http://flybase.org/reports/FBgn0053527 -->
 
-    <Class rdf:about="http://flybase.org/reports/FBgn0053527">
+    <owl:Class rdf:about="http://flybase.org/reports/FBgn0053527">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0000704"/>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> AYRKPPFNGSLFamide </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> CG33527 </oboInOwl:hasExactSynonym>
@@ -3750,13 +3750,13 @@
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> neuropeptide IFamide </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IFamide </oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SIFa</rdfs:label>
-    </Class>
+    </owl:Class>
     
 
 
     <!-- http://flybase.org/reports/FBgn0062565 -->
 
-    <Class rdf:about="http://flybase.org/reports/FBgn0062565">
+    <owl:Class rdf:about="http://flybase.org/reports/FBgn0062565">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0000704"/>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> CG32825 </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> Odorant receptor 19b </oboInOwl:hasExactSynonym>
@@ -3764,13 +3764,13 @@
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> Or19b </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Or-19b </oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Or19b</rdfs:label>
-    </Class>
+    </owl:Class>
     
 
 
     <!-- http://flybase.org/reports/FBgn0085417 -->
 
-    <Class rdf:about="http://flybase.org/reports/FBgn0085417">
+    <owl:Class rdf:about="http://flybase.org/reports/FBgn0085417">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0000704"/>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> CG14842 </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> CG14843 </oboInOwl:hasExactSynonym>
@@ -3781,13 +3781,13 @@
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> ntl </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CG34388 </oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">natalisin</rdfs:label>
-    </Class>
+    </owl:Class>
     
 
 
     <!-- http://flybase.org/reports/FBgn0085424 -->
 
-    <Class rdf:about="http://flybase.org/reports/FBgn0085424">
+    <owl:Class rdf:about="http://flybase.org/reports/FBgn0085424">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0000704"/>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> CG15488 </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> CG15489</oboInOwl:hasExactSynonym>
@@ -3821,13 +3821,13 @@
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> twn </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">dPOU-19 </oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">nub</rdfs:label>
-    </Class>
+    </owl:Class>
     
 
 
     <!-- http://flybase.org/reports/FBgn0086347 -->
 
-    <Class rdf:about="http://flybase.org/reports/FBgn0086347">
+    <owl:Class rdf:about="http://flybase.org/reports/FBgn0086347">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0000704"/>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> CG7438 </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> Dm IA </oboInOwl:hasExactSynonym>
@@ -3861,13 +3861,13 @@
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> unconventional myosin 31DF </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Myo1A </oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Myo31DF</rdfs:label>
-    </Class>
+    </owl:Class>
     
 
 
     <!-- http://flybase.org/reports/FBgn0259185 -->
 
-    <Class rdf:about="http://flybase.org/reports/FBgn0259185">
+    <owl:Class rdf:about="http://flybase.org/reports/FBgn0259185">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0000704"/>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> CG13582 </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> CG42289 </oboInOwl:hasExactSynonym>
@@ -3877,13 +3877,13 @@
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> Ir60b </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ionotropic receptor 60b </oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ir60b</rdfs:label>
-    </Class>
+    </owl:Class>
     
 
 
     <!-- http://flybase.org/reports/FBgn0259683 -->
 
-    <Class rdf:about="http://flybase.org/reports/FBgn0259683">
+    <owl:Class rdf:about="http://flybase.org/reports/FBgn0259683">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0000704"/>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> CG42352 </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> CG5922 </oboInOwl:hasExactSynonym>
@@ -3894,13 +3894,13 @@
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> ionotropic receptor 40a </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ionotropic receptor 40a </oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ir40a</rdfs:label>
-    </Class>
+    </owl:Class>
     
 
 
     <!-- http://flybase.org/reports/FBgn0260400 -->
 
-    <Class rdf:about="http://flybase.org/reports/FBgn0260400">
+    <owl:Class rdf:about="http://flybase.org/reports/FBgn0260400">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0000704"/>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> 44C11 </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> 9F8A9 </oboInOwl:hasExactSynonym>
@@ -3933,13 +3933,13 @@
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> weniger </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Elav-9F8A9 </oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">elav</rdfs:label>
-    </Class>
+    </owl:Class>
     
 
 
     <!-- http://flybase.org/reports/FBgn0260874 -->
 
-    <Class rdf:about="http://flybase.org/reports/FBgn0260874">
+    <owl:Class rdf:about="http://flybase.org/reports/FBgn0260874">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0000704"/>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> CG34257 </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> CG42584</oboInOwl:hasExactSynonym>
@@ -3952,26 +3952,26 @@
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> ionotropic receptor 76a </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ir76a </oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ir76a</rdfs:label>
-    </Class>
+    </owl:Class>
     
 
 
     <!-- http://flybase.org/reports/FBgn0260942 -->
 
-    <Class rdf:about="http://flybase.org/reports/FBgn0260942">
+    <owl:Class rdf:about="http://flybase.org/reports/FBgn0260942">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0000704"/>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> CG6921</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> James bond </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> bond </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">james bond </oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">bond</rdfs:label>
-    </Class>
+    </owl:Class>
     
 
 
     <!-- http://flybase.org/reports/FBgn0261402 -->
 
-    <Class rdf:about="http://flybase.org/reports/FBgn0261402">
+    <owl:Class rdf:about="http://flybase.org/reports/FBgn0261402">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0000704"/>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> CG14586 </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> CG14586-B </oboInOwl:hasExactSynonym>
@@ -3984,25 +3984,25 @@
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> ionotropic receptor 75b </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IR75b </oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ir75b</rdfs:label>
-    </Class>
+    </owl:Class>
     
 
 
     <!-- http://flybase.org/reports/FBgn0263776 -->
 
-    <Class rdf:about="http://flybase.org/reports/FBgn0263776">
+    <owl:Class rdf:about="http://flybase.org/reports/FBgn0263776">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0000704"/>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> CG34239 </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> CG6327</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CG43693 </oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CG43693</rdfs:label>
-    </Class>
+    </owl:Class>
     
 
 
     <!-- http://flybase.org/reports/FBgn0264953 -->
 
-    <Class rdf:about="http://flybase.org/reports/FBgn0264953">
+    <owl:Class rdf:about="http://flybase.org/reports/FBgn0264953">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0000704"/>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> CG18103 </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> CG31608 </oboInOwl:hasExactSynonym>
@@ -4020,13 +4020,13 @@
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> piezo </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OrfKD </oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Piezo</rdfs:label>
-    </Class>
+    </owl:Class>
     
 
 
     <!-- http://flybase.org/reports/FBgn0265139 -->
 
-    <Class rdf:about="http://flybase.org/reports/FBgn0265139">
+    <owl:Class rdf:about="http://flybase.org/reports/FBgn0265139">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0000704"/>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> CG18531 </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> EG:BACN32G11.1</oboInOwl:hasExactSynonym>
@@ -4040,13 +4040,13 @@
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> Gustatory receptor 2a </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gr2B1 </oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gr2a</rdfs:label>
-    </Class>
+    </owl:Class>
     
 
 
     <!-- http://flybase.org/reports/FBgn0266429 -->
 
-    <Class rdf:about="http://flybase.org/reports/FBgn0266429">
+    <owl:Class rdf:about="http://flybase.org/reports/FBgn0266429">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0000704"/>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> ASA-receptor </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> AST-R </oboInOwl:hasExactSynonym>
@@ -4066,13 +4066,13 @@
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> Galanin Receptor </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ASR </oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AstA-R1</rdfs:label>
-    </Class>
+    </owl:Class>
     
 
 
     <!-- http://flybase.org/reports/FBgn0267796 -->
 
-    <Class rdf:about="http://flybase.org/reports/FBgn0267796">
+    <owl:Class rdf:about="http://flybase.org/reports/FBgn0267796">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0000704"/>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> CG14177 </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> CG3280 </oboInOwl:hasExactSynonym>
@@ -4083,13 +4083,13 @@
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> transmembrane channel-like </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tmc </oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tmc</rdfs:label>
-    </Class>
+    </owl:Class>
     
 
 
     <!-- http://flybase.org/reports/FBgn0283442 -->
 
-    <Class rdf:about="http://flybase.org/reports/FBgn0283442">
+    <owl:Class rdf:about="http://flybase.org/reports/FBgn0283442">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0000704"/>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> BG:DS00929.14 </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> CG3506 </oboInOwl:hasExactSynonym>
@@ -4109,13 +4109,13 @@
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> vasa </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">no-relish </oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">vas</rdfs:label>
-    </Class>
+    </owl:Class>
     
 
 
     <!-- http://flybase.org/reports/FBgn0284084 -->
 
-    <Class rdf:about="http://flybase.org/reports/FBgn0284084">
+    <owl:Class rdf:about="http://flybase.org/reports/FBgn0284084">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0000704"/>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> Br </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> Bristled </oboInOwl:hasExactSynonym>
@@ -4160,13 +4160,13 @@
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> wnt1 </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dwnt-1 </oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">wg</rdfs:label>
-    </Class>
+    </owl:Class>
     
 
 
     <!-- http://flybase.org/reports/FBgn0285963 -->
 
-    <Class rdf:about="http://flybase.org/reports/FBgn0285963">
+    <owl:Class rdf:about="http://flybase.org/reports/FBgn0285963">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0000704"/>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> BcDNA:GH07466 </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> CG46339 </oboInOwl:hasExactSynonym>
@@ -4174,13 +4174,13 @@
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> slamdance </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CG5518 </oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CG46339</rdfs:label>
-    </Class>
+    </owl:Class>
     
 
 
     <!-- http://purl.obolibrary.org/obo/SO_0000704 -->
 
-    <Class rdf:about="http://purl.obolibrary.org/obo/SO_0000704"/>
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SO_0000704"/>
 </rdf:RDF>
 
 
