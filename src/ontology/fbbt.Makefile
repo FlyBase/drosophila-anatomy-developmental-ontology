@@ -161,7 +161,7 @@ fly_anatomy.obo: tmp/fbbt-obj.obo rem_flybase.txt
 	sed -i '/^date[:]/c\date: $(OBODATE)' $@
 	sed -i '/^data-version[:]/c\data-version: $(DATE)' $@
 	sed -i '/FlyBase_miscellaneous_CV/d' $@
-	sed -i '/^name[:][ ]continuous[ ]with/c\name: connected_to' $@
+	sed -i '/^name[:][ ]continuous[ ]with/c\name: continuous_with' $@
 	sed -i '/^name[:][ ]directly[ ]develops[ ]from/c\name: develops_directly_from' $@
 	sed -i '/^name[:][ ]attached[ ]to[ ]part[ ]of/c\name: attached_to_part_of' $@
 	sed -i '/^name[:][ ]bearer[ ]of/c\name: bearer_of' $@
