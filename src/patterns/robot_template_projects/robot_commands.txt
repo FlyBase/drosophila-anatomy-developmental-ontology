@@ -14,3 +14,8 @@ cd ~/git/drosophila-anatomy-developmental-ontology/src/ontology
 robot merge --collapse-import-closure false --input fbbt-edit.obo --input terms.owl --output merge.obo
 
 
+
+#OPTIONAL - annotation (replacing template command above)
+robot template --input-iri http://purl.obolibrary.org/obo/ro.owl --template template.tsv \
+annotate --ontology-iri "http://purl.obolibrary.org/obo/fbbt/components/flybase_import.owl" \
+--output terms.owl

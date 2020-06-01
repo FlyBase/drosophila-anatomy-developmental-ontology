@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: fbbt/releases/2020-03-26/imports/go_import.owl
+data-version: fbbt/releases/2020-06-01/imports/go_import.owl
 subsetdef: gocheck_do_not_annotate "Term not to be used for direct annotation"
 subsetdef: gocheck_do_not_manually_annotate "Term not to be used for direct manual annotation"
 subsetdef: goslim_agr "AGR slim"
@@ -269,7 +269,7 @@ name: molecular_function
 namespace: molecular_function
 alt_id: GO:0005554
 def: "A molecular process that can be carried out by the action of a single macromolecular machine, usually via direct physical interactions with other molecular entities. Function in this sense denotes an action, or activity, that a gene product (or a complex) performs. These actions are described from two distinct but related perspectives: (1) biochemical activity, and (2) role as a component in a larger system/process." [GOC:pdt]
-comment: Note that, in addition to forming the root of the molecular function ontology, this term is recommended for use for the annotation of gene products whose molecular function is unknown. When this term is used for annotation, it indicates that no information was available about the molecular function of the gene product annotated as of the date the annotation was made; the evidence code "no data" (ND), is used to indicate this. Despite its name, this is not a type of 'function' in the sense typically defined by upper ontologies such as Basic Formal Ontology (BFO). It is instead a BFO:process carried out by a single gene product or complex.
+comment: Note that, in addition to forming the root of the molecular function ontology, this term is recommended for use for the annotation of gene products whose molecular function is unknown. When this term is used for annotation, it indicates that no information was available about the molecular function of the gene product annotated as of the date the annotation was made; the evidence code 'no data' (ND), is used to indicate this. Despite its name, this is not a type of 'function' in the sense typically defined by upper ontologies such as Basic Formal Ontology (BFO). It is instead a BFO:process carried out by a single gene product or complex.
 subset: goslim_aspergillus
 subset: goslim_candida
 subset: goslim_chembl
@@ -362,7 +362,7 @@ name: cellular_component
 namespace: cellular_component
 alt_id: GO:0008372
 def: "A location, relative to cellular compartments and structures, occupied by a macromolecular machine when it carries out a molecular function. There are two ways in which the gene ontology describes locations of gene products: (1) relative to cellular structures (e.g., cytoplasmic side of plasma membrane) or compartments (e.g., mitochondrion), and (2) the stable macromolecular complexes of which they are parts (e.g., the ribosome)." [GOC:pdt, NIF_Subcellular:sao1337158144]
-comment: Note that, in addition to forming the root of the cellular component ontology, this term is recommended for use for the annotation of gene products whose cellular component is unknown. When this term is used for annotation, it indicates that no information was available about the cellular component of the gene product annotated as of the date the annotation was made; the evidence code "no data" (ND), is used to indicate this.
+comment: Note that, in addition to forming the root of the cellular component ontology, this term is recommended for use for the annotation of gene products whose cellular component is unknown. When this term is used for annotation, it indicates that no information was available about the cellular component of the gene product annotated as of the date the annotation was made; the evidence code 'no data' (ND), is used to indicate this.
 subset: goslim_aspergillus
 subset: goslim_candida
 subset: goslim_chembl
@@ -519,7 +519,7 @@ synonym: "single-organism transport" RELATED []
 synonym: "small molecule transport" NARROW []
 synonym: "solute:solute exchange" NARROW []
 is_a: GO:0051234 ! establishment of localization
-created_by: janelomax
+created_by: jl
 creation_date: 2012-12-13T16:25:32Z
 
 [Term]
@@ -891,7 +891,7 @@ synonym: "single-organism behavior" RELATED []
 xref: Wikipedia:Behavior
 is_a: GO:0008150 ! biological_process
 disjoint_from: GO:0032502 ! developmental process
-created_by: janelomax
+created_by: jl
 creation_date: 2012-09-20T14:06:08Z
 
 [Term]
@@ -1044,8 +1044,8 @@ synonym: "injection of substance into other organism during feeding on blood of 
 synonym: "taking of blood meal" NARROW []
 xref: Wikipedia:List_of_feeding_behaviours
 is_a: GO:0007610 ! behavior
-property_value: IAO:0000233 https://github.com/geneontology/go-ontology/issues/18547 xsd:anyURI
-created_by: janelomax
+property_value: term_tracker_item https://github.com/geneontology/go-ontology/issues/18547 xsd:anyURI
+created_by: jl
 creation_date: 2011-10-27T03:53:33Z
 
 [Term]
@@ -1108,7 +1108,7 @@ alt_id: GO:0000004
 alt_id: GO:0007582
 alt_id: GO:0044699
 def: "A biological process represents a specific objective that the organism is genetically programmed to achieve. Biological processes are often described by their outcome or ending state, e.g., the biological process of cell division results in the creation of two daughter cells (a divided cell) from a single parent cell. A biological process is accomplished by a particular set of molecular functions carried out by specific gene products (or macromolecular complexes), often in a highly regulated manner and in a particular temporal sequence." [GOC:pdt]
-comment: Note that, in addition to forming the root of the biological process ontology, this term is recommended for use for the annotation of gene products whose biological process is unknown. When this term is used for annotation, it indicates that no information was available about the biological process of the gene product annotated as of the date the annotation was made; the evidence code "no data" (ND), is used to indicate this.
+comment: Note that, in addition to forming the root of the biological process ontology, this term is recommended for use for the annotation of gene products whose biological process is unknown. When this term is used for annotation, it indicates that no information was available about the biological process of the gene product annotated as of the date the annotation was made; the evidence code 'no data' (ND), is used to indicate this.
 subset: goslim_aspergillus
 subset: goslim_candida
 subset: goslim_chembl
@@ -1123,7 +1123,7 @@ synonym: "physiological process" EXACT []
 synonym: "single organism process" RELATED []
 synonym: "single-organism process" RELATED []
 xref: Wikipedia:Biological_process
-created_by: janelomax
+created_by: jl
 creation_date: 2012-09-19T15:05:24Z
 
 [Term]
@@ -1146,7 +1146,7 @@ synonym: "multicellular organism metabolic process" NARROW []
 synonym: "single-organism metabolic process" RELATED []
 xref: Wikipedia:Metabolism
 is_a: GO:0008150 ! biological_process
-created_by: janelomax
+created_by: jl
 creation_date: 2012-10-17T15:46:40Z
 
 [Term]
@@ -1234,7 +1234,7 @@ synonym: "multicellular organismal catabolic process" NARROW []
 synonym: "single-organism catabolic process" RELATED []
 xref: Wikipedia:Catabolism
 is_a: GO:0008152 ! metabolic process
-created_by: janelomax
+created_by: jl
 creation_date: 2012-10-17T15:52:35Z
 
 [Term]
@@ -1354,7 +1354,7 @@ subset: goslim_metagenomics
 subset: goslim_plant
 synonym: "response to abiotic stress" NARROW []
 is_a: GO:0050896 ! response to stimulus
-property_value: IAO:0000233 https://github.com/geneontology/go-ontology/issues/16572 xsd:anyURI
+property_value: term_tracker_item https://github.com/geneontology/go-ontology/issues/16572 xsd:anyURI
 
 [Term]
 id: GO:0009629
@@ -1565,7 +1565,7 @@ synonym: "cell physiology" EXACT []
 synonym: "cellular physiological process" EXACT []
 synonym: "single-organism cellular process" RELATED []
 is_a: GO:0008150 ! biological_process
-created_by: janelomax
+created_by: jl
 creation_date: 2012-12-11T16:56:55Z
 
 [Term]
@@ -2275,7 +2275,7 @@ is_a: GO:0007610 ! behavior
 is_a: GO:0048609 ! multicellular organismal reproductive process
 intersection_of: GO:0007610 ! behavior
 intersection_of: part_of GO:0000003 ! reproduction
-created_by: janelomax
+created_by: jl
 creation_date: 2012-09-19T16:01:37Z
 
 [Term]
@@ -2402,7 +2402,7 @@ is_a: GO:0008150 ! biological_process
 intersection_of: GO:0008150 ! biological_process
 intersection_of: part_of GO:0000003 ! reproduction
 relationship: part_of GO:0000003 ! reproduction
-created_by: janelomax
+created_by: jl
 creation_date: 2012-09-19T15:56:06Z
 
 [Term]
@@ -2447,7 +2447,7 @@ synonym: "signalling" EXACT []
 synonym: "signalling process" RELATED [GOC:mah]
 synonym: "single organism signaling" RELATED []
 is_a: GO:0008150 ! biological_process
-created_by: janelomax
+created_by: jl
 creation_date: 2010-02-16T09:30:50Z
 
 [Term]
@@ -3034,7 +3034,7 @@ synonym: "single-multicellular organism process" RELATED []
 is_a: GO:0008150 ! biological_process
 property_value: RO:0002161 NCBITaxon:4896
 property_value: RO:0002161 NCBITaxon:4932
-created_by: janelomax
+created_by: jl
 creation_date: 2012-09-19T16:07:47Z
 
 [Term]
@@ -3050,7 +3050,7 @@ subset: goslim_pir
 synonym: "development" NARROW []
 synonym: "single-organism developmental process" RELATED []
 is_a: GO:0008150 ! biological_process
-created_by: janelomax
+created_by: jl
 creation_date: 2012-12-19T12:21:31Z
 
 [Term]
@@ -3379,7 +3379,7 @@ is_a: GO:0007165 ! signal transduction
 intersection_of: GO:0007165 ! signal transduction
 intersection_of: occurs_in GO:0005622 ! intracellular
 relationship: occurs_in GO:0005622 ! intracellular
-created_by: rfoulger
+created_by: bf
 creation_date: 2010-05-14T01:14:37Z
 
 [Term]
@@ -3390,7 +3390,7 @@ def: "Any process that results in a change in state or activity of a cell (in te
 subset: goslim_chembl
 is_a: GO:0042493 ! response to drug
 is_a: GO:0070887 ! cellular response to chemical stimulus
-created_by: rfoulger
+created_by: bf
 creation_date: 2011-02-24T03:37:26Z
 
 [Term]
@@ -3401,7 +3401,7 @@ def: "Any process that results in a change in state or activity of a cell or an 
 comment: Note that this term is in the subset of terms that should not be used for direct manual annotation of gene products. It was created to be used for cross-referencing by other ontologies. Direct annotations to this term may be amended during annotation QC.
 subset: gocheck_do_not_manually_annotate
 is_a: GO:0042493 ! response to drug
-created_by: rfoulger
+created_by: bf
 creation_date: 2012-07-09T01:26:24Z
 
 [Term]
@@ -3422,7 +3422,7 @@ subset: goslim_plant
 synonym: "receptor activity" BROAD []
 synonym: "receptor activity involved in signal transduction" EXACT [GOC:bf]
 is_a: GO:0060089 ! molecular transducer activity
-created_by: rfoulger
+created_by: bf
 creation_date: 2011-08-01T02:45:27Z
 
 [Term]
@@ -3985,7 +3985,7 @@ is_a: GO:0065009 ! regulation of molecular function
 intersection_of: GO:0008150 ! biological_process
 intersection_of: negatively_regulates GO:0003674 ! molecular_function
 relationship: negatively_regulates GO:0003674 ! molecular_function
-created_by: jane
+created_by: jl
 creation_date: 2009-04-21T04:07:27Z
 
 [Term]
@@ -3997,7 +3997,7 @@ is_a: GO:0065009 ! regulation of molecular function
 intersection_of: GO:0008150 ! biological_process
 intersection_of: positively_regulates GO:0003674 ! molecular_function
 relationship: positively_regulates GO:0003674 ! molecular_function
-created_by: jane
+created_by: jl
 creation_date: 2009-04-21T04:11:06Z
 
 [Term]
@@ -4082,7 +4082,7 @@ namespace: biological_process
 def: "A biological process that directly contributes to the process of producing new individuals, involving another organism." [GOC:jl]
 is_a: GO:0022414 ! reproductive process
 is_a: GO:0051704 ! multi-organism process
-created_by: janelomax
+created_by: jl
 creation_date: 2012-09-19T15:56:30Z
 
 [Term]
@@ -4092,7 +4092,7 @@ namespace: biological_process
 def: "A multicellular organism process which involves another multicellular organism of the same or different species." [GOC:jl]
 is_a: GO:0032501 ! multicellular organismal process
 is_a: GO:0051704 ! multi-organism process
-created_by: janelomax
+created_by: jl
 creation_date: 2012-09-19T16:06:16Z
 
 [Term]
@@ -4553,8 +4553,8 @@ synonym: "vitamin D receptor activator activity" NARROW []
 is_a: GO:0005102 ! signaling receptor binding
 is_a: GO:0030546 ! signaling receptor activator activity
 relationship: part_of GO:0007165 ! signal transduction
-property_value: IAO:0000233 https://github.com/geneontology/go-ontology/issues/14220 xsd:anyURI
-created_by: midori
+property_value: term_tracker_item https://github.com/geneontology/go-ontology/issues/14220 xsd:anyURI
+created_by: mah
 creation_date: 2010-09-13T04:51:59Z
 
 [Term]
@@ -4939,7 +4939,7 @@ synonym: "neurological system process" EXACT []
 synonym: "neurophysiological process" EXACT []
 synonym: "pan-neural process" RELATED []
 is_a: GO:0003008 ! system process
-property_value: IAO:0000233 https://github.com/geneontology/go-ontology/issues/13824 xsd:anyURI
+property_value: term_tracker_item https://github.com/geneontology/go-ontology/issues/13824 xsd:anyURI
 
 [Term]
 id: GO:0050878
@@ -6093,7 +6093,7 @@ synonym: "ATP hydrolysis coupled transmembrane transport" NARROW []
 synonym: "membrane transport" EXACT []
 is_a: GO:0006810 ! transport
 is_a: GO:0009987 ! cellular process
-created_by: tanyaberardini
+created_by: tb
 creation_date: 2015-10-21T13:22:47Z
 
 [Term]
@@ -6419,7 +6419,7 @@ comment: Note that this term is in the subset of terms that should not be used f
 subset: gocheck_do_not_manually_annotate
 is_a: GO:0042221 ! response to chemical
 is_a: GO:0051716 ! cellular response to stimulus
-created_by: midori
+created_by: mah
 creation_date: 2009-08-27T04:41:45Z
 
 [Term]
@@ -6430,7 +6430,7 @@ def: "The series of events required for an organism to receive sensory mechanica
 synonym: "perception of wind" EXACT [GOC:mah]
 synonym: "sensory perception of air flow" EXACT [GOC:mah, PMID:19279637]
 is_a: GO:0050954 ! sensory perception of mechanical stimulus
-created_by: midori
+created_by: mah
 creation_date: 2009-11-04T02:40:34Z
 
 [Term]
@@ -6451,7 +6451,7 @@ is_a: GO:0050974 ! detection of mechanical stimulus involved in sensory percepti
 intersection_of: GO:0050982 ! detection of mechanical stimulus
 intersection_of: part_of GO:0071063 ! sensory perception of wind
 relationship: part_of GO:0071063 ! sensory perception of wind
-created_by: midori
+created_by: mah
 creation_date: 2009-11-04T02:47:36Z
 
 [Term]
@@ -6464,7 +6464,7 @@ subset: gocheck_do_not_manually_annotate
 synonym: "cellular response to abiotic stress" NARROW [GOC:mah]
 is_a: GO:0009628 ! response to abiotic stimulus
 is_a: GO:0104004 ! cellular response to environmental stimulus
-created_by: midori
+created_by: mah
 creation_date: 2009-12-03T01:02:11Z
 
 [Term]
@@ -6474,7 +6474,7 @@ namespace: biological_process
 def: "Any process that results in a change in state or activity of a cell (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of an antibiotic stimulus. An antibiotic is a chemical substance produced by a microorganism which has the capacity to inhibit the growth of or to kill other microorganisms." [GOC:mah]
 is_a: GO:0046677 ! response to antibiotic
 is_a: GO:0070887 ! cellular response to chemical stimulus
-created_by: midori
+created_by: mah
 creation_date: 2009-12-03T02:23:49Z
 
 [Term]
@@ -6484,7 +6484,7 @@ namespace: biological_process
 def: "Any process that results in a change in state or activity of a cell (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of an organic substance stimulus." [GOC:mah]
 is_a: GO:0010033 ! response to organic substance
 is_a: GO:0070887 ! cellular response to chemical stimulus
-created_by: midori
+created_by: mah
 creation_date: 2009-12-10T04:46:04Z
 
 [Term]
@@ -6494,7 +6494,7 @@ namespace: biological_process
 def: "Any process that results in a change in state or activity of a cell (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of an alkaloid stimulus. Alkaloids are a large group of nitrogenous substances found in naturally in plants, many of which have extracts that are pharmacologically active." [GOC:mah]
 is_a: GO:0043279 ! response to alkaloid
 is_a: GO:0071417 ! cellular response to organonitrogen compound
-created_by: midori
+created_by: mah
 creation_date: 2009-12-10T04:50:58Z
 
 [Term]
@@ -6507,7 +6507,7 @@ is_a: GO:0035690 ! cellular response to drug
 is_a: GO:0071312 ! cellular response to alkaloid
 is_a: GO:0071415 ! cellular response to purine-containing compound
 is_a: GO:0071466 ! cellular response to xenobiotic stimulus
-created_by: midori
+created_by: mah
 creation_date: 2009-12-10T04:52:51Z
 
 [Term]
@@ -6517,7 +6517,7 @@ namespace: biological_process
 def: "Any process that results in a change in state or activity of a cell (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of a lipid stimulus." [GOC:mah]
 is_a: GO:0033993 ! response to lipid
 is_a: GO:0071310 ! cellular response to organic substance
-created_by: midori
+created_by: mah
 creation_date: 2009-12-11T04:37:10Z
 
 [Term]
@@ -6528,7 +6528,7 @@ def: "Any process that results in a change in state or activity of a cell (in te
 synonym: "cellular response to organic cyclic substance" EXACT [GOC:mah]
 is_a: GO:0014070 ! response to organic cyclic compound
 is_a: GO:0071310 ! cellular response to organic substance
-created_by: midori
+created_by: mah
 creation_date: 2009-12-14T02:55:58Z
 
 [Term]
@@ -6540,7 +6540,7 @@ synonym: "cellular response to purine" RELATED []
 is_a: GO:0014074 ! response to purine-containing compound
 is_a: GO:0071407 ! cellular response to organic cyclic compound
 is_a: GO:0071417 ! cellular response to organonitrogen compound
-created_by: midori
+created_by: mah
 creation_date: 2009-12-14T03:12:20Z
 
 [Term]
@@ -6553,7 +6553,7 @@ is_a: GO:0010243 ! response to organonitrogen compound
 is_a: GO:0071310 ! cellular response to organic substance
 is_a: GO:0071495 ! cellular response to endogenous stimulus
 is_a: GO:1901699 ! cellular response to nitrogen compound
-created_by: midori
+created_by: mah
 creation_date: 2009-12-14T04:07:27Z
 
 [Term]
@@ -6563,7 +6563,7 @@ namespace: biological_process
 def: "Any process that results in a change in state or activity of a cell (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of a xenobiotic compound stimulus. Xenobiotic compounds are compounds foreign to living organisms." [GOC:mah]
 is_a: GO:0009410 ! response to xenobiotic stimulus
 is_a: GO:0070887 ! cellular response to chemical stimulus
-created_by: midori
+created_by: mah
 creation_date: 2009-12-18T11:38:48Z
 
 [Term]
@@ -6576,7 +6576,7 @@ synonym: "cellular response to electromagnetic radiation stimulus" EXACT [GOC:ma
 synonym: "cellular response to radiation stimulus" EXACT [GOC:mah]
 is_a: GO:0009314 ! response to radiation
 is_a: GO:0071214 ! cellular response to abiotic stimulus
-created_by: midori
+created_by: mah
 creation_date: 2009-12-18T01:59:37Z
 
 [Term]
@@ -6586,7 +6586,7 @@ namespace: biological_process
 def: "Any process that results in a change in state or activity of a cell (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of a light stimulus, electromagnetic radiation of wavelengths classified as infrared, visible or ultraviolet light." [GOC:mah]
 is_a: GO:0009416 ! response to light stimulus
 is_a: GO:0071478 ! cellular response to radiation
-created_by: midori
+created_by: mah
 creation_date: 2009-12-18T02:03:49Z
 
 [Term]
@@ -6597,7 +6597,7 @@ def: "Any process that results in a change in state or activity of a cell (in te
 comment: Note that this term is in the subset of terms that should not be used for direct gene product annotation. Instead, select a child term or, if no appropriate child term exists, please request a new term. Direct annotations to this term may be amended during annotation QC.
 subset: gocheck_do_not_manually_annotate
 is_a: GO:0009719 ! response to endogenous stimulus
-created_by: midori
+created_by: mah
 creation_date: 2009-12-18T02:25:40Z
 
 [Term]
@@ -6607,7 +6607,7 @@ namespace: biological_process
 def: "Eye, head or whole body movements that help to compensate movements of the environment in order to stabilize its image on the retina. In the case of whole body movements, these motor actions may also stabilize a locomotor course in response to some disturbance. Examples include: the optokinetic reflex, which allows human eyes to follow objects in motion while the head remains stationary reflex; the optomotor responses of flying insects and swimming fish." [GOC:dos, PMID:12726833, PMID:2469195]
 xref: Wikipedia:Optomotor_response
 is_a: GO:0007634 ! optokinetic behavior
-created_by: midori
+created_by: mah
 creation_date: 2010-02-11T04:06:41Z
 
 [Term]
@@ -6616,7 +6616,7 @@ name: organism emergence from protective structure
 namespace: biological_process
 def: "The developmental process in which an organism emerges from a surrounding protective structure such as an egg or pupa case." [GOC:mah]
 is_a: GO:0032501 ! multicellular organismal process
-created_by: midori
+created_by: mah
 creation_date: 2010-02-19T04:23:55Z
 
 [Term]
@@ -6625,7 +6625,7 @@ name: organic substance transport
 namespace: biological_process
 def: "The directed movement of organic substances into, out of or within a cell, or between cells, or within a multicellular organism by means of some agent such as a transporter or pore. An organic substance is a molecular entity that contains carbon." [GOC:mah]
 is_a: GO:0006810 ! transport
-created_by: midori
+created_by: mah
 creation_date: 2010-03-08T02:15:14Z
 
 [Term]
@@ -6637,7 +6637,7 @@ synonym: "organic molecular entity metabolic process" EXACT []
 synonym: "organic molecular entity metabolism" EXACT []
 synonym: "organic substance metabolism" EXACT []
 is_a: GO:0008152 ! metabolic process
-created_by: midori
+created_by: mah
 creation_date: 2010-03-08T03:32:18Z
 
 [Term]
@@ -6646,7 +6646,7 @@ name: nitrogen compound transport
 namespace: biological_process
 def: "The directed movement of nitrogen-containing compounds into, out of or within a cell, or between cells, by means of some agent such as a transporter or pore." [GOC:mah]
 is_a: GO:0006810 ! transport
-created_by: midori
+created_by: mah
 creation_date: 2010-03-08T03:56:28Z
 
 [Term]
@@ -6656,7 +6656,7 @@ namespace: cellular_component
 def: "The part of a cell encompassing the cell cortex, the plasma membrane, and any external encapsulating structures." [GOC:mah]
 subset: goslim_flybase_ribbon
 is_a: GO:0110165 ! cellular anatomical entity
-created_by: midori
+created_by: mah
 creation_date: 2010-10-04T01:51:47Z
 
 [Term]
@@ -6668,7 +6668,7 @@ is_a: GO:0019222 ! regulation of metabolic process
 intersection_of: GO:0008150 ! biological_process
 intersection_of: regulates GO:0044238 ! primary metabolic process
 relationship: regulates GO:0044238 ! primary metabolic process
-created_by: donghui
+created_by: dhl
 creation_date: 2009-04-22T04:30:52Z
 
 [Term]
@@ -6682,7 +6682,7 @@ is_a: GO:0048583 ! regulation of response to stimulus
 intersection_of: GO:0008150 ! biological_process
 intersection_of: regulates GO:0006950 ! response to stress
 relationship: regulates GO:0006950 ! response to stress
-created_by: donghui
+created_by: dhl
 creation_date: 2009-05-06T04:51:28Z
 
 [Term]
@@ -6694,7 +6694,7 @@ is_a: GO:0051049 ! regulation of transport
 intersection_of: GO:0008150 ! biological_process
 intersection_of: regulates GO:0015833 ! peptide transport
 relationship: regulates GO:0015833 ! peptide transport
-created_by: tanyaberardini
+created_by: tb
 creation_date: 2009-10-23T11:21:38Z
 
 [Term]
@@ -6707,7 +6707,7 @@ is_a: GO:0046883 ! regulation of hormone secretion
 intersection_of: GO:0008150 ! biological_process
 intersection_of: regulates GO:0030072 ! peptide hormone secretion
 relationship: regulates GO:0030072 ! peptide hormone secretion
-created_by: tanyaberardini
+created_by: tb
 creation_date: 2010-02-05T02:56:39Z
 
 [Term]
@@ -6721,7 +6721,7 @@ is_a: GO:0090276 ! regulation of peptide hormone secretion
 intersection_of: GO:0008150 ! biological_process
 intersection_of: positively_regulates GO:0030072 ! peptide hormone secretion
 relationship: positively_regulates GO:0030072 ! peptide hormone secretion
-created_by: tanyaberardini
+created_by: tb
 creation_date: 2010-02-05T02:56:39Z
 
 [Term]
@@ -6735,7 +6735,7 @@ is_a: GO:0090276 ! regulation of peptide hormone secretion
 intersection_of: GO:0008150 ! biological_process
 intersection_of: negatively_regulates GO:0030072 ! peptide hormone secretion
 relationship: negatively_regulates GO:0030072 ! peptide hormone secretion
-created_by: tanyaberardini
+created_by: tb
 creation_date: 2010-02-05T02:56:39Z
 
 [Term]
@@ -6748,7 +6748,7 @@ is_a: GO:0050795 ! regulation of behavior
 intersection_of: GO:0008150 ! biological_process
 intersection_of: regulates GO:0031987 ! locomotion involved in locomotory behavior
 relationship: regulates GO:0031987 ! locomotion involved in locomotory behavior
-created_by: tanyaberardini
+created_by: tb
 creation_date: 2010-05-14T10:24:29Z
 
 [Term]
@@ -6762,7 +6762,7 @@ is_a: GO:0090325 ! regulation of locomotion involved in locomotory behavior
 intersection_of: GO:0050789 ! regulation of biological process
 intersection_of: positively_regulates GO:0031987 ! locomotion involved in locomotory behavior
 relationship: positively_regulates GO:0031987 ! locomotion involved in locomotory behavior
-created_by: tanyaberardini
+created_by: tb
 creation_date: 2010-05-14T10:26:58Z
 
 [Term]
@@ -6776,7 +6776,7 @@ is_a: GO:0090325 ! regulation of locomotion involved in locomotory behavior
 intersection_of: GO:0008150 ! biological_process
 intersection_of: negatively_regulates GO:0031987 ! locomotion involved in locomotory behavior
 relationship: negatively_regulates GO:0031987 ! locomotion involved in locomotory behavior
-created_by: tanyaberardini
+created_by: tb
 creation_date: 2010-05-14T10:26:58Z
 
 [Term]
@@ -6790,7 +6790,7 @@ is_a: GO:0050795 ! regulation of behavior
 intersection_of: GO:0008150 ! biological_process
 intersection_of: regulates GO:0008355 ! olfactory learning
 relationship: regulates GO:0008355 ! olfactory learning
-created_by: tanyaberardini
+created_by: tb
 creation_date: 2010-05-14T10:37:22Z
 
 [Term]
@@ -6803,7 +6803,7 @@ is_a: GO:0098590 ! plasma membrane region
 intersection_of: GO:0098590 ! plasma membrane region
 intersection_of: part_of GO:0045202 ! synapse
 relationship: part_of GO:0045202 ! synapse
-created_by: paola
+created_by: pr
 creation_date: 2011-06-07T11:22:09Z
 
 [Term]
@@ -6812,7 +6812,7 @@ name: renal filtration
 namespace: biological_process
 def: "A renal system process in which fluid circulating through the body is filtered through a barrier system." [GOC:pr, GOC:sart]
 is_a: GO:0003014 ! renal system process
-created_by: paola
+created_by: pr
 creation_date: 2012-01-03T03:10:17Z
 
 [Term]
@@ -6821,7 +6821,7 @@ name: nephrocyte filtration
 namespace: biological_process
 def: "The process by which hemolymph is filtered based on size and charge through a nephrocyte filtration barrier formed by the basement membrane and nephrocyte diaphragm." [GOC:sart, PMID:18971929]
 is_a: GO:0097205 ! renal filtration
-created_by: paola
+created_by: pr
 creation_date: 2012-01-03T03:13:31Z
 
 [Term]
@@ -6833,7 +6833,7 @@ def: "Any process that results in a change in state or activity of a cell or an 
 synonym: "process resulting in tolerance to alcohol" NARROW []
 is_a: GO:0010033 ! response to organic substance
 is_a: GO:1901700 ! response to oxygen-containing compound
-created_by: paola
+created_by: pr
 creation_date: 2012-05-15T03:48:45Z
 
 [Term]
@@ -6844,7 +6844,7 @@ def: "Any process that results in a change in state or activity of a cell (in te
 is_a: GO:0071310 ! cellular response to organic substance
 is_a: GO:0097305 ! response to alcohol
 is_a: GO:1901701 ! cellular response to oxygen-containing compound
-created_by: paola
+created_by: pr
 creation_date: 2012-05-15T03:49:51Z
 
 [Term]
@@ -6855,7 +6855,7 @@ def: "Any process that results in a change in state or activity of a cell or an 
 is_a: GO:0033993 ! response to lipid
 is_a: GO:0046677 ! response to antibiotic
 is_a: GO:0097305 ! response to alcohol
-created_by: paola
+created_by: pr
 creation_date: 2012-05-15T03:51:31Z
 
 [Term]
@@ -6867,7 +6867,7 @@ is_a: GO:0071236 ! cellular response to antibiotic
 is_a: GO:0071396 ! cellular response to lipid
 is_a: GO:0097306 ! cellular response to alcohol
 is_a: GO:0097307 ! response to farnesol
-created_by: paola
+created_by: pr
 creation_date: 2012-05-15T03:54:01Z
 
 [Term]
@@ -6879,7 +6879,7 @@ subset: gocheck_do_not_annotate
 subset: goslim_flybase_ribbon
 is_obsolete: true
 consider: CL:0000540
-created_by: paola
+created_by: pr
 creation_date: 2012-12-19T16:53:50Z
 
 [Term]
@@ -6890,7 +6890,7 @@ def: "The series of events required for an organism to detect some level of humi
 comment: Note, this is not classified under 'detection of chemical stimulus' as there are various potential mechanisms of hygroperception including detection of mechanical stimulus.
 synonym: "hygrosensory perception" EXACT [PMID:8650222]
 is_a: GO:0007600 ! sensory perception
-created_by: davidos
+created_by: dos
 creation_date: 2013-09-25T13:52:27Z
 
 [Term]
@@ -6899,7 +6899,7 @@ name: sensory perception of high humidity
 namespace: biological_process
 def: "The series of events required for an organism to detect high environmental humidity, convert this detection into a molecular signal, and recognize and characterize the signal. This is a neurological process." [PMID:18269908]
 is_a: GO:0098509 ! sensory perception of humidity
-created_by: davidos
+created_by: dos
 creation_date: 2013-09-25T13:57:27Z
 
 [Term]
@@ -6908,7 +6908,7 @@ name: sensory perception of low humidity
 namespace: biological_process
 def: "The series of events required for an organism to detect low environmental humidity, convert this detection into a molecular signal, and recognize and characterize the signal. This is a neurological process." [PMID:18269908]
 is_a: GO:0098509 ! sensory perception of humidity
-created_by: davidos
+created_by: dos
 creation_date: 2013-09-25T14:02:02Z
 
 [Term]
@@ -6921,7 +6921,7 @@ is_a: GO:0098513 ! detection of humidity
 intersection_of: GO:0098513 ! detection of humidity
 intersection_of: part_of GO:0098509 ! sensory perception of humidity
 relationship: part_of GO:0098509 ! sensory perception of humidity
-created_by: davidos
+created_by: dos
 creation_date: 2013-09-25T14:09:25Z
 
 [Term]
@@ -6931,7 +6931,7 @@ namespace: biological_process
 def: "The series of events in which a humidity stimulus is received and converted into a molecular signal." [GOC:dos]
 is_a: GO:0009581 ! detection of external stimulus
 is_a: GO:0009582 ! detection of abiotic stimulus
-created_by: davidos
+created_by: dos
 creation_date: 2013-09-25T14:11:13Z
 
 [Term]
@@ -6944,7 +6944,7 @@ is_a: GO:0098516 ! detection of high humidity
 intersection_of: GO:0098516 ! detection of high humidity
 intersection_of: part_of GO:0098510 ! sensory perception of high humidity
 relationship: part_of GO:0098510 ! sensory perception of high humidity
-created_by: davidos
+created_by: dos
 creation_date: 2013-09-25T14:20:54Z
 
 [Term]
@@ -6957,7 +6957,7 @@ is_a: GO:0098517 ! detection of low humidity
 intersection_of: GO:0098517 ! detection of low humidity
 intersection_of: part_of GO:0098511 ! sensory perception of low humidity
 relationship: part_of GO:0098511 ! sensory perception of low humidity
-created_by: davidos
+created_by: dos
 creation_date: 2013-09-25T14:24:29Z
 
 [Term]
@@ -6966,7 +6966,7 @@ name: detection of high humidity
 namespace: biological_process
 def: "The series of events in which high humidity is detected and converted into a molecular signal." [GOC:dos]
 is_a: GO:0098513 ! detection of humidity
-created_by: davidos
+created_by: dos
 creation_date: 2013-09-25T14:26:47Z
 
 [Term]
@@ -6975,7 +6975,7 @@ name: detection of low humidity
 namespace: biological_process
 def: "The series of events in which low humidity is detected and converted into a molecular signal." [GOC:dos]
 is_a: GO:0098513 ! detection of humidity
-created_by: davidos
+created_by: dos
 creation_date: 2013-09-25T14:27:18Z
 
 [Term]
@@ -6990,7 +6990,7 @@ is_a: GO:0016020 ! membrane
 intersection_of: GO:0016020 ! membrane
 intersection_of: part_of GO:0005886 ! plasma membrane
 relationship: part_of GO:0005886 ! plasma membrane
-created_by: davidos
+created_by: dos
 creation_date: 2014-03-06T11:55:32Z
 
 [Term]
@@ -7026,7 +7026,7 @@ relationship: regulates GO:0003014 ! renal system process
 id: GO:0098916
 name: anterograde trans-synaptic signaling
 namespace: biological_process
-def: "Cell-cell signaling from pre to post-synapse, across the synaptic cleft" [GOC:dos]
+def: "Cell-cell signaling from pre to post-synapse, across the synaptic cleft." [GOC:dos]
 is_a: GO:0099537 ! trans-synaptic signaling
 
 [Term]
@@ -7151,7 +7151,7 @@ is_a: GO:0042995 ! cell projection
 intersection_of: GO:0042995 ! cell projection
 intersection_of: has_part GO:0098590 ! plasma membrane region
 relationship: has_part GO:0098590 ! plasma membrane region
-created_by: kchris
+created_by: krc
 creation_date: 2017-03-21T17:26:07Z
 
 [Term]
@@ -7161,7 +7161,7 @@ namespace: cellular_component
 def: "OBSOLETE. Any constituent part of a plasma membrane bounded cell projection, a prolongation or process extending from a cell, e.g. a cilium or axon." [GOC:krc]
 is_obsolete: true
 consider: GO:0120025
-created_by: kchris
+created_by: krc
 creation_date: 2017-04-28T17:20:43Z
 
 [Term]
@@ -7179,7 +7179,7 @@ synonym: "thermoception, sensory transduction of heat stimulus" EXACT []
 synonym: "thermoception, sensory transduction of hot stimulus" EXACT []
 is_a: GO:0050960 ! detection of temperature stimulus involved in thermoception
 relationship: part_of GO:0062036 ! sensory perception of hot stimulus
-created_by: kchris
+created_by: krc
 creation_date: 2018-05-21T20:35:47Z
 
 [Term]
@@ -7193,7 +7193,7 @@ synonym: "thermoception, sensory detection of cold stimulus" EXACT []
 synonym: "thermoception, sensory transduction of cold stimulus" EXACT []
 is_a: GO:0050960 ! detection of temperature stimulus involved in thermoception
 relationship: part_of GO:0062035 ! sensory perception of cold stimulus
-created_by: kchris
+created_by: krc
 creation_date: 2018-05-21T20:36:05Z
 
 [Term]
@@ -7978,7 +7978,7 @@ is_a: GO:0060457 ! negative regulation of digestive system process
 intersection_of: GO:0008150 ! biological_process
 intersection_of: negatively_regulates GO:0046541 ! saliva secretion
 relationship: negatively_regulates GO:0046541 ! saliva secretion
-created_by: pgarmiri
+created_by: pga
 creation_date: 2016-12-09T10:24:00Z
 
 [Term]
@@ -8106,7 +8106,7 @@ is_a: GO:0048583 ! regulation of response to stimulus
 intersection_of: GO:0065007 ! biological regulation
 intersection_of: regulates GO:0051592 ! response to calcium ion
 relationship: regulates GO:0051592 ! response to calcium ion
-created_by: BarbaraCzub
+created_by: bc
 creation_date: 2017-02-13T10:56:34Z
 
 [Term]
@@ -8128,7 +8128,7 @@ is_a: GO:1905945 ! regulation of response to calcium ion
 intersection_of: GO:0065007 ! biological regulation
 intersection_of: negatively_regulates GO:0051592 ! response to calcium ion
 relationship: negatively_regulates GO:0051592 ! response to calcium ion
-created_by: BarbaraCzub
+created_by: bc
 creation_date: 2017-02-13T10:56:41Z
 
 [Term]
@@ -8150,7 +8150,7 @@ is_a: GO:1905945 ! regulation of response to calcium ion
 intersection_of: GO:0065007 ! biological regulation
 intersection_of: positively_regulates GO:0051592 ! response to calcium ion
 relationship: positively_regulates GO:0051592 ! response to calcium ion
-created_by: BarbaraCzub
+created_by: bc
 creation_date: 2017-02-13T10:56:49Z
 
 [Term]
@@ -8163,7 +8163,7 @@ is_a: GO:0032879 ! regulation of localization
 intersection_of: GO:0065007 ! biological regulation
 intersection_of: regulates GO:0010876 ! lipid localization
 relationship: regulates GO:0010876 ! lipid localization
-created_by: rozaru
+created_by: rz
 creation_date: 2017-02-21T12:12:22Z
 
 [Term]
@@ -8185,7 +8185,7 @@ is_a: GO:1905952 ! regulation of lipid localization
 intersection_of: GO:0065007 ! biological regulation
 intersection_of: negatively_regulates GO:0010876 ! lipid localization
 relationship: negatively_regulates GO:0010876 ! lipid localization
-created_by: rozaru
+created_by: rz
 creation_date: 2017-02-21T12:12:41Z
 
 [Term]
@@ -8207,7 +8207,7 @@ is_a: GO:1905952 ! regulation of lipid localization
 intersection_of: GO:0065007 ! biological regulation
 intersection_of: positively_regulates GO:0010876 ! lipid localization
 relationship: positively_regulates GO:0010876 ! lipid localization
-created_by: rozaru
+created_by: rz
 creation_date: 2017-02-21T12:12:49Z
 
 [Term]
@@ -8269,7 +8269,7 @@ is_a: GO:0051239 ! regulation of multicellular organismal process
 intersection_of: GO:0008150 ! biological_process
 intersection_of: regulates GO:0007275 ! multicellular organism development
 relationship: regulates GO:0007275 ! multicellular organism development
-created_by: tanyaberardini
+created_by: tb
 creation_date: 2010-08-05T11:25:59Z
 
 [Term]
@@ -8281,7 +8281,7 @@ is_a: GO:0050789 ! regulation of biological process
 intersection_of: GO:0008150 ! biological_process
 intersection_of: regulates GO:0022414 ! reproductive process
 relationship: regulates GO:0022414 ! reproductive process
-created_by: midori
+created_by: mah
 creation_date: 2010-11-10T02:44:02Z
 
 [Term]
@@ -8294,7 +8294,7 @@ is_a: GO:2000241 ! regulation of reproductive process
 intersection_of: GO:0008150 ! biological_process
 intersection_of: negatively_regulates GO:0022414 ! reproductive process
 relationship: negatively_regulates GO:0022414 ! reproductive process
-created_by: midori
+created_by: mah
 creation_date: 2010-11-10T02:44:05Z
 
 [Term]
@@ -8307,7 +8307,7 @@ is_a: GO:2000241 ! regulation of reproductive process
 intersection_of: GO:0008150 ! biological_process
 intersection_of: positively_regulates GO:0022414 ! reproductive process
 relationship: positively_regulates GO:0022414 ! reproductive process
-created_by: midori
+created_by: mah
 creation_date: 2010-11-10T02:44:08Z
 
 [Term]
@@ -8357,7 +8357,7 @@ is_a: GO:0044092 ! negative regulation of molecular function
 intersection_of: GO:0008150 ! biological_process
 intersection_of: negatively_regulates GO:0038023 ! signaling receptor activity
 relationship: negatively_regulates GO:0038023 ! signaling receptor activity
-created_by: rfoulger
+created_by: bf
 creation_date: 2010-12-02T09:28:47Z
 
 [Term]
@@ -8370,7 +8370,7 @@ is_a: GO:0044093 ! positive regulation of molecular function
 intersection_of: GO:0008150 ! biological_process
 intersection_of: positively_regulates GO:0038023 ! signaling receptor activity
 relationship: positively_regulates GO:0038023 ! signaling receptor activity
-created_by: rfoulger
+created_by: bf
 creation_date: 2010-12-02T09:28:50Z
 
 [Term]
@@ -8514,4 +8514,12 @@ name: regulates
 namespace: external
 xref: RO:0002211
 is_transitive: true
+
+[Typedef]
+id: term_tracker_item
+name: term tracker item
+namespace: external
+xref: IAO:0000233
+is_metadata_tag: true
+is_class_level: true
 
