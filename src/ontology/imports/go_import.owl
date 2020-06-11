@@ -1,7 +1,6 @@
 <?xml version="1.0"?>
 <rdf:RDF xmlns="http://purl.obolibrary.org/obo/fbbt/imports/go_import.owl#"
      xml:base="http://purl.obolibrary.org/obo/fbbt/imports/go_import.owl"
-     xmlns:dc="http://purl.org/dc/elements/1.1/"
      xmlns:go="http://purl.obolibrary.org/obo/go#"
      xmlns:obo="http://purl.obolibrary.org/obo/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
@@ -11,7 +10,7 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/fbbt/imports/go_import.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/fbbt/releases/2020-06-01/imports/go_import.owl"/>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/fbbt/releases/2020-06-11/imports/go_import.owl"/>
     </owl:Ontology>
     
 
@@ -216,12 +215,6 @@
         <rdfs:comment>Yeast GO slim</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="http://www.geneontology.org/formats/oboInOwl#SubsetProperty"/>
     </owl:AnnotationProperty>
-    
-
-
-    <!-- http://purl.org/dc/elements/1.1/creator -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/creator"/>
     
 
 
@@ -1422,22 +1415,20 @@
     <!-- http://purl.obolibrary.org/obo/GO_0005623 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0005623">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0005575"/>
-        <obo:IAO_0000115>The basic structural and functional unit of all organisms. Includes the plasma membrane and any external encapsulating structures such as the cell wall and cell envelope.</obo:IAO_0000115>
+        <obo:IAO_0000115>OBSOLETE. The basic structural and functional unit of all organisms. Includes the plasma membrane and any external encapsulating structures such as the cell wall and cell envelope.</obo:IAO_0000115>
         <obo:IAO_0000589>cell and encapsulating structures</obo:IAO_0000589>
         <oboInOwl:hasDbXref>NIF_Subcellular:sao1813327414</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>Wikipedia:Cell_(biology)</oboInOwl:hasDbXref>
         <oboInOwl:hasOBONamespace>cellular_component</oboInOwl:hasOBONamespace>
         <oboInOwl:id>GO:0005623</oboInOwl:id>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_chembl"/>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_generic"/>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_plant"/>
-        <rdfs:label>cell</rdfs:label>
+        <rdfs:comment>This term was obsoleted because it was redundant with the root class of the cell ontology, CL:0000000.</rdfs:comment>
+        <rdfs:label>obsolete cell</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0005623"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>The basic structural and functional unit of all organisms. Includes the plasma membrane and any external encapsulating structures such as the cell wall and cell envelope.</owl:annotatedTarget>
+        <owl:annotatedTarget>OBSOLETE. The basic structural and functional unit of all organisms. Includes the plasma membrane and any external encapsulating structures such as the cell wall and cell envelope.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:go_curators</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -1765,7 +1756,6 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0006837">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0006812"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0006836"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0015844"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0015850"/>
         <obo:IAO_0000115>The directed movement of serotonin into, out of or within a cell, or between cells, by means of some agent such as a transporter or pore. Serotonin (5-hydroxytryptamine) is a monoamine neurotransmitter occurring in the peripheral and central nervous systems.</obo:IAO_0000115>
@@ -2389,7 +2379,7 @@
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0007603"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
         <owl:annotatedTarget>visual cascade</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PMID:1962207</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>PMID:1962207</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>PMID:9822721</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
@@ -3503,10 +3493,10 @@
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Any process that results in a change in state or activity of an organism (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of detection of, or exposure to, a period of light or dark of a given length, measured relative to a particular duration known as the &apos;critical day length&apos;. The critical day length varies between species.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:jid</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:pj</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ISBN:0582015952</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ISBN:0697037754</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ISBN:0709408862</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>GOC:pj</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>ISBN:0582015952</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>ISBN:0697037754</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>ISBN:0709408862</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -4490,7 +4480,6 @@
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0006835"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0015800"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0032940"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0046717"/>
         <obo:IAO_0000115>The controlled release of glutamate by a cell. The glutamate is the most abundant excitatory neurotransmitter in the nervous system.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
         <oboInOwl:id>GO:0014047</oboInOwl:id>
@@ -4659,7 +4648,6 @@
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0051046"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0051588"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0051955"/>
         <rdfs:subClassOf>
             <owl:Restriction>
@@ -4698,7 +4686,6 @@
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0014052"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0051048"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0051589"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0051956"/>
         <rdfs:subClassOf>
             <owl:Restriction>
@@ -4741,7 +4728,6 @@
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0014052"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0051047"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0051590"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0051957"/>
         <rdfs:subClassOf>
             <owl:Restriction>
@@ -4823,7 +4809,6 @@
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0043269"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0046928"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0051952"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_2001023"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002211"/>
@@ -4863,7 +4848,6 @@
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0032224"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0043270"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0051954"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_2001025"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002213"/>
@@ -4908,7 +4892,6 @@
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0043271"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0046929"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0051953"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_2001024"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002212"/>
@@ -4951,7 +4934,6 @@
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0023051"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0043269"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0050433"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_2001023"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002211"/>
@@ -4989,7 +4971,6 @@
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0010646"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0023051"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0043269"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0051588"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_1903530"/>
         <rdfs:subClassOf>
             <owl:Restriction>
@@ -5036,7 +5017,6 @@
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0014062"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0023057"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0043271"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0051589"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_1903531"/>
         <rdfs:subClassOf>
             <owl:Restriction>
@@ -5087,7 +5067,6 @@
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0014062"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0023056"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0043270"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0051590"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_1903532"/>
         <rdfs:subClassOf>
             <owl:Restriction>
@@ -5282,7 +5261,6 @@
     <!-- http://purl.obolibrary.org/obo/GO_0015812 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0015812">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0006836"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0006865"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0015718"/>
         <obo:IAO_0000115>The directed movement of gamma-aminobutyric acid (GABA, 4-aminobutyrate), an amino acid which acts as a neurotransmitter in some organisms, into, out of or within a cell, or between cells, by means of some agent such as a transporter or pore.</obo:IAO_0000115>
@@ -5407,9 +5385,7 @@
     <!-- http://purl.obolibrary.org/obo/GO_0015870 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0015870">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0006836"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0015695"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0015893"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0071705"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_1901374"/>
         <obo:IAO_0000115>The directed movement of acetylcholine into, out of or within a cell, or between cells, by means of some agent such as a transporter or pore. Acetylcholine is an acetic acid ester of the organic base choline and functions as a neurotransmitter, released at the synapses of parasympathetic nerves and at neuromuscular junctions.</obo:IAO_0000115>
@@ -5430,7 +5406,6 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0015872">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0006812"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0015893"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0051937"/>
         <obo:IAO_0000115>The directed movement of dopamine into, out of or within a cell, or between cells, by means of some agent such as a transporter or pore. Dopamine is a catecholamine neurotransmitter and a metabolic precursor of noradrenaline and adrenaline.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
@@ -6675,9 +6650,7 @@
     <!-- http://purl.obolibrary.org/obo/GO_0031000 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0031000">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0009410"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0014074"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0036270"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0043279"/>
         <obo:IAO_0000115>Any process that results in a change in state or activity of a cell or an organism (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of a caffeine stimulus. Caffeine is an alkaloid found in numerous plant species, where it acts as a natural pesticide that paralyzes and kills certain insects feeding upon them.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
@@ -8293,7 +8266,6 @@
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0023057"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0033604"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0043271"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_2001024"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002212"/>
@@ -8337,7 +8309,6 @@
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0023056"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0033605"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0043270"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_2001025"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002213"/>
@@ -8808,13 +8779,13 @@
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:bf</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:jl</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:signaling</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ISBN:3527303782</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>ISBN:3527303782</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0035556"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
         <owl:annotatedTarget>intracellular signaling chain</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ISBN:3527303782</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>ISBN:3527303782</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0035556"/>
@@ -9300,7 +9271,7 @@
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>The directed movement of a motile cell or organism in response to an external stimulus.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:jl</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ISBN:0192801023</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>ISBN:0192801023</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -15066,7 +15037,6 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0051608">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0006812"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0006836"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0071702"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0071705"/>
         <obo:IAO_0000115>The directed movement of histamine into, out of or within a cell, or between cells, by means of some agent such as a transporter or pore. Histamine is a physiologically active amine, found in plant and animal tissue and released from mast cells as part of an allergic reaction in humans.</obo:IAO_0000115>
@@ -16377,7 +16347,6 @@
     <!-- http://purl.obolibrary.org/obo/GO_0061539 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0061539">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0006836"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0015695"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0015850"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0032940"/>
@@ -16422,7 +16391,6 @@
     <!-- http://purl.obolibrary.org/obo/GO_0061545 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0061545">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0006836"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0015844"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0015850"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0061531"/>
@@ -16880,10 +16848,8 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0071313">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0031000"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0035690"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0071312"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0071415"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0071466"/>
         <obo:IAO_0000115>Any process that results in a change in state or activity of a cell (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of a caffeine stimulus. Caffeine is an alkaloid found in numerous plant species, where it acts as a natural pesticide that paralyzes and kills certain insects feeding upon them.</obo:IAO_0000115>
         <oboInOwl:created_by>mah</oboInOwl:created_by>
         <oboInOwl:creation_date>2009-12-10T04:52:51Z</oboInOwl:creation_date>
@@ -17752,7 +17718,6 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0097307">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0033993"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0046677"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0097305"/>
         <obo:IAO_0000115>Any process that results in a change in state or activity of a cell or an organism (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of a farnesol stimulus.</obo:IAO_0000115>
         <oboInOwl:created_by>pr</oboInOwl:created_by>
@@ -17773,7 +17738,6 @@
     <!-- http://purl.obolibrary.org/obo/GO_0097308 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0097308">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0071236"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0071396"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0097306"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0097307"/>
@@ -18245,19 +18209,19 @@
         <owl:annotatedTarget>The regulated release of dopamine from an axon.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:PARL</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:bf</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PMID:21576241</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>PMID:21576241</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0099124"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
         <owl:annotatedTarget>axonal DA release</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PMID:21576241</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>PMID:21576241</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0099124"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
         <owl:annotatedTarget>axonal dopamine release</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PMID:21576241</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>PMID:21576241</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -18897,7 +18861,8 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_2001039"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0048523"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0048585"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002212"/>
@@ -23078,7 +23043,7 @@
         <owl:annotatedTarget>Any process that modulates the frequency, rate or extent of cellular response to alcohol.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:TermGenie</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GO_REF:0000058</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>PMID:26434723</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PMID:26434723</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -23123,7 +23088,7 @@
         <owl:annotatedTarget>Any process that stops, prevents or reduces the frequency, rate or extent of cellular response to alcohol.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:TermGenie</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GO_REF:0000058</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>PMID:26434723</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PMID:26434723</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_1905958"/>
@@ -23192,7 +23157,7 @@
         <owl:annotatedTarget>Any process that activates or increases the frequency, rate or extent of cellular response to alcohol.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:TermGenie</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GO_REF:0000058</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>PMID:26434723</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PMID:26434723</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_1905959"/>
