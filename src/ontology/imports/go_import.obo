@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: fbbt/releases/2020-06-01/imports/go_import.owl
+data-version: fbbt/releases/2020-06-11/imports/go_import.owl
 subsetdef: gocheck_do_not_annotate "Term not to be used for direct annotation"
 subsetdef: gocheck_do_not_manually_annotate "Term not to be used for direct manual annotation"
 subsetdef: goslim_agr "AGR slim"
@@ -395,16 +395,14 @@ is_a: GO:0005575 ! cellular_component
 
 [Term]
 id: GO:0005623
-name: cell
+name: obsolete cell
 namespace: cellular_component
-def: "The basic structural and functional unit of all organisms. Includes the plasma membrane and any external encapsulating structures such as the cell wall and cell envelope." [GOC:go_curators]
-subset: goslim_chembl
-subset: goslim_generic
-subset: goslim_plant
+def: "OBSOLETE. The basic structural and functional unit of all organisms. Includes the plasma membrane and any external encapsulating structures such as the cell wall and cell envelope." [GOC:go_curators]
+comment: This term was obsoleted because it was redundant with the root class of the cell ontology, CL:0000000.
 xref: NIF_Subcellular:sao1813327414
 xref: Wikipedia:Cell_(biology)
-is_a: GO:0005575 ! cellular_component
 property_value: IAO:0000589 "cell and encapsulating structures" xsd:string
+is_obsolete: true
 
 [Term]
 id: GO:0005634
@@ -574,7 +572,6 @@ name: serotonin transport
 namespace: biological_process
 def: "The directed movement of serotonin into, out of or within a cell, or between cells, by means of some agent such as a transporter or pore. Serotonin (5-hydroxytryptamine) is a monoamine neurotransmitter occurring in the peripheral and central nervous systems." [GOC:ai]
 is_a: GO:0006812 ! cation transport
-is_a: GO:0006836 ! neurotransmitter transport
 is_a: GO:0015844 ! monoamine transport
 is_a: GO:0015850 ! organic hydroxy compound transport
 
@@ -1743,7 +1740,6 @@ def: "The controlled release of glutamate by a cell. The glutamate is the most a
 is_a: GO:0006835 ! dicarboxylic acid transport
 is_a: GO:0015800 ! acidic amino acid transport
 is_a: GO:0032940 ! secretion by cell
-is_a: GO:0046717 ! acid secretion
 
 [Term]
 id: GO:0014048
@@ -1805,7 +1801,6 @@ namespace: biological_process
 def: "Any process that modulates the frequency, rate or extent of the regulated release of gamma-aminobutyric acid." [GOC:ef]
 synonym: "regulation of GABA secretion" EXACT []
 is_a: GO:0051046 ! regulation of secretion
-is_a: GO:0051588 ! regulation of neurotransmitter transport
 is_a: GO:0051955 ! regulation of amino acid transport
 intersection_of: GO:0008150 ! biological_process
 intersection_of: regulates GO:0014051 ! gamma-aminobutyric acid secretion
@@ -1823,7 +1818,6 @@ synonym: "inhibition of gamma-aminobutyric acid secretion" NARROW []
 synonym: "negative regulation of GABA secretion" EXACT []
 is_a: GO:0014052 ! regulation of gamma-aminobutyric acid secretion
 is_a: GO:0051048 ! negative regulation of secretion
-is_a: GO:0051589 ! negative regulation of neurotransmitter transport
 is_a: GO:0051956 ! negative regulation of amino acid transport
 intersection_of: GO:0008150 ! biological_process
 intersection_of: negatively_regulates GO:0014051 ! gamma-aminobutyric acid secretion
@@ -1842,7 +1836,6 @@ synonym: "up-regulation of gamma-aminobutyric acid secretion" EXACT []
 synonym: "upregulation of gamma-aminobutyric acid secretion" EXACT []
 is_a: GO:0014052 ! regulation of gamma-aminobutyric acid secretion
 is_a: GO:0051047 ! positive regulation of secretion
-is_a: GO:0051590 ! positive regulation of neurotransmitter transport
 is_a: GO:0051957 ! positive regulation of amino acid transport
 intersection_of: GO:0008150 ! biological_process
 intersection_of: positively_regulates GO:0014051 ! gamma-aminobutyric acid secretion
@@ -1868,7 +1861,6 @@ is_a: GO:0032222 ! regulation of synaptic transmission, cholinergic
 is_a: GO:0043269 ! regulation of ion transport
 is_a: GO:0046928 ! regulation of neurotransmitter secretion
 is_a: GO:0051952 ! regulation of amine transport
-is_a: GO:2001023 ! regulation of response to drug
 intersection_of: GO:0008150 ! biological_process
 intersection_of: regulates GO:0014055 ! acetylcholine secretion, neurotransmission
 relationship: regulates GO:0014055 ! acetylcholine secretion, neurotransmission
@@ -1888,7 +1880,6 @@ is_a: GO:0014056 ! regulation of acetylcholine secretion, neurotransmission
 is_a: GO:0032224 ! positive regulation of synaptic transmission, cholinergic
 is_a: GO:0043270 ! positive regulation of ion transport
 is_a: GO:0051954 ! positive regulation of amine transport
-is_a: GO:2001025 ! positive regulation of response to drug
 intersection_of: GO:0008150 ! biological_process
 intersection_of: positively_regulates GO:0014055 ! acetylcholine secretion, neurotransmission
 relationship: positively_regulates GO:0014055 ! acetylcholine secretion, neurotransmission
@@ -1907,7 +1898,6 @@ is_a: GO:0032223 ! negative regulation of synaptic transmission, cholinergic
 is_a: GO:0043271 ! negative regulation of ion transport
 is_a: GO:0046929 ! negative regulation of neurotransmitter secretion
 is_a: GO:0051953 ! negative regulation of amine transport
-is_a: GO:2001024 ! negative regulation of response to drug
 intersection_of: GO:0008150 ! biological_process
 intersection_of: negatively_regulates GO:0014055 ! acetylcholine secretion, neurotransmission
 relationship: negatively_regulates GO:0014055 ! acetylcholine secretion, neurotransmission
@@ -1921,7 +1911,6 @@ is_a: GO:0010646 ! regulation of cell communication
 is_a: GO:0023051 ! regulation of signaling
 is_a: GO:0043269 ! regulation of ion transport
 is_a: GO:0050433 ! regulation of catecholamine secretion
-is_a: GO:2001023 ! regulation of response to drug
 intersection_of: GO:0008150 ! biological_process
 intersection_of: regulates GO:0014046 ! dopamine secretion
 relationship: regulates GO:0014046 ! dopamine secretion
@@ -1935,7 +1924,6 @@ synonym: "regulation of serotonin release" RELATED [GOC:tb]
 is_a: GO:0010646 ! regulation of cell communication
 is_a: GO:0023051 ! regulation of signaling
 is_a: GO:0043269 ! regulation of ion transport
-is_a: GO:0051588 ! regulation of neurotransmitter transport
 is_a: GO:1903530 ! regulation of secretion by cell
 intersection_of: GO:0008150 ! biological_process
 intersection_of: regulates GO:0001820 ! serotonin secretion
@@ -1955,7 +1943,6 @@ is_a: GO:0010648 ! negative regulation of cell communication
 is_a: GO:0014062 ! regulation of serotonin secretion
 is_a: GO:0023057 ! negative regulation of signaling
 is_a: GO:0043271 ! negative regulation of ion transport
-is_a: GO:0051589 ! negative regulation of neurotransmitter transport
 is_a: GO:1903531 ! negative regulation of secretion by cell
 intersection_of: GO:0008150 ! biological_process
 intersection_of: negatively_regulates GO:0001820 ! serotonin secretion
@@ -1976,7 +1963,6 @@ is_a: GO:0010647 ! positive regulation of cell communication
 is_a: GO:0014062 ! regulation of serotonin secretion
 is_a: GO:0023056 ! positive regulation of signaling
 is_a: GO:0043270 ! positive regulation of ion transport
-is_a: GO:0051590 ! positive regulation of neurotransmitter transport
 is_a: GO:1903532 ! positive regulation of secretion by cell
 intersection_of: GO:0008150 ! biological_process
 intersection_of: positively_regulates GO:0001820 ! serotonin secretion
@@ -2054,7 +2040,6 @@ comment: See also the biological process term 'neurotransmitter transport ; GO:0
 synonym: "4-aminobutanoate transport" EXACT []
 synonym: "4-aminobutyrate transport" EXACT []
 synonym: "GABA transport" EXACT []
-is_a: GO:0006836 ! neurotransmitter transport
 is_a: GO:0006865 ! amino acid transport
 is_a: GO:0015718 ! monocarboxylic acid transport
 
@@ -2107,9 +2092,7 @@ id: GO:0015870
 name: acetylcholine transport
 namespace: biological_process
 def: "The directed movement of acetylcholine into, out of or within a cell, or between cells, by means of some agent such as a transporter or pore. Acetylcholine is an acetic acid ester of the organic base choline and functions as a neurotransmitter, released at the synapses of parasympathetic nerves and at neuromuscular junctions." [GOC:ai]
-is_a: GO:0006836 ! neurotransmitter transport
 is_a: GO:0015695 ! organic cation transport
-is_a: GO:0015893 ! drug transport
 is_a: GO:0071705 ! nitrogen compound transport
 is_a: GO:1901374 ! acetate ester transport
 
@@ -2119,7 +2102,6 @@ name: dopamine transport
 namespace: biological_process
 def: "The directed movement of dopamine into, out of or within a cell, or between cells, by means of some agent such as a transporter or pore. Dopamine is a catecholamine neurotransmitter and a metabolic precursor of noradrenaline and adrenaline." [GOC:ai]
 is_a: GO:0006812 ! cation transport
-is_a: GO:0015893 ! drug transport
 is_a: GO:0051937 ! catecholamine transport
 
 [Term]
@@ -2574,9 +2556,7 @@ id: GO:0031000
 name: response to caffeine
 namespace: biological_process
 def: "Any process that results in a change in state or activity of a cell or an organism (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of a caffeine stimulus. Caffeine is an alkaloid found in numerous plant species, where it acts as a natural pesticide that paralyzes and kills certain insects feeding upon them." [GOC:ef, GOC:mah]
-is_a: GO:0009410 ! response to xenobiotic stimulus
 is_a: GO:0014074 ! response to purine-containing compound
-is_a: GO:0036270 ! response to diuretic
 is_a: GO:0043279 ! response to alkaloid
 
 [Term]
@@ -3175,7 +3155,6 @@ is_a: GO:0014059 ! regulation of dopamine secretion
 is_a: GO:0023057 ! negative regulation of signaling
 is_a: GO:0033604 ! negative regulation of catecholamine secretion
 is_a: GO:0043271 ! negative regulation of ion transport
-is_a: GO:2001024 ! negative regulation of response to drug
 intersection_of: GO:0008150 ! biological_process
 intersection_of: negatively_regulates GO:0014046 ! dopamine secretion
 relationship: negatively_regulates GO:0014046 ! dopamine secretion
@@ -3195,7 +3174,6 @@ is_a: GO:0014059 ! regulation of dopamine secretion
 is_a: GO:0023056 ! positive regulation of signaling
 is_a: GO:0033605 ! positive regulation of catecholamine secretion
 is_a: GO:0043270 ! positive regulation of ion transport
-is_a: GO:2001025 ! positive regulation of response to drug
 intersection_of: GO:0008150 ! biological_process
 intersection_of: positively_regulates GO:0014046 ! dopamine secretion
 relationship: positively_regulates GO:0014046 ! dopamine secretion
@@ -5825,7 +5803,6 @@ name: histamine transport
 namespace: biological_process
 def: "The directed movement of histamine into, out of or within a cell, or between cells, by means of some agent such as a transporter or pore. Histamine is a physiologically active amine, found in plant and animal tissue and released from mast cells as part of an allergic reaction in humans." [GOC:ai]
 is_a: GO:0006812 ! cation transport
-is_a: GO:0006836 ! neurotransmitter transport
 is_a: GO:0071702 ! organic substance transport
 is_a: GO:0071705 ! nitrogen compound transport
 
@@ -6307,7 +6284,6 @@ id: GO:0061539
 name: octopamine secretion
 namespace: biological_process
 def: "The controlled release of octopamine by a cell." [GOC:dph]
-is_a: GO:0006836 ! neurotransmitter transport
 is_a: GO:0015695 ! organic cation transport
 is_a: GO:0015850 ! organic hydroxy compound transport
 is_a: GO:0032940 ! secretion by cell
@@ -6330,7 +6306,6 @@ id: GO:0061545
 name: tyramine secretion
 namespace: biological_process
 def: "The regulated release of a tyramine by a cell." [GOC:dph]
-is_a: GO:0006836 ! neurotransmitter transport
 is_a: GO:0015844 ! monoamine transport
 is_a: GO:0015850 ! organic hydroxy compound transport
 is_a: GO:0061531 ! primary amine secretion
@@ -6503,10 +6478,8 @@ name: cellular response to caffeine
 namespace: biological_process
 def: "Any process that results in a change in state or activity of a cell (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of a caffeine stimulus. Caffeine is an alkaloid found in numerous plant species, where it acts as a natural pesticide that paralyzes and kills certain insects feeding upon them." [GOC:mah]
 is_a: GO:0031000 ! response to caffeine
-is_a: GO:0035690 ! cellular response to drug
 is_a: GO:0071312 ! cellular response to alkaloid
 is_a: GO:0071415 ! cellular response to purine-containing compound
-is_a: GO:0071466 ! cellular response to xenobiotic stimulus
 created_by: mah
 creation_date: 2009-12-10T04:52:51Z
 
@@ -6853,7 +6826,6 @@ name: response to farnesol
 namespace: biological_process
 def: "Any process that results in a change in state or activity of a cell or an organism (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of a farnesol stimulus." [GOC:pr]
 is_a: GO:0033993 ! response to lipid
-is_a: GO:0046677 ! response to antibiotic
 is_a: GO:0097305 ! response to alcohol
 created_by: pr
 creation_date: 2012-05-15T03:51:31Z
@@ -6863,7 +6835,6 @@ id: GO:0097308
 name: cellular response to farnesol
 namespace: biological_process
 def: "Any process that results in a change in state or activity of a cell (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of a farnesol stimulus." [GOC:di, PMID:11425711]
-is_a: GO:0071236 ! cellular response to antibiotic
 is_a: GO:0071396 ! cellular response to lipid
 is_a: GO:0097306 ! cellular response to alcohol
 is_a: GO:0097307 ! response to farnesol
@@ -7264,7 +7235,8 @@ synonym: "down regulation of cellular response to caffeine" EXACT [GOC:TermGenie
 synonym: "down-regulation of cellular response to caffeine" EXACT [GOC:TermGenie]
 synonym: "downregulation of cellular response to caffeine" EXACT [GOC:TermGenie]
 synonym: "inhibition of cellular response to caffeine" NARROW [GOC:TermGenie]
-is_a: GO:2001039 ! negative regulation of cellular response to drug
+is_a: GO:0048523 ! negative regulation of cellular process
+is_a: GO:0048585 ! negative regulation of response to stimulus
 intersection_of: GO:0008150 ! biological_process
 intersection_of: negatively_regulates GO:0071313 ! cellular response to caffeine
 relationship: negatively_regulates GO:0071313 ! cellular response to caffeine
