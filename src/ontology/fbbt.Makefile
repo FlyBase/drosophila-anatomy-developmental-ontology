@@ -165,6 +165,7 @@ fly_anatomy.obo: tmp/fbbt-obj.obo rem_flybase.txt
 	sed -i '/^name[:][ ]directly[ ]develops[ ]from/c\name: develops_directly_from' $@
 	sed -i '/^name[:][ ]attached[ ]to[ ]part[ ]of/c\name: attached_to_part_of' $@
 	sed -i '/^name[:][ ]bearer[ ]of/c\name: bearer_of' $@
+	sed -i '/^name[:][ ]attached[ ]to/c\name: attached_to' $@
 
 post_release: fly_anatomy.obo reports/chado_load_check_simple.txt
 	cp fly_anatomy.obo ../..
