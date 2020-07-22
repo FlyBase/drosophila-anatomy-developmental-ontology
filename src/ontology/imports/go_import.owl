@@ -10,7 +10,7 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/fbbt/imports/go_import.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/fbbt/releases/2020-06-11/imports/go_import.owl"/>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/fbbt/releases/2020-07-22/imports/go_import.owl"/>
     </owl:Ontology>
     
 
@@ -1299,8 +1299,6 @@
         <obo:IAO_0000115>Interacting selectively and non-covalently with any protein or protein complex (a complex of two or more proteins that may include other nonprotein molecules).</obo:IAO_0000115>
         <oboInOwl:hasAlternativeId>GO:0001948</oboInOwl:hasAlternativeId>
         <oboInOwl:hasAlternativeId>GO:0045308</oboInOwl:hasAlternativeId>
-        <oboInOwl:hasDbXref>Reactome:R-HSA-170835</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>Reactome:R-HSA-170846</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym>protein amino acid binding</oboInOwl:hasExactSynonym>
         <oboInOwl:hasNarrowSynonym>glycoprotein binding</oboInOwl:hasNarrowSynonym>
         <oboInOwl:hasOBONamespace>molecular_function</oboInOwl:hasOBONamespace>
@@ -1318,18 +1316,6 @@
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Interacting selectively and non-covalently with any protein or protein complex (a complex of two or more proteins that may include other nonprotein molecules).</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:go_curators</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0005515"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
-        <owl:annotatedTarget>Reactome:R-HSA-170835</owl:annotatedTarget>
-        <rdfs:label>An anchoring protein, ZFYVE9 (SARA), recruits SMAD2/3</rdfs:label>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0005515"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
-        <owl:annotatedTarget>Reactome:R-HSA-170846</owl:annotatedTarget>
-        <rdfs:label>TGFBR2 recruits TGFBR1</rdfs:label>
     </owl:Axiom>
     
 
@@ -1755,7 +1741,7 @@
     <!-- http://purl.obolibrary.org/obo/GO_0006837 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0006837">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0006812"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0015695"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0015844"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0015850"/>
         <obo:IAO_0000115>The directed movement of serotonin into, out of or within a cell, or between cells, by means of some agent such as a transporter or pore. Serotonin (5-hydroxytryptamine) is a monoamine neurotransmitter occurring in the peripheral and central nervous systems.</obo:IAO_0000115>
@@ -2869,7 +2855,6 @@
         <owl:annotatedTarget>The behavior of an organism pertaining to movement of the eyes and of objects in the visual field, as in nystagmus.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:jid</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:pr</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>http://www.mercksource.com</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -3493,10 +3478,10 @@
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Any process that results in a change in state or activity of an organism (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of detection of, or exposure to, a period of light or dark of a given length, measured relative to a particular duration known as the &apos;critical day length&apos;. The critical day length varies between species.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:jid</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>GOC:pj</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>ISBN:0582015952</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>ISBN:0697037754</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>ISBN:0709408862</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:pj</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ISBN:0582015952</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ISBN:0697037754</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ISBN:0709408862</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -5677,7 +5662,6 @@
         <oboInOwl:hasDbXref>Reactome:R-HSA-1483089</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>Reactome:R-HSA-1483186</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>Reactome:R-HSA-5668414</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>Reactome:R-HSA-6787403</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>Reactome:R-HSA-8868783</oboInOwl:hasDbXref>
         <oboInOwl:hasOBONamespace>molecular_function</oboInOwl:hasOBONamespace>
         <oboInOwl:id>GO:0016740</oboInOwl:id>
@@ -5714,12 +5698,6 @@
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
         <owl:annotatedTarget>Reactome:R-HSA-5668414</owl:annotatedTarget>
         <rdfs:label>TRAF2 ubiquitinates cIAP1,2 in cIAP1,2:TRAF1:TRAF2:TRAF3:NIK</rdfs:label>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0016740"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
-        <owl:annotatedTarget>Reactome:R-HSA-6787403</owl:annotatedTarget>
-        <rdfs:label>GTPBP3 and MTO1 transform uridine-34 yielding 5-taurinomethyluridine-34 in tRNA</rdfs:label>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0016740"/>
@@ -8847,7 +8825,7 @@
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0036270"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Any process that results in a change in state or activity of a cell or an organism (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of a diuretic stimulus. A diuretic is an agent that promotes the excretion of urine through its effects on kidney function.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:hp</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>GOC:hp</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -21899,7 +21877,7 @@
         <owl:annotatedTarget>Any process that modulates the frequency, rate or extent of detection of mechanical stimulus involved in sensory perception of touch.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:TermGenie</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GO_REF:0000058</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>PMID:8692859</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PMID:8692859</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_1905787"/>
@@ -22010,7 +21988,7 @@
         <owl:annotatedTarget>Any process that stops, prevents or reduces the frequency, rate or extent of detection of mechanical stimulus involved in sensory perception of touch.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:TermGenie</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GO_REF:0000058</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>PMID:8692859</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PMID:8692859</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_1905788"/>
@@ -22289,7 +22267,7 @@
         <owl:annotatedTarget>Any process that activates or increases the frequency, rate or extent of detection of mechanical stimulus involved in sensory perception of touch.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:TermGenie</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GO_REF:0000058</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>PMID:8692859</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PMID:8692859</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_1905789"/>
@@ -23043,7 +23021,7 @@
         <owl:annotatedTarget>Any process that modulates the frequency, rate or extent of cellular response to alcohol.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:TermGenie</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GO_REF:0000058</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PMID:26434723</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>PMID:26434723</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -23088,7 +23066,7 @@
         <owl:annotatedTarget>Any process that stops, prevents or reduces the frequency, rate or extent of cellular response to alcohol.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:TermGenie</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GO_REF:0000058</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PMID:26434723</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>PMID:26434723</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_1905958"/>
@@ -23157,7 +23135,7 @@
         <owl:annotatedTarget>Any process that activates or increases the frequency, rate or extent of cellular response to alcohol.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:TermGenie</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GO_REF:0000058</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PMID:26434723</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>PMID:26434723</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_1905959"/>

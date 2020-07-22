@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: fbbt/releases/2020-06-11/imports/go_import.owl
+data-version: fbbt/releases/2020-07-22/imports/go_import.owl
 subsetdef: gocheck_do_not_annotate "Term not to be used for direct annotation"
 subsetdef: gocheck_do_not_manually_annotate "Term not to be used for direct manual annotation"
 subsetdef: goslim_agr "AGR slim"
@@ -352,8 +352,6 @@ subset: goslim_pir
 subset: goslim_plant
 synonym: "glycoprotein binding" NARROW []
 synonym: "protein amino acid binding" EXACT []
-xref: Reactome:R-HSA-170835 "An anchoring protein, ZFYVE9 (SARA), recruits SMAD2/3"
-xref: Reactome:R-HSA-170846 "TGFBR2 recruits TGFBR1"
 is_a: GO:0005488 ! binding
 
 [Term]
@@ -571,7 +569,7 @@ id: GO:0006837
 name: serotonin transport
 namespace: biological_process
 def: "The directed movement of serotonin into, out of or within a cell, or between cells, by means of some agent such as a transporter or pore. Serotonin (5-hydroxytryptamine) is a monoamine neurotransmitter occurring in the peripheral and central nervous systems." [GOC:ai]
-is_a: GO:0006812 ! cation transport
+is_a: GO:0015695 ! organic cation transport
 is_a: GO:0015844 ! monoamine transport
 is_a: GO:0015850 ! organic hydroxy compound transport
 
@@ -1061,7 +1059,7 @@ is_a: GO:0032501 ! multicellular organismal process
 id: GO:0007634
 name: optokinetic behavior
 namespace: biological_process
-def: "The behavior of an organism pertaining to movement of the eyes and of objects in the visual field, as in nystagmus." [GOC:jid, GOC:pr, http://www.mercksource.com]
+def: "The behavior of an organism pertaining to movement of the eyes and of objects in the visual field, as in nystagmus." [GOC:jid, GOC:pr]
 synonym: "optokinetic behaviour" EXACT []
 is_a: GO:0007632 ! visual behavior
 
@@ -2227,7 +2225,6 @@ xref: EC:2
 xref: Reactome:R-HSA-1483089 "PE is converted to PS by PTDSS2"
 xref: Reactome:R-HSA-1483186 "PC is converted to PS by PTDSS1"
 xref: Reactome:R-HSA-5668414 "TRAF2 ubiquitinates cIAP1,2 in cIAP1,2:TRAF1:TRAF2:TRAF3:NIK"
-xref: Reactome:R-HSA-6787403 "GTPBP3 and MTO1 transform uridine-34 yielding 5-taurinomethyluridine-34 in tRNA"
 xref: Reactome:R-HSA-8868783 "TSR3 transfers aminocarboxypropyl group from S-adenosylmethionine to N(1)-methylpseudouridine-1248 of 18SE rRNA yielding N(1)-methyl-N(3)-aminocarboxypropylpseudouridine-1248"
 is_a: GO:0003824 ! catalytic activity
 
