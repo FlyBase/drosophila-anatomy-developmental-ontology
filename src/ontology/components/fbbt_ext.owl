@@ -31,9 +31,6 @@ Declaration(Class(<http://purl.obolibrary.org/obo/PATO_0060002>))
 Declaration(Class(<http://purl.obolibrary.org/obo/PATO_0060003>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/BFO_0000050>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0000053>))
-Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0000300>))
-Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0000301>))
-Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0000302>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002003>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002100>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002101>))
@@ -53,38 +50,11 @@ Declaration(AnnotationProperty(rdfs:label))
 #   Object Properties
 ############################
 
-# Object Property: <http://purl.obolibrary.org/obo/RO_0000300> (in_neural_circuit_with)
-
-AnnotationAssertion(Annotation(<http://purl.obolibrary.org/obo/IAO_xref> "FBC:DOS") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/RO_0000300> "A relation that holds between two neurons connected directly via a synapse, or indirectly via a series of synaptically connected neurons.")
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_id> <http://purl.obolibrary.org/obo/RO_0000300> "in_neural_circuit_with")
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_xref> <http://purl.obolibrary.org/obo/RO_0000300> "RO:0000300")
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/RO_0000300> "in_neural_circuit_with")
-TransitiveObjectProperty(<http://purl.obolibrary.org/obo/RO_0000300>)
-
-# Object Property: <http://purl.obolibrary.org/obo/RO_0000301> (upstream_in_neural_circuit_with)
-
-AnnotationAssertion(Annotation(<http://purl.obolibrary.org/obo/IAO_xref> "FBC:DOS") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/RO_0000301> "A relation that holds between a neuron that is synapsed_to another neuron or a neuron that is connected indirectly to another by a chain of neurons, each synapsed_to the next.")
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_id> <http://purl.obolibrary.org/obo/RO_0000301> "upstream_in_neural_circuit_with")
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_xref> <http://purl.obolibrary.org/obo/RO_0000301> "RO:0000301")
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/RO_0000301> "upstream_in_neural_circuit_with")
-SubObjectPropertyOf(<http://purl.obolibrary.org/obo/RO_0000301> <http://purl.obolibrary.org/obo/RO_0000300>)
-TransitiveObjectProperty(<http://purl.obolibrary.org/obo/RO_0000301>)
-
-# Object Property: <http://purl.obolibrary.org/obo/RO_0000302> (downstream_in_neural_circuit_with)
-
-AnnotationAssertion(Annotation(<http://purl.obolibrary.org/obo/IAO_xref> "FBC:DOS") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/RO_0000302> "A relation that holds between a neuron that is synapsed_to another neuron or a neuron that is connected indirectly to another by a chain of neurons, each synapsed_to the next.")
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_id> <http://purl.obolibrary.org/obo/RO_0000302> "downstream_in_neural_circuit_with")
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_xref> <http://purl.obolibrary.org/obo/RO_0000302> "RO:0000302")
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/RO_0000302> "downstream_in_neural_circuit_with")
-SubObjectPropertyOf(<http://purl.obolibrary.org/obo/RO_0000302> <http://purl.obolibrary.org/obo/RO_0000300>)
-TransitiveObjectProperty(<http://purl.obolibrary.org/obo/RO_0000302>)
-
 # Object Property: <http://purl.obolibrary.org/obo/RO_0002003> (electrically_synapsed_to)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_creation_date> <http://purl.obolibrary.org/obo/RO_0002003> "2010-01-06T06:53:45Z")
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_id> <http://purl.obolibrary.org/obo/RO_0002003> "electrically_synapsed_to")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/RO_0002003> "electrically_synapsed_to")
-SubObjectPropertyOf(<http://purl.obolibrary.org/obo/RO_0002003> <http://purl.obolibrary.org/obo/RO_0000300>)
 ObjectPropertyDomain(<http://purl.obolibrary.org/obo/RO_0002003> <http://purl.obolibrary.org/obo/FBbt_00005106>)
 
 # Object Property: <http://purl.obolibrary.org/obo/RO_0002103> (synapsed_by)
@@ -92,7 +62,6 @@ ObjectPropertyDomain(<http://purl.obolibrary.org/obo/RO_0002003> <http://purl.ob
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_id> <http://purl.obolibrary.org/obo/RO_0002103> "synapsed_by")
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_xref> <http://purl.obolibrary.org/obo/RO_0002103> "RO:0002103")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/RO_0002103> "synapsed_by")
-SubObjectPropertyOf(<http://purl.obolibrary.org/obo/RO_0002103> <http://purl.obolibrary.org/obo/RO_0000302>)
 ObjectPropertyRange(<http://purl.obolibrary.org/obo/RO_0002103> <http://purl.obolibrary.org/obo/FBbt_00005106>)
 
 # Object Property: <http://purl.obolibrary.org/obo/RO_0002120> (synapsed_to)
@@ -100,7 +69,6 @@ ObjectPropertyRange(<http://purl.obolibrary.org/obo/RO_0002103> <http://purl.obo
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_id> <http://purl.obolibrary.org/obo/RO_0002120> "synapsed_to")
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_xref> <http://purl.obolibrary.org/obo/RO_0002120> "RO:0002120")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/RO_0002120> "synapsed_to")
-SubObjectPropertyOf(<http://purl.obolibrary.org/obo/RO_0002120> <http://purl.obolibrary.org/obo/RO_0000301>)
 ObjectPropertyDomain(<http://purl.obolibrary.org/obo/RO_0002120> <http://purl.obolibrary.org/obo/FBbt_00005106>)
 
 
