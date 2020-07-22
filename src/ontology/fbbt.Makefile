@@ -166,9 +166,9 @@ fly_anatomy.obo: tmp/fbbt-obj.obo rem_flybase.txt
 	sed -i '/^name[:][ ]attached[ ]to[ ]part[ ]of/c\name: attached_to_part_of' $@
 	sed -i '/^name[:][ ]bearer[ ]of/c\name: bearer_of' $@
 	sed -i '/^name[:][ ]attached[ ]to/c\name: attached_to' $@
-	sed -i '/^name[:][ ]sends[ ]synaptic[ ]input[ ]to/c\name: sends_synaptic_output_to' $@
-	sed -i '/^name[:][ ]sends[ ]synaptic[ ]input[ ]throughout/c\name: sends_synaptic_output_throughout' $@
-	sed -i '/^name[:][ ]receives[ ]synaptic[ ]output[ ]in/c\name: receives_synaptic_output_in' $@
+	sed -i '/^name[:][ ]sends[ ]synaptic[ ]output[ ]to/c\name: sends_synaptic_output_to' $@
+	sed -i '/^name[:][ ]sends[ ]synaptic[ ]output[ ]throughout/c\name: sends_synaptic_output_throughout' $@
+	sed -i '/^name[:][ ]receives[ ]synaptic[ ]input[ ]in/c\name: receives_synaptic_input_in' $@
 	sed -i '/^name[:][ ]receives[ ]synaptic[ ]input[ ]throughout/c\name: receives_synaptic_input_throughout' $@
 	sed -i '/^name[:][ ]has[ ]synaptic[ ]IO[ ]throughout/c\name: has_synaptic_IO_throughout' $@
 	sed -i '/^name[:][ ]has[ ]synaptic[ ]IO[ ]in/c\name: has_synaptic_IO_in' $@
