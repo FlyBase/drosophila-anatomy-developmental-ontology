@@ -3522,6 +3522,44 @@ For example, A and B may be gene products and binding of B by A positively regul
     
 
 
+    <!-- http://purl.obolibrary.org/obo/RO_0013004 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0013004">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0013001"/>
+        <obo:IAO_0000115>A relationship between a neuron and a region, where the neuron has a functionally relevant number of input and/or output synapses distributed throughout that region (rather than confined to a subregion).</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0002-1373-1705"/>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-07-17T09:52:19Z</oboInOwl:creation_date>
+        <rdfs:label xml:lang="en">has synaptic IO throughout</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0013005 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0013005">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0013002"/>
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0013004"/>
+        <obo:IAO_0000115>A relationship between a neuron and a region, where the neuron has a functionally relevant number of input synapses distributed throughout that region (rather than confined to a subregion).</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0002-1373-1705"/>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-07-17T09:55:36Z</oboInOwl:creation_date>
+        <rdfs:label xml:lang="en">receives synaptic input throughout</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0013006 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0013006">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0013003"/>
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0013004"/>
+        <obo:IAO_0000115>A relationship between a neuron and a region, where the neuron has a functionally relevant number output synapses distributed throughout that region (rather than confined to a subregion).</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0002-1373-1705"/>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-07-17T09:57:27Z</oboInOwl:creation_date>
+        <rdfs:label xml:lang="en">sends synaptic output throughout</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/RO_0040035 -->
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0040035">

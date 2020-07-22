@@ -2128,6 +2128,32 @@ created_by: http://orcid.org/0000-0002-1373-1705
 creation_date: 2020-07-17T09:45:06Z
 
 [Typedef]
+id: RO:0013004
+name: has synaptic IO throughout
+def: "A relationship between a neuron and a region, where the neuron has a functionally relevant number of input and/or output synapses distributed throughout that region (rather than confined to a subregion)." []
+is_a: RO:0013001 ! has synaptic IO in
+created_by: http://orcid.org/0000-0002-1373-1705
+creation_date: 2020-07-17T09:52:19Z
+
+[Typedef]
+id: RO:0013005
+name: receives synaptic input throughout
+def: "A relationship between a neuron and a region, where the neuron has a functionally relevant number of input synapses distributed throughout that region (rather than confined to a subregion)." []
+is_a: RO:0013002 ! receives synaptic input in
+is_a: RO:0013004 ! has synaptic IO throughout
+created_by: http://orcid.org/0000-0002-1373-1705
+creation_date: 2020-07-17T09:55:36Z
+
+[Typedef]
+id: RO:0013006
+name: sends synaptic output throughout
+def: "A relationship between a neuron and a region, where the neuron has a functionally relevant number output synapses distributed throughout that region (rather than confined to a subregion)." []
+is_a: RO:0013003 ! sends synaptic output to
+is_a: RO:0013004 ! has synaptic IO throughout
+created_by: http://orcid.org/0000-0002-1373-1705
+creation_date: 2020-07-17T09:57:27Z
+
+[Typedef]
 id: RO:0040035
 name: disease relationship
 def: "This relation groups  relations between diseases and any other kind of entity." []
