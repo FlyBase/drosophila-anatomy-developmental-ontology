@@ -157,21 +157,10 @@ fly_anatomy.obo: tmp/fbbt-obj.obo rem_flybase.txt
 		remove --term-file rem_flybase.txt --trim false \
 		query --update ../sparql/force-obo.ru \
 		convert -f obo --check false -o $@.tmp.obo
-	cat $@.tmp.obo | sed 's/^xref: OBO_REL:part_of/xref_analog: OBO_REL:part_of/' | sed 's/^xref: OBO_REL:has_part/xref_analog: OBO_REL:has_part/' | grep -v property_value: | grep -v ^owl-axioms | sed s'/^default-namespace: fly_anatomy.ontology/default-namespace: FlyBase anatomy CV/' | grep -v ^expand_expression_to | grep -v gci_filler | grep -v '^namespace: uberon' | grep -v '^namespace: chebi_ontology' | grep -v '^is_cyclic: false' > $@  && rm $@.tmp.obo
-	sed -i '/^date[:]/c\date: $(OBODATE)' $@
-	sed -i '/^data-version[:]/c\data-version: $(DATE)' $@
-	sed -i '/FlyBase_miscellaneous_CV/d' $@
-	sed -i '/^name[:][ ]continuous[ ]with/c\name: continuous_with' $@
-	sed -i '/^name[:][ ]directly[ ]develops[ ]from/c\name: develops_directly_from' $@
-	sed -i '/^name[:][ ]attached[ ]to[ ]part[ ]of/c\name: attached_to_part_of' $@
-	sed -i '/^name[:][ ]bearer[ ]of/c\name: bearer_of' $@
-	sed -i '/^name[:][ ]attached[ ]to/c\name: attached_to' $@
-	sed -i '/^name[:][ ]sends[ ]synaptic[ ]output[ ]to/c\name: sends_synaptic_output_to' $@
-	sed -i '/^name[:][ ]sends[ ]synaptic[ ]output[ ]throughout/c\name: sends_synaptic_output_throughout' $@
-	sed -i '/^name[:][ ]receives[ ]synaptic[ ]input[ ]in/c\name: receives_synaptic_input_in' $@
-	sed -i '/^name[:][ ]receives[ ]synaptic[ ]input[ ]throughout/c\name: receives_synaptic_input_throughout' $@
-	sed -i '/^name[:][ ]has[ ]synaptic[ ]IO[ ]throughout/c\name: has_synaptic_IO_throughout' $@
-	sed -i '/^name[:][ ]has[ ]synaptic[ ]IO[ ]in/c\name: has_synaptic_IO_in' $@
+	cat $@.tmp.obo | sed '/./{H;$!d;} ; x ; s/\(\[Typedef\]\nid:[ ]\)\([[:lower:][:punct:]]*\n\)\(name:[ ]\)\([[:lower:][:punct:] ]*\n\)/\1\2\3\2/' | grep -v property_value: | grep -v ^owl-axioms | sed 's/^default-namespace: fly_anatomy.ontology/default-namespace: FlyBase anatomy CV/' | grep -v ^expand_expression_to | grep -v gci_filler | grep -v '^namespace: uberon' | grep -v '^namespace: chebi_ontology' | grep -v '^is_cyclic: false' | grep -v 'FlyBase_miscellaneous_CV' > $@  && rm $@.tmp.obo
+	sed -i '/^date[:]/c\date: $(OBODATE) ; /^data-version[:]/c\data-version: $(DATE)' $@
+	$(ROBOT) convert --input $@ -f obo --output $@
+	sed -i 's/^xref[:][ ]OBO_REL[:]part_of/xref_analog: OBO_REL:part_of/ ; s/^xref: OBO_REL:has_part/xref_analog: OBO_REL:has_part/' $@
 
 post_release: fly_anatomy.obo reports/chado_load_check_simple.txt
 	cp fly_anatomy.obo ../..
