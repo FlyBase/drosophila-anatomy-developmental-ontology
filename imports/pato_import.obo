@@ -1,8 +1,9 @@
 format-version: 1.2
-data-version: fbbt/releases/2020-08-04/imports/pato_import.owl
+data-version: fbbt/releases/2020-08-13/imports/pato_import.owl
 subsetdef: abnormal_slim "Abnormal/normal slim"
 subsetdef: attribute_slim "Attribute slim"
 subsetdef: cell_quality "cell_quality"
+subsetdef: hpo_slim "Human phenotype slim"
 subsetdef: mpath_slim "Pathology slim"
 subsetdef: ro-eco ""
 subsetdef: scalar_slim "Scalar slim"
@@ -26,6 +27,19 @@ subset: attribute_slim
 is_a: PATO:0001241 ! physical object quality
 
 [Term]
+id: PATO:0000060
+name: spatial pattern
+namespace: quality
+alt_id: PATO:0000132
+alt_id: PATO:0001565
+def: "A spatial quality inhering in a bearer by virtue of the bearer's exhibiting repetition of placement of its parts." [PATOC:GVG]
+subset: attribute_slim
+subset: hpo_slim
+synonym: "distribution" EXACT []
+synonym: "pattern" RELATED []
+is_a: PATO:0000051 ! morphology
+
+[Term]
 id: PATO:0000068
 name: qualitative
 namespace: quality
@@ -39,6 +53,19 @@ namespace: quality
 def: "A quality inhering in a bearer by virtue of the whether the bearer differs from normal or average." [PATOC:GVG]
 subset: attribute_slim
 is_a: PATO:0000068 ! qualitative
+
+[Term]
+id: PATO:0000140
+name: position
+namespace: quality
+alt_id: PATO:0001032
+alt_id: PATO:0001631
+def: "A spatial quality inhering in a bearer by virtue of the bearer's spatial location relative to other objects in the vicinity." [PATOC:GVG]
+subset: attribute_slim
+synonym: "location" EXACT []
+synonym: "placement" EXACT []
+synonym: "relational spatial quality" EXACT []
+is_a: PATO:0001018 ! physical quality
 
 [Term]
 id: PATO:0000141
@@ -77,6 +104,35 @@ subset: value_slim
 synonym: "average" RELATED []
 is_a: PATO:0000068 ! qualitative
 relationship: is_opposite_of PATO:0000460 ! abnormal
+
+[Term]
+id: PATO:0000618
+name: bilateral
+namespace: quality
+def: "A positional quality inhering in a bearer by virtue of the bearer's having two sides; two-sided." [thefreedictionary.com:thefreedictionary.com]
+subset: mpath_slim
+subset: value_slim
+is_a: PATO:0000140 ! position
+
+[Term]
+id: PATO:0000634
+name: unilateral
+namespace: quality
+def: "A spatial pattern inhering in a bearer by virtue of the bearer's involvement of only one part or side." [WordNet:WordNet]
+subset: mpath_slim
+subset: value_slim
+is_a: PATO:0000060 ! spatial pattern
+
+[Term]
+id: PATO:0001018
+name: physical quality
+namespace: quality
+alt_id: PATO:0002079
+def: "A quality of a physical entity that exists through action of continuants at the physical level of organisation in relation to other entities." [PATOC:GVG]
+subset: attribute_slim
+synonym: "relational physical quality" EXACT []
+xref: Wikipedia:Physical_property
+is_a: PATO:0001241 ! physical object quality
 
 [Term]
 id: PATO:0001241
