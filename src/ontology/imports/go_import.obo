@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: fbbt/releases/2020-08-13/imports/go_import.owl
+data-version: fbbt/releases/2020-10-15/imports/go_import.owl
 subsetdef: gocheck_do_not_annotate "Term not to be used for direct annotation"
 subsetdef: gocheck_do_not_manually_annotate "Term not to be used for direct manual annotation"
 subsetdef: goslim_agr "AGR slim"
@@ -376,20 +376,22 @@ xref: NIF_Subcellular:sao1337158144
 
 [Term]
 id: GO:0005622
-name: intracellular
+name: intracellular anatomical structure
 namespace: cellular_component
-def: "The living contents of a cell; the matter contained within (but not including) the plasma membrane, usually taken to exclude large vacuoles and masses of secretory or ingested material. In eukaryotes it includes the nucleus and cytoplasm." [ISBN:0198506732]
+def: "A component of a cell contained within (but not including) the plasma membrane. In eukaryotes it includes the nucleus and cytoplasm." [ISBN:0198506732]
 subset: gocheck_do_not_annotate
 subset: goslim_chembl
 subset: goslim_generic
 subset: goslim_metagenomics
 subset: goslim_plant
 synonym: "internal to cell" EXACT []
+synonym: "intracellular" EXACT []
 synonym: "nucleocytoplasm" RELATED [GOC:mah]
 synonym: "protoplasm" EXACT []
 synonym: "protoplast" RELATED [GOC:mah]
 xref: Wikipedia:Intracellular
-is_a: GO:0005575 ! cellular_component
+is_a: GO:0110165 ! cellular anatomical entity
+property_value: term_tracker_item https://github.com/geneontology/go-ontology/issues/17776 xsd:anyURI
 
 [Term]
 id: GO:0005623
@@ -1692,8 +1694,8 @@ name: regulation of lipid storage
 namespace: biological_process
 def: "Any process that modulates the rate, frequency or extent of lipid storage. Lipid storage is the accumulation and maintenance in cells or tissues of lipids, compounds soluble in organic solvents but insoluble or sparingly soluble in aqueous solvents. Lipid reserves can be accumulated during early developmental stages for mobilization and utilization at later stages of development." [GOC:BHF, GOC:dph, GOC:tb]
 synonym: "regulation of lipid sequestration" NARROW [GOC:dph, GOC:tb]
+is_a: GO:0032879 ! regulation of localization
 is_a: GO:0065008 ! regulation of biological quality
-is_a: GO:1905952 ! regulation of lipid localization
 intersection_of: GO:0008150 ! biological_process
 intersection_of: regulates GO:0019915 ! lipid storage
 relationship: regulates GO:0019915 ! lipid storage
@@ -1905,8 +1907,6 @@ id: GO:0014059
 name: regulation of dopamine secretion
 namespace: biological_process
 def: "Any process that modulates the frequency, rate or extent of the regulated release of dopamine." [GOC:ef]
-is_a: GO:0010646 ! regulation of cell communication
-is_a: GO:0023051 ! regulation of signaling
 is_a: GO:0043269 ! regulation of ion transport
 is_a: GO:0050433 ! regulation of catecholamine secretion
 intersection_of: GO:0008150 ! biological_process
@@ -1919,8 +1919,6 @@ name: regulation of serotonin secretion
 namespace: biological_process
 def: "Any process that modulates the frequency, rate or extent of the regulated release of serotonin." [GOC:ef]
 synonym: "regulation of serotonin release" RELATED [GOC:tb]
-is_a: GO:0010646 ! regulation of cell communication
-is_a: GO:0023051 ! regulation of signaling
 is_a: GO:0043269 ! regulation of ion transport
 is_a: GO:1903530 ! regulation of secretion by cell
 intersection_of: GO:0008150 ! biological_process
@@ -1937,9 +1935,7 @@ synonym: "down-regulation of serotonin secretion" EXACT []
 synonym: "downregulation of serotonin secretion" EXACT []
 synonym: "inhibition of serotonin secretion" NARROW []
 synonym: "positive regulation of serotonin release" RELATED [GOC:tb]
-is_a: GO:0010648 ! negative regulation of cell communication
 is_a: GO:0014062 ! regulation of serotonin secretion
-is_a: GO:0023057 ! negative regulation of signaling
 is_a: GO:0043271 ! negative regulation of ion transport
 is_a: GO:1903531 ! negative regulation of secretion by cell
 intersection_of: GO:0008150 ! biological_process
@@ -1957,9 +1953,7 @@ synonym: "stimulation of serotonin secretion" NARROW []
 synonym: "up regulation of serotonin secretion" EXACT []
 synonym: "up-regulation of serotonin secretion" EXACT []
 synonym: "upregulation of serotonin secretion" EXACT []
-is_a: GO:0010647 ! positive regulation of cell communication
 is_a: GO:0014062 ! regulation of serotonin secretion
-is_a: GO:0023056 ! positive regulation of signaling
 is_a: GO:0043270 ! positive regulation of ion transport
 is_a: GO:1903532 ! positive regulation of secretion by cell
 intersection_of: GO:0008150 ! biological_process
@@ -2115,6 +2109,8 @@ relationship: part_of GO:0042493 ! response to drug
 id: GO:0016020
 name: membrane
 namespace: cellular_component
+alt_id: GO:0098589
+alt_id: GO:0098805
 def: "A lipid bilayer along with all the proteins and protein complexes embedded in it an attached to it." [GOC:dos, GOC:mah, ISBN:0815316194]
 subset: goslim_aspergillus
 subset: goslim_candida
@@ -2124,8 +2120,12 @@ subset: goslim_metagenomics
 subset: goslim_pir
 subset: goslim_plant
 subset: goslim_yeast
+synonym: "membrane region" NARROW []
+synonym: "region of membrane" NARROW []
+synonym: "whole membrane" NARROW []
 xref: Wikipedia:Biological_membrane
 is_a: GO:0110165 ! cellular anatomical entity
+creation_date: 2014-03-06T11:37:54Z
 
 [Term]
 id: GO:0016042
@@ -3147,9 +3147,7 @@ synonym: "down regulation of dopamine secretion" EXACT []
 synonym: "down-regulation of dopamine secretion" EXACT []
 synonym: "downregulation of dopamine secretion" EXACT []
 synonym: "inhibition of dopamine secretion" NARROW []
-is_a: GO:0010648 ! negative regulation of cell communication
 is_a: GO:0014059 ! regulation of dopamine secretion
-is_a: GO:0023057 ! negative regulation of signaling
 is_a: GO:0033604 ! negative regulation of catecholamine secretion
 is_a: GO:0043271 ! negative regulation of ion transport
 intersection_of: GO:0008150 ! biological_process
@@ -3166,9 +3164,7 @@ synonym: "stimulation of dopamine secretion" NARROW []
 synonym: "up regulation of dopamine secretion" EXACT []
 synonym: "up-regulation of dopamine secretion" EXACT []
 synonym: "upregulation of dopamine secretion" EXACT []
-is_a: GO:0010647 ! positive regulation of cell communication
 is_a: GO:0014059 ! regulation of dopamine secretion
-is_a: GO:0023056 ! positive regulation of signaling
 is_a: GO:0033605 ! positive regulation of catecholamine secretion
 is_a: GO:0043270 ! positive regulation of ion transport
 intersection_of: GO:0008150 ! biological_process
@@ -3352,8 +3348,8 @@ synonym: "signal transduction via intracellular signaling cascade" RELATED []
 synonym: "signal transmission via intracellular cascade" NARROW []
 is_a: GO:0007165 ! signal transduction
 intersection_of: GO:0007165 ! signal transduction
-intersection_of: occurs_in GO:0005622 ! intracellular
-relationship: occurs_in GO:0005622 ! intracellular
+intersection_of: occurs_in GO:0005622 ! intracellular anatomical structure
+relationship: occurs_in GO:0005622 ! intracellular anatomical structure
 created_by: bf
 creation_date: 2010-05-14T01:14:37Z
 
@@ -3759,8 +3755,8 @@ def: "Organized structure of distinctive morphology and function, occurring with
 subset: goslim_pir
 is_a: GO:0043226 ! organelle
 intersection_of: GO:0043226 ! organelle
-intersection_of: part_of GO:0005622 ! intracellular
-relationship: part_of GO:0005622 ! intracellular
+intersection_of: part_of GO:0005622 ! intracellular anatomical structure
+relationship: part_of GO:0005622 ! intracellular anatomical structure
 
 [Term]
 id: GO:0043231
@@ -4193,7 +4189,6 @@ synonym: "up regulation of eclosion" EXACT []
 synonym: "up-regulation of eclosion" EXACT []
 synonym: "upregulation of eclosion" EXACT []
 is_a: GO:0007563 ! regulation of eclosion
-is_a: GO:0051094 ! positive regulation of developmental process
 is_a: GO:0051240 ! positive regulation of multicellular organismal process
 intersection_of: GO:0008150 ! biological_process
 intersection_of: positively_regulates GO:0007562 ! eclosion
@@ -4458,8 +4453,8 @@ is_a: GO:0006810 ! transport
 is_a: GO:0051641 ! cellular localization
 is_a: GO:0051649 ! establishment of localization in cell
 intersection_of: GO:0006810 ! transport
-intersection_of: occurs_in GO:0005622 ! intracellular
-relationship: occurs_in GO:0005622 ! intracellular
+intersection_of: occurs_in GO:0005622 ! intracellular anatomical structure
+relationship: occurs_in GO:0005622 ! intracellular anatomical structure
 created_by: jl
 creation_date: 2013-12-18T14:04:50Z
 
@@ -4471,7 +4466,6 @@ def: "Any process that modulates the frequency, rate or extent of the regulated 
 is_a: GO:0001505 ! regulation of neurotransmitter levels
 is_a: GO:0050804 ! modulation of chemical synaptic transmission
 is_a: GO:0051588 ! regulation of neurotransmitter transport
-is_a: GO:0060341 ! regulation of cellular localization
 is_a: GO:1903530 ! regulation of secretion by cell
 intersection_of: GO:0008150 ! biological_process
 intersection_of: regulates GO:0007269 ! neurotransmitter secretion
@@ -7359,9 +7353,7 @@ id: GO:1902435
 name: regulation of male mating behavior
 namespace: biological_process
 def: "Any process that modulates the frequency, rate or extent of male mating behavior." [GOC:TermGenie, PMID:24089208]
-is_a: GO:0043900 ! regulation of multi-organism process
 is_a: GO:0050795 ! regulation of behavior
-is_a: GO:0051239 ! regulation of multicellular organismal process
 is_a: GO:2000241 ! regulation of reproductive process
 intersection_of: GO:0008150 ! biological_process
 intersection_of: regulates GO:0060179 ! male mating behavior
@@ -7378,7 +7370,6 @@ synonym: "down regulation of male mating behavior" EXACT [GOC:TermGenie]
 synonym: "down-regulation of male mating behavior" EXACT [GOC:TermGenie]
 synonym: "downregulation of male mating behavior" EXACT [GOC:TermGenie]
 synonym: "inhibition of male mating behavior" NARROW [GOC:TermGenie]
-is_a: GO:0043901 ! negative regulation of multi-organism process
 is_a: GO:0048521 ! negative regulation of behavior
 is_a: GO:0051241 ! negative regulation of multicellular organismal process
 is_a: GO:1902435 ! regulation of male mating behavior
@@ -7398,7 +7389,6 @@ synonym: "activation of male mating behavior" NARROW [GOC:TermGenie]
 synonym: "up regulation of male mating behavior" EXACT [GOC:TermGenie]
 synonym: "up-regulation of male mating behavior" EXACT [GOC:TermGenie]
 synonym: "upregulation of male mating behavior" EXACT [GOC:TermGenie]
-is_a: GO:0043902 ! positive regulation of multi-organism process
 is_a: GO:0048520 ! positive regulation of behavior
 is_a: GO:0051240 ! positive regulation of multicellular organismal process
 is_a: GO:1902435 ! regulation of male mating behavior
