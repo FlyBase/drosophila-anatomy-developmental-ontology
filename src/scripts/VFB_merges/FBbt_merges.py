@@ -6,88 +6,91 @@ import re
 # open list of obsolete terms in use
 
 with open("obsolete_terms.txt", "r") as f:
-	input_list = f.read().splitlines()
+	ob_term_ids = f.read().splitlines()
 
 # remove empty strings
-input_list = [i for i in input_list if i]
+ob_term_ids = [i for i in ob_term_ids if i]
 
 
 # get FBbt ids from list in format http://purl.obolibrary.org/obo/FBbt_00000000
 
 
-def change_iri_type(input_list, id_type='full'):
+def convert_to_short_form(iri):
 	"""
-	Finds an FBbt ID of any format in each entry of a list and produces a list of IRIs, default is full-length.
-	
-	id_type can be 'full' (default), 'colon' - e.g. FBbt:00000001 or 'underscore' - e.g. FBbt_00000001.
-	Should be 1 FBbt ID per list item.
+	Convert any type of id to a short form (with an underscore).
 	"""
-	iri_list = []
-	pattern = re.compile("FBbt[_:]([0-9]+)")
-	for x in input_list:
-		m = re.search(pattern, x)
-		if m:
-			if id_type == 'full':
-				iri_list.append("http://purl.obolibrary.org/obo/FBbt_" + m.group(1))
-			if id_type == 'colon':
-				iri_list.append("FBbt:" + m.group(1))
-			if id_type == 'underscore':
-				iri_list.append("FBbt_" + m.group(1))
-		else:
-			raise ValueError("No FBbt ID in entry: " + str(x))
-	return iri_list
+	pattern = re.compile("([A-Za-z]+)[_:]([0-9]+)$")
+	m = re.search(pattern, iri)
+	short_form = m.group(1) + "_" + m.group(2)
+	return short_form
 
+def command_writer(old_id, new_id):
 
-ob_term_ids = change_iri_type(input_list)
+	command_1 = ("MATCH (c:Class {iri: '%s'})<-[r:Related]-(i:Individual), (c2:Class {short_form: '%s'}) MERGE (c2)<-[r2:Related]-(i) SET r2=properties(r) DELETE r") %(old_id, new_id)
 
+	command_2 = ("MATCH (c:Class {iri: '%s'})<-[r:INSTANCEOF]-(i:Individual), (c2:Class {short_form: '%s'}) MERGE (c2)<-[r2:r:INSTANCEOF]-(i) SET r2=properties(r) DELETE r") %(old_id, new_id)
+
+	return command_1, command_2
 
 # load fbbt.json and map obsolete IDs to new IDs (using IAO_0100001 'term replaced by' annotation)
 
 fbbt = json.load(open("fbbt.json", "r"))
+graph = fbbt['graphs'][0]
 
 mapping_dict = {}
 failed_mappings = []
 
 for i in ob_term_ids:
-	for n in fbbt['graphs'][0]['nodes']:
-		if n['id'] == i:
+	for n in graph['nodes']:
+		if (n['id'] == i) and (n['meta']['basicPropertyValues']):
 			for p in n['meta']['basicPropertyValues']:
 				if p['pred'] == "http://purl.obolibrary.org/obo/IAO_0100001":
-					mapping_dict[change_iri_type([i], 'underscore')[0]] = change_iri_type([p['val']], 'underscore')[0]
+					mapping_dict[i] = convert_to_short_form(p['val'])
 
-
-# write 2 cypher commands for merging for each obsoleted term into a file
-
-def command_writer(old_id, new_id):
-
-	command_1 = ("MATCH (c:Class {short_form: '%s'})<-[r:Related]-(i:Individual), (c2:Class {short_form: '%s'}) MERGE (c2)<-[r2:Related]-(i) SET r2=properties(r) DELETE r") %(old_id, new_id)
-
-	command_2 = ("MATCH (c:Class {short_form: '%s'})<-[r:INSTANCEOF]-(i:Individual), (c2:Class {short_form: '%s'}) MERGE (c2)<-[r2:r:INSTANCEOF]-(i) SET r2=properties(r) DELETE r") %(old_id, new_id)
-
-	return command_1, command_2
-
-ob_term_ids = change_iri_type(ob_term_ids, 'underscore')
-
-
-n = 0
+statements = []
 for i in ob_term_ids:
 	try:
 		x = command_writer(i, mapping_dict[i])
+		statements.extend(x)
 	except KeyError:
-		failed_mappings.append(i)
+		failed_mappings.append(convert_to_short_form(i))
 		continue
 
-	if n == 0:
-		with open("cypher.txt", "w") as f:
-			f.write(x[0] + '\n' + x[1] + '\n')	
-	if n > 0:
-		with open("cypher.txt", "a") as f:
-			f.write(x[0] + '\n' + x[1] + '\n')
-	n += 1
+		
+with open("cypher.txt", "w") as f:
+	for s in statements:
+		f.write(s + '\n')
 
 if len(failed_mappings) > 0:
+	failed_mapping_dict = {}
+	consider_all_shortids = []
+	for i in failed_mappings:
+		consider_all_shortids.append(i)
+		for n in graph['nodes']:
+			if i in n['id']:
+				consider_list = [convert_to_short_form(p['val']) for p in n['meta']['basicPropertyValues'] if p['pred'] == "http://www.geneontology.org/formats/oboInOwl#consider"]
+				failed_mapping_dict[convert_to_short_form(i)] = consider_list
+				consider_all_shortids.extend(consider_list)
+
+
+	consider_label_lookup ={}
+	for i in consider_all_shortids:
+		for n in graph['nodes']:
+			if i in n['id']:
+				try:
+					consider_label_lookup[i] = n['lbl']
+				except KeyError:
+					consider_label_lookup[i] = "<no label>"
+	
 	print("Warning: Some terms could not be mapped using term_replaced_by:")
-	print(failed_mappings)
+	for i in failed_mappings:
+		print('  %s (%s):'%(i, consider_label_lookup[i]))
+		if failed_mapping_dict[i]:
+			for r in failed_mapping_dict[i]:
+				print('    consider - %s (%s)'%(r, consider_label_lookup[r]))
+		else:
+			print('    <no suggestions>')
+			
 else:
 	print("All terms mapped successfully")
 
