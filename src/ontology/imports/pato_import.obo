@@ -1,14 +1,12 @@
 format-version: 1.2
-data-version: fbbt/releases/2020-10-15/imports/pato_import.owl
-subsetdef: abnormal_slim "Abnormal/normal slim"
-subsetdef: attribute_slim "Attribute slim"
-subsetdef: cell_quality "cell_quality"
-subsetdef: hpo_slim "Human phenotype slim"
-subsetdef: mpath_slim "Pathology slim"
-subsetdef: ro-eco ""
-subsetdef: scalar_slim "Scalar slim"
-subsetdef: value_slim "Value slim"
+data-version: fbbt/releases/2020-11-19/imports/pato_import.owl
+subsetdef: abnormal_slim ""
+subsetdef: attribute_slim ""
+subsetdef: hpo_slim ""
+subsetdef: mpath_slim ""
+subsetdef: value_slim ""
 ontology: fbbt/imports/pato_import
+property_value: owl:versionInfo "2020-11-19" xsd:string
 
 [Term]
 id: PATO:0000001
@@ -91,19 +89,7 @@ synonym: "atypia" RELATED []
 synonym: "atypical" RELATED []
 synonym: "defective" RELATED []
 is_a: PATO:0000069 ! deviation (from_normal)
-relationship: is_opposite_of PATO:0000461 ! normal
-
-[Term]
-id: PATO:0000461
-name: normal
-namespace: quality
-def: "A quality inhering in a bearer by virtue of the bearer's exhibiting no deviation from normal or average." [PATOC:GVG]
-subset: abnormal_slim
-subset: mpath_slim
-subset: value_slim
-synonym: "average" RELATED []
-is_a: PATO:0000068 ! qualitative
-relationship: is_opposite_of PATO:0000460 ! abnormal
+property_value: RO:0002604 PATO:0000461
 
 [Term]
 id: PATO:0000618
@@ -154,51 +140,6 @@ xref: snap:Quality
 is_a: PATO:0000001 ! quality
 
 [Term]
-id: PATO:0001396
-name: cellular quality
-namespace: quality
-def: "A monadic quality of continuant that exists at the cellular level of organisation." [PATOC:GVG]
-is_a: PATO:0001241 ! physical object quality
-
-[Term]
-id: PATO:0001404
-name: nucleate quality
-namespace: quality
-def: "A cellular quality inhering in a bearer by virtue of bearer's number of nuclei." [PATOC:GVG]
-subset: attribute_slim
-is_a: PATO:0001396 ! cellular quality
-
-[Term]
-id: PATO:0001405
-name: anucleate
-namespace: quality
-def: "A nucleate quality inhering in a bearer by virtue of the bearer's having no nucleus." [Biology-online:Biology-online]
-subset: cell_quality
-subset: mpath_slim
-subset: value_slim
-is_a: PATO:0001404 ! nucleate quality
-
-[Term]
-id: PATO:0001406
-name: binucleate
-namespace: quality
-def: "A nucleate quality inhering in a bearer by virtue of the bearer's having two nuclei." [Biology-online:Biology-online]
-subset: cell_quality
-subset: mpath_slim
-subset: value_slim
-is_a: PATO:0001908 ! multinucleate
-
-[Term]
-id: PATO:0001407
-name: mononucleate
-namespace: quality
-def: "A nucleate quality inhering in a bearer by virtue of the bearer's having one nucleus." [Biology-online:Biology-online]
-subset: cell_quality
-subset: mpath_slim
-subset: value_slim
-is_a: PATO:0002505 ! nucleated
-
-[Term]
 id: PATO:0001861
 name: fasciculated
 namespace: quality
@@ -207,43 +148,7 @@ subset: mpath_slim
 subset: value_slim
 synonym: "fascicled" EXACT []
 is_a: PATO:0002013 ! fasciculation
-disjoint_from: PATO:0001959 ! defasciculated
-relationship: is_opposite_of PATO:0001959 ! defasciculated
-
-[Term]
-id: PATO:0001908
-name: multinucleate
-namespace: quality
-def: "A nucleate quality inhering in a bearer by virtue of the bearer's having more than one nucleus." [PATOC:GVG]
-subset: mpath_slim
-subset: value_slim
-is_a: PATO:0002505 ! nucleated
-
-[Term]
-id: PATO:0001959
-name: defasciculated
-namespace: quality
-def: "A structural quality inhering in a bearer by virtue of the bearer's in which bundles of aligned anatomical fibers have become separated." [PATOC:mw]
-subset: value_slim
-is_a: PATO:0002013 ! fasciculation
-relationship: is_opposite_of PATO:0001861 ! fasciculated
-
-[Term]
-id: PATO:0001992
-name: cellularity
-namespace: quality
-def: "An organismal quality inhering in a bearer by virtue of the bearer's consisting cells." [PATOC:GVG]
-subset: attribute_slim
-subset: scalar_slim
-is_a: PATO:0001995 ! organismal quality
-
-[Term]
-id: PATO:0001993
-name: multicellular
-namespace: quality
-def: "A cellularity quality inhering in a bearer by virtue of the bearer's consisting of more than one cell." [PATOC:GVG]
-subset: value_slim
-is_a: PATO:0001992 ! cellularity
+property_value: RO:0002604 PATO:0001959
 
 [Term]
 id: PATO:0001995
@@ -269,17 +174,6 @@ subset: value_slim
 is_a: PATO:0001995 ! organismal quality
 created_by: gkoutos
 creation_date: 2013-03-11T09:22:04Z
-
-[Term]
-id: PATO:0002505
-name: nucleated
-namespace: quality
-def: "A nucleate quality inhering in a bearer by virtue of the bearer's having one or more nucleus." [PATOC:GVG]
-subset: mpath_slim
-subset: value_slim
-is_a: PATO:0001404 ! nucleate quality
-created_by: gkoutos
-creation_date: 2013-10-21T05:44:34Z
 
 [Term]
 id: PATO:0060001
@@ -321,18 +215,6 @@ property_value: IAO:0000118 "is bearer of" xsd:string
 property_value: RO:0001900 RO:0001901
 
 [Typedef]
-id: RO:0002180
-name: has component
-def: "w 'has component' p if w 'has part' p and w is such that it can be directly disassembled into into n parts p, p2, p3, ..., pn, where these parts are of similar type." []
-subset: ro-eco
-property_value: IAO:0000114 IAO:0000125
-property_value: IAO:0000116 "The definition of 'has component' is still under discussion. The challenge is in providing a definition that does not imply transitivity." xsd:string
-property_value: IAO:0000232 "For use in recording has_part with a cardinality constraint, because OWL does not permit cardinality constraints to be used in combination with transitive object properties. In situations where you would want to say something like 'has part exactly 5 digit, you would instead use has_component exactly 5 digit." xsd:string
-property_value: RO:0001900 RO:0001901
-property_value: seeAlso http://ontologydesignpatterns.org/wiki/Submissions:Componency
-is_a: has_part ! has part
-
-[Typedef]
 id: has_part
 name: has part
 name: has_part
@@ -352,18 +234,6 @@ property_value: IAO:0000116 "Parthood requires the part and the whole to have co
 property_value: IAO:0000118 "has_part" xsd:string
 property_value: RO:0001900 RO:0001901
 is_transitive: true
-
-[Typedef]
-id: is_opposite_of
-name: is opposite of
-name: is_opposite_of
-namespace: quality
-def: "x is the opposite of y if there exists some distance metric M, and there exists no z such as M(x,z) <= M(x,y) or M(y,z) <= M(y,x)." []
-xref: RO:0002604
-property_value: IAO:0000112 "'anterior end of organism' is-opposite-of 'posterior end of organism'" xsd:string
-property_value: IAO:0000112 "'increase in temperature' is-opposite-of 'decrease in temperature'" xsd:string
-is_metadata_tag: true
-is_class_level: true
 
 [Typedef]
 id: part_of
