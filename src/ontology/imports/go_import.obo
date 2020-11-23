@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: fbbt/releases/2020-11-19/imports/go_import.owl
+data-version: fbbt/releases/2020-11-23/imports/go_import.owl
 subsetdef: gocheck_do_not_annotate ""
 subsetdef: gocheck_do_not_manually_annotate ""
 subsetdef: goslim_agr ""
@@ -17,7 +17,7 @@ subsetdef: goslim_pombe ""
 subsetdef: goslim_synapse ""
 subsetdef: goslim_yeast ""
 ontology: fbbt/imports/go_import
-property_value: owl:versionInfo "2020-11-19" xsd:string
+property_value: owl:versionInfo "2020-11-23" xsd:string
 
 [Term]
 id: GO:0000003
@@ -198,6 +198,7 @@ synonym: "downregulation of peptide secretion" EXACT []
 synonym: "inhibition of peptide secretion" NARROW []
 is_a: GO:0002791 ! regulation of peptide secretion
 is_a: GO:0051048 ! negative regulation of secretion
+is_a: GO:1903792 ! negative regulation of anion transport
 intersection_of: GO:0008150 ! biological_process
 intersection_of: negatively_regulates GO:0002790 ! peptide secretion
 relationship: negatively_regulates GO:0002790 ! peptide secretion
@@ -214,6 +215,7 @@ synonym: "up-regulation of peptide secretion" EXACT []
 synonym: "upregulation of peptide secretion" EXACT []
 is_a: GO:0002791 ! regulation of peptide secretion
 is_a: GO:0051047 ! positive regulation of secretion
+is_a: GO:1903793 ! positive regulation of anion transport
 intersection_of: GO:0008150 ! biological_process
 intersection_of: positively_regulates GO:0002790 ! peptide secretion
 relationship: positively_regulates GO:0002790 ! peptide secretion
@@ -422,7 +424,7 @@ id: GO:0006837
 name: serotonin transport
 namespace: biological_process
 def: "The directed movement of serotonin into, out of or within a cell, or between cells, by means of some agent such as a transporter or pore. Serotonin (5-hydroxytryptamine) is a monoamine neurotransmitter occurring in the peripheral and central nervous systems." [GOC:ai]
-is_a: GO:0015695 ! organic cation transport
+is_a: GO:0006812 ! cation transport
 is_a: GO:0015844 ! monoamine transport
 is_a: GO:0015850 ! organic hydroxy compound transport
 
@@ -434,8 +436,19 @@ alt_id: GO:0006866
 def: "The directed movement of amino acids, organic acids containing one or more amino substituents, into, out of or within a cell, or between cells, by means of some agent such as a transporter or pore." [GOC:ai]
 subset: goslim_pir
 subset: goslim_yeast
-is_a: GO:0046942 ! carboxylic acid transport
+is_a: GO:0015849 ! organic acid transport
 is_a: GO:0071705 ! nitrogen compound transport
+
+[Term]
+id: GO:0006869
+name: lipid transport
+namespace: biological_process
+def: "The directed movement of lipids into, out of or within a cell, or between cells, by means of some agent such as a transporter or pore. Lipids are compounds soluble in an organic solvent but not, or sparingly, in an aqueous solvent." [ISBN:0198506732]
+subset: goslim_drosophila
+subset: goslim_pir
+subset: goslim_yeast
+is_a: GO:0071702 ! organic substance transport
+relationship: part_of GO:0010876 ! lipid localization
 
 [Term]
 id: GO:0006950
@@ -1507,6 +1520,16 @@ synonym: "lipid localisation" EXACT [GOC:mah]
 is_a: GO:0033036 ! macromolecule localization
 
 [Term]
+id: GO:0010877
+name: lipid transport involved in lipid storage
+namespace: biological_process
+def: "The directed movement of lipids into cells that is part of their accumulation and maintenance." [GOC:BHF, GOC:dph, GOC:tb]
+is_a: GO:0006869 ! lipid transport
+intersection_of: GO:0006869 ! lipid transport
+intersection_of: part_of GO:0019915 ! lipid storage
+relationship: part_of GO:0019915 ! lipid storage
+
+[Term]
 id: GO:0010883
 name: regulation of lipid storage
 namespace: biological_process
@@ -1556,8 +1579,11 @@ name: glutamate secretion
 namespace: biological_process
 def: "The controlled release of glutamate by a cell. The glutamate is the most abundant excitatory neurotransmitter in the nervous system." [GOC:ef]
 is_a: GO:0006835 ! dicarboxylic acid transport
+is_a: GO:0015718 ! monocarboxylic acid transport
 is_a: GO:0015800 ! acidic amino acid transport
+is_a: GO:0015908 ! fatty acid transport
 is_a: GO:0032940 ! secretion by cell
+is_a: GO:0140353 ! lipid export from cell
 
 [Term]
 id: GO:0014048
@@ -1566,6 +1592,7 @@ namespace: biological_process
 def: "Any process that modulates the frequency, rate or extent of the controlled release of glutamate." [GOC:ef]
 is_a: GO:0051955 ! regulation of amino acid transport
 is_a: GO:1903530 ! regulation of secretion by cell
+is_a: GO:2000191 ! regulation of fatty acid transport
 intersection_of: GO:0008150 ! biological_process
 intersection_of: regulates GO:0014047 ! glutamate secretion
 relationship: regulates GO:0014047 ! glutamate secretion
@@ -1583,6 +1610,7 @@ synonym: "upregulation of glutamate secretion" EXACT []
 is_a: GO:0014048 ! regulation of glutamate secretion
 is_a: GO:0051957 ! positive regulation of amino acid transport
 is_a: GO:1903532 ! positive regulation of secretion by cell
+is_a: GO:2000193 ! positive regulation of fatty acid transport
 intersection_of: GO:0008150 ! biological_process
 intersection_of: positively_regulates GO:0014047 ! glutamate secretion
 relationship: positively_regulates GO:0014047 ! glutamate secretion
@@ -1599,6 +1627,7 @@ synonym: "inhibition of glutamate secretion" NARROW []
 is_a: GO:0014048 ! regulation of glutamate secretion
 is_a: GO:0051956 ! negative regulation of amino acid transport
 is_a: GO:1903531 ! negative regulation of secretion by cell
+is_a: GO:2000192 ! negative regulation of fatty acid transport
 intersection_of: GO:0008150 ! biological_process
 intersection_of: negatively_regulates GO:0014047 ! glutamate secretion
 relationship: negatively_regulates GO:0014047 ! glutamate secretion
@@ -1676,7 +1705,6 @@ name: regulation of acetylcholine secretion, neurotransmission
 namespace: biological_process
 def: "Any process that modulates the frequency, rate or extent of the regulated release of acetylcholine." [GOC:ef]
 is_a: GO:0032222 ! regulation of synaptic transmission, cholinergic
-is_a: GO:0043269 ! regulation of ion transport
 is_a: GO:0046928 ! regulation of neurotransmitter secretion
 is_a: GO:0051952 ! regulation of amine transport
 intersection_of: GO:0008150 ! biological_process
@@ -1696,7 +1724,6 @@ synonym: "upregulation of acetylcholine secretion" EXACT []
 is_a: GO:0001956 ! positive regulation of neurotransmitter secretion
 is_a: GO:0014056 ! regulation of acetylcholine secretion, neurotransmission
 is_a: GO:0032224 ! positive regulation of synaptic transmission, cholinergic
-is_a: GO:0043270 ! positive regulation of ion transport
 is_a: GO:0051954 ! positive regulation of amine transport
 intersection_of: GO:0008150 ! biological_process
 intersection_of: positively_regulates GO:0014055 ! acetylcholine secretion, neurotransmission
@@ -1713,7 +1740,6 @@ synonym: "downregulation of acetylcholine secretion" EXACT []
 synonym: "inhibition of acetylcholine secretion" NARROW []
 is_a: GO:0014056 ! regulation of acetylcholine secretion, neurotransmission
 is_a: GO:0032223 ! negative regulation of synaptic transmission, cholinergic
-is_a: GO:0043271 ! negative regulation of ion transport
 is_a: GO:0046929 ! negative regulation of neurotransmitter secretion
 is_a: GO:0051953 ! negative regulation of amine transport
 intersection_of: GO:0008150 ! biological_process
@@ -1725,7 +1751,6 @@ id: GO:0014059
 name: regulation of dopamine secretion
 namespace: biological_process
 def: "Any process that modulates the frequency, rate or extent of the regulated release of dopamine." [GOC:ef]
-is_a: GO:0043269 ! regulation of ion transport
 is_a: GO:0050433 ! regulation of catecholamine secretion
 intersection_of: GO:0008150 ! biological_process
 intersection_of: regulates GO:0014046 ! dopamine secretion
@@ -1737,7 +1762,7 @@ name: regulation of serotonin secretion
 namespace: biological_process
 def: "Any process that modulates the frequency, rate or extent of the regulated release of serotonin." [GOC:ef]
 synonym: "regulation of serotonin release" RELATED [GOC:tb]
-is_a: GO:0043269 ! regulation of ion transport
+is_a: GO:0044070 ! regulation of anion transport
 is_a: GO:1903530 ! regulation of secretion by cell
 intersection_of: GO:0008150 ! biological_process
 intersection_of: regulates GO:0001820 ! serotonin secretion
@@ -1754,8 +1779,8 @@ synonym: "downregulation of serotonin secretion" EXACT []
 synonym: "inhibition of serotonin secretion" NARROW []
 synonym: "positive regulation of serotonin release" RELATED [GOC:tb]
 is_a: GO:0014062 ! regulation of serotonin secretion
-is_a: GO:0043271 ! negative regulation of ion transport
 is_a: GO:1903531 ! negative regulation of secretion by cell
+is_a: GO:1903792 ! negative regulation of anion transport
 intersection_of: GO:0008150 ! biological_process
 intersection_of: negatively_regulates GO:0001820 ! serotonin secretion
 relationship: negatively_regulates GO:0001820 ! serotonin secretion
@@ -1772,8 +1797,8 @@ synonym: "up regulation of serotonin secretion" EXACT []
 synonym: "up-regulation of serotonin secretion" EXACT []
 synonym: "upregulation of serotonin secretion" EXACT []
 is_a: GO:0014062 ! regulation of serotonin secretion
-is_a: GO:0043270 ! positive regulation of ion transport
 is_a: GO:1903532 ! positive regulation of secretion by cell
+is_a: GO:1903793 ! positive regulation of anion transport
 intersection_of: GO:0008150 ! biological_process
 intersection_of: positively_regulates GO:0001820 ! serotonin secretion
 relationship: positively_regulates GO:0001820 ! serotonin secretion
@@ -1808,7 +1833,6 @@ id: GO:0015711
 name: organic anion transport
 namespace: biological_process
 def: "The directed movement of organic anions into, out of or within a cell, or between cells, by means of some agent such as a transporter or pore. Organic anions are atoms or small molecules with a negative charge which contain carbon in covalent linkage." [GOC:ai, GOC:krc]
-is_a: GO:0006820 ! anion transport
 is_a: GO:0071702 ! organic substance transport
 
 [Term]
@@ -1835,7 +1859,7 @@ synonym: "4-aminobutanoate transport" EXACT []
 synonym: "4-aminobutyrate transport" EXACT []
 synonym: "GABA transport" EXACT []
 is_a: GO:0006865 ! amino acid transport
-is_a: GO:0015718 ! monocarboxylic acid transport
+is_a: GO:0046942 ! carboxylic acid transport
 
 [Term]
 id: GO:0015833
@@ -1897,6 +1921,14 @@ namespace: biological_process
 def: "The directed movement of dopamine into, out of or within a cell, or between cells, by means of some agent such as a transporter or pore. Dopamine is a catecholamine neurotransmitter and a metabolic precursor of noradrenaline and adrenaline." [GOC:ai]
 is_a: GO:0006812 ! cation transport
 is_a: GO:0051937 ! catecholamine transport
+
+[Term]
+id: GO:0015908
+name: fatty acid transport
+namespace: biological_process
+def: "The directed movement of fatty acids into, out of or within a cell, or between cells, by means of some agent such as a transporter or pore. Fatty acids are aliphatic monocarboxylic acids liberated from naturally occurring fats and oils by hydrolysis." [GOC:ai]
+is_a: GO:0006869 ! lipid transport
+is_a: GO:0015849 ! organic acid transport
 
 [Term]
 id: GO:0016020
@@ -1972,6 +2004,18 @@ synonym: "male courtship behavior, wing vibration" RELATED []
 synonym: "male courtship behaviour, veined wing vibration" EXACT []
 synonym: "male courtship behaviour, wing vibration" RELATED []
 is_a: GO:0048065 ! male courtship behavior, veined wing extension
+
+[Term]
+id: GO:0018991
+name: oviposition
+namespace: biological_process
+alt_id: GO:0060403
+def: "The deposition of eggs (either fertilized or not) upon a surface or into a medium such as water." [GOC:ems]
+synonym: "egg laying" BROAD []
+synonym: "egg-laying" BROAD []
+synonym: "post-mating oviposition" NARROW []
+xref: Wikipedia:Oviposition
+is_a: GO:0019098 ! reproductive behavior
 
 [Term]
 id: GO:0019098
@@ -2586,6 +2630,50 @@ intersection_of: positively_regulates GO:0051932 ! synaptic transmission, GABAer
 relationship: positively_regulates GO:0051932 ! synaptic transmission, GABAergic
 
 [Term]
+id: GO:0032368
+name: regulation of lipid transport
+namespace: biological_process
+def: "Any process that modulates the frequency, rate or extent of the directed movement of lipids into, out of or within a cell, or between cells, by means of some agent such as a transporter or pore." [GOC:mah]
+is_a: GO:0044070 ! regulation of anion transport
+is_a: GO:1905952 ! regulation of lipid localization
+intersection_of: GO:0008150 ! biological_process
+intersection_of: regulates GO:0006869 ! lipid transport
+relationship: regulates GO:0006869 ! lipid transport
+
+[Term]
+id: GO:0032369
+name: negative regulation of lipid transport
+namespace: biological_process
+def: "Any process that stops, prevents, or reduces the frequency, rate or extent of the directed movement of lipids into, out of or within a cell, or between cells, by means of some agent such as a transporter or pore." [GOC:mah]
+synonym: "down regulation of lipid transport" EXACT []
+synonym: "down-regulation of lipid transport" EXACT []
+synonym: "downregulation of lipid transport" EXACT []
+synonym: "inhibition of lipid transport" NARROW []
+is_a: GO:0032368 ! regulation of lipid transport
+is_a: GO:1903792 ! negative regulation of anion transport
+is_a: GO:1905953 ! negative regulation of lipid localization
+intersection_of: GO:0008150 ! biological_process
+intersection_of: negatively_regulates GO:0006869 ! lipid transport
+relationship: negatively_regulates GO:0006869 ! lipid transport
+
+[Term]
+id: GO:0032370
+name: positive regulation of lipid transport
+namespace: biological_process
+def: "Any process that activates or increases the frequency, rate or extent of the directed movement of lipids into, out of or within a cell, or between cells, by means of some agent such as a transporter or pore." [GOC:mah]
+synonym: "activation of lipid transport" NARROW []
+synonym: "stimulation of lipid transport" NARROW []
+synonym: "up regulation of lipid transport" EXACT []
+synonym: "up-regulation of lipid transport" EXACT []
+synonym: "upregulation of lipid transport" EXACT []
+is_a: GO:0032368 ! regulation of lipid transport
+is_a: GO:1903793 ! positive regulation of anion transport
+is_a: GO:1905954 ! positive regulation of lipid localization
+intersection_of: GO:0008150 ! biological_process
+intersection_of: positively_regulates GO:0006869 ! lipid transport
+relationship: positively_regulates GO:0006869 ! lipid transport
+
+[Term]
 id: GO:0032501
 name: multicellular organismal process
 namespace: biological_process
@@ -2641,7 +2729,7 @@ id: GO:0032890
 name: regulation of organic acid transport
 namespace: biological_process
 def: "Any process that modulates the frequency, rate or extent of the directed movement of organic acids into, out of or within a cell, or between cells, by means of some agent such as a transporter or pore." [GOC:mah]
-is_a: GO:0051049 ! regulation of transport
+is_a: GO:0044070 ! regulation of anion transport
 intersection_of: GO:0008150 ! biological_process
 intersection_of: regulates GO:0015849 ! organic acid transport
 relationship: regulates GO:0015849 ! organic acid transport
@@ -2656,7 +2744,7 @@ synonym: "down-regulation of organic acid transport" EXACT []
 synonym: "downregulation of organic acid transport" EXACT []
 synonym: "inhibition of organic acid transport" NARROW []
 is_a: GO:0032890 ! regulation of organic acid transport
-is_a: GO:0051051 ! negative regulation of transport
+is_a: GO:1903792 ! negative regulation of anion transport
 intersection_of: GO:0008150 ! biological_process
 intersection_of: negatively_regulates GO:0015849 ! organic acid transport
 relationship: negatively_regulates GO:0015849 ! organic acid transport
@@ -2672,7 +2760,7 @@ synonym: "up regulation of organic acid transport" EXACT []
 synonym: "up-regulation of organic acid transport" EXACT []
 synonym: "upregulation of organic acid transport" EXACT []
 is_a: GO:0032890 ! regulation of organic acid transport
-is_a: GO:0051050 ! positive regulation of transport
+is_a: GO:1903793 ! positive regulation of anion transport
 intersection_of: GO:0008150 ! biological_process
 intersection_of: positively_regulates GO:0015849 ! organic acid transport
 relationship: positively_regulates GO:0015849 ! organic acid transport
@@ -2725,7 +2813,6 @@ synonym: "downregulation of dopamine secretion" EXACT []
 synonym: "inhibition of dopamine secretion" NARROW []
 is_a: GO:0014059 ! regulation of dopamine secretion
 is_a: GO:0033604 ! negative regulation of catecholamine secretion
-is_a: GO:0043271 ! negative regulation of ion transport
 intersection_of: GO:0008150 ! biological_process
 intersection_of: negatively_regulates GO:0014046 ! dopamine secretion
 relationship: negatively_regulates GO:0014046 ! dopamine secretion
@@ -2742,7 +2829,6 @@ synonym: "up-regulation of dopamine secretion" EXACT []
 synonym: "upregulation of dopamine secretion" EXACT []
 is_a: GO:0014059 ! regulation of dopamine secretion
 is_a: GO:0033605 ! positive regulation of catecholamine secretion
-is_a: GO:0043270 ! positive regulation of ion transport
 intersection_of: GO:0008150 ! biological_process
 intersection_of: positively_regulates GO:0014046 ! dopamine secretion
 relationship: positively_regulates GO:0014046 ! dopamine secretion
@@ -3393,6 +3479,16 @@ intersection_of: positively_regulates GO:0006629 ! lipid metabolic process
 relationship: positively_regulates GO:0006629 ! lipid metabolic process
 
 [Term]
+id: GO:0045924
+name: regulation of female receptivity
+namespace: biological_process
+alt_id: GO:0060181
+def: "Any process that modulates the frequency, rate or extent of the willingness or readiness of a female to receive male advances." [GOC:dph, GOC:go_curators, GOC:tb]
+synonym: "female receptivity" RELATED [GOC:dph, GOC:tb]
+is_a: GO:0060180 ! female mating behavior
+is_a: GO:0065008 ! regulation of biological quality
+
+[Term]
 id: GO:0045938
 name: positive regulation of circadian sleep/wake cycle, sleep
 namespace: biological_process
@@ -3438,6 +3534,20 @@ xref: Wikipedia:Salivation
 is_a: GO:0007589 ! body fluid secretion
 is_a: GO:0022600 ! digestive system process
 is_a: GO:0032941 ! secretion by tissue
+
+[Term]
+id: GO:0046662
+name: regulation of oviposition
+namespace: biological_process
+alt_id: GO:0048042
+def: "Any process that modulates the frequency, rate or extent of the deposition of eggs, either fertilized or not, upon a surface or into a medium." [GOC:dph, GOC:tb, PMID:11932766]
+synonym: "regulation of post-mating oviposition" NARROW []
+is_a: GO:0050795 ! regulation of behavior
+is_a: GO:0051239 ! regulation of multicellular organismal process
+is_a: GO:2000241 ! regulation of reproductive process
+intersection_of: GO:0008150 ! biological_process
+intersection_of: regulates GO:0018991 ! oviposition
+relationship: regulates GO:0018991 ! oviposition
 
 [Term]
 id: GO:0046692
@@ -3601,7 +3711,6 @@ name: carboxylic acid transport
 namespace: biological_process
 def: "The directed movement of carboxylic acids into, out of or within a cell, or between cells, by means of some agent such as a transporter or pore. Carboxylic acids are organic acids containing one or more carboxyl (COOH) groups or anions (COO-)." [GOC:ai]
 is_a: GO:0015711 ! organic anion transport
-is_a: GO:0015849 ! organic acid transport
 
 [Term]
 id: GO:0047484
@@ -4891,7 +5000,7 @@ id: GO:0051952
 name: regulation of amine transport
 namespace: biological_process
 def: "Any process that modulates the frequency, rate or extent of the directed movement of amines into, out of or within a cell, or between cells, by means of some agent such as a transporter or pore." [GOC:ai]
-is_a: GO:0051049 ! regulation of transport
+is_a: GO:0044070 ! regulation of anion transport
 intersection_of: GO:0008150 ! biological_process
 intersection_of: regulates GO:0015837 ! amine transport
 relationship: regulates GO:0015837 ! amine transport
@@ -4905,8 +5014,8 @@ synonym: "down regulation of amine transport" EXACT []
 synonym: "down-regulation of amine transport" EXACT []
 synonym: "downregulation of amine transport" EXACT []
 synonym: "inhibition of amine transport" NARROW []
-is_a: GO:0051051 ! negative regulation of transport
 is_a: GO:0051952 ! regulation of amine transport
+is_a: GO:1903792 ! negative regulation of anion transport
 intersection_of: GO:0008150 ! biological_process
 intersection_of: negatively_regulates GO:0015837 ! amine transport
 relationship: negatively_regulates GO:0015837 ! amine transport
@@ -4921,8 +5030,8 @@ synonym: "stimulation of amine transport" NARROW []
 synonym: "up regulation of amine transport" EXACT []
 synonym: "up-regulation of amine transport" EXACT []
 synonym: "upregulation of amine transport" EXACT []
-is_a: GO:0051050 ! positive regulation of transport
 is_a: GO:0051952 ! regulation of amine transport
+is_a: GO:1903793 ! positive regulation of anion transport
 intersection_of: GO:0008150 ! biological_process
 intersection_of: positively_regulates GO:0015837 ! amine transport
 relationship: positively_regulates GO:0015837 ! amine transport
@@ -4933,7 +5042,6 @@ name: regulation of amino acid transport
 namespace: biological_process
 def: "Any process that modulates the frequency, rate or extent of the directed movement of amino acids into, out of or within a cell, or between cells, by means of some agent such as a transporter or pore." [GOC:ai]
 is_a: GO:0032890 ! regulation of organic acid transport
-is_a: GO:0044070 ! regulation of anion transport
 is_a: GO:0051952 ! regulation of amine transport
 intersection_of: GO:0008150 ! biological_process
 intersection_of: regulates GO:0006865 ! amino acid transport
@@ -4952,7 +5060,6 @@ synonym: "negative regulation of amino acid transmembrane transport" EXACT [GOC:
 is_a: GO:0032891 ! negative regulation of organic acid transport
 is_a: GO:0051953 ! negative regulation of amine transport
 is_a: GO:0051955 ! regulation of amino acid transport
-is_a: GO:1903792 ! negative regulation of anion transport
 intersection_of: GO:0008150 ! biological_process
 intersection_of: negatively_regulates GO:0006865 ! amino acid transport
 relationship: negatively_regulates GO:0006865 ! amino acid transport
@@ -4971,7 +5078,6 @@ synonym: "upregulation of amino acid transport" EXACT []
 is_a: GO:0032892 ! positive regulation of organic acid transport
 is_a: GO:0051954 ! positive regulation of amine transport
 is_a: GO:0051955 ! regulation of amino acid transport
-is_a: GO:1903793 ! positive regulation of anion transport
 intersection_of: GO:0008150 ! biological_process
 intersection_of: positively_regulates GO:0006865 ! amino acid transport
 relationship: positively_regulates GO:0006865 ! amino acid transport
@@ -5039,6 +5145,13 @@ id: GO:0060179
 name: male mating behavior
 namespace: biological_process
 def: "The specific behavior of a male organism that is associated with reproduction." [GOC:dph, GOC:pr, GOC:tb]
+is_a: GO:0007617 ! mating behavior
+
+[Term]
+id: GO:0060180
+name: female mating behavior
+namespace: biological_process
+def: "The specific behavior of a female organism that is associated with reproduction." [GOC:dph, GOC:pr, GOC:tb]
 is_a: GO:0007617 ! mating behavior
 
 [Term]
@@ -5167,7 +5280,6 @@ id: GO:0061531
 name: primary amine secretion
 namespace: biological_process
 def: "The regulated release of a primary amine by a cell." [GOC:dph]
-is_a: GO:0015695 ! organic cation transport
 is_a: GO:0015837 ! amine transport
 is_a: GO:0032940 ! secretion by cell
 created_by: dph
@@ -5241,6 +5353,7 @@ id: GO:0061545
 name: tyramine secretion
 namespace: biological_process
 def: "The regulated release of a tyramine by a cell." [GOC:dph]
+is_a: GO:0006812 ! cation transport
 is_a: GO:0015844 ! monoamine transport
 is_a: GO:0015850 ! organic hydroxy compound transport
 is_a: GO:0061531 ! primary amine secretion
@@ -5498,7 +5611,7 @@ id: GO:0071702
 name: organic substance transport
 namespace: biological_process
 def: "The directed movement of organic substances into, out of or within a cell, or between cells, or within a multicellular organism by means of some agent such as a transporter or pore. An organic substance is a molecular entity that contains carbon." [GOC:mah]
-is_a: GO:0006810 ! transport
+is_a: GO:0006820 ! anion transport
 created_by: mah
 creation_date: 2010-03-08T02:15:14Z
 
@@ -5564,7 +5677,7 @@ id: GO:0090087
 name: regulation of peptide transport
 namespace: biological_process
 def: "Any process that modulates the frequency, rate or extent of the directed movement of peptides, compounds of two or more amino acids where the alpha carboxyl group of one is bound to the alpha amino group of another, into, out of or within a cell, or between cells, by means of some agent such as a transporter or pore." [GOC:dph, GOC:tb]
-is_a: GO:0051049 ! regulation of transport
+is_a: GO:0044070 ! regulation of anion transport
 intersection_of: GO:0008150 ! biological_process
 intersection_of: regulates GO:0015833 ! peptide transport
 relationship: regulates GO:0015833 ! peptide transport
@@ -6057,6 +6170,75 @@ is_a: GO:0006810 ! transport
 is_a: GO:0009987 ! cellular process
 created_by: pg
 creation_date: 2019-05-22T11:20:45Z
+
+[Term]
+id: GO:0140353
+name: lipid export from cell
+namespace: biological_process
+def: "The directed movement of a lipid from a cell, into the extracellular region." [GOC:pg]
+synonym: "lipid efflux" BROAD []
+is_a: GO:0006869 ! lipid transport
+is_a: GO:0140352 ! export from cell
+created_by: pg
+creation_date: 2019-05-22T11:33:07Z
+
+[Term]
+id: GO:1901045
+name: negative regulation of oviposition
+namespace: biological_process
+def: "Any process that stops, prevents or reduces the frequency, rate or extent of oviposition." [GOC:kmv, GOC:TermGenie]
+synonym: "down regulation of egg laying" BROAD [GOC:TermGenie]
+synonym: "down regulation of egg-laying" BROAD [GOC:TermGenie]
+synonym: "down regulation of oviposition" EXACT [GOC:TermGenie]
+synonym: "down-regulation of egg laying" BROAD [GOC:TermGenie]
+synonym: "down-regulation of egg-laying" BROAD [GOC:TermGenie]
+synonym: "down-regulation of oviposition" EXACT [GOC:TermGenie]
+synonym: "downregulation of egg laying" BROAD [GOC:TermGenie]
+synonym: "downregulation of egg-laying" BROAD [GOC:TermGenie]
+synonym: "downregulation of oviposition" EXACT [GOC:TermGenie]
+synonym: "inhibition of egg laying" BROAD [GOC:TermGenie]
+synonym: "inhibition of egg-laying" BROAD [GOC:TermGenie]
+synonym: "inhibition of oviposition" NARROW [GOC:TermGenie]
+synonym: "negative regulation of egg laying" BROAD [GOC:TermGenie]
+synonym: "negative regulation of egg-laying" BROAD [GOC:TermGenie]
+is_a: GO:0046662 ! regulation of oviposition
+is_a: GO:0048521 ! negative regulation of behavior
+is_a: GO:0051241 ! negative regulation of multicellular organismal process
+is_a: GO:2000242 ! negative regulation of reproductive process
+intersection_of: GO:0008150 ! biological_process
+intersection_of: negatively_regulates GO:0018991 ! oviposition
+relationship: negatively_regulates GO:0018991 ! oviposition
+created_by: kmv
+creation_date: 2012-06-27T06:19:58Z
+
+[Term]
+id: GO:1901046
+name: positive regulation of oviposition
+namespace: biological_process
+def: "Any process that activates or increases the frequency, rate or extent of oviposition." [GOC:kmv, GOC:TermGenie]
+synonym: "activation of egg laying" BROAD [GOC:TermGenie]
+synonym: "activation of egg-laying" BROAD [GOC:TermGenie]
+synonym: "activation of oviposition" NARROW [GOC:TermGenie]
+synonym: "positive regulation of egg laying" BROAD [GOC:TermGenie]
+synonym: "positive regulation of egg-laying" BROAD [GOC:TermGenie]
+synonym: "up regulation of egg laying" BROAD [GOC:TermGenie]
+synonym: "up regulation of egg-laying" BROAD [GOC:TermGenie]
+synonym: "up regulation of oviposition" EXACT [GOC:TermGenie]
+synonym: "up-regulation of egg laying" BROAD [GOC:TermGenie]
+synonym: "up-regulation of egg-laying" BROAD [GOC:TermGenie]
+synonym: "up-regulation of oviposition" EXACT [GOC:TermGenie]
+synonym: "upregulation of egg laying" BROAD [GOC:TermGenie]
+synonym: "upregulation of egg-laying" BROAD [GOC:TermGenie]
+synonym: "upregulation of oviposition" EXACT [GOC:TermGenie]
+is_a: GO:0046662 ! regulation of oviposition
+is_a: GO:0048520 ! positive regulation of behavior
+is_a: GO:0051240 ! positive regulation of multicellular organismal process
+is_a: GO:2000243 ! positive regulation of reproductive process
+intersection_of: GO:0008150 ! biological_process
+intersection_of: positively_regulates GO:0018991 ! oviposition
+relationship: positively_regulates GO:0018991 ! oviposition
+created_by: kmv
+creation_date: 2012-06-27T06:20:20Z
 
 [Term]
 id: GO:1901181
@@ -6953,6 +7135,47 @@ intersection_of: regulates GO:0007275 ! multicellular organism development
 relationship: regulates GO:0007275 ! multicellular organism development
 created_by: tb
 creation_date: 2010-08-05T11:25:59Z
+
+[Term]
+id: GO:2000191
+name: regulation of fatty acid transport
+namespace: biological_process
+def: "Any process that modulates the frequency, rate or extent of fatty acid transport." [GOC:BHF]
+is_a: GO:0032368 ! regulation of lipid transport
+is_a: GO:0032890 ! regulation of organic acid transport
+intersection_of: GO:0008150 ! biological_process
+intersection_of: regulates GO:0015908 ! fatty acid transport
+relationship: regulates GO:0015908 ! fatty acid transport
+created_by: rl
+creation_date: 2010-10-18T10:37:13Z
+
+[Term]
+id: GO:2000192
+name: negative regulation of fatty acid transport
+namespace: biological_process
+def: "Any process that stops, prevents, or reduces the frequency, rate or extent of fatty acid transport." [GOC:BHF]
+is_a: GO:0032369 ! negative regulation of lipid transport
+is_a: GO:0032891 ! negative regulation of organic acid transport
+is_a: GO:2000191 ! regulation of fatty acid transport
+intersection_of: GO:0008150 ! biological_process
+intersection_of: negatively_regulates GO:0015908 ! fatty acid transport
+relationship: negatively_regulates GO:0015908 ! fatty acid transport
+created_by: rl
+creation_date: 2010-10-18T10:37:15Z
+
+[Term]
+id: GO:2000193
+name: positive regulation of fatty acid transport
+namespace: biological_process
+def: "Any process that activates or increases the frequency, rate or extent of fatty acid transport." [GOC:BHF]
+is_a: GO:0032370 ! positive regulation of lipid transport
+is_a: GO:0032892 ! positive regulation of organic acid transport
+is_a: GO:2000191 ! regulation of fatty acid transport
+intersection_of: GO:0008150 ! biological_process
+intersection_of: positively_regulates GO:0015908 ! fatty acid transport
+relationship: positively_regulates GO:0015908 ! fatty acid transport
+created_by: rl
+creation_date: 2010-10-18T10:37:17Z
 
 [Term]
 id: GO:2000241
