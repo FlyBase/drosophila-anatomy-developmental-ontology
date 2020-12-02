@@ -1,22 +1,23 @@
 format-version: 1.2
-data-version: fbbt/releases/2020-10-15/imports/go_import.owl
-subsetdef: gocheck_do_not_annotate "Term not to be used for direct annotation"
-subsetdef: gocheck_do_not_manually_annotate "Term not to be used for direct manual annotation"
-subsetdef: goslim_agr "AGR slim"
-subsetdef: goslim_aspergillus "Aspergillus GO slim"
-subsetdef: goslim_candida "Candida GO slim"
-subsetdef: goslim_chembl "ChEMBL protein targets summary"
-subsetdef: goslim_drosophila "Drosophila GO slim"
-subsetdef: goslim_flybase_ribbon "FlyBase Drosophila GO ribbon slim"
-subsetdef: goslim_generic "Generic GO slim"
-subsetdef: goslim_metagenomics "Metagenomics GO slim"
-subsetdef: goslim_mouse "Mouse GO slim"
-subsetdef: goslim_pir "PIR GO slim"
-subsetdef: goslim_plant "Plant GO slim"
-subsetdef: goslim_pombe "Fission yeast GO slim"
-subsetdef: goslim_synapse "synapse GO slim"
-subsetdef: goslim_yeast "Yeast GO slim"
+data-version: fbbt/releases/2020-12-02/imports/go_import.owl
+subsetdef: gocheck_do_not_annotate ""
+subsetdef: gocheck_do_not_manually_annotate ""
+subsetdef: goslim_agr ""
+subsetdef: goslim_aspergillus ""
+subsetdef: goslim_candida ""
+subsetdef: goslim_chembl ""
+subsetdef: goslim_drosophila ""
+subsetdef: goslim_flybase_ribbon ""
+subsetdef: goslim_generic ""
+subsetdef: goslim_metagenomics ""
+subsetdef: goslim_mouse ""
+subsetdef: goslim_pir ""
+subsetdef: goslim_plant ""
+subsetdef: goslim_pombe ""
+subsetdef: goslim_synapse ""
+subsetdef: goslim_yeast ""
 ontology: fbbt/imports/go_import
+property_value: owl:versionInfo "2020-12-02" xsd:string
 
 [Term]
 id: GO:0000003
@@ -197,6 +198,7 @@ synonym: "downregulation of peptide secretion" EXACT []
 synonym: "inhibition of peptide secretion" NARROW []
 is_a: GO:0002791 ! regulation of peptide secretion
 is_a: GO:0051048 ! negative regulation of secretion
+is_a: GO:1903792 ! negative regulation of anion transport
 intersection_of: GO:0008150 ! biological_process
 intersection_of: negatively_regulates GO:0002790 ! peptide secretion
 relationship: negatively_regulates GO:0002790 ! peptide secretion
@@ -213,6 +215,7 @@ synonym: "up-regulation of peptide secretion" EXACT []
 synonym: "upregulation of peptide secretion" EXACT []
 is_a: GO:0002791 ! regulation of peptide secretion
 is_a: GO:0051047 ! positive regulation of secretion
+is_a: GO:1903793 ! positive regulation of anion transport
 intersection_of: GO:0008150 ! biological_process
 intersection_of: positively_regulates GO:0002790 ! peptide secretion
 relationship: positively_regulates GO:0002790 ! peptide secretion
@@ -264,68 +267,6 @@ def: "The series of events in which a carbon dioxide stimulus is received by a c
 is_a: GO:0009593 ! detection of chemical stimulus
 
 [Term]
-id: GO:0003674
-name: molecular_function
-namespace: molecular_function
-alt_id: GO:0005554
-def: "A molecular process that can be carried out by the action of a single macromolecular machine, usually via direct physical interactions with other molecular entities. Function in this sense denotes an action, or activity, that a gene product (or a complex) performs. These actions are described from two distinct but related perspectives: (1) biochemical activity, and (2) role as a component in a larger system/process." [GOC:pdt]
-comment: Note that, in addition to forming the root of the molecular function ontology, this term is recommended for use for the annotation of gene products whose molecular function is unknown. When this term is used for annotation, it indicates that no information was available about the molecular function of the gene product annotated as of the date the annotation was made; the evidence code 'no data' (ND), is used to indicate this. Despite its name, this is not a type of 'function' in the sense typically defined by upper ontologies such as Basic Formal Ontology (BFO). It is instead a BFO:process carried out by a single gene product or complex.
-subset: goslim_aspergillus
-subset: goslim_candida
-subset: goslim_chembl
-subset: goslim_generic
-subset: goslim_metagenomics
-subset: goslim_pir
-subset: goslim_plant
-subset: goslim_yeast
-synonym: "molecular function" EXACT []
-
-[Term]
-id: GO:0003824
-name: catalytic activity
-namespace: molecular_function
-def: "Catalysis of a biochemical reaction at physiological temperatures. In biologically catalyzed reactions, the reactants are known as substrates, and the catalysts are naturally occurring macromolecular substances known as enzymes. Enzymes possess specific binding sites for substrates, and are usually composed wholly or largely of protein, but RNA that has catalytic activity (ribozyme) is often also regarded as enzymatic." [GOC:vw, ISBN:0198506732]
-subset: goslim_agr
-subset: goslim_chembl
-subset: goslim_flybase_ribbon
-subset: goslim_metagenomics
-subset: goslim_pir
-subset: goslim_plant
-synonym: "enzyme activity" EXACT [GOC:dph, GOC:tb]
-xref: Wikipedia:Enzyme
-is_a: GO:0003674 ! molecular_function
-
-[Term]
-id: GO:0005102
-name: signaling receptor binding
-namespace: molecular_function
-def: "Interacting selectively and non-covalently with one or more specific sites on a receptor molecule, a macromolecule that undergoes combination with a hormone, neurotransmitter, drug or intracellular messenger to initiate a change in cell function." [GOC:bf, GOC:ceb, ISBN:0198506732]
-comment: Where appropriate, also consider annotating to 'receptor agonist activity ; GO:0048018'.
-subset: goslim_agr
-subset: goslim_chembl
-subset: goslim_flybase_ribbon
-subset: goslim_mouse
-subset: goslim_plant
-synonym: "receptor binding" BROAD []
-synonym: "receptor ligand" NARROW []
-synonym: "receptor-associated protein activity" RELATED []
-xref: Wikipedia:Ligand_(biochemistry)
-is_a: GO:0005515 ! protein binding
-
-[Term]
-id: GO:0005488
-name: binding
-namespace: molecular_function
-def: "The selective, non-covalent, often stoichiometric, interaction of a molecule with one or more specific sites on another molecule." [GOC:ceb, GOC:mah, ISBN:0198506732]
-comment: Note that this term is in the subset of terms that should not be used for direct, manual gene product annotation. Please choose a more specific child term, or request a new one if no suitable term is available. For ligands that bind to signal transducing receptors, consider the molecular function term 'receptor binding ; GO:0005102' and its children.
-subset: gocheck_do_not_annotate
-subset: goslim_pir
-subset: goslim_plant
-synonym: "ligand" NARROW []
-xref: Wikipedia:Binding_(molecular)
-is_a: GO:0003674 ! molecular_function
-
-[Term]
 id: GO:0005513
 name: detection of calcium ion
 namespace: biological_process
@@ -336,23 +277,6 @@ synonym: "calcium ion sensing" EXACT []
 synonym: "detection of Ca2+ ion" EXACT []
 is_a: GO:0009593 ! detection of chemical stimulus
 is_a: GO:0051592 ! response to calcium ion
-
-[Term]
-id: GO:0005515
-name: protein binding
-namespace: molecular_function
-alt_id: GO:0001948
-alt_id: GO:0045308
-def: "Interacting selectively and non-covalently with any protein or protein complex (a complex of two or more proteins that may include other nonprotein molecules)." [GOC:go_curators]
-subset: goslim_aspergillus
-subset: goslim_candida
-subset: goslim_chembl
-subset: goslim_metagenomics
-subset: goslim_pir
-subset: goslim_plant
-synonym: "glycoprotein binding" NARROW []
-synonym: "protein amino acid binding" EXACT []
-is_a: GO:0005488 ! binding
 
 [Term]
 id: GO:0005575
@@ -373,59 +297,6 @@ synonym: "cell or subcellular entity" EXACT []
 synonym: "cellular component" EXACT []
 synonym: "subcellular entity" RELATED [NIF_Subcellular:nlx_subcell_100315]
 xref: NIF_Subcellular:sao1337158144
-
-[Term]
-id: GO:0005622
-name: intracellular anatomical structure
-namespace: cellular_component
-def: "A component of a cell contained within (but not including) the plasma membrane. In eukaryotes it includes the nucleus and cytoplasm." [ISBN:0198506732]
-subset: gocheck_do_not_annotate
-subset: goslim_chembl
-subset: goslim_generic
-subset: goslim_metagenomics
-subset: goslim_plant
-synonym: "internal to cell" EXACT []
-synonym: "intracellular" EXACT []
-synonym: "nucleocytoplasm" RELATED [GOC:mah]
-synonym: "protoplasm" EXACT []
-synonym: "protoplast" RELATED [GOC:mah]
-xref: Wikipedia:Intracellular
-is_a: GO:0110165 ! cellular anatomical entity
-property_value: term_tracker_item https://github.com/geneontology/go-ontology/issues/17776 xsd:anyURI
-
-[Term]
-id: GO:0005623
-name: obsolete cell
-namespace: cellular_component
-def: "OBSOLETE. The basic structural and functional unit of all organisms. Includes the plasma membrane and any external encapsulating structures such as the cell wall and cell envelope." [GOC:go_curators]
-comment: This term was obsoleted because it was redundant with the root class of the cell ontology, CL:0000000.
-xref: NIF_Subcellular:sao1813327414
-xref: Wikipedia:Cell_(biology)
-property_value: IAO:0000589 "cell and encapsulating structures" xsd:string
-is_obsolete: true
-
-[Term]
-id: GO:0005634
-name: nucleus
-namespace: cellular_component
-def: "A membrane-bounded organelle of eukaryotic cells in which chromosomes are housed and replicated. In most cells, the nucleus contains all of the cell's chromosomes except the organellar chromosomes, and is the site of RNA synthesis and processing. In some species, or in specialized cell types, RNA metabolism or DNA replication may be absent." [GOC:go_curators]
-subset: goslim_agr
-subset: goslim_aspergillus
-subset: goslim_candida
-subset: goslim_chembl
-subset: goslim_drosophila
-subset: goslim_flybase_ribbon
-subset: goslim_generic
-subset: goslim_metagenomics
-subset: goslim_mouse
-subset: goslim_pir
-subset: goslim_plant
-subset: goslim_yeast
-synonym: "cell nucleus" EXACT []
-synonym: "horsetail nucleus" NARROW [GOC:al, GOC:mah, GOC:vw, PMID:15030757]
-xref: NIF_Subcellular:sao1702920020
-xref: Wikipedia:Cell_nucleus
-is_a: GO:0043231 ! intracellular membrane-bounded organelle
 
 [Term]
 id: GO:0005886
@@ -477,24 +348,6 @@ synonym: "lipid metabolism" EXACT []
 xref: Wikipedia:Lipid_metabolism
 is_a: GO:0044238 ! primary metabolic process
 is_a: GO:0071704 ! organic substance metabolic process
-
-[Term]
-id: GO:0006793
-name: phosphorus metabolic process
-namespace: biological_process
-def: "The chemical reactions and pathways involving the nonmetallic element phosphorus or compounds that contain phosphorus, usually in the form of a phosphate group (PO4)." [GOC:ai]
-subset: goslim_pir
-synonym: "phosphorus metabolism" EXACT []
-is_a: GO:0044237 ! cellular metabolic process
-
-[Term]
-id: GO:0006796
-name: phosphate-containing compound metabolic process
-namespace: biological_process
-def: "The chemical reactions and pathways involving the phosphate group, the anion or salt of any phosphoric acid." [GOC:ai]
-synonym: "phosphate metabolic process" RELATED []
-synonym: "phosphate metabolism" EXACT []
-is_a: GO:0006793 ! phosphorus metabolic process
 
 [Term]
 id: GO:0006810
@@ -571,7 +424,7 @@ id: GO:0006837
 name: serotonin transport
 namespace: biological_process
 def: "The directed movement of serotonin into, out of or within a cell, or between cells, by means of some agent such as a transporter or pore. Serotonin (5-hydroxytryptamine) is a monoamine neurotransmitter occurring in the peripheral and central nervous systems." [GOC:ai]
-is_a: GO:0015695 ! organic cation transport
+is_a: GO:0006812 ! cation transport
 is_a: GO:0015844 ! monoamine transport
 is_a: GO:0015850 ! organic hydroxy compound transport
 
@@ -583,8 +436,19 @@ alt_id: GO:0006866
 def: "The directed movement of amino acids, organic acids containing one or more amino substituents, into, out of or within a cell, or between cells, by means of some agent such as a transporter or pore." [GOC:ai]
 subset: goslim_pir
 subset: goslim_yeast
-is_a: GO:0046942 ! carboxylic acid transport
+is_a: GO:0015849 ! organic acid transport
 is_a: GO:0071705 ! nitrogen compound transport
+
+[Term]
+id: GO:0006869
+name: lipid transport
+namespace: biological_process
+def: "The directed movement of lipids into, out of or within a cell, or between cells, by means of some agent such as a transporter or pore. Lipids are compounds soluble in an organic solvent but not, or sparingly, in an aqueous solvent." [ISBN:0198506732]
+subset: goslim_drosophila
+subset: goslim_pir
+subset: goslim_yeast
+is_a: GO:0071702 ! organic substance transport
+relationship: part_of GO:0010876 ! lipid localization
 
 [Term]
 id: GO:0006950
@@ -1005,6 +869,15 @@ synonym: "locomotory behavioural response to stimulus" EXACT []
 is_a: GO:0007610 ! behavior
 
 [Term]
+id: GO:0007628
+name: adult walking behavior
+namespace: biological_process
+def: "The behavior of an adult relating to the progression of that organism along the ground by the process of lifting and setting down each leg." [GOC:jid, GOC:pr, ISBN:0198606907]
+synonym: "adult walking behaviour" EXACT []
+is_a: GO:0008344 ! adult locomotory behavior
+is_a: GO:0090659 ! walking behavior
+
+[Term]
 id: GO:0007630
 name: jump response
 namespace: biological_process
@@ -1041,7 +914,7 @@ synonym: "injection of substance into other organism during feeding on blood of 
 synonym: "taking of blood meal" NARROW []
 xref: Wikipedia:List_of_feeding_behaviours
 is_a: GO:0007610 ! behavior
-property_value: term_tracker_item https://github.com/geneontology/go-ontology/issues/18547 xsd:anyURI
+property_value: IAO:0000233 https://github.com/geneontology/go-ontology/issues/18547 xsd:anyURI
 created_by: jl
 creation_date: 2011-10-27T03:53:33Z
 
@@ -1253,14 +1126,6 @@ synonym: "response to radiation stimulus" EXACT []
 is_a: GO:0009628 ! response to abiotic stimulus
 
 [Term]
-id: GO:0009410
-name: response to xenobiotic stimulus
-namespace: biological_process
-alt_id: GO:0017104
-def: "Any process that results in a change in state or activity of a cell or an organism (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of a xenobiotic compound stimulus. Xenobiotic compounds are compounds foreign to living organisms." [GOC:jl]
-is_a: GO:0042221 ! response to chemical
-
-[Term]
 id: GO:0009416
 name: response to light stimulus
 namespace: biological_process
@@ -1351,7 +1216,7 @@ subset: goslim_metagenomics
 subset: goslim_plant
 synonym: "response to abiotic stress" NARROW []
 is_a: GO:0050896 ! response to stimulus
-property_value: term_tracker_item https://github.com/geneontology/go-ontology/issues/16572 xsd:anyURI
+property_value: IAO:0000233 https://github.com/geneontology/go-ontology/issues/16572 xsd:anyURI
 
 [Term]
 id: GO:0009629
@@ -1608,40 +1473,6 @@ is_a: GO:0010033 ! response to organic substance
 is_a: GO:1901698 ! response to nitrogen compound
 
 [Term]
-id: GO:0010469
-name: regulation of signaling receptor activity
-namespace: biological_process
-def: "Any process that modulates the frequency, rate or extent of a signaling receptor activity. Receptor activity is when a molecule combines with an extracellular or intracellular messenger to initiate a change in cell activity." [GOC:dph, GOC:tb]
-synonym: "regulation of receptor activity" BROAD []
-is_a: GO:0009966 ! regulation of signal transduction
-is_a: GO:0065009 ! regulation of molecular function
-intersection_of: GO:0008150 ! biological_process
-intersection_of: regulates GO:0038023 ! signaling receptor activity
-relationship: regulates GO:0038023 ! signaling receptor activity
-
-[Term]
-id: GO:0010562
-name: positive regulation of phosphorus metabolic process
-namespace: biological_process
-def: "Any process that increases the frequency, rate or extent of the chemical reactions and pathways involving phosphorus or compounds containing phosphorus." [GOC:dph, GOC:tb]
-is_a: GO:0031325 ! positive regulation of cellular metabolic process
-is_a: GO:0051174 ! regulation of phosphorus metabolic process
-intersection_of: GO:0008150 ! biological_process
-intersection_of: positively_regulates GO:0006793 ! phosphorus metabolic process
-relationship: positively_regulates GO:0006793 ! phosphorus metabolic process
-
-[Term]
-id: GO:0010563
-name: negative regulation of phosphorus metabolic process
-namespace: biological_process
-def: "Any process that decreases the frequency, rate or extent of the chemical reactions and pathways involving phosphorus or compounds containing phosphorus." [GOC:dph, GOC:tb]
-is_a: GO:0031324 ! negative regulation of cellular metabolic process
-is_a: GO:0051174 ! regulation of phosphorus metabolic process
-intersection_of: GO:0008150 ! biological_process
-intersection_of: negatively_regulates GO:0006793 ! phosphorus metabolic process
-relationship: negatively_regulates GO:0006793 ! phosphorus metabolic process
-
-[Term]
 id: GO:0010646
 name: regulation of cell communication
 namespace: biological_process
@@ -1687,6 +1518,16 @@ namespace: biological_process
 def: "Any process in which a lipid is transported to, or maintained in, a specific location." [GOC:BHF, GOC:dph, GOC:tb]
 synonym: "lipid localisation" EXACT [GOC:mah]
 is_a: GO:0033036 ! macromolecule localization
+
+[Term]
+id: GO:0010877
+name: lipid transport involved in lipid storage
+namespace: biological_process
+def: "The directed movement of lipids into cells that is part of their accumulation and maintenance." [GOC:BHF, GOC:dph, GOC:tb]
+is_a: GO:0006869 ! lipid transport
+intersection_of: GO:0006869 ! lipid transport
+intersection_of: part_of GO:0019915 ! lipid storage
+relationship: part_of GO:0019915 ! lipid storage
 
 [Term]
 id: GO:0010883
@@ -1738,8 +1579,11 @@ name: glutamate secretion
 namespace: biological_process
 def: "The controlled release of glutamate by a cell. The glutamate is the most abundant excitatory neurotransmitter in the nervous system." [GOC:ef]
 is_a: GO:0006835 ! dicarboxylic acid transport
+is_a: GO:0015718 ! monocarboxylic acid transport
 is_a: GO:0015800 ! acidic amino acid transport
+is_a: GO:0015908 ! fatty acid transport
 is_a: GO:0032940 ! secretion by cell
+is_a: GO:0140353 ! lipid export from cell
 
 [Term]
 id: GO:0014048
@@ -1748,6 +1592,7 @@ namespace: biological_process
 def: "Any process that modulates the frequency, rate or extent of the controlled release of glutamate." [GOC:ef]
 is_a: GO:0051955 ! regulation of amino acid transport
 is_a: GO:1903530 ! regulation of secretion by cell
+is_a: GO:2000191 ! regulation of fatty acid transport
 intersection_of: GO:0008150 ! biological_process
 intersection_of: regulates GO:0014047 ! glutamate secretion
 relationship: regulates GO:0014047 ! glutamate secretion
@@ -1765,6 +1610,7 @@ synonym: "upregulation of glutamate secretion" EXACT []
 is_a: GO:0014048 ! regulation of glutamate secretion
 is_a: GO:0051957 ! positive regulation of amino acid transport
 is_a: GO:1903532 ! positive regulation of secretion by cell
+is_a: GO:2000193 ! positive regulation of fatty acid transport
 intersection_of: GO:0008150 ! biological_process
 intersection_of: positively_regulates GO:0014047 ! glutamate secretion
 relationship: positively_regulates GO:0014047 ! glutamate secretion
@@ -1781,6 +1627,7 @@ synonym: "inhibition of glutamate secretion" NARROW []
 is_a: GO:0014048 ! regulation of glutamate secretion
 is_a: GO:0051956 ! negative regulation of amino acid transport
 is_a: GO:1903531 ! negative regulation of secretion by cell
+is_a: GO:2000192 ! negative regulation of fatty acid transport
 intersection_of: GO:0008150 ! biological_process
 intersection_of: negatively_regulates GO:0014047 ! glutamate secretion
 relationship: negatively_regulates GO:0014047 ! glutamate secretion
@@ -1858,7 +1705,6 @@ name: regulation of acetylcholine secretion, neurotransmission
 namespace: biological_process
 def: "Any process that modulates the frequency, rate or extent of the regulated release of acetylcholine." [GOC:ef]
 is_a: GO:0032222 ! regulation of synaptic transmission, cholinergic
-is_a: GO:0043269 ! regulation of ion transport
 is_a: GO:0046928 ! regulation of neurotransmitter secretion
 is_a: GO:0051952 ! regulation of amine transport
 intersection_of: GO:0008150 ! biological_process
@@ -1878,7 +1724,6 @@ synonym: "upregulation of acetylcholine secretion" EXACT []
 is_a: GO:0001956 ! positive regulation of neurotransmitter secretion
 is_a: GO:0014056 ! regulation of acetylcholine secretion, neurotransmission
 is_a: GO:0032224 ! positive regulation of synaptic transmission, cholinergic
-is_a: GO:0043270 ! positive regulation of ion transport
 is_a: GO:0051954 ! positive regulation of amine transport
 intersection_of: GO:0008150 ! biological_process
 intersection_of: positively_regulates GO:0014055 ! acetylcholine secretion, neurotransmission
@@ -1895,7 +1740,6 @@ synonym: "downregulation of acetylcholine secretion" EXACT []
 synonym: "inhibition of acetylcholine secretion" NARROW []
 is_a: GO:0014056 ! regulation of acetylcholine secretion, neurotransmission
 is_a: GO:0032223 ! negative regulation of synaptic transmission, cholinergic
-is_a: GO:0043271 ! negative regulation of ion transport
 is_a: GO:0046929 ! negative regulation of neurotransmitter secretion
 is_a: GO:0051953 ! negative regulation of amine transport
 intersection_of: GO:0008150 ! biological_process
@@ -1907,7 +1751,6 @@ id: GO:0014059
 name: regulation of dopamine secretion
 namespace: biological_process
 def: "Any process that modulates the frequency, rate or extent of the regulated release of dopamine." [GOC:ef]
-is_a: GO:0043269 ! regulation of ion transport
 is_a: GO:0050433 ! regulation of catecholamine secretion
 intersection_of: GO:0008150 ! biological_process
 intersection_of: regulates GO:0014046 ! dopamine secretion
@@ -1919,7 +1762,7 @@ name: regulation of serotonin secretion
 namespace: biological_process
 def: "Any process that modulates the frequency, rate or extent of the regulated release of serotonin." [GOC:ef]
 synonym: "regulation of serotonin release" RELATED [GOC:tb]
-is_a: GO:0043269 ! regulation of ion transport
+is_a: GO:0044070 ! regulation of anion transport
 is_a: GO:1903530 ! regulation of secretion by cell
 intersection_of: GO:0008150 ! biological_process
 intersection_of: regulates GO:0001820 ! serotonin secretion
@@ -1936,8 +1779,8 @@ synonym: "downregulation of serotonin secretion" EXACT []
 synonym: "inhibition of serotonin secretion" NARROW []
 synonym: "positive regulation of serotonin release" RELATED [GOC:tb]
 is_a: GO:0014062 ! regulation of serotonin secretion
-is_a: GO:0043271 ! negative regulation of ion transport
 is_a: GO:1903531 ! negative regulation of secretion by cell
+is_a: GO:1903792 ! negative regulation of anion transport
 intersection_of: GO:0008150 ! biological_process
 intersection_of: negatively_regulates GO:0001820 ! serotonin secretion
 relationship: negatively_regulates GO:0001820 ! serotonin secretion
@@ -1954,8 +1797,8 @@ synonym: "up regulation of serotonin secretion" EXACT []
 synonym: "up-regulation of serotonin secretion" EXACT []
 synonym: "upregulation of serotonin secretion" EXACT []
 is_a: GO:0014062 ! regulation of serotonin secretion
-is_a: GO:0043270 ! positive regulation of ion transport
 is_a: GO:1903532 ! positive regulation of secretion by cell
+is_a: GO:1903793 ! positive regulation of anion transport
 intersection_of: GO:0008150 ! biological_process
 intersection_of: positively_regulates GO:0001820 ! serotonin secretion
 relationship: positively_regulates GO:0001820 ! serotonin secretion
@@ -1978,13 +1821,6 @@ is_a: GO:0010243 ! response to organonitrogen compound
 is_a: GO:0014070 ! response to organic cyclic compound
 
 [Term]
-id: GO:0015672
-name: monovalent inorganic cation transport
-namespace: biological_process
-def: "The directed movement of inorganic cations with a valency of one into, out of or within a cell, or between cells, by means of some agent such as a transporter or pore. Inorganic cations are atoms or small molecules with a positive charge which do not contain carbon in covalent linkage." [GOC:ai]
-is_a: GO:0006812 ! cation transport
-
-[Term]
 id: GO:0015695
 name: organic cation transport
 namespace: biological_process
@@ -1993,20 +1829,10 @@ is_a: GO:0006812 ! cation transport
 is_a: GO:0071702 ! organic substance transport
 
 [Term]
-id: GO:0015696
-name: ammonium transport
-namespace: biological_process
-def: "The directed movement of ammonium into, out of or within a cell, or between cells, by means of some agent such as a transporter or pore. Ammonium is the cation NH4+ which is formed from N2 by root-nodule bacteria in leguminous plants and is an excretory product in ammonotelic animals." [ISBN:0198506732]
-synonym: "ammonia transport" RELATED []
-is_a: GO:0015672 ! monovalent inorganic cation transport
-is_a: GO:0071705 ! nitrogen compound transport
-
-[Term]
 id: GO:0015711
 name: organic anion transport
 namespace: biological_process
 def: "The directed movement of organic anions into, out of or within a cell, or between cells, by means of some agent such as a transporter or pore. Organic anions are atoms or small molecules with a negative charge which contain carbon in covalent linkage." [GOC:ai, GOC:krc]
-is_a: GO:0006820 ! anion transport
 is_a: GO:0071702 ! organic substance transport
 
 [Term]
@@ -2033,7 +1859,7 @@ synonym: "4-aminobutanoate transport" EXACT []
 synonym: "4-aminobutyrate transport" EXACT []
 synonym: "GABA transport" EXACT []
 is_a: GO:0006865 ! amino acid transport
-is_a: GO:0015718 ! monocarboxylic acid transport
+is_a: GO:0046942 ! carboxylic acid transport
 
 [Term]
 id: GO:0015833
@@ -2097,13 +1923,12 @@ is_a: GO:0006812 ! cation transport
 is_a: GO:0051937 ! catecholamine transport
 
 [Term]
-id: GO:0015893
-name: drug transport
+id: GO:0015908
+name: fatty acid transport
 namespace: biological_process
-def: "The directed movement of a drug, a substance used in the diagnosis, treatment or prevention of a disease, into, out of or within a cell, or between cells, by means of some agent such as a transporter or pore." [GOC:ai]
-subset: goslim_pir
-is_a: GO:0006810 ! transport
-relationship: part_of GO:0042493 ! response to drug
+def: "The directed movement of fatty acids into, out of or within a cell, or between cells, by means of some agent such as a transporter or pore. Fatty acids are aliphatic monocarboxylic acids liberated from naturally occurring fats and oils by hydrolysis." [GOC:ai]
+is_a: GO:0006869 ! lipid transport
+is_a: GO:0015849 ! organic acid transport
 
 [Term]
 id: GO:0016020
@@ -2171,34 +1996,6 @@ is_a: GO:0071482 ! cellular response to light stimulus
 relationship: part_of GO:0007603 ! phototransduction, visible light
 
 [Term]
-id: GO:0016301
-name: kinase activity
-namespace: molecular_function
-def: "Catalysis of the transfer of a phosphate group, usually from ATP, to a substrate molecule." [ISBN:0198506732]
-comment: Note that this term encompasses all activities that transfer a single phosphate group; although ATP is by far the most common phosphate donor, reactions using other phosphate donors are included in this term.
-subset: goslim_chembl
-subset: goslim_drosophila
-subset: goslim_generic
-subset: goslim_metagenomics
-subset: goslim_plant
-subset: goslim_yeast
-synonym: "phosphokinase activity" EXACT []
-xref: Reactome:R-HSA-6788855 "FN3KRP phosphorylates PsiAm, RibAm"
-xref: Reactome:R-HSA-6788867 "FN3K phosphorylates ketosamines"
-is_a: GO:0016772 ! transferase activity, transferring phosphorus-containing groups
-relationship: part_of GO:0016310 ! phosphorylation
-
-[Term]
-id: GO:0016310
-name: phosphorylation
-namespace: biological_process
-def: "The process of introducing a phosphate group into a molecule, usually with the formation of a phosphoric ester, a phosphoric anhydride or a phosphoric amide." [ISBN:0198506732]
-subset: goslim_chembl
-subset: goslim_metagenomics
-xref: Wikipedia:Phosphorylation
-is_a: GO:0006796 ! phosphate-containing compound metabolic process
-
-[Term]
 id: GO:0016545
 name: male courtship behavior, veined wing vibration
 namespace: biological_process
@@ -2209,34 +2006,16 @@ synonym: "male courtship behaviour, wing vibration" RELATED []
 is_a: GO:0048065 ! male courtship behavior, veined wing extension
 
 [Term]
-id: GO:0016740
-name: transferase activity
-namespace: molecular_function
-def: "Catalysis of the transfer of a group, e.g. a methyl group, glycosyl group, acyl group, phosphorus-containing, or other groups, from one compound (generally regarded as the donor) to another compound (generally regarded as the acceptor). Transferase is the systematic name for any enzyme of EC class 2." [ISBN:0198506732]
-subset: goslim_aspergillus
-subset: goslim_candida
-subset: goslim_chembl
-subset: goslim_metagenomics
-subset: goslim_mouse
-subset: goslim_pir
-subset: goslim_plant
-subset: goslim_yeast
-xref: EC:2
-xref: Reactome:R-HSA-1483089 "PE is converted to PS by PTDSS2"
-xref: Reactome:R-HSA-1483186 "PC is converted to PS by PTDSS1"
-xref: Reactome:R-HSA-5668414 "TRAF2 ubiquitinates cIAP1,2 in cIAP1,2:TRAF1:TRAF2:TRAF3:NIK"
-xref: Reactome:R-HSA-8868783 "TSR3 transfers aminocarboxypropyl group from S-adenosylmethionine to N(1)-methylpseudouridine-1248 of 18SE rRNA yielding N(1)-methyl-N(3)-aminocarboxypropylpseudouridine-1248"
-is_a: GO:0003824 ! catalytic activity
-
-[Term]
-id: GO:0016772
-name: transferase activity, transferring phosphorus-containing groups
-namespace: molecular_function
-def: "Catalysis of the transfer of a phosphorus-containing group from one compound (donor) to another (acceptor)." [GOC:jl, ISBN:0198506732]
-comment: Note that this term encompasses all kinase activities, as well as activities that transfer other phosphorus-containing groups such as diphosphate or nucleotides.
-subset: goslim_chembl
-xref: EC:2.7
-is_a: GO:0016740 ! transferase activity
+id: GO:0018991
+name: oviposition
+namespace: biological_process
+alt_id: GO:0060403
+def: "The deposition of eggs (either fertilized or not) upon a surface or into a medium such as water." [GOC:ems]
+synonym: "egg laying" BROAD []
+synonym: "egg-laying" BROAD []
+synonym: "post-mating oviposition" NARROW []
+xref: Wikipedia:Oviposition
+is_a: GO:0019098 ! reproductive behavior
 
 [Term]
 id: GO:0019098
@@ -2267,17 +2046,6 @@ is_a: GO:0080090 ! regulation of primary metabolic process
 intersection_of: GO:0008150 ! biological_process
 intersection_of: regulates GO:0006629 ! lipid metabolic process
 relationship: regulates GO:0006629 ! lipid metabolic process
-
-[Term]
-id: GO:0019220
-name: regulation of phosphate metabolic process
-namespace: biological_process
-def: "Any process that modulates the frequency, rate or extent of the chemical reactions and pathways involving phosphates." [GOC:go_curators]
-synonym: "regulation of phosphate metabolism" EXACT []
-is_a: GO:0051174 ! regulation of phosphorus metabolic process
-intersection_of: GO:0008150 ! biological_process
-intersection_of: regulates GO:0006796 ! phosphate-containing compound metabolic process
-relationship: regulates GO:0006796 ! phosphate-containing compound metabolic process
 
 [Term]
 id: GO:0019222
@@ -2534,74 +2302,12 @@ is_a: GO:0007610 ! behavior
 is_a: GO:0032501 ! multicellular organismal process
 
 [Term]
-id: GO:0030545
-name: receptor regulator activity
-namespace: molecular_function
-def: "The function of interacting (directly or indirectly) with receptors such that the proportion of receptors in the active form is changed." [GOC:ceb]
-is_a: GO:0098772 ! molecular function regulator
-
-[Term]
-id: GO:0030546
-name: signaling receptor activator activity
-namespace: molecular_function
-def: "The function of interacting (directly or indirectly) with receptors such that the proportion of receptors in the active form is increased." [GOC:ceb]
-synonym: "receptor activator activity" BROAD []
-is_a: GO:0030545 ! receptor regulator activity
-
-[Term]
 id: GO:0031000
 name: response to caffeine
 namespace: biological_process
 def: "Any process that results in a change in state or activity of a cell or an organism (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of a caffeine stimulus. Caffeine is an alkaloid found in numerous plant species, where it acts as a natural pesticide that paralyzes and kills certain insects feeding upon them." [GOC:ef, GOC:mah]
 is_a: GO:0014074 ! response to purine-containing compound
 is_a: GO:0043279 ! response to alkaloid
-
-[Term]
-id: GO:0031323
-name: regulation of cellular metabolic process
-namespace: biological_process
-def: "Any process that modulates the frequency, rate or extent of the chemical reactions and pathways by which individual cells transform chemical substances." [GOC:mah]
-synonym: "regulation of cellular metabolism" EXACT []
-is_a: GO:0019222 ! regulation of metabolic process
-is_a: GO:0050794 ! regulation of cellular process
-intersection_of: GO:0008150 ! biological_process
-intersection_of: regulates GO:0044237 ! cellular metabolic process
-relationship: regulates GO:0044237 ! cellular metabolic process
-
-[Term]
-id: GO:0031324
-name: negative regulation of cellular metabolic process
-namespace: biological_process
-def: "Any process that stops, prevents, or reduces the frequency, rate or extent of the chemical reactions and pathways by which individual cells transform chemical substances." [GOC:mah]
-synonym: "down regulation of cellular metabolic process" EXACT []
-synonym: "down-regulation of cellular metabolic process" EXACT []
-synonym: "downregulation of cellular metabolic process" EXACT []
-synonym: "inhibition of cellular metabolic process" NARROW []
-synonym: "negative regulation of cellular metabolism" EXACT []
-is_a: GO:0009892 ! negative regulation of metabolic process
-is_a: GO:0031323 ! regulation of cellular metabolic process
-is_a: GO:0048523 ! negative regulation of cellular process
-intersection_of: GO:0008150 ! biological_process
-intersection_of: negatively_regulates GO:0044237 ! cellular metabolic process
-relationship: negatively_regulates GO:0044237 ! cellular metabolic process
-
-[Term]
-id: GO:0031325
-name: positive regulation of cellular metabolic process
-namespace: biological_process
-def: "Any process that activates or increases the frequency, rate or extent of the chemical reactions and pathways by which individual cells transform chemical substances." [GOC:mah]
-synonym: "activation of cellular metabolic process" NARROW []
-synonym: "positive regulation of cellular metabolism" EXACT []
-synonym: "stimulation of cellular metabolic process" NARROW []
-synonym: "up regulation of cellular metabolic process" EXACT []
-synonym: "up-regulation of cellular metabolic process" EXACT []
-synonym: "upregulation of cellular metabolic process" EXACT []
-is_a: GO:0009893 ! positive regulation of metabolic process
-is_a: GO:0031323 ! regulation of cellular metabolic process
-is_a: GO:0048522 ! positive regulation of cellular process
-intersection_of: GO:0008150 ! biological_process
-intersection_of: positively_regulates GO:0044237 ! cellular metabolic process
-relationship: positively_regulates GO:0044237 ! cellular metabolic process
 
 [Term]
 id: GO:0031644
@@ -2670,37 +2376,6 @@ is_a: GO:0040011 ! locomotion
 intersection_of: GO:0040011 ! locomotion
 intersection_of: part_of GO:0007626 ! locomotory behavior
 relationship: part_of GO:0007626 ! locomotory behavior
-
-[Term]
-id: GO:0032091
-name: negative regulation of protein binding
-namespace: biological_process
-def: "Any process that stops, prevents, or reduces the frequency, rate or extent of protein binding." [GOC:mah]
-synonym: "down regulation of protein binding" EXACT []
-synonym: "down-regulation of protein binding" EXACT []
-synonym: "downregulation of protein binding" EXACT []
-synonym: "inhibition of protein binding" NARROW []
-is_a: GO:0043393 ! regulation of protein binding
-is_a: GO:0051100 ! negative regulation of binding
-intersection_of: GO:0008150 ! biological_process
-intersection_of: negatively_regulates GO:0005515 ! protein binding
-relationship: negatively_regulates GO:0005515 ! protein binding
-
-[Term]
-id: GO:0032092
-name: positive regulation of protein binding
-namespace: biological_process
-def: "Any process that activates or increases the frequency, rate or extent of protein binding." [GOC:mah]
-synonym: "activation of protein binding" NARROW []
-synonym: "stimulation of protein binding" NARROW []
-synonym: "up regulation of protein binding" EXACT []
-synonym: "up-regulation of protein binding" EXACT []
-synonym: "upregulation of protein binding" EXACT []
-is_a: GO:0043393 ! regulation of protein binding
-is_a: GO:0051099 ! positive regulation of binding
-intersection_of: GO:0008150 ! biological_process
-intersection_of: positively_regulates GO:0005515 ! protein binding
-relationship: positively_regulates GO:0005515 ! protein binding
 
 [Term]
 id: GO:0032101
@@ -2955,48 +2630,48 @@ intersection_of: positively_regulates GO:0051932 ! synaptic transmission, GABAer
 relationship: positively_regulates GO:0051932 ! synaptic transmission, GABAergic
 
 [Term]
-id: GO:0032386
-name: regulation of intracellular transport
+id: GO:0032368
+name: regulation of lipid transport
 namespace: biological_process
-def: "Any process that modulates the frequency, rate or extent of the directed movement of substances within cells." [GOC:mah]
-is_a: GO:0051049 ! regulation of transport
-is_a: GO:0060341 ! regulation of cellular localization
+def: "Any process that modulates the frequency, rate or extent of the directed movement of lipids into, out of or within a cell, or between cells, by means of some agent such as a transporter or pore." [GOC:mah]
+is_a: GO:0044070 ! regulation of anion transport
+is_a: GO:1905952 ! regulation of lipid localization
 intersection_of: GO:0008150 ! biological_process
-intersection_of: regulates GO:0046907 ! intracellular transport
-relationship: regulates GO:0046907 ! intracellular transport
+intersection_of: regulates GO:0006869 ! lipid transport
+relationship: regulates GO:0006869 ! lipid transport
 
 [Term]
-id: GO:0032387
-name: negative regulation of intracellular transport
+id: GO:0032369
+name: negative regulation of lipid transport
 namespace: biological_process
-def: "Any process that stops, prevents, or reduces the frequency, rate or extent of the directed movement of substances within cells." [GOC:mah]
-synonym: "down regulation of intracellular transport" EXACT []
-synonym: "down-regulation of intracellular transport" EXACT []
-synonym: "downregulation of intracellular transport" EXACT []
-synonym: "inhibition of intracellular transport" NARROW []
-is_a: GO:0032386 ! regulation of intracellular transport
-is_a: GO:0048523 ! negative regulation of cellular process
-is_a: GO:0051051 ! negative regulation of transport
+def: "Any process that stops, prevents, or reduces the frequency, rate or extent of the directed movement of lipids into, out of or within a cell, or between cells, by means of some agent such as a transporter or pore." [GOC:mah]
+synonym: "down regulation of lipid transport" EXACT []
+synonym: "down-regulation of lipid transport" EXACT []
+synonym: "downregulation of lipid transport" EXACT []
+synonym: "inhibition of lipid transport" NARROW []
+is_a: GO:0032368 ! regulation of lipid transport
+is_a: GO:1903792 ! negative regulation of anion transport
+is_a: GO:1905953 ! negative regulation of lipid localization
 intersection_of: GO:0008150 ! biological_process
-intersection_of: negatively_regulates GO:0046907 ! intracellular transport
-relationship: negatively_regulates GO:0046907 ! intracellular transport
+intersection_of: negatively_regulates GO:0006869 ! lipid transport
+relationship: negatively_regulates GO:0006869 ! lipid transport
 
 [Term]
-id: GO:0032388
-name: positive regulation of intracellular transport
+id: GO:0032370
+name: positive regulation of lipid transport
 namespace: biological_process
-def: "Any process that activates or increases the frequency, rate or extent of the directed movement of substances within cells." [GOC:mah]
-synonym: "activation of intracellular transport" NARROW []
-synonym: "stimulation of intracellular transport" NARROW []
-synonym: "up regulation of intracellular transport" EXACT []
-synonym: "up-regulation of intracellular transport" EXACT []
-synonym: "upregulation of intracellular transport" EXACT []
-is_a: GO:0032386 ! regulation of intracellular transport
-is_a: GO:0048522 ! positive regulation of cellular process
-is_a: GO:0051050 ! positive regulation of transport
+def: "Any process that activates or increases the frequency, rate or extent of the directed movement of lipids into, out of or within a cell, or between cells, by means of some agent such as a transporter or pore." [GOC:mah]
+synonym: "activation of lipid transport" NARROW []
+synonym: "stimulation of lipid transport" NARROW []
+synonym: "up regulation of lipid transport" EXACT []
+synonym: "up-regulation of lipid transport" EXACT []
+synonym: "upregulation of lipid transport" EXACT []
+is_a: GO:0032368 ! regulation of lipid transport
+is_a: GO:1903793 ! positive regulation of anion transport
+is_a: GO:1905954 ! positive regulation of lipid localization
 intersection_of: GO:0008150 ! biological_process
-intersection_of: positively_regulates GO:0046907 ! intracellular transport
-relationship: positively_regulates GO:0046907 ! intracellular transport
+intersection_of: positively_regulates GO:0006869 ! lipid transport
+relationship: positively_regulates GO:0006869 ! lipid transport
 
 [Term]
 id: GO:0032501
@@ -3054,7 +2729,7 @@ id: GO:0032890
 name: regulation of organic acid transport
 namespace: biological_process
 def: "Any process that modulates the frequency, rate or extent of the directed movement of organic acids into, out of or within a cell, or between cells, by means of some agent such as a transporter or pore." [GOC:mah]
-is_a: GO:0051049 ! regulation of transport
+is_a: GO:0044070 ! regulation of anion transport
 intersection_of: GO:0008150 ! biological_process
 intersection_of: regulates GO:0015849 ! organic acid transport
 relationship: regulates GO:0015849 ! organic acid transport
@@ -3069,7 +2744,7 @@ synonym: "down-regulation of organic acid transport" EXACT []
 synonym: "downregulation of organic acid transport" EXACT []
 synonym: "inhibition of organic acid transport" NARROW []
 is_a: GO:0032890 ! regulation of organic acid transport
-is_a: GO:0051051 ! negative regulation of transport
+is_a: GO:1903792 ! negative regulation of anion transport
 intersection_of: GO:0008150 ! biological_process
 intersection_of: negatively_regulates GO:0015849 ! organic acid transport
 relationship: negatively_regulates GO:0015849 ! organic acid transport
@@ -3085,7 +2760,7 @@ synonym: "up regulation of organic acid transport" EXACT []
 synonym: "up-regulation of organic acid transport" EXACT []
 synonym: "upregulation of organic acid transport" EXACT []
 is_a: GO:0032890 ! regulation of organic acid transport
-is_a: GO:0051050 ! positive regulation of transport
+is_a: GO:1903793 ! positive regulation of anion transport
 intersection_of: GO:0008150 ! biological_process
 intersection_of: positively_regulates GO:0015849 ! organic acid transport
 relationship: positively_regulates GO:0015849 ! organic acid transport
@@ -3120,17 +2795,6 @@ synonym: "macromolecule localisation" EXACT [GOC:mah]
 is_a: GO:0051179 ! localization
 
 [Term]
-id: GO:0033267
-name: obsolete axon part
-namespace: cellular_component
-def: "OBSOLETE. A part of an axon, a cell projection of a neuron." [GOC:jl]
-comment: Note that this term is in the subset of terms that should not be used for direct gene product annotation. Instead, select a child term or, if no appropriate child term exists, please request a new term. Direct annotations to this term may be amended during annotation QC.
-subset: gocheck_do_not_annotate
-xref: NIF_Subcellular:sao280355188
-is_obsolete: true
-consider: GO:0030424
-
-[Term]
 id: GO:0033555
 name: multicellular organismal response to stress
 namespace: biological_process
@@ -3149,7 +2813,6 @@ synonym: "downregulation of dopamine secretion" EXACT []
 synonym: "inhibition of dopamine secretion" NARROW []
 is_a: GO:0014059 ! regulation of dopamine secretion
 is_a: GO:0033604 ! negative regulation of catecholamine secretion
-is_a: GO:0043271 ! negative regulation of ion transport
 intersection_of: GO:0008150 ! biological_process
 intersection_of: negatively_regulates GO:0014046 ! dopamine secretion
 relationship: negatively_regulates GO:0014046 ! dopamine secretion
@@ -3166,7 +2829,6 @@ synonym: "up-regulation of dopamine secretion" EXACT []
 synonym: "upregulation of dopamine secretion" EXACT []
 is_a: GO:0014059 ! regulation of dopamine secretion
 is_a: GO:0033605 ! positive regulation of catecholamine secretion
-is_a: GO:0043270 ! positive regulation of ion transport
 intersection_of: GO:0008150 ! biological_process
 intersection_of: positively_regulates GO:0014046 ! dopamine secretion
 relationship: positively_regulates GO:0014046 ! dopamine secretion
@@ -3205,40 +2867,6 @@ intersection_of: positively_regulates GO:0050432 ! catecholamine secretion
 relationship: positively_regulates GO:0050432 ! catecholamine secretion
 
 [Term]
-id: GO:0033673
-name: negative regulation of kinase activity
-namespace: biological_process
-def: "Any process that stops, prevents, or reduces the frequency, rate or extent of kinase activity, the catalysis of the transfer of a phosphate group, usually from ATP, to a substrate molecule." [GOC:mah]
-synonym: "down regulation of kinase activity" EXACT []
-synonym: "down-regulation of kinase activity" EXACT []
-synonym: "downregulation of kinase activity" EXACT []
-synonym: "inhibition of kinase activity" NARROW []
-synonym: "kinase inhibitor" NARROW []
-is_a: GO:0042326 ! negative regulation of phosphorylation
-is_a: GO:0043549 ! regulation of kinase activity
-is_a: GO:0051348 ! negative regulation of transferase activity
-intersection_of: GO:0008150 ! biological_process
-intersection_of: negatively_regulates GO:0016301 ! kinase activity
-relationship: negatively_regulates GO:0016301 ! kinase activity
-
-[Term]
-id: GO:0033674
-name: positive regulation of kinase activity
-namespace: biological_process
-def: "Any process that activates or increases the frequency, rate or extent of kinase activity, the catalysis of the transfer of a phosphate group, usually from ATP, to a substrate molecule." [GOC:mah]
-synonym: "kinase activator" NARROW []
-synonym: "stimulation of kinase activity" NARROW []
-synonym: "up regulation of kinase activity" EXACT []
-synonym: "up-regulation of kinase activity" EXACT []
-synonym: "upregulation of kinase activity" EXACT []
-is_a: GO:0042327 ! positive regulation of phosphorylation
-is_a: GO:0043549 ! regulation of kinase activity
-is_a: GO:0051347 ! positive regulation of transferase activity
-intersection_of: GO:0008150 ! biological_process
-intersection_of: positively_regulates GO:0016301 ! kinase activity
-relationship: positively_regulates GO:0016301 ! kinase activity
-
-[Term]
 id: GO:0033993
 name: response to lipid
 namespace: biological_process
@@ -3255,53 +2883,6 @@ is_a: GO:0035178 ! turning behavior
 is_a: GO:0060179 ! male mating behavior
 intersection_of: GO:0035178 ! turning behavior
 intersection_of: part_of GO:0007618 ! mating
-
-[Term]
-id: GO:0034762
-name: regulation of transmembrane transport
-namespace: biological_process
-def: "Any process that modulates the frequency, rate or extent of the directed movement of a solute from one side of a membrane to the other." [GOC:mah]
-synonym: "regulation of membrane transport" EXACT []
-is_a: GO:0050794 ! regulation of cellular process
-is_a: GO:0051049 ! regulation of transport
-intersection_of: GO:0008150 ! biological_process
-intersection_of: regulates GO:0055085 ! transmembrane transport
-relationship: regulates GO:0055085 ! transmembrane transport
-
-[Term]
-id: GO:0034763
-name: negative regulation of transmembrane transport
-namespace: biological_process
-def: "Any process that stops, prevents, or reduces the frequency, rate or extent of the directed movement of a solute from one side of a membrane to the other." [GOC:mah]
-synonym: "down regulation of transmembrane transport" EXACT []
-synonym: "down-regulation of transmembrane transport" EXACT []
-synonym: "downregulation of transmembrane transport" EXACT []
-synonym: "inhibition of transmembrane transport" NARROW []
-synonym: "negative regulation of membrane transport" EXACT []
-is_a: GO:0034762 ! regulation of transmembrane transport
-is_a: GO:0048523 ! negative regulation of cellular process
-is_a: GO:0051051 ! negative regulation of transport
-intersection_of: GO:0008150 ! biological_process
-intersection_of: negatively_regulates GO:0055085 ! transmembrane transport
-relationship: negatively_regulates GO:0055085 ! transmembrane transport
-
-[Term]
-id: GO:0034764
-name: positive regulation of transmembrane transport
-namespace: biological_process
-def: "Any process that activates or increases the frequency, rate or extent of the directed movement of a solute from one side of a membrane to the other." [GOC:mah]
-synonym: "activation of transmembrane transport" NARROW []
-synonym: "positive regulation of membrane transport" EXACT []
-synonym: "stimulation of transmembrane transport" NARROW []
-synonym: "up regulation of transmembrane transport" EXACT []
-synonym: "up-regulation of transmembrane transport" EXACT []
-synonym: "upregulation of transmembrane transport" EXACT []
-is_a: GO:0034762 ! regulation of transmembrane transport
-is_a: GO:0048522 ! positive regulation of cellular process
-is_a: GO:0051050 ! positive regulation of transport
-intersection_of: GO:0008150 ! biological_process
-intersection_of: positively_regulates GO:0055085 ! transmembrane transport
-relationship: positively_regulates GO:0055085 ! transmembrane transport
 
 [Term]
 id: GO:0035178
@@ -3327,74 +2908,6 @@ namespace: biological_process
 def: "The vesicular release of glutamate from a presynapse, across a chemical synapse, the subsequent activation of glutamate receptors at the postsynapse of a target cell (neuron, muscle, or secretory cell) and the effects of this activation on the postsynaptic membrane potential and ionic composition of the postsynaptic cytosol. This process encompasses both spontaneous and evoked release of neurotransmitter and all parts of synaptic vesicle exocytosis. Evoked transmission starts with the arrival of an action potential at the presynapse." [GOC:dos]
 synonym: "glutamatergic synaptic transmission" EXACT []
 is_a: GO:0007268 ! chemical synaptic transmission
-
-[Term]
-id: GO:0035556
-name: intracellular signal transduction
-namespace: biological_process
-alt_id: GO:0007242
-alt_id: GO:0007243
-alt_id: GO:0023013
-alt_id: GO:0023034
-def: "The process in which a signal is passed on to downstream components within the cell, which become activated themselves to further propagate the signal and finally trigger a change in the function or state of the cell." [GOC:bf, GOC:jl, GOC:signaling, ISBN:3527303782]
-subset: goslim_drosophila
-synonym: "intracellular protein kinase cascade" NARROW [GOC:signaling]
-synonym: "intracellular signal transduction pathway" NARROW []
-synonym: "intracellular signaling cascade" RELATED [GOC:signaling]
-synonym: "intracellular signaling chain" EXACT [ISBN:3527303782]
-synonym: "intracellular signaling pathway" RELATED []
-synonym: "protein kinase cascade" NARROW [GOC:signaling]
-synonym: "signal transduction via intracellular signaling cascade" RELATED []
-synonym: "signal transmission via intracellular cascade" NARROW []
-is_a: GO:0007165 ! signal transduction
-intersection_of: GO:0007165 ! signal transduction
-intersection_of: occurs_in GO:0005622 ! intracellular anatomical structure
-relationship: occurs_in GO:0005622 ! intracellular anatomical structure
-created_by: bf
-creation_date: 2010-05-14T01:14:37Z
-
-[Term]
-id: GO:0035690
-name: cellular response to drug
-namespace: biological_process
-def: "Any process that results in a change in state or activity of a cell (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of a drug stimulus. A drug is a substance used in the diagnosis, treatment or prevention of a disease." [GOC:sl]
-subset: goslim_chembl
-is_a: GO:0042493 ! response to drug
-is_a: GO:0070887 ! cellular response to chemical stimulus
-created_by: bf
-creation_date: 2011-02-24T03:37:26Z
-
-[Term]
-id: GO:0036270
-name: response to diuretic
-namespace: biological_process
-def: "Any process that results in a change in state or activity of a cell or an organism (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of a diuretic stimulus. A diuretic is an agent that promotes the excretion of urine through its effects on kidney function." [GOC:hp]
-comment: Note that this term is in the subset of terms that should not be used for direct manual annotation of gene products. It was created to be used for cross-referencing by other ontologies. Direct annotations to this term may be amended during annotation QC.
-subset: gocheck_do_not_manually_annotate
-is_a: GO:0042493 ! response to drug
-created_by: bf
-creation_date: 2012-07-09T01:26:24Z
-
-[Term]
-id: GO:0038023
-name: signaling receptor activity
-namespace: molecular_function
-alt_id: GO:0004872
-alt_id: GO:0019041
-def: "Receiving a signal and transmitting it in the cell to initiate a change in cell activity. A signal is a physical entity or change in state that is used to transfer information in order to trigger a response." [GOC:bf, GOC:signaling]
-subset: goslim_agr
-subset: goslim_chembl
-subset: goslim_drosophila
-subset: goslim_flybase_ribbon
-subset: goslim_metagenomics
-subset: goslim_mouse
-subset: goslim_pir
-subset: goslim_plant
-synonym: "receptor activity" BROAD []
-synonym: "receptor activity involved in signal transduction" EXACT [GOC:bf]
-is_a: GO:0060089 ! molecular transducer activity
-created_by: bf
-creation_date: 2011-08-01T02:45:27Z
 
 [Term]
 id: GO:0040011
@@ -3497,47 +3010,6 @@ intersection_of: negatively_regulates GO:0050802 ! circadian sleep/wake cycle, s
 relationship: negatively_regulates GO:0050802 ! circadian sleep/wake cycle, sleep
 
 [Term]
-id: GO:0042325
-name: regulation of phosphorylation
-namespace: biological_process
-def: "Any process that modulates the frequency, rate or extent of addition of phosphate groups into a molecule." [GOC:jl]
-is_a: GO:0019220 ! regulation of phosphate metabolic process
-intersection_of: GO:0008150 ! biological_process
-intersection_of: regulates GO:0016310 ! phosphorylation
-relationship: regulates GO:0016310 ! phosphorylation
-
-[Term]
-id: GO:0042326
-name: negative regulation of phosphorylation
-namespace: biological_process
-def: "Any process that stops, prevents or decreases the rate of addition of phosphate groups to a molecule." [GOC:jl]
-synonym: "down regulation of phosphorylation" EXACT []
-synonym: "down-regulation of phosphorylation" EXACT []
-synonym: "downregulation of phosphorylation" EXACT []
-synonym: "inhibition of phosphorylation" NARROW []
-is_a: GO:0042325 ! regulation of phosphorylation
-is_a: GO:0045936 ! negative regulation of phosphate metabolic process
-intersection_of: GO:0008150 ! biological_process
-intersection_of: negatively_regulates GO:0016310 ! phosphorylation
-relationship: negatively_regulates GO:0016310 ! phosphorylation
-
-[Term]
-id: GO:0042327
-name: positive regulation of phosphorylation
-namespace: biological_process
-def: "Any process that activates or increases the frequency, rate or extent of addition of phosphate groups to a molecule." [GOC:jl]
-synonym: "activation of phosphorylation" NARROW []
-synonym: "stimulation of phosphorylation" NARROW []
-synonym: "up regulation of phosphorylation" EXACT []
-synonym: "up-regulation of phosphorylation" EXACT []
-synonym: "upregulation of phosphorylation" EXACT []
-is_a: GO:0042325 ! regulation of phosphorylation
-is_a: GO:0045937 ! positive regulation of phosphate metabolic process
-intersection_of: GO:0008150 ! biological_process
-intersection_of: positively_regulates GO:0016310 ! phosphorylation
-relationship: positively_regulates GO:0016310 ! phosphorylation
-
-[Term]
 id: GO:0042330
 name: taxis
 namespace: biological_process
@@ -3562,17 +3034,6 @@ synonym: "taxis in response to gravitational stimulus" EXACT []
 synonym: "taxis in response to gravity" EXACT []
 is_a: GO:0009629 ! response to gravity
 is_a: GO:0042330 ! taxis
-
-[Term]
-id: GO:0042493
-name: response to drug
-namespace: biological_process
-alt_id: GO:0017035
-def: "Any process that results in a change in state or activity of a cell or an organism (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of a drug stimulus. A drug is a substance used in the diagnosis, treatment or prevention of a disease." [GOC:jl]
-subset: goslim_candida
-synonym: "drug resistance" RELATED []
-synonym: "drug susceptibility/resistance" RELATED []
-is_a: GO:0042221 ! response to chemical
 
 [Term]
 id: GO:0042745
@@ -3671,53 +3132,6 @@ xref: NIF_Subcellular:sao867568886
 is_a: GO:0120025 ! plasma membrane bounded cell projection
 
 [Term]
-id: GO:0043085
-name: positive regulation of catalytic activity
-namespace: biological_process
-alt_id: GO:0048554
-def: "Any process that activates or increases the activity of an enzyme." [GOC:ebc, GOC:jl, GOC:tb, GOC:vw]
-subset: goslim_chembl
-synonym: "activation of enzyme activity" NARROW []
-synonym: "activation of metalloenzyme activity" NARROW []
-synonym: "positive regulation of enzyme activity" EXACT [GOC:tb]
-synonym: "positive regulation of metalloenzyme activity" NARROW []
-synonym: "stimulation of enzyme activity" NARROW []
-synonym: "stimulation of metalloenzyme activity" NARROW []
-synonym: "up regulation of enzyme activity" EXACT []
-synonym: "up regulation of metalloenzyme activity" NARROW []
-synonym: "up-regulation of enzyme activity" EXACT []
-synonym: "up-regulation of metalloenzyme activity" NARROW []
-synonym: "upregulation of enzyme activity" EXACT []
-synonym: "upregulation of metalloenzyme activity" NARROW []
-is_a: GO:0044093 ! positive regulation of molecular function
-is_a: GO:0050790 ! regulation of catalytic activity
-intersection_of: GO:0008150 ! biological_process
-intersection_of: positively_regulates GO:0003824 ! catalytic activity
-relationship: positively_regulates GO:0003824 ! catalytic activity
-
-[Term]
-id: GO:0043086
-name: negative regulation of catalytic activity
-namespace: biological_process
-alt_id: GO:0048553
-def: "Any process that stops or reduces the activity of an enzyme." [GOC:ebc, GOC:jl, GOC:tb, GOC:vw]
-synonym: "down regulation of enzyme activity" EXACT []
-synonym: "down regulation of metalloenzyme activity" NARROW []
-synonym: "down-regulation of enzyme activity" EXACT []
-synonym: "down-regulation of metalloenzyme activity" EXACT []
-synonym: "downregulation of enzyme activity" EXACT []
-synonym: "downregulation of metalloenzyme activity" NARROW []
-synonym: "inhibition of enzyme activity" NARROW []
-synonym: "inhibition of metalloenzyme activity" NARROW []
-synonym: "negative regulation of enzyme activity" EXACT [GOC:tb]
-synonym: "negative regulation of metalloenzyme activity" NARROW []
-is_a: GO:0044092 ! negative regulation of molecular function
-is_a: GO:0050790 ! regulation of catalytic activity
-intersection_of: GO:0008150 ! biological_process
-intersection_of: negatively_regulates GO:0003824 ! catalytic activity
-relationship: negatively_regulates GO:0003824 ! catalytic activity
-
-[Term]
 id: GO:0043153
 name: entrainment of circadian clock by photoperiod
 namespace: biological_process
@@ -3725,48 +3139,6 @@ def: "The synchronization of a circadian rhythm to photoperiod, the intermittent
 synonym: "photoentrainment of circadian clock" EXACT [PMID:10217146]
 is_a: GO:0009648 ! photoperiodism
 is_a: GO:0009649 ! entrainment of circadian clock
-
-[Term]
-id: GO:0043226
-name: organelle
-namespace: cellular_component
-def: "Organized structure of distinctive morphology and function. Includes the nucleus, mitochondria, plastids, vacuoles, vesicles, ribosomes and the cytoskeleton, and prokaryotic structures such as anammoxosomes and pirellulosomes. Excludes the plasma membrane." [GOC:go_curators]
-subset: goslim_chembl
-subset: goslim_generic
-subset: goslim_pir
-xref: NIF_Subcellular:sao1539965131
-xref: Wikipedia:Organelle
-is_a: GO:0110165 ! cellular anatomical entity
-
-[Term]
-id: GO:0043227
-name: membrane-bounded organelle
-namespace: cellular_component
-def: "Organized structure of distinctive morphology and function, bounded by a single or double lipid bilayer membrane. Includes the nucleus, mitochondria, plastids, vacuoles, and vesicles. Excludes the plasma membrane." [GOC:go_curators]
-synonym: "membrane-enclosed organelle" EXACT []
-xref: NIF_Subcellular:sao414196390
-is_a: GO:0043226 ! organelle
-
-[Term]
-id: GO:0043229
-name: intracellular organelle
-namespace: cellular_component
-def: "Organized structure of distinctive morphology and function, occurring within the cell. Includes the nucleus, mitochondria, plastids, vacuoles, vesicles, ribosomes and the cytoskeleton. Excludes the plasma membrane." [GOC:go_curators]
-subset: goslim_pir
-is_a: GO:0043226 ! organelle
-intersection_of: GO:0043226 ! organelle
-intersection_of: part_of GO:0005622 ! intracellular anatomical structure
-relationship: part_of GO:0005622 ! intracellular anatomical structure
-
-[Term]
-id: GO:0043231
-name: intracellular membrane-bounded organelle
-namespace: cellular_component
-def: "Organized structure of distinctive morphology and function, bounded by a single or double lipid bilayer membrane and occurring within the cell. Includes the nucleus, mitochondria, plastids, vacuoles, and vesicles. Excludes the plasma membrane." [GOC:go_curators]
-subset: goslim_pir
-synonym: "intracellular membrane-enclosed organelle" EXACT []
-is_a: GO:0043227 ! membrane-bounded organelle
-is_a: GO:0043229 ! intracellular organelle
 
 [Term]
 id: GO:0043269
@@ -3815,27 +3187,6 @@ name: response to alkaloid
 namespace: biological_process
 def: "Any process that results in a change in state or activity of a cell or an organism (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of an alkaloid stimulus. Alkaloids are a large group of nitrogenous substances found in naturally in plants, many of which have extracts that are pharmacologically active." [GOC:jl]
 is_a: GO:0010243 ! response to organonitrogen compound
-
-[Term]
-id: GO:0043393
-name: regulation of protein binding
-namespace: biological_process
-def: "Any process that modulates the frequency, rate or extent of protein binding." [GOC:go_curators]
-is_a: GO:0051098 ! regulation of binding
-intersection_of: GO:0008150 ! biological_process
-intersection_of: regulates GO:0005515 ! protein binding
-relationship: regulates GO:0005515 ! protein binding
-
-[Term]
-id: GO:0043549
-name: regulation of kinase activity
-namespace: biological_process
-def: "Any process that modulates the frequency, rate or extent of kinase activity, the catalysis of the transfer of a phosphate group, usually from ATP, to a substrate molecule." [GOC:bf]
-is_a: GO:0042325 ! regulation of phosphorylation
-is_a: GO:0051338 ! regulation of transferase activity
-intersection_of: GO:0008150 ! biological_process
-intersection_of: regulates GO:0016301 ! kinase activity
-relationship: regulates GO:0016301 ! kinase activity
 
 [Term]
 id: GO:0043575
@@ -3948,40 +3299,6 @@ intersection_of: regulates GO:0006820 ! anion transport
 relationship: regulates GO:0006820 ! anion transport
 
 [Term]
-id: GO:0044092
-name: negative regulation of molecular function
-namespace: biological_process
-def: "Any process that stops or reduces the rate or extent of a molecular function, an elemental biological activity occurring at the molecular level, such as catalysis or binding." [GO:jl]
-is_a: GO:0065009 ! regulation of molecular function
-intersection_of: GO:0008150 ! biological_process
-intersection_of: negatively_regulates GO:0003674 ! molecular_function
-relationship: negatively_regulates GO:0003674 ! molecular_function
-created_by: jl
-creation_date: 2009-04-21T04:07:27Z
-
-[Term]
-id: GO:0044093
-name: positive regulation of molecular function
-namespace: biological_process
-def: "Any process that activates or increases the rate or extent of a molecular function, an elemental biological activity occurring at the molecular level, such as catalysis or binding." [GO:jl]
-is_a: GO:0065009 ! regulation of molecular function
-intersection_of: GO:0008150 ! biological_process
-intersection_of: positively_regulates GO:0003674 ! molecular_function
-relationship: positively_regulates GO:0003674 ! molecular_function
-created_by: jl
-creation_date: 2009-04-21T04:11:06Z
-
-[Term]
-id: GO:0044237
-name: cellular metabolic process
-namespace: biological_process
-def: "The chemical reactions and pathways by which individual cells transform chemical substances." [GOC:go_curators]
-synonym: "cellular metabolism" EXACT []
-synonym: "intermediary metabolism" RELATED [GOC:mah]
-is_a: GO:0008152 ! metabolic process
-is_a: GO:0009987 ! cellular process
-
-[Term]
 id: GO:0044238
 name: primary metabolic process
 namespace: biological_process
@@ -3989,62 +3306,6 @@ def: "The chemical reactions and pathways involving those compounds which are fo
 subset: goslim_pir
 synonym: "primary metabolism" EXACT []
 is_a: GO:0008152 ! metabolic process
-
-[Term]
-id: GO:0044425
-name: obsolete membrane part
-namespace: cellular_component
-def: "OBSOLETE. Any constituent part of a membrane, a double layer of lipid molecules that encloses all cells, and, in eukaryotes, many organelles; may be a single or double lipid bilayer; also includes associated proteins." [GOC:jl]
-comment: Note that this term is in the subset of terms that should not be used for direct gene product annotation. Instead, select a child term or, if no appropriate child term exists, please request a new term. Direct annotations to this term may be amended during annotation QC.
-subset: gocheck_do_not_annotate
-is_obsolete: true
-consider: GO:0016020
-
-[Term]
-id: GO:0044456
-name: obsolete synapse part
-namespace: cellular_component
-def: "OBSOLETE. Any constituent part of a synapse, the junction between a nerve fiber of one neuron and another neuron or muscle fiber or glial cell." [GOC:jl]
-comment: Note that this term is in the subset of terms that should not be used for direct gene product annotation. Instead, select a child term or, if no appropriate child term exists, please request a new term. Direct annotations to this term may be amended during annotation QC.
-subset: gocheck_do_not_annotate
-synonym: "synaptic component" RELATED [NIF_Subcellular:sao1784069613]
-xref: NIF_Subcellular:sao1784069613
-is_obsolete: true
-consider: GO:0045202
-
-[Term]
-id: GO:0044459
-name: obsolete plasma membrane part
-namespace: cellular_component
-def: "OBSOLETE. Any constituent part of the plasma membrane, the membrane surrounding a cell that separates the cell from its external environment. It consists of a phospholipid bilayer and associated proteins." [GOC:jl]
-comment: Note that this term is in the subset of terms that should not be used for direct gene product annotation. Instead, select a child term or, if no appropriate child term exists, please request a new term. Direct annotations to this term may be amended during annotation QC.
-subset: gocheck_do_not_annotate
-is_obsolete: true
-consider: GO:0005886
-
-[Term]
-id: GO:0044463
-name: obsolete cell projection part
-namespace: cellular_component
-def: "OBSOLETE. Any constituent part of a cell projection, a prolongation or process extending from a cell, e.g. a flagellum or axon." [GOC:jl]
-comment: Note that this term is in the subset of terms that should not be used for direct gene product annotation. Instead, select a child term or, if no appropriate child term exists, please request a new term. Direct annotations to this term may be amended during annotation QC.
-subset: gocheck_do_not_annotate
-is_obsolete: true
-consider: GO:0042995
-
-[Term]
-id: GO:0044464
-name: obsolete cell part
-namespace: cellular_component
-def: "OBSOLETE. Any constituent part of a cell, the basic structural and functional unit of all organisms." [GOC:jl]
-comment: Note that this term is in the subset of terms that should not be used for direct gene product annotation. Instead, select a child term or, if no appropriate child term exists, please request a new term. Direct annotations to this term may be amended during annotation QC.
-subset: gocheck_do_not_annotate
-subset: goslim_pir
-synonym: "cellular subcomponent" EXACT [NIF_Subcellular:sao628508602]
-synonym: "protoplast" RELATED [GOC:mah]
-xref: NIF_Subcellular:sao628508602
-is_obsolete: true
-consider: CL:0000000
 
 [Term]
 id: GO:0044703
@@ -4065,16 +3326,6 @@ is_a: GO:0032501 ! multicellular organismal process
 is_a: GO:0051704 ! multi-organism process
 created_by: jl
 creation_date: 2012-09-19T16:06:16Z
-
-[Term]
-id: GO:0045117
-name: azole transmembrane transport
-namespace: biological_process
-def: "The directed movement of azoles, heterocyclic compounds found in many biologically important substances, across a lipid bilayer, across a membrane." [GOC:go_curators, ISBN:3527307206, Wikipedia:Azole]
-synonym: "azole transport" RELATED []
-is_a: GO:0055085 ! transmembrane transport
-is_a: GO:0071702 ! organic substance transport
-is_a: GO:0071705 ! nitrogen compound transport
 
 [Term]
 id: GO:0045187
@@ -4228,37 +3479,14 @@ intersection_of: positively_regulates GO:0006629 ! lipid metabolic process
 relationship: positively_regulates GO:0006629 ! lipid metabolic process
 
 [Term]
-id: GO:0045936
-name: negative regulation of phosphate metabolic process
+id: GO:0045924
+name: regulation of female receptivity
 namespace: biological_process
-def: "Any process that stops, prevents, or reduces the frequency, rate or extent of the chemical reactions and pathways involving phosphates." [GOC:go_curators]
-synonym: "down regulation of phosphate metabolic process" EXACT []
-synonym: "down-regulation of phosphate metabolic process" EXACT []
-synonym: "downregulation of phosphate metabolic process" EXACT []
-synonym: "inhibition of phosphate metabolic process" NARROW []
-synonym: "negative regulation of phosphate metabolism" EXACT []
-is_a: GO:0010563 ! negative regulation of phosphorus metabolic process
-is_a: GO:0019220 ! regulation of phosphate metabolic process
-intersection_of: GO:0008150 ! biological_process
-intersection_of: negatively_regulates GO:0006796 ! phosphate-containing compound metabolic process
-relationship: negatively_regulates GO:0006796 ! phosphate-containing compound metabolic process
-
-[Term]
-id: GO:0045937
-name: positive regulation of phosphate metabolic process
-namespace: biological_process
-def: "Any process that activates or increases the frequency, rate or extent of the chemical reactions and pathways involving phosphates." [GOC:go_curators]
-synonym: "activation of phosphate metabolic process" NARROW []
-synonym: "positive regulation of phosphate metabolism" EXACT []
-synonym: "stimulation of phosphate metabolic process" NARROW []
-synonym: "up regulation of phosphate metabolic process" EXACT []
-synonym: "up-regulation of phosphate metabolic process" EXACT []
-synonym: "upregulation of phosphate metabolic process" EXACT []
-is_a: GO:0010562 ! positive regulation of phosphorus metabolic process
-is_a: GO:0019220 ! regulation of phosphate metabolic process
-intersection_of: GO:0008150 ! biological_process
-intersection_of: positively_regulates GO:0006796 ! phosphate-containing compound metabolic process
-relationship: positively_regulates GO:0006796 ! phosphate-containing compound metabolic process
+alt_id: GO:0060181
+def: "Any process that modulates the frequency, rate or extent of the willingness or readiness of a female to receive male advances." [GOC:dph, GOC:go_curators, GOC:tb]
+synonym: "female receptivity" RELATED [GOC:dph, GOC:tb]
+is_a: GO:0060180 ! female mating behavior
+is_a: GO:0065008 ! regulation of biological quality
 
 [Term]
 id: GO:0045938
@@ -4308,13 +3536,18 @@ is_a: GO:0022600 ! digestive system process
 is_a: GO:0032941 ! secretion by tissue
 
 [Term]
-id: GO:0046677
-name: response to antibiotic
+id: GO:0046662
+name: regulation of oviposition
 namespace: biological_process
-def: "Any process that results in a change in state or activity of a cell or an organism (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of an antibiotic stimulus. An antibiotic is a chemical substance produced by a microorganism which has the capacity to inhibit the growth of or to kill other microorganisms." [GOC:ai, GOC:ef]
-subset: goslim_chembl
-synonym: "antibiotic susceptibility/resistance" RELATED []
-is_a: GO:0042221 ! response to chemical
+alt_id: GO:0048042
+def: "Any process that modulates the frequency, rate or extent of the deposition of eggs, either fertilized or not, upon a surface or into a medium." [GOC:dph, GOC:tb, PMID:11932766]
+synonym: "regulation of post-mating oviposition" NARROW []
+is_a: GO:0050795 ! regulation of behavior
+is_a: GO:0051239 ! regulation of multicellular organismal process
+is_a: GO:2000241 ! regulation of reproductive process
+intersection_of: GO:0008150 ! biological_process
+intersection_of: regulates GO:0018991 ! oviposition
+relationship: regulates GO:0018991 ! oviposition
 
 [Term]
 id: GO:0046692
@@ -4442,23 +3675,6 @@ subset: goslim_pir
 is_a: GO:0006810 ! transport
 
 [Term]
-id: GO:0046907
-name: intracellular transport
-namespace: biological_process
-alt_id: GO:1902582
-def: "The directed movement of substances within a cell." [GOC:ai]
-synonym: "single organism intracellular transport" RELATED [GOC:TermGenie]
-synonym: "single-organism intracellular transport" RELATED []
-is_a: GO:0006810 ! transport
-is_a: GO:0051641 ! cellular localization
-is_a: GO:0051649 ! establishment of localization in cell
-intersection_of: GO:0006810 ! transport
-intersection_of: occurs_in GO:0005622 ! intracellular anatomical structure
-relationship: occurs_in GO:0005622 ! intracellular anatomical structure
-created_by: jl
-creation_date: 2013-12-18T14:04:50Z
-
-[Term]
 id: GO:0046928
 name: regulation of neurotransmitter secretion
 namespace: biological_process
@@ -4495,7 +3711,6 @@ name: carboxylic acid transport
 namespace: biological_process
 def: "The directed movement of carboxylic acids into, out of or within a cell, or between cells, by means of some agent such as a transporter or pore. Carboxylic acids are organic acids containing one or more carboxyl (COOH) groups or anions (COO-)." [GOC:ai]
 is_a: GO:0015711 ! organic anion transport
-is_a: GO:0015849 ! organic acid transport
 
 [Term]
 id: GO:0047484
@@ -4506,25 +3721,6 @@ is_a: GO:0080134 ! regulation of response to stress
 intersection_of: GO:0008150 ! biological_process
 intersection_of: regulates GO:0006970 ! response to osmotic stress
 relationship: regulates GO:0006970 ! response to osmotic stress
-
-[Term]
-id: GO:0048018
-name: receptor ligand activity
-namespace: molecular_function
-alt_id: GO:0071884
-def: "The activity of a gene product that interacts with a receptor to effect a change in the activity of the receptor. Ligands may be produced by the same, or different, cell that expresses the receptor. Ligands may diffuse extracellularly from their point of origin to the receiving cell, or remain attached to an adjacent cell surface (e.g. Notch ligands)." [GOC:kv, GOC:molecular_function_refactoring, GOC:pdt]
-subset: goslim_chembl
-subset: goslim_drosophila
-synonym: "receptor agonist activity" BROAD [GOC:molecular_function_refactoring]
-synonym: "signaling molecule" EXACT []
-synonym: "signaling receptor ligand activity" EXACT []
-synonym: "vitamin D receptor activator activity" NARROW []
-is_a: GO:0005102 ! signaling receptor binding
-is_a: GO:0030546 ! signaling receptor activator activity
-relationship: part_of GO:0007165 ! signal transduction
-property_value: term_tracker_item https://github.com/geneontology/go-ontology/issues/14220 xsd:anyURI
-created_by: mah
-creation_date: 2010-09-13T04:51:59Z
 
 [Term]
 id: GO:0048060
@@ -4791,20 +3987,6 @@ intersection_of: regulates GO:0008150 ! biological_process
 relationship: regulates GO:0008150 ! biological_process
 
 [Term]
-id: GO:0050790
-name: regulation of catalytic activity
-namespace: biological_process
-alt_id: GO:0048552
-def: "Any process that modulates the activity of an enzyme." [GOC:ai, GOC:ebc, GOC:vw]
-subset: goslim_chembl
-synonym: "regulation of enzyme activity" EXACT []
-synonym: "regulation of metalloenzyme activity" NARROW []
-is_a: GO:0065009 ! regulation of molecular function
-intersection_of: GO:0008150 ! biological_process
-intersection_of: regulates GO:0003824 ! catalytic activity
-relationship: regulates GO:0003824 ! catalytic activity
-
-[Term]
 id: GO:0050793
 name: regulation of developmental process
 namespace: biological_process
@@ -4908,7 +4090,7 @@ synonym: "neurological system process" EXACT []
 synonym: "neurophysiological process" EXACT []
 synonym: "pan-neural process" RELATED []
 is_a: GO:0003008 ! system process
-property_value: term_tracker_item https://github.com/geneontology/go-ontology/issues/13824 xsd:anyURI
+property_value: IAO:0000233 https://github.com/geneontology/go-ontology/issues/13824 xsd:anyURI
 
 [Term]
 id: GO:0050878
@@ -5530,58 +4712,6 @@ intersection_of: positively_regulates GO:0032502 ! developmental process
 relationship: positively_regulates GO:0032502 ! developmental process
 
 [Term]
-id: GO:0051098
-name: regulation of binding
-namespace: biological_process
-def: "Any process that modulates the frequency, rate or extent of binding, the selective interaction of a molecule with one or more specific sites on another molecule." [GOC:ai]
-is_a: GO:0065009 ! regulation of molecular function
-intersection_of: GO:0008150 ! biological_process
-intersection_of: regulates GO:0005488 ! binding
-relationship: regulates GO:0005488 ! binding
-
-[Term]
-id: GO:0051099
-name: positive regulation of binding
-namespace: biological_process
-def: "Any process that activates or increases the rate or extent of binding, the selective interaction of a molecule with one or more specific sites on another molecule." [GOC:ai]
-synonym: "activation of binding" NARROW []
-synonym: "stimulation of binding" NARROW []
-synonym: "up regulation of binding" EXACT []
-synonym: "up-regulation of binding" EXACT []
-synonym: "upregulation of binding" EXACT []
-is_a: GO:0044093 ! positive regulation of molecular function
-is_a: GO:0051098 ! regulation of binding
-intersection_of: GO:0008150 ! biological_process
-intersection_of: positively_regulates GO:0005488 ! binding
-relationship: positively_regulates GO:0005488 ! binding
-
-[Term]
-id: GO:0051100
-name: negative regulation of binding
-namespace: biological_process
-def: "Any process that stops or reduces the rate or extent of binding, the selective interaction of a molecule with one or more specific sites on another molecule." [GOC:ai]
-synonym: "down regulation of binding" EXACT []
-synonym: "down-regulation of binding" EXACT []
-synonym: "downregulation of binding" EXACT []
-synonym: "inhibition of binding" NARROW []
-is_a: GO:0044092 ! negative regulation of molecular function
-is_a: GO:0051098 ! regulation of binding
-intersection_of: GO:0008150 ! biological_process
-intersection_of: negatively_regulates GO:0005488 ! binding
-relationship: negatively_regulates GO:0005488 ! binding
-
-[Term]
-id: GO:0051174
-name: regulation of phosphorus metabolic process
-namespace: biological_process
-def: "Any process that modulates the frequency, rate or extent of the chemical reactions and pathways involving phosphorus or compounds containing phosphorus." [GOC:ai]
-synonym: "regulation of phosphorus metabolism" EXACT []
-is_a: GO:0031323 ! regulation of cellular metabolic process
-intersection_of: GO:0008150 ! biological_process
-intersection_of: regulates GO:0006793 ! phosphorus metabolic process
-relationship: regulates GO:0006793 ! phosphorus metabolic process
-
-[Term]
 id: GO:0051179
 name: localization
 namespace: biological_process
@@ -5664,56 +4794,6 @@ is_a: GO:0051239 ! regulation of multicellular organismal process
 intersection_of: GO:0008150 ! biological_process
 intersection_of: negatively_regulates GO:0032501 ! multicellular organismal process
 relationship: negatively_regulates GO:0032501 ! multicellular organismal process
-
-[Term]
-id: GO:0051338
-name: regulation of transferase activity
-namespace: biological_process
-def: "Any process that modulates the frequency, rate or extent of transferase activity, the catalysis of the transfer of a group, e.g. a methyl group, glycosyl group, acyl group, phosphorus-containing, or other groups, from one compound (generally regarded as the donor) to another compound (generally regarded as the acceptor). Transferase is the systematic name for any enzyme of EC class 2." [EC:2.-.-.-, GOC:ai]
-comment: This term is useful for grouping, but is too general for manual annotation. Please use a child term instead.
-subset: gocheck_do_not_manually_annotate
-synonym: "transferase regulator" EXACT []
-is_a: GO:0050790 ! regulation of catalytic activity
-intersection_of: GO:0008150 ! biological_process
-intersection_of: regulates GO:0016740 ! transferase activity
-relationship: regulates GO:0016740 ! transferase activity
-
-[Term]
-id: GO:0051347
-name: positive regulation of transferase activity
-namespace: biological_process
-def: "Any process that activates or increases the frequency, rate or extent of transferase activity, the catalysis of the transfer of a group, e.g. a methyl group, glycosyl group, acyl group, phosphorus-containing, or other groups, from a donor compound to an acceptor." [GOC:ai]
-comment: This term is useful for grouping, but is too general for manual annotation. Please use a child term instead.
-subset: gocheck_do_not_manually_annotate
-synonym: "activation of transferase activity" NARROW []
-synonym: "stimulation of transferase activity" NARROW []
-synonym: "transferase activator" EXACT []
-synonym: "up regulation of transferase activity" EXACT []
-synonym: "up-regulation of transferase activity" EXACT []
-synonym: "upregulation of transferase activity" EXACT []
-is_a: GO:0043085 ! positive regulation of catalytic activity
-is_a: GO:0051338 ! regulation of transferase activity
-intersection_of: GO:0008150 ! biological_process
-intersection_of: positively_regulates GO:0016740 ! transferase activity
-relationship: positively_regulates GO:0016740 ! transferase activity
-
-[Term]
-id: GO:0051348
-name: negative regulation of transferase activity
-namespace: biological_process
-def: "Any process that stops or reduces the rate of transferase activity, the catalysis of the transfer of a group, e.g. a methyl group, glycosyl group, acyl group, phosphorus-containing, or other groups, from a donor compound to an acceptor." [GOC:ai]
-comment: This term is useful for grouping, but is too general for manual annotation. Please use a child term instead.
-subset: gocheck_do_not_manually_annotate
-synonym: "down regulation of transferase activity" EXACT []
-synonym: "down-regulation of transferase activity" EXACT []
-synonym: "downregulation of transferase activity" EXACT []
-synonym: "inhibition of transferase activity" NARROW []
-synonym: "transferase inhibitor" EXACT []
-is_a: GO:0043086 ! negative regulation of catalytic activity
-is_a: GO:0051338 ! regulation of transferase activity
-intersection_of: GO:0008150 ! biological_process
-intersection_of: negatively_regulates GO:0016740 ! transferase activity
-relationship: negatively_regulates GO:0016740 ! transferase activity
 
 [Term]
 id: GO:0051356
@@ -5920,7 +5000,7 @@ id: GO:0051952
 name: regulation of amine transport
 namespace: biological_process
 def: "Any process that modulates the frequency, rate or extent of the directed movement of amines into, out of or within a cell, or between cells, by means of some agent such as a transporter or pore." [GOC:ai]
-is_a: GO:0051049 ! regulation of transport
+is_a: GO:0044070 ! regulation of anion transport
 intersection_of: GO:0008150 ! biological_process
 intersection_of: regulates GO:0015837 ! amine transport
 relationship: regulates GO:0015837 ! amine transport
@@ -5934,8 +5014,8 @@ synonym: "down regulation of amine transport" EXACT []
 synonym: "down-regulation of amine transport" EXACT []
 synonym: "downregulation of amine transport" EXACT []
 synonym: "inhibition of amine transport" NARROW []
-is_a: GO:0051051 ! negative regulation of transport
 is_a: GO:0051952 ! regulation of amine transport
+is_a: GO:1903792 ! negative regulation of anion transport
 intersection_of: GO:0008150 ! biological_process
 intersection_of: negatively_regulates GO:0015837 ! amine transport
 relationship: negatively_regulates GO:0015837 ! amine transport
@@ -5950,8 +5030,8 @@ synonym: "stimulation of amine transport" NARROW []
 synonym: "up regulation of amine transport" EXACT []
 synonym: "up-regulation of amine transport" EXACT []
 synonym: "upregulation of amine transport" EXACT []
-is_a: GO:0051050 ! positive regulation of transport
 is_a: GO:0051952 ! regulation of amine transport
+is_a: GO:1903793 ! positive regulation of anion transport
 intersection_of: GO:0008150 ! biological_process
 intersection_of: positively_regulates GO:0015837 ! amine transport
 relationship: positively_regulates GO:0015837 ! amine transport
@@ -5962,7 +5042,6 @@ name: regulation of amino acid transport
 namespace: biological_process
 def: "Any process that modulates the frequency, rate or extent of the directed movement of amino acids into, out of or within a cell, or between cells, by means of some agent such as a transporter or pore." [GOC:ai]
 is_a: GO:0032890 ! regulation of organic acid transport
-is_a: GO:0044070 ! regulation of anion transport
 is_a: GO:0051952 ! regulation of amine transport
 intersection_of: GO:0008150 ! biological_process
 intersection_of: regulates GO:0006865 ! amino acid transport
@@ -5981,7 +5060,6 @@ synonym: "negative regulation of amino acid transmembrane transport" EXACT [GOC:
 is_a: GO:0032891 ! negative regulation of organic acid transport
 is_a: GO:0051953 ! negative regulation of amine transport
 is_a: GO:0051955 ! regulation of amino acid transport
-is_a: GO:1903792 ! negative regulation of anion transport
 intersection_of: GO:0008150 ! biological_process
 intersection_of: negatively_regulates GO:0006865 ! amino acid transport
 relationship: negatively_regulates GO:0006865 ! amino acid transport
@@ -6000,7 +5078,6 @@ synonym: "upregulation of amino acid transport" EXACT []
 is_a: GO:0032892 ! positive regulation of organic acid transport
 is_a: GO:0051954 ! positive regulation of amine transport
 is_a: GO:0051955 ! regulation of amino acid transport
-is_a: GO:1903793 ! positive regulation of anion transport
 intersection_of: GO:0008150 ! biological_process
 intersection_of: positively_regulates GO:0006865 ! amino acid transport
 relationship: positively_regulates GO:0006865 ! amino acid transport
@@ -6047,39 +5124,12 @@ intersection_of: positively_regulates GO:0035249 ! synaptic transmission, glutam
 relationship: positively_regulates GO:0035249 ! synaptic transmission, glutamatergic
 
 [Term]
-id: GO:0055085
-name: transmembrane transport
-namespace: biological_process
-alt_id: GO:0090662
-def: "The process in which a solute is transported across a lipid bilayer, from one side of a membrane to the other." [GOC:dph, GOC:jid]
-comment: Transmembrane transport is the transport of a solute across a lipid bilayer. Note that transport through the nuclear pore complex is not transmembrane because the nuclear membrane is a double membrane and is not traversed. For transport through the nuclear pore, consider instead the term 'nucleocytoplasmic transport ; GO:0006913' and its children. Note also that this term is not intended for use in annotating lateral movement within membranes.
-subset: goslim_chembl
-subset: goslim_generic
-subset: goslim_pombe
-subset: goslim_yeast
-synonym: "ATP hydrolysis coupled transmembrane transport" NARROW []
-synonym: "membrane transport" EXACT []
-is_a: GO:0006810 ! transport
-is_a: GO:0009987 ! cellular process
-created_by: tb
-creation_date: 2015-10-21T13:22:47Z
-
-[Term]
 id: GO:0060004
 name: reflex
 namespace: biological_process
 def: "An automatic response to a stimulus beginning with a nerve impulse from a receptor and ending with the action of an effector such as a gland or a muscle. Signaling never reaches a level of consciousness." [GOC:dph, ISBN:0877797099]
 xref: Wikipedia:Reflex
 is_a: GO:0009605 ! response to external stimulus
-
-[Term]
-id: GO:0060089
-name: molecular transducer activity
-namespace: molecular_function
-def: "A compound molecular function in which an effector function is controlled by one or more regulatory components." [GOC:dos, GOC:pdt]
-subset: gocheck_do_not_manually_annotate
-subset: goslim_pir
-is_a: GO:0003674 ! molecular_function
 
 [Term]
 id: GO:0060096
@@ -6095,6 +5145,13 @@ id: GO:0060179
 name: male mating behavior
 namespace: biological_process
 def: "The specific behavior of a male organism that is associated with reproduction." [GOC:dph, GOC:pr, GOC:tb]
+is_a: GO:0007617 ! mating behavior
+
+[Term]
+id: GO:0060180
+name: female mating behavior
+namespace: biological_process
+def: "The specific behavior of a female organism that is associated with reproduction." [GOC:dph, GOC:pr, GOC:tb]
 is_a: GO:0007617 ! mating behavior
 
 [Term]
@@ -6223,7 +5280,6 @@ id: GO:0061531
 name: primary amine secretion
 namespace: biological_process
 def: "The regulated release of a primary amine by a cell." [GOC:dph]
-is_a: GO:0015695 ! organic cation transport
 is_a: GO:0015837 ! amine transport
 is_a: GO:0032940 ! secretion by cell
 created_by: dph
@@ -6297,6 +5353,7 @@ id: GO:0061545
 name: tyramine secretion
 namespace: biological_process
 def: "The regulated release of a tyramine by a cell." [GOC:dph]
+is_a: GO:0006812 ! cation transport
 is_a: GO:0015844 ! monoamine transport
 is_a: GO:0015850 ! organic hydroxy compound transport
 is_a: GO:0061531 ! primary amine secretion
@@ -6363,20 +5420,6 @@ synonym: "regulation of biological characteristic" EXACT []
 is_a: GO:0065007 ! biological regulation
 
 [Term]
-id: GO:0065009
-name: regulation of molecular function
-namespace: biological_process
-def: "Any process that modulates the frequency, rate or extent of a molecular function, an elemental biological activity occurring at the molecular level, such as catalysis or binding." [GOC:isa_complete]
-subset: gocheck_do_not_annotate
-subset: goslim_pir
-subset: goslim_plant
-synonym: "regulation of a molecular function" EXACT []
-is_a: GO:0065007 ! biological regulation
-intersection_of: GO:0008150 ! biological_process
-intersection_of: regulates GO:0003674 ! molecular_function
-relationship: regulates GO:0003674 ! molecular_function
-
-[Term]
 id: GO:0070887
 name: cellular response to chemical stimulus
 namespace: biological_process
@@ -6432,16 +5475,6 @@ is_a: GO:0009628 ! response to abiotic stimulus
 is_a: GO:0104004 ! cellular response to environmental stimulus
 created_by: mah
 creation_date: 2009-12-03T01:02:11Z
-
-[Term]
-id: GO:0071236
-name: cellular response to antibiotic
-namespace: biological_process
-def: "Any process that results in a change in state or activity of a cell (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of an antibiotic stimulus. An antibiotic is a chemical substance produced by a microorganism which has the capacity to inhibit the growth of or to kill other microorganisms." [GOC:mah]
-is_a: GO:0046677 ! response to antibiotic
-is_a: GO:0070887 ! cellular response to chemical stimulus
-created_by: mah
-creation_date: 2009-12-03T02:23:49Z
 
 [Term]
 id: GO:0071310
@@ -6521,16 +5554,6 @@ created_by: mah
 creation_date: 2009-12-14T04:07:27Z
 
 [Term]
-id: GO:0071466
-name: cellular response to xenobiotic stimulus
-namespace: biological_process
-def: "Any process that results in a change in state or activity of a cell (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of a xenobiotic compound stimulus. Xenobiotic compounds are compounds foreign to living organisms." [GOC:mah]
-is_a: GO:0009410 ! response to xenobiotic stimulus
-is_a: GO:0070887 ! cellular response to chemical stimulus
-created_by: mah
-creation_date: 2009-12-18T11:38:48Z
-
-[Term]
 id: GO:0071478
 name: cellular response to radiation
 namespace: biological_process
@@ -6588,7 +5611,7 @@ id: GO:0071702
 name: organic substance transport
 namespace: biological_process
 def: "The directed movement of organic substances into, out of or within a cell, or between cells, or within a multicellular organism by means of some agent such as a transporter or pore. An organic substance is a molecular entity that contains carbon." [GOC:mah]
-is_a: GO:0006810 ! transport
+is_a: GO:0006820 ! anion transport
 created_by: mah
 creation_date: 2010-03-08T02:15:14Z
 
@@ -6654,7 +5677,7 @@ id: GO:0090087
 name: regulation of peptide transport
 namespace: biological_process
 def: "Any process that modulates the frequency, rate or extent of the directed movement of peptides, compounds of two or more amino acids where the alpha carboxyl group of one is bound to the alpha amino group of another, into, out of or within a cell, or between cells, by means of some agent such as a transporter or pore." [GOC:dph, GOC:tb]
-is_a: GO:0051049 ! regulation of transport
+is_a: GO:0044070 ! regulation of anion transport
 intersection_of: GO:0008150 ! biological_process
 intersection_of: regulates GO:0015833 ! peptide transport
 relationship: regulates GO:0015833 ! peptide transport
@@ -6758,6 +5781,16 @@ created_by: tb
 creation_date: 2010-05-14T10:37:22Z
 
 [Term]
+id: GO:0090659
+name: walking behavior
+namespace: biological_process
+def: "The behavior of an organism relating to the progression of that organism along the ground by the process of lifting and setting down each leg." [GOC:tb]
+synonym: "locomotor gait pattern" NARROW []
+is_a: GO:0007626 ! locomotory behavior
+created_by: tb
+creation_date: 2015-08-27T16:34:28Z
+
+[Term]
 id: GO:0097060
 name: synaptic membrane
 namespace: cellular_component
@@ -6831,18 +5864,6 @@ is_a: GO:0097306 ! cellular response to alcohol
 is_a: GO:0097307 ! response to farnesol
 created_by: pr
 creation_date: 2012-05-15T03:54:01Z
-
-[Term]
-id: GO:0097458
-name: obsolete neuron part
-namespace: cellular_component
-def: "OBSOLETE. Any constituent part of a neuron, the basic cellular unit of nervous tissue. A typical neuron consists of a cell body (often called the soma), an axon, and dendrites. Their purpose is to receive, conduct, and transmit impulses in the nervous system." [GOC:pr, Wikipedia:Neuron]
-subset: gocheck_do_not_annotate
-subset: goslim_flybase_ribbon
-is_obsolete: true
-consider: CL:0000540
-created_by: pr
-creation_date: 2012-12-19T16:53:50Z
 
 [Term]
 id: GO:0098509
@@ -6954,15 +5975,6 @@ intersection_of: part_of GO:0005886 ! plasma membrane
 relationship: part_of GO:0005886 ! plasma membrane
 created_by: dos
 creation_date: 2014-03-06T11:55:32Z
-
-[Term]
-id: GO:0098772
-name: molecular function regulator
-namespace: molecular_function
-def: "A molecular function that modulates the activity of a gene product or complex.  Examples include enzyme regulators and channel regulators." [GOC:dos, GOC:pt]
-subset: goslim_flybase_ribbon
-is_a: GO:0003674 ! molecular_function
-relationship: part_of GO:0065009 ! regulation of molecular function
 
 [Term]
 id: GO:0098793
@@ -7117,16 +6129,6 @@ created_by: krc
 creation_date: 2017-03-21T17:26:07Z
 
 [Term]
-id: GO:0120038
-name: obsolete plasma membrane bounded cell projection part
-namespace: cellular_component
-def: "OBSOLETE. Any constituent part of a plasma membrane bounded cell projection, a prolongation or process extending from a cell, e.g. a cilium or axon." [GOC:krc]
-is_obsolete: true
-consider: GO:0120025
-created_by: krc
-creation_date: 2017-04-28T17:20:43Z
-
-[Term]
 id: GO:0120168
 name: detection of hot stimulus involved in thermoception
 namespace: biological_process
@@ -7170,52 +6172,73 @@ created_by: pg
 creation_date: 2019-05-22T11:20:45Z
 
 [Term]
-id: GO:1900120
-name: regulation of receptor binding
+id: GO:0140353
+name: lipid export from cell
 namespace: biological_process
-def: "Any process that modulates the frequency, rate or extent of a protein or other molecule binding to a receptor." [GOC:signaling, GOC:TermGenie]
-synonym: "regulation of receptor ligand" NARROW [GOC:TermGenie]
-is_a: GO:0043393 ! regulation of protein binding
-intersection_of: GO:0008150 ! biological_process
-intersection_of: regulates GO:0005102 ! signaling receptor binding
-relationship: regulates GO:0005102 ! signaling receptor binding
-created_by: bf
-creation_date: 2012-02-22T11:40:53Z
+def: "The directed movement of a lipid from a cell, into the extracellular region." [GOC:pg]
+synonym: "lipid efflux" BROAD []
+is_a: GO:0006869 ! lipid transport
+is_a: GO:0140352 ! export from cell
+created_by: pg
+creation_date: 2019-05-22T11:33:07Z
 
 [Term]
-id: GO:1900121
-name: negative regulation of receptor binding
+id: GO:1901045
+name: negative regulation of oviposition
 namespace: biological_process
-def: "Any process that stops, prevents or reduces the frequency, rate or extent of a protein or other molecule binding to a receptor." [GOC:signaling, GOC:TermGenie]
-synonym: "down regulation of receptor binding" EXACT [GOC:TermGenie]
-synonym: "down regulation of receptor-associated protein activity" RELATED [GOC:TermGenie]
-synonym: "down-regulation of receptor binding" EXACT [GOC:TermGenie]
-synonym: "downregulation of receptor binding" EXACT [GOC:TermGenie]
-synonym: "inhibition of receptor binding" NARROW [GOC:TermGenie]
-synonym: "inhibition of receptor ligand" NARROW [GOC:TermGenie]
-is_a: GO:0032091 ! negative regulation of protein binding
-is_a: GO:1900120 ! regulation of receptor binding
+def: "Any process that stops, prevents or reduces the frequency, rate or extent of oviposition." [GOC:kmv, GOC:TermGenie]
+synonym: "down regulation of egg laying" BROAD [GOC:TermGenie]
+synonym: "down regulation of egg-laying" BROAD [GOC:TermGenie]
+synonym: "down regulation of oviposition" EXACT [GOC:TermGenie]
+synonym: "down-regulation of egg laying" BROAD [GOC:TermGenie]
+synonym: "down-regulation of egg-laying" BROAD [GOC:TermGenie]
+synonym: "down-regulation of oviposition" EXACT [GOC:TermGenie]
+synonym: "downregulation of egg laying" BROAD [GOC:TermGenie]
+synonym: "downregulation of egg-laying" BROAD [GOC:TermGenie]
+synonym: "downregulation of oviposition" EXACT [GOC:TermGenie]
+synonym: "inhibition of egg laying" BROAD [GOC:TermGenie]
+synonym: "inhibition of egg-laying" BROAD [GOC:TermGenie]
+synonym: "inhibition of oviposition" NARROW [GOC:TermGenie]
+synonym: "negative regulation of egg laying" BROAD [GOC:TermGenie]
+synonym: "negative regulation of egg-laying" BROAD [GOC:TermGenie]
+is_a: GO:0046662 ! regulation of oviposition
+is_a: GO:0048521 ! negative regulation of behavior
+is_a: GO:0051241 ! negative regulation of multicellular organismal process
+is_a: GO:2000242 ! negative regulation of reproductive process
 intersection_of: GO:0008150 ! biological_process
-intersection_of: negatively_regulates GO:0005102 ! signaling receptor binding
-relationship: negatively_regulates GO:0005102 ! signaling receptor binding
-created_by: bf
-creation_date: 2012-02-22T11:40:57Z
+intersection_of: negatively_regulates GO:0018991 ! oviposition
+relationship: negatively_regulates GO:0018991 ! oviposition
+created_by: kmv
+creation_date: 2012-06-27T06:19:58Z
 
 [Term]
-id: GO:1900122
-name: positive regulation of receptor binding
+id: GO:1901046
+name: positive regulation of oviposition
 namespace: biological_process
-def: "Any process that activates or increases the frequency, rate or extent of a protein or other molecule binding to a receptor." [GOC:signaling, GOC:TermGenie]
-synonym: "activation of receptor binding" NARROW [GOC:TermGenie]
-synonym: "up regulation of receptor binding" EXACT [GOC:TermGenie]
-synonym: "upregulation of receptor binding" EXACT [GOC:TermGenie]
-is_a: GO:0032092 ! positive regulation of protein binding
-is_a: GO:1900120 ! regulation of receptor binding
+def: "Any process that activates or increases the frequency, rate or extent of oviposition." [GOC:kmv, GOC:TermGenie]
+synonym: "activation of egg laying" BROAD [GOC:TermGenie]
+synonym: "activation of egg-laying" BROAD [GOC:TermGenie]
+synonym: "activation of oviposition" NARROW [GOC:TermGenie]
+synonym: "positive regulation of egg laying" BROAD [GOC:TermGenie]
+synonym: "positive regulation of egg-laying" BROAD [GOC:TermGenie]
+synonym: "up regulation of egg laying" BROAD [GOC:TermGenie]
+synonym: "up regulation of egg-laying" BROAD [GOC:TermGenie]
+synonym: "up regulation of oviposition" EXACT [GOC:TermGenie]
+synonym: "up-regulation of egg laying" BROAD [GOC:TermGenie]
+synonym: "up-regulation of egg-laying" BROAD [GOC:TermGenie]
+synonym: "up-regulation of oviposition" EXACT [GOC:TermGenie]
+synonym: "upregulation of egg laying" BROAD [GOC:TermGenie]
+synonym: "upregulation of egg-laying" BROAD [GOC:TermGenie]
+synonym: "upregulation of oviposition" EXACT [GOC:TermGenie]
+is_a: GO:0046662 ! regulation of oviposition
+is_a: GO:0048520 ! positive regulation of behavior
+is_a: GO:0051240 ! positive regulation of multicellular organismal process
+is_a: GO:2000243 ! positive regulation of reproductive process
 intersection_of: GO:0008150 ! biological_process
-intersection_of: positively_regulates GO:0005102 ! signaling receptor binding
-relationship: positively_regulates GO:0005102 ! signaling receptor binding
-created_by: bf
-creation_date: 2012-02-22T11:41:00Z
+intersection_of: positively_regulates GO:0018991 ! oviposition
+relationship: positively_regulates GO:0018991 ! oviposition
+created_by: kmv
+creation_date: 2012-06-27T06:20:20Z
 
 [Term]
 id: GO:1901181
@@ -7398,124 +6421,6 @@ intersection_of: positively_regulates GO:0060179 ! male mating behavior
 relationship: positively_regulates GO:0060179 ! male mating behavior
 created_by: mm2
 creation_date: 2013-10-09T15:50:14Z
-
-[Term]
-id: GO:1902531
-name: regulation of intracellular signal transduction
-namespace: biological_process
-alt_id: GO:0010627
-def: "Any process that modulates the frequency, rate or extent of intracellular signal transduction." [GOC:dph, GOC:signaling, GOC:tb, GOC:TermGenie]
-synonym: "regulation of intracellular protein kinase cascade" NARROW []
-synonym: "regulation of intracellular signal transduction pathway" NARROW [GOC:TermGenie]
-synonym: "regulation of intracellular signaling cascade" EXACT [GOC:TermGenie]
-synonym: "regulation of intracellular signaling chain" EXACT [GOC:TermGenie]
-synonym: "regulation of intracellular signaling pathway" RELATED [GOC:TermGenie]
-synonym: "regulation of signal transduction via intracellular signaling cascade" RELATED [GOC:TermGenie]
-synonym: "regulation of signal transmission via intracellular cascade" NARROW [GOC:TermGenie]
-is_a: GO:0009966 ! regulation of signal transduction
-intersection_of: GO:0008150 ! biological_process
-intersection_of: regulates GO:0035556 ! intracellular signal transduction
-relationship: regulates GO:0035556 ! intracellular signal transduction
-created_by: bf
-creation_date: 2013-12-02T11:32:52Z
-
-[Term]
-id: GO:1902532
-name: negative regulation of intracellular signal transduction
-namespace: biological_process
-alt_id: GO:0010741
-def: "Any process that stops, prevents or reduces the frequency, rate or extent of intracellular signal transduction." [GOC:dph, GOC:signaling, GOC:tb, GOC:TermGenie]
-synonym: "down regulation of intracellular signal transduction" EXACT [GOC:TermGenie]
-synonym: "down regulation of intracellular signal transduction pathway" NARROW [GOC:TermGenie]
-synonym: "down regulation of intracellular signaling cascade" NARROW [GOC:TermGenie]
-synonym: "down regulation of intracellular signaling chain" EXACT [GOC:TermGenie]
-synonym: "down regulation of intracellular signaling pathway" RELATED [GOC:TermGenie]
-synonym: "down regulation of signal transduction via intracellular signaling cascade" RELATED [GOC:TermGenie]
-synonym: "down regulation of signal transmission via intracellular cascade" NARROW [GOC:TermGenie]
-synonym: "down-regulation of intracellular signal transduction" EXACT [GOC:TermGenie]
-synonym: "down-regulation of intracellular signal transduction pathway" NARROW [GOC:TermGenie]
-synonym: "down-regulation of intracellular signaling cascade" RELATED [GOC:TermGenie]
-synonym: "down-regulation of intracellular signaling chain" EXACT [GOC:TermGenie]
-synonym: "down-regulation of intracellular signaling pathway" RELATED [GOC:TermGenie]
-synonym: "down-regulation of signal transduction via intracellular signaling cascade" RELATED [GOC:TermGenie]
-synonym: "down-regulation of signal transmission via intracellular cascade" RELATED [GOC:TermGenie]
-synonym: "downregulation of intracellular signal transduction" EXACT [GOC:TermGenie]
-synonym: "downregulation of intracellular signal transduction pathway" NARROW [GOC:TermGenie]
-synonym: "downregulation of intracellular signaling cascade" NARROW [GOC:TermGenie]
-synonym: "downregulation of intracellular signaling chain" EXACT [GOC:TermGenie]
-synonym: "downregulation of intracellular signaling pathway" RELATED [GOC:TermGenie]
-synonym: "downregulation of signal transduction via intracellular signaling cascade" RELATED [GOC:TermGenie]
-synonym: "downregulation of signal transmission via intracellular cascade" NARROW [GOC:TermGenie]
-synonym: "inhibition of intracellular signal transduction" NARROW [GOC:TermGenie]
-synonym: "inhibition of intracellular signal transduction pathway" NARROW [GOC:TermGenie]
-synonym: "inhibition of intracellular signaling cascade" NARROW [GOC:TermGenie]
-synonym: "inhibition of intracellular signaling chain" NARROW [GOC:TermGenie]
-synonym: "inhibition of intracellular signaling pathway" RELATED [GOC:TermGenie]
-synonym: "inhibition of signal transduction via intracellular signaling cascade" RELATED [GOC:TermGenie]
-synonym: "inhibition of signal transmission via intracellular cascade" NARROW [GOC:TermGenie]
-synonym: "negative regulation of intracellular protein kinase cascade" EXACT []
-synonym: "negative regulation of intracellular signal transduction pathway" NARROW [GOC:TermGenie]
-synonym: "negative regulation of intracellular signaling cascade" EXACT [GOC:TermGenie]
-synonym: "negative regulation of intracellular signaling chain" EXACT [GOC:TermGenie]
-synonym: "negative regulation of intracellular signaling pathway" RELATED [GOC:TermGenie]
-synonym: "negative regulation of signal transduction via intracellular signaling cascade" RELATED [GOC:TermGenie]
-synonym: "negative regulation of signal transmission via intracellular cascade" NARROW [GOC:TermGenie]
-is_a: GO:0009968 ! negative regulation of signal transduction
-is_a: GO:1902531 ! regulation of intracellular signal transduction
-intersection_of: GO:0008150 ! biological_process
-intersection_of: negatively_regulates GO:0035556 ! intracellular signal transduction
-relationship: negatively_regulates GO:0035556 ! intracellular signal transduction
-created_by: bf
-creation_date: 2013-12-02T11:33:01Z
-
-[Term]
-id: GO:1902533
-name: positive regulation of intracellular signal transduction
-namespace: biological_process
-alt_id: GO:0010740
-def: "Any process that activates or increases the frequency, rate or extent of intracellular signal transduction." [GOC:BHF, GOC:dph, GOC:signaling, GOC:tb, GOC:TermGenie]
-synonym: "activation of intracellular signal transduction" NARROW [GOC:TermGenie]
-synonym: "activation of intracellular signal transduction pathway" NARROW [GOC:TermGenie]
-synonym: "activation of intracellular signaling cascade" NARROW [GOC:TermGenie]
-synonym: "activation of intracellular signaling chain" NARROW [GOC:TermGenie]
-synonym: "activation of intracellular signaling pathway" RELATED [GOC:TermGenie]
-synonym: "activation of signal transduction via intracellular signaling cascade" RELATED [GOC:TermGenie]
-synonym: "activation of signal transmission via intracellular cascade" NARROW [GOC:TermGenie]
-synonym: "positive regulation of intracellular protein kinase cascade" NARROW []
-synonym: "positive regulation of intracellular signal transduction pathway" NARROW [GOC:TermGenie]
-synonym: "positive regulation of intracellular signaling cascade" RELATED [GOC:TermGenie]
-synonym: "positive regulation of intracellular signaling chain" EXACT [GOC:TermGenie]
-synonym: "positive regulation of intracellular signaling pathway" RELATED [GOC:TermGenie]
-synonym: "positive regulation of signal transduction via intracellular signaling cascade" RELATED [GOC:TermGenie]
-synonym: "positive regulation of signal transmission via intracellular cascade" NARROW [GOC:TermGenie]
-synonym: "up regulation of intracellular signal transduction" EXACT [GOC:TermGenie]
-synonym: "up regulation of intracellular signal transduction pathway" NARROW [GOC:TermGenie]
-synonym: "up regulation of intracellular signaling cascade" RELATED [GOC:TermGenie]
-synonym: "up regulation of intracellular signaling chain" EXACT [GOC:TermGenie]
-synonym: "up regulation of intracellular signaling pathway" RELATED [GOC:TermGenie]
-synonym: "up regulation of signal transduction via intracellular signaling cascade" RELATED [GOC:TermGenie]
-synonym: "up regulation of signal transmission via intracellular cascade" NARROW [GOC:TermGenie]
-synonym: "up-regulation of intracellular signal transduction" EXACT [GOC:TermGenie]
-synonym: "up-regulation of intracellular signal transduction pathway" NARROW [GOC:TermGenie]
-synonym: "up-regulation of intracellular signaling cascade" RELATED [GOC:TermGenie]
-synonym: "up-regulation of intracellular signaling chain" EXACT [GOC:TermGenie]
-synonym: "up-regulation of intracellular signaling pathway" RELATED [GOC:TermGenie]
-synonym: "up-regulation of signal transduction via intracellular signaling cascade" RELATED [GOC:TermGenie]
-synonym: "up-regulation of signal transmission via intracellular cascade" NARROW [GOC:TermGenie]
-synonym: "upregulation of intracellular signal transduction" EXACT [GOC:TermGenie]
-synonym: "upregulation of intracellular signal transduction pathway" NARROW [GOC:TermGenie]
-synonym: "upregulation of intracellular signaling cascade" RELATED [GOC:TermGenie]
-synonym: "upregulation of intracellular signaling chain" EXACT [GOC:TermGenie]
-synonym: "upregulation of intracellular signaling pathway" RELATED [GOC:TermGenie]
-synonym: "upregulation of signal transduction via intracellular signaling cascade" RELATED [GOC:TermGenie]
-synonym: "upregulation of signal transmission via intracellular cascade" NARROW [GOC:TermGenie]
-is_a: GO:0009967 ! positive regulation of signal transduction
-is_a: GO:1902531 ! regulation of intracellular signal transduction
-intersection_of: GO:0008150 ! biological_process
-intersection_of: positively_regulates GO:0035556 ! intracellular signal transduction
-relationship: positively_regulates GO:0035556 ! intracellular signal transduction
-created_by: bf
-creation_date: 2013-12-02T11:33:10Z
 
 [Term]
 id: GO:1903294
@@ -8232,6 +7137,47 @@ created_by: tb
 creation_date: 2010-08-05T11:25:59Z
 
 [Term]
+id: GO:2000191
+name: regulation of fatty acid transport
+namespace: biological_process
+def: "Any process that modulates the frequency, rate or extent of fatty acid transport." [GOC:BHF]
+is_a: GO:0032368 ! regulation of lipid transport
+is_a: GO:0032890 ! regulation of organic acid transport
+intersection_of: GO:0008150 ! biological_process
+intersection_of: regulates GO:0015908 ! fatty acid transport
+relationship: regulates GO:0015908 ! fatty acid transport
+created_by: rl
+creation_date: 2010-10-18T10:37:13Z
+
+[Term]
+id: GO:2000192
+name: negative regulation of fatty acid transport
+namespace: biological_process
+def: "Any process that stops, prevents, or reduces the frequency, rate or extent of fatty acid transport." [GOC:BHF]
+is_a: GO:0032369 ! negative regulation of lipid transport
+is_a: GO:0032891 ! negative regulation of organic acid transport
+is_a: GO:2000191 ! regulation of fatty acid transport
+intersection_of: GO:0008150 ! biological_process
+intersection_of: negatively_regulates GO:0015908 ! fatty acid transport
+relationship: negatively_regulates GO:0015908 ! fatty acid transport
+created_by: rl
+creation_date: 2010-10-18T10:37:15Z
+
+[Term]
+id: GO:2000193
+name: positive regulation of fatty acid transport
+namespace: biological_process
+def: "Any process that activates or increases the frequency, rate or extent of fatty acid transport." [GOC:BHF]
+is_a: GO:0032370 ! positive regulation of lipid transport
+is_a: GO:0032892 ! positive regulation of organic acid transport
+is_a: GO:2000191 ! regulation of fatty acid transport
+intersection_of: GO:0008150 ! biological_process
+intersection_of: positively_regulates GO:0015908 ! fatty acid transport
+relationship: positively_regulates GO:0015908 ! fatty acid transport
+created_by: rl
+creation_date: 2010-10-18T10:37:17Z
+
+[Term]
 id: GO:2000241
 name: regulation of reproductive process
 namespace: biological_process
@@ -8306,33 +7252,6 @@ created_by: yaf
 creation_date: 2010-11-18T11:24:18Z
 
 [Term]
-id: GO:2000272
-name: negative regulation of signaling receptor activity
-namespace: biological_process
-def: "Any process that stops, prevents or reduces the frequency, rate or extent of a signaling receptor activity." [GOC:obol]
-synonym: "negative regulation of receptor activity" BROAD []
-is_a: GO:0010469 ! regulation of signaling receptor activity
-is_a: GO:0044092 ! negative regulation of molecular function
-intersection_of: GO:0008150 ! biological_process
-intersection_of: negatively_regulates GO:0038023 ! signaling receptor activity
-relationship: negatively_regulates GO:0038023 ! signaling receptor activity
-created_by: bf
-creation_date: 2010-12-02T09:28:47Z
-
-[Term]
-id: GO:2000273
-name: positive regulation of signaling receptor activity
-namespace: biological_process
-def: "Any process that activates or increases the frequency, rate or extent of signaling receptor activity." [GOC:obol]
-is_a: GO:0010469 ! regulation of signaling receptor activity
-is_a: GO:0044093 ! positive regulation of molecular function
-intersection_of: GO:0008150 ! biological_process
-intersection_of: positively_regulates GO:0038023 ! signaling receptor activity
-relationship: positively_regulates GO:0038023 ! signaling receptor activity
-created_by: bf
-creation_date: 2010-12-02T09:28:50Z
-
-[Term]
 id: GO:2000821
 name: regulation of grooming behavior
 namespace: biological_process
@@ -8344,91 +7263,6 @@ intersection_of: regulates GO:0007625 ! grooming behavior
 relationship: regulates GO:0007625 ! grooming behavior
 created_by: rl
 creation_date: 2011-07-14T04:48:12Z
-
-[Term]
-id: GO:2001023
-name: regulation of response to drug
-namespace: biological_process
-def: "Any process that modulates the frequency, rate or extent of response to drug." [GOC:obol]
-synonym: "regulation of drug resistance" RELATED [GOC:obol]
-synonym: "regulation of drug susceptibility/resistance" RELATED [GOC:obol]
-is_a: GO:0048583 ! regulation of response to stimulus
-intersection_of: GO:0008150 ! biological_process
-intersection_of: regulates GO:0042493 ! response to drug
-relationship: regulates GO:0042493 ! response to drug
-created_by: yaf
-creation_date: 2011-08-19T01:47:20Z
-
-[Term]
-id: GO:2001024
-name: negative regulation of response to drug
-namespace: biological_process
-def: "Any process that stops, prevents or reduces the frequency, rate or extent of response to drug." [GOC:obol]
-synonym: "negative regulation of drug resistance" RELATED [GOC:obol]
-synonym: "negative regulation of drug susceptibility/resistance" RELATED [GOC:obol]
-is_a: GO:0048585 ! negative regulation of response to stimulus
-is_a: GO:2001023 ! regulation of response to drug
-intersection_of: GO:0008150 ! biological_process
-intersection_of: negatively_regulates GO:0042493 ! response to drug
-relationship: negatively_regulates GO:0042493 ! response to drug
-created_by: yaf
-creation_date: 2011-08-19T01:47:24Z
-
-[Term]
-id: GO:2001025
-name: positive regulation of response to drug
-namespace: biological_process
-def: "Any process that activates or increases the frequency, rate or extent of response to drug." [GOC:obol]
-synonym: "positive regulation of drug resistance" RELATED [GOC:obol]
-synonym: "positive regulation of drug susceptibility/resistance" RELATED [GOC:obol]
-is_a: GO:0048584 ! positive regulation of response to stimulus
-is_a: GO:2001023 ! regulation of response to drug
-intersection_of: GO:0008150 ! biological_process
-intersection_of: positively_regulates GO:0042493 ! response to drug
-relationship: positively_regulates GO:0042493 ! response to drug
-created_by: yaf
-creation_date: 2011-08-19T01:47:27Z
-
-[Term]
-id: GO:2001038
-name: regulation of cellular response to drug
-namespace: biological_process
-def: "Any process that modulates the frequency, rate or extent of cellular response to drug." [GOC:obol]
-is_a: GO:0050794 ! regulation of cellular process
-is_a: GO:2001023 ! regulation of response to drug
-intersection_of: GO:0008150 ! biological_process
-intersection_of: regulates GO:0035690 ! cellular response to drug
-relationship: regulates GO:0035690 ! cellular response to drug
-created_by: yaf
-creation_date: 2011-08-27T04:12:19Z
-
-[Term]
-id: GO:2001039
-name: negative regulation of cellular response to drug
-namespace: biological_process
-def: "Any process that stops, prevents or reduces the frequency, rate or extent of cellular response to drug." [GOC:obol]
-is_a: GO:0048523 ! negative regulation of cellular process
-is_a: GO:2001024 ! negative regulation of response to drug
-is_a: GO:2001038 ! regulation of cellular response to drug
-intersection_of: GO:0008150 ! biological_process
-intersection_of: negatively_regulates GO:0035690 ! cellular response to drug
-relationship: negatively_regulates GO:0035690 ! cellular response to drug
-created_by: yaf
-creation_date: 2011-08-27T04:12:23Z
-
-[Term]
-id: GO:2001040
-name: positive regulation of cellular response to drug
-namespace: biological_process
-def: "Any process that activates or increases the frequency, rate or extent of cellular response to drug." [GOC:obol]
-is_a: GO:0048522 ! positive regulation of cellular process
-is_a: GO:2001025 ! positive regulation of response to drug
-is_a: GO:2001038 ! regulation of cellular response to drug
-intersection_of: GO:0008150 ! biological_process
-intersection_of: positively_regulates GO:0035690 ! cellular response to drug
-relationship: positively_regulates GO:0035690 ! cellular response to drug
-created_by: yaf
-creation_date: 2011-08-27T04:12:25Z
 
 [Typedef]
 id: has_part
@@ -8473,12 +7307,4 @@ name: regulates
 namespace: external
 xref: RO:0002211
 is_transitive: true
-
-[Typedef]
-id: term_tracker_item
-name: term tracker item
-namespace: external
-xref: IAO:0000233
-is_metadata_tag: true
-is_class_level: true
 
