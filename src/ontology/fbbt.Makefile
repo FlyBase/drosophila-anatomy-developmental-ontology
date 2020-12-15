@@ -154,7 +154,7 @@ fly_anatomy.obo: tmp/fbbt-obj.obo rem_flybase.txt
 		convert -f obo --check false -o $@.tmp.obo
 	cat $@.tmp.obo | sed '/./{H;$!d;} ; x ; s/\(\[Typedef\]\nid:[ ]\)\([[:lower:][:punct:]]*\n\)\(name:[ ]\)\([[:lower:][:punct:] ]*\n\)/\1\2\3\2/' | grep -v property_value: | grep -v ^owl-axioms | sed 's/^default-namespace: fly_anatomy.ontology/default-namespace: FlyBase anatomy CV/' | grep -v ^expand_expression_to | grep -v gci_filler | grep -v '^namespace: uberon' | grep -v '^namespace: chebi_ontology' | grep -v '^is_cyclic: false' | grep -v 'FlyBase_miscellaneous_CV' | sed '/^date[:]/c\date: $(OBODATE)' | sed '/^data-version[:]/c\data-version: $(DATE)' > $@  && rm $@.tmp.obo
 	$(ROBOT) convert --input $@ -f obo --output $@
-	sed -i 's/^xref[:][ ]OBO_REL[:]part_of/xref_analog: OBO_REL:part_of/ ; s/^xref: OBO_REL:has_part/xref_analog: OBO_REL:has_part/' $@
+	sed -i 's/^xref[:][ ]OBO_REL[:]\(.*\)/xref_analog: OBO_REL:\1/' $@
 
 post_release: fly_anatomy.obo reports/chado_load_check_simple.txt
 	cp fly_anatomy.obo ../..
