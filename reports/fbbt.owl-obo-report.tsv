@@ -288,6 +288,7 @@ ERROR	duplicate_definition	prothoracic ventral neurosecretory neuron	definition	
 ERROR	duplicate_definition	mesothoracic ventral neurosecretory neuron	definition	.
 ERROR	duplicate_definition	metathoracic ventral thoracic neurosecretory neuron	definition	.
 ERROR	duplicate_definition	gustatory center of genitalia	definition	.
+ERROR	duplicate_definition	adult fifth abdominal nerve	definition	.
 ERROR	duplicate_definition	pharyngeal sense organ	definition	.
 ERROR	duplicate_definition	epipharynx primordium	definition	.
 ERROR	duplicate_definition	adult clypeo-labral anlage	definition	.
@@ -4205,14 +4206,14 @@ ERROR	duplicate_label	synapse	rdfs:label	synapse
 ERROR	duplicate_label	synapse	rdfs:label	synapse
 ERROR	duplicate_label	axon	rdfs:label	axon
 ERROR	duplicate_label	axon	rdfs:label	axon
-ERROR	multiple_definitions	has part	definition	<Q1 has_part Q2 if and only if: every instance of Q1 is a quality_of an entity that has_quality some Q2.>
-ERROR	multiple_definitions	has part	definition	a core relation that holds between a whole and its part@en
+ERROR	multiple_definitions	has_part	definition	<Q1 has_part Q2 if and only if: every instance of Q1 is a quality_of an entity that has_quality some Q2.>
+ERROR	multiple_definitions	has_part	definition	a core relation that holds between a whole and its part@en
 ERROR	multiple_labels	part_of	rdfs:label	part of
 ERROR	multiple_labels	part_of	rdfs:label	part of@en
 ERROR	multiple_labels	part_of	rdfs:label	part_of
-ERROR	multiple_labels	has part	rdfs:label	has part
-ERROR	multiple_labels	has part	rdfs:label	has part@en
-ERROR	multiple_labels	has part	rdfs:label	has_part
+ERROR	multiple_labels	has_part	rdfs:label	has part
+ERROR	multiple_labels	has_part	rdfs:label	has part@en
+ERROR	multiple_labels	has_part	rdfs:label	has_part
 ERROR	multiple_labels	occurs in	rdfs:label	occurs in
 ERROR	multiple_labels	occurs in	rdfs:label	occurs in@en
 ERROR	multiple_labels	inheres in	rdfs:label	inheres in@en
@@ -4239,18 +4240,18 @@ ERROR	multiple_labels	synapsed_via_type_II_bouton_to	rdfs:label	synapsed_via_typ
 ERROR	multiple_labels	synapsed_via_type_II_bouton_to	rdfs:label	synapsed_via_type_II_bouton_to@en
 ERROR	multiple_labels	synapsed_via_type_III_bouton_to	rdfs:label	synapsed_via_type_III_bouton_to
 ERROR	multiple_labels	synapsed_via_type_III_bouton_to	rdfs:label	synapsed_via_type_III_bouton_to@en
-ERROR	multiple_labels	synapsed_to	rdfs:label	synapsed to@en
-ERROR	multiple_labels	synapsed_to	rdfs:label	synapsed_to
+ERROR	multiple_labels	synapsed to	rdfs:label	synapsed to@en
+ERROR	multiple_labels	synapsed to	rdfs:label	synapsed_to
 ERROR	multiple_labels	overlaps	rdfs:label	overlaps
 ERROR	multiple_labels	overlaps	rdfs:label	overlaps@en
 ERROR	multiple_labels	innervates	rdfs:label	innervates
 ERROR	multiple_labels	innervates	rdfs:label	innervates@en
-ERROR	multiple_labels	continuous_with	rdfs:label	continuous with@en
-ERROR	multiple_labels	continuous_with	rdfs:label	continuous_with
+ERROR	multiple_labels	continuous with	rdfs:label	continuous with@en
+ERROR	multiple_labels	continuous with	rdfs:label	continuous_with
 ERROR	multiple_labels	partially_overlaps	rdfs:label	partially overlaps@en
 ERROR	multiple_labels	partially_overlaps	rdfs:label	partially_overlaps
-ERROR	multiple_labels	attached to part of	rdfs:label	attached to part of
 ERROR	multiple_labels	attached to part of	rdfs:label	attached to part of@en
+ERROR	multiple_labels	attached to part of	rdfs:label	attached_to_part_of
 ERROR	multiple_labels	develops from	rdfs:label	develops from@en
 ERROR	multiple_labels	develops from	rdfs:label	develops_from
 ERROR	multiple_labels	develops_directly_from	rdfs:label	develops_directly_from
@@ -4292,7 +4293,7 @@ WARN	annotation_whitespace	synapsed_by_via_type_II_bouton	IAO:0000424	"BFO_00000
 WARN	annotation_whitespace	has postsynaptic terminal in	definition	Relation between a neuron and some structure (e.g.- a brain region) in which it receives (chemical) synaptic input. @en
 WARN	annotation_whitespace	synapsed_by_via_type_III_bouton	definition	"Relation between a muscle and a motor neuron that synapses to it via a type III bouton.
 "
-WARN	annotation_whitespace	synapsed_to	definition	" Relation between a neuron and an anatomical structure (including cells) that it chemically synapses to.
+WARN	annotation_whitespace	synapsed to	definition	" Relation between a neuron and an anatomical structure (including cells) that it chemically synapses to.
         @en"
 WARN	annotation_whitespace	has fasciculating neuron projection	IAO:0000426	"(forall (?x ?y) 
 	(iff 
@@ -4331,6 +4332,8 @@ WARN	duplicate_exact_synonym	adult fruitless vPR6 (male) neuron	has_exact_synony
 WARN	duplicate_exact_synonym	adult fruitless vPR6 (female) neuron	has_exact_synonym	vPR6 neuron
 WARN	duplicate_exact_synonym	adult fruitless vPR6 (male) lineage clone	has_exact_synonym	vPR6 clone
 WARN	duplicate_exact_synonym	adult fruitless vPR6 (female) lineage clone	has_exact_synonym	vPR6 clone
+WARN	duplicate_exact_synonym	adult ventral prothoracic nerve	has_exact_synonym	VPN
+WARN	duplicate_exact_synonym	visual projection neuron	has_exact_synonym	VPN
 WARN	duplicate_exact_synonym	adult great commissure	has_exact_synonym	VPC2
 WARN	duplicate_exact_synonym	great commissure	has_exact_synonym	VPC2
 WARN	duplicate_exact_synonym	abdominal vesC neuron	has_exact_synonym	vp3
@@ -4364,7 +4367,7 @@ WARN	duplicate_exact_synonym	adult ventral anastomosis	has_exact_synonym	ventral
 WARN	duplicate_exact_synonym	prothoracic ventral monoscolopidial chordotonal organ vch1	has_exact_synonym	vch1x
 WARN	duplicate_exact_synonym	mesothoracic ventral monoscolopidial chordotonal organ vch1	has_exact_synonym	vch1x
 WARN	duplicate_exact_synonym	ventral association center	has_exact_synonym	VAC
-WARN	duplicate_exact_synonym	ventral accessory commissure of the mesothoracic neuromere	has_exact_synonym	VAC
+WARN	duplicate_exact_synonym	adult mesothoracic posterior anterior ventral commissure	has_exact_synonym	VAC
 WARN	duplicate_exact_synonym	adult fruitless vAB3 (female) neuron	has_exact_synonym	vAB3 neuron
 WARN	duplicate_exact_synonym	adult fruitless vAB3 (male) neuron	has_exact_synonym	vAB3 neuron
 WARN	duplicate_exact_synonym	adult fruitless vAB3 (female) lineage clone	has_exact_synonym	vAB3 clone
@@ -4382,9 +4385,9 @@ WARN	duplicate_exact_synonym	uniglomerular projection neuron vPN	has_exact_synon
 WARN	duplicate_exact_synonym	adult uniglomerular antennal lobe projection neuron vPN	has_exact_synonym	uniglomerular vPN
 WARN	duplicate_exact_synonym	thermosensory projection neuron	has_exact_synonym	tPN
 WARN	duplicate_exact_synonym	transverse antennal lobe tract projection neuron	has_exact_synonym	tPN
-WARN	duplicate_exact_synonym	transverse nerve	has_exact_synonym	TN
-WARN	duplicate_exact_synonym	abdominal transverse nerve	has_exact_synonym	TN
-WARN	duplicate_exact_synonym	transverse nerve of A1-7	has_exact_synonym	TN
+WARN	duplicate_exact_synonym	larval transverse nerve	has_exact_synonym	TN
+WARN	duplicate_exact_synonym	larval abdominal transverse nerve	has_exact_synonym	TN
+WARN	duplicate_exact_synonym	larval transverse nerve of A1-7	has_exact_synonym	TN
 WARN	duplicate_exact_synonym	adult transverse nerve	has_exact_synonym	TN
 WARN	duplicate_exact_synonym	larval dopaminergic TM3 neuron	has_exact_synonym	Th
 WARN	duplicate_exact_synonym	larval dopaminergic TM2 neuron	has_exact_synonym	Th
@@ -4393,6 +4396,8 @@ WARN	duplicate_exact_synonym	transition cell	has_exact_synonym	TC
 WARN	duplicate_exact_synonym	taenidial channel	has_exact_synonym	TC
 WARN	duplicate_exact_synonym	larval anterior large descending DN Tachykinin neuron	has_exact_synonym	tachykinin descending neuron
 WARN	duplicate_exact_synonym	adult anterior large descending DN Tachykinin neuron	has_exact_synonym	tachykinin descending neuron
+WARN	duplicate_exact_synonym	apolpp	has_exact_synonym	T3
+WARN	duplicate_exact_synonym	T neuron T3	has_exact_synonym	T3
 WARN	duplicate_exact_synonym	mesothoracic segment border muscle	has_exact_synonym	T2 SBM
 WARN	duplicate_exact_synonym	metathoracic segment border muscle	has_exact_synonym	T2 SBM
 WARN	duplicate_exact_synonym	mesothoracic segment border muscle	has_exact_synonym	T2 pit
@@ -4402,6 +4407,8 @@ WARN	duplicate_exact_synonym	columnar neuron T1	has_exact_synonym	T1
 WARN	duplicate_exact_synonym	dopaminergic T1 neuron	has_exact_synonym	T1
 WARN	duplicate_exact_synonym	pharyngeal bar	has_exact_synonym	T-bar
 WARN	duplicate_exact_synonym	t-bar	has_exact_synonym	T-bar
+WARN	duplicate_exact_synonym	pit sensillum of distal group	has_exact_synonym	T
+WARN	duplicate_exact_synonym	tectulum	has_exact_synonym	T
 WARN	duplicate_exact_synonym	subesophageal ganglion	has_exact_synonym	suboesophageal ganglion
 WARN	duplicate_exact_synonym	adult subesophageal zone	has_exact_synonym	suboesophageal ganglion
 WARN	duplicate_exact_synonym	serotonergic SE3 neuron	has_exact_synonym	subesophageal ganglion SE neuron 3
@@ -4418,6 +4425,8 @@ WARN	duplicate_exact_synonym	abdominal 8 ventral longitudinal muscle	has_exact_s
 WARN	duplicate_exact_synonym	abdominal 8 ventral longitudinal muscle 1	has_exact_synonym	srm
 WARN	duplicate_exact_synonym	mushroom body spur	has_exact_synonym	SPU
 WARN	duplicate_exact_synonym	spur of adult mushroom body	has_exact_synonym	SPU
+WARN	duplicate_exact_synonym	en	has_exact_synonym	spt
+WARN	duplicate_exact_synonym	srp	has_exact_synonym	spt
 WARN	duplicate_exact_synonym	embryonic/larval spiracular branch	has_exact_synonym	spiracular trachea
 WARN	duplicate_exact_synonym	pupal spiracular branch	has_exact_synonym	spiracular trachea
 WARN	duplicate_exact_synonym	adult spiracular branch	has_exact_synonym	spiracular trachea
@@ -4430,8 +4439,8 @@ WARN	duplicate_exact_synonym	skeletal muscle of metathorax	has_exact_synonym	som
 WARN	duplicate_exact_synonym	sog	has_exact_synonym	SOG
 WARN	duplicate_exact_synonym	subesophageal ganglion	has_exact_synonym	SOG
 WARN	duplicate_exact_synonym	adult subesophageal zone	has_exact_synonym	SOG
-WARN	duplicate_exact_synonym	segmental nerve	has_exact_synonym	SN
-WARN	duplicate_exact_synonym	segmental nerve of A1-7	has_exact_synonym	SN
+WARN	duplicate_exact_synonym	larval segmental nerve	has_exact_synonym	SN
+WARN	duplicate_exact_synonym	larval segmental nerve of A1-7	has_exact_synonym	SN
 WARN	duplicate_exact_synonym	VT1 motor neuron	has_exact_synonym	SM
 WARN	duplicate_exact_synonym	A2-7 VT1 motor neuron	has_exact_synonym	SM
 WARN	duplicate_exact_synonym	abdominal 8 des1 neuron	has_exact_synonym	sk
@@ -4510,6 +4519,8 @@ WARN	duplicate_exact_synonym	protocerebral bridge slice 2	has_exact_synonym	prot
 WARN	duplicate_exact_synonym	protocerebral bridge slice 3	has_exact_synonym	protocerebral bridge glomerulus 2
 WARN	duplicate_exact_synonym	protocerebral bridge slice 2	has_exact_synonym	protocerebral bridge glomerulus 1
 WARN	duplicate_exact_synonym	protocerebral bridge slice 1	has_exact_synonym	protocerebral bridge glomerulus 1
+WARN	duplicate_exact_synonym	pros	has_exact_synonym	Pro
+WARN	duplicate_exact_synonym	adult prothoracic neuromere	has_exact_synonym	Pro
 WARN	duplicate_exact_synonym	Ppd15 neuroblast	has_exact_synonym	Pp3 neuroblast
 WARN	duplicate_exact_synonym	Ppd16 neuroblast	has_exact_synonym	Pp3 neuroblast
 WARN	duplicate_exact_synonym	Ppd18 neuroblast	has_exact_synonym	Pp3 neuroblast
@@ -4519,6 +4530,7 @@ WARN	duplicate_exact_synonym	postgonite	has_exact_synonym	posterior paramere
 WARN	duplicate_exact_synonym	extrinsic ring neuron ExR3	has_exact_synonym	posterior medial protocerebrum dorsal cluster neuron
 WARN	duplicate_exact_synonym	extrinsic ring neuron ExR4	has_exact_synonym	posterior medial protocerebrum dorsal cluster neuron
 WARN	duplicate_exact_synonym	projection neuron	has_exact_synonym	PN
+WARN	duplicate_exact_synonym	adult prosternal nerve	has_exact_synonym	PN
 WARN	duplicate_exact_synonym	adult prothoracic neuromere	has_exact_synonym	PN
 WARN	duplicate_exact_synonym	extrinsic ring neuron ExR3	has_exact_synonym	PMPD neuron
 WARN	duplicate_exact_synonym	extrinsic ring neuron ExR4	has_exact_synonym	PMPD neuron
@@ -4652,8 +4664,6 @@ WARN	duplicate_exact_synonym	prothoracic ventral sensillum campaniformium vc1	ha
 WARN	duplicate_exact_synonym	mesothoracic ventral sensillum campaniformium vc1	has_exact_synonym	p1
 WARN	duplicate_exact_synonym	metathoracic ventral sensillum campaniformium vc1	has_exact_synonym	p1
 WARN	duplicate_exact_synonym	abdominal ventral sensillum campaniformium vc1	has_exact_synonym	p1
-WARN	duplicate_exact_synonym	adult accessory mesothoracic neuromere	has_exact_synonym	ovoid
-WARN	duplicate_exact_synonym	lower tectulum	has_exact_synonym	ovoid
 WARN	duplicate_exact_synonym	adult olfactory receptor neuron Ir64a	has_exact_synonym	ORN sacIII
 WARN	duplicate_exact_synonym	adult thermosensory neuron Ir21a VP1l	has_exact_synonym	ORN sacIII
 WARN	duplicate_exact_synonym	adult olfactory receptor neuron Or2a	has_exact_synonym	ORN at3A
@@ -4809,7 +4819,7 @@ WARN	duplicate_exact_synonym	adult longitudinal ventral medial fascicle	has_exac
 WARN	duplicate_exact_synonym	longitudinal ventral lateral fascicle	has_exact_synonym	loVL
 WARN	duplicate_exact_synonym	adult longitudinal ventral lateral fascicle	has_exact_synonym	loVL
 WARN	duplicate_exact_synonym	adult labial nerve	has_exact_synonym	LN
-WARN	duplicate_exact_synonym	leg nerve	has_exact_synonym	LN
+WARN	duplicate_exact_synonym	adult leg nerve	has_exact_synonym	LN
 WARN	duplicate_exact_synonym	Lk	has_exact_synonym	lk
 WARN	duplicate_exact_synonym	mesothoracic lateral Kolbchen lbd	has_exact_synonym	lk
 WARN	duplicate_exact_synonym	metathoracic lateral Kolbchen lbd	has_exact_synonym	lk
@@ -4865,9 +4875,27 @@ WARN	duplicate_exact_synonym	vesE neuron	has_exact_synonym	ko
 WARN	duplicate_exact_synonym	mesothoracic Keilin's organ	has_exact_synonym	ko
 WARN	duplicate_exact_synonym	adult alpha'/beta' Kenyon cell	has_exact_synonym	KCa'b'
 WARN	duplicate_exact_synonym	alpha'/beta' Kenyon cell	has_exact_synonym	KCa'b'
+WARN	duplicate_exact_synonym	subregion EVP of AMMC zone E	has_exact_synonym	JON-EVP
+WARN	duplicate_exact_synonym	Johnston organ neuron EVP	has_exact_synonym	JON-EVP
+WARN	duplicate_exact_synonym	subregion EVM of AMMC zone E	has_exact_synonym	JON-EVM
+WARN	duplicate_exact_synonym	Johnston organ neuron EVM	has_exact_synonym	JON-EVM
+WARN	duplicate_exact_synonym	subregion EDP of AMMC zone E	has_exact_synonym	JON-EDP
+WARN	duplicate_exact_synonym	Johnston organ neuron EDP	has_exact_synonym	JON-EDP
+WARN	duplicate_exact_synonym	subregion EDM of AMMC zone E	has_exact_synonym	JON-EDM
+WARN	duplicate_exact_synonym	Johnston organ neuron EDM	has_exact_synonym	JON-EDM
+WARN	duplicate_exact_synonym	subregion EDC of AMMC zone E	has_exact_synonym	JON-EDC
+WARN	duplicate_exact_synonym	Johnston organ neuron EDC	has_exact_synonym	JON-EDC
+WARN	duplicate_exact_synonym	subregion DP of AMMC zone D	has_exact_synonym	JON-DP
+WARN	duplicate_exact_synonym	Johnston organ neuron DP	has_exact_synonym	JON-DP
+WARN	duplicate_exact_synonym	subregion DA of AMMC zone D	has_exact_synonym	JON-DA
+WARN	duplicate_exact_synonym	Johnston organ neuron DA	has_exact_synonym	JON-DA
+WARN	duplicate_exact_synonym	subregion CM of AMMC zone C	has_exact_synonym	JON-CM
+WARN	duplicate_exact_synonym	Johnston organ neuron CM	has_exact_synonym	JON-CM
+WARN	duplicate_exact_synonym	subregion CL of AMMC zone C	has_exact_synonym	JON-CL
+WARN	duplicate_exact_synonym	Johnston organ neuron CL	has_exact_synonym	JON-CL
 WARN	duplicate_exact_synonym	inferior ventrolateral protocerebrum local IVLP neuron	has_exact_synonym	IVLP LN
 WARN	duplicate_exact_synonym	intrinsic wedge neuron	has_exact_synonym	IVLP LN
-WARN	duplicate_exact_synonym	intersegmental nerve	has_exact_synonym	ISN
+WARN	duplicate_exact_synonym	larval intersegmental nerve	has_exact_synonym	ISN
 WARN	duplicate_exact_synonym	interoceptive SEZ neuron	has_exact_synonym	ISN
 WARN	duplicate_exact_synonym	Ir75a	has_exact_synonym	IR75abc
 WARN	duplicate_exact_synonym	Ir75a	has_exact_synonym	Ir75abc
@@ -5008,7 +5036,7 @@ WARN	duplicate_exact_synonym	frontal nerve	has_exact_synonym	FrN
 WARN	duplicate_exact_synonym	adult frontal nerve	has_exact_synonym	FrN
 WARN	duplicate_exact_synonym	adult frontal median commissure	has_exact_synonym	fr m c
 WARN	duplicate_exact_synonym	larval frontal median commissure	has_exact_synonym	fr m c
-WARN	duplicate_exact_synonym	first lateral abdominal nerve	has_exact_synonym	FLA
+WARN	duplicate_exact_synonym	adult third abdominal nerve	has_exact_synonym	FLA
 WARN	duplicate_exact_synonym	flange	has_exact_synonym	FLA
 WARN	duplicate_exact_synonym	indirect flight muscle	has_exact_synonym	fibrillar muscle
 WARN	duplicate_exact_synonym	asynchronous muscle	has_exact_synonym	fibrillar muscle
@@ -5104,6 +5132,8 @@ WARN	duplicate_exact_synonym	cornea	has_exact_synonym	corneal lens
 WARN	duplicate_exact_synonym	lens	has_exact_synonym	corneal lens
 WARN	duplicate_exact_synonym	adult great commissure	has_exact_synonym	commissure of optic foci
 WARN	duplicate_exact_synonym	great commissure	has_exact_synonym	commissure of optic foci
+WARN	duplicate_exact_synonym	intermediate tract of dorsal cervical fasciculus - haltere commissure	has_exact_synonym	cHIN
+WARN	duplicate_exact_synonym	intermediate tract of dorsal cervical fasciculus - commissure of fine fibers	has_exact_synonym	cHIN
 WARN	duplicate_exact_synonym	embryonic/larval posterior inferior protocerebrum	has_exact_synonym	centroposterior medial compartment
 WARN	duplicate_exact_synonym	embryonic/larval posterior lateral protocerebrum	has_exact_synonym	centroposterior medial compartment
 WARN	duplicate_exact_synonym	embryonic/larval posterior inferior protocerebrum	has_exact_synonym	centro-posterior medial synaptic neuropil domain
@@ -5315,10 +5345,12 @@ WARN	missing_definition	Fas3	definition
 WARN	missing_definition	tj	definition	
 WARN	missing_definition	esg	definition	
 WARN	missing_definition	lab	definition	
+WARN	missing_definition	Lsp2	definition	
 WARN	missing_definition	odd	definition	
 WARN	missing_definition	Rh3	definition	
 WARN	missing_definition	Rh4	definition	
 WARN	missing_definition	sog	definition	
+WARN	missing_definition	srp	definition	
 WARN	missing_definition	svp	definition	
 WARN	missing_definition	tsh	definition	
 WARN	missing_definition	Uro	definition	
@@ -5347,6 +5379,7 @@ WARN	missing_definition	fax	definition
 WARN	missing_definition	gcm	definition	
 WARN	missing_definition	AstA	definition	
 WARN	missing_definition	Rh6	definition	
+WARN	missing_definition	ppk	definition	
 WARN	missing_definition	stumps	definition	
 WARN	missing_definition	Pdk1	definition	
 WARN	missing_definition	dimm	definition	
@@ -5373,11 +5406,13 @@ WARN	missing_definition	Or22b	definition
 WARN	missing_definition	Or22a	definition	
 WARN	missing_definition	Or85e	definition	
 WARN	missing_definition	NPF	definition	
+WARN	missing_definition	ppl	definition	
 WARN	missing_definition	Hug	definition	
 WARN	missing_definition	Lk	definition	
 WARN	missing_definition	Or35a	definition	
 WARN	missing_definition	Or49b	definition	
 WARN	missing_definition	Or1a	definition	
+WARN	missing_definition	SPR	definition	
 WARN	missing_definition	Or7a	definition	
 WARN	missing_definition	Or9a	definition	
 WARN	missing_definition	Or10a	definition	
@@ -5462,6 +5497,7 @@ WARN	missing_definition	natalisin	definition
 WARN	missing_definition	nub	definition	
 WARN	missing_definition	Myo31DF	definition	
 WARN	missing_definition	amn	definition	
+WARN	missing_definition	apolpp	definition	
 WARN	missing_definition	Ir60b	definition	
 WARN	missing_definition	Ir40a	definition	
 WARN	missing_definition	elav	definition	
@@ -5651,7 +5687,7 @@ WARN	missing_definition	larva	definition
 WARN	missing_definition	embryonic/larval optic stalk sheath cell	definition	
 WARN	missing_definition	optic nerve	definition	
 WARN	missing_definition	subesophageal commissure	definition	
-WARN	missing_definition	abdominal median nerve	definition	
+WARN	missing_definition	larval abdominal median nerve	definition	
 WARN	missing_definition	abdominal 10 bipolar neuron	definition	
 WARN	missing_definition	abdominal 6 lateral sensillum campaniformium lc1	definition	
 WARN	missing_definition	adult telson	definition	
@@ -6181,6 +6217,7 @@ WARN	missing_obsolete_label	circumesophageal tract	rdfs:label	circumesophageal t
 WARN	missing_obsolete_label	neurosecretory cell	rdfs:label	neurosecretory cell
 WARN	missing_obsolete_label	posteriolateral neurosecretory cell	rdfs:label	posteriolateral neurosecretory cell
 WARN	missing_obsolete_label	tergal depressor of trochanter muscle motor neuron	rdfs:label	tergal depressor of trochanter muscle motor neuron
+WARN	missing_obsolete_label	accessory metathoracic nerve	rdfs:label	accessory metathoracic nerve
 WARN	missing_obsolete_label	abdominal segment 6 nerve	rdfs:label	abdominal segment 6 nerve
 WARN	missing_obsolete_label	abdominal segment 7 nerve	rdfs:label	abdominal segment 7 nerve
 WARN	missing_obsolete_label	abdominal segment 8 nerve	rdfs:label	abdominal segment 8 nerve
@@ -6402,6 +6439,9 @@ WARN	missing_obsolete_label	DA1 motor neuron	rdfs:label	DA1 motor neuron
 WARN	missing_obsolete_label	thoracic neuroblast t	rdfs:label	thoracic neuroblast t
 WARN	missing_obsolete_label	thoracic neuroblast l	rdfs:label	thoracic neuroblast l
 WARN	missing_obsolete_label	thoracic neuroblast s	rdfs:label	thoracic neuroblast s
+WARN	missing_obsolete_label	extra metathoracic nerve	rdfs:label	extra metathoracic nerve
+WARN	missing_obsolete_label	first lateral abdominal nerve	rdfs:label	first lateral abdominal nerve
+WARN	missing_obsolete_label	second lateral abdominal nerve	rdfs:label	second lateral abdominal nerve
 WARN	missing_obsolete_label	abdominal sternite	rdfs:label	abdominal sternite
 WARN	missing_obsolete_label	posterior spiracle proper primordium	rdfs:label	posterior spiracle proper primordium
 WARN	missing_obsolete_label	SNb	rdfs:label	SNb
@@ -6409,6 +6449,7 @@ WARN	missing_obsolete_label	nodulus subunit	rdfs:label	nodulus subunit
 WARN	missing_obsolete_label	delta	rdfs:label	delta
 WARN	missing_obsolete_label	larval T01d3 neuron	rdfs:label	larval T01d3 neuron
 WARN	missing_obsolete_label	neuroblast FLAa3	rdfs:label	neuroblast FLAa3
+WARN	missing_obsolete_label	adult doublesex pMN1 neuron	rdfs:label	adult doublesex pMN1 neuron
 WARN	missing_obsolete_label	adult doublesex pMN2 neuron	rdfs:label	adult doublesex pMN2 neuron
 WARN	missing_obsolete_label	haltere nerve	rdfs:label	haltere nerve
 WARN	missing_obsolete_label	medial antennal lobe tract projection neuron 2	rdfs:label	medial antennal lobe tract projection neuron 2
@@ -6526,7 +6567,7 @@ WARN	missing_obsolete_label	has_function_in_part_of	rdfs:label	has_function_in_p
 WARN	missing_obsolete_label	releases_neurotransmitter	rdfs:label	releases_neurotransmitter
 WARN	missing_obsolete_label	secretes_hormone	rdfs:label	secretes_hormone
 INFO	lowercase_definition	part_of	definition	a core relation that holds between a part and its whole@en
-INFO	lowercase_definition	has part	definition	a core relation that holds between a whole and its part@en
+INFO	lowercase_definition	has_part	definition	a core relation that holds between a whole and its part@en
 INFO	lowercase_definition	preceded by	definition	<x is preceded by y if and only if the time point at which y ends is before or equivalent to the time point at which x starts. Formally: x preceded by y iff ω(y) <= α(x), where α is a function that maps a process to a start point, and ω is a function that maps a process to an end point.@en>
 INFO	lowercase_definition	precedes	definition	<x precedes y if and only if the time point at which x ends is before or equivalent to the time point at which y starts. Formally: x precedes y iff ω(x) <= α(y), where α is a function that maps a process to a start point, and ω is a function that maps a process to an end point.@en>
 INFO	lowercase_definition	occurs in	definition	b occurs_in c =def b is a process and c is a material entity or immaterial entity& there exists a spatiotemporal region r and b occupies_spatiotemporal_region r.& forall(t) if b exists_at t then c exists_at t & there exist spatial regions s and s’ where & b spatially_projects_onto s at t& c is occupies_spatial_region s’ at t& s is a proper_continuant_part_of s’ at t@en
@@ -6582,6 +6623,7 @@ INFO	lowercase_definition	prothoracic ventral neurosecretory neuron	definition	.
 INFO	lowercase_definition	mesothoracic ventral neurosecretory neuron	definition	.
 INFO	lowercase_definition	metathoracic ventral thoracic neurosecretory neuron	definition	.
 INFO	lowercase_definition	gustatory center of genitalia	definition	.
+INFO	lowercase_definition	adult fifth abdominal nerve	definition	.
 INFO	lowercase_definition	pharyngeal sense organ	definition	.
 INFO	lowercase_definition	epipharynx primordium	definition	.
 INFO	lowercase_definition	adult clypeo-labral anlage	definition	.
@@ -10579,7 +10621,7 @@ INFO	lowercase_definition	has participant	definition	a relation between a proces
 INFO	lowercase_definition	has component process	definition	w 'has process component' p if p and w are processes,  w 'has part' p and w is such that it can be directly disassembled into into n parts p, p2, p3, ..., pn, where these parts are of similar type.
 INFO	lowercase_definition	fasciculates with	definition	"relationship between a neuron and a neuron projection bundle (e.g.- tract or nerve bundle) that one or more of its projections travels through.
 @en"
-INFO	lowercase_definition	synapsed_to	definition	" Relation between a neuron and an anatomical structure (including cells) that it chemically synapses to.
+INFO	lowercase_definition	synapsed to	definition	" Relation between a neuron and an anatomical structure (including cells) that it chemically synapses to.
         @en"
 INFO	lowercase_definition	overlaps	definition	x overlaps y if and only if there exists some z such that x has part z and z part of y
 INFO	lowercase_definition	partially_overlaps	definition	x partially overlaps y iff there exists some z such that z is part of x and z is part of y, and it is also the case that neither x is part of y or y is part of x

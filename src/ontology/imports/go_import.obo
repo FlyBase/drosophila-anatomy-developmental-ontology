@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: fbbt/releases/2020-12-02/imports/go_import.owl
+data-version: fbbt/releases/2021-01-14/imports/go_import.owl
 subsetdef: gocheck_do_not_annotate ""
 subsetdef: gocheck_do_not_manually_annotate ""
 subsetdef: goslim_agr ""
@@ -17,7 +17,7 @@ subsetdef: goslim_pombe ""
 subsetdef: goslim_synapse ""
 subsetdef: goslim_yeast ""
 ontology: fbbt/imports/go_import
-property_value: owl:versionInfo "2020-12-02" xsd:string
+property_value: owl:versionInfo "2021-01-14" xsd:string
 
 [Term]
 id: GO:0000003
@@ -144,7 +144,7 @@ is_a: GO:0046928 ! regulation of neurotransmitter secretion
 is_a: GO:0050806 ! positive regulation of synaptic transmission
 is_a: GO:0051590 ! positive regulation of neurotransmitter transport
 is_a: GO:1903532 ! positive regulation of secretion by cell
-intersection_of: GO:0008150 ! biological_process
+intersection_of: GO:0065007 ! biological regulation
 intersection_of: positively_regulates GO:0007269 ! neurotransmitter secretion
 relationship: positively_regulates GO:0007269 ! neurotransmitter secretion
 
@@ -183,7 +183,7 @@ namespace: biological_process
 def: "Any process that modulates the frequency, rate, or extent of peptide secretion." [GOC:add]
 is_a: GO:0051046 ! regulation of secretion
 is_a: GO:0090087 ! regulation of peptide transport
-intersection_of: GO:0008150 ! biological_process
+intersection_of: GO:0065007 ! biological regulation
 intersection_of: regulates GO:0002790 ! peptide secretion
 relationship: regulates GO:0002790 ! peptide secretion
 
@@ -199,7 +199,7 @@ synonym: "inhibition of peptide secretion" NARROW []
 is_a: GO:0002791 ! regulation of peptide secretion
 is_a: GO:0051048 ! negative regulation of secretion
 is_a: GO:1903792 ! negative regulation of anion transport
-intersection_of: GO:0008150 ! biological_process
+intersection_of: GO:0065007 ! biological regulation
 intersection_of: negatively_regulates GO:0002790 ! peptide secretion
 relationship: negatively_regulates GO:0002790 ! peptide secretion
 
@@ -216,7 +216,7 @@ synonym: "upregulation of peptide secretion" EXACT []
 is_a: GO:0002791 ! regulation of peptide secretion
 is_a: GO:0051047 ! positive regulation of secretion
 is_a: GO:1903793 ! positive regulation of anion transport
-intersection_of: GO:0008150 ! biological_process
+intersection_of: GO:0065007 ! biological regulation
 intersection_of: positively_regulates GO:0002790 ! peptide secretion
 relationship: positively_regulates GO:0002790 ! peptide secretion
 
@@ -389,8 +389,10 @@ name: cation transport
 namespace: biological_process
 alt_id: GO:0006819
 alt_id: GO:0015674
+alt_id: GO:0072512
 def: "The directed movement of cations, atoms or small molecules with a net positive charge, into, out of or within a cell, or between cells, by means of some agent such as a transporter or pore." [GOC:ai]
 synonym: "di-, tri-valent inorganic cation transport" NARROW [GOC:mah]
+synonym: "trivalent inorganic cation transport" NARROW []
 is_a: GO:0006811 ! ion transport
 
 [Term]
@@ -493,7 +495,11 @@ is_a: GO:0009987 ! cellular process
 id: GO:0007165
 name: signal transduction
 namespace: biological_process
+alt_id: GO:0023014
+alt_id: GO:0023015
+alt_id: GO:0023016
 alt_id: GO:0023033
+alt_id: GO:0023045
 def: "The cellular process in which a signal is conveyed to trigger a change in the activity or state of a cell. Signal transduction begins with reception of a signal (e.g. a ligand binding to a receptor or receptor activation by a stimulus such as light), or for signal transduction in the absence of ligand, signal-withdrawal or the activity of a constitutively active receptor. Signal transduction ends with regulation of a downstream cellular process, e.g. regulation of transcription or regulation of a metabolic process. Signal transduction covers signaling from receptors located on the surface of the cell and signaling via molecules located within the cell. For signaling between cells, signal transduction is restricted to events at and within the receiving cell." [GOC:go_curators, GOC:mtg_signaling_feb11]
 comment: Note that signal transduction is defined broadly to include a ligand interacting with a receptor, downstream signaling steps and a response being triggered. A change in form of the signal in every step is not necessary. Note that in many cases the end of this process is regulation of the initiation of transcription. Note that specific transcription factors may be annotated to this term, but core/general transcription machinery such as RNA polymerase should not.
 subset: goslim_aspergillus
@@ -502,6 +508,10 @@ subset: goslim_chembl
 subset: goslim_generic
 subset: goslim_metagenomics
 subset: goslim_plant
+synonym: "signal transduction by cis-phosphorylation" NARROW []
+synonym: "signal transduction by conformational transition" NARROW []
+synonym: "signal transduction by protein phosphorylation" NARROW []
+synonym: "signal transduction by trans-phosphorylation" NARROW []
 synonym: "signaling cascade" NARROW []
 synonym: "signaling pathway" RELATED []
 synonym: "signalling cascade" NARROW []
@@ -619,7 +629,7 @@ name: regulation of eclosion
 namespace: biological_process
 def: "Any process that modulates the frequency, rate or extent of the emergence of an insect from a pupa-case or of a larva from an egg." [GOC:go_curators, ISBN:0198600461]
 is_a: GO:2000026 ! regulation of multicellular organismal development
-intersection_of: GO:0008150 ! biological_process
+intersection_of: GO:0065007 ! biological regulation
 intersection_of: regulates GO:0007562 ! eclosion
 relationship: regulates GO:0007562 ! eclosion
 
@@ -1032,7 +1042,7 @@ synonym: "regulation of G-protein-coupled receptor protein signalling pathway" E
 synonym: "regulation of GPCR protein signaling pathway" EXACT []
 synonym: "regulation of GPCR protein signalling pathway" EXACT []
 is_a: GO:0009966 ! regulation of signal transduction
-intersection_of: GO:0008150 ! biological_process
+intersection_of: GO:0065007 ! biological regulation
 intersection_of: regulates GO:0007186 ! G protein-coupled receptor signaling pathway
 relationship: regulates GO:0007186 ! G protein-coupled receptor signaling pathway
 
@@ -1272,7 +1282,7 @@ synonym: "negative regulation of multicellular organismal metabolic process" NAR
 synonym: "negative regulation of organismal metabolism" EXACT []
 is_a: GO:0019222 ! regulation of metabolic process
 is_a: GO:0048519 ! negative regulation of biological process
-intersection_of: GO:0008150 ! biological_process
+intersection_of: GO:0065007 ! biological regulation
 intersection_of: negatively_regulates GO:0008152 ! metabolic process
 relationship: negatively_regulates GO:0008152 ! metabolic process
 
@@ -1294,7 +1304,7 @@ synonym: "up-regulation of organismal metabolic process" NARROW []
 synonym: "upregulation of metabolic process" EXACT []
 is_a: GO:0019222 ! regulation of metabolic process
 is_a: GO:0048518 ! positive regulation of biological process
-intersection_of: GO:0008150 ! biological_process
+intersection_of: GO:0065007 ! biological regulation
 intersection_of: positively_regulates GO:0008152 ! metabolic process
 relationship: positively_regulates GO:0008152 ! metabolic process
 
@@ -1307,7 +1317,7 @@ synonym: "regulation of breakdown" EXACT []
 synonym: "regulation of catabolism" EXACT []
 synonym: "regulation of degradation" EXACT []
 is_a: GO:0019222 ! regulation of metabolic process
-intersection_of: GO:0008150 ! biological_process
+intersection_of: GO:0065007 ! biological regulation
 intersection_of: regulates GO:0009056 ! catabolic process
 relationship: regulates GO:0009056 ! catabolic process
 
@@ -1325,7 +1335,7 @@ synonym: "negative regulation of catabolism" EXACT []
 synonym: "negative regulation of degradation" EXACT []
 is_a: GO:0009892 ! negative regulation of metabolic process
 is_a: GO:0009894 ! regulation of catabolic process
-intersection_of: GO:0008150 ! biological_process
+intersection_of: GO:0065007 ! biological regulation
 intersection_of: negatively_regulates GO:0009056 ! catabolic process
 relationship: negatively_regulates GO:0009056 ! catabolic process
 
@@ -1344,7 +1354,7 @@ synonym: "up-regulation of catabolic process" EXACT []
 synonym: "upregulation of catabolic process" EXACT []
 is_a: GO:0009893 ! positive regulation of metabolic process
 is_a: GO:0009894 ! regulation of catabolic process
-intersection_of: GO:0008150 ! biological_process
+intersection_of: GO:0065007 ! biological regulation
 intersection_of: positively_regulates GO:0009056 ! catabolic process
 relationship: positively_regulates GO:0009056 ! catabolic process
 
@@ -1368,7 +1378,7 @@ synonym: "regulation of signalling pathway" RELATED [GOC:mah]
 is_a: GO:0010646 ! regulation of cell communication
 is_a: GO:0023051 ! regulation of signaling
 is_a: GO:0048583 ! regulation of response to stimulus
-intersection_of: GO:0008150 ! biological_process
+intersection_of: GO:0065007 ! biological regulation
 intersection_of: regulates GO:0007165 ! signal transduction
 relationship: regulates GO:0007165 ! signal transduction
 
@@ -1389,7 +1399,7 @@ is_a: GO:0009966 ! regulation of signal transduction
 is_a: GO:0010647 ! positive regulation of cell communication
 is_a: GO:0023056 ! positive regulation of signaling
 is_a: GO:0048584 ! positive regulation of response to stimulus
-intersection_of: GO:0008150 ! biological_process
+intersection_of: GO:0065007 ! biological regulation
 intersection_of: positively_regulates GO:0007165 ! signal transduction
 relationship: positively_regulates GO:0007165 ! signal transduction
 
@@ -1409,7 +1419,7 @@ is_a: GO:0009966 ! regulation of signal transduction
 is_a: GO:0010648 ! negative regulation of cell communication
 is_a: GO:0023057 ! negative regulation of signaling
 is_a: GO:0048585 ! negative regulation of response to stimulus
-intersection_of: GO:0008150 ! biological_process
+intersection_of: GO:0065007 ! biological regulation
 intersection_of: negatively_regulates GO:0007165 ! signal transduction
 relationship: negatively_regulates GO:0007165 ! signal transduction
 
@@ -1478,7 +1488,7 @@ name: regulation of cell communication
 namespace: biological_process
 def: "Any process that modulates the frequency, rate or extent of cell communication. Cell communication is the process that mediates interactions between a cell and its surroundings. Encompasses interactions such as signaling or attachment between one cell and another cell, between a cell and an extracellular matrix, or between a cell and any other aspect of its environment." [GOC:dph, GOC:tb]
 is_a: GO:0050794 ! regulation of cellular process
-intersection_of: GO:0008150 ! biological_process
+intersection_of: GO:0065007 ! biological regulation
 intersection_of: regulates GO:0007154 ! cell communication
 relationship: regulates GO:0007154 ! cell communication
 
@@ -1489,7 +1499,7 @@ namespace: biological_process
 def: "Any process that increases the frequency, rate or extent of cell communication. Cell communication is the process that mediates interactions between a cell and its surroundings. Encompasses interactions such as signaling or attachment between one cell and another cell, between a cell and an extracellular matrix, or between a cell and any other aspect of its environment." [GOC:dph, GOC:tb]
 is_a: GO:0010646 ! regulation of cell communication
 is_a: GO:0048522 ! positive regulation of cellular process
-intersection_of: GO:0008150 ! biological_process
+intersection_of: GO:0065007 ! biological regulation
 intersection_of: positively_regulates GO:0007154 ! cell communication
 relationship: positively_regulates GO:0007154 ! cell communication
 
@@ -1500,7 +1510,7 @@ namespace: biological_process
 def: "Any process that decreases the frequency, rate or extent of cell communication. Cell communication is the process that mediates interactions between a cell and its surroundings. Encompasses interactions such as signaling or attachment between one cell and another cell, between a cell and an extracellular matrix, or between a cell and any other aspect of its environment." [GOC:dph, GOC:tb]
 is_a: GO:0010646 ! regulation of cell communication
 is_a: GO:0048523 ! negative regulation of cellular process
-intersection_of: GO:0008150 ! biological_process
+intersection_of: GO:0065007 ! biological regulation
 intersection_of: negatively_regulates GO:0007154 ! cell communication
 relationship: negatively_regulates GO:0007154 ! cell communication
 
@@ -1537,7 +1547,7 @@ def: "Any process that modulates the rate, frequency or extent of lipid storage.
 synonym: "regulation of lipid sequestration" NARROW [GOC:dph, GOC:tb]
 is_a: GO:0032879 ! regulation of localization
 is_a: GO:0065008 ! regulation of biological quality
-intersection_of: GO:0008150 ! biological_process
+intersection_of: GO:0065007 ! biological regulation
 intersection_of: regulates GO:0019915 ! lipid storage
 relationship: regulates GO:0019915 ! lipid storage
 
@@ -1549,7 +1559,7 @@ def: "Any process that increases the rate, frequency or extent of lipid storage.
 synonym: "positive regulation of lipid sequestration" NARROW [GOC:dph, GOC:tb]
 is_a: GO:0010883 ! regulation of lipid storage
 is_a: GO:1905954 ! positive regulation of lipid localization
-intersection_of: GO:0008150 ! biological_process
+intersection_of: GO:0065007 ! biological regulation
 intersection_of: positively_regulates GO:0019915 ! lipid storage
 relationship: positively_regulates GO:0019915 ! lipid storage
 
@@ -1560,7 +1570,7 @@ namespace: biological_process
 def: "Any process that decreases the rate, frequency or extent of lipid storage. Lipid storage is the accumulation and maintenance in cells or tissues of lipids, compounds soluble in organic solvents but insoluble or sparingly soluble in aqueous solvents. Lipid reserves can be accumulated during early developmental stages for mobilization and utilization at later stages of development." [GOC:BHF, GOC:dph, GOC:tb]
 is_a: GO:0010883 ! regulation of lipid storage
 is_a: GO:1905953 ! negative regulation of lipid localization
-intersection_of: GO:0008150 ! biological_process
+intersection_of: GO:0065007 ! biological regulation
 intersection_of: negatively_regulates GO:0019915 ! lipid storage
 relationship: negatively_regulates GO:0019915 ! lipid storage
 
@@ -1593,7 +1603,7 @@ def: "Any process that modulates the frequency, rate or extent of the controlled
 is_a: GO:0051955 ! regulation of amino acid transport
 is_a: GO:1903530 ! regulation of secretion by cell
 is_a: GO:2000191 ! regulation of fatty acid transport
-intersection_of: GO:0008150 ! biological_process
+intersection_of: GO:0065007 ! biological regulation
 intersection_of: regulates GO:0014047 ! glutamate secretion
 relationship: regulates GO:0014047 ! glutamate secretion
 
@@ -1611,7 +1621,7 @@ is_a: GO:0014048 ! regulation of glutamate secretion
 is_a: GO:0051957 ! positive regulation of amino acid transport
 is_a: GO:1903532 ! positive regulation of secretion by cell
 is_a: GO:2000193 ! positive regulation of fatty acid transport
-intersection_of: GO:0008150 ! biological_process
+intersection_of: GO:0065007 ! biological regulation
 intersection_of: positively_regulates GO:0014047 ! glutamate secretion
 relationship: positively_regulates GO:0014047 ! glutamate secretion
 
@@ -1628,7 +1638,7 @@ is_a: GO:0014048 ! regulation of glutamate secretion
 is_a: GO:0051956 ! negative regulation of amino acid transport
 is_a: GO:1903531 ! negative regulation of secretion by cell
 is_a: GO:2000192 ! negative regulation of fatty acid transport
-intersection_of: GO:0008150 ! biological_process
+intersection_of: GO:0065007 ! biological regulation
 intersection_of: negatively_regulates GO:0014047 ! glutamate secretion
 relationship: negatively_regulates GO:0014047 ! glutamate secretion
 
@@ -1649,7 +1659,7 @@ def: "Any process that modulates the frequency, rate or extent of the regulated 
 synonym: "regulation of GABA secretion" EXACT []
 is_a: GO:0051046 ! regulation of secretion
 is_a: GO:0051955 ! regulation of amino acid transport
-intersection_of: GO:0008150 ! biological_process
+intersection_of: GO:0065007 ! biological regulation
 intersection_of: regulates GO:0014051 ! gamma-aminobutyric acid secretion
 relationship: regulates GO:0014051 ! gamma-aminobutyric acid secretion
 
@@ -1666,7 +1676,7 @@ synonym: "negative regulation of GABA secretion" EXACT []
 is_a: GO:0014052 ! regulation of gamma-aminobutyric acid secretion
 is_a: GO:0051048 ! negative regulation of secretion
 is_a: GO:0051956 ! negative regulation of amino acid transport
-intersection_of: GO:0008150 ! biological_process
+intersection_of: GO:0065007 ! biological regulation
 intersection_of: negatively_regulates GO:0014051 ! gamma-aminobutyric acid secretion
 relationship: negatively_regulates GO:0014051 ! gamma-aminobutyric acid secretion
 
@@ -1684,7 +1694,7 @@ synonym: "upregulation of gamma-aminobutyric acid secretion" EXACT []
 is_a: GO:0014052 ! regulation of gamma-aminobutyric acid secretion
 is_a: GO:0051047 ! positive regulation of secretion
 is_a: GO:0051957 ! positive regulation of amino acid transport
-intersection_of: GO:0008150 ! biological_process
+intersection_of: GO:0065007 ! biological regulation
 intersection_of: positively_regulates GO:0014051 ! gamma-aminobutyric acid secretion
 relationship: positively_regulates GO:0014051 ! gamma-aminobutyric acid secretion
 
@@ -1707,7 +1717,7 @@ def: "Any process that modulates the frequency, rate or extent of the regulated 
 is_a: GO:0032222 ! regulation of synaptic transmission, cholinergic
 is_a: GO:0046928 ! regulation of neurotransmitter secretion
 is_a: GO:0051952 ! regulation of amine transport
-intersection_of: GO:0008150 ! biological_process
+intersection_of: GO:0065007 ! biological regulation
 intersection_of: regulates GO:0014055 ! acetylcholine secretion, neurotransmission
 relationship: regulates GO:0014055 ! acetylcholine secretion, neurotransmission
 
@@ -1725,7 +1735,7 @@ is_a: GO:0001956 ! positive regulation of neurotransmitter secretion
 is_a: GO:0014056 ! regulation of acetylcholine secretion, neurotransmission
 is_a: GO:0032224 ! positive regulation of synaptic transmission, cholinergic
 is_a: GO:0051954 ! positive regulation of amine transport
-intersection_of: GO:0008150 ! biological_process
+intersection_of: GO:0065007 ! biological regulation
 intersection_of: positively_regulates GO:0014055 ! acetylcholine secretion, neurotransmission
 relationship: positively_regulates GO:0014055 ! acetylcholine secretion, neurotransmission
 
@@ -1742,7 +1752,7 @@ is_a: GO:0014056 ! regulation of acetylcholine secretion, neurotransmission
 is_a: GO:0032223 ! negative regulation of synaptic transmission, cholinergic
 is_a: GO:0046929 ! negative regulation of neurotransmitter secretion
 is_a: GO:0051953 ! negative regulation of amine transport
-intersection_of: GO:0008150 ! biological_process
+intersection_of: GO:0065007 ! biological regulation
 intersection_of: negatively_regulates GO:0014055 ! acetylcholine secretion, neurotransmission
 relationship: negatively_regulates GO:0014055 ! acetylcholine secretion, neurotransmission
 
@@ -1752,7 +1762,7 @@ name: regulation of dopamine secretion
 namespace: biological_process
 def: "Any process that modulates the frequency, rate or extent of the regulated release of dopamine." [GOC:ef]
 is_a: GO:0050433 ! regulation of catecholamine secretion
-intersection_of: GO:0008150 ! biological_process
+intersection_of: GO:0065007 ! biological regulation
 intersection_of: regulates GO:0014046 ! dopamine secretion
 relationship: regulates GO:0014046 ! dopamine secretion
 
@@ -1764,7 +1774,7 @@ def: "Any process that modulates the frequency, rate or extent of the regulated 
 synonym: "regulation of serotonin release" RELATED [GOC:tb]
 is_a: GO:0044070 ! regulation of anion transport
 is_a: GO:1903530 ! regulation of secretion by cell
-intersection_of: GO:0008150 ! biological_process
+intersection_of: GO:0065007 ! biological regulation
 intersection_of: regulates GO:0001820 ! serotonin secretion
 relationship: regulates GO:0001820 ! serotonin secretion
 
@@ -1781,7 +1791,7 @@ synonym: "positive regulation of serotonin release" RELATED [GOC:tb]
 is_a: GO:0014062 ! regulation of serotonin secretion
 is_a: GO:1903531 ! negative regulation of secretion by cell
 is_a: GO:1903792 ! negative regulation of anion transport
-intersection_of: GO:0008150 ! biological_process
+intersection_of: GO:0065007 ! biological regulation
 intersection_of: negatively_regulates GO:0001820 ! serotonin secretion
 relationship: negatively_regulates GO:0001820 ! serotonin secretion
 
@@ -1799,7 +1809,7 @@ synonym: "upregulation of serotonin secretion" EXACT []
 is_a: GO:0014062 ! regulation of serotonin secretion
 is_a: GO:1903532 ! positive regulation of secretion by cell
 is_a: GO:1903793 ! positive regulation of anion transport
-intersection_of: GO:0008150 ! biological_process
+intersection_of: GO:0065007 ! biological regulation
 intersection_of: positively_regulates GO:0001820 ! serotonin secretion
 relationship: positively_regulates GO:0001820 ! serotonin secretion
 
@@ -2043,7 +2053,7 @@ namespace: biological_process
 def: "Any process that modulates the frequency, rate or extent of the chemical reactions and pathways involving lipids." [GOC:go_curators]
 synonym: "regulation of lipid metabolism" EXACT []
 is_a: GO:0080090 ! regulation of primary metabolic process
-intersection_of: GO:0008150 ! biological_process
+intersection_of: GO:0065007 ! biological regulation
 intersection_of: regulates GO:0006629 ! lipid metabolic process
 relationship: regulates GO:0006629 ! lipid metabolic process
 
@@ -2058,7 +2068,7 @@ synonym: "regulation of metabolism" EXACT []
 synonym: "regulation of multicellular organismal metabolic process" NARROW []
 synonym: "regulation of organismal metabolic process" NARROW [GOC:tb]
 is_a: GO:0050789 ! regulation of biological process
-intersection_of: GO:0008150 ! biological_process
+intersection_of: GO:0065007 ! biological regulation
 intersection_of: regulates GO:0008152 ! metabolic process
 relationship: regulates GO:0008152 ! metabolic process
 
@@ -2114,7 +2124,7 @@ def: "Any process that modulates the frequency, rate or extent of rhodopsin-medi
 synonym: "regulation of rhodopsin mediated signalling" EXACT []
 is_a: GO:0008277 ! regulation of G protein-coupled receptor signaling pathway
 is_a: GO:0032101 ! regulation of response to external stimulus
-intersection_of: GO:0008150 ! biological_process
+intersection_of: GO:0065007 ! biological regulation
 intersection_of: regulates GO:0016056 ! rhodopsin mediated signaling pathway
 relationship: regulates GO:0016056 ! rhodopsin mediated signaling pathway
 
@@ -2170,7 +2180,7 @@ def: "Any process that modulates the frequency, rate or extent of a signaling pr
 synonym: "regulation of signaling process" RELATED [GOC:bf]
 synonym: "regulation of signalling process" RELATED [GOC:mah]
 is_a: GO:0050789 ! regulation of biological process
-intersection_of: GO:0008150 ! biological_process
+intersection_of: GO:0065007 ! biological regulation
 intersection_of: regulates GO:0023052 ! signaling
 relationship: regulates GO:0023052 ! signaling
 creation_date: 2010-02-16T09:30:50Z
@@ -2206,7 +2216,7 @@ synonym: "positive regulation of signaling process" RELATED [GOC:bf]
 synonym: "positive regulation of signalling process" EXACT [GOC:mah]
 is_a: GO:0023051 ! regulation of signaling
 is_a: GO:0048518 ! positive regulation of biological process
-intersection_of: GO:0008150 ! biological_process
+intersection_of: GO:0065007 ! biological regulation
 intersection_of: positively_regulates GO:0023052 ! signaling
 relationship: positively_regulates GO:0023052 ! signaling
 creation_date: 2010-02-16T09:30:50Z
@@ -2220,7 +2230,7 @@ synonym: "negative regulation of signaling process" RELATED [GOC:bf]
 synonym: "negative regulation of signalling process" RELATED [GOC:mah]
 is_a: GO:0023051 ! regulation of signaling
 is_a: GO:0048519 ! negative regulation of biological process
-intersection_of: GO:0008150 ! biological_process
+intersection_of: GO:0065007 ! biological regulation
 intersection_of: negatively_regulates GO:0023052 ! signaling
 relationship: negatively_regulates GO:0023052 ! signaling
 creation_date: 2010-02-16T09:30:50Z
@@ -2318,7 +2328,7 @@ synonym: "regulation of neurological process" EXACT [GOC:dph, GOC:tb]
 synonym: "regulation of neurological system process" EXACT []
 synonym: "regulation of neurophysiological process" EXACT []
 is_a: GO:0044057 ! regulation of system process
-intersection_of: GO:0008150 ! biological_process
+intersection_of: GO:0065007 ! biological regulation
 intersection_of: regulates GO:0050877 ! nervous system process
 relationship: regulates GO:0050877 ! nervous system process
 
@@ -2336,7 +2346,7 @@ synonym: "negative regulation of neurological system process" EXACT []
 synonym: "negative regulation of neurophysiological process" EXACT []
 is_a: GO:0031644 ! regulation of nervous system process
 is_a: GO:0051241 ! negative regulation of multicellular organismal process
-intersection_of: GO:0008150 ! biological_process
+intersection_of: GO:0065007 ! biological regulation
 intersection_of: negatively_regulates GO:0050877 ! nervous system process
 relationship: negatively_regulates GO:0050877 ! nervous system process
 
@@ -2355,7 +2365,7 @@ synonym: "up-regulation of neurological process" EXACT []
 synonym: "upregulation of neurological process" EXACT []
 is_a: GO:0031644 ! regulation of nervous system process
 is_a: GO:0051240 ! positive regulation of multicellular organismal process
-intersection_of: GO:0008150 ! biological_process
+intersection_of: GO:0065007 ! biological regulation
 intersection_of: positively_regulates GO:0050877 ! nervous system process
 relationship: positively_regulates GO:0050877 ! nervous system process
 
@@ -2385,7 +2395,7 @@ def: "Any process that modulates the frequency, rate or extent of a response to 
 comment: Note that this term is in the subset of terms that should not be used for direct gene product annotation. Instead, select a child term or, if no appropriate child term exists, please request a new term. Direct annotations to this term may be amended during annotation QC.
 subset: gocheck_do_not_manually_annotate
 is_a: GO:0048583 ! regulation of response to stimulus
-intersection_of: GO:0008150 ! biological_process
+intersection_of: GO:0065007 ! biological regulation
 intersection_of: regulates GO:0009605 ! response to external stimulus
 relationship: regulates GO:0009605 ! response to external stimulus
 
@@ -2402,7 +2412,7 @@ synonym: "downregulation of response to external stimulus" EXACT []
 synonym: "inhibition of response to external stimulus" NARROW []
 is_a: GO:0032101 ! regulation of response to external stimulus
 is_a: GO:0048585 ! negative regulation of response to stimulus
-intersection_of: GO:0008150 ! biological_process
+intersection_of: GO:0065007 ! biological regulation
 intersection_of: negatively_regulates GO:0009605 ! response to external stimulus
 relationship: negatively_regulates GO:0009605 ! response to external stimulus
 
@@ -2420,7 +2430,7 @@ synonym: "up-regulation of response to external stimulus" EXACT []
 synonym: "upregulation of response to external stimulus" EXACT []
 is_a: GO:0032101 ! regulation of response to external stimulus
 is_a: GO:0048584 ! positive regulation of response to stimulus
-intersection_of: GO:0008150 ! biological_process
+intersection_of: GO:0065007 ! biological regulation
 intersection_of: positively_regulates GO:0009605 ! response to external stimulus
 relationship: positively_regulates GO:0009605 ! response to external stimulus
 
@@ -2430,7 +2440,7 @@ name: regulation of response to extracellular stimulus
 namespace: biological_process
 def: "Any process that modulates the frequency, rate or extent of a response to an extracellular stimulus." [GOC:mah]
 is_a: GO:0032101 ! regulation of response to external stimulus
-intersection_of: GO:0008150 ! biological_process
+intersection_of: GO:0065007 ! biological regulation
 intersection_of: regulates GO:0009991 ! response to extracellular stimulus
 relationship: regulates GO:0009991 ! response to extracellular stimulus
 
@@ -2445,7 +2455,7 @@ synonym: "downregulation of response to extracellular stimulus" EXACT []
 synonym: "inhibition of response to extracellular stimulus" NARROW []
 is_a: GO:0032102 ! negative regulation of response to external stimulus
 is_a: GO:0032104 ! regulation of response to extracellular stimulus
-intersection_of: GO:0008150 ! biological_process
+intersection_of: GO:0065007 ! biological regulation
 intersection_of: negatively_regulates GO:0009991 ! response to extracellular stimulus
 relationship: negatively_regulates GO:0009991 ! response to extracellular stimulus
 
@@ -2461,7 +2471,7 @@ synonym: "up-regulation of response to extracellular stimulus" EXACT []
 synonym: "upregulation of response to extracellular stimulus" EXACT []
 is_a: GO:0032103 ! positive regulation of response to external stimulus
 is_a: GO:0032104 ! regulation of response to extracellular stimulus
-intersection_of: GO:0008150 ! biological_process
+intersection_of: GO:0065007 ! biological regulation
 intersection_of: positively_regulates GO:0009991 ! response to extracellular stimulus
 relationship: positively_regulates GO:0009991 ! response to extracellular stimulus
 
@@ -2471,7 +2481,7 @@ name: regulation of response to nutrient levels
 namespace: biological_process
 def: "Any process that modulates the frequency, rate or extent of a response to nutrient levels." [GOC:mah]
 is_a: GO:0032104 ! regulation of response to extracellular stimulus
-intersection_of: GO:0008150 ! biological_process
+intersection_of: GO:0065007 ! biological regulation
 intersection_of: regulates GO:0031667 ! response to nutrient levels
 relationship: regulates GO:0031667 ! response to nutrient levels
 
@@ -2486,7 +2496,7 @@ synonym: "downregulation of response to nutrient levels" EXACT []
 synonym: "inhibition of response to nutrient levels" NARROW []
 is_a: GO:0032105 ! negative regulation of response to extracellular stimulus
 is_a: GO:0032107 ! regulation of response to nutrient levels
-intersection_of: GO:0008150 ! biological_process
+intersection_of: GO:0065007 ! biological regulation
 intersection_of: negatively_regulates GO:0031667 ! response to nutrient levels
 relationship: negatively_regulates GO:0031667 ! response to nutrient levels
 
@@ -2502,7 +2512,7 @@ synonym: "up-regulation of response to nutrient levels" EXACT []
 synonym: "upregulation of response to nutrient levels" EXACT []
 is_a: GO:0032106 ! positive regulation of response to extracellular stimulus
 is_a: GO:0032107 ! regulation of response to nutrient levels
-intersection_of: GO:0008150 ! biological_process
+intersection_of: GO:0065007 ! biological regulation
 intersection_of: positively_regulates GO:0031667 ! response to nutrient levels
 relationship: positively_regulates GO:0031667 ! response to nutrient levels
 
@@ -2512,7 +2522,7 @@ name: regulation of synaptic transmission, cholinergic
 namespace: biological_process
 def: "Any process that modulates the frequency, rate or extent of cholinergic synaptic transmission, the process of communication from a neuron to another neuron across a synapse using the neurotransmitter acetylcholine." [GOC:mah]
 is_a: GO:0050804 ! modulation of chemical synaptic transmission
-intersection_of: GO:0008150 ! biological_process
+intersection_of: GO:0065007 ! biological regulation
 intersection_of: regulates GO:0007271 ! synaptic transmission, cholinergic
 relationship: regulates GO:0007271 ! synaptic transmission, cholinergic
 
@@ -2527,7 +2537,7 @@ synonym: "downregulation of synaptic transmission, cholinergic" EXACT []
 synonym: "inhibition of synaptic transmission, cholinergic" NARROW []
 is_a: GO:0032222 ! regulation of synaptic transmission, cholinergic
 is_a: GO:0050805 ! negative regulation of synaptic transmission
-intersection_of: GO:0008150 ! biological_process
+intersection_of: GO:0065007 ! biological regulation
 intersection_of: negatively_regulates GO:0007271 ! synaptic transmission, cholinergic
 relationship: negatively_regulates GO:0007271 ! synaptic transmission, cholinergic
 
@@ -2543,7 +2553,7 @@ synonym: "up-regulation of synaptic transmission, cholinergic" EXACT []
 synonym: "upregulation of synaptic transmission, cholinergic" EXACT []
 is_a: GO:0032222 ! regulation of synaptic transmission, cholinergic
 is_a: GO:0050806 ! positive regulation of synaptic transmission
-intersection_of: GO:0008150 ! biological_process
+intersection_of: GO:0065007 ! biological regulation
 intersection_of: positively_regulates GO:0007271 ! synaptic transmission, cholinergic
 relationship: positively_regulates GO:0007271 ! synaptic transmission, cholinergic
 
@@ -2553,7 +2563,7 @@ name: regulation of synaptic transmission, dopaminergic
 namespace: biological_process
 def: "Any process that modulates the frequency, rate or extent of dopaminergic synaptic transmission, the process of communication from a neuron to another neuron across a synapse using the neurotransmitter dopamine." [GOC:mah]
 is_a: GO:0050804 ! modulation of chemical synaptic transmission
-intersection_of: GO:0008150 ! biological_process
+intersection_of: GO:0065007 ! biological regulation
 intersection_of: regulates GO:0001963 ! synaptic transmission, dopaminergic
 relationship: regulates GO:0001963 ! synaptic transmission, dopaminergic
 
@@ -2569,7 +2579,7 @@ synonym: "up-regulation of synaptic transmission, dopaminergic" EXACT []
 synonym: "upregulation of synaptic transmission, dopaminergic" EXACT []
 is_a: GO:0032225 ! regulation of synaptic transmission, dopaminergic
 is_a: GO:0050806 ! positive regulation of synaptic transmission
-intersection_of: GO:0008150 ! biological_process
+intersection_of: GO:0065007 ! biological regulation
 intersection_of: positively_regulates GO:0001963 ! synaptic transmission, dopaminergic
 relationship: positively_regulates GO:0001963 ! synaptic transmission, dopaminergic
 
@@ -2584,7 +2594,7 @@ synonym: "downregulation of synaptic transmission, dopaminergic" EXACT []
 synonym: "inhibition of synaptic transmission, dopaminergic" NARROW []
 is_a: GO:0032225 ! regulation of synaptic transmission, dopaminergic
 is_a: GO:0050805 ! negative regulation of synaptic transmission
-intersection_of: GO:0008150 ! biological_process
+intersection_of: GO:0065007 ! biological regulation
 intersection_of: negatively_regulates GO:0001963 ! synaptic transmission, dopaminergic
 relationship: negatively_regulates GO:0001963 ! synaptic transmission, dopaminergic
 
@@ -2594,7 +2604,7 @@ name: regulation of synaptic transmission, GABAergic
 namespace: biological_process
 def: "Any process that modulates the frequency, rate or extent of GABAergic synaptic transmission, the process of communication from a neuron to another neuron across a synapse using the neurotransmitter gamma-aminobutyric acid (GABA)." [GOC:mah]
 is_a: GO:0050804 ! modulation of chemical synaptic transmission
-intersection_of: GO:0008150 ! biological_process
+intersection_of: GO:0065007 ! biological regulation
 intersection_of: regulates GO:0051932 ! synaptic transmission, GABAergic
 relationship: regulates GO:0051932 ! synaptic transmission, GABAergic
 
@@ -2609,7 +2619,7 @@ synonym: "downregulation of synaptic transmission, GABAergic" EXACT []
 synonym: "inhibition of synaptic transmission, GABAergic" NARROW []
 is_a: GO:0032228 ! regulation of synaptic transmission, GABAergic
 is_a: GO:0050805 ! negative regulation of synaptic transmission
-intersection_of: GO:0008150 ! biological_process
+intersection_of: GO:0065007 ! biological regulation
 intersection_of: negatively_regulates GO:0051932 ! synaptic transmission, GABAergic
 relationship: negatively_regulates GO:0051932 ! synaptic transmission, GABAergic
 
@@ -2625,7 +2635,7 @@ synonym: "up-regulation of synaptic transmission, GABAergic" EXACT []
 synonym: "upregulation of synaptic transmission, GABAergic" EXACT []
 is_a: GO:0032228 ! regulation of synaptic transmission, GABAergic
 is_a: GO:0050806 ! positive regulation of synaptic transmission
-intersection_of: GO:0008150 ! biological_process
+intersection_of: GO:0065007 ! biological regulation
 intersection_of: positively_regulates GO:0051932 ! synaptic transmission, GABAergic
 relationship: positively_regulates GO:0051932 ! synaptic transmission, GABAergic
 
@@ -2636,7 +2646,7 @@ namespace: biological_process
 def: "Any process that modulates the frequency, rate or extent of the directed movement of lipids into, out of or within a cell, or between cells, by means of some agent such as a transporter or pore." [GOC:mah]
 is_a: GO:0044070 ! regulation of anion transport
 is_a: GO:1905952 ! regulation of lipid localization
-intersection_of: GO:0008150 ! biological_process
+intersection_of: GO:0065007 ! biological regulation
 intersection_of: regulates GO:0006869 ! lipid transport
 relationship: regulates GO:0006869 ! lipid transport
 
@@ -2652,7 +2662,7 @@ synonym: "inhibition of lipid transport" NARROW []
 is_a: GO:0032368 ! regulation of lipid transport
 is_a: GO:1903792 ! negative regulation of anion transport
 is_a: GO:1905953 ! negative regulation of lipid localization
-intersection_of: GO:0008150 ! biological_process
+intersection_of: GO:0065007 ! biological regulation
 intersection_of: negatively_regulates GO:0006869 ! lipid transport
 relationship: negatively_regulates GO:0006869 ! lipid transport
 
@@ -2669,7 +2679,7 @@ synonym: "upregulation of lipid transport" EXACT []
 is_a: GO:0032368 ! regulation of lipid transport
 is_a: GO:1903793 ! positive regulation of anion transport
 is_a: GO:1905954 ! positive regulation of lipid localization
-intersection_of: GO:0008150 ! biological_process
+intersection_of: GO:0065007 ! biological regulation
 intersection_of: positively_regulates GO:0006869 ! lipid transport
 relationship: positively_regulates GO:0006869 ! lipid transport
 
@@ -2720,7 +2730,7 @@ namespace: biological_process
 def: "Any process that modulates the frequency, rate or extent of any process in which a cell, a substance, or a cellular entity is transported to, or maintained in, a specific location." [GOC:mah]
 synonym: "regulation of localisation" EXACT [GOC:mah]
 is_a: GO:0050789 ! regulation of biological process
-intersection_of: GO:0008150 ! biological_process
+intersection_of: GO:0065007 ! biological regulation
 intersection_of: regulates GO:0051179 ! localization
 relationship: regulates GO:0051179 ! localization
 
@@ -2730,7 +2740,7 @@ name: regulation of organic acid transport
 namespace: biological_process
 def: "Any process that modulates the frequency, rate or extent of the directed movement of organic acids into, out of or within a cell, or between cells, by means of some agent such as a transporter or pore." [GOC:mah]
 is_a: GO:0044070 ! regulation of anion transport
-intersection_of: GO:0008150 ! biological_process
+intersection_of: GO:0065007 ! biological regulation
 intersection_of: regulates GO:0015849 ! organic acid transport
 relationship: regulates GO:0015849 ! organic acid transport
 
@@ -2745,7 +2755,7 @@ synonym: "downregulation of organic acid transport" EXACT []
 synonym: "inhibition of organic acid transport" NARROW []
 is_a: GO:0032890 ! regulation of organic acid transport
 is_a: GO:1903792 ! negative regulation of anion transport
-intersection_of: GO:0008150 ! biological_process
+intersection_of: GO:0065007 ! biological regulation
 intersection_of: negatively_regulates GO:0015849 ! organic acid transport
 relationship: negatively_regulates GO:0015849 ! organic acid transport
 
@@ -2761,7 +2771,7 @@ synonym: "up-regulation of organic acid transport" EXACT []
 synonym: "upregulation of organic acid transport" EXACT []
 is_a: GO:0032890 ! regulation of organic acid transport
 is_a: GO:1903793 ! positive regulation of anion transport
-intersection_of: GO:0008150 ! biological_process
+intersection_of: GO:0065007 ! biological regulation
 intersection_of: positively_regulates GO:0015849 ! organic acid transport
 relationship: positively_regulates GO:0015849 ! organic acid transport
 
@@ -2813,7 +2823,7 @@ synonym: "downregulation of dopamine secretion" EXACT []
 synonym: "inhibition of dopamine secretion" NARROW []
 is_a: GO:0014059 ! regulation of dopamine secretion
 is_a: GO:0033604 ! negative regulation of catecholamine secretion
-intersection_of: GO:0008150 ! biological_process
+intersection_of: GO:0065007 ! biological regulation
 intersection_of: negatively_regulates GO:0014046 ! dopamine secretion
 relationship: negatively_regulates GO:0014046 ! dopamine secretion
 
@@ -2829,7 +2839,7 @@ synonym: "up-regulation of dopamine secretion" EXACT []
 synonym: "upregulation of dopamine secretion" EXACT []
 is_a: GO:0014059 ! regulation of dopamine secretion
 is_a: GO:0033605 ! positive regulation of catecholamine secretion
-intersection_of: GO:0008150 ! biological_process
+intersection_of: GO:0065007 ! biological regulation
 intersection_of: positively_regulates GO:0014046 ! dopamine secretion
 relationship: positively_regulates GO:0014046 ! dopamine secretion
 
@@ -2845,7 +2855,7 @@ synonym: "inhibition of catecholamine secretion" NARROW []
 is_a: GO:0050433 ! regulation of catecholamine secretion
 is_a: GO:0051953 ! negative regulation of amine transport
 is_a: GO:1903531 ! negative regulation of secretion by cell
-intersection_of: GO:0008150 ! biological_process
+intersection_of: GO:0065007 ! biological regulation
 intersection_of: negatively_regulates GO:0050432 ! catecholamine secretion
 relationship: negatively_regulates GO:0050432 ! catecholamine secretion
 
@@ -2862,7 +2872,7 @@ synonym: "upregulation of catecholamine secretion" EXACT []
 is_a: GO:0050433 ! regulation of catecholamine secretion
 is_a: GO:0051954 ! positive regulation of amine transport
 is_a: GO:1903532 ! positive regulation of secretion by cell
-intersection_of: GO:0008150 ! biological_process
+intersection_of: GO:0065007 ! biological regulation
 intersection_of: positively_regulates GO:0050432 ! catecholamine secretion
 relationship: positively_regulates GO:0050432 ! catecholamine secretion
 
@@ -2926,7 +2936,7 @@ name: regulation of locomotion
 namespace: biological_process
 def: "Any process that modulates the frequency, rate or extent of locomotion of a cell or organism." [GOC:ems]
 is_a: GO:0050789 ! regulation of biological process
-intersection_of: GO:0008150 ! biological_process
+intersection_of: GO:0065007 ! biological regulation
 intersection_of: regulates GO:0040011 ! locomotion
 relationship: regulates GO:0040011 ! locomotion
 
@@ -2941,7 +2951,7 @@ synonym: "downregulation of locomotion" EXACT []
 synonym: "inhibition of locomotion" NARROW []
 is_a: GO:0040012 ! regulation of locomotion
 is_a: GO:0048519 ! negative regulation of biological process
-intersection_of: GO:0008150 ! biological_process
+intersection_of: GO:0065007 ! biological regulation
 intersection_of: negatively_regulates GO:0040011 ! locomotion
 relationship: negatively_regulates GO:0040011 ! locomotion
 
@@ -2957,7 +2967,7 @@ synonym: "up-regulation of locomotion" EXACT []
 synonym: "upregulation of locomotion" EXACT []
 is_a: GO:0040012 ! regulation of locomotion
 is_a: GO:0048518 ! positive regulation of biological process
-intersection_of: GO:0008150 ! biological_process
+intersection_of: GO:0065007 ! biological regulation
 intersection_of: positively_regulates GO:0040011 ! locomotion
 relationship: positively_regulates GO:0040011 ! locomotion
 
@@ -3005,7 +3015,7 @@ is_a: GO:0042754 ! negative regulation of circadian rhythm
 is_a: GO:0045187 ! regulation of circadian sleep/wake cycle, sleep
 is_a: GO:0048521 ! negative regulation of behavior
 is_a: GO:0051241 ! negative regulation of multicellular organismal process
-intersection_of: GO:0008150 ! biological_process
+intersection_of: GO:0065007 ! biological regulation
 intersection_of: negatively_regulates GO:0050802 ! circadian sleep/wake cycle, sleep
 relationship: negatively_regulates GO:0050802 ! circadian sleep/wake cycle, sleep
 
@@ -3050,7 +3060,7 @@ def: "Any process that modulates the frequency, rate or extent of the circadian 
 is_a: GO:0042752 ! regulation of circadian rhythm
 is_a: GO:0050795 ! regulation of behavior
 is_a: GO:0051239 ! regulation of multicellular organismal process
-intersection_of: GO:0008150 ! biological_process
+intersection_of: GO:0065007 ! biological regulation
 intersection_of: regulates GO:0042745 ! circadian sleep/wake cycle
 relationship: regulates GO:0042745 ! circadian sleep/wake cycle
 
@@ -3060,7 +3070,7 @@ name: regulation of circadian rhythm
 namespace: biological_process
 def: "Any process that modulates the frequency, rate or extent of a circadian rhythm. A circadian rhythm is a biological process in an organism that recurs with a regularity of approximately 24 hours." [GOC:dph, GOC:jl, GOC:tb]
 is_a: GO:0050789 ! regulation of biological process
-intersection_of: GO:0008150 ! biological_process
+intersection_of: GO:0065007 ! biological regulation
 intersection_of: regulates GO:0007623 ! circadian rhythm
 relationship: regulates GO:0007623 ! circadian rhythm
 
@@ -3076,7 +3086,7 @@ synonym: "up-regulation of circadian rhythm" EXACT []
 synonym: "upregulation of circadian rhythm" EXACT []
 is_a: GO:0042752 ! regulation of circadian rhythm
 is_a: GO:0048518 ! positive regulation of biological process
-intersection_of: GO:0008150 ! biological_process
+intersection_of: GO:0065007 ! biological regulation
 intersection_of: positively_regulates GO:0007623 ! circadian rhythm
 relationship: positively_regulates GO:0007623 ! circadian rhythm
 
@@ -3091,7 +3101,7 @@ synonym: "downregulation of circadian rhythm" EXACT []
 synonym: "inhibition of circadian rhythm" NARROW []
 is_a: GO:0042752 ! regulation of circadian rhythm
 is_a: GO:0048519 ! negative regulation of biological process
-intersection_of: GO:0008150 ! biological_process
+intersection_of: GO:0065007 ! biological regulation
 intersection_of: negatively_regulates GO:0007623 ! circadian rhythm
 relationship: negatively_regulates GO:0007623 ! circadian rhythm
 
@@ -3146,7 +3156,7 @@ name: regulation of ion transport
 namespace: biological_process
 def: "Any process that modulates the frequency, rate or extent of the directed movement of charged atoms or small charged molecules into, out of or within a cell, or between cells, by means of some agent such as a transporter or pore." [GOC:jl]
 is_a: GO:0051049 ! regulation of transport
-intersection_of: GO:0008150 ! biological_process
+intersection_of: GO:0065007 ! biological regulation
 intersection_of: regulates GO:0006811 ! ion transport
 relationship: regulates GO:0006811 ! ion transport
 
@@ -3162,7 +3172,7 @@ synonym: "up-regulation of ion transport" EXACT []
 synonym: "upregulation of ion transport" EXACT []
 is_a: GO:0043269 ! regulation of ion transport
 is_a: GO:0051050 ! positive regulation of transport
-intersection_of: GO:0008150 ! biological_process
+intersection_of: GO:0065007 ! biological regulation
 intersection_of: positively_regulates GO:0006811 ! ion transport
 relationship: positively_regulates GO:0006811 ! ion transport
 
@@ -3177,7 +3187,7 @@ synonym: "downregulation of ion transport" EXACT []
 synonym: "inhibition of ion transport" NARROW []
 is_a: GO:0043269 ! regulation of ion transport
 is_a: GO:0051051 ! negative regulation of transport
-intersection_of: GO:0008150 ! biological_process
+intersection_of: GO:0065007 ! biological regulation
 intersection_of: negatively_regulates GO:0006811 ! ion transport
 relationship: negatively_regulates GO:0006811 ! ion transport
 
@@ -3202,7 +3212,7 @@ name: regulation of respiratory gaseous exchange
 namespace: biological_process
 def: "Any process that modulates the frequency, rate or extent of the process of gaseous exchange between an organism and its environment." [GOC:jl]
 is_a: GO:0051239 ! regulation of multicellular organismal process
-intersection_of: GO:0008150 ! biological_process
+intersection_of: GO:0065007 ! biological regulation
 intersection_of: regulates GO:0007585 ! respiratory gaseous exchange by respiratory system
 relationship: regulates GO:0007585 ! respiratory gaseous exchange by respiratory system
 
@@ -3220,7 +3230,7 @@ name: regulation of multi-organism process
 namespace: biological_process
 def: "Any process that modulates the frequency, rate or extent of a multi-organism process, a process in which an organism has an effect on another organism of the same or different species." [GOC:jl]
 is_a: GO:0050789 ! regulation of biological process
-intersection_of: GO:0008150 ! biological_process
+intersection_of: GO:0065007 ! biological regulation
 intersection_of: regulates GO:0051704 ! multi-organism process
 relationship: regulates GO:0051704 ! multi-organism process
 
@@ -3231,7 +3241,7 @@ namespace: biological_process
 def: "Any process that stops, prevents, or reduces the frequency, rate or extent of a multi-organism process, a process in which an organism has an effect on another organism of the same or different species." [GOC:jl]
 is_a: GO:0043900 ! regulation of multi-organism process
 is_a: GO:0048519 ! negative regulation of biological process
-intersection_of: GO:0008150 ! biological_process
+intersection_of: GO:0065007 ! biological regulation
 intersection_of: negatively_regulates GO:0051704 ! multi-organism process
 relationship: negatively_regulates GO:0051704 ! multi-organism process
 
@@ -3242,7 +3252,7 @@ namespace: biological_process
 def: "Any process that activates or increases the frequency, rate or extent of a multi-organism process, a process in which an organism has an effect on another organism of the same or different species." [GOC:jl]
 is_a: GO:0043900 ! regulation of multi-organism process
 is_a: GO:0048518 ! positive regulation of biological process
-intersection_of: GO:0008150 ! biological_process
+intersection_of: GO:0065007 ! biological regulation
 intersection_of: positively_regulates GO:0051704 ! multi-organism process
 relationship: positively_regulates GO:0051704 ! multi-organism process
 
@@ -3252,7 +3262,7 @@ name: regulation of system process
 namespace: biological_process
 def: "Any process that modulates the frequency, rate or extent of a system process, a multicellular organismal process carried out by any of the organs or tissues in an organ system." [GOC:jl]
 is_a: GO:0051239 ! regulation of multicellular organismal process
-intersection_of: GO:0008150 ! biological_process
+intersection_of: GO:0065007 ! biological regulation
 intersection_of: regulates GO:0003008 ! system process
 relationship: regulates GO:0003008 ! system process
 
@@ -3262,7 +3272,7 @@ name: regulation of digestive system process
 namespace: biological_process
 def: "Any process that modulates the frequency, rate or extent of a digestive system process, a physical, chemical, or biochemical process carried out by living organisms to break down ingested nutrients into components that may be easily absorbed and directed into metabolism." [GOC:jl]
 is_a: GO:0044057 ! regulation of system process
-intersection_of: GO:0008150 ! biological_process
+intersection_of: GO:0065007 ! biological regulation
 intersection_of: regulates GO:0022600 ! digestive system process
 relationship: regulates GO:0022600 ! digestive system process
 
@@ -3273,7 +3283,7 @@ namespace: biological_process
 def: "Any process that modulates the frequency, rate or extent of an endocrine process, a process involving the secretion of or response to endocrine hormones. An endocrine hormone is a hormone released into the circulatory system." [GOC:jl]
 synonym: "regulation of endocrine system process" EXACT []
 is_a: GO:0044057 ! regulation of system process
-intersection_of: GO:0008150 ! biological_process
+intersection_of: GO:0065007 ! biological regulation
 intersection_of: regulates GO:0050886 ! endocrine process
 relationship: regulates GO:0050886 ! endocrine process
 
@@ -3284,7 +3294,7 @@ namespace: biological_process
 def: "Any process that modulates the frequency, rate or extent of a respiratory system process, an organ system process carried out by any of the organs or tissues of the respiratory system." [GOC:jl]
 is_a: GO:0043576 ! regulation of respiratory gaseous exchange
 is_a: GO:0044057 ! regulation of system process
-intersection_of: GO:0008150 ! biological_process
+intersection_of: GO:0065007 ! biological regulation
 intersection_of: regulates GO:0003016 ! respiratory system process
 relationship: regulates GO:0003016 ! respiratory system process
 
@@ -3294,7 +3304,7 @@ name: regulation of anion transport
 namespace: biological_process
 def: "Any process that modulates the frequency, rate or extent of the directed movement of anions, atoms or small molecules with a net negative charge into, out of or within a cell, or between cells, by means of some agent such as a transporter or pore." [GOC:jl]
 is_a: GO:0043269 ! regulation of ion transport
-intersection_of: GO:0008150 ! biological_process
+intersection_of: GO:0065007 ! biological regulation
 intersection_of: regulates GO:0006820 ! anion transport
 relationship: regulates GO:0006820 ! anion transport
 
@@ -3334,7 +3344,7 @@ namespace: biological_process
 def: "Any process that modulates the frequency, rate or extent of sleep; a readily reversible state of reduced awareness and metabolic activity that occurs periodically in many animals." [GOC:jl, ISBN:0192800981]
 synonym: "regulation of sleep" EXACT []
 is_a: GO:0042749 ! regulation of circadian sleep/wake cycle
-intersection_of: GO:0008150 ! biological_process
+intersection_of: GO:0065007 ! biological regulation
 intersection_of: regulates GO:0050802 ! circadian sleep/wake cycle, sleep
 relationship: regulates GO:0050802 ! circadian sleep/wake cycle, sleep
 
@@ -3385,7 +3395,7 @@ synonym: "negative regulation of GPCR protein signaling pathway" EXACT []
 synonym: "negative regulation of GPCR protein signalling pathway" EXACT []
 is_a: GO:0008277 ! regulation of G protein-coupled receptor signaling pathway
 is_a: GO:0009968 ! negative regulation of signal transduction
-intersection_of: GO:0008150 ! biological_process
+intersection_of: GO:0065007 ! biological regulation
 intersection_of: negatively_regulates GO:0007186 ! G protein-coupled receptor signaling pathway
 relationship: negatively_regulates GO:0007186 ! G protein-coupled receptor signaling pathway
 
@@ -3409,7 +3419,7 @@ synonym: "up-regulation of G-protein coupled receptor protein signaling pathway"
 synonym: "upregulation of G-protein coupled receptor protein signaling pathway" EXACT []
 is_a: GO:0008277 ! regulation of G protein-coupled receptor signaling pathway
 is_a: GO:0009967 ! positive regulation of signal transduction
-intersection_of: GO:0008150 ! biological_process
+intersection_of: GO:0065007 ! biological regulation
 intersection_of: positively_regulates GO:0007186 ! G protein-coupled receptor signaling pathway
 relationship: positively_regulates GO:0007186 ! G protein-coupled receptor signaling pathway
 
@@ -3425,7 +3435,7 @@ synonym: "inhibition of eclosion" NARROW []
 is_a: GO:0007563 ! regulation of eclosion
 is_a: GO:0051093 ! negative regulation of developmental process
 is_a: GO:0051241 ! negative regulation of multicellular organismal process
-intersection_of: GO:0008150 ! biological_process
+intersection_of: GO:0065007 ! biological regulation
 intersection_of: negatively_regulates GO:0007562 ! eclosion
 relationship: negatively_regulates GO:0007562 ! eclosion
 
@@ -3441,7 +3451,7 @@ synonym: "up-regulation of eclosion" EXACT []
 synonym: "upregulation of eclosion" EXACT []
 is_a: GO:0007563 ! regulation of eclosion
 is_a: GO:0051240 ! positive regulation of multicellular organismal process
-intersection_of: GO:0008150 ! biological_process
+intersection_of: GO:0065007 ! biological regulation
 intersection_of: positively_regulates GO:0007562 ! eclosion
 relationship: positively_regulates GO:0007562 ! eclosion
 
@@ -3457,7 +3467,7 @@ synonym: "inhibition of lipid metabolic process" NARROW []
 synonym: "negative regulation of lipid metabolism" EXACT []
 is_a: GO:0009892 ! negative regulation of metabolic process
 is_a: GO:0019216 ! regulation of lipid metabolic process
-intersection_of: GO:0008150 ! biological_process
+intersection_of: GO:0065007 ! biological regulation
 intersection_of: negatively_regulates GO:0006629 ! lipid metabolic process
 relationship: negatively_regulates GO:0006629 ! lipid metabolic process
 
@@ -3474,7 +3484,7 @@ synonym: "up-regulation of lipid metabolic process" EXACT []
 synonym: "upregulation of lipid metabolic process" EXACT []
 is_a: GO:0009893 ! positive regulation of metabolic process
 is_a: GO:0019216 ! regulation of lipid metabolic process
-intersection_of: GO:0008150 ! biological_process
+intersection_of: GO:0065007 ! biological regulation
 intersection_of: positively_regulates GO:0006629 ! lipid metabolic process
 relationship: positively_regulates GO:0006629 ! lipid metabolic process
 
@@ -3503,7 +3513,7 @@ is_a: GO:0042753 ! positive regulation of circadian rhythm
 is_a: GO:0045187 ! regulation of circadian sleep/wake cycle, sleep
 is_a: GO:0048520 ! positive regulation of behavior
 is_a: GO:0051240 ! positive regulation of multicellular organismal process
-intersection_of: GO:0008150 ! biological_process
+intersection_of: GO:0065007 ! biological regulation
 intersection_of: positively_regulates GO:0050802 ! circadian sleep/wake cycle, sleep
 relationship: positively_regulates GO:0050802 ! circadian sleep/wake cycle, sleep
 
@@ -3545,7 +3555,7 @@ synonym: "regulation of post-mating oviposition" NARROW []
 is_a: GO:0050795 ! regulation of behavior
 is_a: GO:0051239 ! regulation of multicellular organismal process
 is_a: GO:2000241 ! regulation of reproductive process
-intersection_of: GO:0008150 ! biological_process
+intersection_of: GO:0065007 ! biological regulation
 intersection_of: regulates GO:0018991 ! oviposition
 relationship: regulates GO:0018991 ! oviposition
 
@@ -3589,7 +3599,7 @@ def: "Any process that modulates the frequency, rate or extent of the regulated 
 is_a: GO:0044058 ! regulation of digestive system process
 is_a: GO:0050878 ! regulation of body fluid levels
 is_a: GO:0051046 ! regulation of secretion
-intersection_of: GO:0008150 ! biological_process
+intersection_of: GO:0065007 ! biological regulation
 intersection_of: regulates GO:0046541 ! saliva secretion
 relationship: regulates GO:0046541 ! saliva secretion
 
@@ -3606,7 +3616,7 @@ synonym: "upregulation of saliva secretion" EXACT []
 is_a: GO:0046877 ! regulation of saliva secretion
 is_a: GO:0051047 ! positive regulation of secretion
 is_a: GO:0060456 ! positive regulation of digestive system process
-intersection_of: GO:0008150 ! biological_process
+intersection_of: GO:0065007 ! biological regulation
 intersection_of: positively_regulates GO:0046541 ! saliva secretion
 relationship: positively_regulates GO:0046541 ! saliva secretion
 
@@ -3627,7 +3637,7 @@ is_a: GO:0010646 ! regulation of cell communication
 is_a: GO:0010817 ! regulation of hormone levels
 is_a: GO:0023051 ! regulation of signaling
 is_a: GO:1903530 ! regulation of secretion by cell
-intersection_of: GO:0008150 ! biological_process
+intersection_of: GO:0065007 ! biological regulation
 intersection_of: regulates GO:0046879 ! hormone secretion
 relationship: regulates GO:0046879 ! hormone secretion
 
@@ -3645,7 +3655,7 @@ is_a: GO:0010647 ! positive regulation of cell communication
 is_a: GO:0023056 ! positive regulation of signaling
 is_a: GO:0046883 ! regulation of hormone secretion
 is_a: GO:1903532 ! positive regulation of secretion by cell
-intersection_of: GO:0008150 ! biological_process
+intersection_of: GO:0065007 ! biological regulation
 intersection_of: positively_regulates GO:0046879 ! hormone secretion
 relationship: positively_regulates GO:0046879 ! hormone secretion
 
@@ -3662,7 +3672,7 @@ is_a: GO:0010648 ! negative regulation of cell communication
 is_a: GO:0023057 ! negative regulation of signaling
 is_a: GO:0046883 ! regulation of hormone secretion
 is_a: GO:1903531 ! negative regulation of secretion by cell
-intersection_of: GO:0008150 ! biological_process
+intersection_of: GO:0065007 ! biological regulation
 intersection_of: negatively_regulates GO:0046879 ! hormone secretion
 relationship: negatively_regulates GO:0046879 ! hormone secretion
 
@@ -3683,7 +3693,7 @@ is_a: GO:0001505 ! regulation of neurotransmitter levels
 is_a: GO:0050804 ! modulation of chemical synaptic transmission
 is_a: GO:0051588 ! regulation of neurotransmitter transport
 is_a: GO:1903530 ! regulation of secretion by cell
-intersection_of: GO:0008150 ! biological_process
+intersection_of: GO:0065007 ! biological regulation
 intersection_of: regulates GO:0007269 ! neurotransmitter secretion
 relationship: regulates GO:0007269 ! neurotransmitter secretion
 
@@ -3701,7 +3711,7 @@ is_a: GO:0046928 ! regulation of neurotransmitter secretion
 is_a: GO:0050805 ! negative regulation of synaptic transmission
 is_a: GO:0051589 ! negative regulation of neurotransmitter transport
 is_a: GO:1903531 ! negative regulation of secretion by cell
-intersection_of: GO:0008150 ! biological_process
+intersection_of: GO:0065007 ! biological regulation
 intersection_of: negatively_regulates GO:0007269 ! neurotransmitter secretion
 relationship: negatively_regulates GO:0007269 ! neurotransmitter secretion
 
@@ -3718,7 +3728,7 @@ name: regulation of response to osmotic stress
 namespace: biological_process
 def: "Any process that modulates the rate or extent of the response to osmotic stress." [GOC:ai]
 is_a: GO:0080134 ! regulation of response to stress
-intersection_of: GO:0008150 ! biological_process
+intersection_of: GO:0065007 ! biological regulation
 intersection_of: regulates GO:0006970 ! response to osmotic stress
 relationship: regulates GO:0006970 ! response to osmotic stress
 
@@ -3796,7 +3806,7 @@ synonym: "up regulation of biological process" EXACT []
 synonym: "up-regulation of biological process" EXACT []
 synonym: "upregulation of biological process" EXACT []
 is_a: GO:0050789 ! regulation of biological process
-intersection_of: GO:0008150 ! biological_process
+intersection_of: GO:0065007 ! biological regulation
 intersection_of: positively_regulates GO:0008150 ! biological_process
 relationship: positively_regulates GO:0008150 ! biological_process
 
@@ -3813,7 +3823,7 @@ synonym: "downregulation of biological process" EXACT []
 synonym: "inhibition of biological process" NARROW []
 synonym: "negative regulation of physiological process" EXACT []
 is_a: GO:0050789 ! regulation of biological process
-intersection_of: GO:0008150 ! biological_process
+intersection_of: GO:0065007 ! biological regulation
 intersection_of: negatively_regulates GO:0008150 ! biological_process
 relationship: negatively_regulates GO:0008150 ! biological_process
 
@@ -3829,7 +3839,7 @@ synonym: "up-regulation of behavior" EXACT []
 synonym: "upregulation of behavior" EXACT []
 is_a: GO:0048518 ! positive regulation of biological process
 is_a: GO:0050795 ! regulation of behavior
-intersection_of: GO:0008150 ! biological_process
+intersection_of: GO:0065007 ! biological regulation
 intersection_of: positively_regulates GO:0007610 ! behavior
 relationship: positively_regulates GO:0007610 ! behavior
 
@@ -3844,7 +3854,7 @@ synonym: "downregulation of behavior" EXACT []
 synonym: "inhibition of behavior" NARROW []
 is_a: GO:0048519 ! negative regulation of biological process
 is_a: GO:0050795 ! regulation of behavior
-intersection_of: GO:0008150 ! biological_process
+intersection_of: GO:0065007 ! biological regulation
 intersection_of: negatively_regulates GO:0007610 ! behavior
 relationship: negatively_regulates GO:0007610 ! behavior
 
@@ -3879,7 +3889,7 @@ synonym: "inhibition of cellular process" NARROW []
 synonym: "negative regulation of cellular physiological process" EXACT []
 is_a: GO:0048519 ! negative regulation of biological process
 is_a: GO:0050794 ! regulation of cellular process
-intersection_of: GO:0008150 ! biological_process
+intersection_of: GO:0065007 ! biological regulation
 intersection_of: negatively_regulates GO:0009987 ! cellular process
 relationship: negatively_regulates GO:0009987 ! cellular process
 
@@ -3891,7 +3901,7 @@ def: "Any process that modulates the frequency, rate or extent of a response to 
 comment: Note that this term is in the subset of terms that should not be used for direct gene product annotation. Instead, select a child term or, if no appropriate child term exists, please request a new term. Direct annotations to this term may be amended during annotation QC.
 subset: gocheck_do_not_manually_annotate
 is_a: GO:0050789 ! regulation of biological process
-intersection_of: GO:0008150 ! biological_process
+intersection_of: GO:0065007 ! biological regulation
 intersection_of: regulates GO:0050896 ! response to stimulus
 relationship: regulates GO:0050896 ! response to stimulus
 
@@ -3909,7 +3919,7 @@ synonym: "up-regulation of response to stimulus" EXACT []
 synonym: "upregulation of response to stimulus" EXACT []
 is_a: GO:0048518 ! positive regulation of biological process
 is_a: GO:0048583 ! regulation of response to stimulus
-intersection_of: GO:0008150 ! biological_process
+intersection_of: GO:0065007 ! biological regulation
 intersection_of: positively_regulates GO:0050896 ! response to stimulus
 relationship: positively_regulates GO:0050896 ! response to stimulus
 
@@ -3926,7 +3936,7 @@ synonym: "downregulation of response to stimulus" EXACT []
 synonym: "inhibition of response to stimulus" NARROW []
 is_a: GO:0048519 ! negative regulation of biological process
 is_a: GO:0048583 ! regulation of response to stimulus
-intersection_of: GO:0008150 ! biological_process
+intersection_of: GO:0065007 ! biological regulation
 intersection_of: negatively_regulates GO:0050896 ! response to stimulus
 relationship: negatively_regulates GO:0050896 ! response to stimulus
 
@@ -3966,7 +3976,7 @@ namespace: biological_process
 def: "Any process that modulates the frequency, rate or extent of the regulated release of catecholamines." [GOC:ai]
 is_a: GO:0051952 ! regulation of amine transport
 is_a: GO:1903530 ! regulation of secretion by cell
-intersection_of: GO:0008150 ! biological_process
+intersection_of: GO:0065007 ! biological regulation
 intersection_of: regulates GO:0050432 ! catecholamine secretion
 relationship: regulates GO:0050432 ! catecholamine secretion
 
@@ -3982,7 +3992,7 @@ subset: goslim_candida
 subset: goslim_pir
 synonym: "regulation of physiological process" EXACT []
 is_a: GO:0065007 ! biological regulation
-intersection_of: GO:0008150 ! biological_process
+intersection_of: GO:0065007 ! biological regulation
 intersection_of: regulates GO:0008150 ! biological_process
 relationship: regulates GO:0008150 ! biological_process
 
@@ -3992,7 +4002,7 @@ name: regulation of developmental process
 namespace: biological_process
 def: "Any process that modulates the frequency, rate or extent of development, the biological process whose specific outcome is the progression of a multicellular organism over time from an initial condition (e.g. a zygote, or a young adult) to a later condition (e.g. a multicellular animal or an aged adult)." [GOC:go_curators]
 is_a: GO:0050789 ! regulation of biological process
-intersection_of: GO:0008150 ! biological_process
+intersection_of: GO:0065007 ! biological regulation
 intersection_of: regulates GO:0032502 ! developmental process
 relationship: regulates GO:0032502 ! developmental process
 
@@ -4015,7 +4025,7 @@ namespace: biological_process
 def: "Any process that modulates the frequency, rate or extent of behavior, the internally coordinated responses (actions or inactions) of whole living organisms (individuals or groups) to internal or external stimuli." [GOC:go_curators, GOC:pr]
 synonym: "regulation of behaviour" EXACT []
 is_a: GO:0050789 ! regulation of biological process
-intersection_of: GO:0008150 ! biological_process
+intersection_of: GO:0065007 ! biological regulation
 intersection_of: regulates GO:0007610 ! behavior
 relationship: regulates GO:0007610 ! behavior
 
@@ -4039,7 +4049,7 @@ synonym: "modulation of synaptic transmission" BROAD []
 synonym: "regulation of chemical synaptic transmission" EXACT []
 synonym: "regulation of synaptic transmission" EXACT []
 is_a: GO:0099177 ! regulation of trans-synaptic signaling
-intersection_of: GO:0008150 ! biological_process
+intersection_of: GO:0065007 ! biological regulation
 intersection_of: regulates GO:0007268 ! chemical synaptic transmission
 relationship: regulates GO:0007268 ! chemical synaptic transmission
 
@@ -4055,7 +4065,7 @@ synonym: "inhibition of synaptic transmission" NARROW []
 is_a: GO:0010648 ! negative regulation of cell communication
 is_a: GO:0023057 ! negative regulation of signaling
 is_a: GO:0050804 ! modulation of chemical synaptic transmission
-intersection_of: GO:0008150 ! biological_process
+intersection_of: GO:0065007 ! biological regulation
 intersection_of: negatively_regulates GO:0007268 ! chemical synaptic transmission
 relationship: negatively_regulates GO:0007268 ! chemical synaptic transmission
 
@@ -4072,7 +4082,7 @@ synonym: "upregulation of synaptic transmission" EXACT []
 is_a: GO:0010647 ! positive regulation of cell communication
 is_a: GO:0023056 ! positive regulation of signaling
 is_a: GO:0050804 ! modulation of chemical synaptic transmission
-intersection_of: GO:0008150 ! biological_process
+intersection_of: GO:0065007 ! biological regulation
 intersection_of: positively_regulates GO:0007268 ! chemical synaptic transmission
 relationship: positively_regulates GO:0007268 ! chemical synaptic transmission
 
@@ -4554,7 +4564,7 @@ synonym: "regulation of lipid catabolism" EXACT []
 synonym: "regulation of lipid degradation" EXACT []
 is_a: GO:0009894 ! regulation of catabolic process
 is_a: GO:0019216 ! regulation of lipid metabolic process
-intersection_of: GO:0008150 ! biological_process
+intersection_of: GO:0065007 ! biological regulation
 intersection_of: regulates GO:0016042 ! lipid catabolic process
 relationship: regulates GO:0016042 ! lipid catabolic process
 
@@ -4573,7 +4583,7 @@ synonym: "negative regulation of lipid degradation" EXACT []
 is_a: GO:0009895 ! negative regulation of catabolic process
 is_a: GO:0045833 ! negative regulation of lipid metabolic process
 is_a: GO:0050994 ! regulation of lipid catabolic process
-intersection_of: GO:0008150 ! biological_process
+intersection_of: GO:0065007 ! biological regulation
 intersection_of: negatively_regulates GO:0016042 ! lipid catabolic process
 relationship: negatively_regulates GO:0016042 ! lipid catabolic process
 
@@ -4593,7 +4603,7 @@ synonym: "upregulation of lipid catabolic process" EXACT []
 is_a: GO:0009896 ! positive regulation of catabolic process
 is_a: GO:0045834 ! positive regulation of lipid metabolic process
 is_a: GO:0050994 ! regulation of lipid catabolic process
-intersection_of: GO:0008150 ! biological_process
+intersection_of: GO:0065007 ! biological regulation
 intersection_of: positively_regulates GO:0016042 ! lipid catabolic process
 relationship: positively_regulates GO:0016042 ! lipid catabolic process
 
@@ -4603,7 +4613,7 @@ name: regulation of secretion
 namespace: biological_process
 def: "Any process that modulates the frequency, rate or extent of the controlled release of a substance from a cell or a tissue." [GOC:ai]
 is_a: GO:0051049 ! regulation of transport
-intersection_of: GO:0008150 ! biological_process
+intersection_of: GO:0065007 ! biological regulation
 intersection_of: regulates GO:0046903 ! secretion
 relationship: regulates GO:0046903 ! secretion
 
@@ -4619,7 +4629,7 @@ synonym: "up-regulation of secretion" EXACT []
 synonym: "upregulation of secretion" EXACT []
 is_a: GO:0051046 ! regulation of secretion
 is_a: GO:0051050 ! positive regulation of transport
-intersection_of: GO:0008150 ! biological_process
+intersection_of: GO:0065007 ! biological regulation
 intersection_of: positively_regulates GO:0046903 ! secretion
 relationship: positively_regulates GO:0046903 ! secretion
 
@@ -4634,7 +4644,7 @@ synonym: "downregulation of secretion" EXACT []
 synonym: "inhibition of secretion" NARROW []
 is_a: GO:0051046 ! regulation of secretion
 is_a: GO:0051051 ! negative regulation of transport
-intersection_of: GO:0008150 ! biological_process
+intersection_of: GO:0065007 ! biological regulation
 intersection_of: negatively_regulates GO:0046903 ! secretion
 relationship: negatively_regulates GO:0046903 ! secretion
 
@@ -4645,7 +4655,7 @@ namespace: biological_process
 def: "Any process that modulates the frequency, rate or extent of the directed movement of substances (such as macromolecules, small molecules, ions) into, out of or within a cell, or between cells, by means of some agent such as a transporter or pore." [GOC:ai]
 subset: goslim_yeast
 is_a: GO:0032879 ! regulation of localization
-intersection_of: GO:0008150 ! biological_process
+intersection_of: GO:0065007 ! biological regulation
 intersection_of: regulates GO:0006810 ! transport
 relationship: regulates GO:0006810 ! transport
 
@@ -4661,7 +4671,7 @@ synonym: "up-regulation of transport" EXACT []
 synonym: "upregulation of transport" EXACT []
 is_a: GO:0048518 ! positive regulation of biological process
 is_a: GO:0051049 ! regulation of transport
-intersection_of: GO:0008150 ! biological_process
+intersection_of: GO:0065007 ! biological regulation
 intersection_of: positively_regulates GO:0006810 ! transport
 relationship: positively_regulates GO:0006810 ! transport
 
@@ -4676,7 +4686,7 @@ synonym: "downregulation of transport" EXACT []
 synonym: "inhibition of transport" NARROW []
 is_a: GO:0048519 ! negative regulation of biological process
 is_a: GO:0051049 ! regulation of transport
-intersection_of: GO:0008150 ! biological_process
+intersection_of: GO:0065007 ! biological regulation
 intersection_of: negatively_regulates GO:0006810 ! transport
 relationship: negatively_regulates GO:0006810 ! transport
 
@@ -4691,7 +4701,7 @@ synonym: "downregulation of developmental process" EXACT []
 synonym: "inhibition of developmental process" NARROW []
 is_a: GO:0048519 ! negative regulation of biological process
 is_a: GO:0050793 ! regulation of developmental process
-intersection_of: GO:0008150 ! biological_process
+intersection_of: GO:0065007 ! biological regulation
 intersection_of: negatively_regulates GO:0032502 ! developmental process
 relationship: negatively_regulates GO:0032502 ! developmental process
 
@@ -4707,7 +4717,7 @@ synonym: "up-regulation of developmental process" EXACT []
 synonym: "upregulation of developmental process" EXACT []
 is_a: GO:0048518 ! positive regulation of biological process
 is_a: GO:0050793 ! regulation of developmental process
-intersection_of: GO:0008150 ! biological_process
+intersection_of: GO:0065007 ! biological regulation
 intersection_of: positively_regulates GO:0032502 ! developmental process
 relationship: positively_regulates GO:0032502 ! developmental process
 
@@ -4760,7 +4770,7 @@ name: regulation of multicellular organismal process
 namespace: biological_process
 def: "Any process that modulates the frequency, rate or extent of a multicellular organismal process, the processes pertinent to the function of a multicellular organism above the cellular level; includes the integrated processes of tissues and organs." [GOC:ai, GOC:dph, GOC:tb]
 is_a: GO:0050789 ! regulation of biological process
-intersection_of: GO:0008150 ! biological_process
+intersection_of: GO:0065007 ! biological regulation
 intersection_of: regulates GO:0032501 ! multicellular organismal process
 relationship: regulates GO:0032501 ! multicellular organismal process
 
@@ -4776,7 +4786,7 @@ synonym: "up-regulation of multicellular organismal process" EXACT []
 synonym: "upregulation of multicellular organismal process" EXACT []
 is_a: GO:0048518 ! positive regulation of biological process
 is_a: GO:0051239 ! regulation of multicellular organismal process
-intersection_of: GO:0008150 ! biological_process
+intersection_of: GO:0065007 ! biological regulation
 intersection_of: positively_regulates GO:0032501 ! multicellular organismal process
 relationship: positively_regulates GO:0032501 ! multicellular organismal process
 
@@ -4791,7 +4801,7 @@ synonym: "downregulation of multicellular organismal process" EXACT []
 synonym: "inhibition of multicellular organismal process" NARROW []
 is_a: GO:0048519 ! negative regulation of biological process
 is_a: GO:0051239 ! regulation of multicellular organismal process
-intersection_of: GO:0008150 ! biological_process
+intersection_of: GO:0065007 ! biological regulation
 intersection_of: negatively_regulates GO:0032501 ! multicellular organismal process
 relationship: negatively_regulates GO:0032501 ! multicellular organismal process
 
@@ -4814,7 +4824,7 @@ name: regulation of neurotransmitter transport
 namespace: biological_process
 def: "Any process that modulates the frequency, rate or extent of the directed movement of a neurotransmitter into, out of or within a cell, or between cells, by means of some agent such as a transporter or pore." [GOC:ai]
 is_a: GO:0051049 ! regulation of transport
-intersection_of: GO:0008150 ! biological_process
+intersection_of: GO:0065007 ! biological regulation
 intersection_of: regulates GO:0006836 ! neurotransmitter transport
 relationship: regulates GO:0006836 ! neurotransmitter transport
 
@@ -4829,7 +4839,7 @@ synonym: "downregulation of neurotransmitter transport" EXACT []
 synonym: "inhibition of neurotransmitter transport" NARROW []
 is_a: GO:0051051 ! negative regulation of transport
 is_a: GO:0051588 ! regulation of neurotransmitter transport
-intersection_of: GO:0008150 ! biological_process
+intersection_of: GO:0065007 ! biological regulation
 intersection_of: negatively_regulates GO:0006836 ! neurotransmitter transport
 relationship: negatively_regulates GO:0006836 ! neurotransmitter transport
 
@@ -4845,7 +4855,7 @@ synonym: "up-regulation of neurotransmitter transport" EXACT []
 synonym: "upregulation of neurotransmitter transport" EXACT []
 is_a: GO:0051050 ! positive regulation of transport
 is_a: GO:0051588 ! regulation of neurotransmitter transport
-intersection_of: GO:0008150 ! biological_process
+intersection_of: GO:0065007 ! biological regulation
 intersection_of: positively_regulates GO:0006836 ! neurotransmitter transport
 relationship: positively_regulates GO:0006836 ! neurotransmitter transport
 
@@ -4962,7 +4972,7 @@ name: regulation of sensory perception of pain
 namespace: biological_process
 def: "Any process that modulates the frequency, rate or extent of the sensory perception of pain, the series of events required for an organism to receive a painful stimulus, convert it to a molecular signal, and recognize and characterize the signal." [GOC:ai]
 is_a: GO:0051931 ! regulation of sensory perception
-intersection_of: GO:0008150 ! biological_process
+intersection_of: GO:0065007 ! biological regulation
 intersection_of: regulates GO:0019233 ! sensory perception of pain
 relationship: regulates GO:0019233 ! sensory perception of pain
 
@@ -4972,7 +4982,7 @@ name: regulation of sensory perception
 namespace: biological_process
 def: "Any process that modulates the frequency, rate or extent of sensory perception, the series of events required for an organism to receive a sensory stimulus, convert it to a molecular signal, and recognize and characterize the signal." [GOC:ai]
 is_a: GO:0031644 ! regulation of nervous system process
-intersection_of: GO:0008150 ! biological_process
+intersection_of: GO:0065007 ! biological regulation
 intersection_of: regulates GO:0007600 ! sensory perception
 relationship: regulates GO:0007600 ! sensory perception
 
@@ -5001,7 +5011,7 @@ name: regulation of amine transport
 namespace: biological_process
 def: "Any process that modulates the frequency, rate or extent of the directed movement of amines into, out of or within a cell, or between cells, by means of some agent such as a transporter or pore." [GOC:ai]
 is_a: GO:0044070 ! regulation of anion transport
-intersection_of: GO:0008150 ! biological_process
+intersection_of: GO:0065007 ! biological regulation
 intersection_of: regulates GO:0015837 ! amine transport
 relationship: regulates GO:0015837 ! amine transport
 
@@ -5016,7 +5026,7 @@ synonym: "downregulation of amine transport" EXACT []
 synonym: "inhibition of amine transport" NARROW []
 is_a: GO:0051952 ! regulation of amine transport
 is_a: GO:1903792 ! negative regulation of anion transport
-intersection_of: GO:0008150 ! biological_process
+intersection_of: GO:0065007 ! biological regulation
 intersection_of: negatively_regulates GO:0015837 ! amine transport
 relationship: negatively_regulates GO:0015837 ! amine transport
 
@@ -5032,7 +5042,7 @@ synonym: "up-regulation of amine transport" EXACT []
 synonym: "upregulation of amine transport" EXACT []
 is_a: GO:0051952 ! regulation of amine transport
 is_a: GO:1903793 ! positive regulation of anion transport
-intersection_of: GO:0008150 ! biological_process
+intersection_of: GO:0065007 ! biological regulation
 intersection_of: positively_regulates GO:0015837 ! amine transport
 relationship: positively_regulates GO:0015837 ! amine transport
 
@@ -5043,7 +5053,7 @@ namespace: biological_process
 def: "Any process that modulates the frequency, rate or extent of the directed movement of amino acids into, out of or within a cell, or between cells, by means of some agent such as a transporter or pore." [GOC:ai]
 is_a: GO:0032890 ! regulation of organic acid transport
 is_a: GO:0051952 ! regulation of amine transport
-intersection_of: GO:0008150 ! biological_process
+intersection_of: GO:0065007 ! biological regulation
 intersection_of: regulates GO:0006865 ! amino acid transport
 relationship: regulates GO:0006865 ! amino acid transport
 
@@ -5060,7 +5070,7 @@ synonym: "negative regulation of amino acid transmembrane transport" EXACT [GOC:
 is_a: GO:0032891 ! negative regulation of organic acid transport
 is_a: GO:0051953 ! negative regulation of amine transport
 is_a: GO:0051955 ! regulation of amino acid transport
-intersection_of: GO:0008150 ! biological_process
+intersection_of: GO:0065007 ! biological regulation
 intersection_of: negatively_regulates GO:0006865 ! amino acid transport
 relationship: negatively_regulates GO:0006865 ! amino acid transport
 
@@ -5078,7 +5088,7 @@ synonym: "upregulation of amino acid transport" EXACT []
 is_a: GO:0032892 ! positive regulation of organic acid transport
 is_a: GO:0051954 ! positive regulation of amine transport
 is_a: GO:0051955 ! regulation of amino acid transport
-intersection_of: GO:0008150 ! biological_process
+intersection_of: GO:0065007 ! biological regulation
 intersection_of: positively_regulates GO:0006865 ! amino acid transport
 relationship: positively_regulates GO:0006865 ! amino acid transport
 
@@ -5088,7 +5098,7 @@ name: regulation of synaptic transmission, glutamatergic
 namespace: biological_process
 def: "Any process that modulates the frequency, rate or extent of glutamatergic synaptic transmission, the process of communication from a neuron to another neuron across a synapse using the neurotransmitter glutamate." [GOC:ai]
 is_a: GO:0050804 ! modulation of chemical synaptic transmission
-intersection_of: GO:0008150 ! biological_process
+intersection_of: GO:0065007 ! biological regulation
 intersection_of: regulates GO:0035249 ! synaptic transmission, glutamatergic
 relationship: regulates GO:0035249 ! synaptic transmission, glutamatergic
 
@@ -5103,7 +5113,7 @@ synonym: "downregulation of synaptic transmission, glutamatergic" EXACT []
 synonym: "inhibition of synaptic transmission, glutamatergic" NARROW []
 is_a: GO:0050805 ! negative regulation of synaptic transmission
 is_a: GO:0051966 ! regulation of synaptic transmission, glutamatergic
-intersection_of: GO:0008150 ! biological_process
+intersection_of: GO:0065007 ! biological regulation
 intersection_of: negatively_regulates GO:0035249 ! synaptic transmission, glutamatergic
 relationship: negatively_regulates GO:0035249 ! synaptic transmission, glutamatergic
 
@@ -5119,7 +5129,7 @@ synonym: "up-regulation of synaptic transmission, glutamatergic" EXACT []
 synonym: "upregulation of synaptic transmission, glutamatergic" EXACT []
 is_a: GO:0050806 ! positive regulation of synaptic transmission
 is_a: GO:0051966 ! regulation of synaptic transmission, glutamatergic
-intersection_of: GO:0008150 ! biological_process
+intersection_of: GO:0065007 ! biological regulation
 intersection_of: positively_regulates GO:0035249 ! synaptic transmission, glutamatergic
 relationship: positively_regulates GO:0035249 ! synaptic transmission, glutamatergic
 
@@ -5161,7 +5171,7 @@ namespace: biological_process
 def: "Any process that modulates the rate, frequency or extent of the behavior associated with the intake of food." [GOC:BHF, GOC:dph, GOC:tb]
 synonym: "regulation of feeding behaviour" EXACT [GOC:dph, GOC:tb]
 is_a: GO:0050795 ! regulation of behavior
-intersection_of: GO:0008150 ! biological_process
+intersection_of: GO:0065007 ! biological regulation
 intersection_of: regulates GO:0007631 ! feeding behavior
 relationship: regulates GO:0007631 ! feeding behavior
 
@@ -5173,7 +5183,7 @@ def: "Any process that modulates the frequency, rate or extent of a process in w
 synonym: "regulation of cellular localisation" EXACT [GOC:mah]
 is_a: GO:0032879 ! regulation of localization
 is_a: GO:0050794 ! regulation of cellular process
-intersection_of: GO:0008150 ! biological_process
+intersection_of: GO:0065007 ! biological regulation
 intersection_of: regulates GO:0051641 ! cellular localization
 relationship: regulates GO:0051641 ! cellular localization
 
@@ -5191,7 +5201,7 @@ namespace: biological_process
 def: "Any process that increases the frequency, rate or extent of a digestive system process, a physical, chemical, or biochemical process carried out by living organisms to break down ingested nutrients into components that may be easily absorbed and directed into metabolism." [GOC:dph, GOC:tb]
 is_a: GO:0044058 ! regulation of digestive system process
 is_a: GO:0051240 ! positive regulation of multicellular organismal process
-intersection_of: GO:0008150 ! biological_process
+intersection_of: GO:0065007 ! biological regulation
 intersection_of: positively_regulates GO:0022600 ! digestive system process
 relationship: positively_regulates GO:0022600 ! digestive system process
 
@@ -5202,7 +5212,7 @@ namespace: biological_process
 def: "Any process that decreases the frequency, rate or extent of a digestive system process, a physical, chemical, or biochemical process carried out by living organisms to break down ingested nutrients into components that may be easily absorbed and directed into metabolism." [GOC:dph, GOC:tb]
 is_a: GO:0044058 ! regulation of digestive system process
 is_a: GO:0051241 ! negative regulation of multicellular organismal process
-intersection_of: GO:0008150 ! biological_process
+intersection_of: GO:0065007 ! biological regulation
 intersection_of: negatively_regulates GO:0022600 ! digestive system process
 relationship: negatively_regulates GO:0022600 ! digestive system process
 
@@ -5222,7 +5232,7 @@ name: regulation of turning behavior involved in mating
 namespace: biological_process
 def: "Any process that modulates the rate, frequency or extent of turning behavior involved in mating. Turning behavior is the sharp ventral turn performed by the male as he approaches either the hermaphrodite head or tail, whilst trying to locate his partner's vulva. Turning occurs via a sharp ventral coil of the male's tail." [GOC:dph, GOC:tb]
 is_a: GO:1902435 ! regulation of male mating behavior
-intersection_of: GO:0008150 ! biological_process
+intersection_of: GO:0065007 ! biological regulation
 intersection_of: regulates GO:0034607 ! turning behavior involved in mating
 relationship: regulates GO:0034607 ! turning behavior involved in mating
 created_by: dph
@@ -5235,7 +5245,7 @@ namespace: biological_process
 def: "Any process that increases the rate, frequency or extent of turning behavior involved in mating. Turning behavior is the sharp ventral turn performed by the male as he approaches either the hermaphrodite head or tail, whilst trying to locate his partner's vulva. Turning occurs via a sharp ventral coil of the male's tail." [GOC:dph, GOC:tb]
 is_a: GO:0061094 ! regulation of turning behavior involved in mating
 is_a: GO:1902437 ! positive regulation of male mating behavior
-intersection_of: GO:0008150 ! biological_process
+intersection_of: GO:0065007 ! biological regulation
 intersection_of: positively_regulates GO:0034607 ! turning behavior involved in mating
 relationship: positively_regulates GO:0034607 ! turning behavior involved in mating
 created_by: dph
@@ -5248,7 +5258,7 @@ namespace: biological_process
 def: "Any process that decreases the rate, frequency or extent of turning behavior involved in mating. Turning behavior is the sharp ventral turn performed by the male as he approaches either the hermaphrodite head or tail, whilst trying to locate his partner's vulva. Turning occurs via a sharp ventral coil of the male's tail." [GOC:dph, GOC:tb]
 is_a: GO:0061094 ! regulation of turning behavior involved in mating
 is_a: GO:1902436 ! negative regulation of male mating behavior
-intersection_of: GO:0008150 ! biological_process
+intersection_of: GO:0065007 ! biological regulation
 intersection_of: negatively_regulates GO:0034607 ! turning behavior involved in mating
 relationship: negatively_regulates GO:0034607 ! turning behavior involved in mating
 created_by: dph
@@ -5652,7 +5662,7 @@ name: regulation of primary metabolic process
 namespace: biological_process
 def: "Any process that modulates the frequency, rate or extent of the chemical reactions and pathways within a cell or an organism involving those compounds formed as a part of the normal anabolic and catabolic processes. These processes take place in most, if not all, cells of the organism." [PMID:19211694]
 is_a: GO:0019222 ! regulation of metabolic process
-intersection_of: GO:0008150 ! biological_process
+intersection_of: GO:0065007 ! biological regulation
 intersection_of: regulates GO:0044238 ! primary metabolic process
 relationship: regulates GO:0044238 ! primary metabolic process
 created_by: dhl
@@ -5666,7 +5676,7 @@ def: "Any process that modulates the frequency, rate or extent of a response to 
 comment: Note that this term is in the subset of terms that should not be used for direct gene product annotation. Instead, select a child term or, if no appropriate child term exists, please request a new term. Direct annotations to this term may be amended during annotation QC.
 subset: gocheck_do_not_manually_annotate
 is_a: GO:0048583 ! regulation of response to stimulus
-intersection_of: GO:0008150 ! biological_process
+intersection_of: GO:0065007 ! biological regulation
 intersection_of: regulates GO:0006950 ! response to stress
 relationship: regulates GO:0006950 ! response to stress
 created_by: dhl
@@ -5678,7 +5688,7 @@ name: regulation of peptide transport
 namespace: biological_process
 def: "Any process that modulates the frequency, rate or extent of the directed movement of peptides, compounds of two or more amino acids where the alpha carboxyl group of one is bound to the alpha amino group of another, into, out of or within a cell, or between cells, by means of some agent such as a transporter or pore." [GOC:dph, GOC:tb]
 is_a: GO:0044070 ! regulation of anion transport
-intersection_of: GO:0008150 ! biological_process
+intersection_of: GO:0065007 ! biological regulation
 intersection_of: regulates GO:0015833 ! peptide transport
 relationship: regulates GO:0015833 ! peptide transport
 created_by: tb
@@ -5691,7 +5701,7 @@ namespace: biological_process
 def: "Any process that modulates the rate, frequency, or extent of the regulated release of a peptide hormone from secretory granules." [GOC:tb]
 is_a: GO:0002791 ! regulation of peptide secretion
 is_a: GO:0046883 ! regulation of hormone secretion
-intersection_of: GO:0008150 ! biological_process
+intersection_of: GO:0065007 ! biological regulation
 intersection_of: regulates GO:0030072 ! peptide hormone secretion
 relationship: regulates GO:0030072 ! peptide hormone secretion
 created_by: tb
@@ -5705,7 +5715,7 @@ def: "Any process that increases the rate, frequency, or extent of the regulated
 is_a: GO:0002793 ! positive regulation of peptide secretion
 is_a: GO:0046887 ! positive regulation of hormone secretion
 is_a: GO:0090276 ! regulation of peptide hormone secretion
-intersection_of: GO:0008150 ! biological_process
+intersection_of: GO:0065007 ! biological regulation
 intersection_of: positively_regulates GO:0030072 ! peptide hormone secretion
 relationship: positively_regulates GO:0030072 ! peptide hormone secretion
 created_by: tb
@@ -5719,7 +5729,7 @@ def: "Any process that decreases the rate, frequency, or extent of the regulated
 is_a: GO:0002792 ! negative regulation of peptide secretion
 is_a: GO:0046888 ! negative regulation of hormone secretion
 is_a: GO:0090276 ! regulation of peptide hormone secretion
-intersection_of: GO:0008150 ! biological_process
+intersection_of: GO:0065007 ! biological regulation
 intersection_of: negatively_regulates GO:0030072 ! peptide hormone secretion
 relationship: negatively_regulates GO:0030072 ! peptide hormone secretion
 created_by: tb
@@ -5732,7 +5742,7 @@ namespace: biological_process
 def: "Any process that modulates the frequency, rate, or extent of the self-propelled movement of a cell or organism from one location to another in a behavioral context; the aspect of locomotory behavior having to do with movement." [GOC:dph, GOC:kmv, GOC:tb]
 is_a: GO:0040012 ! regulation of locomotion
 is_a: GO:0050795 ! regulation of behavior
-intersection_of: GO:0008150 ! biological_process
+intersection_of: GO:0065007 ! biological regulation
 intersection_of: regulates GO:0031987 ! locomotion involved in locomotory behavior
 relationship: regulates GO:0031987 ! locomotion involved in locomotory behavior
 created_by: tb
@@ -5760,7 +5770,7 @@ def: "Any process that decreases the frequency, rate, or extent of the self-prop
 is_a: GO:0040013 ! negative regulation of locomotion
 is_a: GO:0048521 ! negative regulation of behavior
 is_a: GO:0090325 ! regulation of locomotion involved in locomotory behavior
-intersection_of: GO:0008150 ! biological_process
+intersection_of: GO:0065007 ! biological regulation
 intersection_of: negatively_regulates GO:0031987 ! locomotion involved in locomotory behavior
 relationship: negatively_regulates GO:0031987 ! locomotion involved in locomotory behavior
 created_by: tb
@@ -5774,7 +5784,7 @@ def: "Any process that modulates the rate, frequency, or extent of olfactory lea
 is_a: GO:0031644 ! regulation of nervous system process
 is_a: GO:0048583 ! regulation of response to stimulus
 is_a: GO:0050795 ! regulation of behavior
-intersection_of: GO:0008150 ! biological_process
+intersection_of: GO:0065007 ! biological regulation
 intersection_of: regulates GO:0008355 ! olfactory learning
 relationship: regulates GO:0008355 ! olfactory learning
 created_by: tb
@@ -5992,7 +6002,7 @@ name: regulation of renal system process
 namespace: biological_process
 def: "Any process that modulates the frequency, rate or extent of a system process, a multicellular organismal process carried out by the renal system." [GOC:dos]
 is_a: GO:0044057 ! regulation of system process
-intersection_of: GO:0008150 ! biological_process
+intersection_of: GO:0065007 ! biological regulation
 intersection_of: regulates GO:0003014 ! renal system process
 relationship: regulates GO:0003014 ! renal system process
 
@@ -6036,7 +6046,7 @@ namespace: biological_process
 def: "Any process that modulates the frequency, rate or extent of trans-synaptic signaling." [GOC:dos]
 is_a: GO:0010646 ! regulation of cell communication
 is_a: GO:0023051 ! regulation of signaling
-intersection_of: GO:0008150 ! biological_process
+intersection_of: GO:0065007 ! biological regulation
 intersection_of: regulates GO:0099537 ! trans-synaptic signaling
 relationship: regulates GO:0099537 ! trans-synaptic signaling
 
@@ -6081,10 +6091,10 @@ namespace: biological_process
 def: "Cell-cell signaling between presynapse and postsynapse, across the synaptic cleft, that modulates the synaptic transmission properties of the synapse." [GOC:dos]
 comment: Note that this term was created for the SynGO project, and will be obsoleted when the SynGO annotations are made in Noctua.
 subset: goslim_synapse
-is_a: GO:0050804 ! modulation of chemical synaptic transmission
 is_a: GO:0099537 ! trans-synaptic signaling
 intersection_of: GO:0099537 ! trans-synaptic signaling
 intersection_of: regulates GO:0007268 ! chemical synaptic transmission
+relationship: regulates GO:0007268 ! chemical synaptic transmission
 
 [Term]
 id: GO:0099643
@@ -6125,6 +6135,7 @@ is_a: GO:0042995 ! cell projection
 intersection_of: GO:0042995 ! cell projection
 intersection_of: has_part GO:0098590 ! plasma membrane region
 relationship: has_part GO:0098590 ! plasma membrane region
+property_value: IAO:0000233 https://github.com/geneontology/go-ontology/issues/13193 xsd:anyURI
 created_by: krc
 creation_date: 2017-03-21T17:26:07Z
 
@@ -6205,7 +6216,7 @@ is_a: GO:0046662 ! regulation of oviposition
 is_a: GO:0048521 ! negative regulation of behavior
 is_a: GO:0051241 ! negative regulation of multicellular organismal process
 is_a: GO:2000242 ! negative regulation of reproductive process
-intersection_of: GO:0008150 ! biological_process
+intersection_of: GO:0065007 ! biological regulation
 intersection_of: negatively_regulates GO:0018991 ! oviposition
 relationship: negatively_regulates GO:0018991 ! oviposition
 created_by: kmv
@@ -6234,7 +6245,7 @@ is_a: GO:0046662 ! regulation of oviposition
 is_a: GO:0048520 ! positive regulation of behavior
 is_a: GO:0051240 ! positive regulation of multicellular organismal process
 is_a: GO:2000243 ! positive regulation of reproductive process
-intersection_of: GO:0008150 ! biological_process
+intersection_of: GO:0065007 ! biological regulation
 intersection_of: positively_regulates GO:0018991 ! oviposition
 relationship: positively_regulates GO:0018991 ! oviposition
 created_by: kmv
@@ -6251,7 +6262,7 @@ synonym: "downregulation of cellular response to caffeine" EXACT [GOC:TermGenie]
 synonym: "inhibition of cellular response to caffeine" NARROW [GOC:TermGenie]
 is_a: GO:0048523 ! negative regulation of cellular process
 is_a: GO:0048585 ! negative regulation of response to stimulus
-intersection_of: GO:0008150 ! biological_process
+intersection_of: GO:0065007 ! biological regulation
 intersection_of: negatively_regulates GO:0071313 ! cellular response to caffeine
 relationship: negatively_regulates GO:0071313 ! cellular response to caffeine
 created_by: al
@@ -6272,7 +6283,7 @@ name: regulation of response to alcohol
 namespace: biological_process
 def: "Any process that modulates the frequency, rate or extent of response to alcohol." [GOC:mengo_curators, GOC:TermGenie]
 is_a: GO:0048583 ! regulation of response to stimulus
-intersection_of: GO:0008150 ! biological_process
+intersection_of: GO:0065007 ! biological regulation
 intersection_of: regulates GO:0097305 ! response to alcohol
 relationship: regulates GO:0097305 ! response to alcohol
 created_by: tt
@@ -6289,7 +6300,7 @@ synonym: "downregulation of response to alcohol" EXACT [GOC:TermGenie]
 synonym: "inhibition of response to alcohol" NARROW [GOC:TermGenie]
 is_a: GO:0048585 ! negative regulation of response to stimulus
 is_a: GO:1901419 ! regulation of response to alcohol
-intersection_of: GO:0008150 ! biological_process
+intersection_of: GO:0065007 ! biological regulation
 intersection_of: negatively_regulates GO:0097305 ! response to alcohol
 relationship: negatively_regulates GO:0097305 ! response to alcohol
 created_by: tt
@@ -6306,7 +6317,7 @@ synonym: "up-regulation of response to alcohol" EXACT [GOC:TermGenie]
 synonym: "upregulation of response to alcohol" EXACT [GOC:TermGenie]
 is_a: GO:0048584 ! positive regulation of response to stimulus
 is_a: GO:1901419 ! regulation of response to alcohol
-intersection_of: GO:0008150 ! biological_process
+intersection_of: GO:0065007 ! biological regulation
 intersection_of: positively_regulates GO:0097305 ! response to alcohol
 relationship: positively_regulates GO:0097305 ! response to alcohol
 created_by: tt
@@ -6378,7 +6389,7 @@ namespace: biological_process
 def: "Any process that modulates the frequency, rate or extent of male mating behavior." [GOC:TermGenie, PMID:24089208]
 is_a: GO:0050795 ! regulation of behavior
 is_a: GO:2000241 ! regulation of reproductive process
-intersection_of: GO:0008150 ! biological_process
+intersection_of: GO:0065007 ! biological regulation
 intersection_of: regulates GO:0060179 ! male mating behavior
 relationship: regulates GO:0060179 ! male mating behavior
 created_by: mm2
@@ -6397,7 +6408,7 @@ is_a: GO:0048521 ! negative regulation of behavior
 is_a: GO:0051241 ! negative regulation of multicellular organismal process
 is_a: GO:1902435 ! regulation of male mating behavior
 is_a: GO:2000242 ! negative regulation of reproductive process
-intersection_of: GO:0008150 ! biological_process
+intersection_of: GO:0065007 ! biological regulation
 intersection_of: negatively_regulates GO:0060179 ! male mating behavior
 relationship: negatively_regulates GO:0060179 ! male mating behavior
 created_by: mm2
@@ -6416,7 +6427,7 @@ is_a: GO:0048520 ! positive regulation of behavior
 is_a: GO:0051240 ! positive regulation of multicellular organismal process
 is_a: GO:1902435 ! regulation of male mating behavior
 is_a: GO:2000243 ! positive regulation of reproductive process
-intersection_of: GO:0008150 ! biological_process
+intersection_of: GO:0065007 ! biological regulation
 intersection_of: positively_regulates GO:0060179 ! male mating behavior
 relationship: positively_regulates GO:0060179 ! male mating behavior
 created_by: mm2
@@ -6431,7 +6442,7 @@ comment: An example of this is Rab3gap1 in mouse (Q80UJ7) in PMID:16782817 infer
 is_a: GO:0014048 ! regulation of glutamate secretion
 is_a: GO:0046928 ! regulation of neurotransmitter secretion
 is_a: GO:0051966 ! regulation of synaptic transmission, glutamatergic
-intersection_of: GO:0008150 ! biological_process
+intersection_of: GO:0065007 ! biological regulation
 intersection_of: regulates GO:0061535 ! glutamate secretion, neurotransmission
 relationship: regulates GO:0061535 ! glutamate secretion, neurotransmission
 created_by: pad
@@ -6451,7 +6462,7 @@ is_a: GO:0014050 ! negative regulation of glutamate secretion
 is_a: GO:0046929 ! negative regulation of neurotransmitter secretion
 is_a: GO:0051967 ! negative regulation of synaptic transmission, glutamatergic
 is_a: GO:1903294 ! regulation of glutamate secretion, neurotransmission
-intersection_of: GO:0008150 ! biological_process
+intersection_of: GO:0065007 ! biological regulation
 intersection_of: negatively_regulates GO:0061535 ! glutamate secretion, neurotransmission
 relationship: negatively_regulates GO:0061535 ! glutamate secretion, neurotransmission
 created_by: pad
@@ -6471,7 +6482,7 @@ is_a: GO:0001956 ! positive regulation of neurotransmitter secretion
 is_a: GO:0014049 ! positive regulation of glutamate secretion
 is_a: GO:0051968 ! positive regulation of synaptic transmission, glutamatergic
 is_a: GO:1903294 ! regulation of glutamate secretion, neurotransmission
-intersection_of: GO:0008150 ! biological_process
+intersection_of: GO:0065007 ! biological regulation
 intersection_of: positively_regulates GO:0061535 ! glutamate secretion, neurotransmission
 relationship: positively_regulates GO:0061535 ! glutamate secretion, neurotransmission
 created_by: pad
@@ -6485,7 +6496,7 @@ def: "Any process that modulates the frequency, rate or extent of secretion by c
 synonym: "regulation of cellular secretion" EXACT [GOC:TermGenie]
 is_a: GO:0050794 ! regulation of cellular process
 is_a: GO:0051046 ! regulation of secretion
-intersection_of: GO:0008150 ! biological_process
+intersection_of: GO:0065007 ! biological regulation
 intersection_of: regulates GO:0032940 ! secretion by cell
 relationship: regulates GO:0032940 ! secretion by cell
 created_by: pm
@@ -6508,7 +6519,7 @@ synonym: "negative regulation of cellular secretion" EXACT [GOC:TermGenie]
 is_a: GO:0048523 ! negative regulation of cellular process
 is_a: GO:0051048 ! negative regulation of secretion
 is_a: GO:1903530 ! regulation of secretion by cell
-intersection_of: GO:0008150 ! biological_process
+intersection_of: GO:0065007 ! biological regulation
 intersection_of: negatively_regulates GO:0032940 ! secretion by cell
 relationship: negatively_regulates GO:0032940 ! secretion by cell
 created_by: pm
@@ -6531,7 +6542,7 @@ synonym: "upregulation of secretion by cell" EXACT [GOC:TermGenie]
 is_a: GO:0048522 ! positive regulation of cellular process
 is_a: GO:0051047 ! positive regulation of secretion
 is_a: GO:1903530 ! regulation of secretion by cell
-intersection_of: GO:0008150 ! biological_process
+intersection_of: GO:0065007 ! biological regulation
 intersection_of: positively_regulates GO:0032940 ! secretion by cell
 relationship: positively_regulates GO:0032940 ! secretion by cell
 created_by: pm
@@ -6548,7 +6559,7 @@ synonym: "downregulation of anion transport" EXACT [GOC:TermGenie]
 synonym: "inhibition of anion transport" NARROW [GOC:TermGenie]
 is_a: GO:0043271 ! negative regulation of ion transport
 is_a: GO:0044070 ! regulation of anion transport
-intersection_of: GO:0008150 ! biological_process
+intersection_of: GO:0065007 ! biological regulation
 intersection_of: negatively_regulates GO:0006820 ! anion transport
 relationship: negatively_regulates GO:0006820 ! anion transport
 created_by: sl
@@ -6565,7 +6576,7 @@ synonym: "up-regulation of anion transport" EXACT [GOC:TermGenie]
 synonym: "upregulation of anion transport" EXACT [GOC:TermGenie]
 is_a: GO:0043270 ! positive regulation of ion transport
 is_a: GO:0044070 ! regulation of anion transport
-intersection_of: GO:0008150 ! biological_process
+intersection_of: GO:0065007 ! biological regulation
 intersection_of: positively_regulates GO:0006820 ! anion transport
 relationship: positively_regulates GO:0006820 ! anion transport
 created_by: sl
@@ -6582,7 +6593,7 @@ synonym: "downregulation of respiratory gaseous exchange" EXACT [GOC:TermGenie]
 synonym: "inhibition of respiratory gaseous exchange" NARROW [GOC:TermGenie]
 is_a: GO:0043576 ! regulation of respiratory gaseous exchange
 is_a: GO:0051241 ! negative regulation of multicellular organismal process
-intersection_of: GO:0008150 ! biological_process
+intersection_of: GO:0065007 ! biological regulation
 intersection_of: negatively_regulates GO:0007585 ! respiratory gaseous exchange by respiratory system
 relationship: negatively_regulates GO:0007585 ! respiratory gaseous exchange by respiratory system
 created_by: sl
@@ -6599,7 +6610,7 @@ synonym: "up-regulation of respiratory gaseous exchange" EXACT [GOC:TermGenie]
 synonym: "upregulation of respiratory gaseous exchange" EXACT [GOC:TermGenie]
 is_a: GO:0043576 ! regulation of respiratory gaseous exchange
 is_a: GO:0051240 ! positive regulation of multicellular organismal process
-intersection_of: GO:0008150 ! biological_process
+intersection_of: GO:0065007 ! biological regulation
 intersection_of: positively_regulates GO:0007585 ! respiratory gaseous exchange by respiratory system
 relationship: positively_regulates GO:0007585 ! respiratory gaseous exchange by respiratory system
 created_by: sl
@@ -6626,7 +6637,7 @@ synonym: "negative regulation of nociception" EXACT [GOC:TermGenie]
 synonym: "negative regulation of perception of physiological pain" NARROW [GOC:TermGenie]
 is_a: GO:0031645 ! negative regulation of nervous system process
 is_a: GO:0051930 ! regulation of sensory perception of pain
-intersection_of: GO:0008150 ! biological_process
+intersection_of: GO:0065007 ! biological regulation
 intersection_of: negatively_regulates GO:0019233 ! sensory perception of pain
 relationship: negatively_regulates GO:0019233 ! sensory perception of pain
 created_by: sl
@@ -6653,7 +6664,7 @@ synonym: "upregulation of perception of physiological pain" NARROW [GOC:TermGeni
 synonym: "upregulation of sensory perception of pain" EXACT [GOC:TermGenie]
 is_a: GO:0031646 ! positive regulation of nervous system process
 is_a: GO:0051930 ! regulation of sensory perception of pain
-intersection_of: GO:0008150 ! biological_process
+intersection_of: GO:0065007 ! biological regulation
 intersection_of: positively_regulates GO:0019233 ! sensory perception of pain
 relationship: positively_regulates GO:0019233 ! sensory perception of pain
 created_by: sl
@@ -6666,7 +6677,7 @@ namespace: biological_process
 def: "Any process that modulates the frequency, rate or extent of intestinal absorption." [GO_REF:0000058, GOC:BHF, GOC:rl, GOC:TermGenie, PMID:12469120]
 is_a: GO:0044058 ! regulation of digestive system process
 is_a: GO:0051049 ! regulation of transport
-intersection_of: GO:0008150 ! biological_process
+intersection_of: GO:0065007 ! biological regulation
 intersection_of: regulates GO:0050892 ! intestinal absorption
 relationship: regulates GO:0050892 ! intestinal absorption
 created_by: rl
@@ -6684,7 +6695,7 @@ synonym: "inhibition of intestinal absorption" NARROW [GOC:TermGenie]
 is_a: GO:0051051 ! negative regulation of transport
 is_a: GO:0060457 ! negative regulation of digestive system process
 is_a: GO:1904478 ! regulation of intestinal absorption
-intersection_of: GO:0008150 ! biological_process
+intersection_of: GO:0065007 ! biological regulation
 intersection_of: negatively_regulates GO:0050892 ! intestinal absorption
 relationship: negatively_regulates GO:0050892 ! intestinal absorption
 created_by: rl
@@ -6702,7 +6713,7 @@ synonym: "upregulation of intestinal absorption" EXACT [GOC:TermGenie]
 is_a: GO:0051050 ! positive regulation of transport
 is_a: GO:0060456 ! positive regulation of digestive system process
 is_a: GO:1904478 ! regulation of intestinal absorption
-intersection_of: GO:0008150 ! biological_process
+intersection_of: GO:0065007 ! biological regulation
 intersection_of: positively_regulates GO:0050892 ! intestinal absorption
 relationship: positively_regulates GO:0050892 ! intestinal absorption
 created_by: rl
@@ -6715,7 +6726,7 @@ namespace: biological_process
 def: "Any process that modulates the frequency, rate or extent of sensory perception of sweet taste." [GO_REF:0000058, GOC:mr, GOC:TermGenie, PMID:1716172]
 synonym: "regulation of sweet taste perception" EXACT [GOC:TermGenie]
 is_a: GO:0051931 ! regulation of sensory perception
-intersection_of: GO:0008150 ! biological_process
+intersection_of: GO:0065007 ! biological regulation
 intersection_of: regulates GO:0050916 ! sensory perception of sweet taste
 relationship: regulates GO:0050916 ! sensory perception of sweet taste
 created_by: mr
@@ -6737,7 +6748,7 @@ synonym: "inhibition of sweet taste perception" NARROW [GOC:TermGenie]
 synonym: "negative regulation of sweet taste perception" EXACT [GOC:TermGenie]
 is_a: GO:0031645 ! negative regulation of nervous system process
 is_a: GO:1904656 ! regulation of sensory perception of sweet taste
-intersection_of: GO:0008150 ! biological_process
+intersection_of: GO:0065007 ! biological regulation
 intersection_of: negatively_regulates GO:0050916 ! sensory perception of sweet taste
 relationship: negatively_regulates GO:0050916 ! sensory perception of sweet taste
 created_by: mr
@@ -6759,7 +6770,7 @@ synonym: "upregulation of sensory perception of sweet taste" EXACT [GOC:TermGeni
 synonym: "upregulation of sweet taste perception" EXACT [GOC:TermGenie]
 is_a: GO:0031646 ! positive regulation of nervous system process
 is_a: GO:1904656 ! regulation of sensory perception of sweet taste
-intersection_of: GO:0008150 ! biological_process
+intersection_of: GO:0065007 ! biological regulation
 intersection_of: positively_regulates GO:0050916 ! sensory perception of sweet taste
 relationship: positively_regulates GO:0050916 ! sensory perception of sweet taste
 created_by: mr
@@ -6772,7 +6783,7 @@ namespace: biological_process
 def: "Any process that modulates the frequency, rate or extent of sensory perception of bitter taste." [GO_REF:0000058, GOC:mr, GOC:TermGenie, PMID:1716172]
 synonym: "regulation of bitter taste perception" EXACT [GOC:TermGenie]
 is_a: GO:0051931 ! regulation of sensory perception
-intersection_of: GO:0008150 ! biological_process
+intersection_of: GO:0065007 ! biological regulation
 intersection_of: regulates GO:0050913 ! sensory perception of bitter taste
 relationship: regulates GO:0050913 ! sensory perception of bitter taste
 created_by: mr
@@ -6794,7 +6805,7 @@ synonym: "inhibition of sensory perception of bitter taste" NARROW [GOC:TermGeni
 synonym: "negative regulation of bitter taste perception" EXACT [GOC:TermGenie]
 is_a: GO:0031645 ! negative regulation of nervous system process
 is_a: GO:1904660 ! regulation of sensory perception of bitter taste
-intersection_of: GO:0008150 ! biological_process
+intersection_of: GO:0065007 ! biological regulation
 intersection_of: negatively_regulates GO:0050913 ! sensory perception of bitter taste
 relationship: negatively_regulates GO:0050913 ! sensory perception of bitter taste
 created_by: mr
@@ -6816,7 +6827,7 @@ synonym: "upregulation of bitter taste perception" EXACT [GOC:TermGenie]
 synonym: "upregulation of sensory perception of bitter taste" EXACT [GOC:TermGenie]
 is_a: GO:0031646 ! positive regulation of nervous system process
 is_a: GO:1904660 ! regulation of sensory perception of bitter taste
-intersection_of: GO:0008150 ! biological_process
+intersection_of: GO:0065007 ! biological regulation
 intersection_of: positively_regulates GO:0050913 ! sensory perception of bitter taste
 relationship: positively_regulates GO:0050913 ! sensory perception of bitter taste
 created_by: mr
@@ -6839,7 +6850,7 @@ synonym: "negative regulation of salivation" EXACT [GOC:TermGenie]
 is_a: GO:0046877 ! regulation of saliva secretion
 is_a: GO:0051048 ! negative regulation of secretion
 is_a: GO:0060457 ! negative regulation of digestive system process
-intersection_of: GO:0008150 ! biological_process
+intersection_of: GO:0065007 ! biological regulation
 intersection_of: negatively_regulates GO:0046541 ! saliva secretion
 relationship: negatively_regulates GO:0046541 ! saliva secretion
 created_by: pga
@@ -6858,7 +6869,7 @@ synonym: "regulation of sensory transduction of mechanical stimulus during perce
 synonym: "regulation of tactition, sensory detection of mechanical stimulus" EXACT [GOC:TermGenie]
 is_a: GO:0032101 ! regulation of response to external stimulus
 is_a: GO:0051931 ! regulation of sensory perception
-intersection_of: GO:0008150 ! biological_process
+intersection_of: GO:0065007 ! biological regulation
 intersection_of: regulates GO:0050976 ! detection of mechanical stimulus involved in sensory perception of touch
 relationship: regulates GO:0050976 ! detection of mechanical stimulus involved in sensory perception of touch
 created_by: hbye
@@ -6906,7 +6917,7 @@ synonym: "negative regulation of tactition, sensory detection of mechanical stim
 is_a: GO:0031645 ! negative regulation of nervous system process
 is_a: GO:0032102 ! negative regulation of response to external stimulus
 is_a: GO:1905787 ! regulation of detection of mechanical stimulus involved in sensory perception of touch
-intersection_of: GO:0008150 ! biological_process
+intersection_of: GO:0065007 ! biological regulation
 intersection_of: negatively_regulates GO:0050976 ! detection of mechanical stimulus involved in sensory perception of touch
 relationship: negatively_regulates GO:0050976 ! detection of mechanical stimulus involved in sensory perception of touch
 created_by: hbye
@@ -6954,7 +6965,7 @@ synonym: "upregulation of tactition, sensory detection of mechanical stimulus" E
 is_a: GO:0031646 ! positive regulation of nervous system process
 is_a: GO:0032103 ! positive regulation of response to external stimulus
 is_a: GO:1905787 ! regulation of detection of mechanical stimulus involved in sensory perception of touch
-intersection_of: GO:0008150 ! biological_process
+intersection_of: GO:0065007 ! biological regulation
 intersection_of: positively_regulates GO:0050976 ! detection of mechanical stimulus involved in sensory perception of touch
 relationship: positively_regulates GO:0050976 ! detection of mechanical stimulus involved in sensory perception of touch
 created_by: hbye
@@ -7130,7 +7141,7 @@ namespace: biological_process
 def: "Any process that modulates the frequency, rate or extent of multicellular organismal development." [GOC:obol]
 is_a: GO:0050793 ! regulation of developmental process
 is_a: GO:0051239 ! regulation of multicellular organismal process
-intersection_of: GO:0008150 ! biological_process
+intersection_of: GO:0065007 ! biological regulation
 intersection_of: regulates GO:0007275 ! multicellular organism development
 relationship: regulates GO:0007275 ! multicellular organism development
 created_by: tb
@@ -7143,7 +7154,7 @@ namespace: biological_process
 def: "Any process that modulates the frequency, rate or extent of fatty acid transport." [GOC:BHF]
 is_a: GO:0032368 ! regulation of lipid transport
 is_a: GO:0032890 ! regulation of organic acid transport
-intersection_of: GO:0008150 ! biological_process
+intersection_of: GO:0065007 ! biological regulation
 intersection_of: regulates GO:0015908 ! fatty acid transport
 relationship: regulates GO:0015908 ! fatty acid transport
 created_by: rl
@@ -7157,7 +7168,7 @@ def: "Any process that stops, prevents, or reduces the frequency, rate or extent
 is_a: GO:0032369 ! negative regulation of lipid transport
 is_a: GO:0032891 ! negative regulation of organic acid transport
 is_a: GO:2000191 ! regulation of fatty acid transport
-intersection_of: GO:0008150 ! biological_process
+intersection_of: GO:0065007 ! biological regulation
 intersection_of: negatively_regulates GO:0015908 ! fatty acid transport
 relationship: negatively_regulates GO:0015908 ! fatty acid transport
 created_by: rl
@@ -7171,7 +7182,7 @@ def: "Any process that activates or increases the frequency, rate or extent of f
 is_a: GO:0032370 ! positive regulation of lipid transport
 is_a: GO:0032892 ! positive regulation of organic acid transport
 is_a: GO:2000191 ! regulation of fatty acid transport
-intersection_of: GO:0008150 ! biological_process
+intersection_of: GO:0065007 ! biological regulation
 intersection_of: positively_regulates GO:0015908 ! fatty acid transport
 relationship: positively_regulates GO:0015908 ! fatty acid transport
 created_by: rl
@@ -7183,7 +7194,7 @@ name: regulation of reproductive process
 namespace: biological_process
 def: "Any process that modulates the frequency, rate or extent of reproductive process." [GOC:mah]
 is_a: GO:0050789 ! regulation of biological process
-intersection_of: GO:0008150 ! biological_process
+intersection_of: GO:0065007 ! biological regulation
 intersection_of: regulates GO:0022414 ! reproductive process
 relationship: regulates GO:0022414 ! reproductive process
 created_by: mah
@@ -7196,7 +7207,7 @@ namespace: biological_process
 def: "Any process that stops, prevents, or reduces the frequency, rate or extent of reproductive process." [GOC:mah]
 is_a: GO:0048519 ! negative regulation of biological process
 is_a: GO:2000241 ! regulation of reproductive process
-intersection_of: GO:0008150 ! biological_process
+intersection_of: GO:0065007 ! biological regulation
 intersection_of: negatively_regulates GO:0022414 ! reproductive process
 relationship: negatively_regulates GO:0022414 ! reproductive process
 created_by: mah
@@ -7209,7 +7220,7 @@ namespace: biological_process
 def: "Any process that activates or increases the frequency, rate or extent of reproductive process." [GOC:mah]
 is_a: GO:0048518 ! positive regulation of biological process
 is_a: GO:2000241 ! regulation of reproductive process
-intersection_of: GO:0008150 ! biological_process
+intersection_of: GO:0065007 ! biological regulation
 intersection_of: positively_regulates GO:0022414 ! reproductive process
 relationship: positively_regulates GO:0022414 ! reproductive process
 created_by: mah
@@ -7227,7 +7238,7 @@ synonym: "negative regulation of eating" RELATED [GOC:obol]
 synonym: "negative regulation of feeding behaviour" EXACT [GOC:obol]
 is_a: GO:0048521 ! negative regulation of behavior
 is_a: GO:0060259 ! regulation of feeding behavior
-intersection_of: GO:0008150 ! biological_process
+intersection_of: GO:0065007 ! biological regulation
 intersection_of: negatively_regulates GO:0007631 ! feeding behavior
 relationship: negatively_regulates GO:0007631 ! feeding behavior
 created_by: yaf
@@ -7245,7 +7256,7 @@ synonym: "positive regulation of eating" RELATED [GOC:obol]
 synonym: "positive regulation of feeding behaviour" EXACT [GOC:obol]
 is_a: GO:0048520 ! positive regulation of behavior
 is_a: GO:0060259 ! regulation of feeding behavior
-intersection_of: GO:0008150 ! biological_process
+intersection_of: GO:0065007 ! biological regulation
 intersection_of: positively_regulates GO:0007631 ! feeding behavior
 relationship: positively_regulates GO:0007631 ! feeding behavior
 created_by: yaf
@@ -7258,7 +7269,7 @@ namespace: biological_process
 def: "Any process that modulates the frequency, rate or extent of grooming behavior." [GOC:BHF]
 synonym: "regulation of grooming behaviour" EXACT [GOC:obol]
 is_a: GO:0050795 ! regulation of behavior
-intersection_of: GO:0008150 ! biological_process
+intersection_of: GO:0065007 ! biological regulation
 intersection_of: regulates GO:0007625 ! grooming behavior
 relationship: regulates GO:0007625 ! grooming behavior
 created_by: rl
