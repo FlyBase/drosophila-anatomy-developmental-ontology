@@ -62,7 +62,7 @@ prepare_release: $(ASSETS) $(PATTERN_RELEASE_FILES)
 # Simple is overwritten to strip out duplicate names and definitions.
 $(ONT)-simple.obo: $(ONT)-simple.owl
 	$(ROBOT) convert --input $< --check false -f obo $(OBO_FORMAT_OPTIONS) -o $@.tmp.obo &&\
-	cat $@.tmp.obo | grep -v ^owl-axioms | grep -v 'subset[:][ ]ro[-]eco' | grep -v 'namespace[:][ ]external' | grep -v 'namespace[:][ ]quality' > $@.tmp &&\
+	cat $@.tmp.obo | grep -v ^owl-axioms | grep -v 'namespace[:][ ]external' | grep -v 'namespace[:][ ]quality' > $@.tmp &&\
 	cat $@.tmp | perl -0777 -e '$$_ = <>; s/name[:].*\nname[:]/name:/g; print' | perl -0777 -e '$$_ = <>; s/def[:].*\ndef[:]/def:/g; print' > $@
 	rm -f $@.tmp.obo $@.tmp
 
@@ -70,7 +70,7 @@ $(ONT)-simple.obo: $(ONT)-simple.owl
 $(ONT).obo: $(ONT)-simple.owl
 	$(ROBOT)  annotate --input $< --ontology-iri $(URIBASE)/$@ --version-iri $(ONTBASE)/releases/$(TODAY) \
 	convert --check false -f obo $(OBO_FORMAT_OPTIONS) -o $@.tmp.obo &&\
-	cat $@.tmp.obo | grep -v ^owl-axioms | grep -v 'subset[:][ ]ro[-]eco' | grep -v 'namespace[:][ ]external' | grep -v 'namespace[:][ ]quality' > $@.tmp &&\
+	cat $@.tmp.obo | grep -v ^owl-axioms | grep -v 'namespace[:][ ]external' | grep -v 'namespace[:][ ]quality' > $@.tmp &&\
 	cat $@.tmp | perl -0777 -e '$$_ = <>; s/name[:].*\nname[:]/name:/g; print' | perl -0777 -e '$$_ = <>; s/def[:].*\ndef[:]/def:/g; print' > $@
 	rm -f $@.tmp.obo $@.tmp
 	
