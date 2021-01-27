@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: fbbt/releases/2021-01-26/imports/go_import.owl
+data-version: fbbt/releases/2021-01-27/imports/go_import.owl
 subsetdef: gocheck_do_not_annotate ""
 subsetdef: gocheck_do_not_manually_annotate ""
 subsetdef: goslim_agr ""
@@ -17,7 +17,7 @@ subsetdef: goslim_pombe ""
 subsetdef: goslim_synapse ""
 subsetdef: goslim_yeast ""
 ontology: fbbt/imports/go_import
-property_value: owl:versionInfo "2021-01-26" xsd:string
+property_value: owl:versionInfo "2021-01-27" xsd:string
 
 [Term]
 id: GO:0000003
@@ -3044,6 +3044,23 @@ synonym: "taxis in response to gravitational stimulus" EXACT []
 synonym: "taxis in response to gravity" EXACT []
 is_a: GO:0009629 ! response to gravity
 is_a: GO:0042330 ! taxis
+
+[Term]
+id: GO:0042594
+name: response to starvation
+namespace: biological_process
+def: "Any process that results in a change in state or activity of a cell or an organism (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of a starvation stimulus, deprivation of nourishment." [GOC:go_curators]
+subset: goslim_yeast
+is_a: GO:0006950 ! response to stress
+is_a: GO:0031667 ! response to nutrient levels
+
+[Term]
+id: GO:0042595
+name: behavioral response to starvation
+namespace: biological_process
+def: "Any process that results in a change in the behavior of an organism as a result of deprivation of nourishment." [GOC:go_curators]
+synonym: "behavioural response to starvation" EXACT []
+is_a: GO:0042594 ! response to starvation
 
 [Term]
 id: GO:0042745
