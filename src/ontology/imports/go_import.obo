@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: fbbt/releases/2021-01-27/imports/go_import.owl
+data-version: fbbt/releases/2021-02-01/imports/go_import.owl
 subsetdef: gocheck_do_not_annotate ""
 subsetdef: gocheck_do_not_manually_annotate ""
 subsetdef: goslim_agr ""
@@ -17,7 +17,7 @@ subsetdef: goslim_pombe ""
 subsetdef: goslim_synapse ""
 subsetdef: goslim_yeast ""
 ontology: fbbt/imports/go_import
-property_value: owl:versionInfo "2021-01-27" xsd:string
+property_value: owl:versionInfo "2021-02-01" xsd:string
 
 [Term]
 id: GO:0000003
@@ -1860,6 +1860,13 @@ def: "The directed movement of acidic amino acids, amino acids with a pH below 7
 is_a: GO:0006865 ! amino acid transport
 
 [Term]
+id: GO:0015804
+name: neutral amino acid transport
+namespace: biological_process
+def: "The directed movement of neutral amino acids, amino acids with no net charge, into, out of or within a cell, or between cells, by means of some agent such as a transporter or pore." [GOC:ai]
+is_a: GO:0006865 ! amino acid transport
+
+[Term]
 id: GO:0015812
 name: gamma-aminobutyric acid transport
 namespace: biological_process
@@ -1869,6 +1876,15 @@ synonym: "4-aminobutanoate transport" EXACT []
 synonym: "4-aminobutyrate transport" EXACT []
 synonym: "GABA transport" EXACT []
 is_a: GO:0006865 ! amino acid transport
+is_a: GO:0046942 ! carboxylic acid transport
+
+[Term]
+id: GO:0015816
+name: glycine transport
+namespace: biological_process
+def: "The directed movement of glycine, aminoethanoic acid, into, out of or within a cell, or between cells, by means of some agent such as a transporter or pore." [GOC:ai]
+is_a: GO:0006812 ! cation transport
+is_a: GO:0015804 ! neutral amino acid transport
 is_a: GO:0046942 ! carboxylic acid transport
 
 [Term]
@@ -5159,6 +5175,48 @@ xref: Wikipedia:Reflex
 is_a: GO:0009605 ! response to external stimulus
 
 [Term]
+id: GO:0060012
+name: synaptic transmission, glycinergic
+namespace: biological_process
+def: "The vesicular release of glycine from a presynapse, across a chemical synapse, the subsequent activation of glycine receptors at the postsynapse of a target cell (neuron, muscle, or secretory cell) and the effects of this activation on the postsynaptic membrane potential and ionic composition of the postsynaptic cytosol. This process encompasses both spontaneous and evoked release of neurotransmitter and all parts of synaptic vesicle exocytosis. Evoked transmission starts with the arrival of an action potential at the presynapse." [GOC:dos]
+synonym: "glycinergic synaptic transmission" EXACT []
+is_a: GO:0007268 ! chemical synaptic transmission
+
+[Term]
+id: GO:0060092
+name: regulation of synaptic transmission, glycinergic
+namespace: biological_process
+def: "Any process that modulates the frequency, rate or extent of glycinergic synaptic transmission. Glycinergic synaptic transmission is the process of communication from a neuron to another neuron across a synapse using the neurotransmitter glycine." [GOC:dms, GOC:dph]
+is_a: GO:0050804 ! modulation of chemical synaptic transmission
+intersection_of: GO:0065007 ! biological regulation
+intersection_of: regulates GO:0060012 ! synaptic transmission, glycinergic
+relationship: regulates GO:0060012 ! synaptic transmission, glycinergic
+
+[Term]
+id: GO:0060093
+name: negative regulation of synaptic transmission, glycinergic
+namespace: biological_process
+def: "Any process that stops or decreases the frequency, rate or extent of glycinergic synaptic transmission. Glycinergic synaptic transmission is the process of communication from a neuron to another neuron across a synapse using the neurotransmitter glycine." [GOC:dms, GOC:dph]
+synonym: "negative regulation of glycinergic synaptic transmission" EXACT []
+is_a: GO:0050805 ! negative regulation of synaptic transmission
+is_a: GO:0060092 ! regulation of synaptic transmission, glycinergic
+intersection_of: GO:0065007 ! biological regulation
+intersection_of: negatively_regulates GO:0060012 ! synaptic transmission, glycinergic
+relationship: negatively_regulates GO:0060012 ! synaptic transmission, glycinergic
+
+[Term]
+id: GO:0060094
+name: positive regulation of synaptic transmission, glycinergic
+namespace: biological_process
+def: "Any process that activates or increases the frequency, rate or extent of glycinergic synaptic transmission. Glycinergic synaptic transmission is the process of communication from a neuron to another neuron across a synapse using the neurotransmitter glycine." [GOC:dms, GOC:dph]
+synonym: "positive regulation of glycinergic synaptic transmission" EXACT []
+is_a: GO:0050806 ! positive regulation of synaptic transmission
+is_a: GO:0060092 ! regulation of synaptic transmission, glycinergic
+intersection_of: GO:0065007 ! biological regulation
+intersection_of: positively_regulates GO:0060012 ! synaptic transmission, glycinergic
+relationship: positively_regulates GO:0060012 ! synaptic transmission, glycinergic
+
+[Term]
 id: GO:0060096
 name: serotonin secretion, neurotransmission
 namespace: biological_process
@@ -5342,6 +5400,27 @@ is_a: GO:0014047 ! glutamate secretion
 relationship: part_of GO:0035249 ! synaptic transmission, glutamatergic
 created_by: dph
 creation_date: 2013-06-21T16:14:47Z
+
+[Term]
+id: GO:0061536
+name: glycine secretion
+namespace: biological_process
+def: "The controlled release of glycine by a cell." [GOC:dph]
+is_a: GO:0015816 ! glycine transport
+is_a: GO:0032940 ! secretion by cell
+created_by: dph
+creation_date: 2013-06-21T16:18:23Z
+
+[Term]
+id: GO:0061537
+name: glycine secretion, neurotransmission
+namespace: biological_process
+def: "The controlled release of glycine by a cell, in which glycine acts as a neurotransmitter." [GOC:dph]
+is_a: GO:0007269 ! neurotransmitter secretion
+is_a: GO:0061536 ! glycine secretion
+relationship: part_of GO:0060012 ! synaptic transmission, glycinergic
+created_by: dph
+creation_date: 2013-06-21T16:19:02Z
 
 [Term]
 id: GO:0061538
@@ -6735,6 +6814,58 @@ intersection_of: positively_regulates GO:0050892 ! intestinal absorption
 relationship: positively_regulates GO:0050892 ! intestinal absorption
 created_by: rl
 creation_date: 2015-07-13T15:59:00Z
+
+[Term]
+id: GO:1904624
+name: regulation of glycine secretion, neurotransmission
+namespace: biological_process
+def: "Any process that modulates the frequency, rate or extent of glycine secretion, neurotransmission." [GO_REF:0000058, GOC:TermGenie, PMID:22988142]
+is_a: GO:0046928 ! regulation of neurotransmitter secretion
+is_a: GO:0051955 ! regulation of amino acid transport
+is_a: GO:0060092 ! regulation of synaptic transmission, glycinergic
+intersection_of: GO:0065007 ! biological regulation
+intersection_of: regulates GO:0061537 ! glycine secretion, neurotransmission
+relationship: regulates GO:0061537 ! glycine secretion, neurotransmission
+created_by: hjd
+creation_date: 2015-08-27T20:03:38Z
+
+[Term]
+id: GO:1904625
+name: negative regulation of glycine secretion, neurotransmission
+namespace: biological_process
+def: "Any process that stops, prevents or reduces the frequency, rate or extent of glycine secretion, neurotransmission." [GO_REF:0000058, GOC:TermGenie, PMID:22988142]
+synonym: "down regulation of glycine secretion, neurotransmission" EXACT [GOC:TermGenie]
+synonym: "down-regulation of glycine secretion, neurotransmission" EXACT [GOC:TermGenie]
+synonym: "downregulation of glycine secretion, neurotransmission" EXACT [GOC:TermGenie]
+synonym: "inhibition of glycine secretion, neurotransmission" NARROW [GOC:TermGenie]
+is_a: GO:0046929 ! negative regulation of neurotransmitter secretion
+is_a: GO:0051956 ! negative regulation of amino acid transport
+is_a: GO:0060093 ! negative regulation of synaptic transmission, glycinergic
+is_a: GO:1904624 ! regulation of glycine secretion, neurotransmission
+intersection_of: GO:0065007 ! biological regulation
+intersection_of: negatively_regulates GO:0061537 ! glycine secretion, neurotransmission
+relationship: negatively_regulates GO:0061537 ! glycine secretion, neurotransmission
+created_by: hjd
+creation_date: 2015-08-27T20:03:44Z
+
+[Term]
+id: GO:1904626
+name: positive regulation of glycine secretion, neurotransmission
+namespace: biological_process
+def: "Any process that activates or increases the frequency, rate or extent of glycine secretion, neurotransmission." [GO_REF:0000058, GOC:TermGenie, PMID:22988142]
+synonym: "activation of glycine secretion, neurotransmission" NARROW [GOC:TermGenie]
+synonym: "up regulation of glycine secretion, neurotransmission" EXACT [GOC:TermGenie]
+synonym: "up-regulation of glycine secretion, neurotransmission" EXACT [GOC:TermGenie]
+synonym: "upregulation of glycine secretion, neurotransmission" EXACT [GOC:TermGenie]
+is_a: GO:0001956 ! positive regulation of neurotransmitter secretion
+is_a: GO:0051957 ! positive regulation of amino acid transport
+is_a: GO:0060094 ! positive regulation of synaptic transmission, glycinergic
+is_a: GO:1904624 ! regulation of glycine secretion, neurotransmission
+intersection_of: GO:0065007 ! biological regulation
+intersection_of: positively_regulates GO:0061537 ! glycine secretion, neurotransmission
+relationship: positively_regulates GO:0061537 ! glycine secretion, neurotransmission
+created_by: hjd
+creation_date: 2015-08-27T20:03:49Z
 
 [Term]
 id: GO:1904656
