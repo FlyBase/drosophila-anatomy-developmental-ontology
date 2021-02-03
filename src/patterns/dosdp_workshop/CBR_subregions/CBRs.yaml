@@ -1,0 +1,65 @@
+pattern_name: Cell_Body_Rind_Subregions
+description: for creating subregions of CBRs from Ito et al. (2014) BrainName paper.
+
+classes:
+  thing: owl:Thing
+  cell_body_rind_region: FBbt:00100200
+
+relations:
+  part_of: BFO:0000050
+  continuous_with: RO:0002150
+
+vars:
+  position: thing
+  neuropil_name: thing
+  neuropil_id: thing
+  superrind_id: thing
+  other_partonomy_name: thing
+  other_partonomy_id: thing
+  abbreviation: thing
+
+
+data_list_vars:
+  def_dbxref: xsd:string
+
+name:
+  text: "cell body rind of adult %s %s"
+  vars:
+    - position
+    - neuropil_name
+
+def:
+  text: "Adult cell body rind region that overlies the %s part of the %s (Ito et al., 2014). It is also part of the %s (Ito et al., 2014)."
+  vars:
+    - position
+    - neuropil_name
+    - other_partonomy_name
+  xrefs: def_dbxref
+
+generated_synonyms:
+  -
+    exact_synonym:
+    text: "%s"
+    vars:
+      - abbreviation
+    xrefs: def_dbxref
+    
+logical_axioms:
+  - 
+    axiom_type: subClassOf
+    text: "'part_of' some %s"
+    vars:
+      - superrind_id
+  - 
+    axiom_type: subClassOf
+    text: "'part_of' some %s"
+    vars:
+      - other_partonomy_id
+  - 
+    axiom_type: subClassOf
+    text: "'continuous_with' some %s"
+    vars:
+      - neuropil_id
+  - 
+    axiom_type: subClassOf
+    text: "'cell_body_rind_region'"
