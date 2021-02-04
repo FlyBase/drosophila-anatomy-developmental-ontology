@@ -4,15 +4,14 @@
 cd ~/git/drosophila-anatomy-developmental-ontology/src/patterns/dosdp_workshop/
 
 #generate terms
-dosdp-tools generate --obo-prefixes --prefixes=prefix.yaml --infile=fillers.csv --template=pattern.yaml --ontology=fbbt-edit-copy.obo --outfile=new_terms.obo
-
+dosdp-tools generate --obo-prefixes --prefixes=prefix.yaml --infile=fillers.csv --template=pattern.yaml --ontology=fbbt-edit-copy.obo --outfile=new_terms.owl
 
 #copy to ontology folder:
-cp new_terms.obo ~/git/drosophila-anatomy-developmental-ontology/src/ontology/
+cp new_terms.owl ~/git/drosophila-anatomy-developmental-ontology/src/ontology/
 
 #navigate to ontology folder and merge this with fbbt-edit (without merging fbbt imports):
 cd ~/git/drosophila-anatomy-developmental-ontology/src/ontology/
 
-robot merge --collapse-import-closure false --input fbbt-edit.obo --input new_terms.obo --output merge.obo
+robot merge --collapse-import-closure false --input fbbt-edit.obo --input new_terms.owl --output merge.obo
 
 #check diff with fbbt-edit, then rename to fbbt-edit when satisfied and commit
