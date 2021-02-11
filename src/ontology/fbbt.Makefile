@@ -107,6 +107,10 @@ tmp/auto_generated_definitions_seed_sub.txt: $(SRC)
 	cat $@.tmp | sort | uniq >  $@
 	rm -f $@.tmp
 
+mirror/go.owl: mirror/go.trigger
+	$(ROBOT) convert -I $(URIBASE)/go.owl -o $@.tmp.owl && mv $@.tmp.owl $@
+.PRECIOUS: mirror/%.owl
+
 tmp/merged-source-pre.owl: $(SRC) mirror/go.owl
 	$(ROBOT) merge -i $(SRC) -i mirror/go.owl --output $@
 
