@@ -1,64 +1,80 @@
+"""
+Script to get label and synonym info for FlyBase genes from VFB and make a robot template.
+Template can be used to generate a new flybase_import.owl file.
+"""
 
-from  uk.ac.ebi.vfb.neo4j.flybase2neo.feature_tools import FeatureMover
+import psycopg2
 import pandas as pd
 from collections import OrderedDict
 
-fm = FeatureMover('http://pdb.virtualflybrain.org', 'neo4j', 'neo4j')  # expects some neo connection, not used here
-
 # create list of FBgns from seed.txt
-
 with open('../../../ontology/seed.txt', 'r') as f:
     terms = f.readlines()
 
 FBgn_list = [str(term.rstrip()).lstrip('http://flybase.org/reports/') for term in terms if "FBgn" in term]
 
-"""
-# Make template from a file of FBgns
-with open('FBgns.txt', 'r') as f:
-    FBgns = f.readlines()
+fb_con = psycopg2.connect(dbname='flybase',
+                          host='chado.flybase.org',
+                          user='flybase')
+query = ("SELECT f.uniquename as fbid, s.name as ascii_name, "
+         "stype.name AS stype, "
+         "fs.is_current, s.synonym_sgml as unicode_name "
+         "FROM feature f "
+         "LEFT OUTER JOIN feature_synonym fs on (f.feature_id=fs.feature_id) "
+         "JOIN synonym s on (fs.synonym_id=s.synonym_id) "
+         "JOIN cvterm stype on (s.type_id=stype.cvterm_id) "
+         "WHERE f.uniquename IN ('%s') ORDER BY fbid" % "','".join(FBgn_list))
+with fb_con:
+    with fb_con.cursor() as curs:
+        curs.execute(query)
+        desc = curs.description
+        output = curs.fetchall()
+fb_con.close()
 
-FBgn_list = [gene.rstrip() for gene in FBgns]
-"""
+colnames = []
+for column in desc:
+    colnames.append(column[0])
 
-# Get dictionary of Nodes for list of FBgns
-fb_output = fm.name_synonym_lookup(FBgn_list)
+FBgn_dataframe = pd.DataFrame.from_records(output, columns=colnames) \
+    .drop_duplicates(ignore_index=True).drop('unicode_name', axis=1)
 
-# Make a dictionary with key - column header & value = template specification (first row of table).
-template_seed = OrderedDict([ ('ID' , 'ID'), ('CLASS_TYPE' , 'CLASS_TYPE'),
-                              ('RDF_Type' , 'TYPE' ), ("Label" , "A rdfs:label"),
-                              ("Synonyms" , "A oboInOwl:hasExactSynonym SPLIT=|"),
-                              ("Subclass_of" , "SC %")])
+# Header of robot template
+template_seed = OrderedDict([('ID', 'ID'), ("Label", "A rdfs:label"),
+                             ("Synonyms", "A oboInOwl:hasExactSynonym SPLIT=|"),
+                             ("Subclass_of", "SC %")])
 
-# Create dataFrame for template
+# Create DataFrame for template
 template = pd.DataFrame.from_records([template_seed])
 
-for g in FBgn_list:
+# add a row for each gene to the template
+for gene in FBgn_list:
 
-    row_od = OrderedDict([]) #new template row as an empty ordered dictionary
-    for c in template.columns: #make columns and blank data for new template row
-        row_od.update([(c , "")])
+    row_od = OrderedDict([])  # new template row as an empty ordered dictionary
+    for c in template.columns:  # make columns and blank data for new template row
+        row_od.update([(c, "")])
 
-    # gets Node (class) for gene
-    gene = fb_output[g]
-
-    #these are the same in each row
-    row_od["CLASS_TYPE"] = "subclass"
-    row_od["RDF_Type"] = "owl:Class"
+    # subclass of SO:gene
     row_od["Subclass_of"] = "http://purl.obolibrary.org/obo/SO_0000704"
 
-    #ID, label
-    row_od["ID"] = gene.iri
-    row_od["Label"] = gene.label
+    # ID = full iri for FBgn
+    row_od["ID"] = "http://flybase.org/reports/" + gene
 
-    #synonyms
-    syn_string = ""
-    for syn in gene.synonyms:
-        syn_string += (syn + "|")
-    syn_string = syn_string.rstrip("|")
-    row_od["Synonyms"] = syn_string
+    longname = list(set([l for l in FBgn_dataframe.query(
+        'fbid == @gene & is_current & stype == "fullname"')['ascii_name']]))
+    symbol = list(set([l for l in FBgn_dataframe.query(
+        'fbid == @gene & is_current & stype == "symbol"')['ascii_name']]))
+    synonyms = list(set([l for l in FBgn_dataframe.query(
+        'fbid == @gene')['ascii_name'] if l not in (longname + symbol)]))
+    if len(longname) > 1:
+        raise ValueError("Multiple current long names for %s" % gene)
+    if len(symbol) > 1:
+        raise ValueError("Multiple current symbols for %s" % gene)
 
-    #make new row into a DataFrame and add it to template
+    row_od["Label"] = symbol[0]
+    row_od["Synonyms"] = '|'.join(synonyms+longname)
+
+    # make new row into a DataFrame and add it to template
     new_row = pd.DataFrame.from_records([row_od])
     template = pd.concat([template, new_row], ignore_index=True, sort=False)
 
-template.to_csv("./template.tsv", sep = "\t", header=True, index=False)
+template.to_csv("./template.tsv", sep="\t", header=True, index=False)
