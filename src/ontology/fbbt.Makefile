@@ -149,8 +149,8 @@ pre_release: $(ONT)-edit.obo tmp/auto_generated_definitions_dot.owl tmp/auto_gen
 all_imports: $(IMPORT_FILES) components/flybase_import.owl
 
 tmp/FBgn_template.tsv: $(IMPORTSEED)
-	python3 -m pip install -r ../scripts/flybase_import/requirements.txt
-	python3 ../scripts/flybase_import/FB_import_runner.py $(IMPORTSEED) $@
+	if [ $(IMP) = true ]; then python3 -m pip install -r ../scripts/flybase_import/requirements.txt &&\
+	python3 ../scripts/flybase_import/FB_import_runner.py $(IMPORTSEED) $@; fi
 	
 components/flybase_import.owl: tmp/FBgn_template.tsv
 	if [ $(IMP) = true ]; then $(ROBOT) template --input-iri http://purl.obolibrary.org/obo/ro.owl --template $< \
