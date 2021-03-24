@@ -145,6 +145,9 @@ pre_release: $(ONT)-edit.obo tmp/auto_generated_definitions_dot.owl tmp/auto_gen
 ###
 ###################################################################################
 
+.PHONY: all_imports
+all_imports: $(IMPORT_FILES) components/flybase_import.owl
+
 tmp/FBgn_template.tsv: $(IMPORTSEED)
 	python3 -m pip install -r ../scripts/flybase_import/requirements.txt
 	python3 ../scripts/flybase_import/FB_import_runner.py $(IMPORTSEED) $@
