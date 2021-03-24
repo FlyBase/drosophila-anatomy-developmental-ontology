@@ -140,9 +140,22 @@ pre_release: $(ONT)-edit.obo tmp/auto_generated_definitions_dot.owl tmp/auto_gen
 #	$(ROBOT) query -i tmp/$(ONT)-edit-release.obo --update ../sparql/remove-dot-definitions.ru -o tmp/$(ONT)-edit-release3.obo
 #	diff tmp/$(ONT)-edit-release.obo tmp/$(ONT)-edit-release3.obo > diff.txt
 
+######################################################################################
+### Update flybase_import.owl
+###
+###################################################################################
 
-#####################################################################################
-### Generate the flybase anatomy version of FBBT                                  ###
+tmp/FBgn_template.tsv: $(IMPORTSEED)
+	python3 -m pip install psycopg2-binary pandas
+	python3 ../scripts/flybase_import/FB_import_runner.py $(IMPORTSEED) $@
+	
+components/flybase_import.owl: tmp/FBgn_template.tsv
+	$(ROBOT) template --input-iri http://purl.obolibrary.org/obo/ro.owl --template $< annotate --ontology-iri "http://purl.obolibrary.org/obo/fbbt/components/flybase_import.owl" --output $@
+	rm $<
+
+######################################################################################
+### Generate the flybase anatomy version of FBBT
+###
 #####################################################################################
 
 tmp/fbbt-obj.obo:
