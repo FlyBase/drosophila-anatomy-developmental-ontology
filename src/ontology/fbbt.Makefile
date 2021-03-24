@@ -153,8 +153,8 @@ tmp/FBgn_template.tsv: $(IMPORTSEED)
 	python3 ../scripts/flybase_import/FB_import_runner.py $(IMPORTSEED) $@
 	
 components/flybase_import.owl: tmp/FBgn_template.tsv
-	$(ROBOT) template --input-iri http://purl.obolibrary.org/obo/ro.owl --template $< annotate --ontology-iri "http://purl.obolibrary.org/obo/fbbt/components/flybase_import.owl" --output $@
-	rm $<
+	if [ $(IMP) = true ]; then $(ROBOT) template --input-iri http://purl.obolibrary.org/obo/ro.owl --template $< \
+	annotate --ontology-iri "http://purl.obolibrary.org/obo/fbbt/components/flybase_import.owl" --output $@ && rm $<; fi
 
 ######################################################################################
 ### Generate the flybase anatomy version of FBBT
