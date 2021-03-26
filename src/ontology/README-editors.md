@@ -1,193 +1,156 @@
-These notes are for the EDITORS of fbbt
+These notes are for the EDITORS of FBbt
 
-This project was created using the [ontology development kit](https://github.com/INCATools/ontology-development-kit). See the site for details.
+This project uses the [ontology development kit](https://github.com/INCATools/ontology-development-kit).
 
-For more details on ontology management, please see the [OBO tutorial](https://github.com/jamesaoverton/obo-tutorial) or the [Gene Ontology Editors Tutorial](https://go-protege-tutorial.readthedocs.io/en/latest/)
+For more details on ontology management, please see the [OBO tutorial](https://github.com/jamesaoverton/obo-tutorial) or the [Gene Ontology Editors Tutorial](https://go-protege-tutorial.readthedocs.io/en/latest/).
 
-You may also want to read the [GO ontology editors guide](http://go-ontology.readthedocs.org/)
+You may also want to read the [GO ontology editors guide](http://go-ontology.readthedocs.org/).
 
 ## Requirements
 
- 1. Protege (for editing)
+ 1. [Protege](https://protege.stanford.edu/) (for editing)
  2. A git client (we assume command line git)
  3. [docker](https://www.docker.com/get-docker) (for managing releases)
 
-## Editors Version
+## Editing the Ontology
 
-Make sure you have an ID range in the [idranges file](fbbt-idranges.owl)
+First, clone the repository:
 
-If you do not have one, get one from the maintainer of this repo.
+`git clone https://github.com/FlyBase/drosophila-anatomy-developmental-ontology.git`
 
-The editors version is [fbbt-edit.owl](fbbt-edit.owl)
+Make sure you have an ID range in the [idranges file](fbbt-idranges.owl) (see below).
+
+The editors' version is [fbbt-edit.obo](fbbt-edit.obo), [../../fbbt.owl](../../fbbt.owl) is the release version.
 
 ** DO NOT EDIT fbbt.obo OR fbbt.owl in the top level directory **
 
-[../../fbbt.owl](../../fbbt.owl) is the release version
-
-To edit, open the file in Protege. First make sure you have the repository cloned, see [the GitHub project](https://github.com/FlyBase/drosophila-anatomy-ontology) for details.
-
-You should discuss the git workflow you should use with the maintainer
-of this repo, who should document it here. If you are the maintainer,
-you can contact the odk developers for assistance. You may want to
-copy the flow an existing project, for example GO: [Gene Ontology
-Editors Tutorial](https://go-protege-tutorial.readthedocs.io/en/latest/).
-
-In general, it is bad practice to commit changes to master. It is
-better to make changes on a branch, and make Pull Requests.
+Changes to the editors' file should be made on a branch and merged via a Pull Request (PR) after travis checks have passed. If your changes relate to an issue, link the PR to the issue using 'related to #' or 'fixes #' as appropriate in the PR description.
 
 ## ID Ranges
 
-These are stored in the file
-
- * [fbbt-idranges.owl](fbbt-idranges.owl)
+These are stored in the file [fbbt-idranges.owl](fbbt-idranges.owl)
 
 ** ONLY USE IDs WITHIN YOUR RANGE!! **
 
-If you have only just set up this repository, modify the idranges file
-	and add yourself or other editors. Note Protege does not read the file
-- it is up to you to ensure correct Protege configuration.
+If you do not have an ID range, get one from the maintainer of this repo.
 
-
-### Setting ID ranges in Protege
-
-We aim to put this up on the technical docs for OBO on http://obofoundry.org/
-
-For now, consult the [GO Tutorial on configuring Protege](http://go-protege-tutorial.readthedocs.io/en/latest/Entities.html#new-entities)
+Note: Protege does not read the file, it is up to you to ensure correct Protege configuration (under Protege > Preferences > New entities) - see [ODK documentation](https://ontology-development-kit.readthedocs.io/en/latest/InitialSetup.html#setting-id-ranges-in-protege).
 
 ## Imports
 
 All import modules are in the [imports/](imports/) folder.
 
-There are two ways to include new classes in an import module
+To include new classes in an import module:
 
- 1. Reference an external ontology class in the edit ontology. In Protege: "add new entity", then paste in the PURL
- 2. Add to the imports/fbbt_terms.txt file
+1. Reference an external ontology class in the edit ontology. In Protege: "add new entity" and paste in the PURL, then add a relationship to the new term from an fbbt term.
+2. Run: `sh run.sh make all_imports` to regenerate imports.
 
-After doing this, you can run
+To add a new import module:
 
-`./run.sh make all_imports`
+1. Add the short form of the ontology you wish to import to the list of imports in [fbbt-odk.yaml](fbbt-odk.yaml).
+2. Run: `sh run.sh make update_repo`
+3. Add lines to [catalog-v001.xml](catalog-v001.xml) and add a new Import statement to the editors' file for the newly-imported ontology.
+4. Add a class from the ontology you wish to import as above.
 
-to regenerate imports.
+## Design Patterns
 
-Note: the fbbt_terms.txt file may include 'starter' classes seeded from
-the ontology starter kit. It is safe to remove these.
+** NOT CURRENTLY USED FOR THIS ONTOLOGY**
 
-## Design patterns
+You can automate (class) term generation from design patterns by placing DOSDP yaml file and tsv files under src/patterns. Any pair of files in this folder that share a name (apart from the extension) are assumed to be a DOSDP design pattern and a corresponding tsv specifying terms to add.
 
-You can automate (class) term generation from design patterns by placing DOSDP
-yaml file and tsv files under src/patterns. Any pair of files in this
-folder that share a name (apart from the extension) are assumed to be
-a DOSDP design pattern and a corresponding tsv specifying terms to
-add.
+Design patterns can be used to maintain and generate complete terms (names, definitions, synonyms etc) or to generate logical axioms only, with other axioms being maintained in editors' file.  This can be specified on a per-term basis in the TSV file.
 
-Design patterns can be used to maintain and generate complete terms
-(names, definitions, synonyms etc) or to generate logical axioms
-only, with other axioms being maintained in editors file.  This can be
-specified on a per-term basis in the TSV file.
+Design pattern docs are checked for validity via Travis, but can be tested locally using
 
-Design pattern docs are checked for validity via Travis, but can be
-tested locally using
+`sh run.sh make patterns`
 
-`./run.sh make patterns`
+In addition to running standard tests, this command generates an owl file (`src/patterns/pattern.owl`), which demonstrates the relationships between design patterns.
 
-In addition to running standard tests, this command generates an owl
-file (`src/patterns/pattern.owl`), which demonstrates the relationships
-between design patterns.
-
-(At the time of writing, the following import statements need to be
-added to `src/patterns/pattern.owl` for all imports generated in
-`src/imports/*_import.owl`.   This will be automated in a future release.')
+(At the time of writing, the following import statements need to be added to `src/patterns/pattern.owl` for all imports generated in `src/imports/*_import.owl`.   This will be automated in a future release.')
 
 To compile design patterns to terms run:
 
-`./run.sh make ../patterns/definitions.owl`
+`sh run.sh make ../patterns/definitions.owl`
 
-This generates a file (`src/patterns/definitions.owl`).  You then need
-to add an import statement to the editor's file to import the
-definitions file.
+This generates a file (`src/patterns/definitions.owl`).  You then need to add an import statement to the editor's file to import the definitions file.
 
+## Releases
 
-## Release Manager notes
+FlyBase ontologies are usually released over the course of a day or two, in the order:
+1. FBdv
+2. FBbt
+3. DPO
+4. FBcv
 
-You should only attempt to make a release AFTER the edit version is
-committed and pushed, AND the travis build passes.
+This order is important because DPO imports FBdv and FBbt, and FBcv imports DPO.
 
-These instructions assume you have
-[docker](https://www.docker.com/get-docker). This folder has a script
-[run.sh](run.sh) that wraps docker commands.
+You should only attempt to make a release if the travis build is passing on the master branch.
 
-to release:
+These instructions assume you have [docker](https://www.docker.com/get-docker) running. The script [run.sh](run.sh) wraps docker commands.
 
-first type
+Everything should be done from this (/src/ontology/) folder.
 
-    git branch
+To release:
 
-to make sure you are on master
+1. Make a branch (directly from master) for the release.
 
-    cd src/ontology
-    ./build.sh
+2. Run `sh run_release.sh`
+ * This generates derived files such as fbbt.owl and fbbt.obo and places them in the top level (../..).
+ * Note that the versionIRI value will be automatically added, and will end with YYYY-MM-DD, as per OBO guidelines.
 
-If this looks good type:
+3. Checks:
+ * Check the diff (header and Typedefs of fbbt-simple.obo are usually most informative).
+ * Check reports (in [reports/](reports/) folder)
+ * Spell check using OBO-Edit
 
-    ./prepare_release.sh
+4. Make any necessary changes to the editors' file, then redo steps 2 & 3.
 
-This generates derived files such as fbbt.owl and fbbt.obo and places
-them in the top level (../..).
+5. Commit and push the files and make a PR in the usual way.
 
-Note that the versionIRI value automatically will be added, and will
-end with YYYY-MM-DD, as per OBO guidelines.
+6. When travis checks have passed, merge the PR and IMMEDIATELY make a new release on GitHub:
 
-Commit and push these files.
+ * https://github.com/FlyBase/drosophila-anatomy-developmental-ontology/releases/new
 
-    git commit -a
+__IMPORTANT__: The value of the "Tag version" field MUST be `vYYYY-MM-DD`
 
-And type a brief description of the release in the editor window
+The initial lowercase "v" is REQUIRED. The YYYY-MM-DD *must* match what is in the `owl:versionIRI` of the derived fbbt.owl (`data-version` in fbbt.obo), which will be today's date. This cannot be changed after the fact, be sure to get this right!
 
-Finally type:
+Release title should be YYYY-MM-DD, optionally followed by a title (e.g. "January release")
 
-    git push origin master
+You can also add release notes (this can also be done after the fact). These are in markdown format. In future we will have better tools for auto-generating release notes.
 
-IMMEDIATELY AFTERWARDS (do *not* make further modifications) go here:
+Then click "Publish release"
 
- * https://github.com/FlyBase/drosophila-anatomy-ontology/releases
- * https://github.com/FlyBase/drosophila-anatomy-ontology/releases/new
+__IMPORTANT__: NO MORE THAN ONE RELEASE PER ONTOLOGY PER DAY.
 
-__IMPORTANT__: The value of the "Tag version" field MUST be
-
-    vYYYY-MM-DD
-
-The initial lowercase "v" is REQUIRED. The YYYY-MM-DD *must* match
-what is in the `owl:versionIRI` of the derived fbbt.owl (`data-version` in
-fbbt.obo). This will be today's date.
-
-This cannot be changed after the fact, be sure to get this right!
-
-Release title should be YYYY-MM-DD, optionally followed by a title (e.g. "january release")
-
-You can also add release notes (this can also be done after the fact). These are in markdown format.
-In future we will have better tools for auto-generating release notes.
-
-Then click "publish release"
-
-__IMPORTANT__: NO MORE THAN ONE RELEASE PER DAY.
-
-The PURLs are already configured to pull from github. This means that
-BOTH ontology purls and versioned ontology purls will resolve to the
-correct ontologies. Try it!
+The PURLs are already configured to pull from github. This means that BOTH ontology purls and versioned ontology purls will resolve to the correct ontologies. Try it!
 
  * http://purl.obolibrary.org/obo/fbbt.owl <-- current ontology PURL
- * http://purl.obolibrary.org/obo/fbbt/releases/YYYY-MM-DD.owl <-- change to the release you just made
+ * http://purl.obolibrary.org/obo/fbbt/releases/2021-03-11/fbbt.owl <-- specific release
 
 For questions on this contact Chris Mungall or email obo-admin AT obofoundry.org
 
+# Configurable Options:
+
+- src/ontology/blacklisted_classes.txt contains a set of classes that are removed from the ontology no matter what. This can be useful when imports import classes you do not care about.
+
 # Travis Continuous Integration System
 
-Check the build status here: [![Build Status](https://travis-ci.org/FlyBase/drosophila-anatomy-ontology.svg?branch=master)](https://travis-ci.org/FlyBase/drosophila-anatomy-ontology)
+Check the build status here: [![Build Status](https://travis-ci.com/FlyBase/drosophila-anatomy-developmental-ontology.svg?branch=master)](https://travis-ci.com/FlyBase/drosophila-anatomy-developmental-ontology)
 
-Note: if you have only just created this project you will need to authorize travis for this repo.
+The way QC now works for all four ontologies is this:
 
- 1. Go to [https://travis-ci.org/profile/FlyBase](https://travis-ci.org/profile/FlyBase)
- 2. click the "Sync account" button
- 3. Click the tick symbol next to drosophila-anatomy-ontology
+  1. We run the whole (slightly modified) pipeline (encoded in [travis.sh](travis.sh))
+  2. In the end some hard QC is run. This QC can be controlled through the file [qc-profile.txt](qc-profile.txt). It is pretty permissive now, because there are some errors.
 
-Travis builds should now be activated
+# Updates
+
+To get the latest version of ODK, run: `docker pull obolibrary/odkfull`
+
+To update the repo (Makefile etc.), run: `sh run.sh make update_repo`
+
+# Makefile notes
+
+NEVER edit the [Makefile](Makefile) - this file is managed by the ODK and will be replaced when repo is upgraded.
+
+For changing the the pipeline, edit [fbbt.Makefile](fbbt.Makefile) - everything added here will override instructions in the other Makefile.
