@@ -42,7 +42,7 @@ All import modules are in the [imports/](imports/) folder.
 
 To include new classes in an import module:
 
-1. Reference an external ontology class in the edit ontology. In Protege: "add new entity" and paste in the PURL, then add a relationship to the new term from an fbbt term.
+1. Reference an external ontology class in the edit ontology. In Protege: add as a new class directly under owl:Thing and paste in the PURL, then add a relationship to the new term from an fbbt term.
 2. Run: `sh run.sh make all_imports` to regenerate imports.
 
 To add a new import module:
