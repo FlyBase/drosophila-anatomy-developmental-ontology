@@ -37,7 +37,7 @@ result = [r for r in result if not 'FBbt_2' in r]
 
 # remove provisional Feng neurons
 
-feng_ids = ['http://purl.obolibrary.org/obo/FBbt_000' + n for n in [str(i) for i in range(51089, 51172)]]
+feng_ids = ['http://purl.obolibrary.org/obo/FBbt_000' + n for n in [str(i) for i in range(51089, 51173)]]
 result = [r for r in result if not r in feng_ids]
 
 """
