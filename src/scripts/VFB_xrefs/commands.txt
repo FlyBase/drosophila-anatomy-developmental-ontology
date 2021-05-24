@@ -1,0 +1,13 @@
+# from src/ontology/ folder
+
+sh run.sh make IMP=false fbbt.json
+
+python3 -m pip install -r ../scripts/VFB_xrefs/requirements.txt
+
+python3 ../scripts/VFB_xrefs/VFB_xrefs.py
+
+robot template --input-iri http://purl.obolibrary.org/obo/ro.owl --template VFB_template.tsv --output VFB_xrefs.owl
+
+robot merge --collapse-import-closure false --input fbbt-edit.obo --input VFB_xrefs.owl --output fbbt-edit.obo
+
+rm VFB_template.tsv VFB_xrefs.owl
