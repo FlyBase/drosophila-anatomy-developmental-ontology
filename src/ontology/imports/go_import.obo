@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: fbbt/releases/2021-06-04/imports/go_import.owl
+data-version: fbbt/releases/2021-06-08/imports/go_import.owl
 subsetdef: gocheck_do_not_annotate ""
 subsetdef: gocheck_do_not_manually_annotate ""
 subsetdef: goslim_agr ""
@@ -18,7 +18,7 @@ subsetdef: goslim_synapse ""
 subsetdef: goslim_yeast ""
 ontology: fbbt/imports/go_import
 property_value: http://purl.org/dc/elements/1.1/source http://purl.obolibrary.org/obo/go/releases/2021-05-01/go.owl
-property_value: owl:versionInfo "2021-06-04" xsd:string
+property_value: owl:versionInfo "2021-06-08" xsd:string
 
 [Term]
 id: GO:0000003
@@ -2744,6 +2744,13 @@ synonym: "macromolecule localisation" EXACT [GOC:mah]
 is_a: GO:0051179 ! localization
 
 [Term]
+id: GO:0033058
+name: directional locomotion
+namespace: biological_process
+def: "Self-propelled movement of a cell or organism from one location to another along an axis." [GOC:mtg_MIT_16mar07]
+is_a: GO:0040011 ! locomotion
+
+[Term]
 id: GO:0033555
 name: multicellular organismal response to stress
 namespace: biological_process
@@ -3098,6 +3105,40 @@ synonym: "neuron protrusion" EXACT [NIF_Subcellular:sao250931889]
 synonym: "neuronal cell projection" EXACT []
 xref: NIF_Subcellular:sao867568886
 is_a: GO:0120025 ! plasma membrane bounded cell projection
+
+[Term]
+id: GO:0043056
+name: forward locomotion
+namespace: biological_process
+def: "Anterior movement of an organism, following the direction of the head of the animal." [GOC:go_curators]
+is_a: GO:0033058 ! directional locomotion
+
+[Term]
+id: GO:0043057
+name: backward locomotion
+namespace: biological_process
+def: "Posterior movement of an organism, e.g. following the direction of the tail of an animal." [GOC:go_curators]
+is_a: GO:0033058 ! directional locomotion
+
+[Term]
+id: GO:0043058
+name: regulation of backward locomotion
+namespace: biological_process
+def: "Any process that modulates the speed, mechanical force, or rhythm of the posterior movement of an organism." [GOC:go_curators]
+is_a: GO:0040012 ! regulation of locomotion
+intersection_of: GO:0065007 ! biological regulation
+intersection_of: regulates GO:0043057 ! backward locomotion
+relationship: regulates GO:0043057 ! backward locomotion
+
+[Term]
+id: GO:0043059
+name: regulation of forward locomotion
+namespace: biological_process
+def: "Any process that modulates the speed, mechanical force, or rhythm of the anterior movement of an organism." [GOC:go_curators]
+is_a: GO:0040012 ! regulation of locomotion
+intersection_of: GO:0065007 ! biological regulation
+intersection_of: regulates GO:0043056 ! forward locomotion
+relationship: regulates GO:0043056 ! forward locomotion
 
 [Term]
 id: GO:0043153
@@ -7036,6 +7077,74 @@ intersection_of: positively_regulates GO:0050976 ! detection of mechanical stimu
 relationship: positively_regulates GO:0050976 ! detection of mechanical stimulus involved in sensory perception of touch
 created_by: hbye
 creation_date: 2017-01-09T15:11:23Z
+
+[Term]
+id: GO:1905849
+name: negative regulation of forward locomotion
+namespace: biological_process
+def: "Any process that stops, prevents or reduces the frequency, rate or extent of forward locomotion." [GO_REF:0000058, GOC:TermGenie, PMID:11717360]
+synonym: "down regulation of forward locomotion" EXACT [GOC:TermGenie]
+synonym: "down-regulation of forward locomotion" EXACT [GOC:TermGenie]
+synonym: "downregulation of forward locomotion" EXACT [GOC:TermGenie]
+synonym: "inhibition of forward locomotion" NARROW [GOC:TermGenie]
+is_a: GO:0040013 ! negative regulation of locomotion
+is_a: GO:0043059 ! regulation of forward locomotion
+intersection_of: GO:0065007 ! biological regulation
+intersection_of: negatively_regulates GO:0043056 ! forward locomotion
+relationship: negatively_regulates GO:0043056 ! forward locomotion
+created_by: rz
+creation_date: 2017-01-23T11:03:55Z
+
+[Term]
+id: GO:1905850
+name: positive regulation of forward locomotion
+namespace: biological_process
+def: "Any process that activates or increases the frequency, rate or extent of forward locomotion." [GO_REF:0000058, GOC:TermGenie, PMID:11717360]
+synonym: "activation of forward locomotion" NARROW [GOC:TermGenie]
+synonym: "up regulation of forward locomotion" EXACT [GOC:TermGenie]
+synonym: "up-regulation of forward locomotion" EXACT [GOC:TermGenie]
+synonym: "upregulation of forward locomotion" EXACT [GOC:TermGenie]
+is_a: GO:0040017 ! positive regulation of locomotion
+is_a: GO:0043059 ! regulation of forward locomotion
+intersection_of: GO:0065007 ! biological regulation
+intersection_of: positively_regulates GO:0043056 ! forward locomotion
+relationship: positively_regulates GO:0043056 ! forward locomotion
+created_by: rz
+creation_date: 2017-01-23T11:04:05Z
+
+[Term]
+id: GO:1905851
+name: negative regulation of backward locomotion
+namespace: biological_process
+def: "Any process that stops, prevents or reduces the frequency, rate or extent of backward locomotion." [GO_REF:0000058, GOC:TermGenie, PMID:11717360]
+synonym: "down regulation of backward locomotion" EXACT [GOC:TermGenie]
+synonym: "down-regulation of backward locomotion" EXACT [GOC:TermGenie]
+synonym: "downregulation of backward locomotion" EXACT [GOC:TermGenie]
+synonym: "inhibition of backward locomotion" NARROW [GOC:TermGenie]
+is_a: GO:0040013 ! negative regulation of locomotion
+is_a: GO:0043058 ! regulation of backward locomotion
+intersection_of: GO:0065007 ! biological regulation
+intersection_of: negatively_regulates GO:0043057 ! backward locomotion
+relationship: negatively_regulates GO:0043057 ! backward locomotion
+created_by: rz
+creation_date: 2017-01-23T11:04:16Z
+
+[Term]
+id: GO:1905852
+name: positive regulation of backward locomotion
+namespace: biological_process
+def: "Any process that activates or increases the frequency, rate or extent of backward locomotion." [GO_REF:0000058, GOC:TermGenie, PMID:11717360]
+synonym: "activation of backward locomotion" NARROW [GOC:TermGenie]
+synonym: "up regulation of backward locomotion" EXACT [GOC:TermGenie]
+synonym: "up-regulation of backward locomotion" EXACT [GOC:TermGenie]
+synonym: "upregulation of backward locomotion" EXACT [GOC:TermGenie]
+is_a: GO:0040017 ! positive regulation of locomotion
+is_a: GO:0043058 ! regulation of backward locomotion
+intersection_of: GO:0065007 ! biological regulation
+intersection_of: positively_regulates GO:0043057 ! backward locomotion
+relationship: positively_regulates GO:0043057 ! backward locomotion
+created_by: rz
+creation_date: 2017-01-23T11:04:25Z
 
 [Term]
 id: GO:1905945
