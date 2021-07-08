@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: fbbt/releases/2021-06-17/imports/pato_import.owl
+data-version: fbbt/releases/2021-07-08/imports/pato_import.owl
 subsetdef: abnormal_slim ""
 subsetdef: attribute_slim ""
 subsetdef: hpo_slim ""
@@ -11,7 +11,7 @@ subsetdef: mpath_slim ""
 subsetdef: value_slim ""
 ontology: fbbt/imports/pato_import
 property_value: http://purl.org/dc/elements/1.1/source http://purl.obolibrary.org/obo/pato/releases/2021-06-15/pato-simple.owl
-property_value: owl:versionInfo "2021-06-17" xsd:string
+property_value: owl:versionInfo "2021-07-08" xsd:string
 
 [Term]
 id: PATO:0000001
@@ -230,6 +230,13 @@ property_value: IAO:0000116 "A bearer can have many dependents, and its dependen
 property_value: IAO:0000118 "bearer_of" xsd:string
 property_value: IAO:0000118 "is bearer of" xsd:string
 property_value: RO:0001900 RO:0001901
+
+[Typedef]
+id: dc-creator
+name: creator
+namespace: uberon
+xref: http://purl.org/dc/elements/1.1/creator
+is_metadata_tag: true
 
 [Typedef]
 id: has_part
