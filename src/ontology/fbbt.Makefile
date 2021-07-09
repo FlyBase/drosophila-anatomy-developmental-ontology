@@ -53,6 +53,7 @@ reports/chado_load_check_simple.txt: install_flybase_scripts fly_anatomy.obo
 	../scripts/chado_load_checks.pl fly_anatomy.obo > $@
 
 reports/spellcheck.txt: fbbt-simple.obo install_flybase_scripts ../../tools/dictionaries/standard.dict
+	if [ `uname -m` = aarch64 ] ; then apt-get install -y python3-psycopg2 ; fi
 	sed -nre 's/^# pypi-requirements: //p' ../scripts/obo_spellchecker.py ../scripts/fetch_authors.py \
 		| xargs python -m pip install
 	../scripts/obo_spellchecker.py -o $@ \
