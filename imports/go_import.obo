@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: fbbt/releases/2021-05-11/imports/go_import.owl
+data-version: fbbt/releases/2021-07-09/imports/go_import.owl
 subsetdef: gocheck_do_not_annotate ""
 subsetdef: gocheck_do_not_manually_annotate ""
 subsetdef: goslim_agr ""
@@ -17,8 +17,8 @@ subsetdef: goslim_pombe ""
 subsetdef: goslim_synapse ""
 subsetdef: goslim_yeast ""
 ontology: fbbt/imports/go_import
-property_value: http://purl.org/dc/elements/1.1/source http://purl.obolibrary.org/obo/go/releases/2021-05-01/go.owl
-property_value: owl:versionInfo "2021-05-11" xsd:string
+property_value: http://purl.org/dc/elements/1.1/source http://purl.obolibrary.org/obo/go/releases/2021-07-02/go.owl
+property_value: owl:versionInfo "2021-07-09" xsd:string
 
 [Term]
 id: GO:0000003
@@ -113,6 +113,15 @@ intersection_of: part_of GO:0050914 ! sensory perception of salty taste
 relationship: part_of GO:0050914 ! sensory perception of salty taste
 
 [Term]
+id: GO:0001662
+name: behavioral fear response
+namespace: biological_process
+def: "An acute behavioral change resulting from a perceived external threat." [GOC:dph, PMID:9920659]
+synonym: "behavioural fear response" EXACT []
+is_a: GO:0002209 ! behavioral defense response
+is_a: GO:0042596 ! fear response
+
+[Term]
 id: GO:0001820
 name: serotonin secretion
 namespace: biological_process
@@ -153,7 +162,7 @@ relationship: positively_regulates GO:0007269 ! neurotransmitter secretion
 id: GO:0001963
 name: synaptic transmission, dopaminergic
 namespace: biological_process
-def: "The vesicular release of  dopamine. from a presynapse, across a chemical synapse, the subsequent activation of dopamine receptors at the postsynapse of a target cell (neuron, muscle, or secretory cell) and the effects of this activation on the postsynaptic membrane potential and ionic composition of the postsynaptic cytosol. This process encompasses both spontaneous and evoked release of neurotransmitter and all parts of synaptic vesicle exocytosis. Evoked transmission starts with the arrival of an action potential at the presynapse." [GOC:dos, GOC:dph]
+def: "The vesicular release of dopamine. from a presynapse, across a chemical synapse, the subsequent activation of dopamine receptors at the postsynapse of a target cell (neuron, muscle, or secretory cell) and the effects of this activation on the postsynaptic membrane potential and ionic composition of the postsynaptic cytosol. This process encompasses both spontaneous and evoked release of neurotransmitter and all parts of synaptic vesicle exocytosis. Evoked transmission starts with the arrival of an action potential at the presynapse." [GOC:dos, GOC:dph]
 synonym: "dopaminergic synaptic transmission" EXACT []
 is_a: GO:0007268 ! chemical synaptic transmission
 
@@ -168,6 +177,15 @@ is_a: GO:0044065 ! regulation of respiratory system process
 is_a: GO:0050877 ! nervous system process
 intersection_of: GO:0050877 ! nervous system process
 intersection_of: regulates GO:0007585 ! respiratory gaseous exchange by respiratory system
+
+[Term]
+id: GO:0002209
+name: behavioral defense response
+namespace: biological_process
+def: "A behavioral response seeking to protect an organism from an a perceived external threat to that organism." [GO_REF:0000022, GOC:add]
+synonym: "behavioural defense response" EXACT []
+is_a: GO:0006952 ! defense response
+is_a: GO:0007610 ! behavior
 
 [Term]
 id: GO:0002790
@@ -223,7 +241,7 @@ relationship: positively_regulates GO:0002790 ! peptide secretion
 id: GO:0003006
 name: developmental process involved in reproduction
 namespace: biological_process
-def: "A developmental process in which a progressive change in the state of some part of an organism specifically contributes to its ability to form offspring." [GOC:dph, GOC:isa_complete]
+def: "A developmental process in which a progressive change in the state of some part of an organism, germline or somatic, specifically contributes to its ability to form offspring." [GOC:dph, GOC:isa_complete]
 synonym: "puberty" NARROW [GOC:dph]
 synonym: "reproductive developmental process" RELATED [GOC:dph, GOC:tb]
 is_a: GO:0022414 ! reproductive process
@@ -459,6 +477,19 @@ synonym: "response to biotic stress" RELATED []
 is_a: GO:0050896 ! response to stimulus
 
 [Term]
+id: GO:0006952
+name: defense response
+namespace: biological_process
+alt_id: GO:0002217
+alt_id: GO:0042829
+def: "Reactions, triggered in response to the presence of a foreign body or the occurrence of an injury, which result in restriction of damage to the organism attacked or prevention/recovery from the infection caused by the attack." [GOC:go_curators]
+synonym: "antimicrobial peptide activity" RELATED []
+synonym: "defence response" EXACT []
+synonym: "defense/immunity protein activity" RELATED []
+synonym: "physiological defense response" EXACT []
+is_a: GO:0006950 ! response to stress
+
+[Term]
 id: GO:0006970
 name: response to osmotic stress
 namespace: biological_process
@@ -586,10 +617,12 @@ name: multicellular organism development
 namespace: biological_process
 def: "The biological process whose specific outcome is the progression of a multicellular organism over time from an initial condition (e.g. a zygote or a young adult) to a later condition (e.g. a multicellular animal or an aged adult)." [GOC:dph, GOC:ems, GOC:isa_complete, GOC:tb]
 comment: Note that this term was 'developmental process'.
+subset: gocheck_do_not_annotate
 subset: goslim_chembl
 subset: goslim_plant
 is_a: GO:0032501 ! multicellular organismal process
 is_a: GO:0048856 ! anatomical structure development
+property_value: IAO:0000233 https://github.com/geneontology/go-ontology/issues/21234 xsd:anyURI
 
 [Term]
 id: GO:0007320
@@ -2016,8 +2049,10 @@ name: reproductive behavior
 namespace: biological_process
 alt_id: GO:0033057
 alt_id: GO:0044704
+alt_id: GO:0044705
 def: "The specific behavior of an organism that is associated with reproduction." [GOC:jl, GOC:pr]
 subset: goslim_drosophila
+synonym: "multi-organism reproductive behavior" NARROW []
 synonym: "multicellular organism reproductive behavior" NARROW []
 synonym: "reproductive behavior in a multicellular organism" EXACT []
 synonym: "reproductive behaviour" EXACT []
@@ -2301,6 +2336,47 @@ namespace: biological_process
 def: "Any process that results in a change in state or activity of a cell or an organism (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of a caffeine stimulus. Caffeine is an alkaloid found in numerous plant species, where it acts as a natural pesticide that paralyzes and kills certain insects feeding upon them." [GOC:ef, GOC:mah]
 is_a: GO:0014074 ! response to purine-containing compound
 is_a: GO:0043279 ! response to alkaloid
+
+[Term]
+id: GO:0031347
+name: regulation of defense response
+namespace: biological_process
+def: "Any process that modulates the frequency, rate or extent of a defense response." [GOC:mah]
+is_a: GO:0080134 ! regulation of response to stress
+intersection_of: GO:0065007 ! biological regulation
+intersection_of: regulates GO:0006952 ! defense response
+relationship: regulates GO:0006952 ! defense response
+
+[Term]
+id: GO:0031348
+name: negative regulation of defense response
+namespace: biological_process
+def: "Any process that stops, prevents, or reduces the frequency, rate or extent of a defense response." [GOC:mah]
+synonym: "down regulation of defense response" EXACT []
+synonym: "down-regulation of defense response" EXACT []
+synonym: "downregulation of defense response" EXACT []
+synonym: "inhibition of defense response" NARROW []
+is_a: GO:0031347 ! regulation of defense response
+is_a: GO:0048585 ! negative regulation of response to stimulus
+intersection_of: GO:0065007 ! biological regulation
+intersection_of: negatively_regulates GO:0006952 ! defense response
+relationship: negatively_regulates GO:0006952 ! defense response
+
+[Term]
+id: GO:0031349
+name: positive regulation of defense response
+namespace: biological_process
+def: "Any process that activates or increases the frequency, rate or extent of a defense response." [GOC:mah]
+synonym: "activation of defense response" NARROW []
+synonym: "stimulation of defense response" NARROW []
+synonym: "up regulation of defense response" EXACT []
+synonym: "up-regulation of defense response" EXACT []
+synonym: "upregulation of defense response" EXACT []
+is_a: GO:0031347 ! regulation of defense response
+is_a: GO:0048584 ! positive regulation of response to stimulus
+intersection_of: GO:0065007 ! biological regulation
+intersection_of: positively_regulates GO:0006952 ! defense response
+relationship: positively_regulates GO:0006952 ! defense response
 
 [Term]
 id: GO:0031644
@@ -2744,6 +2820,13 @@ synonym: "macromolecule localisation" EXACT [GOC:mah]
 is_a: GO:0051179 ! localization
 
 [Term]
+id: GO:0033058
+name: directional locomotion
+namespace: biological_process
+def: "Self-propelled movement of a cell or organism from one location to another along an axis." [GOC:mtg_MIT_16mar07]
+is_a: GO:0040011 ! locomotion
+
+[Term]
 id: GO:0033555
 name: multicellular organismal response to stress
 namespace: biological_process
@@ -3004,6 +3087,15 @@ synonym: "behavioural response to starvation" EXACT []
 is_a: GO:0042594 ! response to starvation
 
 [Term]
+id: GO:0042596
+name: fear response
+namespace: biological_process
+alt_id: GO:0001663
+def: "The response of an organism to a perceived external threat." [GOC:go_curators]
+synonym: "physiological fear response" EXACT []
+is_a: GO:0033555 ! multicellular organismal response to stress
+
+[Term]
 id: GO:0042745
 name: circadian sleep/wake cycle
 namespace: biological_process
@@ -3100,6 +3192,40 @@ xref: NIF_Subcellular:sao867568886
 is_a: GO:0120025 ! plasma membrane bounded cell projection
 
 [Term]
+id: GO:0043056
+name: forward locomotion
+namespace: biological_process
+def: "Anterior movement of an organism, following the direction of the head of the animal." [GOC:go_curators]
+is_a: GO:0033058 ! directional locomotion
+
+[Term]
+id: GO:0043057
+name: backward locomotion
+namespace: biological_process
+def: "Posterior movement of an organism, e.g. following the direction of the tail of an animal." [GOC:go_curators]
+is_a: GO:0033058 ! directional locomotion
+
+[Term]
+id: GO:0043058
+name: regulation of backward locomotion
+namespace: biological_process
+def: "Any process that modulates the speed, mechanical force, or rhythm of the posterior movement of an organism." [GOC:go_curators]
+is_a: GO:0040012 ! regulation of locomotion
+intersection_of: GO:0065007 ! biological regulation
+intersection_of: regulates GO:0043057 ! backward locomotion
+relationship: regulates GO:0043057 ! backward locomotion
+
+[Term]
+id: GO:0043059
+name: regulation of forward locomotion
+namespace: biological_process
+def: "Any process that modulates the speed, mechanical force, or rhythm of the anterior movement of an organism." [GOC:go_curators]
+is_a: GO:0040012 ! regulation of locomotion
+intersection_of: GO:0065007 ! biological regulation
+intersection_of: regulates GO:0043056 ! forward locomotion
+relationship: regulates GO:0043056 ! forward locomotion
+
+[Term]
 id: GO:0043153
 name: entrainment of circadian clock by photoperiod
 namespace: biological_process
@@ -3181,38 +3307,6 @@ namespace: biological_process
 def: "The series of events in which a pheromone stimulus is received by a cell and converted into a molecular signal." [GOC:mah]
 is_a: GO:0009593 ! detection of chemical stimulus
 is_a: GO:0019236 ! response to pheromone
-
-[Term]
-id: GO:0043900
-name: regulation of multi-organism process
-namespace: biological_process
-def: "Any process that modulates the frequency, rate or extent of a multi-organism process, a process in which an organism has an effect on another organism of the same or different species." [GOC:jl]
-is_a: GO:0050789 ! regulation of biological process
-intersection_of: GO:0065007 ! biological regulation
-intersection_of: regulates GO:0051704 ! multi-organism process
-relationship: regulates GO:0051704 ! multi-organism process
-
-[Term]
-id: GO:0043901
-name: negative regulation of multi-organism process
-namespace: biological_process
-def: "Any process that stops, prevents, or reduces the frequency, rate or extent of a multi-organism process, a process in which an organism has an effect on another organism of the same or different species." [GOC:jl]
-is_a: GO:0043900 ! regulation of multi-organism process
-is_a: GO:0048519 ! negative regulation of biological process
-intersection_of: GO:0065007 ! biological regulation
-intersection_of: negatively_regulates GO:0051704 ! multi-organism process
-relationship: negatively_regulates GO:0051704 ! multi-organism process
-
-[Term]
-id: GO:0043902
-name: positive regulation of multi-organism process
-namespace: biological_process
-def: "Any process that activates or increases the frequency, rate or extent of a multi-organism process, a process in which an organism has an effect on another organism of the same or different species." [GOC:jl]
-is_a: GO:0043900 ! regulation of multi-organism process
-is_a: GO:0048518 ! positive regulation of biological process
-intersection_of: GO:0065007 ! biological regulation
-intersection_of: positively_regulates GO:0051704 ! multi-organism process
-relationship: positively_regulates GO:0051704 ! multi-organism process
 
 [Term]
 id: GO:0044057
@@ -6500,6 +6594,66 @@ created_by: pad
 creation_date: 2014-08-13T13:54:31Z
 
 [Term]
+id: GO:1903365
+name: regulation of fear response
+namespace: biological_process
+def: "Any process that modulates the frequency, rate or extent of fear response." [GO_REF:0000058, GOC:mr, GOC:TermGenie, PMID:8677262]
+synonym: "regulation of physiological fear response" EXACT [GOC:TermGenie]
+is_a: GO:0051239 ! regulation of multicellular organismal process
+is_a: GO:0080134 ! regulation of response to stress
+intersection_of: GO:0065007 ! biological regulation
+intersection_of: regulates GO:0042596 ! fear response
+relationship: regulates GO:0042596 ! fear response
+created_by: mr
+creation_date: 2014-08-21T23:21:36Z
+
+[Term]
+id: GO:1903366
+name: negative regulation of fear response
+namespace: biological_process
+def: "Any process that stops, prevents or reduces the frequency, rate or extent of fear response." [GO_REF:0000058, GOC:mr, GOC:TermGenie, PMID:8677262]
+synonym: "down regulation of fear response" EXACT [GOC:TermGenie]
+synonym: "down regulation of physiological fear response" EXACT [GOC:TermGenie]
+synonym: "down-regulation of fear response" EXACT [GOC:TermGenie]
+synonym: "down-regulation of physiological fear response" EXACT [GOC:TermGenie]
+synonym: "downregulation of fear response" EXACT [GOC:TermGenie]
+synonym: "downregulation of physiological fear response" EXACT [GOC:TermGenie]
+synonym: "inhibition of fear response" NARROW [GOC:TermGenie]
+synonym: "inhibition of physiological fear response" NARROW [GOC:TermGenie]
+synonym: "negative regulation of physiological fear response" EXACT [GOC:TermGenie]
+is_a: GO:0048585 ! negative regulation of response to stimulus
+is_a: GO:0051241 ! negative regulation of multicellular organismal process
+is_a: GO:1903365 ! regulation of fear response
+intersection_of: GO:0065007 ! biological regulation
+intersection_of: negatively_regulates GO:0042596 ! fear response
+relationship: negatively_regulates GO:0042596 ! fear response
+created_by: mr
+creation_date: 2014-08-21T23:21:45Z
+
+[Term]
+id: GO:1903367
+name: positive regulation of fear response
+namespace: biological_process
+def: "Any process that activates or increases the frequency, rate or extent of fear response." [GO_REF:0000058, GOC:mr, GOC:TermGenie, PMID:8677262]
+synonym: "activation of fear response" NARROW [GOC:TermGenie]
+synonym: "activation of physiological fear response" NARROW [GOC:TermGenie]
+synonym: "positive regulation of physiological fear response" EXACT [GOC:TermGenie]
+synonym: "up regulation of fear response" EXACT [GOC:TermGenie]
+synonym: "up regulation of physiological fear response" EXACT [GOC:TermGenie]
+synonym: "up-regulation of fear response" EXACT [GOC:TermGenie]
+synonym: "up-regulation of physiological fear response" EXACT [GOC:TermGenie]
+synonym: "upregulation of fear response" EXACT [GOC:TermGenie]
+synonym: "upregulation of physiological fear response" EXACT [GOC:TermGenie]
+is_a: GO:0048584 ! positive regulation of response to stimulus
+is_a: GO:0051240 ! positive regulation of multicellular organismal process
+is_a: GO:1903365 ! regulation of fear response
+intersection_of: GO:0065007 ! biological regulation
+intersection_of: positively_regulates GO:0042596 ! fear response
+relationship: positively_regulates GO:0042596 ! fear response
+created_by: mr
+creation_date: 2014-08-21T23:21:53Z
+
+[Term]
 id: GO:1903530
 name: regulation of secretion by cell
 namespace: biological_process
@@ -7038,6 +7192,74 @@ created_by: hbye
 creation_date: 2017-01-09T15:11:23Z
 
 [Term]
+id: GO:1905849
+name: negative regulation of forward locomotion
+namespace: biological_process
+def: "Any process that stops, prevents or reduces the frequency, rate or extent of forward locomotion." [GO_REF:0000058, GOC:TermGenie, PMID:11717360]
+synonym: "down regulation of forward locomotion" EXACT [GOC:TermGenie]
+synonym: "down-regulation of forward locomotion" EXACT [GOC:TermGenie]
+synonym: "downregulation of forward locomotion" EXACT [GOC:TermGenie]
+synonym: "inhibition of forward locomotion" NARROW [GOC:TermGenie]
+is_a: GO:0040013 ! negative regulation of locomotion
+is_a: GO:0043059 ! regulation of forward locomotion
+intersection_of: GO:0065007 ! biological regulation
+intersection_of: negatively_regulates GO:0043056 ! forward locomotion
+relationship: negatively_regulates GO:0043056 ! forward locomotion
+created_by: rz
+creation_date: 2017-01-23T11:03:55Z
+
+[Term]
+id: GO:1905850
+name: positive regulation of forward locomotion
+namespace: biological_process
+def: "Any process that activates or increases the frequency, rate or extent of forward locomotion." [GO_REF:0000058, GOC:TermGenie, PMID:11717360]
+synonym: "activation of forward locomotion" NARROW [GOC:TermGenie]
+synonym: "up regulation of forward locomotion" EXACT [GOC:TermGenie]
+synonym: "up-regulation of forward locomotion" EXACT [GOC:TermGenie]
+synonym: "upregulation of forward locomotion" EXACT [GOC:TermGenie]
+is_a: GO:0040017 ! positive regulation of locomotion
+is_a: GO:0043059 ! regulation of forward locomotion
+intersection_of: GO:0065007 ! biological regulation
+intersection_of: positively_regulates GO:0043056 ! forward locomotion
+relationship: positively_regulates GO:0043056 ! forward locomotion
+created_by: rz
+creation_date: 2017-01-23T11:04:05Z
+
+[Term]
+id: GO:1905851
+name: negative regulation of backward locomotion
+namespace: biological_process
+def: "Any process that stops, prevents or reduces the frequency, rate or extent of backward locomotion." [GO_REF:0000058, GOC:TermGenie, PMID:11717360]
+synonym: "down regulation of backward locomotion" EXACT [GOC:TermGenie]
+synonym: "down-regulation of backward locomotion" EXACT [GOC:TermGenie]
+synonym: "downregulation of backward locomotion" EXACT [GOC:TermGenie]
+synonym: "inhibition of backward locomotion" NARROW [GOC:TermGenie]
+is_a: GO:0040013 ! negative regulation of locomotion
+is_a: GO:0043058 ! regulation of backward locomotion
+intersection_of: GO:0065007 ! biological regulation
+intersection_of: negatively_regulates GO:0043057 ! backward locomotion
+relationship: negatively_regulates GO:0043057 ! backward locomotion
+created_by: rz
+creation_date: 2017-01-23T11:04:16Z
+
+[Term]
+id: GO:1905852
+name: positive regulation of backward locomotion
+namespace: biological_process
+def: "Any process that activates or increases the frequency, rate or extent of backward locomotion." [GO_REF:0000058, GOC:TermGenie, PMID:11717360]
+synonym: "activation of backward locomotion" NARROW [GOC:TermGenie]
+synonym: "up regulation of backward locomotion" EXACT [GOC:TermGenie]
+synonym: "up-regulation of backward locomotion" EXACT [GOC:TermGenie]
+synonym: "upregulation of backward locomotion" EXACT [GOC:TermGenie]
+is_a: GO:0040017 ! positive regulation of locomotion
+is_a: GO:0043058 ! regulation of backward locomotion
+intersection_of: GO:0065007 ! biological regulation
+intersection_of: positively_regulates GO:0043057 ! backward locomotion
+relationship: positively_regulates GO:0043057 ! backward locomotion
+created_by: rz
+creation_date: 2017-01-23T11:04:25Z
+
+[Term]
 id: GO:1905945
 name: regulation of response to calcium ion
 namespace: biological_process
@@ -7299,6 +7521,53 @@ intersection_of: regulates GO:0007625 ! grooming behavior
 relationship: regulates GO:0007625 ! grooming behavior
 created_by: rl
 creation_date: 2011-07-14T04:48:12Z
+
+[Term]
+id: GO:2000822
+name: regulation of behavioral fear response
+namespace: biological_process
+def: "Any process that modulates the frequency, rate or extent of behavioral fear response." [GOC:BHF]
+synonym: "regulation of behavioural fear response" EXACT [GOC:obol]
+is_a: GO:0031347 ! regulation of defense response
+is_a: GO:0050795 ! regulation of behavior
+is_a: GO:1903365 ! regulation of fear response
+intersection_of: GO:0065007 ! biological regulation
+intersection_of: regulates GO:0001662 ! behavioral fear response
+relationship: regulates GO:0001662 ! behavioral fear response
+created_by: rl
+creation_date: 2011-07-14T04:50:47Z
+
+[Term]
+id: GO:2000986
+name: negative regulation of behavioral fear response
+namespace: biological_process
+def: "Any process that stops, prevents or reduces the frequency, rate or extent of behavioral fear response." [GOC:obol]
+synonym: "negative regulation of behavioural fear response" EXACT [GOC:obol]
+is_a: GO:0031348 ! negative regulation of defense response
+is_a: GO:0048521 ! negative regulation of behavior
+is_a: GO:1903366 ! negative regulation of fear response
+is_a: GO:2000822 ! regulation of behavioral fear response
+intersection_of: GO:0065007 ! biological regulation
+intersection_of: negatively_regulates GO:0001662 ! behavioral fear response
+relationship: negatively_regulates GO:0001662 ! behavioral fear response
+created_by: yaf
+creation_date: 2011-08-08T09:16:34Z
+
+[Term]
+id: GO:2000987
+name: positive regulation of behavioral fear response
+namespace: biological_process
+def: "Any process that activates or increases the frequency, rate or extent of behavioral fear response." [GOC:obol]
+synonym: "positive regulation of behavioural fear response" EXACT [GOC:obol]
+is_a: GO:0031349 ! positive regulation of defense response
+is_a: GO:0048520 ! positive regulation of behavior
+is_a: GO:1903367 ! positive regulation of fear response
+is_a: GO:2000822 ! regulation of behavioral fear response
+intersection_of: GO:0065007 ! biological regulation
+intersection_of: positively_regulates GO:0001662 ! behavioral fear response
+relationship: positively_regulates GO:0001662 ! behavioral fear response
+created_by: yaf
+creation_date: 2011-08-08T09:16:39Z
 
 [Typedef]
 id: has_part

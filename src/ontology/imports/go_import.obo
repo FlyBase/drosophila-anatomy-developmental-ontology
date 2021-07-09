@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: fbbt/releases/2021-06-17/imports/go_import.owl
+data-version: fbbt/releases/2021-07-09/imports/go_import.owl
 subsetdef: gocheck_do_not_annotate ""
 subsetdef: gocheck_do_not_manually_annotate ""
 subsetdef: goslim_agr ""
@@ -17,8 +17,8 @@ subsetdef: goslim_pombe ""
 subsetdef: goslim_synapse ""
 subsetdef: goslim_yeast ""
 ontology: fbbt/imports/go_import
-property_value: http://purl.org/dc/elements/1.1/source http://purl.obolibrary.org/obo/go/releases/2021-05-01/go.owl
-property_value: owl:versionInfo "2021-06-17" xsd:string
+property_value: http://purl.org/dc/elements/1.1/source http://purl.obolibrary.org/obo/go/releases/2021-07-02/go.owl
+property_value: owl:versionInfo "2021-07-09" xsd:string
 
 [Term]
 id: GO:0000003
@@ -162,7 +162,7 @@ relationship: positively_regulates GO:0007269 ! neurotransmitter secretion
 id: GO:0001963
 name: synaptic transmission, dopaminergic
 namespace: biological_process
-def: "The vesicular release of  dopamine. from a presynapse, across a chemical synapse, the subsequent activation of dopamine receptors at the postsynapse of a target cell (neuron, muscle, or secretory cell) and the effects of this activation on the postsynaptic membrane potential and ionic composition of the postsynaptic cytosol. This process encompasses both spontaneous and evoked release of neurotransmitter and all parts of synaptic vesicle exocytosis. Evoked transmission starts with the arrival of an action potential at the presynapse." [GOC:dos, GOC:dph]
+def: "The vesicular release of dopamine. from a presynapse, across a chemical synapse, the subsequent activation of dopamine receptors at the postsynapse of a target cell (neuron, muscle, or secretory cell) and the effects of this activation on the postsynaptic membrane potential and ionic composition of the postsynaptic cytosol. This process encompasses both spontaneous and evoked release of neurotransmitter and all parts of synaptic vesicle exocytosis. Evoked transmission starts with the arrival of an action potential at the presynapse." [GOC:dos, GOC:dph]
 synonym: "dopaminergic synaptic transmission" EXACT []
 is_a: GO:0007268 ! chemical synaptic transmission
 
@@ -241,7 +241,7 @@ relationship: positively_regulates GO:0002790 ! peptide secretion
 id: GO:0003006
 name: developmental process involved in reproduction
 namespace: biological_process
-def: "A developmental process in which a progressive change in the state of some part of an organism specifically contributes to its ability to form offspring." [GOC:dph, GOC:isa_complete]
+def: "A developmental process in which a progressive change in the state of some part of an organism, germline or somatic, specifically contributes to its ability to form offspring." [GOC:dph, GOC:isa_complete]
 synonym: "puberty" NARROW [GOC:dph]
 synonym: "reproductive developmental process" RELATED [GOC:dph, GOC:tb]
 is_a: GO:0022414 ! reproductive process
@@ -617,10 +617,12 @@ name: multicellular organism development
 namespace: biological_process
 def: "The biological process whose specific outcome is the progression of a multicellular organism over time from an initial condition (e.g. a zygote or a young adult) to a later condition (e.g. a multicellular animal or an aged adult)." [GOC:dph, GOC:ems, GOC:isa_complete, GOC:tb]
 comment: Note that this term was 'developmental process'.
+subset: gocheck_do_not_annotate
 subset: goslim_chembl
 subset: goslim_plant
 is_a: GO:0032501 ! multicellular organismal process
 is_a: GO:0048856 ! anatomical structure development
+property_value: IAO:0000233 https://github.com/geneontology/go-ontology/issues/21234 xsd:anyURI
 
 [Term]
 id: GO:0007320
@@ -2047,8 +2049,10 @@ name: reproductive behavior
 namespace: biological_process
 alt_id: GO:0033057
 alt_id: GO:0044704
+alt_id: GO:0044705
 def: "The specific behavior of an organism that is associated with reproduction." [GOC:jl, GOC:pr]
 subset: goslim_drosophila
+synonym: "multi-organism reproductive behavior" NARROW []
 synonym: "multicellular organism reproductive behavior" NARROW []
 synonym: "reproductive behavior in a multicellular organism" EXACT []
 synonym: "reproductive behaviour" EXACT []
@@ -3303,38 +3307,6 @@ namespace: biological_process
 def: "The series of events in which a pheromone stimulus is received by a cell and converted into a molecular signal." [GOC:mah]
 is_a: GO:0009593 ! detection of chemical stimulus
 is_a: GO:0019236 ! response to pheromone
-
-[Term]
-id: GO:0043900
-name: regulation of multi-organism process
-namespace: biological_process
-def: "Any process that modulates the frequency, rate or extent of a multi-organism process, a process in which an organism has an effect on another organism of the same or different species." [GOC:jl]
-is_a: GO:0050789 ! regulation of biological process
-intersection_of: GO:0065007 ! biological regulation
-intersection_of: regulates GO:0051704 ! multi-organism process
-relationship: regulates GO:0051704 ! multi-organism process
-
-[Term]
-id: GO:0043901
-name: negative regulation of multi-organism process
-namespace: biological_process
-def: "Any process that stops, prevents, or reduces the frequency, rate or extent of a multi-organism process, a process in which an organism has an effect on another organism of the same or different species." [GOC:jl]
-is_a: GO:0043900 ! regulation of multi-organism process
-is_a: GO:0048519 ! negative regulation of biological process
-intersection_of: GO:0065007 ! biological regulation
-intersection_of: negatively_regulates GO:0051704 ! multi-organism process
-relationship: negatively_regulates GO:0051704 ! multi-organism process
-
-[Term]
-id: GO:0043902
-name: positive regulation of multi-organism process
-namespace: biological_process
-def: "Any process that activates or increases the frequency, rate or extent of a multi-organism process, a process in which an organism has an effect on another organism of the same or different species." [GOC:jl]
-is_a: GO:0043900 ! regulation of multi-organism process
-is_a: GO:0048518 ! positive regulation of biological process
-intersection_of: GO:0065007 ! biological regulation
-intersection_of: positively_regulates GO:0051704 ! multi-organism process
-relationship: positively_regulates GO:0051704 ! multi-organism process
 
 [Term]
 id: GO:0044057
