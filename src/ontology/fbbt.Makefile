@@ -10,7 +10,8 @@ DATE   ?= $(shell date +%Y-%m-%d)
 ######################################################
 
 # Illegal division by 0 problem: reports/onto_metrics_calc.txt 
-REPORT_FILES := $(REPORT_FILES) reports/obo_track_new_simple.txt  reports/robot_simple_diff.txt
+REPORT_FILES := $(REPORT_FILES) reports/obo_track_new_simple.txt  reports/robot_simple_diff.txt \
+		reports/spellcheck.txt
 
 SIMPLE_PURL =	http://purl.obolibrary.org/obo/fbbt/fbbt-simple.obo
 LAST_DEPLOYED_SIMPLE=tmp/$(ONT)-simple-last.obo
@@ -20,10 +21,13 @@ $(LAST_DEPLOYED_SIMPLE):
 
 obo_model=https://raw.githubusercontent.com/FlyBase/flybase-controlled-vocabulary/master/external_tools/perl_modules/releases/OboModel.pm
 flybase_script_base=https://raw.githubusercontent.com/FlyBase/drosophila-anatomy-developmental-ontology/master/tools/release_and_checking_scripts/releases/
+flybase_ontology_script_base=https://raw.githubusercontent.com/FlyBase/flybase-ontology-scripts/master/
 onto_metrics_calc=$(flybase_script_base)onto_metrics_calc.pl
 chado_load_checks=$(flybase_script_base)chado_load_checks.pl
 obo_track_new=$(flybase_script_base)obo_track_new.pl
 auto_def_sub=$(flybase_script_base)auto_def_sub.pl
+spellchecker=$(flybase_ontology_script_base)misc/obo_spellchecker.py
+fetch_authors=$(flybase_ontology_script_base)misc/fetch_flybase_authors.py
 
 export PERL5LIB := ${realpath ../scripts}
 install_flybase_scripts:
@@ -32,6 +36,8 @@ install_flybase_scripts:
 	wget -O ../scripts/chado_load_checks.pl $(chado_load_checks) && chmod +x ../scripts/chado_load_checks.pl
 	wget -O ../scripts/obo_track_new.pl $(obo_track_new) && chmod +x ../scripts/obo_track_new.pl
 	wget -O ../scripts/auto_def_sub.pl $(auto_def_sub) && chmod +x ../scripts/auto_def_sub.pl
+	wget -O ../scripts/obo_spellchecker.py $(spellchecker) && chmod +x ../scripts/obo_spellchecker.py
+	wget -O ../scripts/fetch_authors.py $(fetch_authors) && chmod +x ../scripts/fetch_authors.py
 	echo "Warning: Chado load checks currently exclude ISBN wellformedness checks!"
 
 reports/obo_track_new_simple.txt: $(LAST_DEPLOYED_SIMPLE) install_flybase_scripts $(ONT)-simple.obo
@@ -45,6 +51,15 @@ reports/onto_metrics_calc.txt: $(ONT)-simple.obo install_flybase_scripts
 	
 reports/chado_load_check_simple.txt: install_flybase_scripts fly_anatomy.obo 
 	../scripts/chado_load_checks.pl fly_anatomy.obo > $@
+
+reports/spellcheck.txt: fbbt-simple.obo install_flybase_scripts ../../tools/dictionaries/standard.dict
+	apt-get install -y python3-psycopg2
+	sed -nre 's/^# pypi-requirements: //p' ../scripts/obo_spellchecker.py ../scripts/fetch_authors.py \
+		| xargs python -m pip install
+	../scripts/obo_spellchecker.py -o $@ \
+		-d ../../tools/dictionaries/standard.dict \
+		-d '|../scripts/fetch_authors.py' \
+		fbbt-simple.obo
 
 all_reports: all_reports_onestep $(REPORT_FILES)
 
