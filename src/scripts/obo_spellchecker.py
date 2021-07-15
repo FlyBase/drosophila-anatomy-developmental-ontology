@@ -194,7 +194,7 @@ def check_ontology(obofile, output, dictionary, obsolete):
     checker.add_filter(exclude_all_uppercase_words, pre=True)
     checker.add_filter(exclude_camelcase_words, pre=True)
 
-    for term in onto.terms():
+    for term in sorted(onto.terms()):
         if term.obsolete and not obsolete:
             continue
         r = checker.check_term(term)
@@ -204,7 +204,7 @@ def check_ontology(obofile, output, dictionary, obsolete):
         output.write(f"Term: {term.name} ({term.id})\n")
         for k, v in r.items():
             output.write(f"In {k}: ")
-            output.write(" ".join(v))
+            output.write(" ".join(sorted(v)))
             output.write("\n")
         output.write("\n")
 
