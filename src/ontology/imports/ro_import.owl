@@ -17,9 +17,9 @@
      xmlns:subsets="http://purl.obolibrary.org/obo/ro/subsets#"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/fbbt/imports/ro_import.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/fbbt/releases/2021-08-17/imports/ro_import.owl"/>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/fbbt/releases/2021-08-11/imports/ro_import.owl"/>
         <dc:source rdf:resource="http://purl.obolibrary.org/obo/ro/releases/2021-08-04/ro.owl"/>
-        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2021-08-17</owl:versionInfo>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2021-08-11</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -3113,6 +3113,32 @@ For example, A and B may be gene products and binding of B by A positively regul
         <oboInOwl:hasExactSynonym>has sensory terminal in</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>has sensory terminal location</oboInOwl:hasExactSynonym>
         <rdfs:label xml:lang="en">has sensory dendrite in</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0013008 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0013008">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0002103"/>
+        <owl:inverseOf rdf:resource="http://purl.obolibrary.org/obo/RO_0013009"/>
+        <obo:IAO_0000115>A relationship between an anatomical structure (including cells) and a neuron that has a functionally relevant number of chemical synapses to it.</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0002-1373-1705"/>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-05-26T08:40:18Z</oboInOwl:creation_date>
+        <rdfs:label xml:lang="en">receives synaptic input from neuron</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0013009 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0013009">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0002120"/>
+        <obo:IAO_0000115>A relationship between a neuron and a cell that it has a functionally relevant number of chemical synapses to.</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0002-1373-1705"/>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-05-26T08:41:07Z</oboInOwl:creation_date>
+        <rdfs:comment>Not restricting range to &apos;cell&apos; - object may be a muscle containing a cell targeted by the neuron.</rdfs:comment>
+        <rdfs:label xml:lang="en">sends synaptic output to cell</rdfs:label>
     </owl:ObjectProperty>
     
 
