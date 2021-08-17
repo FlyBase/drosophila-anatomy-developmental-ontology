@@ -11,9 +11,9 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/fbbt/imports/go_import.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/fbbt/releases/2021-08-10/imports/go_import.owl"/>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/fbbt/releases/2021-08-17/imports/go_import.owl"/>
         <dc:source rdf:resource="http://purl.obolibrary.org/obo/go/releases/2021-07-02/go.owl"/>
-        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2021-08-10</owl:versionInfo>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2021-08-17</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -5338,6 +5338,31 @@
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym"/>
         <owl:annotatedTarget>regulation of organismal metabolic process</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:tb</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GO_0019230 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0019230">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0007600"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0050884"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115>The series of events by which an organism senses the position, location, orientation, and movement of the body and its parts. Proprioception is mediated by proprioceptors, sensory nerve terminals found in muscles, tendons, and joint capsules, which give information concerning movements and position of the body. The receptors in the labyrinth are sometimes also considered proprioceptors.</obo:IAO_0000115>
+        <oboInOwl:hasDbXref>Wikipedia:Proprioception</oboInOwl:hasDbXref>
+        <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>GO:0019230</oboInOwl:id>
+        <rdfs:label>proprioception</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0019230"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>The series of events by which an organism senses the position, location, orientation, and movement of the body and its parts. Proprioception is mediated by proprioceptors, sensory nerve terminals found in muscles, tendons, and joint capsules, which give information concerning movements and position of the body. The receptors in the labyrinth are sometimes also considered proprioceptors.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>ISBN:072168677X</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -10907,6 +10932,32 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/GO_0050884 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0050884">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0050905"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0050881"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115>Any process in which an organism voluntarily modulates its posture, the alignment of its anatomical parts.</obo:IAO_0000115>
+        <oboInOwl:hasExactSynonym>regulation of posture</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>GO:0050884</oboInOwl:id>
+        <rdfs:label>neuromuscular process controlling posture</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0050884"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>Any process in which an organism voluntarily modulates its posture, the alignment of its anatomical parts.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:dph</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:tb</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/GO_0050885 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0050885">
@@ -12619,6 +12670,51 @@
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Any process that stops, prevents, or reduces the frequency, rate or extent of an organismal process, the processes pertinent to the function of an organism above the cellular level; includes the integrated processes of tissues and organs.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:ai</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GO_0051355 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0051355">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/GO_0019230"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0050957"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0019230"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0050957"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115>The series of events contributing to equilibrioception by which an organism senses the position, location, orientation, and movement of the body and its parts. Proprioception plays an important role in the ability of an organism to perceive its orientation with respect to gravity.</obo:IAO_0000115>
+        <oboInOwl:hasExactSynonym>equilibrioception by proprioception</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>perception of orientation with respect to gravity by proprioception</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
+        <oboInOwl:hasRelatedSynonym>proprioception during equilibrioception</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:id>GO:0051355</oboInOwl:id>
+        <rdfs:label>proprioception involved in equilibrioception</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0051355"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>The series of events contributing to equilibrioception by which an organism senses the position, location, orientation, and movement of the body and its parts. Proprioception plays an important role in the ability of an organism to perceive its orientation with respect to gravity.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:ai</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0051355"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+        <owl:annotatedTarget>proprioception during equilibrioception</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:dph</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:tb</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
