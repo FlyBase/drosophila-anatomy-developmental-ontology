@@ -53,7 +53,7 @@ reports/chado_load_check_simple.txt: install_flybase_scripts fly_anatomy.obo
 	../scripts/chado_load_checks.pl fly_anatomy.obo > $@
 
 reports/spellcheck.txt: fbbt-simple.obo install_flybase_scripts ../../tools/dictionaries/standard.dict
-	apt-get install -y python3-psycopg2
+	apt-get update && apt-get install -y python3-psycopg2
 	sed -nre 's/^# pypi-requirements: //p' ../scripts/obo_spellchecker.py ../scripts/fetch_authors.py \
 		| xargs python -m pip install
 	../scripts/obo_spellchecker.py -o $@ \
@@ -164,7 +164,7 @@ pre_release: $(ONT)-edit.obo tmp/auto_generated_definitions_dot.owl tmp/auto_gen
 all_imports: $(IMPORT_FILES) components/flybase_import.owl
 
 tmp/FBgn_template.tsv: $(IMPORTSEED)
-	if [ $(IMP) = true ]; then apt-get install -y python3-psycopg2 && \
+	if [ $(IMP) = true ]; then apt-get update && apt-get install -y python3-psycopg2 && \
 	python3 -m pip install -r ../scripts/flybase_import/requirements.txt && \
 	python3 ../scripts/flybase_import/FB_import_runner.py $(IMPORTSEED) $@; fi
 	
