@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: fbbt/releases/2021-08-11/imports/go_import.owl
+data-version: fbbt/releases/2021-08-17/imports/go_import.owl
 subsetdef: gocheck_do_not_annotate ""
 subsetdef: gocheck_do_not_manually_annotate ""
 subsetdef: goslim_agr ""
@@ -18,7 +18,7 @@ subsetdef: goslim_synapse ""
 subsetdef: goslim_yeast ""
 ontology: fbbt/imports/go_import
 property_value: http://purl.org/dc/elements/1.1/source http://purl.obolibrary.org/obo/go/releases/2021-07-02/go.owl
-property_value: owl:versionInfo "2021-08-11" xsd:string
+property_value: owl:versionInfo "2021-08-17" xsd:string
 
 [Term]
 id: GO:0000003
@@ -2098,6 +2098,15 @@ is_a: GO:0050789 ! regulation of biological process
 intersection_of: GO:0065007 ! biological regulation
 intersection_of: regulates GO:0008152 ! metabolic process
 relationship: regulates GO:0008152 ! metabolic process
+
+[Term]
+id: GO:0019230
+name: proprioception
+namespace: biological_process
+def: "The series of events by which an organism senses the position, location, orientation, and movement of the body and its parts. Proprioception is mediated by proprioceptors, sensory nerve terminals found in muscles, tendons, and joint capsules, which give information concerning movements and position of the body. The receptors in the labyrinth are sometimes also considered proprioceptors." [ISBN:072168677X]
+xref: Wikipedia:Proprioception
+is_a: GO:0007600 ! sensory perception
+relationship: part_of GO:0050884 ! neuromuscular process controlling posture
 
 [Term]
 id: GO:0019233
@@ -4188,6 +4197,15 @@ is_a: GO:0050879 ! multicellular organismal movement
 is_a: GO:0050905 ! neuromuscular process
 
 [Term]
+id: GO:0050884
+name: neuromuscular process controlling posture
+namespace: biological_process
+def: "Any process in which an organism voluntarily modulates its posture, the alignment of its anatomical parts." [GOC:dph, GOC:tb]
+synonym: "regulation of posture" EXACT []
+is_a: GO:0050905 ! neuromuscular process
+relationship: has_part GO:0050881 ! musculoskeletal movement
+
+[Term]
 id: GO:0050885
 name: neuromuscular process controlling balance
 namespace: biological_process
@@ -4881,6 +4899,19 @@ is_a: GO:0051239 ! regulation of multicellular organismal process
 intersection_of: GO:0065007 ! biological regulation
 intersection_of: negatively_regulates GO:0032501 ! multicellular organismal process
 relationship: negatively_regulates GO:0032501 ! multicellular organismal process
+
+[Term]
+id: GO:0051355
+name: proprioception involved in equilibrioception
+namespace: biological_process
+def: "The series of events contributing to equilibrioception by which an organism senses the position, location, orientation, and movement of the body and its parts. Proprioception plays an important role in the ability of an organism to perceive its orientation with respect to gravity." [GOC:ai]
+synonym: "equilibrioception by proprioception" EXACT []
+synonym: "perception of orientation with respect to gravity by proprioception" EXACT []
+synonym: "proprioception during equilibrioception" RELATED [GOC:dph, GOC:tb]
+is_a: GO:0019230 ! proprioception
+intersection_of: GO:0019230 ! proprioception
+intersection_of: part_of GO:0050957 ! equilibrioception
+relationship: part_of GO:0050957 ! equilibrioception
 
 [Term]
 id: GO:0051356
