@@ -1,0 +1,62 @@
+pattern_name: pattern_sB
+description: for secondary hemilineage B neurons
+
+classes:
+  thing: owl:Thing
+  neuroblast: FBbt:00005146
+  OFF_secondary: FBbt:00049542
+  VNC_cbr: FBbt:00111225
+
+relations:
+  develops_from: RO:0002202
+  has_soma_location: RO:0002100
+
+vars:
+  nb_class: neuroblast
+  lineage_short: thing
+  alt_lineage_name: thing
+
+data_list_vars:
+  def_dbxref: xsd:string
+
+name:
+  text: "hemilineage %sB secondary neuron"
+  vars:
+    - alt_lineage_name
+
+def:
+  text: "Any hemilineage B (Notch OFF) neuron that develops from %s during the postembryonic phase of neurogenesis."
+  vars:
+    - nb_class
+  xrefs: def_dbxref
+
+generated_synonyms:
+  -
+    exact_synonym:
+    text: "lineage %s Notch OFF secondary neuron"
+    vars:
+      - lineage_short
+    xrefs: def_dbxref
+  -
+    exact_synonym:
+    text: "postembryonic lineage %s Notch OFF neuron"
+    vars:
+      - lineage_short
+    xrefs: def_dbxref
+  -
+    exact_synonym:
+    text: "postembryonic %sB hemilineage neuron"
+    vars:
+      - alt_lineage_name
+    xrefs: def_dbxref
+    
+logical_axioms:
+  - 
+    axiom_type: equivalentTo
+    text: "'OFF_secondary' that 'develops_from' some %s"
+    vars:
+      - nb_class
+  - 
+    axiom_type: subClassOf
+    text: "'has_soma_location' some 'VNC_cbr'"
+
