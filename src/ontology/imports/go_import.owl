@@ -11,9 +11,9 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/fbbt/imports/go_import.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/fbbt/releases/2021-08-24/imports/go_import.owl"/>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/fbbt/releases/2021-08-26/imports/go_import.owl"/>
         <dc:source rdf:resource="http://purl.obolibrary.org/obo/go/releases/2021-08-18/go.owl"/>
-        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2021-08-24</owl:versionInfo>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2021-08-26</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -2225,6 +2225,26 @@
         <owl:annotatedTarget>The activities involved in the mental information processing system that receives (registers), modifies, stores, and retrieves informational stimuli. The main stages involved in the formation and retrieval of memory are encoding (processing of received information by acquisition), storage (building a permanent record of received information as a result of consolidation) and retrieval (calling back the stored information and use it in a suitable way to execute a given task).</owl:annotatedTarget>
         <oboInOwl:hasDbXref>GOC:curators</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>ISBN:0582227089</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GO_0007614 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0007614">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0007613"/>
+        <obo:IAO_0000115>The memory process that deals with the storage, retrieval and modification of information received a short time (up to about 30 minutes) ago. This type of memory is typically dependent on direct, transient effects of second messenger activation.</obo:IAO_0000115>
+        <oboInOwl:hasDbXref>Wikipedia:Short-term_memory</oboInOwl:hasDbXref>
+        <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>GO:0007614</oboInOwl:id>
+        <rdfs:label>short-term memory</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0007614"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>The memory process that deals with the storage, retrieval and modification of information received a short time (up to about 30 minutes) ago. This type of memory is typically dependent on direct, transient effects of second messenger activation.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>ISBN:0582227089</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>http://hebb.mit.edu/courses/9.03/lecture4.html</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -14921,6 +14941,42 @@
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>The part of a cell encompassing the cell cortex, the plasma membrane, and any external encapsulating structures.</owl:annotatedTarget>
         <oboInOwl:hasDbXref>GOC:mah</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GO_0072375 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0072375">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0007613"/>
+        <obo:IAO_0000115>The memory process that deals with the storage, retrieval and modification of information received at a time ago that is intermediate between that of short and long term memory (30min - 7hrs in Drosophila melanogaster).</obo:IAO_0000115>
+        <oboInOwl:created_by>mah</oboInOwl:created_by>
+        <oboInOwl:creation_date>2010-11-22T11:26:54Z</oboInOwl:creation_date>
+        <oboInOwl:hasExactSynonym>middle-term memory</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasNarrowSynonym>MTM</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>GO:0072375</oboInOwl:id>
+        <rdfs:label>medium-term memory</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0072375"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>The memory process that deals with the storage, retrieval and modification of information received at a time ago that is intermediate between that of short and long term memory (30min - 7hrs in Drosophila melanogaster).</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>GOC:sart</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>PMID:14659098</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>PMID:7923375</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0072375"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>middle-term memory</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>GOC:sart</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0072375"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym"/>
+        <owl:annotatedTarget>MTM</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>GOC:sart</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 

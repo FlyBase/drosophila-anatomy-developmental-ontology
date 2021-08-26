@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: fbbt/releases/2021-08-24/imports/go_import.owl
+data-version: fbbt/releases/2021-08-26/imports/go_import.owl
 subsetdef: gocheck_do_not_annotate ""
 subsetdef: gocheck_do_not_manually_annotate ""
 subsetdef: goslim_agr ""
@@ -18,7 +18,7 @@ subsetdef: goslim_synapse ""
 subsetdef: goslim_yeast ""
 ontology: fbbt/imports/go_import
 property_value: http://purl.org/dc/elements/1.1/source http://purl.obolibrary.org/obo/go/releases/2021-08-18/go.owl
-property_value: owl:versionInfo "2021-08-24" xsd:string
+property_value: owl:versionInfo "2021-08-26" xsd:string
 
 [Term]
 id: GO:0000003
@@ -787,6 +787,14 @@ namespace: biological_process
 def: "The activities involved in the mental information processing system that receives (registers), modifies, stores, and retrieves informational stimuli. The main stages involved in the formation and retrieval of memory are encoding (processing of received information by acquisition), storage (building a permanent record of received information as a result of consolidation) and retrieval (calling back the stored information and use it in a suitable way to execute a given task)." [GOC:curators, ISBN:0582227089]
 xref: Wikipedia:Memory
 is_a: GO:0007611 ! learning or memory
+
+[Term]
+id: GO:0007614
+name: short-term memory
+namespace: biological_process
+def: "The memory process that deals with the storage, retrieval and modification of information received a short time (up to about 30 minutes) ago. This type of memory is typically dependent on direct, transient effects of second messenger activation." [http://hebb.mit.edu/courses/9.03/lecture4.html, ISBN:0582227089]
+xref: Wikipedia:Short-term_memory
+is_a: GO:0007613 ! memory
 
 [Term]
 id: GO:0007616
@@ -5742,6 +5750,17 @@ subset: goslim_flybase_ribbon
 is_a: GO:0110165 ! cellular anatomical entity
 created_by: mah
 creation_date: 2010-10-04T01:51:47Z
+
+[Term]
+id: GO:0072375
+name: medium-term memory
+namespace: biological_process
+def: "The memory process that deals with the storage, retrieval and modification of information received at a time ago that is intermediate between that of short and long term memory (30min - 7hrs in Drosophila melanogaster)." [GOC:sart, PMID:14659098, PMID:7923375]
+synonym: "middle-term memory" EXACT [GOC:sart]
+synonym: "MTM" NARROW [GOC:sart]
+is_a: GO:0007613 ! memory
+created_by: mah
+creation_date: 2010-11-22T11:26:54Z
 
 [Term]
 id: GO:0080090
