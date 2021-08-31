@@ -192,8 +192,10 @@ fly_anatomy.obo: tmp/fbbt-obj.obo rem_flybase.txt
 	$(ROBOT) convert --input $@ -f obo --output $@
 	sed -i 's/^xref[:][ ]OBO_REL[:]\(.*\)/xref_analog: OBO_REL:\1/' $@
 
-post_release: fly_anatomy.obo reports/chado_load_check_simple.txt
+post_release: obo_qc fly_anatomy.obo reports/chado_load_check_simple.txt
 	cp fly_anatomy.obo ../..
+	mv obo_qc_fbbt.obo.txt reports/obo_qc_fbbt.obo.txt
+	mv obo_qc_fbbt.owl.txt reports/obo_qc_fbbt.owl.txt
 	
 	
 ########################
