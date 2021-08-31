@@ -9,9 +9,7 @@ DATE   ?= $(shell date +%Y-%m-%d)
 ### Code for generating additional FlyBase reports ###
 ######################################################
 
-# Illegal division by 0 problem: reports/onto_metrics_calc.txt 
-REPORT_FILES := $(REPORT_FILES) reports/obo_track_new_simple.txt  reports/robot_simple_diff.txt \
-		reports/spellcheck.txt
+REPORT_FILES := $(REPORT_FILES) reports/obo_track_new_simple.txt  reports/robot_simple_diff.txt reports/onto_metrics_calc.txt reports/spellcheck.txt
 
 SIMPLE_PURL =	http://purl.obolibrary.org/obo/fbbt/fbbt-simple.obo
 LAST_DEPLOYED_SIMPLE=tmp/$(ONT)-simple-last.obo
@@ -47,7 +45,7 @@ reports/robot_simple_diff.txt: $(LAST_DEPLOYED_SIMPLE) $(ONT)-simple.obo
 	$(ROBOT) diff --left $(ONT)-simple.obo --right $(LAST_DEPLOYED_SIMPLE) --output $@
 
 reports/onto_metrics_calc.txt: $(ONT)-simple.obo install_flybase_scripts
-	../scripts/onto_metrics_calc.pl 'phenotypic_class' $(ONT)-simple.obo > $@
+	../scripts/onto_metrics_calc.pl 'fly_anatomy.ontology' $(ONT)-simple.obo > $@
 	
 reports/chado_load_check_simple.txt: install_flybase_scripts fly_anatomy.obo 
 	../scripts/chado_load_checks.pl fly_anatomy.obo > $@
