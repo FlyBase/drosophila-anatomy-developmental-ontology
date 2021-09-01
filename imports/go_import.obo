@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: fbbt/releases/2021-07-09/imports/go_import.owl
+data-version: fbbt/releases/2021-09-01/imports/go_import.owl
 subsetdef: gocheck_do_not_annotate ""
 subsetdef: gocheck_do_not_manually_annotate ""
 subsetdef: goslim_agr ""
@@ -17,8 +17,8 @@ subsetdef: goslim_pombe ""
 subsetdef: goslim_synapse ""
 subsetdef: goslim_yeast ""
 ontology: fbbt/imports/go_import
-property_value: http://purl.org/dc/elements/1.1/source http://purl.obolibrary.org/obo/go/releases/2021-07-02/go.owl
-property_value: owl:versionInfo "2021-07-09" xsd:string
+property_value: http://purl.org/dc/elements/1.1/source http://purl.obolibrary.org/obo/go/releases/2021-08-18/go.owl
+property_value: owl:versionInfo "2021-09-01" xsd:string
 
 [Term]
 id: GO:0000003
@@ -113,15 +113,6 @@ intersection_of: part_of GO:0050914 ! sensory perception of salty taste
 relationship: part_of GO:0050914 ! sensory perception of salty taste
 
 [Term]
-id: GO:0001662
-name: behavioral fear response
-namespace: biological_process
-def: "An acute behavioral change resulting from a perceived external threat." [GOC:dph, PMID:9920659]
-synonym: "behavioural fear response" EXACT []
-is_a: GO:0002209 ! behavioral defense response
-is_a: GO:0042596 ! fear response
-
-[Term]
 id: GO:0001820
 name: serotonin secretion
 namespace: biological_process
@@ -179,12 +170,12 @@ intersection_of: GO:0050877 ! nervous system process
 intersection_of: regulates GO:0007585 ! respiratory gaseous exchange by respiratory system
 
 [Term]
-id: GO:0002209
-name: behavioral defense response
+id: GO:0002118
+name: aggressive behavior
 namespace: biological_process
-def: "A behavioral response seeking to protect an organism from an a perceived external threat to that organism." [GO_REF:0000022, GOC:add]
-synonym: "behavioural defense response" EXACT []
-is_a: GO:0006952 ! defense response
+def: "A behavioral interaction between organisms in which one organism has the intention of inflicting physical damage on another individual." [GOC:hjd]
+synonym: "aggression" EXACT []
+xref: Wikipedia:Aggression
 is_a: GO:0007610 ! behavior
 
 [Term]
@@ -475,19 +466,6 @@ subset: goslim_plant
 synonym: "response to abiotic stress" RELATED []
 synonym: "response to biotic stress" RELATED []
 is_a: GO:0050896 ! response to stimulus
-
-[Term]
-id: GO:0006952
-name: defense response
-namespace: biological_process
-alt_id: GO:0002217
-alt_id: GO:0042829
-def: "Reactions, triggered in response to the presence of a foreign body or the occurrence of an injury, which result in restriction of damage to the organism attacked or prevention/recovery from the infection caused by the attack." [GOC:go_curators]
-synonym: "antimicrobial peptide activity" RELATED []
-synonym: "defence response" EXACT []
-synonym: "defense/immunity protein activity" RELATED []
-synonym: "physiological defense response" EXACT []
-is_a: GO:0006950 ! response to stress
 
 [Term]
 id: GO:0006970
@@ -809,6 +787,14 @@ namespace: biological_process
 def: "The activities involved in the mental information processing system that receives (registers), modifies, stores, and retrieves informational stimuli. The main stages involved in the formation and retrieval of memory are encoding (processing of received information by acquisition), storage (building a permanent record of received information as a result of consolidation) and retrieval (calling back the stored information and use it in a suitable way to execute a given task)." [GOC:curators, ISBN:0582227089]
 xref: Wikipedia:Memory
 is_a: GO:0007611 ! learning or memory
+
+[Term]
+id: GO:0007614
+name: short-term memory
+namespace: biological_process
+def: "The memory process that deals with the storage, retrieval and modification of information received a short time (up to about 30 minutes) ago. This type of memory is typically dependent on direct, transient effects of second messenger activation." [http://hebb.mit.edu/courses/9.03/lecture4.html, ISBN:0582227089]
+xref: Wikipedia:Short-term_memory
+is_a: GO:0007613 ! memory
 
 [Term]
 id: GO:0007616
@@ -2091,6 +2077,15 @@ intersection_of: regulates GO:0008152 ! metabolic process
 relationship: regulates GO:0008152 ! metabolic process
 
 [Term]
+id: GO:0019230
+name: proprioception
+namespace: biological_process
+def: "The series of events by which an organism senses the position, location, orientation, and movement of the body and its parts. Proprioception is mediated by proprioceptors, sensory nerve terminals found in muscles, tendons, and joint capsules, which give information concerning movements and position of the body. The receptors in the labyrinth are sometimes also considered proprioceptors." [ISBN:072168677X]
+xref: Wikipedia:Proprioception
+is_a: GO:0007600 ! sensory perception
+relationship: part_of GO:0050884 ! neuromuscular process controlling posture
+
+[Term]
 id: GO:0019233
 name: sensory perception of pain
 namespace: biological_process
@@ -2336,47 +2331,6 @@ namespace: biological_process
 def: "Any process that results in a change in state or activity of a cell or an organism (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of a caffeine stimulus. Caffeine is an alkaloid found in numerous plant species, where it acts as a natural pesticide that paralyzes and kills certain insects feeding upon them." [GOC:ef, GOC:mah]
 is_a: GO:0014074 ! response to purine-containing compound
 is_a: GO:0043279 ! response to alkaloid
-
-[Term]
-id: GO:0031347
-name: regulation of defense response
-namespace: biological_process
-def: "Any process that modulates the frequency, rate or extent of a defense response." [GOC:mah]
-is_a: GO:0080134 ! regulation of response to stress
-intersection_of: GO:0065007 ! biological regulation
-intersection_of: regulates GO:0006952 ! defense response
-relationship: regulates GO:0006952 ! defense response
-
-[Term]
-id: GO:0031348
-name: negative regulation of defense response
-namespace: biological_process
-def: "Any process that stops, prevents, or reduces the frequency, rate or extent of a defense response." [GOC:mah]
-synonym: "down regulation of defense response" EXACT []
-synonym: "down-regulation of defense response" EXACT []
-synonym: "downregulation of defense response" EXACT []
-synonym: "inhibition of defense response" NARROW []
-is_a: GO:0031347 ! regulation of defense response
-is_a: GO:0048585 ! negative regulation of response to stimulus
-intersection_of: GO:0065007 ! biological regulation
-intersection_of: negatively_regulates GO:0006952 ! defense response
-relationship: negatively_regulates GO:0006952 ! defense response
-
-[Term]
-id: GO:0031349
-name: positive regulation of defense response
-namespace: biological_process
-def: "Any process that activates or increases the frequency, rate or extent of a defense response." [GOC:mah]
-synonym: "activation of defense response" NARROW []
-synonym: "stimulation of defense response" NARROW []
-synonym: "up regulation of defense response" EXACT []
-synonym: "up-regulation of defense response" EXACT []
-synonym: "upregulation of defense response" EXACT []
-is_a: GO:0031347 ! regulation of defense response
-is_a: GO:0048584 ! positive regulation of response to stimulus
-intersection_of: GO:0065007 ! biological regulation
-intersection_of: positively_regulates GO:0006952 ! defense response
-relationship: positively_regulates GO:0006952 ! defense response
 
 [Term]
 id: GO:0031644
@@ -2705,6 +2659,7 @@ namespace: biological_process
 alt_id: GO:0044707
 alt_id: GO:0050874
 def: "Any biological process, occurring at the level of a multicellular organism, pertinent to its function." [GOC:curators, GOC:dph, GOC:isa_complete, GOC:tb]
+subset: gocheck_do_not_annotate
 subset: goslim_pir
 synonym: "organismal physiological process" EXACT []
 synonym: "single-multicellular organism process" RELATED []
@@ -2996,6 +2951,17 @@ intersection_of: positively_regulates GO:0040011 ! locomotion
 relationship: positively_regulates GO:0040011 ! locomotion
 
 [Term]
+id: GO:0040040
+name: thermosensory behavior
+namespace: biological_process
+def: "Behavior that is dependent upon the sensation of temperature." [GOC:ems]
+synonym: "behavioral response to temperature stimulus" EXACT []
+synonym: "behavioural response to temperature stimulus" EXACT []
+synonym: "thermosensory behaviour" EXACT []
+is_a: GO:0007610 ! behavior
+is_a: GO:0009266 ! response to temperature stimulus
+
+[Term]
 id: GO:0042048
 name: olfactory behavior
 namespace: biological_process
@@ -3085,15 +3051,6 @@ namespace: biological_process
 def: "Any process that results in a change in the behavior of an organism as a result of deprivation of nourishment." [GOC:go_curators]
 synonym: "behavioural response to starvation" EXACT []
 is_a: GO:0042594 ! response to starvation
-
-[Term]
-id: GO:0042596
-name: fear response
-namespace: biological_process
-alt_id: GO:0001663
-def: "The response of an organism to a perceived external threat." [GOC:go_curators]
-synonym: "physiological fear response" EXACT []
-is_a: GO:0033555 ! multicellular organismal response to stress
 
 [Term]
 id: GO:0042745
@@ -4179,6 +4136,15 @@ is_a: GO:0050879 ! multicellular organismal movement
 is_a: GO:0050905 ! neuromuscular process
 
 [Term]
+id: GO:0050884
+name: neuromuscular process controlling posture
+namespace: biological_process
+def: "Any process in which an organism voluntarily modulates its posture, the alignment of its anatomical parts." [GOC:dph, GOC:tb]
+synonym: "regulation of posture" EXACT []
+is_a: GO:0050905 ! neuromuscular process
+relationship: has_part GO:0050881 ! musculoskeletal movement
+
+[Term]
 id: GO:0050885
 name: neuromuscular process controlling balance
 namespace: biological_process
@@ -4872,6 +4838,19 @@ is_a: GO:0051239 ! regulation of multicellular organismal process
 intersection_of: GO:0065007 ! biological regulation
 intersection_of: negatively_regulates GO:0032501 ! multicellular organismal process
 relationship: negatively_regulates GO:0032501 ! multicellular organismal process
+
+[Term]
+id: GO:0051355
+name: proprioception involved in equilibrioception
+namespace: biological_process
+def: "The series of events contributing to equilibrioception by which an organism senses the position, location, orientation, and movement of the body and its parts. Proprioception plays an important role in the ability of an organism to perceive its orientation with respect to gravity." [GOC:ai]
+synonym: "equilibrioception by proprioception" EXACT []
+synonym: "perception of orientation with respect to gravity by proprioception" EXACT []
+synonym: "proprioception during equilibrioception" RELATED [GOC:dph, GOC:tb]
+is_a: GO:0019230 ! proprioception
+intersection_of: GO:0019230 ! proprioception
+intersection_of: part_of GO:0050957 ! equilibrioception
+relationship: part_of GO:0050957 ! equilibrioception
 
 [Term]
 id: GO:0051356
@@ -5773,6 +5752,17 @@ created_by: mah
 creation_date: 2010-10-04T01:51:47Z
 
 [Term]
+id: GO:0072375
+name: medium-term memory
+namespace: biological_process
+def: "The memory process that deals with the storage, retrieval and modification of information received at a time ago that is intermediate between that of short and long term memory (30min - 7hrs in Drosophila melanogaster)." [GOC:sart, PMID:14659098, PMID:7923375]
+synonym: "middle-term memory" EXACT [GOC:sart]
+synonym: "MTM" NARROW [GOC:sart]
+is_a: GO:0007613 ! memory
+created_by: mah
+creation_date: 2010-11-22T11:26:54Z
+
+[Term]
 id: GO:0080090
 name: regulation of primary metabolic process
 namespace: biological_process
@@ -6592,66 +6582,6 @@ intersection_of: positively_regulates GO:0061535 ! glutamate secretion, neurotra
 relationship: positively_regulates GO:0061535 ! glutamate secretion, neurotransmission
 created_by: pad
 creation_date: 2014-08-13T13:54:31Z
-
-[Term]
-id: GO:1903365
-name: regulation of fear response
-namespace: biological_process
-def: "Any process that modulates the frequency, rate or extent of fear response." [GO_REF:0000058, GOC:mr, GOC:TermGenie, PMID:8677262]
-synonym: "regulation of physiological fear response" EXACT [GOC:TermGenie]
-is_a: GO:0051239 ! regulation of multicellular organismal process
-is_a: GO:0080134 ! regulation of response to stress
-intersection_of: GO:0065007 ! biological regulation
-intersection_of: regulates GO:0042596 ! fear response
-relationship: regulates GO:0042596 ! fear response
-created_by: mr
-creation_date: 2014-08-21T23:21:36Z
-
-[Term]
-id: GO:1903366
-name: negative regulation of fear response
-namespace: biological_process
-def: "Any process that stops, prevents or reduces the frequency, rate or extent of fear response." [GO_REF:0000058, GOC:mr, GOC:TermGenie, PMID:8677262]
-synonym: "down regulation of fear response" EXACT [GOC:TermGenie]
-synonym: "down regulation of physiological fear response" EXACT [GOC:TermGenie]
-synonym: "down-regulation of fear response" EXACT [GOC:TermGenie]
-synonym: "down-regulation of physiological fear response" EXACT [GOC:TermGenie]
-synonym: "downregulation of fear response" EXACT [GOC:TermGenie]
-synonym: "downregulation of physiological fear response" EXACT [GOC:TermGenie]
-synonym: "inhibition of fear response" NARROW [GOC:TermGenie]
-synonym: "inhibition of physiological fear response" NARROW [GOC:TermGenie]
-synonym: "negative regulation of physiological fear response" EXACT [GOC:TermGenie]
-is_a: GO:0048585 ! negative regulation of response to stimulus
-is_a: GO:0051241 ! negative regulation of multicellular organismal process
-is_a: GO:1903365 ! regulation of fear response
-intersection_of: GO:0065007 ! biological regulation
-intersection_of: negatively_regulates GO:0042596 ! fear response
-relationship: negatively_regulates GO:0042596 ! fear response
-created_by: mr
-creation_date: 2014-08-21T23:21:45Z
-
-[Term]
-id: GO:1903367
-name: positive regulation of fear response
-namespace: biological_process
-def: "Any process that activates or increases the frequency, rate or extent of fear response." [GO_REF:0000058, GOC:mr, GOC:TermGenie, PMID:8677262]
-synonym: "activation of fear response" NARROW [GOC:TermGenie]
-synonym: "activation of physiological fear response" NARROW [GOC:TermGenie]
-synonym: "positive regulation of physiological fear response" EXACT [GOC:TermGenie]
-synonym: "up regulation of fear response" EXACT [GOC:TermGenie]
-synonym: "up regulation of physiological fear response" EXACT [GOC:TermGenie]
-synonym: "up-regulation of fear response" EXACT [GOC:TermGenie]
-synonym: "up-regulation of physiological fear response" EXACT [GOC:TermGenie]
-synonym: "upregulation of fear response" EXACT [GOC:TermGenie]
-synonym: "upregulation of physiological fear response" EXACT [GOC:TermGenie]
-is_a: GO:0048584 ! positive regulation of response to stimulus
-is_a: GO:0051240 ! positive regulation of multicellular organismal process
-is_a: GO:1903365 ! regulation of fear response
-intersection_of: GO:0065007 ! biological regulation
-intersection_of: positively_regulates GO:0042596 ! fear response
-relationship: positively_regulates GO:0042596 ! fear response
-created_by: mr
-creation_date: 2014-08-21T23:21:53Z
 
 [Term]
 id: GO:1903530
@@ -7521,53 +7451,6 @@ intersection_of: regulates GO:0007625 ! grooming behavior
 relationship: regulates GO:0007625 ! grooming behavior
 created_by: rl
 creation_date: 2011-07-14T04:48:12Z
-
-[Term]
-id: GO:2000822
-name: regulation of behavioral fear response
-namespace: biological_process
-def: "Any process that modulates the frequency, rate or extent of behavioral fear response." [GOC:BHF]
-synonym: "regulation of behavioural fear response" EXACT [GOC:obol]
-is_a: GO:0031347 ! regulation of defense response
-is_a: GO:0050795 ! regulation of behavior
-is_a: GO:1903365 ! regulation of fear response
-intersection_of: GO:0065007 ! biological regulation
-intersection_of: regulates GO:0001662 ! behavioral fear response
-relationship: regulates GO:0001662 ! behavioral fear response
-created_by: rl
-creation_date: 2011-07-14T04:50:47Z
-
-[Term]
-id: GO:2000986
-name: negative regulation of behavioral fear response
-namespace: biological_process
-def: "Any process that stops, prevents or reduces the frequency, rate or extent of behavioral fear response." [GOC:obol]
-synonym: "negative regulation of behavioural fear response" EXACT [GOC:obol]
-is_a: GO:0031348 ! negative regulation of defense response
-is_a: GO:0048521 ! negative regulation of behavior
-is_a: GO:1903366 ! negative regulation of fear response
-is_a: GO:2000822 ! regulation of behavioral fear response
-intersection_of: GO:0065007 ! biological regulation
-intersection_of: negatively_regulates GO:0001662 ! behavioral fear response
-relationship: negatively_regulates GO:0001662 ! behavioral fear response
-created_by: yaf
-creation_date: 2011-08-08T09:16:34Z
-
-[Term]
-id: GO:2000987
-name: positive regulation of behavioral fear response
-namespace: biological_process
-def: "Any process that activates or increases the frequency, rate or extent of behavioral fear response." [GOC:obol]
-synonym: "positive regulation of behavioural fear response" EXACT [GOC:obol]
-is_a: GO:0031349 ! positive regulation of defense response
-is_a: GO:0048520 ! positive regulation of behavior
-is_a: GO:1903367 ! positive regulation of fear response
-is_a: GO:2000822 ! regulation of behavioral fear response
-intersection_of: GO:0065007 ! biological regulation
-intersection_of: positively_regulates GO:0001662 ! behavioral fear response
-relationship: positively_regulates GO:0001662 ! behavioral fear response
-created_by: yaf
-creation_date: 2011-08-08T09:16:39Z
 
 [Typedef]
 id: has_part
