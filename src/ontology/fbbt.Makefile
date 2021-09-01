@@ -9,9 +9,7 @@ DATE   ?= $(shell date +%Y-%m-%d)
 ### Code for generating additional FlyBase reports ###
 ######################################################
 
-# Illegal division by 0 problem: reports/onto_metrics_calc.txt 
-REPORT_FILES := $(REPORT_FILES) reports/obo_track_new_simple.txt  reports/robot_simple_diff.txt \
-		reports/spellcheck.txt
+REPORT_FILES := $(REPORT_FILES) reports/obo_track_new_simple.txt  reports/robot_simple_diff.txt reports/onto_metrics_calc.txt reports/spellcheck.txt
 
 SIMPLE_PURL =	http://purl.obolibrary.org/obo/fbbt/fbbt-simple.obo
 LAST_DEPLOYED_SIMPLE=tmp/$(ONT)-simple-last.obo
@@ -47,7 +45,7 @@ reports/robot_simple_diff.txt: $(LAST_DEPLOYED_SIMPLE) $(ONT)-simple.obo
 	$(ROBOT) diff --left $(ONT)-simple.obo --right $(LAST_DEPLOYED_SIMPLE) --output $@
 
 reports/onto_metrics_calc.txt: $(ONT)-simple.obo install_flybase_scripts
-	../scripts/onto_metrics_calc.pl 'phenotypic_class' $(ONT)-simple.obo > $@
+	../scripts/onto_metrics_calc.pl 'fly_anatomy.ontology' $(ONT)-simple.obo > $@
 	
 reports/chado_load_check_simple.txt: install_flybase_scripts fly_anatomy.obo 
 	../scripts/chado_load_checks.pl fly_anatomy.obo > $@
@@ -73,12 +71,13 @@ prepare_release: $(ASSETS) $(PATTERN_RELEASE_FILES)
 ######################################################
 ### Overwriting some default aretfacts ###
 ######################################################
+# Removing excess defs, labels, comments from obo files
 
 # Simple is overwritten to strip out duplicate names and definitions.
 $(ONT)-simple.obo: $(ONT)-simple.owl
 	$(ROBOT) convert --input $< --check false -f obo $(OBO_FORMAT_OPTIONS) -o $@.tmp.obo &&\
 	cat $@.tmp.obo | grep -v ^owl-axioms | grep -v 'namespace[:][ ]external' | grep -v 'namespace[:][ ]quality' > $@.tmp &&\
-	cat $@.tmp | perl -0777 -e '$$_ = <>; s/name[:].*\nname[:]/name:/g; print' | perl -0777 -e '$$_ = <>; s/def[:].*\ndef[:]/def:/g; print' > $@
+	cat $@.tmp | perl -0777 -e '$$_ = <>; s/(?:name[:].*\n)+name[:]/name:/g; print' | perl -0777 -e '$$_ = <>; s/(?:comment[:].*\n)+comment[:]/comment:/g; print' | perl -0777 -e '$$_ = <>; s/(?:def[:].*\n)+def[:]/def:/g; print' > $@
 	rm -f $@.tmp.obo $@.tmp
 
 # We want the OBO release to be based on the simple release. It needs to be annotated however in the way map releases (fbbt.owl) are annotated.
@@ -86,16 +85,27 @@ $(ONT).obo: $(ONT)-simple.owl
 	$(ROBOT)  annotate --input $< --ontology-iri $(URIBASE)/$@ --version-iri $(ONTBASE)/releases/$(TODAY) \
 	convert --check false -f obo $(OBO_FORMAT_OPTIONS) -o $@.tmp.obo &&\
 	cat $@.tmp.obo | grep -v ^owl-axioms | grep -v 'namespace[:][ ]external' | grep -v 'namespace[:][ ]quality' > $@.tmp &&\
-	cat $@.tmp | perl -0777 -e '$$_ = <>; s/name[:].*\nname[:]/name:/g; print' | perl -0777 -e '$$_ = <>; s/def[:].*\ndef[:]/def:/g; print' > $@
+	cat $@.tmp | perl -0777 -e '$$_ = <>; s/(?:name[:].*\n)+name[:]/name:/g; print' | perl -0777 -e '$$_ = <>; s/(?:comment[:].*\n)+comment[:]/comment:/g; print' | perl -0777 -e '$$_ = <>; s/(?:def[:].*\n)+def[:]/def:/g; print' > $@
+	rm -f $@.tmp.obo $@.tmp
+
+$(ONT)-base.obo: $(ONT)-base.owl
+	$(ROBOT) convert --input $< --check false -f obo $(OBO_FORMAT_OPTIONS) -o $@.tmp.obo &&\
+	cat $@.tmp.obo | grep -v ^owl-axioms > $@.tmp &&\
+	cat $@.tmp | perl -0777 -e '$$_ = <>; s/(?:name[:].*\n)+name[:]/name:/g; print' | perl -0777 -e '$$_ = <>; s/(?:comment[:].*\n)+comment[:]/comment:/g; print' | perl -0777 -e '$$_ = <>; s/(?:def[:].*\n)+def[:]/def:/g; print' > $@
+	rm -f $@.tmp.obo $@.tmp
+		
+$(ONT)-non-classified.obo: $(ONT)-non-classified.owl
+	$(ROBOT) convert --input $< --check false -f obo $(OBO_FORMAT_OPTIONS) -o $@.tmp.obo &&\
+	cat $@.tmp.obo | grep -v ^owl-axioms > $@.tmp &&\
+	cat $@.tmp | perl -0777 -e '$$_ = <>; s/(?:name[:].*\n)+name[:]/name:/g; print' | perl -0777 -e '$$_ = <>; s/(?:comment[:].*\n)+comment[:]/comment:/g; print' | perl -0777 -e '$$_ = <>; s/(?:def[:].*\n)+def[:]/def:/g; print' > $@
+	rm -f $@.tmp.obo $@.tmp
+
+$(ONT)-full.obo: $(ONT)-full.owl
+	$(ROBOT) convert --input $< --check false -f obo $(OBO_FORMAT_OPTIONS) -o $@.tmp.obo &&\
+	cat $@.tmp.obo | grep -v ^owl-axioms > $@.tmp &&\
+	cat $@.tmp | perl -0777 -e '$$_ = <>; s/(?:name[:].*\n)+name[:]/name:/g; print' | perl -0777 -e '$$_ = <>; s/(?:comment[:].*\n)+comment[:]/comment:/g; print' | perl -0777 -e '$$_ = <>; s/(?:def[:].*\n)+def[:]/def:/g; print' > $@
 	rm -f $@.tmp.obo $@.tmp
 	
-#ont.obo:
-#	$(ROBOT) annotate --input $(ONT)-simple.owl --ontology-iri $(URIBASE)/$@ --version-iri $(ONTBASE)/releases/$(TODAY) \
-#	convert --check false -f obo $(OBO_FORMAT_OPTIONS) -o $@.tmp.obo &&\
-#	grep -v ^owl-axioms $@.tmp.obo > $@.tmp &&\
-#	sed -i '/subset[:] ro[-]eco/d' $@.tmp &&\
-#	cat $@.tmp | perl -0777 -e '$$_ = <>; s/name[:].*\nname[:]/name:/g; print' | perl -0777 -e '$$_ = <>; s/def[:].*\ndef[:]/def:/g; print' > $@
-#	rm -f $@.tmp.obo $@.tmp
 
 #non_native_classes.txt: $(SRC)
 #	$(ROBOT) query --use-graphs true -f csv -i $< --query ../sparql/non-native-classes.sparql $@.tmp &&\
@@ -188,12 +198,14 @@ fly_anatomy.obo: tmp/fbbt-obj.obo rem_flybase.txt
 		remove --term-file rem_flybase.txt --trim false \
 		query --update ../sparql/force-obo.ru \
 		convert -f obo --check false -o $@.tmp.obo
-	cat $@.tmp.obo | sed '/./{H;$!d;} ; x ; s/\(\[Typedef\]\nid:[ ]\)\([[:lower:][:punct:]]*\n\)\(name:[ ]\)\([[:lower:][:punct:] ]*\n\)/\1\2\3\2/' | grep -v property_value: | grep -v ^owl-axioms | sed 's/^default-namespace: fly_anatomy.ontology/default-namespace: FlyBase anatomy CV/' | grep -v ^expand_expression_to | grep -v gci_filler | grep -v '^namespace: uberon' | grep -v '^namespace: chebi_ontology' | grep -v '^is_cyclic: false' | grep -v 'FlyBase_miscellaneous_CV' | sed '/^date[:]/c\date: $(OBODATE)' | sed '/^data-version[:]/c\data-version: $(DATE)' > $@  && rm $@.tmp.obo
+	cat $@.tmp.obo | sed '/./{H;$!d;} ; x ; s/\(\[Typedef\]\nid:[ ]\)\([[:lower:][:punct:]]*\n\)\(name:[ ]\)\([[:lower:][:punct:] ]*\n\)/\1\2\3\2/' | grep -v property_value: | grep -v ^owl-axioms | sed 's/^default-namespace: fly_anatomy.ontology/default-namespace: FlyBase anatomy CV/' | grep -v ^expand_expression_to | grep -v gci_filler | grep -v '^namespace: uberon' | grep -v '^namespace: protein' | grep -v '^namespace: chebi_ontology' | grep -v '^is_cyclic: false' | grep -v 'FlyBase_miscellaneous_CV' | sed '/^date[:]/c\date: $(OBODATE)' | sed '/^data-version[:]/c\data-version: $(DATE)' > $@  && rm $@.tmp.obo
 	$(ROBOT) convert --input $@ -f obo --output $@
 	sed -i 's/^xref[:][ ]OBO_REL[:]\(.*\)/xref_analog: OBO_REL:\1/' $@
 
-post_release: fly_anatomy.obo reports/chado_load_check_simple.txt
+post_release: obo_qc fly_anatomy.obo reports/chado_load_check_simple.txt
 	cp fly_anatomy.obo ../..
+	mv obo_qc_fbbt.obo.txt reports/obo_qc_fbbt.obo.txt
+	mv obo_qc_fbbt.owl.txt reports/obo_qc_fbbt.owl.txt
 	
 	
 ########################
@@ -203,13 +215,10 @@ post_release: fly_anatomy.obo reports/chado_load_check_simple.txt
 obo_qc_%.obo:
 	$(ROBOT) report -i $*.obo --profile qc-profile.txt --fail-on ERROR --print 5 -o $@.txt
 
-# overides qc for fbbt.owl (no fail on error)	
-#obo_qc_$(ONT).owl:
-#	$(ROBOT) report -i $(ONT).owl --profile qc-profile.txt --fail-on None --print 5 -o $@.txt
-			
+# currently no failure due to owl checks
 obo_qc_%.owl:
 	$(ROBOT) merge -i $*.owl -i components/qc_assertions.owl unmerge -i components/qc_assertions_unmerge.owl -o $@ &&\
-	$(ROBOT) report -i $@ --profile qc-profile.txt --fail-on ERROR --print 5 -o $@.txt
+	$(ROBOT) report -i $@ --profile qc-profile.txt --fail-on None --print 5 -o $@.txt
 
 obo_qc: obo_qc_$(ONT).obo obo_qc_$(ONT).owl
 
