@@ -69,11 +69,10 @@ prepare_release: $(ASSETS) $(PATTERN_RELEASE_FILES)
 
 
 ######################################################
-### Overwriting some default aretfacts ###
+### Overwriting some default artefacts ###
 ######################################################
 # Removing excess defs, labels, comments from obo files
 
-# Simple is overwritten to strip out duplicate names and definitions.
 $(ONT)-simple.obo: $(ONT)-simple.owl
 	$(ROBOT) convert --input $< --check false -f obo $(OBO_FORMAT_OPTIONS) -o $@.tmp.obo &&\
 	cat $@.tmp.obo | grep -v ^owl-axioms | grep -v 'namespace[:][ ]external' | grep -v 'namespace[:][ ]quality' > $@.tmp &&\
@@ -192,7 +191,6 @@ tmp/fbbt-obj.obo:
 
 fly_anatomy.obo: tmp/fbbt-obj.obo rem_flybase.txt
 	cp fbbt-simple.obo tmp/fbbt-simple-stripped.obo
-	#cat fbbt-simple.obo | perl -0777 -e '$$_ = <>; s/name[:].*\nname[:]/name:/g; print' | perl -0777 -e '$$_ = <>; s/def[:].*\ndef[:]/def:/g; print' > tmp/fbbt-simple-stripped.obo &&\
 	$(ROBOT) remove -vv -i tmp/fbbt-simple-stripped.obo --select "owl:deprecated='true'^^xsd:boolean" --trim true \
 		merge --collapse-import-closure false --input tmp/fbbt-obj.obo \
 		remove --term-file rem_flybase.txt --trim false \
@@ -204,8 +202,8 @@ fly_anatomy.obo: tmp/fbbt-obj.obo rem_flybase.txt
 
 post_release: obo_qc fly_anatomy.obo reports/chado_load_check_simple.txt
 	cp fly_anatomy.obo ../..
-	mv obo_qc_fbbt.obo.txt reports/obo_qc_fbbt.obo.txt
-	mv obo_qc_fbbt.owl.txt reports/obo_qc_fbbt.owl.txt
+	mv obo_qc_$(ONT).obo.txt reports/obo_qc_$(ONT).obo.txt
+	mv obo_qc_$(ONT).owl.txt reports/obo_qc_$(ONT).owl.txt
 	
 	
 ########################
