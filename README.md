@@ -1,6 +1,6 @@
 ### Drosophila anatomy and development ontologies
 
-[![FBbt Build Status](https://travis-ci.org/FlyBase/drosophila-anatomy-developmental-ontology.svg?branch=master)](https://travis-ci.org/FlyBase/drosophila-anatomy-developmental-ontology)
+[![FBbt Build Status](https://app.travis-ci.com/FlyBase/drosophila-anatomy-developmental-ontology.svg?branch=master)](https://app.travis-ci.com/FlyBase/drosophila-anatomy-developmental-ontology)
 
 The Drosophila anatomy and development ontologies are query-able reference sources for information on Drosophila anatomy and developmental stages.  They also provide controlled vocabularies for use in annotation and classification of data related to Drosophila anatomy, such as gene expression, phenotype and images.  They were originally developed by [FlyBase](http://www.flybase.org), who continue to maintain them and have used them for over 200,000 annotations of phenotypes and expression.  A number of other projects use these ontologies for annotation and to drive their query systems, including [Virtual Fly Brain](http://www.virtualflybrain.org) (VFB), [FlyProt](http://www.flyprot.org/) and [RedFly](http://redfly.ccr.buffalo.edu).  Extensive use of synonyms means that, given a suitably sophisticated autocomplete, users can find relevant content by searching with almost any anatomical term they find in the literature.
 
