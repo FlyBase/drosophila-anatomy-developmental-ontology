@@ -180,6 +180,9 @@ tmp/FBgn_template.tsv: $(IMPORTSEED)
 components/flybase_import.owl: tmp/FBgn_template.tsv
 	if [ $(IMP) = true ]; then $(ROBOT) template --input-iri http://purl.obolibrary.org/obo/ro.owl --template $< \
 	annotate --ontology-iri "http://purl.obolibrary.org/obo/fbbt/components/flybase_import.owl" --output $@ && rm $<; fi
+	
+mirror/pato.owl: mirror/pato.trigger
+	curl -L http://purl.obolibrary.org/obo/pato/pato-simple.owl --create-dirs -o $@ --retry 4 --max-time 120
 
 ######################################################################################
 ### Generate the flybase anatomy version of FBBT
