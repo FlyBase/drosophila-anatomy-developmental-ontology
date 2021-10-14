@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: fbbt/releases/2021-09-01/imports/go_import.owl
+data-version: fbbt/releases/2021-10-14/imports/go_import.owl
 subsetdef: gocheck_do_not_annotate ""
 subsetdef: gocheck_do_not_manually_annotate ""
 subsetdef: goslim_agr ""
@@ -17,8 +17,8 @@ subsetdef: goslim_pombe ""
 subsetdef: goslim_synapse ""
 subsetdef: goslim_yeast ""
 ontology: fbbt/imports/go_import
-property_value: http://purl.org/dc/elements/1.1/source http://purl.obolibrary.org/obo/go/releases/2021-08-18/go.owl
-property_value: owl:versionInfo "2021-09-01" xsd:string
+property_value: http://purl.org/dc/elements/1.1/source http://purl.obolibrary.org/obo/go/releases/2021-09-01/go.owl
+property_value: owl:versionInfo "2021-10-14" xsd:string
 
 [Term]
 id: GO:0000003
@@ -179,6 +179,16 @@ xref: Wikipedia:Aggression
 is_a: GO:0007610 ! behavior
 
 [Term]
+id: GO:0002238
+name: response to molecule of fungal origin
+namespace: biological_process
+def: "Any process that results in a change in state or activity of an organism (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of a stimulus by molecules of fungal origin such as chito-octamer oligosaccharide." [GOC:rl, GOC:sm]
+synonym: "response to fungus associated molecule" EXACT []
+is_a: GO:0010033 ! response to organic substance
+is_a: GO:0043207 ! response to external biotic stimulus
+relationship: part_of GO:0009620 ! response to fungus
+
+[Term]
 id: GO:0002790
 name: peptide secretion
 namespace: biological_process
@@ -227,6 +237,53 @@ is_a: GO:0051047 ! positive regulation of secretion
 intersection_of: GO:0065007 ! biological regulation
 intersection_of: positively_regulates GO:0002790 ! peptide secretion
 relationship: positively_regulates GO:0002790 ! peptide secretion
+
+[Term]
+id: GO:0002831
+name: regulation of response to biotic stimulus
+namespace: biological_process
+def: "Any process that modulates the frequency, rate, or extent of a response to biotic stimulus." [GOC:add]
+comment: Note that this term is in the subset of terms that should not be used for direct gene product annotation. Instead, select a child term or, if no appropriate child term exists, please request a new term. Direct annotations to this term may be amended during annotation QC.
+subset: gocheck_do_not_manually_annotate
+is_a: GO:0048583 ! regulation of response to stimulus
+intersection_of: GO:0065007 ! biological regulation
+intersection_of: regulates GO:0009607 ! response to biotic stimulus
+relationship: regulates GO:0009607 ! response to biotic stimulus
+
+[Term]
+id: GO:0002832
+name: negative regulation of response to biotic stimulus
+namespace: biological_process
+def: "Any process that stops, prevents, or reduces the frequency, rate, or extent of a response to biotic stimulus." [GOC:add]
+comment: Note that this term is in the subset of terms that should not be used for direct gene product annotation. Instead, select a child term or, if no appropriate child term exists, please request a new term. Direct annotations to this term may be amended during annotation QC.
+subset: gocheck_do_not_manually_annotate
+synonym: "down regulation of response to biotic stimulus" EXACT []
+synonym: "down-regulation of response to biotic stimulus" EXACT []
+synonym: "downregulation of response to biotic stimulus" EXACT []
+synonym: "inhibition of response to biotic stimulus" NARROW []
+is_a: GO:0002831 ! regulation of response to biotic stimulus
+is_a: GO:0048585 ! negative regulation of response to stimulus
+intersection_of: GO:0065007 ! biological regulation
+intersection_of: negatively_regulates GO:0009607 ! response to biotic stimulus
+relationship: negatively_regulates GO:0009607 ! response to biotic stimulus
+
+[Term]
+id: GO:0002833
+name: positive regulation of response to biotic stimulus
+namespace: biological_process
+def: "Any process that activates or increases the frequency, rate, or extent of a response to biotic stimulus." [GOC:add]
+comment: Note that this term is in the subset of terms that should not be used for direct gene product annotation. Instead, select a child term or, if no appropriate child term exists, please request a new term. Direct annotations to this term may be amended during annotation QC.
+subset: gocheck_do_not_manually_annotate
+synonym: "activation of response to biotic stimulus" NARROW []
+synonym: "stimulation of response to biotic stimulus" NARROW []
+synonym: "up regulation of response to biotic stimulus" EXACT []
+synonym: "up-regulation of response to biotic stimulus" EXACT []
+synonym: "upregulation of response to biotic stimulus" EXACT []
+is_a: GO:0002831 ! regulation of response to biotic stimulus
+is_a: GO:0048584 ! positive regulation of response to stimulus
+intersection_of: GO:0065007 ! biological regulation
+intersection_of: positively_regulates GO:0009607 ! response to biotic stimulus
+relationship: positively_regulates GO:0009607 ! response to biotic stimulus
 
 [Term]
 id: GO:0003006
@@ -1201,6 +1258,16 @@ is_a: GO:0051606 ! detection of stimulus
 relationship: part_of GO:0042221 ! response to chemical
 
 [Term]
+id: GO:0009595
+name: detection of biotic stimulus
+namespace: biological_process
+alt_id: GO:0009596
+def: "The series of events in which a biotic stimulus, one caused or produced by a living organism, is received and converted into a molecular signal." [GOC:hb]
+synonym: "perception of biotic stimulus" RELATED []
+is_a: GO:0009607 ! response to biotic stimulus
+is_a: GO:0051606 ! detection of stimulus
+
+[Term]
 id: GO:0009605
 name: response to external stimulus
 namespace: biological_process
@@ -1213,6 +1280,18 @@ synonym: "response to environmental stimulus" EXACT []
 is_a: GO:0050896 ! response to stimulus
 
 [Term]
+id: GO:0009607
+name: response to biotic stimulus
+namespace: biological_process
+def: "Any process that results in a change in state or activity of a cell or an organism (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of a biotic stimulus, a stimulus caused or produced by a living organism." [GOC:hb]
+comment: Note that this term is in the subset of terms that should not be used for direct gene product annotation. Instead, select a child term or, if no appropriate child term exists, please request a new term. Direct annotations to this term may be amended during annotation QC.
+subset: gocheck_do_not_manually_annotate
+subset: goslim_metagenomics
+subset: goslim_plant
+synonym: "response to biotic stress" NARROW []
+is_a: GO:0050896 ! response to stimulus
+
+[Term]
 id: GO:0009612
 name: response to mechanical stimulus
 namespace: biological_process
@@ -1221,6 +1300,15 @@ synonym: "chemi-mechanical coupling" RELATED []
 synonym: "mechanical stimulus response" EXACT []
 is_a: GO:0009605 ! response to external stimulus
 is_a: GO:0009628 ! response to abiotic stimulus
+
+[Term]
+id: GO:0009620
+name: response to fungus
+namespace: biological_process
+alt_id: GO:0009621
+def: "Any process that results in a change in state or activity of a cell or an organism (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of a stimulus from a fungus." [GOC:hb]
+synonym: "response to fungi" EXACT []
+is_a: GO:0051707 ! response to other organism
 
 [Term]
 id: GO:0009628
@@ -2653,6 +2741,17 @@ intersection_of: positively_regulates GO:0051932 ! synaptic transmission, GABAer
 relationship: positively_regulates GO:0051932 ! synaptic transmission, GABAergic
 
 [Term]
+id: GO:0032491
+name: detection of molecule of fungal origin
+namespace: biological_process
+def: "The series of events in which a stimulus from a molecule of fungal origin is received and converted into a molecular signal." [GOC:mah, GOC:rl]
+synonym: "detection of fungal associated molecule" EXACT []
+synonym: "detection of fungus associated molecule" EXACT []
+is_a: GO:0002238 ! response to molecule of fungal origin
+is_a: GO:0009593 ! detection of chemical stimulus
+is_a: GO:0098581 ! detection of external biotic stimulus
+
+[Term]
 id: GO:0032501
 name: multicellular organismal process
 namespace: biological_process
@@ -3192,6 +3291,14 @@ is_a: GO:0009648 ! photoperiodism
 is_a: GO:0009649 ! entrainment of circadian clock
 
 [Term]
+id: GO:0043207
+name: response to external biotic stimulus
+namespace: biological_process
+def: "Any process that results in a change in state or activity of a cell or an organism (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of an external biotic stimulus, an external stimulus caused by, or produced by living things." [GOC:go_curators]
+is_a: GO:0009605 ! response to external stimulus
+is_a: GO:0009607 ! response to biotic stimulus
+
+[Term]
 id: GO:0043269
 name: regulation of ion transport
 namespace: biological_process
@@ -3325,6 +3432,22 @@ def: "The chemical reactions and pathways involving those compounds which are fo
 subset: goslim_pir
 synonym: "primary metabolism" EXACT []
 is_a: GO:0008152 ! metabolic process
+
+[Term]
+id: GO:0044419
+name: biological process involved in interspecies interaction between organisms
+namespace: biological_process
+def: "Any process evolved to enable an interaction with an organism of a different species." [GOC:cc]
+subset: gocheck_do_not_annotate
+subset: goslim_candida
+subset: goslim_pir
+synonym: "interaction with another species" EXACT []
+synonym: "interspecies interaction" EXACT []
+synonym: "interspecies interaction between organisms" EXACT []
+synonym: "interspecies interaction with other organisms" EXACT []
+is_a: GO:0008150 ! biological_process
+property_value: IAO:0000233 https://github.com/geneontology/go-ontology/issues/20191 xsd:anyURI
+property_value: RO:0002161 NCBITaxon:4895
 
 [Term]
 id: GO:0044703
@@ -4980,6 +5103,16 @@ synonym: "physiological interaction with other organism" EXACT []
 is_a: GO:0008150 ! biological_process
 
 [Term]
+id: GO:0051707
+name: response to other organism
+namespace: biological_process
+alt_id: GO:0009613
+alt_id: GO:0042828
+def: "Any process that results in a change in state or activity of a cell or an organism (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of a stimulus from another living organism." [GOC:ai]
+is_a: GO:0043207 ! response to external biotic stimulus
+is_a: GO:0044419 ! biological process involved in interspecies interaction between organisms
+
+[Term]
 id: GO:0051716
 name: cellular response to stimulus
 namespace: biological_process
@@ -6076,6 +6209,17 @@ def: "The series of events in which low humidity is detected and converted into 
 is_a: GO:0098513 ! detection of humidity
 created_by: dos
 creation_date: 2013-09-25T14:27:18Z
+
+[Term]
+id: GO:0098581
+name: detection of external biotic stimulus
+namespace: biological_process
+def: "The series of events in which an external biotic stimulus is detected and converted into a molecular signal.  An external biotic stimulus is defined as one caused or produced by a living organism other than the one being stimulated." [GOC:dos]
+synonym: "detection of exogenous biotic stimulus" EXACT []
+is_a: GO:0009595 ! detection of biotic stimulus
+is_a: GO:0043207 ! response to external biotic stimulus
+created_by: dos
+creation_date: 2014-01-22T14:20:16Z
 
 [Term]
 id: GO:0098590
