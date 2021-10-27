@@ -61,10 +61,11 @@ reports/spellcheck.txt: fbbt-simple.obo install_flybase_scripts ../../tools/dict
 
 all_reports: all_reports_onestep $(REPORT_FILES)
 
-prepare_release: $(ASSETS) $(PATTERN_RELEASE_FILES)
+prepare_release: $(ASSETS) $(PATTERN_RELEASE_FILES) mappings.sssom.tsv
 	rsync -R $(ASSETS) $(RELEASEDIR) &&\
 	mkdir -p $(RELEASEDIR)/patterns &&\
 	cp $(PATTERN_RELEASE_FILES) $(RELEASEDIR)/patterns &&\
+	cp mappings.sssom.tsv $(RELEASEDIR)/fbbt-mappings.sssom.tsv &&\
 	echo "Release files are now in $(RELEASEDIR) - now you should commit, push and make a release on github"
 
 
@@ -177,7 +178,25 @@ tmp/FBgn_template.tsv: $(IMPORTSEED)
 components/flybase_import.owl: tmp/FBgn_template.tsv
 	if [ $(IMP) = true ]; then $(ROBOT) template --input-iri http://purl.obolibrary.org/obo/ro.owl --template $< \
 	annotate --ontology-iri "http://purl.obolibrary.org/obo/fbbt/components/flybase_import.owl" --output $@ && rm $<; fi
-	
+
+
+#######################################################################
+### Update exact_mappings.owl
+#######################################################################
+
+mappings.sssom.tsv: mappings.tsv ../scripts/mappings2sssom.awk
+	sort -t'\t' -k1,4 $< | awk -f ../scripts/mappings2sssom.awk > $@
+
+tmp/exact_mapping_template.tsv: mappings.sssom.tsv
+	echo 'ID	Cross-reference' > $@
+	echo 'ID	A oboInOwl:hasDbXref' >> $@
+	sed -n '/skos:exactMatch/p' $< | cut -f1,4 >> $@
+
+components/exact_mappings.owl: tmp/exact_mapping_template.tsv fbbt-edit.obo
+	$(ROBOT) template --input fbbt-edit.obo --template tmp/exact_mapping_template.tsv \
+		--ontology-iri http://purl.obolibrary.org/obo/fbbt/components/exact_mappings.owl \
+		--output components/exact_mappings.owl
+	rm tmp/exact_mapping_template.tsv
 
 ######################################################################################
 ### Generate the flybase anatomy version of FBBT
