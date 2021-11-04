@@ -185,7 +185,7 @@ components/flybase_import.owl: tmp/FBgn_template.tsv
 #######################################################################
 
 mappings.sssom.tsv: mappings.tsv ../scripts/mappings2sssom.awk
-	sort -t'\t' -k1,4 $< | awk -f ../scripts/mappings2sssom.awk > $@
+	sort -t'	' -k1,4 $< | awk -f ../scripts/mappings2sssom.awk > $@
 
 tmp/exact_mapping_template.tsv: mappings.sssom.tsv
 	echo 'ID	Cross-reference' > $@
