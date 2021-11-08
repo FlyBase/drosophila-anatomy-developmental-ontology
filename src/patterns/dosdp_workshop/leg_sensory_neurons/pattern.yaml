@@ -5,7 +5,7 @@ classes:
 
 relations:
   capable_of: RO:0002215
-  has_postsynaptic_terminal_in: RO:0002110
+  has_sensory_dendrite_in: RO:0013007
 
 vars:
   mode_1: thing
@@ -26,7 +26,7 @@ name:
     - sensillum
 
 def:
-  text: "Sensory neuron that has a dendrite in the %s leg tarsal taste bristle %s and is capable of detecting %s stimuli (Ling et al., 2014)."
+  text: "Sensory neuron that has a dendrite in the %s leg tarsal taste bristle %s and is capable of detecting %s stimuli Chen and Amrein, 2017)."
   vars:
     - leg_name
     - sensillum
@@ -36,7 +36,7 @@ def:
 logical_axioms:
   - 
     axiom_type: equivalentTo
-    text: "FBbt:00005106 that 'capable_of' some %s and 'has_postsynaptic_terminal_in' some %s"
+    text: "FBbt:00005106 that 'capable_of' some %s and 'has_sensory_dendrite_in' some %s"
     vars:
       - mode_ID
       - sensillum_ID
