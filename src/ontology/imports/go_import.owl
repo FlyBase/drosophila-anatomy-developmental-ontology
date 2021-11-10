@@ -11,9 +11,9 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/fbbt/imports/go_import.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/fbbt/releases/2021-10-14/imports/go_import.owl"/>
-        <dc:source rdf:resource="http://purl.obolibrary.org/obo/go/releases/2021-09-01/go.owl"/>
-        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2021-10-14</owl:versionInfo>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/fbbt/releases/2021-11-10/imports/go_import.owl"/>
+        <dc:source rdf:resource="http://purl.obolibrary.org/obo/go/releases/2021-10-26/go.owl"/>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2021-11-10</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -1249,6 +1249,50 @@
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:dph</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>GOC:mtg_cardio</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:tb</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GO_0003022 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0003022">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0003030"/>
+        <obo:IAO_0000115>The process in which information about the levels of hydrogen ions are received and are converted to a molecular signal by chemoreceptors.</obo:IAO_0000115>
+        <oboInOwl:hasExactSynonym>detection of pH by chemoreceptor signalling</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>GO:0003022</oboInOwl:id>
+        <rdfs:label>detection of pH by chemoreceptor signaling</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0003022"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>The process in which information about the levels of hydrogen ions are received and are converted to a molecular signal by chemoreceptors.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>GOC:mtg_cardio</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>ISBN:0323031951</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0003022"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>detection of pH by chemoreceptor signalling</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:mah</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GO_0003030 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0003030">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0009593"/>
+        <obo:IAO_0000115>The series of events in which a hydrogen ion stimulus is received by a cell and converted into a molecular signal.</obo:IAO_0000115>
+        <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>GO:0003030</oboInOwl:id>
+        <rdfs:label>detection of hydrogen ion</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0003030"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>The series of events in which a hydrogen ion stimulus is received by a cell and converted into a molecular signal.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>GOC:mtg_cardio</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -3857,6 +3901,7 @@
         <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
         <oboInOwl:hasRelatedSynonym>single-organism cellular process</oboInOwl:hasRelatedSynonym>
         <oboInOwl:id>GO:0009987</oboInOwl:id>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#gocheck_do_not_annotate"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_plant"/>
         <rdfs:label>cellular process</rdfs:label>
     </owl:Class>
@@ -8092,7 +8137,7 @@
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>The directed movement of a motile cell or organism in response to an external stimulus.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:jl</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ISBN:0192801023</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>ISBN:0192801023</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -9000,7 +9045,7 @@
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0044419"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Any process evolved to enable an interaction with an organism of a different species.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>GOC:cc</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:cc</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -10382,6 +10427,7 @@
         <oboInOwl:hasNarrowSynonym>stimulation of cellular process</oboInOwl:hasNarrowSynonym>
         <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
         <oboInOwl:id>GO:0048522</oboInOwl:id>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#gocheck_do_not_annotate"/>
         <rdfs:label>positive regulation of cellular process</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -10424,6 +10470,7 @@
         <oboInOwl:hasNarrowSynonym>inhibition of cellular process</oboInOwl:hasNarrowSynonym>
         <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
         <oboInOwl:id>GO:0048523</oboInOwl:id>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#gocheck_do_not_annotate"/>
         <rdfs:label>negative regulation of cellular process</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -10766,6 +10813,7 @@
         <oboInOwl:hasExactSynonym>regulation of cellular physiological process</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
         <oboInOwl:id>GO:0050794</oboInOwl:id>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#gocheck_do_not_annotate"/>
         <rdfs:label>regulation of cellular process</rdfs:label>
     </owl:Class>
     <owl:Axiom>
