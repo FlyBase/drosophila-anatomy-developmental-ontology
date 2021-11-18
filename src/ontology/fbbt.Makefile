@@ -221,6 +221,15 @@ post_release: obo_qc fly_anatomy.obo reports/chado_load_check_simple.txt
 	cp fly_anatomy.obo ../..
 	mv obo_qc_$(ONT).obo.txt reports/obo_qc_$(ONT).obo.txt
 	mv obo_qc_$(ONT).owl.txt reports/obo_qc_$(ONT).owl.txt
+
+
+#######################################################################
+### Subsets
+#######################################################################
+
+scrnaseq-slim.owl: $(ONT)-simple.owl
+	owltools --use-catalog $< --extract-ontology-subset --subset scrnaseq_slim \
+		--iri $(URIBASE)/fbbt/scrnaseq-slim.owl -o $@
 	
 	
 ########################
