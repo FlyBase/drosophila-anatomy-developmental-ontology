@@ -10,10 +10,19 @@ import pandas as pd
 from collections import OrderedDict
 
 fbbt = json.load(open("fbbt.json", "r"))
+
+# exclusions
 new_cells = pd.read_csv(("../patterns/robot_template_projects"
 						"/hemibrain_new_types/new_cell_types.tsv"), sep='\t')
 new_cells['FBbt_id_long'] = new_cells['FBbt_id'].apply(
 						lambda x: 'http://purl.obolibrary.org/obo/' + x.replace(':','_'))
+new_ALLNs = pd.read_csv(("../patterns/robot_template_projects"
+						"/hemibrain_new_types/new_ALLNs.tsv"), sep='\t')
+new_ALLNs['FBbt_id_long'] = new_ALLNs['FBbt_id'].apply(
+						lambda x: 'http://purl.obolibrary.org/obo/' + x.replace(':','_'))
+feng_ids = ['http://purl.obolibrary.org/obo/FBbt_000' + n for n in [str(i) for i in range(51089, 51173)]]
+
+excluded_terms = new_cells['FBbt_id_long'].tolist() + new_ALLNs['FBbt_id_long'].tolist() + feng_ids
 
 #find all nervous systems and parts of them - nervous system = FBbt_00005093
 
@@ -35,14 +44,9 @@ while x > 0:
             terms.append(i)
     new_terms.clear()
 
-# remove hemibrain provisional cell types (from templates folder)
+# remove excluded cell types
 
-result = [r for r in result if r not in new_cells['FBbt_id_long'].tolist()]
-
-# remove provisional Feng neurons
-
-feng_ids = ['http://purl.obolibrary.org/obo/FBbt_000' + n for n in [str(i) for i in range(51089, 51173)]]
-result = [r for r in result if not r in feng_ids]
+result = [r for r in result if r not in excluded_terms]
 
 """
 # to output list of results - not usually needed

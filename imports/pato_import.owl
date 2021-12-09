@@ -1,19 +1,16 @@
 <?xml version="1.0"?>
 <rdf:RDF xmlns="http://purl.obolibrary.org/obo/fbbt/imports/pato_import.owl#"
      xml:base="http://purl.obolibrary.org/obo/fbbt/imports/pato_import.owl"
-     xmlns:dc="http://purl.org/dc/elements/1.1/"
      xmlns:obo="http://purl.obolibrary.org/obo/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:pato="http://purl.obolibrary.org/obo/pato#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/fbbt/imports/pato_import.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/fbbt/releases/2021-10-14/imports/pato_import.owl"/>
-        <dc:source rdf:resource="http://purl.obolibrary.org/obo/pato/releases/2021-09-09/pato-simple.owl"/>
-        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2021-10-14</owl:versionInfo>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/fbbt/releases/2021-12-09/imports/pato_import.owl"/>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2021-12-09</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -29,174 +26,9 @@
     
 
 
-    <!-- http://purl.obolibrary.org/obo/IAO_0000111 -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000111"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/IAO_0000112 -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000112"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/IAO_0000114 -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000114"/>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/IAO_0000115 -->
 
-    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000115">
-        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000122"/>
-        <rdfs:label>definition</rdfs:label>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/IAO_0000116 -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000116"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/IAO_0000117 -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000117"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/IAO_0000118 -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000118"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/IAO_0000231 -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000231"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/IAO_0000424 -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000424"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/IAO_0000589 -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000589"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/IAO_0100001 -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0100001">
-        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000125"/>
-        <rdfs:label>term replaced by</rdfs:label>
-        <rdfs:label xml:lang="en">term replaced by</rdfs:label>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/RO_0001900 -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/RO_0001900"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/RO_0002604 -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002604"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/RO_0040042 -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/RO_0040042"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/valid_for_go_annotation_extension -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/valid_for_go_annotation_extension">
-        <rdfs:subPropertyOf rdf:resource="http://www.geneontology.org/formats/oboInOwl#SubsetProperty"/>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/valid_for_go_gp2term -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/valid_for_go_gp2term">
-        <rdfs:subPropertyOf rdf:resource="http://www.geneontology.org/formats/oboInOwl#SubsetProperty"/>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/valid_for_go_ontology -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/valid_for_go_ontology">
-        <rdfs:subPropertyOf rdf:resource="http://www.geneontology.org/formats/oboInOwl#SubsetProperty"/>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/valid_for_gocam -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/valid_for_gocam">
-        <rdfs:subPropertyOf rdf:resource="http://www.geneontology.org/formats/oboInOwl#SubsetProperty"/>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/pato#attribute_slim -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/pato#attribute_slim">
-        <rdfs:subPropertyOf rdf:resource="http://www.geneontology.org/formats/oboInOwl#SubsetProperty"/>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/pato#hpo_slim -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/pato#hpo_slim">
-        <rdfs:subPropertyOf rdf:resource="http://www.geneontology.org/formats/oboInOwl#SubsetProperty"/>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/pato#mpath_slim -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/pato#mpath_slim">
-        <rdfs:subPropertyOf rdf:resource="http://www.geneontology.org/formats/oboInOwl#SubsetProperty"/>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/pato#value_slim -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/pato#value_slim">
-        <rdfs:subPropertyOf rdf:resource="http://www.geneontology.org/formats/oboInOwl#SubsetProperty"/>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://www.geneontology.org/formats/oboInOwl#SubsetProperty -->
-
-    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#SubsetProperty">
-        <rdfs:label>subset_property</rdfs:label>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://www.geneontology.org/formats/oboInOwl#consider -->
-
-    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#consider">
-        <rdfs:label>consider</rdfs:label>
-    </owl:AnnotationProperty>
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000115"/>
     
 
 
@@ -212,73 +44,45 @@
     
 
 
-    <!-- http://www.geneontology.org/formats/oboInOwl#default-namespace -->
-
-    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#default-namespace"/>
-    
-
-
     <!-- http://www.geneontology.org/formats/oboInOwl#hasAlternativeId -->
 
-    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasAlternativeId">
-        <rdfs:label>has_alternative_id</rdfs:label>
-    </owl:AnnotationProperty>
+    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasAlternativeId"/>
     
 
 
     <!-- http://www.geneontology.org/formats/oboInOwl#hasBroadSynonym -->
 
-    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasBroadSynonym">
-        <rdfs:label>has_broad_synonym</rdfs:label>
-    </owl:AnnotationProperty>
+    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasBroadSynonym"/>
     
 
 
     <!-- http://www.geneontology.org/formats/oboInOwl#hasDbXref -->
 
-    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasDbXref">
-        <rdfs:label>database_cross_reference</rdfs:label>
-    </owl:AnnotationProperty>
+    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
     
 
 
     <!-- http://www.geneontology.org/formats/oboInOwl#hasExactSynonym -->
 
-    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym">
-        <rdfs:label>has_exact_synonym</rdfs:label>
-    </owl:AnnotationProperty>
+    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
     
 
 
     <!-- http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym -->
 
-    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym">
-        <rdfs:label>has_narrow_synonym</rdfs:label>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://www.geneontology.org/formats/oboInOwl#hasOBOFormatVersion -->
-
-    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasOBOFormatVersion">
-        <rdfs:label>has_obo_format_version</rdfs:label>
-    </owl:AnnotationProperty>
+    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym"/>
     
 
 
     <!-- http://www.geneontology.org/formats/oboInOwl#hasOBONamespace -->
 
-    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasOBONamespace">
-        <rdfs:label>has_obo_namespace</rdfs:label>
-    </owl:AnnotationProperty>
+    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasOBONamespace"/>
     
 
 
     <!-- http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym -->
 
-    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym">
-        <rdfs:label>has_related_synonym</rdfs:label>
-    </owl:AnnotationProperty>
+    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
     
 
 
@@ -290,41 +94,7 @@
 
     <!-- http://www.geneontology.org/formats/oboInOwl#inSubset -->
 
-    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#inSubset">
-        <rdfs:label>in_subset</rdfs:label>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://www.geneontology.org/formats/oboInOwl#is_cyclic -->
-
-    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#is_cyclic"/>
-    
-
-
-    <!-- http://www.geneontology.org/formats/oboInOwl#shorthand -->
-
-    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#shorthand">
-        <rdfs:label>shorthand</rdfs:label>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://www.w3.org/2000/01/rdf-schema#comment -->
-
-    <owl:AnnotationProperty rdf:about="http://www.w3.org/2000/01/rdf-schema#comment"/>
-    
-
-
-    <!-- http://www.w3.org/2000/01/rdf-schema#label -->
-
-    <owl:AnnotationProperty rdf:about="http://www.w3.org/2000/01/rdf-schema#label"/>
-    
-
-
-    <!-- http://www.w3.org/2002/07/owl#deprecated -->
-
-    <owl:AnnotationProperty rdf:about="http://www.w3.org/2002/07/owl#deprecated"/>
+    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#inSubset"/>
     
 
 
@@ -339,150 +109,27 @@
     
 
 
-    <!-- http://purl.obolibrary.org/obo/BFO_0000050 -->
-
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/BFO_0000050">
-        <owl:inverseOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
-        <obo:IAO_0000111>is part of</obo:IAO_0000111>
-        <obo:IAO_0000111 xml:lang="en">is part of</obo:IAO_0000111>
-        <obo:IAO_0000112>my brain is part of my body (continuant parthood, two material entities)</obo:IAO_0000112>
-        <obo:IAO_0000112 xml:lang="en">my brain is part of my body (continuant parthood, two material entities)</obo:IAO_0000112>
-        <obo:IAO_0000112>my stomach cavity is part of my stomach (continuant parthood, immaterial entity is part of material entity)</obo:IAO_0000112>
-        <obo:IAO_0000112 xml:lang="en">my stomach cavity is part of my stomach (continuant parthood, immaterial entity is part of material entity)</obo:IAO_0000112>
-        <obo:IAO_0000112>this day is part of this year (occurrent parthood)</obo:IAO_0000112>
-        <obo:IAO_0000112 xml:lang="en">this day is part of this year (occurrent parthood)</obo:IAO_0000112>
-        <obo:IAO_0000115>a core relation that holds between a part and its whole</obo:IAO_0000115>
-        <obo:IAO_0000115 xml:lang="en">a core relation that holds between a part and its whole</obo:IAO_0000115>
-        <obo:IAO_0000116>Everything is part of itself. Any part of any part of a thing is itself part of that thing. Two distinct things cannot be part of each other.</obo:IAO_0000116>
-        <obo:IAO_0000116 xml:lang="en">Everything is part of itself. Any part of any part of a thing is itself part of that thing. Two distinct things cannot be part of each other.</obo:IAO_0000116>
-        <obo:IAO_0000116>Occurrents are not subject to change and so parthood between occurrents holds for all the times that the part exists. Many continuants are subject to change, so parthood between continuants will only hold at certain times, but this is difficult to specify in OWL. See http://purl.obolibrary.org/obo/ro/docs/temporal-semantics/</obo:IAO_0000116>
-        <obo:IAO_0000116 xml:lang="en">Occurrents are not subject to change and so parthood between occurrents holds for all the times that the part exists. Many continuants are subject to change, so parthood between continuants will only hold at certain times, but this is difficult to specify in OWL. See http://purl.obolibrary.org/obo/ro/docs/temporal-semantics/</obo:IAO_0000116>
-        <obo:IAO_0000116>Occurrents are not subject to change and so parthood between occurrents holds for all the times that the part exists. Many continuants are subject to change, so parthood between continuants will only hold at certain times, but this is difficult to specify in OWL. See https://code.google.com/p/obo-relations/wiki/ROAndTime</obo:IAO_0000116>
-        <obo:IAO_0000116>Parthood requires the part and the whole to have compatible classes: only an occurrent can be part of an occurrent; only a process can be part of a process; only a continuant can be part of a continuant; only an independent continuant can be part of an independent continuant; only an immaterial entity can be part of an immaterial entity; only a specifically dependent continuant can be part of a specifically dependent continuant; only a generically dependent continuant can be part of a generically dependent continuant. (This list is not exhaustive.)
-
-A continuant cannot be part of an occurrent: use &apos;participates in&apos;. An occurrent cannot be part of a continuant: use &apos;has participant&apos;. A material entity cannot be part of an immaterial entity: use &apos;has location&apos;. A specifically dependent continuant cannot be part of an independent continuant: use &apos;inheres in&apos;. An independent continuant cannot be part of a specifically dependent continuant: use &apos;bearer of&apos;.</obo:IAO_0000116>
-        <obo:IAO_0000116 xml:lang="en">Parthood requires the part and the whole to have compatible classes: only an occurrent can be part of an occurrent; only a process can be part of a process; only a continuant can be part of a continuant; only an independent continuant can be part of an independent continuant; only an immaterial entity can be part of an immaterial entity; only a specifically dependent continuant can be part of a specifically dependent continuant; only a generically dependent continuant can be part of a generically dependent continuant. (This list is not exhaustive.)
-
-A continuant cannot be part of an occurrent: use &apos;participates in&apos;. An occurrent cannot be part of a continuant: use &apos;has participant&apos;. A material entity cannot be part of an immaterial entity: use &apos;has location&apos;. A specifically dependent continuant cannot be part of an independent continuant: use &apos;inheres in&apos;. An independent continuant cannot be part of a specifically dependent continuant: use &apos;bearer of&apos;.</obo:IAO_0000116>
-        <obo:IAO_0000118>part_of</obo:IAO_0000118>
-        <obo:IAO_0000118 xml:lang="en">part_of</obo:IAO_0000118>
-        <obo:RO_0001900 rdf:resource="http://purl.obolibrary.org/obo/RO_0001901"/>
-        <obo:RO_0040042 rdf:resource="http://purl.obolibrary.org/obo/BFO_0000002"/>
-        <obo:RO_0040042 rdf:resource="http://purl.obolibrary.org/obo/BFO_0000003"/>
-        <obo:RO_0040042 rdf:resource="http://purl.obolibrary.org/obo/BFO_0000004"/>
-        <obo:RO_0040042 rdf:resource="http://purl.obolibrary.org/obo/BFO_0000017"/>
-        <obo:RO_0040042 rdf:resource="http://purl.obolibrary.org/obo/BFO_0000019"/>
-        <obo:RO_0040042 rdf:resource="http://purl.obolibrary.org/obo/BFO_0000020"/>
-        <obo:RO_0040042 rdf:resource="http://purl.obolibrary.org/obo/BFO_0000031"/>
-        <oboInOwl:hasDbXref>BFO:0000050</oboInOwl:hasDbXref>
-        <oboInOwl:hasOBONamespace>external</oboInOwl:hasOBONamespace>
-        <oboInOwl:hasOBONamespace>protein</oboInOwl:hasOBONamespace>
-        <oboInOwl:hasOBONamespace>quality</oboInOwl:hasOBONamespace>
-        <oboInOwl:hasOBONamespace>uberon</oboInOwl:hasOBONamespace>
-        <oboInOwl:id>part_of</oboInOwl:id>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/valid_for_go_annotation_extension"/>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/valid_for_go_gp2term"/>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/valid_for_go_ontology"/>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/valid_for_gocam"/>
-        <oboInOwl:shorthand>part_of</oboInOwl:shorthand>
-        <rdfs:label>part of</rdfs:label>
-        <rdfs:label xml:lang="en">part of</rdfs:label>
-        <rdfs:label>part_of</rdfs:label>
-        <rdfs:seeAlso rdf:resource="http://ontologydesignpatterns.org/wiki/Community:Parts_and_Collections"/>
-        <rdfs:seeAlso rdf:resource="http://ontologydesignpatterns.org/wiki/Submissions:PartOf"/>
-        <rdfs:seeAlso>http://www.obofoundry.org/ro/#OBO_REL:part_of</rdfs:seeAlso>
-    </owl:ObjectProperty>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/BFO_0000051 -->
 
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/BFO_0000051">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
-        <obo:IAO_0000111>has part</obo:IAO_0000111>
-        <obo:IAO_0000111 xml:lang="en">has part</obo:IAO_0000111>
-        <obo:IAO_0000112>my body has part my brain (continuant parthood, two material entities)</obo:IAO_0000112>
-        <obo:IAO_0000112 xml:lang="en">my body has part my brain (continuant parthood, two material entities)</obo:IAO_0000112>
-        <obo:IAO_0000112>my stomach has part my stomach cavity (continuant parthood, material entity has part immaterial entity)</obo:IAO_0000112>
-        <obo:IAO_0000112 xml:lang="en">my stomach has part my stomach cavity (continuant parthood, material entity has part immaterial entity)</obo:IAO_0000112>
-        <obo:IAO_0000112>this year has part this day (occurrent parthood)</obo:IAO_0000112>
-        <obo:IAO_0000112 xml:lang="en">this year has part this day (occurrent parthood)</obo:IAO_0000112>
-        <obo:IAO_0000115>Q1 has_part Q2 if and only if: every instance of Q1 is a quality_of an entity that has_quality some Q2.</obo:IAO_0000115>
-        <obo:IAO_0000115>a core relation that holds between a whole and its part</obo:IAO_0000115>
-        <obo:IAO_0000115 xml:lang="en">a core relation that holds between a whole and its part</obo:IAO_0000115>
-        <obo:IAO_0000116>Everything has itself as a part. Any part of any part of a thing is itself part of that thing. Two distinct things cannot have each other as a part.</obo:IAO_0000116>
-        <obo:IAO_0000116 xml:lang="en">Everything has itself as a part. Any part of any part of a thing is itself part of that thing. Two distinct things cannot have each other as a part.</obo:IAO_0000116>
-        <obo:IAO_0000116>Occurrents are not subject to change and so parthood between occurrents holds for all the times that the part exists. Many continuants are subject to change, so parthood between continuants will only hold at certain times, but this is difficult to specify in OWL. See http://purl.obolibrary.org/obo/ro/docs/temporal-semantics/</obo:IAO_0000116>
-        <obo:IAO_0000116 xml:lang="en">Occurrents are not subject to change and so parthood between occurrents holds for all the times that the part exists. Many continuants are subject to change, so parthood between continuants will only hold at certain times, but this is difficult to specify in OWL. See http://purl.obolibrary.org/obo/ro/docs/temporal-semantics/</obo:IAO_0000116>
-        <obo:IAO_0000116>Occurrents are not subject to change and so parthood between occurrents holds for all the times that the part exists. Many continuants are subject to change, so parthood between continuants will only hold at certain times, but this is difficult to specify in OWL. See https://code.google.com/p/obo-relations/wiki/ROAndTime</obo:IAO_0000116>
-        <obo:IAO_0000116>Parthood requires the part and the whole to have compatible classes: only an occurrent have an occurrent as part; only a process can have a process as part; only a continuant can have a continuant as part; only an independent continuant can have an independent continuant as part; only a specifically dependent continuant can have a specifically dependent continuant as part; only a generically dependent continuant can have a generically dependent continuant as part. (This list is not exhaustive.)
-
-A continuant cannot have an occurrent as part: use &apos;participates in&apos;. An occurrent cannot have a continuant as part: use &apos;has participant&apos;. An immaterial entity cannot have a material entity as part: use &apos;location of&apos;. An independent continuant cannot have a specifically dependent continuant as part: use &apos;bearer of&apos;. A specifically dependent continuant cannot have an independent continuant as part: use &apos;inheres in&apos;.</obo:IAO_0000116>
-        <obo:IAO_0000116 xml:lang="en">Parthood requires the part and the whole to have compatible classes: only an occurrent have an occurrent as part; only a process can have a process as part; only a continuant can have a continuant as part; only an independent continuant can have an independent continuant as part; only a specifically dependent continuant can have a specifically dependent continuant as part; only a generically dependent continuant can have a generically dependent continuant as part. (This list is not exhaustive.)
-
-A continuant cannot have an occurrent as part: use &apos;participates in&apos;. An occurrent cannot have a continuant as part: use &apos;has participant&apos;. An immaterial entity cannot have a material entity as part: use &apos;location of&apos;. An independent continuant cannot have a specifically dependent continuant as part: use &apos;bearer of&apos;. A specifically dependent continuant cannot have an independent continuant as part: use &apos;inheres in&apos;.</obo:IAO_0000116>
-        <obo:IAO_0000118>has_part</obo:IAO_0000118>
-        <obo:IAO_0000118 xml:lang="en">has_part</obo:IAO_0000118>
-        <obo:RO_0001900 rdf:resource="http://purl.obolibrary.org/obo/RO_0001901"/>
-        <oboInOwl:hasDbXref>BFO:0000051</oboInOwl:hasDbXref>
-        <oboInOwl:hasOBONamespace>chebi_ontology</oboInOwl:hasOBONamespace>
-        <oboInOwl:hasOBONamespace>external</oboInOwl:hasOBONamespace>
-        <oboInOwl:hasOBONamespace>protein</oboInOwl:hasOBONamespace>
-        <oboInOwl:hasOBONamespace>quality</oboInOwl:hasOBONamespace>
-        <oboInOwl:hasOBONamespace>uberon</oboInOwl:hasOBONamespace>
-        <oboInOwl:id>has_part</oboInOwl:id>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/valid_for_go_annotation_extension"/>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/valid_for_go_ontology"/>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/valid_for_gocam"/>
-        <oboInOwl:is_cyclic rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</oboInOwl:is_cyclic>
-        <oboInOwl:shorthand>has_part</oboInOwl:shorthand>
-        <rdfs:comment>We use the has_part relation to relate complex qualities to more primitive ones. A complex quality is a collection of qualities. The complex quality cannot exist without the sub-qualities. For example, the quality &apos;swollen&apos; necessarily comes with the qualities of &apos;protruding&apos; and &apos;increased size&apos;.</rdfs:comment>
-        <rdfs:label>has part</rdfs:label>
-        <rdfs:label xml:lang="en">has part</rdfs:label>
-        <rdfs:label>has_part</rdfs:label>
-    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/BFO_0000051"/>
     
 
 
     <!-- http://purl.obolibrary.org/obo/RO_0000053 -->
 
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0000053">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
-        <obo:IAO_0000111 xml:lang="en">bearer of</obo:IAO_0000111>
-        <obo:IAO_0000112 xml:lang="en">this apple is bearer of this red color</obo:IAO_0000112>
-        <obo:IAO_0000112 xml:lang="en">this vase is bearer of this fragility</obo:IAO_0000112>
-        <obo:IAO_0000115 xml:lang="en">Inverse of characteristic_of</obo:IAO_0000115>
-        <obo:IAO_0000116 xml:lang="en">A bearer can have many dependents, and its dependents can exist for different periods of time, but none of its dependents can exist when the bearer does not exist.</obo:IAO_0000116>
-        <obo:IAO_0000118 xml:lang="en">bearer_of</obo:IAO_0000118>
-        <obo:IAO_0000118 xml:lang="en">is bearer of</obo:IAO_0000118>
-        <obo:RO_0001900 rdf:resource="http://purl.obolibrary.org/obo/RO_0001901"/>
-        <oboInOwl:hasDbXref>RO:0000053</oboInOwl:hasDbXref>
-        <oboInOwl:hasOBONamespace>uberon</oboInOwl:hasOBONamespace>
-        <oboInOwl:id>bearer_of</oboInOwl:id>
-        <oboInOwl:shorthand>bearer_of</oboInOwl:shorthand>
-        <rdfs:label>bearer of</rdfs:label>
-        <rdfs:label xml:lang="en">bearer of</rdfs:label>
-        <rdfs:label xml:lang="en">has characteristic</rdfs:label>
-    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0000053"/>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/RO_0002100 -->
+    <!-- http://purl.obolibrary.org/obo/pato#has_cross_section -->
 
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002100">
-        <owl:propertyChainAxiom rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/RO_0002100"/>
-            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000050"/>
-        </owl:propertyChainAxiom>
-        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000125"/>
-        <obo:IAO_0000115 xml:lang="en">Relation between a neuron and an anatomical structure that its soma is part of.</obo:IAO_0000115>
-        <obo:IAO_0000117>David Osumi-Sutherland</obo:IAO_0000117>
-        <obo:IAO_0000424>&lt;http://purl.obolibrary.org/obo/BFO_0000051&gt; some (
-   &lt;http://purl.obolibrary.org/obo/GO_0043025&gt; and   &lt;http://purl.obolibrary.org/obo/BFO_0000050&gt; some ?Y)</obo:IAO_0000424>
-        <obo:RO_0001900 rdf:resource="http://purl.obolibrary.org/obo/RO_0001901"/>
-        <rdfs:label xml:lang="en">has soma location</rdfs:label>
-    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/pato#has_cross_section"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/pato#increased_in_magnitude_relative_to -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/pato#increased_in_magnitude_relative_to"/>
     
 
 
@@ -501,7 +148,6 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0000001">
         <obo:IAO_0000115>A dependent entity that inheres in a bearer by virtue of how the bearer is related to other entities</obo:IAO_0000115>
-        <obo:IAO_0000589>quality (PATO)</obo:IAO_0000589>
         <oboInOwl:hasAlternativeId>PATO:0000072</oboInOwl:hasAlternativeId>
         <oboInOwl:hasOBONamespace>quality</oboInOwl:hasOBONamespace>
         <oboInOwl:id>PATO:0000001</oboInOwl:id>
@@ -516,110 +162,13 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
     
 
 
-    <!-- http://purl.obolibrary.org/obo/PATO_0000051 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0000051">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0001241"/>
-        <obo:IAO_0000115>A quality of a single physical entity inhering in the bearer by virtue of the bearer&apos;s size or shape or structure.</obo:IAO_0000115>
-        <oboInOwl:hasOBONamespace>quality</oboInOwl:hasOBONamespace>
-        <oboInOwl:id>PATO:0000051</oboInOwl:id>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/pato#attribute_slim"/>
-        <rdfs:label>morphology</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0000051"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>A quality of a single physical entity inhering in the bearer by virtue of the bearer&apos;s size or shape or structure.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATOC:GVG</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/PATO_0000060 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0000060">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0000051"/>
-        <obo:IAO_0000115>A spatial quality inhering in a bearer by virtue of the bearer&apos;s exhibiting repetition of placement of its parts.</obo:IAO_0000115>
-        <oboInOwl:hasAlternativeId>PATO:0000132</oboInOwl:hasAlternativeId>
-        <oboInOwl:hasAlternativeId>PATO:0001565</oboInOwl:hasAlternativeId>
-        <oboInOwl:hasExactSynonym>distribution</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasOBONamespace>quality</oboInOwl:hasOBONamespace>
-        <oboInOwl:hasRelatedSynonym>pattern</oboInOwl:hasRelatedSynonym>
-        <oboInOwl:id>PATO:0000060</oboInOwl:id>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/pato#attribute_slim"/>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/pato#hpo_slim"/>
-        <rdfs:label>spatial pattern</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0000060"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>A spatial quality inhering in a bearer by virtue of the bearer&apos;s exhibiting repetition of placement of its parts.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATOC:GVG</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/PATO_0000140 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0000140">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0001018"/>
-        <obo:IAO_0000115>A spatial quality inhering in a bearer by virtue of the bearer&apos;s spatial location relative to other objects in the vicinity.</obo:IAO_0000115>
-        <oboInOwl:hasAlternativeId>PATO:0001032</oboInOwl:hasAlternativeId>
-        <oboInOwl:hasAlternativeId>PATO:0001631</oboInOwl:hasAlternativeId>
-        <oboInOwl:hasExactSynonym>location</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>placement</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>relational spatial quality</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasOBONamespace>quality</oboInOwl:hasOBONamespace>
-        <oboInOwl:id>PATO:0000140</oboInOwl:id>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/pato#attribute_slim"/>
-        <rdfs:label>position</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0000140"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>A spatial quality inhering in a bearer by virtue of the bearer&apos;s spatial location relative to other objects in the vicinity.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATOC:GVG</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/PATO_0000141 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0000141">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0000051"/>
-        <obo:IAO_0000115>A morphology quality inhering in a bearer by virtue of the bearer&apos;s relative position, shape, arrangements and connectivity of an organism&apos;s various parts; the pattern underlying its form.</obo:IAO_0000115>
-        <oboInOwl:hasAlternativeId>PATO:0001452</oboInOwl:hasAlternativeId>
-        <oboInOwl:hasBroadSynonym>conformation</oboInOwl:hasBroadSynonym>
-        <oboInOwl:hasExactSynonym>relational structural quality</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasOBONamespace>quality</oboInOwl:hasOBONamespace>
-        <oboInOwl:id>PATO:0000141</oboInOwl:id>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/pato#attribute_slim"/>
-        <rdfs:label>structure</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0000141"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>A morphology quality inhering in a bearer by virtue of the bearer&apos;s relative position, shape, arrangements and connectivity of an organism&apos;s various parts; the pattern underlying its form.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATOC:GVG</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0000141"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasBroadSynonym"/>
-        <owl:annotatedTarget>conformation</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>VT:1000738</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/PATO_0000618 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0000618">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0000140"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0000001"/>
         <obo:IAO_0000115>A positional quality inhering in a bearer by virtue of the bearer&apos;s having two sides; two-sided.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>quality</oboInOwl:hasOBONamespace>
         <oboInOwl:id>PATO:0000618</oboInOwl:id>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/pato#mpath_slim"/>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/pato#value_slim"/>
         <rdfs:label>bilateral</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -634,12 +183,10 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
     <!-- http://purl.obolibrary.org/obo/PATO_0000634 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0000634">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0000060"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0000001"/>
         <obo:IAO_0000115>A spatial pattern inhering in a bearer by virtue of the bearer&apos;s involvement of only one part or side.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>quality</oboInOwl:hasOBONamespace>
         <oboInOwl:id>PATO:0000634</oboInOwl:id>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/pato#mpath_slim"/>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/pato#value_slim"/>
         <rdfs:label>unilateral</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -651,69 +198,14 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
     
 
 
-    <!-- http://purl.obolibrary.org/obo/PATO_0001018 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0001018">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0001241"/>
-        <obo:IAO_0000115>A quality of a physical entity that exists through action of continuants at the physical level of organisation in relation to other entities.</obo:IAO_0000115>
-        <oboInOwl:hasAlternativeId>PATO:0002079</oboInOwl:hasAlternativeId>
-        <oboInOwl:hasDbXref>Wikipedia:Physical_property</oboInOwl:hasDbXref>
-        <oboInOwl:hasExactSynonym>relational physical quality</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasOBONamespace>quality</oboInOwl:hasOBONamespace>
-        <oboInOwl:id>PATO:0001018</oboInOwl:id>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/pato#attribute_slim"/>
-        <rdfs:label>physical quality</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0001018"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>A quality of a physical entity that exists through action of continuants at the physical level of organisation in relation to other entities.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATOC:GVG</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/PATO_0001241 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0001241">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0000001"/>
-        <obo:IAO_0000115>A quality which inheres in a continuant.</obo:IAO_0000115>
-        <oboInOwl:hasAlternativeId>PATO:0001237</oboInOwl:hasAlternativeId>
-        <oboInOwl:hasAlternativeId>PATO:0001238</oboInOwl:hasAlternativeId>
-        <oboInOwl:hasDbXref>snap:Quality</oboInOwl:hasDbXref>
-        <oboInOwl:hasExactSynonym>monadic quality of a continuant</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>multiply inhering quality of a physical entity</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>quality of a continuant</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>quality of a single physical entity</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>quality of an object</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>quality of continuant</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasNarrowSynonym>monadic quality of an object</oboInOwl:hasNarrowSynonym>
-        <oboInOwl:hasNarrowSynonym>monadic quality of continuant</oboInOwl:hasNarrowSynonym>
-        <oboInOwl:hasOBONamespace>quality</oboInOwl:hasOBONamespace>
-        <oboInOwl:id>PATO:0001241</oboInOwl:id>
-        <rdfs:comment>Relational qualities are qualities that hold between multiple entities. Normal (monadic) qualities such as the shape of a eyeball exist purely as a quality of that eyeball. A relational quality such as sensitivity to light is a quality of that eyeball (and connecting nervous system) as it relates to incoming light waves/particles.</rdfs:comment>
-        <rdfs:label>physical object quality</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0001241"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>A quality which inheres in a continuant.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATOC:GVG</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/PATO_0001861 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0001861">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0002013"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0000001"/>
         <obo:IAO_0000115>A structural quality inhering in a bearer by virtue of the bearer&apos;s forming a bundle of aligned anatomical fibers, as of muscle or nerve.</obo:IAO_0000115>
-        <obo:RO_0002604 rdf:resource="http://purl.obolibrary.org/obo/PATO_0001959"/>
         <oboInOwl:hasExactSynonym>fascicled</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>quality</oboInOwl:hasOBONamespace>
         <oboInOwl:id>PATO:0001861</oboInOwl:id>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/pato#mpath_slim"/>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/pato#value_slim"/>
         <rdfs:label>fasciculated</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -725,53 +217,15 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
     
 
 
-    <!-- http://purl.obolibrary.org/obo/PATO_0001995 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0001995">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0001241"/>
-        <obo:IAO_0000115>A quality that inheres in an entire organism or part of an organism.</obo:IAO_0000115>
-        <oboInOwl:hasOBONamespace>quality</oboInOwl:hasOBONamespace>
-        <oboInOwl:id>PATO:0001995</oboInOwl:id>
-        <rdfs:label>organismal quality</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0001995"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>A quality that inheres in an entire organism or part of an organism.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATOC:CJM</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/PATO_0002013 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0002013">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0000141"/>
-        <obo:IAO_0000115>A structural quality inhering in a bearer by virtue of whether the bearer forms a bundle of anatomical fibers, as of muscle or nerve.</obo:IAO_0000115>
-        <oboInOwl:hasOBONamespace>quality</oboInOwl:hasOBONamespace>
-        <oboInOwl:id>PATO:0002013</oboInOwl:id>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/pato#attribute_slim"/>
-        <rdfs:label>fasciculation</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0002013"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>A structural quality inhering in a bearer by virtue of whether the bearer forms a bundle of anatomical fibers, as of muscle or nerve.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>answers.com:http://www.answers.com/</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/PATO_0002451 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0002451">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0001995"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0000001"/>
         <obo:IAO_0000115>A quality inhering in a bearer by virtue of the bearer&apos;s exhibiting a phenotypic difference between males and females of the same species.</obo:IAO_0000115>
         <oboInOwl:created_by>gkoutos</oboInOwl:created_by>
         <oboInOwl:creation_date>2013-03-11T09:22:04Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>quality</oboInOwl:hasOBONamespace>
         <oboInOwl:id>PATO:0002451</oboInOwl:id>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/pato#value_slim"/>
         <rdfs:label>sexually dimorphic</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -783,30 +237,10 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
     
 
 
-    <!-- http://purl.obolibrary.org/obo/PATO_0060001 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0060001">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0002451"/>
-        <obo:IAO_0000115>A quality inhering in a bearer by virtue of the bearer&apos;s being present in one sex and absent from the other in members of the same species.</obo:IAO_0000115>
-        <oboInOwl:created_by>http://orcid.org/0000-0002-1373-1705</oboInOwl:created_by>
-        <oboInOwl:creation_date>2019-08-23T08:46:30Z</oboInOwl:creation_date>
-        <oboInOwl:hasOBONamespace>quality</oboInOwl:hasOBONamespace>
-        <oboInOwl:id>PATO:0060001</oboInOwl:id>
-        <rdfs:label>sex-specific</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0060001"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>A quality inhering in a bearer by virtue of the bearer&apos;s being present in one sex and absent from the other in members of the same species.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>http://orcid.org/0000-0002-1373-1705</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/PATO_0060002 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0060002">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0060001"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0002451"/>
         <obo:IAO_0000115>A quality inhering in a bearer by virtue of the bearer&apos;s being present in males and absent from females in members of the same species.</obo:IAO_0000115>
         <oboInOwl:created_by>http://orcid.org/0000-0002-1373-1705</oboInOwl:created_by>
         <oboInOwl:creation_date>2019-08-23T08:49:59Z</oboInOwl:creation_date>
@@ -826,7 +260,7 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
     <!-- http://purl.obolibrary.org/obo/PATO_0060003 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0060003">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0060001"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0002451"/>
         <obo:IAO_0000115>A quality inhering in a bearer by virtue of the bearer&apos;s being present in females and absent from males in members of the same species.</obo:IAO_0000115>
         <oboInOwl:created_by>http://orcid.org/0000-0002-1373-1705</oboInOwl:created_by>
         <oboInOwl:creation_date>2019-08-23T08:51:22Z</oboInOwl:creation_date>
