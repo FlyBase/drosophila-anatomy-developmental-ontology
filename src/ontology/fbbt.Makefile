@@ -218,6 +218,11 @@ fly_anatomy.obo: tmp/fbbt-obj.obo rem_flybase.txt
 	sed -i 's/^xref[:][ ]OBO_REL[:]\(.*\)/xref_analog: OBO_REL:\1/' $@
 
 post_release: obo_qc fly_anatomy.obo reports/chado_load_check_simple.txt
+# goal to make version where all synonyms are the same type and relationships are removed
+fbbt-cedar.obo:
+	cat fbbt-simple.obo | grep -v 'relationship:' | sed 's/synonym: \(".*"\).*\(\[.*\]\)/synonym: \1 RELATED ANYSYNONYM \2/' | sed '/synonymtypedef:/c\synonymtypedef: ANYSYNONYM "Synonym type changed to related for use in CEDAR"' > $@
+	$(ROBOT) convert --input $@ -f obo --output $@
+
 	cp fly_anatomy.obo ../..
 	mv obo_qc_$(ONT).obo.txt reports/obo_qc_$(ONT).obo.txt
 	mv obo_qc_$(ONT).owl.txt reports/obo_qc_$(ONT).owl.txt
