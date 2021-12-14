@@ -220,8 +220,10 @@ fly_anatomy.obo: tmp/fbbt-obj.obo rem_flybase.txt
 post_release: obo_qc fly_anatomy.obo reports/chado_load_check_simple.txt
 # goal to make version where all synonyms are the same type and relationships are removed
 fbbt-cedar.obo:
-	cat fbbt-simple.obo | grep -v 'relationship:' | sed 's/synonym: \(".*"\).*\(\[.*\]\)/synonym: \1 RELATED ANYSYNONYM \2/' | sed '/synonymtypedef:/c\synonymtypedef: ANYSYNONYM "Synonym type changed to related for use in CEDAR"' > $@
-	$(ROBOT) convert --input $@ -f obo --output $@
+	cat fbbt-simple.obo | grep -v 'relationship:' | grep -v 'remark:' | grep -v 'property_value: owl:versionInfo' | sed 's/synonym: \(".*"\).*\(\[.*\]\)/synonym: \1 RELATED ANYSYNONYM \2/' | sed '/synonymtypedef:/c\synonymtypedef: ANYSYNONYM "Synonym type changed to related for use in CEDAR"' | sed '/^date[:]/c\date: $(OBODATE)' > $@
+	$(ROBOT) annotate --input $@ --ontology-iri $(ONTBASE)/$@ $(ANNOTATE_ONTOLOGY_VERSION) \
+	--annotation rdfs:comment "This release artefact contains only the classification hierarchy (no relationships) and will not be suitable for most users." \
+	convert -f obo $(OBO_FORMAT_OPTIONS) -o $@
 
 	cp fly_anatomy.obo ../..
 	mv obo_qc_$(ONT).obo.txt reports/obo_qc_$(ONT).obo.txt
