@@ -1,0 +1,19 @@
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX oio: <http://www.geneontology.org/formats/oboInOwl#>
+
+SELECT ?cls ?property WHERE {
+  VALUES ?property { oio:id oio:hasOBONamespace }
+
+  # Select classes missing (at least) one of the properties
+  ?cls a owl:Class .
+  FILTER NOT EXISTS { ?cls ?property ?value }
+
+  # Exclude blank nodes and obsoleted terms
+  FILTER ( ! isBlank(?cls) )
+  FILTER NOT EXISTS { ?cls owl:deprecated true }
+
+  # Exclude everything not coming from FBbt
+  # (this notably includes imported FBgn pseudo-terms)
+  FILTER regex(str(?cls), "^http://purl.obolibrary.org/obo/FBbt_")
+}
+ORDER BY ?cls
