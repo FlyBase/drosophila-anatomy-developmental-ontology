@@ -1,0 +1,18 @@
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX oio: <http://www.geneontology.org/formats/oboInOwl#>
+
+SELECT ?cls ?namespace WHERE {
+  # Select classes with an invalid namespace
+  ?cls a owl:Class ;
+       oio:hasOBONamespace ?namespace .
+  FILTER ( ?namespace != "fly_anatomy.ontology" )
+
+  # Exclude blank nodes and obsoleted terms
+  FILTER ( ! isBlank(?cls) )
+  FILTER NOT EXISTS { ?cls owl:deprecated true }
+
+  # Exclude everything not coming from FBbt
+  # (this notably includes imported FBgn pseudo-terms)
+  FILTER regex(str(?cls), "^http://purl.obolibrary.org/obo/FBbt_")
+}
+ORDER BY ?cls
