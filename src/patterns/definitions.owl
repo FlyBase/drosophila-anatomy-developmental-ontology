@@ -7,8 +7,22 @@ Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
 
 
 Ontology(<http://purl.obolibrary.org/obo/fbbt/patterns/definitions.owl>
-<http://purl.obolibrary.org/obo/fbbt/releases/2021-08-31/patterns/definitions.owl>
-Annotation(owl:versionInfo "2021-08-31"^^xsd:string)
+<http://purl.obolibrary.org/obo/fbbt/releases/2022-01-07/patterns/definitions.owl>
+Annotation(owl:versionInfo "2022-01-07"^^xsd:string)
+
+Declaration(Class(<http://purl.obolibrary.org/obo/FBbt_00001748>))
+Declaration(Class(<http://purl.obolibrary.org/obo/FBbt_00001999>))
+Declaration(Class(<http://purl.obolibrary.org/obo/FBbt_00002322>))
+Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002100>))
+
+
+############################
+#   Classes
+############################
+
+# Class: <http://purl.obolibrary.org/obo/FBbt_00002322> (<http://purl.obolibrary.org/obo/FBbt_00002322>)
+
+EquivalentClasses(<http://purl.obolibrary.org/obo/FBbt_00002322> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/FBbt_00001999> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002100> <http://purl.obolibrary.org/obo/FBbt_00001748>)))
 
 
 )

@@ -1,0 +1,56 @@
+pattern_name: larvalSensoryNeuronBySegment
+pattern_iri: http://purl.obolibrary.org/obo/fbbt/src/patterns/dosdp-patterns/larvalSensoryNeuronBySegment.yaml
+description: "Pattern for generating segment-specific terms for Drosophila larval sensory neurons."
+
+contributors:
+  - https://orcid.org/0000-0002-1373-1705
+
+classes:
+  neuron: FBbt:00005106
+  segment: FBbt:00000003
+  sense_organ: FBbt:00005155
+  nerve: FBbt:00005105
+  anatomical_entity: FBbt:10000000
+
+relations: 
+  has_sensory_dendrite_in: RO:0013007
+  has_soma_location: RO:0002100
+  part_of: BFO:0000050
+  fasciculates_with: RO:0002101
+
+vars:
+  neuron_type: neuron
+  segment: segment
+  
+list_vars:
+  nerve: nerve
+  sense_organ: sense_organ
+  partonomy: anatomical_entity
+
+logical_axioms:
+   - axiom_type: equivalentTo
+     text: "%s that 'has_soma_location' some %s"
+     vars:
+       - neuron_type
+       - segment
+   - axiom_type: subClassOf
+     multi_clause:
+      sep: " and "
+      clauses:
+        - text: "'fasciculates_with' some %s"
+          vars:
+            - nerve
+   - axiom_type: subClassOf
+     multi_clause:
+      sep: " and "
+      clauses:
+        - text: "'has_sensory_dendrite_in' some %s"
+          vars:
+            - sense_organ
+   - axiom_type: subClassOf
+     multi_clause:
+      sep: " and "
+      clauses:
+        - text: "'part_of' some %s"
+          vars:
+            - partonomy

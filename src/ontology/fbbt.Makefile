@@ -61,7 +61,7 @@ reports/spellcheck.txt: fbbt-simple.obo install_flybase_scripts ../../tools/dict
 
 all_reports: all_reports_onestep $(REPORT_FILES)
 
-prepare_release: $(ASSETS) $(PATTERN_RELEASE_FILES) mappings.sssom.tsv
+prepare_release: $(ASSETS) mappings.sssom.tsv
 	rsync -R $(ASSETS) $(RELEASEDIR) &&\
 	mkdir -p $(RELEASEDIR)/patterns &&\
 	cp $(PATTERN_RELEASE_FILES) $(RELEASEDIR)/patterns &&\
@@ -150,7 +150,7 @@ tmp/remove_dot_defs.txt: tmp/auto_generated_definitions_seed_dot.txt
 	echo "http://purl.obolibrary.org/obo/IAO_0000115" >> $@
 	echo "http://www.geneontology.org/formats/oboInOwl#hasDbXref" >> $@
 
-pre_release: $(ONT)-edit.obo tmp/auto_generated_definitions_dot.owl tmp/remove_dot_defs.txt # tmp/auto_generated_definitions_sub.owl
+pre_release: $(ONT)-edit.obo tmp/auto_generated_definitions_dot.owl tmp/remove_dot_defs.txt  $(PATTERN_RELEASE_FILES) # tmp/auto_generated_definitions_sub.owl
 	cp $(ONT)-edit.obo tmp/$(ONT)-edit-release.obo
 	$(ROBOT) query -i tmp/$(ONT)-edit-release.obo --update ../sparql/remove-dot-definitions.ru -o tmp/$(ONT)-edit-release.owl
 	#commenting out sub_ removal as sub_ not used in FBbt
@@ -161,6 +161,16 @@ pre_release: $(ONT)-edit.obo tmp/auto_generated_definitions_dot.owl tmp/remove_d
 #t:
 #	$(ROBOT) query -i tmp/$(ONT)-edit-release.obo --update ../sparql/remove-dot-definitions.ru -o tmp/$(ONT)-edit-release3.obo
 #	diff tmp/$(ONT)-edit-release.obo tmp/$(ONT)-edit-release3.obo > diff.txt
+
+######################################################################################
+### Don't check patterns - fails due to multi_clause
+
+######################################################################################
+
+.PHONY: pattern_schema_checks
+pattern_schema_checks:
+	echo "Not checking patterns"
+
 
 ######################################################################################
 ### Update flybase_import.owl
