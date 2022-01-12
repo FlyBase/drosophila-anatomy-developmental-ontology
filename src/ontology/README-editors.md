@@ -54,9 +54,7 @@ To add a new import module:
 
 ## Design Patterns
 
-** NOT CURRENTLY USED FOR THIS ONTOLOGY**
-
-You can automate (class) term generation from design patterns by placing DOSDP yaml file and tsv files under src/patterns. Any pair of files in this folder that share a name (apart from the extension) are assumed to be a DOSDP design pattern and a corresponding tsv specifying terms to add.
+You can automate (class) term generation from design patterns by placing DOSDP yaml files in src/patterns/dosdp-patterns and tsv files in src/patterns/data/default. Any pair of files that share a name (apart from the extension) are assumed to be a DOSDP design pattern and a corresponding tsv specifying terms to add.
 
 Design patterns can be used to maintain and generate complete terms (names, definitions, synonyms etc) or to generate logical axioms only, with other axioms being maintained in editors' file.  This can be specified on a per-term basis in the TSV file.
 
