@@ -151,12 +151,13 @@ tmp/remove_dot_defs.txt: tmp/auto_generated_definitions_seed_dot.txt
 	echo "http://www.geneontology.org/formats/oboInOwl#hasDbXref" >> $@
 
 pre_release: $(ONT)-edit.obo tmp/auto_generated_definitions_dot.owl tmp/remove_dot_defs.txt  $(PATTERN_RELEASE_FILES) # tmp/auto_generated_definitions_sub.owl
-	cp $(ONT)-edit.obo tmp/$(ONT)-edit-release.obo
-	$(ROBOT) query -i tmp/$(ONT)-edit-release.obo --update ../sparql/remove-dot-definitions.ru -o tmp/$(ONT)-edit-release.owl
-	#commenting out sub_ removal as sub_ not used in FBbt
-	#sed -i '/sub_/d' tmp/$(ONT)-edit-release.obo
-	$(ROBOT) merge -i tmp/$(ONT)-edit-release.owl -i tmp/auto_generated_definitions_dot.owl --collapse-import-closure false -o $(ONT)-edit-release.ofn && mv $(ONT)-edit-release.ofn $(ONT)-edit-release.owl
+	cp $(ONT)-edit.obo tmp/$(ONT)-edit-release.obo &&\
+	$(ROBOT) query -i tmp/$(ONT)-edit-release.obo --update ../sparql/remove-dot-definitions.ru -o tmp/$(ONT)-edit-release.owl &&\
+	$(ROBOT) merge -i tmp/$(ONT)-edit-release.owl -i tmp/auto_generated_definitions_dot.owl --collapse-import-closure false -o $(ONT)-edit-release.owl &&\
 	echo "Preprocessing done. Make sure that NO CHANGES TO THE EDIT FILE ARE COMMITTED!"
+
+#not removing sub_ defs as not used in fbbt
+#sed -i '/sub_/d' tmp/$(ONT)-edit-release.obo
 
 #t:
 #	$(ROBOT) query -i tmp/$(ONT)-edit-release.obo --update ../sparql/remove-dot-definitions.ru -o tmp/$(ONT)-edit-release3.obo
@@ -239,7 +240,7 @@ post_release: obo_qc fly_anatomy.obo fbbt-cedar.obo reports/chado_load_check_sim
 	cp fbbt-cedar.obo ../..
 	mv obo_qc_$(ONT).obo.txt reports/obo_qc_$(ONT).obo.txt
 	mv obo_qc_$(ONT).owl.txt reports/obo_qc_$(ONT).owl.txt
-	rm imports/*_terms_combined.txt
+	rm -f imports/*_terms_combined.txt
 
 
 #######################################################################

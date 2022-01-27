@@ -1,4 +1,41 @@
 Level	Rule Name	Subject	Property	Value
+WARN	annotation_whitespace	RO:0002101	IAO:0000115	"relationship between a neuron and a neuron projection bundle (e.g.- tract or nerve bundle) that one or more of its projections travels through.
+"
+WARN	annotation_whitespace	RO:0002103	IAO:0000115	Relation between an anatomical structure (including cells) and a neuron that chemically synapses to it. 
+WARN	annotation_whitespace	RO:0002120	IAO:0000115	" Relation between a neuron and an anatomical structure (including cells) that it chemically synapses to.
+        "
+WARN	annotation_whitespace	RO:0002132	IAO:0000426	"(forall (?x ?y) 
+	(iff 
+		(has_fasciculating_neuron_projection ?x ?y)
+		(exists (?nps ?npbs)		
+			(and 
+				(\""neuron projection bundle ; CARO_0001001\"" ?x)
+				(\""neuron projection ; GO0043005\"" ?y)
+				(\""neuron projection segment ; CARO_0001502\"" ?nps)
+				(\""neuron projection bundle segment ; CARO_0001500\"" ?npbs)
+				(part_of ?nps ?y)
+				(part_of ?npbs ?x)
+				(part_of ?nps ?npbs)
+				(forall (?npbss)
+					(if
+						(and 
+							(\""neuron projection bundle subsegment ; CARO_0001501\"" ?npbss)
+							(part_of ?npbss ?npbs) 
+						)
+						(overlaps ?nps ?npbss)
+					))))))
+
+
+"
+WARN	annotation_whitespace	RO:0002215	IAO:0000115	A relation between a material entity (such as a cell) and a process, in which the material entity has the ability to carry out the process. 
+WARN	duplicate_label_synonym	BFO:0000050	IAO:0000118	part_of
+WARN	duplicate_label_synonym	BFO:0000051	IAO:0000118	has_part
+WARN	duplicate_label_synonym	FBbt:00001408	oboInOwl:hasExactSynonym	neuroblast X
+WARN	duplicate_label_synonym	FBbt:00004847	oboInOwl:hasExactSynonym	hypandrium
+WARN	duplicate_label_synonym	FBbt:00005911	oboInOwl:hasExactSynonym	male abdominal tergite 8
+WARN	duplicate_label_synonym	FBbt:00006047	oboInOwl:hasExactSynonym	Tvb neuron
+WARN	duplicate_label_synonym	FBbt:00047534	oboInOwl:hasExactSynonym	intermediate tract of dorsal cervical fasciculus
+WARN	duplicate_label_synonym	RO:0002170	IAO:0000118	connected to
 WARN	duplicate_definition	FBbt:00002033	IAO:0000115	Multidendritic neuron located in the lateral complex of the second and third thoracic segments of the larva.
 WARN	duplicate_definition	FBbt:00002034	IAO:0000115	Multidendritic neuron located in the lateral complex of the second and third thoracic segments of the larva.
 WARN	duplicate_definition	FBbt:00047980	IAO:0000115	Larval neuron that has presynapses in the ipsilateral and contralateral centroposterior medial compartment (posterior inferior protocerebrum) and postsynapses in the lateral region (M2/shaft) of the mushroom body medial lobe (Saumweber et al., 2018). It is GABAergic (Eichler et al., 2017). It outputs onto FAN-8 (Eschbach et al., 2020).
@@ -880,7 +917,6 @@ WARN	duplicate_definition	FBbt:10005336	IAO:0000115	.
 WARN	duplicate_definition	FBbt:10005342	IAO:0000115	.
 WARN	duplicate_definition	FBbt:10005349	IAO:0000115	.
 WARN	duplicate_definition	FBbt:10005369	IAO:0000115	.
-WARN	missing_superclass	FBbt:10000000	rdfs:subClassOf	
 WARN	missing_definition	FBbt:00000000	IAO:0000115	
 WARN	missing_definition	FBbt:00000085	IAO:0000115	
 WARN	missing_definition	FBbt:00000104	IAO:0000115	
@@ -1260,6 +1296,8 @@ WARN	duplicate_exact_synonym	FBbt:00000325	oboInOwl:hasExactSynonym	ventral gang
 WARN	duplicate_exact_synonym	FBbt:00002988	oboInOwl:hasExactSynonym	ventral ganglionic branch
 WARN	duplicate_exact_synonym	FBbt:00003062	oboInOwl:hasExactSynonym	ventral commissures
 WARN	duplicate_exact_synonym	FBbt:00003066	oboInOwl:hasExactSynonym	ventral commissures
+WARN	duplicate_exact_synonym	FBbt:00004466	oboInOwl:hasExactSynonym	vaginal tooth
+WARN	duplicate_exact_synonym	FBbt:00052089	oboInOwl:hasExactSynonym	vaginal tooth
 WARN	duplicate_exact_synonym	FBbt:00047175	oboInOwl:hasExactSynonym	VAC
 WARN	duplicate_exact_synonym	FBbt:00047547	oboInOwl:hasExactSynonym	VAC
 WARN	duplicate_exact_synonym	FBbt:00000339	oboInOwl:hasExactSynonym	VA2
@@ -1314,6 +1352,8 @@ WARN	duplicate_exact_synonym	FBbt:00002739	oboInOwl:hasExactSynonym	sh B
 WARN	duplicate_exact_synonym	FBbt:00002753	oboInOwl:hasExactSynonym	sh B
 WARN	duplicate_exact_synonym	FBbt:00051068	oboInOwl:hasExactSynonym	SEZ
 WARN	duplicate_exact_synonym	FBbt:00110639	oboInOwl:hasExactSynonym	SEZ
+WARN	duplicate_exact_synonym	FBbt:00048389	oboInOwl:hasExactSynonym	secondary gonopore
+WARN	duplicate_exact_synonym	FBbt:00052087	oboInOwl:hasExactSynonym	secondary gonopore
 WARN	duplicate_exact_synonym	FBbt:00004264	oboInOwl:hasExactSynonym	Sc-8 + Sc+5
 WARN	duplicate_exact_synonym	FBbt:00004373	oboInOwl:hasExactSynonym	Sc-8 + Sc+5
 WARN	duplicate_exact_synonym	FBbt:00004431	oboInOwl:hasExactSynonym	Sc-8 + Sc+5
@@ -1543,6 +1583,8 @@ WARN	duplicate_exact_synonym	FBbt:00007073	oboInOwl:hasExactSynonym	fr m c
 WARN	duplicate_exact_synonym	FBbt:00047943	oboInOwl:hasExactSynonym	fr m c
 WARN	duplicate_exact_synonym	FBbt:00004107	oboInOwl:hasExactSynonym	FLA
 WARN	duplicate_exact_synonym	FBbt:00045050	oboInOwl:hasExactSynonym	FLA
+WARN	duplicate_exact_synonym	FBbt:00004833	oboInOwl:hasExactSynonym	female abdominal tergite 9
+WARN	duplicate_exact_synonym	FBbt:00110704	oboInOwl:hasExactSynonym	female abdominal tergite 9
 WARN	duplicate_exact_synonym	FBbt:00005084	oboInOwl:hasExactSynonym	FC
 WARN	duplicate_exact_synonym	FBbt:00051238	oboInOwl:hasExactSynonym	FC
 WARN	duplicate_exact_synonym	FBbt:00000349	oboInOwl:hasExactSynonym	FB9
@@ -1646,9 +1688,6 @@ WARN	duplicate_exact_synonym	FBbt:00004914	oboInOwl:hasExactSynonym	AcGl
 WARN	duplicate_exact_synonym	FBbt:00004959	oboInOwl:hasExactSynonym	AcGl
 WARN	duplicate_exact_synonym	FBbt:00110173	oboInOwl:hasExactSynonym	AC
 WARN	duplicate_exact_synonym	FBbt:00110300	oboInOwl:hasExactSynonym	AC
-WARN	duplicate_exact_synonym	FBbt:00004833	oboInOwl:hasExactSynonym	abdominal tergite 9
-WARN	duplicate_exact_synonym	FBbt:00004839	oboInOwl:hasExactSynonym	abdominal tergite 9
-WARN	duplicate_exact_synonym	FBbt:00004834	oboInOwl:hasExactSynonym	abdominal sternite 9
 WARN	duplicate_exact_synonym	FBbt:00004847	oboInOwl:hasExactSynonym	abdominal sternite 9
 WARN	duplicate_exact_synonym	FBbt:00048384	oboInOwl:hasExactSynonym	abdominal sternite 9
 WARN	duplicate_exact_synonym	FBbt:00110269	oboInOwl:hasExactSynonym	A1-7 MN23/24-Ib
@@ -1657,42 +1696,7 @@ WARN	duplicate_exact_synonym	FBbt:00110266	oboInOwl:hasExactSynonym	A1-7 MN22/23
 WARN	duplicate_exact_synonym	FBbt:00110269	oboInOwl:hasExactSynonym	A1-7 MN22/23-Ib
 WARN	duplicate_exact_synonym	FBbt:00110263	oboInOwl:hasExactSynonym	A1-7 MN21/22-Ib
 WARN	duplicate_exact_synonym	FBbt:00110266	oboInOwl:hasExactSynonym	A1-7 MN21/22-Ib
-WARN	duplicate_label_synonym	BFO:0000050	IAO:0000118	part_of
-WARN	duplicate_label_synonym	BFO:0000051	IAO:0000118	has_part
-WARN	duplicate_label_synonym	FBbt:00001408	oboInOwl:hasExactSynonym	neuroblast X
-WARN	duplicate_label_synonym	FBbt:00004797	oboInOwl:hasExactSynonym	abdominal tergite 8
-WARN	duplicate_label_synonym	FBbt:00004847	oboInOwl:hasExactSynonym	hypandrium
-WARN	duplicate_label_synonym	FBbt:00006047	oboInOwl:hasExactSynonym	Tvb neuron
-WARN	duplicate_label_synonym	FBbt:00047534	oboInOwl:hasExactSynonym	intermediate tract of dorsal cervical fasciculus
-WARN	annotation_whitespace	RO:0002101	IAO:0000115	"relationship between a neuron and a neuron projection bundle (e.g.- tract or nerve bundle) that one or more of its projections travels through.
-"
-WARN	annotation_whitespace	RO:0002103	IAO:0000115	Relation between an anatomical structure (including cells) and a neuron that chemically synapses to it. 
-WARN	annotation_whitespace	RO:0002120	IAO:0000115	" Relation between a neuron and an anatomical structure (including cells) that it chemically synapses to.
-        "
-WARN	annotation_whitespace	RO:0002132	IAO:0000426	"(forall (?x ?y) 
-	(iff 
-		(has_fasciculating_neuron_projection ?x ?y)
-		(exists (?nps ?npbs)		
-			(and 
-				(\""neuron projection bundle ; CARO_0001001\"" ?x)
-				(\""neuron projection ; GO0043005\"" ?y)
-				(\""neuron projection segment ; CARO_0001502\"" ?nps)
-				(\""neuron projection bundle segment ; CARO_0001500\"" ?npbs)
-				(part_of ?nps ?y)
-				(part_of ?npbs ?x)
-				(part_of ?nps ?npbs)
-				(forall (?npbss)
-					(if
-						(and 
-							(\""neuron projection bundle subsegment ; CARO_0001501\"" ?npbss)
-							(part_of ?npbss ?npbs) 
-						)
-						(overlaps ?nps ?npbss)
-					))))))
-
-
-"
-WARN	annotation_whitespace	RO:0002215	IAO:0000115	A relation between a material entity (such as a cell) and a process, in which the material entity has the ability to carry out the process. 
+WARN	missing_superclass	FBbt:10000000	rdfs:subClassOf	
 INFO	lowercase_definition	BFO:0000050	IAO:0000115	a core relation that holds between a part and its whole
 INFO	lowercase_definition	BFO:0000051	IAO:0000115	a core relation that holds between a whole and its part
 INFO	lowercase_definition	FBbt:00000052	IAO:0000115	.
@@ -2357,6 +2361,7 @@ INFO	lowercase_definition	RO:0002120	IAO:0000115	" Relation between a neuron and
         "
 INFO	lowercase_definition	RO:0002131	IAO:0000115	x overlaps y if and only if there exists some z such that x has part z and z part of y
 INFO	lowercase_definition	RO:0002151	IAO:0000115	x partially overlaps y iff there exists some z such that z is part of x and z is part of y, and it is also the case that neither x is part of y or y is part of x
+INFO	lowercase_definition	RO:0002170	IAO:0000115	a is connected to b if and only if a and b are discrete structure, and there exists some connecting structure c, such that c connects a and b
 INFO	lowercase_definition	RO:0002177	IAO:0000115	a is attached to part of b if a is attached to b, or a is attached to some p, where p is part of b.
 INFO	lowercase_definition	RO:0002202	IAO:0000115	x develops from y if and only if either (a) x directly develops from y or (b) there exists some z such that x directly develops from z and z develops from y
 INFO	lowercase_definition	RO:0002203	IAO:0000115	inverse of develops from
