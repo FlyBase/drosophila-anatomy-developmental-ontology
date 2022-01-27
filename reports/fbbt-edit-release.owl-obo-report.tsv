@@ -1252,8 +1252,8 @@ WARN	missing_definition	has_synonym_type	definition
 WARN	missing_definition	in_subset	definition	
 WARN	missing_definition	shorthand	definition	
 WARN	duplicate_label_synonym	neuroblast X	has_exact_synonym	neuroblast X
-WARN	duplicate_label_synonym	abdominal tergite 8	has_exact_synonym	abdominal tergite 8
 WARN	duplicate_label_synonym	hypandrium	has_exact_synonym	hypandrium
+WARN	duplicate_label_synonym	male abdominal tergite 8	has_exact_synonym	male abdominal tergite 8
 WARN	duplicate_label_synonym	Tvb neuron	has_exact_synonym	Tvb neuron
 WARN	duplicate_label_synonym	intermediate tract of dorsal cervical fasciculus	has_exact_synonym	intermediate tract of dorsal cervical fasciculus
 WARN	duplicate_exact_synonym	vesM neuron	has_exact_synonym	vs
@@ -1279,6 +1279,8 @@ WARN	duplicate_exact_synonym	embryonic/larval ganglionic branch	has_exact_synony
 WARN	duplicate_exact_synonym	pupal ganglionic branch	has_exact_synonym	ventral ganglionic branch
 WARN	duplicate_exact_synonym	adult ganglionic branch	has_exact_synonym	ventral commissures
 WARN	duplicate_exact_synonym	adult ventral anastomosis	has_exact_synonym	ventral commissures
+WARN	duplicate_exact_synonym	hypogynial tooth	has_exact_synonym	vaginal tooth
+WARN	duplicate_exact_synonym	hypogynial bristle	has_exact_synonym	vaginal tooth
 WARN	duplicate_exact_synonym	ventral association center	has_exact_synonym	VAC
 WARN	duplicate_exact_synonym	adult mesothoracic posterior anterior ventral commissure	has_exact_synonym	VAC
 WARN	duplicate_exact_synonym	ventral anastomosis 2	has_exact_synonym	VA2
@@ -1333,6 +1335,8 @@ WARN	duplicate_exact_synonym	prothoracic ventral Kolbchen vbd	has_exact_synonym	
 WARN	duplicate_exact_synonym	mesothoracic lateral Kolbchen lbd	has_exact_synonym	sh B
 WARN	duplicate_exact_synonym	subesophageal zone	has_exact_synonym	SEZ
 WARN	duplicate_exact_synonym	adult subesophageal zone	has_exact_synonym	SEZ
+WARN	duplicate_exact_synonym	phallotrema	has_exact_synonym	secondary gonopore
+WARN	duplicate_exact_synonym	vulva	has_exact_synonym	secondary gonopore
 WARN	duplicate_exact_synonym	prothoracic trochanter campaniform sensillum Sc13	has_exact_synonym	Sc-8 + Sc+5
 WARN	duplicate_exact_synonym	mesothoracic trochanter campaniform sensillum Sc13	has_exact_synonym	Sc-8 + Sc+5
 WARN	duplicate_exact_synonym	metathoracic trochanter campaniform sensillum Sc13	has_exact_synonym	Sc-8 + Sc+5
@@ -1543,6 +1547,8 @@ WARN	duplicate_exact_synonym	adult frontal median commissure	has_exact_synonym	f
 WARN	duplicate_exact_synonym	larval frontal median commissure	has_exact_synonym	fr m c
 WARN	duplicate_exact_synonym	adult third abdominal nerve	has_exact_synonym	FLA
 WARN	duplicate_exact_synonym	flange	has_exact_synonym	FLA
+WARN	duplicate_exact_synonym	epiproct	has_exact_synonym	female abdominal tergite 9
+WARN	duplicate_exact_synonym	epigynium	has_exact_synonym	female abdominal tergite 9
 WARN	duplicate_exact_synonym	muscle founder cell	has_exact_synonym	FC
 WARN	duplicate_exact_synonym	adult fan-shaped body 1 column-crepine neuron	has_exact_synonym	FC
 WARN	duplicate_exact_synonym	fat body branch 9	has_exact_synonym	FB9
@@ -1638,9 +1644,6 @@ WARN	duplicate_exact_synonym	female accessory gland	has_exact_synonym	AcGl
 WARN	duplicate_exact_synonym	male accessory gland	has_exact_synonym	AcGl
 WARN	duplicate_exact_synonym	adult abdominal neuromere	has_exact_synonym	AC
 WARN	duplicate_exact_synonym	V motor neuron	has_exact_synonym	AC
-WARN	duplicate_exact_synonym	epiproct	has_exact_synonym	abdominal tergite 9
-WARN	duplicate_exact_synonym	epandrium	has_exact_synonym	abdominal tergite 9
-WARN	duplicate_exact_synonym	hypoproct	has_exact_synonym	abdominal sternite 9
 WARN	duplicate_exact_synonym	hypandrium	has_exact_synonym	abdominal sternite 9
 WARN	duplicate_exact_synonym	gonocoxite	has_exact_synonym	abdominal sternite 9
 WARN	duplicate_exact_synonym	A1-7 LT3 motor neuron	has_exact_synonym	A1-7 MN23/24-Ib
@@ -3563,7 +3566,7 @@ INFO	missing_superclass	muscle cell of abdominal 5 spiracular muscle 130	rdfs:su
 INFO	missing_superclass	muscle cell of abdominal 6 spiracular muscle 136	rdfs:subClassOf	
 INFO	missing_superclass	muscle cell of abdominal 7 female spiracular muscle 143	rdfs:subClassOf	
 INFO	missing_superclass	male abdominal muscle cell	rdfs:subClassOf	
-INFO	missing_superclass	female abdominal muscle cell	rdfs:subClassOf	
+INFO	missing_superclass	female abdominal somatic muscle cell	rdfs:subClassOf	
 INFO	missing_superclass	hindgut muscle cell	rdfs:subClassOf	
 INFO	missing_superclass	gonadal sheath muscle cell	rdfs:subClassOf	
 INFO	missing_superclass	ovarian sheath muscle cell	rdfs:subClassOf	
@@ -4914,7 +4917,7 @@ INFO	missing_superclass	epithelial cell of crop	rdfs:subClassOf
 INFO	missing_superclass	adult lamina neuropil associated glial cell	rdfs:subClassOf	
 INFO	missing_superclass	midgut muscle	rdfs:subClassOf	
 INFO	missing_superclass	foregut muscle	rdfs:subClassOf	
-INFO	missing_superclass	pericerebral adult fat cell	rdfs:subClassOf	
+INFO	missing_superclass	adult pericerebral fat cell	rdfs:subClassOf	
 INFO	missing_superclass	ejaculatory bulb epithelium	rdfs:subClassOf	
 INFO	missing_superclass	ejaculatory bulb epithelial cell	rdfs:subClassOf	
 INFO	missing_superclass	ejaculatory duct epithelium	rdfs:subClassOf	
