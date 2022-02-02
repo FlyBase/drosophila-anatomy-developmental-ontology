@@ -5,9 +5,9 @@ prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 
 SELECT ?entity ?property ?value
 WHERE {
-  ?entity rdfs:subClassOf ?value .
-  ?value rdfs:subClassOf ?entity .
+  VALUES ?property { rdfs:subClassOf }
   ?entity a owl:Class .
   ?value a owl:Class .
   ?entity ?property ?value .
-}
+  ?value ?property ?entity .
+  }
