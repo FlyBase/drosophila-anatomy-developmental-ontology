@@ -10,7 +10,7 @@ classes:
   segment: FBbt:00000003
   sense_organ: FBbt:00005155
   nerve: FBbt:00005105
-  anatomical_entity: FBbt:10000000
+  sensory_cluster: FBbt:00007316
 
 relations: 
   has_sensory_dendrite_in: RO:0013007
@@ -25,7 +25,7 @@ vars:
 list_vars:
   nerve: nerve
   sense_organ: sense_organ
-  partonomy: anatomical_entity
+  cluster: sensory_cluster
 
 logical_axioms:
    - axiom_type: equivalentTo
@@ -51,6 +51,6 @@ logical_axioms:
      multi_clause:
       sep: " and "
       clauses:
-        - text: "'part_of' some %s"
+        - text: "'has_soma_location' some %s"
           vars:
-            - partonomy
+            - cluster
