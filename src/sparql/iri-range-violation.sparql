@@ -1,0 +1,16 @@
+PREFIX never_in_taxon: <http://purl.obolibrary.org/obo/RO_0002161>
+PREFIX present_in_taxon: <http://purl.obolibrary.org/obo/RO_0002175>
+PREFIX oboInOwl: <http://www.geneontology.org/formats/oboInOwl#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+
+SELECT ?term ?property ?value
+WHERE {
+  VALUES ?property { 
+    never_in_taxon: 
+    present_in_taxon: 
+    oboInOwl:inSubset
+    dcterms:contributor  }
+  ?term ?property ?value .
+  FILTER (!isIRI(?value))
+}
+
