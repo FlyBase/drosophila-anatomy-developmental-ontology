@@ -121,47 +121,36 @@ $(ONT)-full.obo: $(ONT)-full.owl
 # special placeholder string to substitute in definitions from external ontologies
 # FBbt only uses DOT definitions - SUB currently disabled
 
+tmp/merged-source-pre.owl: $(SRC) all_imports $(PATTERN_RELEASE_FILES)
+	$(ROBOT) merge -i $(SRC) --output $@
+
 LABEL_MAP = auto_generated_definitions_label_map.txt
 
-tmp/auto_generated_definitions_seed_dot.txt: $(SRC)
-	$(ROBOT) query --use-graphs false -f csv -i $(SRC) --query ../sparql/dot-definitions.sparql $@.tmp &&\
+tmp/auto_generated_definitions_seed_dot.txt: tmp/merged-source-pre.owl
+	$(ROBOT) query --use-graphs false -f csv -i $< --query ../sparql/dot-definitions.sparql $@.tmp &&\
 	cat $@.tmp | sort | uniq >  $@
 	rm -f $@.tmp
 	
-tmp/auto_generated_definitions_seed_sub.txt: $(SRC)
-	$(ROBOT) query --use-graphs false -f csv -i $(SRC) --query ../sparql/classes-with-placeholder-definitions.sparql $@.tmp &&\
-	cat $@.tmp | sort | uniq >  $@
-	rm -f $@.tmp
-
-tmp/merged-source-pre.owl: $(SRC)
-	$(ROBOT) merge -i $(SRC) --output $@
+#tmp/auto_generated_definitions_seed_sub.txt: $(SRC)
+#	$(ROBOT) query --use-graphs false -f csv -i $(SRC) --query ../sparql/classes-with-placeholder-definitions.sparql $@.tmp &&\
+#	cat $@.tmp | sort | uniq >  $@
+#	rm -f $@.tmp
 
 tmp/auto_generated_definitions_dot.owl: tmp/merged-source-pre.owl tmp/auto_generated_definitions_seed_dot.txt
 	java -jar ../scripts/eq-writer.jar $< tmp/auto_generated_definitions_seed_dot.txt flybase $@ $(LABEL_MAP) add_dot_refs
 
-tmp/auto_generated_definitions_sub.owl: tmp/merged-source-pre.owl tmp/auto_generated_definitions_seed_sub.txt
-	java -jar ../scripts/eq-writer.jar $< tmp/auto_generated_definitions_seed_sub.txt sub_external $@ $(LABEL_MAP) source_xref
+#tmp/auto_generated_definitions_sub.owl: tmp/merged-source-pre.owl tmp/auto_generated_definitions_seed_sub.txt
+#	java -jar ../scripts/eq-writer.jar $< tmp/auto_generated_definitions_seed_sub.txt sub_external $@ $(LABEL_MAP) source_xref
 
-tmp/replaced_defs.txt:
-	cat tmp/auto_generated_definitions_seed_sub.txt tmp/auto_generated_definitions_seed_dot.txt | sort | uniq > $@
-
-tmp/remove_dot_defs.txt: tmp/auto_generated_definitions_seed_dot.txt
-	cp $< $@
-	echo "http://purl.obolibrary.org/obo/IAO_0000115" >> $@
-	echo "http://www.geneontology.org/formats/oboInOwl#hasDbXref" >> $@
-
-pre_release: $(ONT)-edit.obo tmp/auto_generated_definitions_dot.owl tmp/remove_dot_defs.txt  $(PATTERN_RELEASE_FILES) # tmp/auto_generated_definitions_sub.owl
-	cp $(ONT)-edit.obo tmp/$(ONT)-edit-release.obo &&\
-	$(ROBOT) query -i tmp/$(ONT)-edit-release.obo --update ../sparql/remove-dot-definitions.ru -o tmp/$(ONT)-edit-release.owl &&\
-	$(ROBOT) merge -i tmp/$(ONT)-edit-release.owl -i tmp/auto_generated_definitions_dot.owl --collapse-import-closure false -o $(ONT)-edit-release.owl &&\
+pre_release: $(ONT)-edit.obo tmp/auto_generated_definitions_dot.owl # tmp/auto_generated_definitions_sub.owl
+	$(ROBOT) convert -i $(ONT)-edit.obo -o tmp/$(ONT)-edit-release-minus-defs.owl &&\
+	$(ROBOT) merge -i tmp/$(ONT)-edit-release-minus-defs.owl -i tmp/auto_generated_definitions_dot.owl --collapse-import-closure false -o tmp/$(ONT)-edit-release-plus-defs.owl &&\
+	$(ROBOT) query -i tmp/$(ONT)-edit-release-plus-defs.owl --update ../sparql/remove-dot-definitions.ru -o $(ONT)-edit-release.owl &&\
 	echo "Preprocessing done. Make sure that NO CHANGES TO THE EDIT FILE ARE COMMITTED!"
 
 #not removing sub_ defs as not used in fbbt
 #sed -i '/sub_/d' tmp/$(ONT)-edit-release.obo
 
-#t:
-#	$(ROBOT) query -i tmp/$(ONT)-edit-release.obo --update ../sparql/remove-dot-definitions.ru -o tmp/$(ONT)-edit-release3.obo
-#	diff tmp/$(ONT)-edit-release.obo tmp/$(ONT)-edit-release3.obo > diff.txt
 
 ######################################################################################
 ### Don't check patterns - fails due to multi_clause

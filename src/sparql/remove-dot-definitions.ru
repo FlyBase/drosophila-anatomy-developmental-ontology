@@ -10,8 +10,9 @@ WHERE {
 		VALUES ?defprop { obo:IAO_0000115 }
     ?term a owl:Class .
 		?term ?defprop ?definition .
-		?term owl:equivalentClass ?eq .
+		?term ?defprop ?definition2 .
   }
+	FILTER (?definition != ?definition2)
 	FILTER(STRSTARTS(STR(?term), "http://purl.obolibrary.org/obo/FBbt"))
 	FILTER(STR(?definition) = "." || regex(STR(?definition), "\\$sub"))
 	FILTER(isIRI(?term))
