@@ -5,11 +5,31 @@
 
 DATE   ?= $(shell date +%Y-%m-%d)
 
+# Using .SECONDEXPANSION to include custom FlyBase files in $(ASSETS). Also rsyncing $(IMPORTS) and $(REPORT_FILES).
+.SECONDEXPANSION:
+.PHONY: prepare_release
+prepare_release: $$(ASSETS) mappings.sssom.tsv all_reports
+	rsync -R $(RELEASE_ASSETS) $(REPORT_FILES) $(FLYBASE_REPORTS) $(IMPORT_FILES) $(RELEASEDIR) &&\
+	mkdir -p $(RELEASEDIR)/patterns && cp -rf $(PATTERN_RELEASE_FILES) $(RELEASEDIR)/patterns &&\
+	cp mappings.sssom.tsv $(RELEASEDIR)/fbbt-mappings.sssom.tsv &&\
+	rm -f $(CLEANFILES)
+	echo "Release files are now in $(RELEASEDIR) - now you should commit, push and make a release on your git hosting site such as GitHub or GitLab"
+
+MAIN_FILES := $(MAIN_FILES) fly_anatomy.obo fbbt-cedar.obo
+CLEANFILES := $(CLEANFILES) $(patsubst %, $(IMPORTDIR)/%_terms_combined.txt, $(IMPORTS))
+
 ######################################################
 ### Code for generating additional FlyBase reports ###
 ######################################################
 
-REPORT_FILES := $(REPORT_FILES) reports/obo_track_new_simple.txt  reports/robot_simple_diff.txt reports/onto_metrics_calc.txt reports/spellcheck.txt
+FLYBASE_REPORTS = reports/obo_qc_fbbt.obo.txt reports/obo_qc_fbbt.owl.txt reports/obo_track_new_simple.txt reports/robot_simple_diff.txt reports/onto_metrics_calc.txt reports/chado_load_check_simple.txt reports/spellcheck.txt
+
+.PHONY: flybase_reports
+flybase_reports: $(FLYBASE_REPORTS)
+
+.PHONY: all_reports
+all_reports: custom_reports robot_reports flybase_reports
+
 
 SIMPLE_PURL =	http://purl.obolibrary.org/obo/fbbt/fbbt-simple.obo
 LAST_DEPLOYED_SIMPLE=tmp/$(ONT)-simple-last.obo
@@ -50,6 +70,14 @@ reports/onto_metrics_calc.txt: $(ONT)-simple.obo install_flybase_scripts
 reports/chado_load_check_simple.txt: install_flybase_scripts fly_anatomy.obo 
 	../scripts/chado_load_checks.pl fly_anatomy.obo > $@
 
+reports/obo_qc_%.obo.txt:
+	$(ROBOT) report -i $*.obo --profile qc-profile.txt --fail-on ERROR --print 5 -o $@
+	
+reports/obo_qc_%.owl.txt:
+	$(ROBOT) merge -i $*.owl -i components/qc_assertions.owl unmerge -i components/qc_assertions_unmerge.owl -o reports/obo_qc_$*.owl &&\
+	$(ROBOT) report -i reports/obo_qc_$*.owl --profile qc-profile.txt --fail-on None --print 5 -o $@ &&\
+	rm -f reports/obo_qc_$*.owl
+
 reports/spellcheck.txt: fbbt-simple.obo install_flybase_scripts ../../tools/dictionaries/standard.dict
 	apt-get update && apt-get install -y python3-psycopg2
 	sed -nre 's/^# pypi-requirements: //p' ../scripts/obo_spellchecker.py ../scripts/fetch_authors.py \
@@ -58,15 +86,6 @@ reports/spellcheck.txt: fbbt-simple.obo install_flybase_scripts ../../tools/dict
 		-d ../../tools/dictionaries/standard.dict \
 		-d '|../scripts/fetch_authors.py' \
 		fbbt-simple.obo
-
-all_reports: all_reports_onestep $(REPORT_FILES)
-
-prepare_release: $(ASSETS) mappings.sssom.tsv
-	rsync -R $(ASSETS) $(RELEASEDIR) &&\
-	mkdir -p $(RELEASEDIR)/patterns &&\
-	cp $(PATTERN_RELEASE_FILES) $(RELEASEDIR)/patterns &&\
-	cp mappings.sssom.tsv $(RELEASEDIR)/fbbt-mappings.sssom.tsv &&\
-	echo "Release files are now in $(RELEASEDIR) - now you should commit, push and make a release on github"
 
 
 ######################################################
@@ -105,12 +124,6 @@ $(ONT)-full.obo: $(ONT)-full.owl
 	cat $@.tmp.obo | grep -v ^owl-axioms > $@.tmp &&\
 	cat $@.tmp | perl -0777 -e '$$_ = <>; s/(?:name[:].*\n)+name[:]/name:/g; print' | perl -0777 -e '$$_ = <>; s/(?:comment[:].*\n)+comment[:]/comment:/g; print' | perl -0777 -e '$$_ = <>; s/(?:def[:].*\n)+def[:]/def:/g; print' > $@
 	rm -f $@.tmp.obo $@.tmp
-	
-
-#non_native_classes.txt: $(SRC)
-#	$(ROBOT) query --use-graphs true -f csv -i $< --query ../sparql/non-native-classes.sparql $@.tmp &&\
-#	cat $@.tmp | sort | uniq >  $@
-#	rm -f $@.tmp
 
 
 #####################################################################################
@@ -119,7 +132,7 @@ $(ONT)-full.obo: $(ONT)-full.owl
 # There are two types of definitions that FB ontologies use: "." (DOT-) definitions are those for which the formal 
 # definition is translated into a human readable definitions. "$sub_" (SUB-) definitions are those that have 
 # special placeholder string to substitute in definitions from external ontologies
-# FBbt only uses DOT definitions - SUB currently disabled
+# FBbt only uses DOT definitions - to use SUB, copy code and sparql from FBcv.
 
 tmp/merged-source-pre.owl: $(SRC) all_imports $(PATTERN_RELEASE_FILES)
 	$(ROBOT) merge -i $(SRC) --output $@
@@ -130,36 +143,18 @@ tmp/auto_generated_definitions_seed_dot.txt: tmp/merged-source-pre.owl
 	$(ROBOT) query --use-graphs false -f csv -i $< --query ../sparql/dot-definitions.sparql $@.tmp &&\
 	cat $@.tmp | sort | uniq >  $@
 	rm -f $@.tmp
-	
-#tmp/auto_generated_definitions_seed_sub.txt: $(SRC)
-#	$(ROBOT) query --use-graphs false -f csv -i $(SRC) --query ../sparql/classes-with-placeholder-definitions.sparql $@.tmp &&\
-#	cat $@.tmp | sort | uniq >  $@
-#	rm -f $@.tmp
+
+tmp/merged-source-pre.owl: $(SRC) all_imports $(PATTERN_RELEASE_FILES)
+	$(ROBOT) merge -i $(SRC) --output $@
 
 tmp/auto_generated_definitions_dot.owl: tmp/merged-source-pre.owl tmp/auto_generated_definitions_seed_dot.txt
 	java -jar ../scripts/eq-writer.jar $< tmp/auto_generated_definitions_seed_dot.txt flybase $@ $(LABEL_MAP) add_dot_refs
 
-#tmp/auto_generated_definitions_sub.owl: tmp/merged-source-pre.owl tmp/auto_generated_definitions_seed_sub.txt
-#	java -jar ../scripts/eq-writer.jar $< tmp/auto_generated_definitions_seed_sub.txt sub_external $@ $(LABEL_MAP) source_xref
-
-pre_release: $(ONT)-edit.obo tmp/auto_generated_definitions_dot.owl # tmp/auto_generated_definitions_sub.owl
-	$(ROBOT) convert -i $(ONT)-edit.obo -o tmp/$(ONT)-edit-release-minus-defs.owl &&\
+pre_release: test $(SRC) tmp/auto_generated_definitions_dot.owl
+	$(ROBOT) convert -i $(SRC) -o tmp/$(ONT)-edit-release-minus-defs.owl &&\
 	$(ROBOT) merge -i tmp/$(ONT)-edit-release-minus-defs.owl -i tmp/auto_generated_definitions_dot.owl --collapse-import-closure false -o tmp/$(ONT)-edit-release-plus-defs.owl &&\
 	$(ROBOT) query -i tmp/$(ONT)-edit-release-plus-defs.owl --update ../sparql/remove-dot-definitions.ru -o $(ONT)-edit-release.owl &&\
 	echo "Preprocessing done. Make sure that NO CHANGES TO THE EDIT FILE ARE COMMITTED!"
-
-#not removing sub_ defs as not used in fbbt
-#sed -i '/sub_/d' tmp/$(ONT)-edit-release.obo
-
-
-######################################################################################
-### Don't check patterns - fails due to multi_clause
-
-######################################################################################
-
-.PHONY: pattern_schema_checks
-pattern_schema_checks:
-	echo "Not checking patterns"
 
 
 ######################################################################################
@@ -198,9 +193,8 @@ components/exact_mappings.owl: tmp/exact_mapping_template.tsv fbbt-edit.obo
 		--output components/exact_mappings.owl
 	rm tmp/exact_mapping_template.tsv
 
-######################################################################################
-### Generate the flybase anatomy version of FBBT
-###
+#####################################################################################
+### Generate the flybase anatomy version of FBBT                                  ###
 #####################################################################################
 
 tmp/fbbt-obj.obo:
@@ -224,12 +218,13 @@ fbbt-cedar.obo:
 	--annotation rdfs:comment "This release artefact contains only the classification hierarchy (no relationships) and will not be suitable for most users." \
 	convert -f obo $(OBO_FORMAT_OPTIONS) -o $@
 
-post_release: obo_qc fly_anatomy.obo fbbt-cedar.obo reports/chado_load_check_simple.txt
-	cp fly_anatomy.obo ../..
-	cp fbbt-cedar.obo ../..
-	mv obo_qc_$(ONT).obo.txt reports/obo_qc_$(ONT).obo.txt
-	mv obo_qc_$(ONT).owl.txt reports/obo_qc_$(ONT).owl.txt
-	rm -f imports/*_terms_combined.txt
+#post_release: obo_qc fly_anatomy.obo fbbt-cedar.obo reports/chado_load_check_simple.txt
+#	mv fly_anatomy.obo ../..
+#	mv fbbt-cedar.obo ../..
+#	mv obo_qc_$(ONT).obo.txt reports/obo_qc_$(ONT).obo.txt
+#	mv obo_qc_$(ONT).owl.txt reports/obo_qc_$(ONT).owl.txt
+#	rm -f $(CLEANFILES) &&\
+#	rm -f imports/*_terms_combined.txt
 
 
 #######################################################################
@@ -240,26 +235,5 @@ scrnaseq-slim.owl: $(ONT)-simple.owl
 	owltools --use-catalog $< --extract-ontology-subset --subset scrnaseq_slim \
 		--iri $(URIBASE)/fbbt/scrnaseq-slim.owl -o $@
 	
-	
-########################
-##    TRAVIS       #####
-########################
 
-obo_qc_%.obo:
-	$(ROBOT) report -i $*.obo --profile qc-profile.txt --fail-on ERROR --print 5 -o $@.txt
-
-# currently no failure due to owl checks
-obo_qc_%.owl:
-	$(ROBOT) merge -i $*.owl -i components/qc_assertions.owl unmerge -i components/qc_assertions_unmerge.owl -o $@ &&\
-	$(ROBOT) report -i $@ --profile qc-profile.txt --fail-on None --print 5 -o $@.txt
-
-obo_qc: obo_qc_$(ONT).obo obo_qc_$(ONT).owl
-
-flybase_qc.owl: odkversion obo_qc
-	$(ROBOT) merge -i $(ONT)-full.owl -i components/qc_assertions.owl -o $@
-
-flybase_qc: flybase_qc.owl
-	$(ROBOT) reason --input $< --reasoner ELK  --equivalent-classes-allowed none --output test.owl &&\
-	rm test.owl &&\
-	echo "Success"
 
