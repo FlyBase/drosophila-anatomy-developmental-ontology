@@ -144,9 +144,6 @@ tmp/auto_generated_definitions_seed_dot.txt: tmp/merged-source-pre.owl
 	cat $@.tmp | sort | uniq >  $@
 	rm -f $@.tmp
 
-tmp/merged-source-pre.owl: $(SRC) all_imports $(PATTERN_RELEASE_FILES)
-	$(ROBOT) merge -i $(SRC) --output $@
-
 tmp/auto_generated_definitions_dot.owl: tmp/merged-source-pre.owl tmp/auto_generated_definitions_seed_dot.txt
 	java -jar ../scripts/eq-writer.jar $< tmp/auto_generated_definitions_seed_dot.txt flybase $@ $(LABEL_MAP) add_dot_refs
 
