@@ -325,6 +325,7 @@ ERROR	duplicate_definition	adult external thorax	definition	.
 ERROR	duplicate_definition	female reproductive system	definition	.
 ERROR	duplicate_definition	male reproductive system	definition	.
 ERROR	duplicate_definition	tracheal system	definition	.
+ERROR	duplicate_definition	optic lobe amacrine neuron	definition	.
 ERROR	duplicate_definition	embryonic hemocyte primordium	definition	.
 ERROR	duplicate_definition	stomodeal invagination late	definition	.
 ERROR	duplicate_definition	stomodeal invagination	definition	.
@@ -494,10 +495,6 @@ WARN	duplicate_exact_synonym	adult ventral prothoracic nerve	has_exact_synonym	V
 WARN	duplicate_exact_synonym	visual projection neuron	has_exact_synonym	VPN
 WARN	duplicate_exact_synonym	adult great commissure	has_exact_synonym	VPC2
 WARN	duplicate_exact_synonym	great commissure	has_exact_synonym	VPC2
-WARN	duplicate_exact_synonym	prothoracic ventral campaniform sensillum vc2	has_exact_synonym	vp2
-WARN	duplicate_exact_synonym	abdominal ventral campaniform sensillum vc2	has_exact_synonym	vp2
-WARN	duplicate_exact_synonym	prothoracic ventral campaniform sensillum vc1	has_exact_synonym	vp1
-WARN	duplicate_exact_synonym	abdominal ventral campaniform sensillum vc1	has_exact_synonym	vp1
 WARN	duplicate_exact_synonym	adult hypocerebral ganglion	has_exact_synonym	ventricular ganglion
 WARN	duplicate_exact_synonym	proventricular ganglion	has_exact_synonym	ventricular ganglion
 WARN	duplicate_exact_synonym	pregonite	has_exact_synonym	ventral paramere
@@ -619,10 +616,6 @@ WARN	duplicate_exact_synonym	prothoracic lateral campaniform sensillum lc2	has_e
 WARN	duplicate_exact_synonym	abdominal ventral campaniform sensillum vc4b	has_exact_synonym	p4
 WARN	duplicate_exact_synonym	prothoracic lateral campaniform sensillum lc1	has_exact_synonym	p3
 WARN	duplicate_exact_synonym	abdominal ventral campaniform sensillum vc3	has_exact_synonym	p3
-WARN	duplicate_exact_synonym	prothoracic ventral campaniform sensillum vc2	has_exact_synonym	p2
-WARN	duplicate_exact_synonym	abdominal ventral campaniform sensillum vc2	has_exact_synonym	p2
-WARN	duplicate_exact_synonym	prothoracic ventral campaniform sensillum vc1	has_exact_synonym	p1
-WARN	duplicate_exact_synonym	abdominal ventral campaniform sensillum vc1	has_exact_synonym	p1
 WARN	duplicate_exact_synonym	adult olfactory receptor neuron Or67a	has_exact_synonym	ORN ab10A
 WARN	duplicate_exact_synonym	adult olfactory receptor neuron Or49a/85f	has_exact_synonym	ORN ab10A
 WARN	duplicate_exact_synonym	hypandrium	has_exact_synonym	novasternum
@@ -845,6 +838,10 @@ WARN	duplicate_exact_synonym	A1-7 LT2 motor neuron	has_exact_synonym	A1-7 MN22/2
 WARN	duplicate_exact_synonym	A1-7 LT3 motor neuron	has_exact_synonym	A1-7 MN22/23-Ib
 WARN	duplicate_exact_synonym	A1-7 LT1 motor neuron	has_exact_synonym	A1-7 MN21/22-Ib
 WARN	duplicate_exact_synonym	A1-7 LT2 motor neuron	has_exact_synonym	A1-7 MN21/22-Ib
+WARN	duplicate_label_synonym	hypandrium	has_exact_synonym	hypandrium
+WARN	duplicate_label_synonym	Tvb neuron	has_exact_synonym	Tvb neuron
+WARN	duplicate_label_synonym	intermediate tract of dorsal cervical fasciculus	has_exact_synonym	intermediate tract of dorsal cervical fasciculus
+WARN	duplicate_label_synonym	dopaminergic T1 neuron	has_exact_synonym	dopaminergic T1 neuron
 WARN	missing_definition	part_of	definition	
 WARN	missing_definition	has_part	definition	
 WARN	missing_definition	germ layer derivative	definition	
@@ -1015,7 +1012,6 @@ WARN	missing_definition	oocyte nucleus	definition
 WARN	missing_definition	circulatory system	definition	
 WARN	missing_definition	melanotic mass	definition	
 WARN	missing_definition	longitudinal visceral muscle fiber	definition	
-WARN	missing_definition	amacrine neuron	definition	
 WARN	missing_definition	actin cortex of neuromere	definition	
 WARN	missing_definition	neuroglioblast	definition	
 WARN	missing_definition	neuroepidermoblast	definition	
@@ -1234,10 +1230,6 @@ WARN	missing_definition	has_scope	definition
 WARN	missing_definition	has_synonym_type	definition	
 WARN	missing_definition	in_subset	definition	
 WARN	missing_definition	shorthand	definition	
-WARN	duplicate_label_synonym	hypandrium	has_exact_synonym	hypandrium
-WARN	duplicate_label_synonym	Tvb neuron	has_exact_synonym	Tvb neuron
-WARN	duplicate_label_synonym	intermediate tract of dorsal cervical fasciculus	has_exact_synonym	intermediate tract of dorsal cervical fasciculus
-WARN	duplicate_label_synonym	dopaminergic T1 neuron	has_exact_synonym	dopaminergic T1 neuron
 INFO	missing_superclass	head segment	rdfs:subClassOf	
 INFO	missing_superclass	thoracic segment	rdfs:subClassOf	
 INFO	missing_superclass	abdominal segment	rdfs:subClassOf	
@@ -2555,7 +2547,6 @@ INFO	missing_superclass	basiconic sensillum of antennal segment 3	rdfs:subClassO
 INFO	missing_superclass	sensillum of ventral sacculus chamber III	rdfs:subClassOf	
 INFO	missing_superclass	sensillum of dorsal sacculus chamber III	rdfs:subClassOf	
 INFO	missing_superclass	aristal sensillum	rdfs:subClassOf	
-INFO	missing_superclass	dorsal margin photoreceptor	rdfs:subClassOf	
 INFO	missing_superclass	developing embryonic structure	rdfs:subClassOf	
 INFO	missing_superclass	photoreceptor neuron	rdfs:subClassOf	
 INFO	missing_superclass	rhabdomere R1	rdfs:subClassOf	
@@ -3261,7 +3252,6 @@ INFO	missing_superclass	adult dopaminergic neuron of ventral nerve cord	rdfs:sub
 INFO	missing_superclass	adult dopaminergic mesothoracic neuron	rdfs:subClassOf	
 INFO	missing_superclass	adult dopaminergic prothoracic neuron	rdfs:subClassOf	
 INFO	missing_superclass	nociceptive neuron	rdfs:subClassOf	
-INFO	missing_superclass	nociceptive system neuron	rdfs:subClassOf	
 INFO	missing_superclass	larval metathoracic Wave neuron	rdfs:subClassOf	
 INFO	missing_superclass	larval abdominal 1 A03g neuron	rdfs:subClassOf	
 INFO	missing_superclass	larval abdominal 1 A18l neuron	rdfs:subClassOf	
@@ -3683,7 +3673,16 @@ INFO	missing_superclass	adult procuticle	rdfs:subClassOf
 INFO	missing_superclass	larval procuticle	rdfs:subClassOf	
 INFO	missing_superclass	larval trichoid sensillum of anal sense organ	rdfs:subClassOf	
 INFO	missing_superclass	lateral antennal lobe tract projection neuron 4 (female)	rdfs:subClassOf	
-INFO	missing_superclass	proprioceptive system neuron	rdfs:subClassOf	
+INFO	missing_superclass	medulla tangential visual projection neuron	rdfs:subClassOf	
+INFO	missing_superclass	enteric neuron	rdfs:subClassOf	
+INFO	missing_superclass	proprioceptive system	rdfs:subClassOf	
+INFO	missing_superclass	nociceptive system	rdfs:subClassOf	
+INFO	missing_superclass	prothoracic Keilin organ posterior hair	rdfs:subClassOf	
+INFO	missing_superclass	mesothoracic Keilin organ posterior hair	rdfs:subClassOf	
+INFO	missing_superclass	metathoracic Keilin organ posterior hair	rdfs:subClassOf	
+INFO	missing_superclass	prothoracic Keilin organ anterior medial hair	rdfs:subClassOf	
+INFO	missing_superclass	mesothoracic Keilin organ anterior medial hair	rdfs:subClassOf	
+INFO	missing_superclass	metathoracic Keilin organ anterior medial hair	rdfs:subClassOf	
 INFO	missing_superclass	adult class I enteroendocrine cell	rdfs:subClassOf	
 INFO	missing_superclass	Dh31 cell of the embryonic/larval midgut	rdfs:subClassOf	
 INFO	missing_superclass	midgut junction Dh31 expressing cell	rdfs:subClassOf	
@@ -4302,6 +4301,7 @@ INFO	lowercase_definition	adult external thorax	definition	.
 INFO	lowercase_definition	female reproductive system	definition	.
 INFO	lowercase_definition	male reproductive system	definition	.
 INFO	lowercase_definition	tracheal system	definition	.
+INFO	lowercase_definition	optic lobe amacrine neuron	definition	.
 INFO	lowercase_definition	embryonic hemocyte primordium	definition	.
 INFO	lowercase_definition	stomodeal invagination late	definition	.
 INFO	lowercase_definition	stomodeal invagination	definition	.
