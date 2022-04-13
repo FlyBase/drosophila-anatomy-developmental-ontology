@@ -1,5 +1,5 @@
 ## Customize Makefile settings for fbbt
-## 
+##
 ## If you need to customize your Makefile, make
 ## changes here rather than in the main Makefile
 
@@ -8,7 +8,7 @@ DATE   ?= $(shell date +%Y-%m-%d)
 # Using .SECONDEXPANSION to include custom FlyBase files in $(ASSETS). Also rsyncing $(IMPORTS) and $(REPORT_FILES).
 .SECONDEXPANSION:
 .PHONY: prepare_release
-prepare_release: $$(ASSETS) mappings.sssom.tsv all_reports
+prepare_release: $$(ASSETS) mappings.sssom.tsv release_reports
 	rsync -R $(RELEASE_ASSETS) $(REPORT_FILES) $(FLYBASE_REPORTS) $(IMPORT_FILES) $(RELEASEDIR) &&\
 	mkdir -p $(RELEASEDIR)/patterns && cp -rf $(PATTERN_RELEASE_FILES) $(RELEASEDIR)/patterns &&\
 	cp mappings.sssom.tsv $(RELEASEDIR)/fbbt-mappings.sssom.tsv &&\
@@ -30,6 +30,8 @@ flybase_reports: $(FLYBASE_REPORTS)
 .PHONY: all_reports
 all_reports: custom_reports robot_reports flybase_reports
 
+.PHONY: release_reports
+release_reports: robot_reports flybase_reports
 
 SIMPLE_PURL =	http://purl.obolibrary.org/obo/fbbt/fbbt-simple.obo
 LAST_DEPLOYED_SIMPLE=tmp/$(ONT)-simple-last.obo
@@ -66,13 +68,13 @@ reports/robot_simple_diff.txt: $(LAST_DEPLOYED_SIMPLE) $(ONT)-simple.obo
 
 reports/onto_metrics_calc.txt: $(ONT)-simple.obo install_flybase_scripts
 	../scripts/onto_metrics_calc.pl 'fly_anatomy.ontology' $(ONT)-simple.obo > $@
-	
-reports/chado_load_check_simple.txt: install_flybase_scripts fly_anatomy.obo 
+
+reports/chado_load_check_simple.txt: install_flybase_scripts fly_anatomy.obo
 	../scripts/chado_load_checks.pl fly_anatomy.obo > $@
 
 reports/obo_qc_%.obo.txt:
 	$(ROBOT) report -i $*.obo --profile qc-profile.txt --fail-on ERROR --print 5 -o $@
-	
+
 reports/obo_qc_%.owl.txt:
 	$(ROBOT) merge -i $*.owl -i components/qc_assertions.owl unmerge -i components/qc_assertions_unmerge.owl -o reports/obo_qc_$*.owl &&\
 	$(ROBOT) report -i reports/obo_qc_$*.owl --profile qc-profile.txt --fail-on None --print 5 -o $@ &&\
@@ -112,7 +114,7 @@ $(ONT)-base.obo: $(ONT)-base.owl
 	cat $@.tmp.obo | grep -v ^owl-axioms > $@.tmp &&\
 	cat $@.tmp | perl -0777 -e '$$_ = <>; s/(?:name[:].*\n)+name[:]/name:/g; print' | perl -0777 -e '$$_ = <>; s/(?:comment[:].*\n)+comment[:]/comment:/g; print' | perl -0777 -e '$$_ = <>; s/(?:def[:].*\n)+def[:]/def:/g; print' > $@
 	rm -f $@.tmp.obo $@.tmp
-		
+
 $(ONT)-non-classified.obo: $(ONT)-non-classified.owl
 	$(ROBOT) convert --input $< --check false -f obo $(OBO_FORMAT_OPTIONS) -o $@.tmp.obo &&\
 	cat $@.tmp.obo | grep -v ^owl-axioms > $@.tmp &&\
@@ -129,8 +131,8 @@ $(ONT)-full.obo: $(ONT)-full.owl
 #####################################################################################
 ### Regenerate placeholder definitions         (Pre-release) pipelines            ###
 #####################################################################################
-# There are two types of definitions that FB ontologies use: "." (DOT-) definitions are those for which the formal 
-# definition is translated into a human readable definitions. "$sub_" (SUB-) definitions are those that have 
+# There are two types of definitions that FB ontologies use: "." (DOT-) definitions are those for which the formal
+# definition is translated into a human readable definitions. "$sub_" (SUB-) definitions are those that have
 # special placeholder string to substitute in definitions from external ontologies
 # FBbt only uses DOT definitions - to use SUB, copy code and sparql from FBcv.
 
@@ -166,7 +168,7 @@ tmp/FBgn_template.tsv: $(IMPORTSEED)
 	if [ $(IMP) = true ]; then apt-get update && apt-get install -y python3-psycopg2 && \
 	python3 -m pip install -r ../scripts/flybase_import/requirements.txt && \
 	python3 ../scripts/flybase_import/FB_import_runner.py $(IMPORTSEED) $@; fi
-	
+
 components/flybase_import.owl: tmp/FBgn_template.tsv
 	if [ $(IMP) = true ]; then $(ROBOT) template --input-iri http://purl.obolibrary.org/obo/ro.owl --template $< \
 	annotate --ontology-iri "http://purl.obolibrary.org/obo/fbbt/components/flybase_import.owl" --output $@ && rm $<; fi
@@ -231,6 +233,3 @@ fbbt-cedar.obo:
 scrnaseq-slim.owl: $(ONT)-simple.owl
 	owltools --use-catalog $< --extract-ontology-subset --subset scrnaseq_slim \
 		--iri $(URIBASE)/fbbt/scrnaseq-slim.owl -o $@
-	
-
-
