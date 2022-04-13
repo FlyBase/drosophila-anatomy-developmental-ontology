@@ -9,7 +9,7 @@ import json
 import pandas as pd
 from collections import OrderedDict
 
-fbbt = json.load(open("fbbt.json", "r"))
+fbbt = json.load(open("../../fbbt.json", "r"))
 
 # exclusions
 new_cells = pd.read_csv(("../patterns/robot_template_projects"
@@ -76,13 +76,13 @@ for i in VFB_dict:
     row_od = OrderedDict([]) #new template row as an empty ordered dictionary
     for c in template.columns: #make columns and blank data for new template row
         row_od.update([(c , "")])
-    
+
     #ID and xref
     row_od['ID'] = i
     row_od["Xref"] = VFB_dict[i]
-    
+
     #make new row into a DataFrame and add it to template
     new_row = pd.DataFrame.from_records([row_od])
     template = pd.concat([template, new_row], ignore_index=True, sort=False)
-    
+
 template.to_csv("./VFB_template.tsv", sep = "\t", header=True, index=False)
