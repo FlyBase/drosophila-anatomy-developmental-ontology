@@ -1,0 +1,13 @@
+prefix owl: <http://www.w3.org/2002/07/owl#>
+prefix IAO: <http://purl.obolibrary.org/obo/IAO_>
+
+SELECT ?entity ?property ?value WHERE
+{
+  BIND(IAO:0000115 AS ?property)
+  ?entity a owl:Class ;
+    ?property ?value
+  FILTER NOT EXISTS { ?entity owl:deprecated true }
+  FILTER NOT EXISTS {
+		?x owl:annotatedSource ?entity .
+		?x owl:annotatedProperty ?property . }
+}
