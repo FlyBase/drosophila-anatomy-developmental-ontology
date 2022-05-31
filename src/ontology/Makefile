@@ -381,7 +381,7 @@ ALL_PATTERN_NAMES=$(strip $(patsubst %.yaml,%, $(notdir $(wildcard $(PATTERNDIR)
 
 PATTERN_CLEAN_FILES=../patterns/all_pattern_terms.txt \
 	$(DOSDP_OWL_FILES_DEFAULT) $(DOSDP_TERM_FILES_DEFAULT) \
-	
+	$(DOSDP_OWL_FILES_LOGICAL-ONLY) $(DOSDP_TERM_FILES_LOGICAL-ONLY) $(DOSDP_OWL_FILES_ALL-ANNOTATIONS) $(DOSDP_TERM_FILES_ALL-ANNOTATIONS) 
 
 # Note to future generations: prepending ./ is a safety measure to ensure that 
 # the environment does not malicously set `PATTERN_CLEAN_FILES` to `\`.
@@ -431,9 +431,29 @@ DOSDP_TERM_FILES_DEFAULT = $(patsubst %.tsv, $(PATTERNDIR)/data/default/%.txt, $
 DOSDP_PATTERN_NAMES_DEFAULT = $(strip $(patsubst %.tsv,%, $(notdir $(wildcard $(PATTERNDIR)/data/default/*.tsv))))
 
 $(DOSDP_OWL_FILES_DEFAULT): $(SRC) $(DOSDP_TSV_FILES_DEFAULT) $(ALL_PATTERN_FILES)
-	if [ $(PAT) = true ] && [ "${DOSDP_PATTERN_NAMES_DEFAULT}" ]; then $(DOSDPT) generate --catalog=catalog-v001.xml --infile=$(PATTERNDIR)/data/default/ --template=$(PATTERNDIR)/dosdp-patterns --batch-patterns="$(DOSDP_PATTERN_NAMES_DEFAULT)" --ontology=$< --obo-prefixes=true --restrict-axioms-to=logical --outfile=$(PATTERNDIR)/data/default; fi
+	if [ $(PAT) = true ] && [ "${DOSDP_PATTERN_NAMES_DEFAULT}" ]; then $(DOSDPT) generate --catalog=catalog-v001.xml --infile=$(PATTERNDIR)/data/default/ --template=$(PATTERNDIR)/dosdp-patterns --batch-patterns="$(DOSDP_PATTERN_NAMES_DEFAULT)" --ontology=$< --obo-prefixes=true --outfile=$(PATTERNDIR)/data/default; fi
 
 
+
+# DOSDP logical-only pipeline
+
+DOSDP_OWL_FILES_LOGICAL-ONLY = $(patsubst %.tsv, $(PATTERNDIR)/data/logical-only/%.ofn, $(notdir $(wildcard $(PATTERNDIR)/data/logical-only/*.tsv)))
+DOSDP_TERM_FILES_LOGICAL-ONLY = $(patsubst %.tsv, $(PATTERNDIR)/data/logical-only/%.txt, $(notdir $(wildcard $(PATTERNDIR)/data/logical-only/*.tsv)))
+DOSDP_TSV_FILES_LOGICAL-ONLY = $(wildcard $(PATTERNDIR)/data/logical-only/*.tsv)
+DOSDP_PATTERN_NAMES_LOGICAL-ONLY = $(strip $(patsubst %.tsv,%, $(notdir $(wildcard $(PATTERNDIR)/data/logical-only/*.tsv))))
+
+$(DOSDP_OWL_FILES_LOGICAL-ONLY): $(SRC) $(DOSDP_TSV_FILES_LOGICAL-ONLY) $(ALL_PATTERN_FILES)
+	if [ $(PAT) = true ] && [ "${DOSDP_PATTERN_NAMES_LOGICAL-ONLY}" ]; then $(DOSDPT) generate --catalog=catalog-v001.xml --infile=$(PATTERNDIR)/data/logical-only --template=$(PATTERNDIR)/dosdp-patterns/ --batch-patterns="$(DOSDP_PATTERN_NAMES_LOGICAL-ONLY)" --ontology=$< --obo-prefixes=true --restrict-axioms-to=logical --outfile=$(PATTERNDIR)/data/logical-only; fi
+
+# DOSDP all-annotations pipeline
+
+DOSDP_OWL_FILES_ALL-ANNOTATIONS = $(patsubst %.tsv, $(PATTERNDIR)/data/all-annotations/%.ofn, $(notdir $(wildcard $(PATTERNDIR)/data/all-annotations/*.tsv)))
+DOSDP_TERM_FILES_ALL-ANNOTATIONS = $(patsubst %.tsv, $(PATTERNDIR)/data/all-annotations/%.txt, $(notdir $(wildcard $(PATTERNDIR)/data/all-annotations/*.tsv)))
+DOSDP_TSV_FILES_ALL-ANNOTATIONS = $(wildcard $(PATTERNDIR)/data/all-annotations/*.tsv)
+DOSDP_PATTERN_NAMES_ALL-ANNOTATIONS = $(strip $(patsubst %.tsv,%, $(notdir $(wildcard $(PATTERNDIR)/data/all-annotations/*.tsv))))
+
+$(DOSDP_OWL_FILES_ALL-ANNOTATIONS): $(SRC) $(DOSDP_TSV_FILES_ALL-ANNOTATIONS) $(ALL_PATTERN_FILES)
+	if [ $(PAT) = true ] && [ "${DOSDP_PATTERN_NAMES_ALL-ANNOTATIONS}" ]; then $(DOSDPT) generate --catalog=catalog-v001.xml --infile=$(PATTERNDIR)/data/all-annotations --template=$(PATTERNDIR)/dosdp-patterns/ --batch-patterns="$(DOSDP_PATTERN_NAMES_ALL-ANNOTATIONS)" --ontology=$< --obo-prefixes=true --outfile=$(PATTERNDIR)/data/all-annotations; fi
 
 
 
@@ -444,9 +464,15 @@ $(PATTERNDIR)/data/default/%.txt: $(PATTERNDIR)/dosdp-patterns/%.yaml $(PATTERND
 	if [ $(PAT) = true ]; then $(DOSDPT) terms --infile=$(word 2, $^) --template=$< --obo-prefixes=true --outfile=$@; fi
 
 
+$(PATTERNDIR)/data/logical-only/%.txt: $(PATTERNDIR)/dosdp-patterns/%.yaml $(PATTERNDIR)/data/logical-only/%.tsv
+	if [ $(PAT) = true ]; then $(DOSDPT) terms --infile=$(word 2, $^) --template=$< --obo-prefixes=true --outfile=$@; fi
+
+$(PATTERNDIR)/data/all-annotations/%.txt: $(PATTERNDIR)/dosdp-patterns/%.yaml $(PATTERNDIR)/data/all-annotations/%.tsv
+	if [ $(PAT) = true ]; then $(DOSDPT) terms --infile=$(word 2, $^) --template=$< --obo-prefixes=true --outfile=$@; fi
+
 
 # Generating the seed file from all the TSVs. If Pattern generation is deactivated, we still extract a seed from definitions.owl
-$(TMPDIR)/all_pattern_terms.txt: $(DOSDP_TERM_FILES_DEFAULT)   $(TMPDIR)/pattern_owl_seed.txt
+$(TMPDIR)/all_pattern_terms.txt: $(DOSDP_TERM_FILES_DEFAULT)   $(DOSDP_TERM_FILES_LOGICAL-ONLY) $(DOSDP_TERM_FILES_ALL-ANNOTATIONS) $(TMPDIR)/pattern_owl_seed.txt
 	if [ $(PAT) = true ]; then cat $^ | sort | uniq > $@; else $(ROBOT) query --use-graphs true -f csv -i $(PATTERNDIR)/definitions.owl --query ../sparql/terms.sparql $@; fi
 
 $(TMPDIR)/pattern_owl_seed.txt: $(PATTERNDIR)/pattern.owl
@@ -459,8 +485,8 @@ $(PATTERNDIR)/pattern.owl: $(ALL_PATTERN_FILES)
 	if [ $(PAT) = true ]; then $(DOSDPT) prototype --obo-prefixes true --template=$(PATTERNDIR)/dosdp-patterns --outfile=$@; fi
 
 # Generating the individual pattern modules and merging them into definitions.owl
-$(PATTERNDIR)/definitions.owl: $(DOSDP_OWL_FILES_DEFAULT)  
-	if [ $(PAT) = true ] && [ "${DOSDP_PATTERN_NAMES_DEFAULT}" ]   && [ $(PAT) = true ]; then $(ROBOT) merge $(addprefix -i , $^) \
+$(PATTERNDIR)/definitions.owl: $(DOSDP_OWL_FILES_DEFAULT)   $(DOSDP_OWL_FILES_LOGICAL-ONLY) $(DOSDP_OWL_FILES_ALL-ANNOTATIONS)
+	if [ $(PAT) = true ] && [ "${DOSDP_PATTERN_NAMES_DEFAULT}" ]   || [ "${DOSDP_PATTERN_NAMES_LOGICAL-ONLY}" ] || [ "${DOSDP_PATTERN_NAMES_ALL-ANNOTATIONS}" ] && [ $(PAT) = true ]; then $(ROBOT) merge $(addprefix -i , $^) \
 		annotate --ontology-iri $(ONTBASE)/patterns/definitions.owl  --version-iri $(ONTBASE)/releases/$(TODAY)/patterns/definitions.owl --annotation owl:versionInfo $(VERSION) -o definitions.ofn && mv definitions.ofn $@; fi
 
 
@@ -575,7 +601,7 @@ explain_unsat: $(SRC)
 # General Validation
 # ----------------------------------------
 TSV=
-ALL_TSV_FILES=$(DOSDP_TSV_FILES_DEFAULT)
+ALL_TSV_FILES=$(DOSDP_TSV_FILES_LOGICAL-ONLY) $(DOSDP_TSV_FILES_ALL-ANNOTATIONS) $(DOSDP_TSV_FILES_DEFAULT)
 
 validate-tsv: $(TSV) | $(TMPDIR)
 	for FILE in $< ; do \
