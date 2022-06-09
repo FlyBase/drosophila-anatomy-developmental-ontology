@@ -16,7 +16,6 @@ relations:
   has_soma_location: RO:0002100
   part_of: BFO:0000050
   fasciculates_with: RO:0002101
-  synapse_type: RO:0002120
   synapsed_via_type_Ib_bouton_to: RO:0002105
   synapsed_via_type_Is_bouton_to: RO:0002106
   synapsed_via_type_II_bouton_to: RO:0002107
@@ -32,17 +31,35 @@ vars:
   Landgraf_name: owl:Thing
   Hoang_name: owl:Thing
   Doe_name: owl:Thing
-  synapse_type: synapse_type
   alt_segment_long: owl:Thing
   alt_segment_short: owl:Thing
   
 list_vars:
   nerve: nerve
   muscle: muscle
+  Ib_muscle: muscle
+  Is_muscle: muscle
+  II_muscle: muscle
+  III_muscle: muscle
 
 internal_vars:
-  - var_name: muscles_cat
-    input: muscle
+  - var_name: Ib_muscles_cat
+    input: Ib_muscle
+    apply:
+      join:
+        sep: ' and '
+  - var_name: Is_muscles_cat
+    input: Is_muscle
+    apply:
+      join:
+        sep: ' and '
+  - var_name: II_muscles_cat
+    input: II_muscle
+    apply:
+      join:
+        sep: ' and '
+  - var_name: III_muscles_cat
+    input: III_muscle
     apply:
       join:
         sep: ' and '
@@ -78,10 +95,18 @@ def:
        - text: "It crosses the segment boundary and innervates musculature in the %s segment."
          vars:
            - alt_segment_long
-       - text: "It is %s %s."
+       - text: "It forms type Ib synapses to %s."
          vars:
-           - synapse_type
-           - muscles_cat
+           - Ib_muscles_cat
+       - text: "It forms type Is synapses to %s."
+         vars:
+           - Is_muscles_cat
+       - text: "It forms type II synapses to %s."
+         vars:
+           - II_muscles_cat
+       - text: "It forms type III synapses to %s."
+         vars:
+           - III_muscles_cat
        - text: "It fasciculates with the %s."
          vars:
            - nerves_cat
@@ -162,7 +187,27 @@ logical_axioms:
      multi_clause:
       sep: " and "
       clauses:
-        - text: "%s some %s"
+        - text: "synapsed_via_type_Ib_bouton_to some %s"
           vars:
-            - synapse_type
-            - muscle
+            - Ib_muscle
+   - axiom_type: subClassOf
+     multi_clause:
+      sep: " and "
+      clauses:
+        - text: "synapsed_via_type_Is_bouton_to some %s"
+          vars:
+            - Is_muscle
+   - axiom_type: subClassOf
+     multi_clause:
+      sep: " and "
+      clauses:
+        - text: "synapsed_via_type_II_bouton_to some %s"
+          vars:
+            - II_muscle
+   - axiom_type: subClassOf
+     multi_clause:
+      sep: " and "
+      clauses:
+        - text: "synapsed_via_type_III_bouton_to some %s"
+          vars:
+            - III_muscle
