@@ -1,5 +1,36 @@
 Level	Rule Name	Subject	Property	Value
-WARN	missing_definition	FBbt:00000000	IAO:0000115	
+WARN	duplicate_label_synonym	BFO:0000050	IAO:0000118	part_of
+WARN	duplicate_label_synonym	BFO:0000051	IAO:0000118	has_part
+WARN	duplicate_label_synonym	FBbt:00004847	oboInOwl:hasExactSynonym	hypandrium
+WARN	duplicate_label_synonym	FBbt:00006047	oboInOwl:hasExactSynonym	Tvb neuron
+WARN	duplicate_label_synonym	FBbt:00047534	oboInOwl:hasExactSynonym	intermediate tract of dorsal cervical fasciculus
+WARN	annotation_whitespace	RO:0002101	IAO:0000115	"relationship between a neuron and a neuron projection bundle (e.g.- tract or nerve bundle) that one or more of its projections travels through.
+"
+WARN	annotation_whitespace	RO:0002132	IAO:0000426	"(forall (?x ?y) 
+	(iff 
+		(has_fasciculating_neuron_projection ?x ?y)
+		(exists (?nps ?npbs)		
+			(and 
+				(\""neuron projection bundle ; CARO_0001001\"" ?x)
+				(\""neuron projection ; GO0043005\"" ?y)
+				(\""neuron projection segment ; CARO_0001502\"" ?nps)
+				(\""neuron projection bundle segment ; CARO_0001500\"" ?npbs)
+				(part_of ?nps ?y)
+				(part_of ?npbs ?x)
+				(part_of ?nps ?npbs)
+				(forall (?npbss)
+					(if
+						(and 
+							(\""neuron projection bundle subsegment ; CARO_0001501\"" ?npbss)
+							(part_of ?npbss ?npbs) 
+						)
+						(overlaps ?nps ?npbss)
+					))))))
+
+
+"
+WARN	annotation_whitespace	RO:0002215	IAO:0000115	A relation between a material entity (such as a cell) and a process, in which the material entity has the ability to carry out the process. 
+WARN	missing_superclass	FBbt:10000000	rdfs:subClassOf	
 WARN	missing_definition	FBbt:00000085	IAO:0000115	
 WARN	missing_definition	FBbt:00000104	IAO:0000115	
 WARN	missing_definition	FBbt:00000109	IAO:0000115	
@@ -9,8 +40,6 @@ WARN	missing_definition	FBbt:00000121	IAO:0000115
 WARN	missing_definition	FBbt:00000122	IAO:0000115	
 WARN	missing_definition	FBbt:00000129	IAO:0000115	
 WARN	missing_definition	FBbt:00000130	IAO:0000115	
-WARN	missing_definition	FBbt:00000131	IAO:0000115	
-WARN	missing_definition	FBbt:00000132	IAO:0000115	
 WARN	missing_definition	FBbt:00000210	IAO:0000115	
 WARN	missing_definition	FBbt:00000441	IAO:0000115	
 WARN	missing_definition	FBbt:00000442	IAO:0000115	
@@ -246,7 +275,6 @@ WARN	missing_definition	FBbt:00005534	IAO:0000115
 WARN	missing_definition	FBbt:00005535	IAO:0000115	
 WARN	missing_definition	FBbt:00005536	IAO:0000115	
 WARN	missing_definition	FBbt:00005538	IAO:0000115	
-WARN	missing_definition	FBbt:00005541	IAO:0000115	
 WARN	missing_definition	FBbt:00005544	IAO:0000115	
 WARN	missing_definition	FBbt:00005545	IAO:0000115	
 WARN	missing_definition	FBbt:00005546	IAO:0000115	
@@ -351,409 +379,6 @@ WARN	missing_definition	oboInOwl:hasScope	IAO:0000115
 WARN	missing_definition	oboInOwl:hasSynonymType	IAO:0000115	
 WARN	missing_definition	oboInOwl:inSubset	IAO:0000115	
 WARN	missing_definition	oboInOwl:shorthand	IAO:0000115	
-WARN	annotation_whitespace	RO:0002101	IAO:0000115	"relationship between a neuron and a neuron projection bundle (e.g.- tract or nerve bundle) that one or more of its projections travels through.
-"
-WARN	annotation_whitespace	RO:0002132	IAO:0000426	"(forall (?x ?y) 
-	(iff 
-		(has_fasciculating_neuron_projection ?x ?y)
-		(exists (?nps ?npbs)		
-			(and 
-				(\""neuron projection bundle ; CARO_0001001\"" ?x)
-				(\""neuron projection ; GO0043005\"" ?y)
-				(\""neuron projection segment ; CARO_0001502\"" ?nps)
-				(\""neuron projection bundle segment ; CARO_0001500\"" ?npbs)
-				(part_of ?nps ?y)
-				(part_of ?npbs ?x)
-				(part_of ?nps ?npbs)
-				(forall (?npbss)
-					(if
-						(and 
-							(\""neuron projection bundle subsegment ; CARO_0001501\"" ?npbss)
-							(part_of ?npbss ?npbs) 
-						)
-						(overlaps ?nps ?npbss)
-					))))))
-
-
-"
-WARN	annotation_whitespace	RO:0002215	IAO:0000115	A relation between a material entity (such as a cell) and a process, in which the material entity has the ability to carry out the process. 
-WARN	duplicate_exact_synonym	FBbt:00004057	oboInOwl:hasExactSynonym	VPN
-WARN	duplicate_exact_synonym	FBbt:00007437	oboInOwl:hasExactSynonym	vPN
-WARN	duplicate_exact_synonym	FBbt:00048287	oboInOwl:hasExactSynonym	VPN
-WARN	duplicate_exact_synonym	FBbt:00067351	oboInOwl:hasExactSynonym	vPN
-WARN	duplicate_exact_synonym	FBbt:00007080	oboInOwl:hasExactSynonym	VPC2
-WARN	duplicate_exact_synonym	FBbt:00047941	oboInOwl:hasExactSynonym	VPC2
-WARN	duplicate_exact_synonym	FBbt:00004047	oboInOwl:hasExactSynonym	ventricular ganglion
-WARN	duplicate_exact_synonym	FBbt:00005761	oboInOwl:hasExactSynonym	ventricular ganglion
-WARN	duplicate_exact_synonym	FBbt:00004855	oboInOwl:hasExactSynonym	ventral paramere
-WARN	duplicate_exact_synonym	FBbt:00048391	oboInOwl:hasExactSynonym	ventral paramere
-WARN	duplicate_exact_synonym	FBbt:00000325	oboInOwl:hasExactSynonym	ventral ganglionic branch
-WARN	duplicate_exact_synonym	FBbt:00002988	oboInOwl:hasExactSynonym	ventral ganglionic branch
-WARN	duplicate_exact_synonym	FBbt:00047175	oboInOwl:hasExactSynonym	VAC
-WARN	duplicate_exact_synonym	FBbt:00047547	oboInOwl:hasExactSynonym	VAC
-WARN	duplicate_exact_synonym	FBbt:00000339	oboInOwl:hasExactSynonym	VA2
-WARN	duplicate_exact_synonym	FBbt:00110256	oboInOwl:hasExactSynonym	VA2
-WARN	duplicate_exact_synonym	FBbt:00047228	oboInOwl:hasExactSynonym	tPN
-WARN	duplicate_exact_synonym	FBbt:00100225	oboInOwl:hasExactSynonym	tPN
-WARN	duplicate_exact_synonym	FBbt:00001996	oboInOwl:hasExactSynonym	TN
-WARN	duplicate_exact_synonym	FBbt:00002180	oboInOwl:hasExactSynonym	TN
-WARN	duplicate_exact_synonym	FBbt:00110305	oboInOwl:hasExactSynonym	TN
-WARN	duplicate_exact_synonym	FBbt:00111323	oboInOwl:hasExactSynonym	TN
-WARN	duplicate_exact_synonym	FBbt:00047029	oboInOwl:hasExactSynonym	TC
-WARN	duplicate_exact_synonym	FBbt:00048513	oboInOwl:hasExactSynonym	TC
-WARN	duplicate_exact_synonym	FBbt:00002944	oboInOwl:hasExactSynonym	t3
-WARN	duplicate_exact_synonym	FBbt:00003022	oboInOwl:hasExactSynonym	t3
-WARN	duplicate_exact_synonym	FBbt:00002943	oboInOwl:hasExactSynonym	t2
-WARN	duplicate_exact_synonym	FBbt:00003021	oboInOwl:hasExactSynonym	t2
-WARN	duplicate_exact_synonym	FBbt:00003020	oboInOwl:hasExactSynonym	t1
-WARN	duplicate_exact_synonym	FBbt:00003727	oboInOwl:hasExactSynonym	T1
-WARN	duplicate_exact_synonym	FBbt:00052043	oboInOwl:hasExactSynonym	t1
-WARN	duplicate_exact_synonym	FBbt:00110984	oboInOwl:hasExactSynonym	T1
-WARN	duplicate_exact_synonym	FBbt:00001867	oboInOwl:hasExactSynonym	T-bar
-WARN	duplicate_exact_synonym	FBbt:00005117	oboInOwl:hasExactSynonym	T-bar
-WARN	duplicate_exact_synonym	FBbt:00002700	oboInOwl:hasExactSynonym	T
-WARN	duplicate_exact_synonym	FBbt:00007727	oboInOwl:hasExactSynonym	T
-WARN	duplicate_exact_synonym	FBbt:00001982	oboInOwl:hasExactSynonym	subesophageal ganglion SE neuron 3
-WARN	duplicate_exact_synonym	FBbt:00100392	oboInOwl:hasExactSynonym	subesophageal ganglion SE neuron 3
-WARN	duplicate_exact_synonym	FBbt:00001982	oboInOwl:hasExactSynonym	subesophageal ganglion neuron 3
-WARN	duplicate_exact_synonym	FBbt:00100392	oboInOwl:hasExactSynonym	subesophageal ganglion neuron 3
-WARN	duplicate_exact_synonym	FBbt:00000969	oboInOwl:hasExactSynonym	srm
-WARN	duplicate_exact_synonym	FBbt:00000970	oboInOwl:hasExactSynonym	srm
-WARN	duplicate_exact_synonym	FBbt:00051069	oboInOwl:hasExactSynonym	SPZ
-WARN	duplicate_exact_synonym	FBbt:00110638	oboInOwl:hasExactSynonym	SPZ
-WARN	duplicate_exact_synonym	FBbt:00045010	oboInOwl:hasExactSynonym	SPU
-WARN	duplicate_exact_synonym	FBbt:00110640	oboInOwl:hasExactSynonym	SPU
-WARN	duplicate_exact_synonym	FBbt:00001258	oboInOwl:hasExactSynonym	SPG
-WARN	duplicate_exact_synonym	FBbt:00001920	oboInOwl:hasExactSynonym	SPG
-WARN	duplicate_exact_synonym	FBbt:00007605	oboInOwl:hasExactSynonym	SPG
-WARN	duplicate_exact_synonym	FBbt:00002037	oboInOwl:hasExactSynonym	SN
-WARN	duplicate_exact_synonym	FBbt:00002197	oboInOwl:hasExactSynonym	SN
-WARN	duplicate_exact_synonym	FBbt:00110279	oboInOwl:hasExactSynonym	SM
-WARN	duplicate_exact_synonym	FBbt:00110281	oboInOwl:hasExactSynonym	SM
-WARN	duplicate_exact_synonym	FBbt:00002610	oboInOwl:hasExactSynonym	sk
-WARN	duplicate_exact_synonym	FBbt:00002620	oboInOwl:hasExactSynonym	sk
-WARN	duplicate_exact_synonym	FBbt:00002625	oboInOwl:hasExactSynonym	sk
-WARN	duplicate_exact_synonym	FBbt:00002728	oboInOwl:hasExactSynonym	sh B
-WARN	duplicate_exact_synonym	FBbt:00002739	oboInOwl:hasExactSynonym	sh B
-WARN	duplicate_exact_synonym	FBbt:00002753	oboInOwl:hasExactSynonym	sh B
-WARN	duplicate_exact_synonym	FBbt:00051068	oboInOwl:hasExactSynonym	SEZ
-WARN	duplicate_exact_synonym	FBbt:00110639	oboInOwl:hasExactSynonym	SEZ
-WARN	duplicate_exact_synonym	FBbt:00001907	oboInOwl:hasExactSynonym	SC
-WARN	duplicate_exact_synonym	FBbt:00005797	oboInOwl:hasExactSynonym	SC
-WARN	duplicate_exact_synonym	FBbt:00007075	oboInOwl:hasExactSynonym	SAC
-WARN	duplicate_exact_synonym	FBbt:00049270	oboInOwl:hasExactSynonym	SAC
-WARN	duplicate_exact_synonym	FBbt:00004638	oboInOwl:hasExactSynonym	SA3
-WARN	duplicate_exact_synonym	FBbt:00049143	oboInOwl:hasExactSynonym	SA3
-WARN	duplicate_exact_synonym	FBbt:00004619	oboInOwl:hasExactSynonym	SA2
-WARN	duplicate_exact_synonym	FBbt:00049142	oboInOwl:hasExactSynonym	SA2
-WARN	duplicate_exact_synonym	FBbt:00007428	oboInOwl:hasExactSynonym	s-LNv
-WARN	duplicate_exact_synonym	FBbt:00100177	oboInOwl:hasExactSynonym	s-LNv
-WARN	duplicate_exact_synonym	FBbt:00002732	oboInOwl:hasExactSynonym	s
-WARN	duplicate_exact_synonym	FBbt:00002733	oboInOwl:hasExactSynonym	s
-WARN	duplicate_exact_synonym	FBbt:00002631	oboInOwl:hasExactSynonym	RN
-WARN	duplicate_exact_synonym	FBbt:00047705	oboInOwl:hasExactSynonym	RN
-WARN	duplicate_exact_synonym	FBbt:00002631	oboInOwl:hasExactSynonym	RcN
-WARN	duplicate_exact_synonym	FBbt:00100332	oboInOwl:hasExactSynonym	RcN
-WARN	duplicate_exact_synonym	FBbt:00048509	oboInOwl:hasExactSynonym	RB
-WARN	duplicate_exact_synonym	FBbt:00049480	oboInOwl:hasExactSynonym	RB
-WARN	duplicate_exact_synonym	FBbt:00004221	oboInOwl:hasExactSynonym	R5
-WARN	duplicate_exact_synonym	FBbt:00110905	oboInOwl:hasExactSynonym	R5
-WARN	duplicate_exact_synonym	FBbt:00004219	oboInOwl:hasExactSynonym	R4
-WARN	duplicate_exact_synonym	FBbt:00110901	oboInOwl:hasExactSynonym	R4
-WARN	duplicate_exact_synonym	FBbt:00004217	oboInOwl:hasExactSynonym	R3
-WARN	duplicate_exact_synonym	FBbt:00110897	oboInOwl:hasExactSynonym	R3
-WARN	duplicate_exact_synonym	FBbt:00004215	oboInOwl:hasExactSynonym	R2
-WARN	duplicate_exact_synonym	FBbt:00110893	oboInOwl:hasExactSynonym	R2
-WARN	duplicate_exact_synonym	FBbt:00004213	oboInOwl:hasExactSynonym	R1
-WARN	duplicate_exact_synonym	FBbt:00110890	oboInOwl:hasExactSynonym	R1
-WARN	duplicate_exact_synonym	FBbt:00004299	oboInOwl:hasExactSynonym	PS
-WARN	duplicate_exact_synonym	FBbt:00040072	oboInOwl:hasExactSynonym	PS
-WARN	duplicate_exact_synonym	FBbt:00004248	oboInOwl:hasExactSynonym	prothoracic chordotonal organ
-WARN	duplicate_exact_synonym	FBbt:00007656	oboInOwl:hasExactSynonym	prothoracic chordotonal organ
-WARN	duplicate_exact_synonym	FBbt:00003276	oboInOwl:hasExactSynonym	proboscis muscle 12-2
-WARN	duplicate_exact_synonym	FBbt:00051178	oboInOwl:hasExactSynonym	proboscis muscle 12-2
-WARN	duplicate_exact_synonym	FBbt:00004845	oboInOwl:hasExactSynonym	posterior paramere
-WARN	duplicate_exact_synonym	FBbt:00004854	oboInOwl:hasExactSynonym	posterior paramere
-WARN	duplicate_exact_synonym	FBbt:00051402	oboInOwl:hasExactSynonym	pnp
-WARN	duplicate_exact_synonym	FBbt:00051417	oboInOwl:hasExactSynonym	pnp
-WARN	duplicate_exact_synonym	FBbt:00051400	oboInOwl:hasExactSynonym	pnm
-WARN	duplicate_exact_synonym	FBbt:00051416	oboInOwl:hasExactSynonym	pnm
-WARN	duplicate_exact_synonym	FBbt:00051401	oboInOwl:hasExactSynonym	pna
-WARN	duplicate_exact_synonym	FBbt:00051415	oboInOwl:hasExactSynonym	pna
-WARN	duplicate_exact_synonym	FBbt:00007392	oboInOwl:hasExactSynonym	PN
-WARN	duplicate_exact_synonym	FBbt:00007654	oboInOwl:hasExactSynonym	PN
-WARN	duplicate_exact_synonym	FBbt:00110174	oboInOwl:hasExactSynonym	PN
-WARN	duplicate_exact_synonym	FBbt:00005560	oboInOwl:hasExactSynonym	PMG
-WARN	duplicate_exact_synonym	FBbt:00110178	oboInOwl:hasExactSynonym	PMG
-WARN	duplicate_exact_synonym	FBbt:00007083	oboInOwl:hasExactSynonym	PLF
-WARN	duplicate_exact_synonym	FBbt:00049232	oboInOwl:hasExactSynonym	PLF
-WARN	duplicate_exact_synonym	FBbt:00110567	oboInOwl:hasExactSynonym	PL
-WARN	duplicate_exact_synonym	FBbt:00110652	oboInOwl:hasExactSynonym	PL
-WARN	duplicate_exact_synonym	FBbt:00003700	oboInOwl:hasExactSynonym	PI
-WARN	duplicate_exact_synonym	FBbt:00005802	oboInOwl:hasExactSynonym	PI
-WARN	duplicate_exact_synonym	FBbt:00047185	oboInOwl:hasExactSynonym	PI
-WARN	duplicate_exact_synonym	FBbt:00003687	oboInOwl:hasExactSynonym	PED
-WARN	duplicate_exact_synonym	FBbt:00007453	oboInOwl:hasExactSynonym	PED
-WARN	duplicate_exact_synonym	FBbt:00007037	oboInOwl:hasExactSynonym	pEC
-WARN	duplicate_exact_synonym	FBbt:00048537	oboInOwl:hasExactSynonym	pEC
-WARN	duplicate_exact_synonym	FBbt:00003765	oboInOwl:hasExactSynonym	PDFCa
-WARN	duplicate_exact_synonym	FBbt:00100168	oboInOwl:hasExactSynonym	PDFCa
-WARN	duplicate_exact_synonym	FBbt:00001906	oboInOwl:hasExactSynonym	PC
-WARN	duplicate_exact_synonym	FBbt:00005796	oboInOwl:hasExactSynonym	PC
-WARN	duplicate_exact_synonym	FBbt:00110875	oboInOwl:hasExactSynonym	PC
-WARN	duplicate_exact_synonym	FBbt:00000394	oboInOwl:hasExactSynonym	PB
-WARN	duplicate_exact_synonym	FBbt:00003668	oboInOwl:hasExactSynonym	PB
-WARN	duplicate_exact_synonym	FBbt:00003668	oboInOwl:hasExactSynonym	pb
-WARN	duplicate_exact_synonym	FBbt:00004159	oboInOwl:hasExactSynonym	pb
-WARN	duplicate_exact_synonym	FBbt:00004849	oboInOwl:hasExactSynonym	paramere
-WARN	duplicate_exact_synonym	FBbt:00004855	oboInOwl:hasExactSynonym	paramere
-WARN	duplicate_exact_synonym	FBbt:00003385	oboInOwl:hasExactSynonym	pa3
-WARN	duplicate_exact_synonym	FBbt:00003388	oboInOwl:hasExactSynonym	pa3
-WARN	duplicate_exact_synonym	FBbt:00002731	oboInOwl:hasExactSynonym	p5
-WARN	duplicate_exact_synonym	FBbt:00002887	oboInOwl:hasExactSynonym	p5
-WARN	duplicate_exact_synonym	FBbt:00002737	oboInOwl:hasExactSynonym	p4
-WARN	duplicate_exact_synonym	FBbt:00002895	oboInOwl:hasExactSynonym	p4
-WARN	duplicate_exact_synonym	FBbt:00002736	oboInOwl:hasExactSynonym	p3
-WARN	duplicate_exact_synonym	FBbt:00002879	oboInOwl:hasExactSynonym	p3
-WARN	duplicate_exact_synonym	FBbt:00067020	oboInOwl:hasExactSynonym	ORN ab10A
-WARN	duplicate_exact_synonym	FBbt:00067055	oboInOwl:hasExactSynonym	ORN ab10A
-WARN	duplicate_exact_synonym	FBbt:00049817	oboInOwl:hasExactSynonym	OCG
-WARN	duplicate_exact_synonym	FBbt:00049818	oboInOwl:hasExactSynonym	OCG
-WARN	duplicate_exact_synonym	FBbt:00004847	oboInOwl:hasExactSynonym	novasternum
-WARN	duplicate_exact_synonym	FBbt:00048384	oboInOwl:hasExactSynonym	novasternum
-WARN	duplicate_exact_synonym	FBbt:00051047	oboInOwl:hasExactSynonym	NccII
-WARN	duplicate_exact_synonym	FBbt:00110626	oboInOwl:hasExactSynonym	NccII
-WARN	duplicate_exact_synonym	FBbt:00001721	oboInOwl:hasExactSynonym	NccI
-WARN	duplicate_exact_synonym	FBbt:00051045	oboInOwl:hasExactSynonym	NccI
-WARN	duplicate_exact_synonym	FBbt:00004043	oboInOwl:hasExactSynonym	MxN
-WARN	duplicate_exact_synonym	FBbt:00100334	oboInOwl:hasExactSynonym	MxN
-WARN	duplicate_exact_synonym	FBbt:00051397	oboInOwl:hasExactSynonym	mnp
-WARN	duplicate_exact_synonym	FBbt:00051414	oboInOwl:hasExactSynonym	mnp
-WARN	duplicate_exact_synonym	FBbt:00051396	oboInOwl:hasExactSynonym	mna
-WARN	duplicate_exact_synonym	FBbt:00051413	oboInOwl:hasExactSynonym	mna
-WARN	duplicate_exact_synonym	FBbt:00110267	oboInOwl:hasExactSynonym	MN23/24-Ib
-WARN	duplicate_exact_synonym	FBbt:00110270	oboInOwl:hasExactSynonym	MN23/24-Ib
-WARN	duplicate_exact_synonym	FBbt:00110264	oboInOwl:hasExactSynonym	MN22/23-Ib
-WARN	duplicate_exact_synonym	FBbt:00110267	oboInOwl:hasExactSynonym	MN22/23-Ib
-WARN	duplicate_exact_synonym	FBbt:00110261	oboInOwl:hasExactSynonym	MN21/22-Ib
-WARN	duplicate_exact_synonym	FBbt:00110264	oboInOwl:hasExactSynonym	MN21/22-Ib
-WARN	duplicate_exact_synonym	FBbt:00051409	oboInOwl:hasExactSynonym	mn
-WARN	duplicate_exact_synonym	FBbt:00051411	oboInOwl:hasExactSynonym	mn
-WARN	duplicate_exact_synonym	FBbt:00004623	oboInOwl:hasExactSynonym	metapleurum
-WARN	duplicate_exact_synonym	FBbt:00004625	oboInOwl:hasExactSynonym	metapleurum
-WARN	duplicate_exact_synonym	FBbt:00049261	oboInOwl:hasExactSynonym	MEF
-WARN	duplicate_exact_synonym	FBbt:00049262	oboInOwl:hasExactSynonym	MEF
-WARN	duplicate_exact_synonym	FBbt:00100342	oboInOwl:hasExactSynonym	MEF
-WARN	duplicate_exact_synonym	FBbt:00049248	oboInOwl:hasExactSynonym	medial loV
-WARN	duplicate_exact_synonym	FBbt:00049257	oboInOwl:hasExactSynonym	medial loV
-WARN	duplicate_exact_synonym	FBbt:00100319	oboInOwl:hasExactSynonym	MC
-WARN	duplicate_exact_synonym	FBbt:00111640	oboInOwl:hasExactSynonym	MC
-WARN	duplicate_exact_synonym	FBbt:00007484	oboInOwl:hasExactSynonym	MBIN
-WARN	duplicate_exact_synonym	FBbt:00047952	oboInOwl:hasExactSynonym	MBIN
-WARN	duplicate_exact_synonym	FBbt:00003683	oboInOwl:hasExactSynonym	MBDL
-WARN	duplicate_exact_synonym	FBbt:00049214	oboInOwl:hasExactSynonym	MBDL
-WARN	duplicate_exact_synonym	FBbt:00003684	oboInOwl:hasExactSynonym	MB
-WARN	duplicate_exact_synonym	FBbt:00005801	oboInOwl:hasExactSynonym	MB
-WARN	duplicate_exact_synonym	FBbt:00000164	oboInOwl:hasExactSynonym	maxillary lobe
-WARN	duplicate_exact_synonym	FBbt:00004536	oboInOwl:hasExactSynonym	maxillary lobe
-WARN	duplicate_exact_synonym	FBbt:00003764	oboInOwl:hasExactSynonym	M cell
-WARN	duplicate_exact_synonym	FBbt:00111519	oboInOwl:hasExactSynonym	M cell
-WARN	duplicate_exact_synonym	FBbt:00000233	oboInOwl:hasExactSynonym	LT
-WARN	duplicate_exact_synonym	FBbt:00003859	oboInOwl:hasExactSynonym	LT
-WARN	duplicate_exact_synonym	FBbt:00001939	oboInOwl:hasExactSynonym	lpo
-WARN	duplicate_exact_synonym	FBbt:00002688	oboInOwl:hasExactSynonym	lpo
-WARN	duplicate_exact_synonym	FBbt:00001977	oboInOwl:hasExactSynonym	lpn
-WARN	duplicate_exact_synonym	FBbt:00007439	oboInOwl:hasExactSynonym	lPN
-WARN	duplicate_exact_synonym	FBbt:00051403	oboInOwl:hasExactSynonym	lpn
-WARN	duplicate_exact_synonym	FBbt:00100224	oboInOwl:hasExactSynonym	lPN
-WARN	duplicate_exact_synonym	FBbt:00049248	oboInOwl:hasExactSynonym	loVM
-WARN	duplicate_exact_synonym	FBbt:00049257	oboInOwl:hasExactSynonym	loVM
-WARN	duplicate_exact_synonym	FBbt:00049249	oboInOwl:hasExactSynonym	loVL
-WARN	duplicate_exact_synonym	FBbt:00049255	oboInOwl:hasExactSynonym	loVL
-WARN	duplicate_exact_synonym	FBbt:00051395	oboInOwl:hasExactSynonym	lnp
-WARN	duplicate_exact_synonym	FBbt:00051412	oboInOwl:hasExactSynonym	lnp
-WARN	duplicate_exact_synonym	FBbt:00051398	oboInOwl:hasExactSynonym	lna
-WARN	duplicate_exact_synonym	FBbt:00051410	oboInOwl:hasExactSynonym	lna
-WARN	duplicate_exact_synonym	FBbt:00004028	oboInOwl:hasExactSynonym	LN
-WARN	duplicate_exact_synonym	FBbt:00049553	oboInOwl:hasExactSynonym	LN
-WARN	duplicate_exact_synonym	FBbt:00000382	oboInOwl:hasExactSynonym	LH
-WARN	duplicate_exact_synonym	FBbt:00007053	oboInOwl:hasExactSynonym	LH
-WARN	duplicate_exact_synonym	FBbt:00000372	oboInOwl:hasExactSynonym	LG
-WARN	duplicate_exact_synonym	FBbt:00001851	oboInOwl:hasExactSynonym	LG
-WARN	duplicate_exact_synonym	FBbt:00110878	oboInOwl:hasExactSynonym	LG
-WARN	duplicate_exact_synonym	FBbt:00110900	oboInOwl:hasExactSynonym	LFC
-WARN	duplicate_exact_synonym	FBbt:00110910	oboInOwl:hasExactSynonym	LFC
-WARN	duplicate_exact_synonym	FBbt:00000352	oboInOwl:hasExactSynonym	LE
-WARN	duplicate_exact_synonym	FBbt:00003667	oboInOwl:hasExactSynonym	LE
-WARN	duplicate_exact_synonym	FBbt:00002181	oboInOwl:hasExactSynonym	ldb
-WARN	duplicate_exact_synonym	FBbt:00002753	oboInOwl:hasExactSynonym	ldb
-WARN	duplicate_exact_synonym	FBbt:00002031	oboInOwl:hasExactSynonym	lda
-WARN	duplicate_exact_synonym	FBbt:00002434	oboInOwl:hasExactSynonym	lda
-WARN	duplicate_exact_synonym	FBbt:00000399	oboInOwl:hasExactSynonym	LC
-WARN	duplicate_exact_synonym	FBbt:00003870	oboInOwl:hasExactSynonym	LC
-WARN	duplicate_exact_synonym	FBbt:00100007	oboInOwl:hasExactSynonym	LC
-WARN	duplicate_exact_synonym	FBbt:00001966	oboInOwl:hasExactSynonym	LbrN
-WARN	duplicate_exact_synonym	FBbt:00100327	oboInOwl:hasExactSynonym	LbrN
-WARN	duplicate_exact_synonym	FBbt:00100328	oboInOwl:hasExactSynonym	LbrN
-WARN	duplicate_exact_synonym	FBbt:00001978	oboInOwl:hasExactSynonym	LbN
-WARN	duplicate_exact_synonym	FBbt:00004028	oboInOwl:hasExactSynonym	LbN
-WARN	duplicate_exact_synonym	FBbt:00100333	oboInOwl:hasExactSynonym	LbN
-WARN	duplicate_exact_synonym	FBbt:00049249	oboInOwl:hasExactSynonym	lateral loV
-WARN	duplicate_exact_synonym	FBbt:00049255	oboInOwl:hasExactSynonym	lateral loV
-WARN	duplicate_exact_synonym	FBbt:00000233	oboInOwl:hasExactSynonym	lateral longitudinal trunk
-WARN	duplicate_exact_synonym	FBbt:00002959	oboInOwl:hasExactSynonym	lateral longitudinal trunk
-WARN	duplicate_exact_synonym	FBbt:00049224	oboInOwl:hasExactSynonym	larval LEF
-WARN	duplicate_exact_synonym	FBbt:00049229	oboInOwl:hasExactSynonym	larval LEF
-WARN	duplicate_exact_synonym	FBbt:00007074	oboInOwl:hasExactSynonym	LALC
-WARN	duplicate_exact_synonym	FBbt:00049223	oboInOwl:hasExactSynonym	LALC
-WARN	duplicate_exact_synonym	FBbt:00003681	oboInOwl:hasExactSynonym	LAL
-WARN	duplicate_exact_synonym	FBbt:00007127	oboInOwl:hasExactSynonym	LAL
-WARN	duplicate_exact_synonym	FBbt:00002719	oboInOwl:hasExactSynonym	labial organ
-WARN	duplicate_exact_synonym	FBbt:00002720	oboInOwl:hasExactSynonym	labial organ
-WARN	duplicate_exact_synonym	FBbt:00110874	oboInOwl:hasExactSynonym	IVLP LN
-WARN	duplicate_exact_synonym	FBbt:00111353	oboInOwl:hasExactSynonym	IVLP LN
-WARN	duplicate_exact_synonym	FBbt:00001997	oboInOwl:hasExactSynonym	ISN
-WARN	duplicate_exact_synonym	FBbt:00048518	oboInOwl:hasExactSynonym	ISN
-WARN	duplicate_exact_synonym	FBbt:00049784	oboInOwl:hasExactSynonym	iPN
-WARN	duplicate_exact_synonym	FBbt:00067350	oboInOwl:hasExactSynonym	iPN
-WARN	duplicate_exact_synonym	FBbt:00001951	oboInOwl:hasExactSynonym	IPC
-WARN	duplicate_exact_synonym	FBbt:00007369	oboInOwl:hasExactSynonym	IPC
-WARN	duplicate_exact_synonym	FBbt:00047939	oboInOwl:hasExactSynonym	inter antennal connective
-WARN	duplicate_exact_synonym	FBbt:00047940	oboInOwl:hasExactSynonym	inter antennal connective
-WARN	duplicate_exact_synonym	FBbt:00040050	oboInOwl:hasExactSynonym	IB
-WARN	duplicate_exact_synonym	FBbt:00049601	oboInOwl:hasExactSynonym	IB
-WARN	duplicate_exact_synonym	FBbt:00004849	oboInOwl:hasExactSynonym	hypandrial process
-WARN	duplicate_exact_synonym	FBbt:00004855	oboInOwl:hasExactSynonym	hypandrial process
-WARN	duplicate_exact_synonym	FBbt:00004084	oboInOwl:hasExactSynonym	HCV
-WARN	duplicate_exact_synonym	FBbt:00004766	oboInOwl:hasExactSynonym	HCV
-WARN	duplicate_exact_synonym	FBbt:00001002	oboInOwl:hasExactSynonym	GS2
-WARN	duplicate_exact_synonym	FBbt:00004182	oboInOwl:hasExactSynonym	GS2
-WARN	duplicate_exact_synonym	FBbt:00001001	oboInOwl:hasExactSynonym	GS1
-WARN	duplicate_exact_synonym	FBbt:00004181	oboInOwl:hasExactSynonym	GS1
-WARN	duplicate_exact_synonym	FBbt:00000266	oboInOwl:hasExactSynonym	great dorsal commissure
-WARN	duplicate_exact_synonym	FBbt:00000275	oboInOwl:hasExactSynonym	great dorsal commissure
-WARN	duplicate_exact_synonym	FBbt:00004013	oboInOwl:hasExactSynonym	GNG
-WARN	duplicate_exact_synonym	FBbt:00014013	oboInOwl:hasExactSynonym	GNG
-WARN	duplicate_exact_synonym	FBbt:00000092	oboInOwl:hasExactSynonym	GC
-WARN	duplicate_exact_synonym	FBbt:00047941	oboInOwl:hasExactSynonym	GC
-WARN	duplicate_exact_synonym	FBbt:00047942	oboInOwl:hasExactSynonym	GC
-WARN	duplicate_exact_synonym	FBbt:00002630	oboInOwl:hasExactSynonym	FrN
-WARN	duplicate_exact_synonym	FBbt:00100329	oboInOwl:hasExactSynonym	FrN
-WARN	duplicate_exact_synonym	FBbt:00100330	oboInOwl:hasExactSynonym	FrN
-WARN	duplicate_exact_synonym	FBbt:00007073	oboInOwl:hasExactSynonym	fr m c
-WARN	duplicate_exact_synonym	FBbt:00047943	oboInOwl:hasExactSynonym	fr m c
-WARN	duplicate_exact_synonym	FBbt:00004107	oboInOwl:hasExactSynonym	FLA
-WARN	duplicate_exact_synonym	FBbt:00045050	oboInOwl:hasExactSynonym	FLA
-WARN	duplicate_exact_synonym	FBbt:00005084	oboInOwl:hasExactSynonym	FC
-WARN	duplicate_exact_synonym	FBbt:00051238	oboInOwl:hasExactSynonym	FC
-WARN	duplicate_exact_synonym	FBbt:00000349	oboInOwl:hasExactSynonym	FB9
-WARN	duplicate_exact_synonym	FBbt:00049536	oboInOwl:hasExactSynonym	FB9
-WARN	duplicate_exact_synonym	FBbt:00000348	oboInOwl:hasExactSynonym	FB8
-WARN	duplicate_exact_synonym	FBbt:00049535	oboInOwl:hasExactSynonym	FB8
-WARN	duplicate_exact_synonym	FBbt:00000347	oboInOwl:hasExactSynonym	FB7
-WARN	duplicate_exact_synonym	FBbt:00049534	oboInOwl:hasExactSynonym	FB7
-WARN	duplicate_exact_synonym	FBbt:00000346	oboInOwl:hasExactSynonym	FB6
-WARN	duplicate_exact_synonym	FBbt:00007536	oboInOwl:hasExactSynonym	FB6
-WARN	duplicate_exact_synonym	FBbt:00000345	oboInOwl:hasExactSynonym	FB5
-WARN	duplicate_exact_synonym	FBbt:00007544	oboInOwl:hasExactSynonym	FB5
-WARN	duplicate_exact_synonym	FBbt:00000344	oboInOwl:hasExactSynonym	FB4
-WARN	duplicate_exact_synonym	FBbt:00007543	oboInOwl:hasExactSynonym	FB4
-WARN	duplicate_exact_synonym	FBbt:00000343	oboInOwl:hasExactSynonym	FB3
-WARN	duplicate_exact_synonym	FBbt:00007542	oboInOwl:hasExactSynonym	FB3
-WARN	duplicate_exact_synonym	FBbt:00000342	oboInOwl:hasExactSynonym	FB2
-WARN	duplicate_exact_synonym	FBbt:00007541	oboInOwl:hasExactSynonym	FB2
-WARN	duplicate_exact_synonym	FBbt:00000341	oboInOwl:hasExactSynonym	FB1
-WARN	duplicate_exact_synonym	FBbt:00007540	oboInOwl:hasExactSynonym	FB1
-WARN	duplicate_exact_synonym	FBbt:00002635	oboInOwl:hasExactSynonym	esophageal ganglion
-WARN	duplicate_exact_synonym	FBbt:00004047	oboInOwl:hasExactSynonym	esophageal ganglion
-WARN	duplicate_exact_synonym	FBbt:00002635	oboInOwl:hasExactSynonym	EG
-WARN	duplicate_exact_synonym	FBbt:00047836	oboInOwl:hasExactSynonym	EG
-WARN	duplicate_exact_synonym	FBbt:00007038	oboInOwl:hasExactSynonym	ee
-WARN	duplicate_exact_synonym	FBbt:00047149	oboInOwl:hasExactSynonym	ee
-WARN	duplicate_exact_synonym	FBbt:00047150	oboInOwl:hasExactSynonym	ee
-WARN	duplicate_exact_synonym	FBbt:00110207	oboInOwl:hasExactSynonym	ee
-WARN	duplicate_exact_synonym	FBbt:00006049	oboInOwl:hasExactSynonym	EC
-WARN	duplicate_exact_synonym	FBbt:00007042	oboInOwl:hasExactSynonym	EC
-WARN	duplicate_exact_synonym	FBbt:00003678	oboInOwl:hasExactSynonym	EB
-WARN	duplicate_exact_synonym	FBbt:00110205	oboInOwl:hasExactSynonym	EB
-WARN	duplicate_exact_synonym	FBbt:00110206	oboInOwl:hasExactSynonym	EB
-WARN	duplicate_exact_synonym	FBbt:00000489	oboInOwl:hasExactSynonym	DPM
-WARN	duplicate_exact_synonym	FBbt:00005780	oboInOwl:hasExactSynonym	DPM
-WARN	duplicate_exact_synonym	FBbt:00007121	oboInOwl:hasExactSynonym	DPC
-WARN	duplicate_exact_synonym	FBbt:00048998	oboInOwl:hasExactSynonym	DPC
-WARN	duplicate_exact_synonym	FBbt:00004854	oboInOwl:hasExactSynonym	dorsal paramere
-WARN	duplicate_exact_synonym	FBbt:00048381	oboInOwl:hasExactSynonym	dorsal paramere
-WARN	duplicate_exact_synonym	FBbt:00005909	oboInOwl:hasExactSynonym	DMT
-WARN	duplicate_exact_synonym	FBbt:00047535	oboInOwl:hasExactSynonym	DMT
-WARN	duplicate_exact_synonym	FBbt:00000497	oboInOwl:hasExactSynonym	DM
-WARN	duplicate_exact_synonym	FBbt:00001326	oboInOwl:hasExactSynonym	DM
-WARN	duplicate_exact_synonym	FBbt:00047213	oboInOwl:hasExactSynonym	DGI
-WARN	duplicate_exact_synonym	FBbt:00047215	oboInOwl:hasExactSynonym	DGI
-WARN	duplicate_exact_synonym	FBbt:00047841	oboInOwl:hasExactSynonym	dendritic neuropil associated glial cell
-WARN	duplicate_exact_synonym	FBbt:00100505	oboInOwl:hasExactSynonym	dendritic neuropil associated glial cell
-WARN	duplicate_exact_synonym	FBbt:00049807	oboInOwl:hasExactSynonym	Delta7
-WARN	duplicate_exact_synonym	FBbt:00111057	oboInOwl:hasExactSynonym	Delta7
-WARN	duplicate_exact_synonym	FBbt:00005899	oboInOwl:hasExactSynonym	DC neuron
-WARN	duplicate_exact_synonym	FBbt:00100486	oboInOwl:hasExactSynonym	DC neuron
-WARN	duplicate_exact_synonym	FBbt:00110481	oboInOwl:hasExactSynonym	DC neuron
-WARN	duplicate_exact_synonym	FBbt:00007073	oboInOwl:hasExactSynonym	DAC2
-WARN	duplicate_exact_synonym	FBbt:00047943	oboInOwl:hasExactSynonym	DAC2
-WARN	duplicate_exact_synonym	FBbt:00007405	oboInOwl:hasExactSynonym	CSD
-WARN	duplicate_exact_synonym	FBbt:00110938	oboInOwl:hasExactSynonym	CSD
-WARN	duplicate_exact_synonym	FBbt:00007070	oboInOwl:hasExactSynonym	CPM
-WARN	duplicate_exact_synonym	FBbt:00007723	oboInOwl:hasExactSynonym	CPM
-WARN	duplicate_exact_synonym	FBbt:00004191	oboInOwl:hasExactSynonym	corneal lens
-WARN	duplicate_exact_synonym	FBbt:00004199	oboInOwl:hasExactSynonym	corneal lens
-WARN	duplicate_exact_synonym	FBbt:00007070	oboInOwl:hasExactSynonym	centroposterior medial compartment
-WARN	duplicate_exact_synonym	FBbt:00007723	oboInOwl:hasExactSynonym	centroposterior medial compartment
-WARN	duplicate_exact_synonym	FBbt:00007070	oboInOwl:hasExactSynonym	centro-posterior medial synaptic neuropil domain
-WARN	duplicate_exact_synonym	FBbt:00007723	oboInOwl:hasExactSynonym	centro-posterior medial synaptic neuropil domain
-WARN	duplicate_exact_synonym	FBbt:00001718	oboInOwl:hasExactSynonym	CC-CA
-WARN	duplicate_exact_synonym	FBbt:00049627	oboInOwl:hasExactSynonym	CC-CA
-WARN	duplicate_exact_synonym	FBbt:00004019	oboInOwl:hasExactSynonym	CC
-WARN	duplicate_exact_synonym	FBbt:00005799	oboInOwl:hasExactSynonym	CC
-WARN	duplicate_exact_synonym	FBbt:00048544	oboInOwl:hasExactSynonym	CC
-WARN	duplicate_exact_synonym	FBbt:00000395	oboInOwl:hasExactSynonym	CB
-WARN	duplicate_exact_synonym	FBbt:00045020	oboInOwl:hasExactSynonym	CB
-WARN	duplicate_exact_synonym	FBbt:00003685	oboInOwl:hasExactSynonym	CA
-WARN	duplicate_exact_synonym	FBbt:00005800	oboInOwl:hasExactSynonym	CA
-WARN	duplicate_exact_synonym	FBbt:00007118	oboInOwl:hasExactSynonym	CA
-WARN	duplicate_exact_synonym	FBbt:00007080	oboInOwl:hasExactSynonym	c op fo
-WARN	duplicate_exact_synonym	FBbt:00047941	oboInOwl:hasExactSynonym	c op fo
-WARN	duplicate_exact_synonym	FBbt:00100253	oboInOwl:hasExactSynonym	beta'm
-WARN	duplicate_exact_synonym	FBbt:00100270	oboInOwl:hasExactSynonym	beta'm
-WARN	duplicate_exact_synonym	FBbt:00001287	oboInOwl:hasExactSynonym	belt glial cell
-WARN	duplicate_exact_synonym	FBbt:00001288	oboInOwl:hasExactSynonym	belt glial cell
-WARN	duplicate_exact_synonym	FBbt:00002729	oboInOwl:hasExactSynonym	b
-WARN	duplicate_exact_synonym	FBbt:00002730	oboInOwl:hasExactSynonym	b
-WARN	duplicate_exact_synonym	FBbt:00002731	oboInOwl:hasExactSynonym	b
-WARN	duplicate_exact_synonym	FBbt:00003980	oboInOwl:hasExactSynonym	AN
-WARN	duplicate_exact_synonym	FBbt:00006045	oboInOwl:hasExactSynonym	AN
-WARN	duplicate_exact_synonym	FBbt:00110634	oboInOwl:hasExactSynonym	AMMC-VLP PN
-WARN	duplicate_exact_synonym	FBbt:00111354	oboInOwl:hasExactSynonym	AMMC-VLP PN
-WARN	duplicate_exact_synonym	FBbt:00110873	oboInOwl:hasExactSynonym	AMMC LN
-WARN	duplicate_exact_synonym	FBbt:00111352	oboInOwl:hasExactSynonym	AMMC LN
-WARN	duplicate_exact_synonym	FBbt:00001635	oboInOwl:hasExactSynonym	ALT
-WARN	duplicate_exact_synonym	FBbt:00100099	oboInOwl:hasExactSynonym	ALT
-WARN	duplicate_exact_synonym	FBbt:00100253	oboInOwl:hasExactSynonym	alpha'm
-WARN	duplicate_exact_synonym	FBbt:00100267	oboInOwl:hasExactSynonym	alpha'm
-WARN	duplicate_exact_synonym	FBbt:00048535	oboInOwl:hasExactSynonym	aEC
-WARN	duplicate_exact_synonym	FBbt:00049280	oboInOwl:hasExactSynonym	aEC
-WARN	duplicate_exact_synonym	FBbt:00007438	oboInOwl:hasExactSynonym	adPN
-WARN	duplicate_exact_synonym	FBbt:00067349	oboInOwl:hasExactSynonym	adPN
-WARN	duplicate_exact_synonym	FBbt:00001635	oboInOwl:hasExactSynonym	ACT
-WARN	duplicate_exact_synonym	FBbt:00100099	oboInOwl:hasExactSynonym	ACT
-WARN	duplicate_exact_synonym	FBbt:00004914	oboInOwl:hasExactSynonym	AcGl
-WARN	duplicate_exact_synonym	FBbt:00004959	oboInOwl:hasExactSynonym	AcGl
-WARN	duplicate_exact_synonym	FBbt:00110173	oboInOwl:hasExactSynonym	AC
-WARN	duplicate_exact_synonym	FBbt:00110300	oboInOwl:hasExactSynonym	AC
-WARN	duplicate_exact_synonym	FBbt:00110269	oboInOwl:hasExactSynonym	A1-7 MN23/24-Ib
-WARN	duplicate_exact_synonym	FBbt:00110272	oboInOwl:hasExactSynonym	A1-7 MN23/24-Ib
-WARN	duplicate_exact_synonym	FBbt:00110266	oboInOwl:hasExactSynonym	A1-7 MN22/23-Ib
-WARN	duplicate_exact_synonym	FBbt:00110269	oboInOwl:hasExactSynonym	A1-7 MN22/23-Ib
-WARN	duplicate_exact_synonym	FBbt:00110263	oboInOwl:hasExactSynonym	A1-7 MN21/22-Ib
-WARN	duplicate_exact_synonym	FBbt:00110266	oboInOwl:hasExactSynonym	A1-7 MN21/22-Ib
-WARN	missing_superclass	FBbt:10000000	rdfs:subClassOf	
 WARN	duplicate_definition	FBbt:00002031	IAO:0000115	Multidendritic neuron of the larval thoracic lateral cluster.
 WARN	duplicate_definition	FBbt:00002032	IAO:0000115	Multidendritic neuron of the larval thoracic lateral cluster.
 WARN	duplicate_definition	FBbt:00002033	IAO:0000115	Multidendritic neuron of the larval thoracic lateral cluster.
@@ -977,8 +602,6 @@ WARN	duplicate_definition	FBbt:00051728	IAO:0000115	Adult lateral horn output ne
 WARN	duplicate_definition	FBbt:00051646	IAO:0000115	Adult lateral horn output neuron that fasciculates with the AV2 primary neurite tract (Schlegel et al., 2021). There is around one of these neurons per hemisphere and it is cholinergic (Schlegel et al., 2021).
 WARN	duplicate_definition	FBbt:00051663	IAO:0000115	Adult lateral horn output neuron that fasciculates with the AV2 primary neurite tract (Schlegel et al., 2021). There is around one of these neurons per hemisphere and it is cholinergic (Schlegel et al., 2021).
 WARN	duplicate_definition	FBbt:00051666	IAO:0000115	Adult lateral horn output neuron that fasciculates with the AV2 primary neurite tract (Schlegel et al., 2021). There is around one of these neurons per hemisphere and it is cholinergic (Schlegel et al., 2021).
-WARN	duplicate_definition	FBbt:00051636	IAO:0000115	Adult lateral horn output neuron that fasciculates with the AV2 primary neurite tract (Schlegel et al., 2021). There is around one of these cells per hemisphere (Schlegel et al., 2021).
-WARN	duplicate_definition	FBbt:00051652	IAO:0000115	Adult lateral horn output neuron that fasciculates with the AV2 primary neurite tract (Schlegel et al., 2021). There is around one of these cells per hemisphere (Schlegel et al., 2021).
 WARN	duplicate_definition	FBbt:00051645	IAO:0000115	Adult lateral horn output neuron that fasciculates with the AV2 primary neurite tract (Schlegel et al., 2021). There is approximately one of these neurons per hemisphere and it is cholinergic (Schlegel et al., 2021).
 WARN	duplicate_definition	FBbt:00051671	IAO:0000115	Adult lateral horn output neuron that fasciculates with the AV2 primary neurite tract (Schlegel et al., 2021). There is approximately one of these neurons per hemisphere and it is cholinergic (Schlegel et al., 2021).
 WARN	duplicate_definition	FBbt:00051676	IAO:0000115	Adult lateral horn output neuron that fasciculates with the AV2 primary neurite tract (Schlegel et al., 2021). There is approximately one of these neurons per hemisphere and it is cholinergic (Schlegel et al., 2021).
@@ -1266,13 +889,383 @@ WARN	duplicate_definition	FBbt:10005336	IAO:0000115	.
 WARN	duplicate_definition	FBbt:10005342	IAO:0000115	.
 WARN	duplicate_definition	FBbt:10005349	IAO:0000115	.
 WARN	duplicate_definition	FBbt:10005369	IAO:0000115	.
-WARN	duplicate_label_synonym	BFO:0000050	IAO:0000118	part_of
-WARN	duplicate_label_synonym	BFO:0000051	IAO:0000118	has_part
-WARN	duplicate_label_synonym	FBbt:00004847	oboInOwl:hasExactSynonym	hypandrium
-WARN	duplicate_label_synonym	FBbt:00006047	oboInOwl:hasExactSynonym	Tvb neuron
-WARN	duplicate_label_synonym	FBbt:00047534	oboInOwl:hasExactSynonym	intermediate tract of dorsal cervical fasciculus
-WARN	duplicate_label_synonym	FBbt:00110984	oboInOwl:hasExactSynonym	dopaminergic T1 neuron
-WARN	deprecated_class_reference	blank node	owl:someValuesFrom	FBbt:00007105
+WARN	duplicate_exact_synonym	FBbt:00004057	oboInOwl:hasExactSynonym	VPN
+WARN	duplicate_exact_synonym	FBbt:00007437	oboInOwl:hasExactSynonym	vPN
+WARN	duplicate_exact_synonym	FBbt:00048287	oboInOwl:hasExactSynonym	VPN
+WARN	duplicate_exact_synonym	FBbt:00067351	oboInOwl:hasExactSynonym	vPN
+WARN	duplicate_exact_synonym	FBbt:00007080	oboInOwl:hasExactSynonym	VPC2
+WARN	duplicate_exact_synonym	FBbt:00047941	oboInOwl:hasExactSynonym	VPC2
+WARN	duplicate_exact_synonym	FBbt:00004047	oboInOwl:hasExactSynonym	ventricular ganglion
+WARN	duplicate_exact_synonym	FBbt:00005761	oboInOwl:hasExactSynonym	ventricular ganglion
+WARN	duplicate_exact_synonym	FBbt:00004855	oboInOwl:hasExactSynonym	ventral paramere
+WARN	duplicate_exact_synonym	FBbt:00048391	oboInOwl:hasExactSynonym	ventral paramere
+WARN	duplicate_exact_synonym	FBbt:00000325	oboInOwl:hasExactSynonym	ventral ganglionic branch
+WARN	duplicate_exact_synonym	FBbt:00002988	oboInOwl:hasExactSynonym	ventral ganglionic branch
+WARN	duplicate_exact_synonym	FBbt:00047175	oboInOwl:hasExactSynonym	VAC
+WARN	duplicate_exact_synonym	FBbt:00047547	oboInOwl:hasExactSynonym	VAC
+WARN	duplicate_exact_synonym	FBbt:00000339	oboInOwl:hasExactSynonym	VA2
+WARN	duplicate_exact_synonym	FBbt:00110256	oboInOwl:hasExactSynonym	VA2
+WARN	duplicate_exact_synonym	FBbt:00047228	oboInOwl:hasExactSynonym	tPN
+WARN	duplicate_exact_synonym	FBbt:00100225	oboInOwl:hasExactSynonym	tPN
+WARN	duplicate_exact_synonym	FBbt:00001996	oboInOwl:hasExactSynonym	TN
+WARN	duplicate_exact_synonym	FBbt:00002180	oboInOwl:hasExactSynonym	TN
+WARN	duplicate_exact_synonym	FBbt:00110305	oboInOwl:hasExactSynonym	TN
+WARN	duplicate_exact_synonym	FBbt:00111323	oboInOwl:hasExactSynonym	TN
+WARN	duplicate_exact_synonym	FBbt:00047029	oboInOwl:hasExactSynonym	TC
+WARN	duplicate_exact_synonym	FBbt:00048513	oboInOwl:hasExactSynonym	TC
+WARN	duplicate_exact_synonym	FBbt:00002944	oboInOwl:hasExactSynonym	t3
+WARN	duplicate_exact_synonym	FBbt:00003022	oboInOwl:hasExactSynonym	t3
+WARN	duplicate_exact_synonym	FBbt:00002943	oboInOwl:hasExactSynonym	t2
+WARN	duplicate_exact_synonym	FBbt:00003021	oboInOwl:hasExactSynonym	t2
+WARN	duplicate_exact_synonym	FBbt:00003020	oboInOwl:hasExactSynonym	t1
+WARN	duplicate_exact_synonym	FBbt:00052043	oboInOwl:hasExactSynonym	t1
+WARN	duplicate_exact_synonym	FBbt:00001867	oboInOwl:hasExactSynonym	T-bar
+WARN	duplicate_exact_synonym	FBbt:00005117	oboInOwl:hasExactSynonym	T-bar
+WARN	duplicate_exact_synonym	FBbt:00002700	oboInOwl:hasExactSynonym	T
+WARN	duplicate_exact_synonym	FBbt:00007727	oboInOwl:hasExactSynonym	T
+WARN	duplicate_exact_synonym	FBbt:00001982	oboInOwl:hasExactSynonym	subesophageal ganglion SE neuron 3
+WARN	duplicate_exact_synonym	FBbt:00100392	oboInOwl:hasExactSynonym	subesophageal ganglion SE neuron 3
+WARN	duplicate_exact_synonym	FBbt:00001982	oboInOwl:hasExactSynonym	subesophageal ganglion neuron 3
+WARN	duplicate_exact_synonym	FBbt:00100392	oboInOwl:hasExactSynonym	subesophageal ganglion neuron 3
+WARN	duplicate_exact_synonym	FBbt:00000969	oboInOwl:hasExactSynonym	srm
+WARN	duplicate_exact_synonym	FBbt:00000970	oboInOwl:hasExactSynonym	srm
+WARN	duplicate_exact_synonym	FBbt:00051069	oboInOwl:hasExactSynonym	SPZ
+WARN	duplicate_exact_synonym	FBbt:00110638	oboInOwl:hasExactSynonym	SPZ
+WARN	duplicate_exact_synonym	FBbt:00045010	oboInOwl:hasExactSynonym	SPU
+WARN	duplicate_exact_synonym	FBbt:00110640	oboInOwl:hasExactSynonym	SPU
+WARN	duplicate_exact_synonym	FBbt:00001258	oboInOwl:hasExactSynonym	SPG
+WARN	duplicate_exact_synonym	FBbt:00001920	oboInOwl:hasExactSynonym	SPG
+WARN	duplicate_exact_synonym	FBbt:00007605	oboInOwl:hasExactSynonym	SPG
+WARN	duplicate_exact_synonym	FBbt:00002037	oboInOwl:hasExactSynonym	SN
+WARN	duplicate_exact_synonym	FBbt:00002197	oboInOwl:hasExactSynonym	SN
+WARN	duplicate_exact_synonym	FBbt:00110279	oboInOwl:hasExactSynonym	SM
+WARN	duplicate_exact_synonym	FBbt:00110281	oboInOwl:hasExactSynonym	SM
+WARN	duplicate_exact_synonym	FBbt:00002610	oboInOwl:hasExactSynonym	sk
+WARN	duplicate_exact_synonym	FBbt:00002620	oboInOwl:hasExactSynonym	sk
+WARN	duplicate_exact_synonym	FBbt:00002625	oboInOwl:hasExactSynonym	sk
+WARN	duplicate_exact_synonym	FBbt:00002728	oboInOwl:hasExactSynonym	sh B
+WARN	duplicate_exact_synonym	FBbt:00002739	oboInOwl:hasExactSynonym	sh B
+WARN	duplicate_exact_synonym	FBbt:00002753	oboInOwl:hasExactSynonym	sh B
+WARN	duplicate_exact_synonym	FBbt:00051068	oboInOwl:hasExactSynonym	SEZ
+WARN	duplicate_exact_synonym	FBbt:00110639	oboInOwl:hasExactSynonym	SEZ
+WARN	duplicate_exact_synonym	FBbt:00001907	oboInOwl:hasExactSynonym	SC
+WARN	duplicate_exact_synonym	FBbt:00005797	oboInOwl:hasExactSynonym	SC
+WARN	duplicate_exact_synonym	FBbt:00007075	oboInOwl:hasExactSynonym	SAC
+WARN	duplicate_exact_synonym	FBbt:00049270	oboInOwl:hasExactSynonym	SAC
+WARN	duplicate_exact_synonym	FBbt:00004638	oboInOwl:hasExactSynonym	SA3
+WARN	duplicate_exact_synonym	FBbt:00049143	oboInOwl:hasExactSynonym	SA3
+WARN	duplicate_exact_synonym	FBbt:00004619	oboInOwl:hasExactSynonym	SA2
+WARN	duplicate_exact_synonym	FBbt:00049142	oboInOwl:hasExactSynonym	SA2
+WARN	duplicate_exact_synonym	FBbt:00007428	oboInOwl:hasExactSynonym	s-LNv
+WARN	duplicate_exact_synonym	FBbt:00100177	oboInOwl:hasExactSynonym	s-LNv
+WARN	duplicate_exact_synonym	FBbt:00002732	oboInOwl:hasExactSynonym	s
+WARN	duplicate_exact_synonym	FBbt:00002733	oboInOwl:hasExactSynonym	s
+WARN	duplicate_exact_synonym	FBbt:00002631	oboInOwl:hasExactSynonym	RN
+WARN	duplicate_exact_synonym	FBbt:00047705	oboInOwl:hasExactSynonym	RN
+WARN	duplicate_exact_synonym	FBbt:00002631	oboInOwl:hasExactSynonym	RcN
+WARN	duplicate_exact_synonym	FBbt:00100332	oboInOwl:hasExactSynonym	RcN
+WARN	duplicate_exact_synonym	FBbt:00048509	oboInOwl:hasExactSynonym	RB
+WARN	duplicate_exact_synonym	FBbt:00049480	oboInOwl:hasExactSynonym	RB
+WARN	duplicate_exact_synonym	FBbt:00004221	oboInOwl:hasExactSynonym	R5
+WARN	duplicate_exact_synonym	FBbt:00110905	oboInOwl:hasExactSynonym	R5
+WARN	duplicate_exact_synonym	FBbt:00004219	oboInOwl:hasExactSynonym	R4
+WARN	duplicate_exact_synonym	FBbt:00110901	oboInOwl:hasExactSynonym	R4
+WARN	duplicate_exact_synonym	FBbt:00004217	oboInOwl:hasExactSynonym	R3
+WARN	duplicate_exact_synonym	FBbt:00110897	oboInOwl:hasExactSynonym	R3
+WARN	duplicate_exact_synonym	FBbt:00004215	oboInOwl:hasExactSynonym	R2
+WARN	duplicate_exact_synonym	FBbt:00110893	oboInOwl:hasExactSynonym	R2
+WARN	duplicate_exact_synonym	FBbt:00004213	oboInOwl:hasExactSynonym	R1
+WARN	duplicate_exact_synonym	FBbt:00110890	oboInOwl:hasExactSynonym	R1
+WARN	duplicate_exact_synonym	FBbt:00004299	oboInOwl:hasExactSynonym	PS
+WARN	duplicate_exact_synonym	FBbt:00040072	oboInOwl:hasExactSynonym	PS
+WARN	duplicate_exact_synonym	FBbt:00004248	oboInOwl:hasExactSynonym	prothoracic chordotonal organ
+WARN	duplicate_exact_synonym	FBbt:00007656	oboInOwl:hasExactSynonym	prothoracic chordotonal organ
+WARN	duplicate_exact_synonym	FBbt:00003276	oboInOwl:hasExactSynonym	proboscis muscle 12-2
+WARN	duplicate_exact_synonym	FBbt:00051178	oboInOwl:hasExactSynonym	proboscis muscle 12-2
+WARN	duplicate_exact_synonym	FBbt:00004845	oboInOwl:hasExactSynonym	posterior paramere
+WARN	duplicate_exact_synonym	FBbt:00004854	oboInOwl:hasExactSynonym	posterior paramere
+WARN	duplicate_exact_synonym	FBbt:00051402	oboInOwl:hasExactSynonym	pnp
+WARN	duplicate_exact_synonym	FBbt:00051417	oboInOwl:hasExactSynonym	pnp
+WARN	duplicate_exact_synonym	FBbt:00051400	oboInOwl:hasExactSynonym	pnm
+WARN	duplicate_exact_synonym	FBbt:00051416	oboInOwl:hasExactSynonym	pnm
+WARN	duplicate_exact_synonym	FBbt:00051401	oboInOwl:hasExactSynonym	pna
+WARN	duplicate_exact_synonym	FBbt:00051415	oboInOwl:hasExactSynonym	pna
+WARN	duplicate_exact_synonym	FBbt:00007392	oboInOwl:hasExactSynonym	PN
+WARN	duplicate_exact_synonym	FBbt:00007654	oboInOwl:hasExactSynonym	PN
+WARN	duplicate_exact_synonym	FBbt:00110174	oboInOwl:hasExactSynonym	PN
+WARN	duplicate_exact_synonym	FBbt:00005560	oboInOwl:hasExactSynonym	PMG
+WARN	duplicate_exact_synonym	FBbt:00110178	oboInOwl:hasExactSynonym	PMG
+WARN	duplicate_exact_synonym	FBbt:00007083	oboInOwl:hasExactSynonym	PLF
+WARN	duplicate_exact_synonym	FBbt:00049232	oboInOwl:hasExactSynonym	PLF
+WARN	duplicate_exact_synonym	FBbt:00110567	oboInOwl:hasExactSynonym	PL
+WARN	duplicate_exact_synonym	FBbt:00110652	oboInOwl:hasExactSynonym	PL
+WARN	duplicate_exact_synonym	FBbt:00003700	oboInOwl:hasExactSynonym	PI
+WARN	duplicate_exact_synonym	FBbt:00005802	oboInOwl:hasExactSynonym	PI
+WARN	duplicate_exact_synonym	FBbt:00047185	oboInOwl:hasExactSynonym	PI
+WARN	duplicate_exact_synonym	FBbt:00003687	oboInOwl:hasExactSynonym	PED
+WARN	duplicate_exact_synonym	FBbt:00007453	oboInOwl:hasExactSynonym	PED
+WARN	duplicate_exact_synonym	FBbt:00007037	oboInOwl:hasExactSynonym	pEC
+WARN	duplicate_exact_synonym	FBbt:00048537	oboInOwl:hasExactSynonym	pEC
+WARN	duplicate_exact_synonym	FBbt:00003765	oboInOwl:hasExactSynonym	PDFCa
+WARN	duplicate_exact_synonym	FBbt:00100168	oboInOwl:hasExactSynonym	PDFCa
+WARN	duplicate_exact_synonym	FBbt:00001906	oboInOwl:hasExactSynonym	PC
+WARN	duplicate_exact_synonym	FBbt:00005796	oboInOwl:hasExactSynonym	PC
+WARN	duplicate_exact_synonym	FBbt:00110875	oboInOwl:hasExactSynonym	PC
+WARN	duplicate_exact_synonym	FBbt:00000394	oboInOwl:hasExactSynonym	PB
+WARN	duplicate_exact_synonym	FBbt:00003668	oboInOwl:hasExactSynonym	PB
+WARN	duplicate_exact_synonym	FBbt:00003668	oboInOwl:hasExactSynonym	pb
+WARN	duplicate_exact_synonym	FBbt:00004159	oboInOwl:hasExactSynonym	pb
+WARN	duplicate_exact_synonym	FBbt:00004849	oboInOwl:hasExactSynonym	paramere
+WARN	duplicate_exact_synonym	FBbt:00004855	oboInOwl:hasExactSynonym	paramere
+WARN	duplicate_exact_synonym	FBbt:00003385	oboInOwl:hasExactSynonym	pa3
+WARN	duplicate_exact_synonym	FBbt:00003388	oboInOwl:hasExactSynonym	pa3
+WARN	duplicate_exact_synonym	FBbt:00002731	oboInOwl:hasExactSynonym	p5
+WARN	duplicate_exact_synonym	FBbt:00002887	oboInOwl:hasExactSynonym	p5
+WARN	duplicate_exact_synonym	FBbt:00002737	oboInOwl:hasExactSynonym	p4
+WARN	duplicate_exact_synonym	FBbt:00002895	oboInOwl:hasExactSynonym	p4
+WARN	duplicate_exact_synonym	FBbt:00002736	oboInOwl:hasExactSynonym	p3
+WARN	duplicate_exact_synonym	FBbt:00002879	oboInOwl:hasExactSynonym	p3
+WARN	duplicate_exact_synonym	FBbt:00067020	oboInOwl:hasExactSynonym	ORN ab10A
+WARN	duplicate_exact_synonym	FBbt:00067055	oboInOwl:hasExactSynonym	ORN ab10A
+WARN	duplicate_exact_synonym	FBbt:00049817	oboInOwl:hasExactSynonym	OCG
+WARN	duplicate_exact_synonym	FBbt:00049818	oboInOwl:hasExactSynonym	OCG
+WARN	duplicate_exact_synonym	FBbt:00004847	oboInOwl:hasExactSynonym	novasternum
+WARN	duplicate_exact_synonym	FBbt:00048384	oboInOwl:hasExactSynonym	novasternum
+WARN	duplicate_exact_synonym	FBbt:00051047	oboInOwl:hasExactSynonym	NccII
+WARN	duplicate_exact_synonym	FBbt:00110626	oboInOwl:hasExactSynonym	NccII
+WARN	duplicate_exact_synonym	FBbt:00001721	oboInOwl:hasExactSynonym	NccI
+WARN	duplicate_exact_synonym	FBbt:00051045	oboInOwl:hasExactSynonym	NccI
+WARN	duplicate_exact_synonym	FBbt:00004043	oboInOwl:hasExactSynonym	MxN
+WARN	duplicate_exact_synonym	FBbt:00100334	oboInOwl:hasExactSynonym	MxN
+WARN	duplicate_exact_synonym	FBbt:00051397	oboInOwl:hasExactSynonym	mnp
+WARN	duplicate_exact_synonym	FBbt:00051414	oboInOwl:hasExactSynonym	mnp
+WARN	duplicate_exact_synonym	FBbt:00051396	oboInOwl:hasExactSynonym	mna
+WARN	duplicate_exact_synonym	FBbt:00051413	oboInOwl:hasExactSynonym	mna
+WARN	duplicate_exact_synonym	FBbt:00051409	oboInOwl:hasExactSynonym	mn
+WARN	duplicate_exact_synonym	FBbt:00051411	oboInOwl:hasExactSynonym	mn
+WARN	duplicate_exact_synonym	FBbt:00004623	oboInOwl:hasExactSynonym	metapleurum
+WARN	duplicate_exact_synonym	FBbt:00004625	oboInOwl:hasExactSynonym	metapleurum
+WARN	duplicate_exact_synonym	FBbt:00049261	oboInOwl:hasExactSynonym	MEF
+WARN	duplicate_exact_synonym	FBbt:00049262	oboInOwl:hasExactSynonym	MEF
+WARN	duplicate_exact_synonym	FBbt:00100342	oboInOwl:hasExactSynonym	MEF
+WARN	duplicate_exact_synonym	FBbt:00049248	oboInOwl:hasExactSynonym	medial loV
+WARN	duplicate_exact_synonym	FBbt:00049257	oboInOwl:hasExactSynonym	medial loV
+WARN	duplicate_exact_synonym	FBbt:00100319	oboInOwl:hasExactSynonym	MC
+WARN	duplicate_exact_synonym	FBbt:00111640	oboInOwl:hasExactSynonym	MC
+WARN	duplicate_exact_synonym	FBbt:00007484	oboInOwl:hasExactSynonym	MBIN
+WARN	duplicate_exact_synonym	FBbt:00047952	oboInOwl:hasExactSynonym	MBIN
+WARN	duplicate_exact_synonym	FBbt:00003683	oboInOwl:hasExactSynonym	MBDL
+WARN	duplicate_exact_synonym	FBbt:00049214	oboInOwl:hasExactSynonym	MBDL
+WARN	duplicate_exact_synonym	FBbt:00003684	oboInOwl:hasExactSynonym	MB
+WARN	duplicate_exact_synonym	FBbt:00005801	oboInOwl:hasExactSynonym	MB
+WARN	duplicate_exact_synonym	FBbt:00000164	oboInOwl:hasExactSynonym	maxillary lobe
+WARN	duplicate_exact_synonym	FBbt:00004536	oboInOwl:hasExactSynonym	maxillary lobe
+WARN	duplicate_exact_synonym	FBbt:00003764	oboInOwl:hasExactSynonym	M cell
+WARN	duplicate_exact_synonym	FBbt:00111519	oboInOwl:hasExactSynonym	M cell
+WARN	duplicate_exact_synonym	FBbt:00000233	oboInOwl:hasExactSynonym	LT
+WARN	duplicate_exact_synonym	FBbt:00003859	oboInOwl:hasExactSynonym	LT
+WARN	duplicate_exact_synonym	FBbt:00001939	oboInOwl:hasExactSynonym	lpo
+WARN	duplicate_exact_synonym	FBbt:00002688	oboInOwl:hasExactSynonym	lpo
+WARN	duplicate_exact_synonym	FBbt:00001977	oboInOwl:hasExactSynonym	lpn
+WARN	duplicate_exact_synonym	FBbt:00007439	oboInOwl:hasExactSynonym	lPN
+WARN	duplicate_exact_synonym	FBbt:00051403	oboInOwl:hasExactSynonym	lpn
+WARN	duplicate_exact_synonym	FBbt:00100224	oboInOwl:hasExactSynonym	lPN
+WARN	duplicate_exact_synonym	FBbt:00049248	oboInOwl:hasExactSynonym	loVM
+WARN	duplicate_exact_synonym	FBbt:00049257	oboInOwl:hasExactSynonym	loVM
+WARN	duplicate_exact_synonym	FBbt:00049249	oboInOwl:hasExactSynonym	loVL
+WARN	duplicate_exact_synonym	FBbt:00049255	oboInOwl:hasExactSynonym	loVL
+WARN	duplicate_exact_synonym	FBbt:00051395	oboInOwl:hasExactSynonym	lnp
+WARN	duplicate_exact_synonym	FBbt:00051412	oboInOwl:hasExactSynonym	lnp
+WARN	duplicate_exact_synonym	FBbt:00051398	oboInOwl:hasExactSynonym	lna
+WARN	duplicate_exact_synonym	FBbt:00051410	oboInOwl:hasExactSynonym	lna
+WARN	duplicate_exact_synonym	FBbt:00004028	oboInOwl:hasExactSynonym	LN
+WARN	duplicate_exact_synonym	FBbt:00049553	oboInOwl:hasExactSynonym	LN
+WARN	duplicate_exact_synonym	FBbt:00000382	oboInOwl:hasExactSynonym	LH
+WARN	duplicate_exact_synonym	FBbt:00007053	oboInOwl:hasExactSynonym	LH
+WARN	duplicate_exact_synonym	FBbt:00000372	oboInOwl:hasExactSynonym	LG
+WARN	duplicate_exact_synonym	FBbt:00001851	oboInOwl:hasExactSynonym	LG
+WARN	duplicate_exact_synonym	FBbt:00110878	oboInOwl:hasExactSynonym	LG
+WARN	duplicate_exact_synonym	FBbt:00110900	oboInOwl:hasExactSynonym	LFC
+WARN	duplicate_exact_synonym	FBbt:00110910	oboInOwl:hasExactSynonym	LFC
+WARN	duplicate_exact_synonym	FBbt:00000352	oboInOwl:hasExactSynonym	LE
+WARN	duplicate_exact_synonym	FBbt:00003667	oboInOwl:hasExactSynonym	LE
+WARN	duplicate_exact_synonym	FBbt:00002181	oboInOwl:hasExactSynonym	ldb
+WARN	duplicate_exact_synonym	FBbt:00002753	oboInOwl:hasExactSynonym	ldb
+WARN	duplicate_exact_synonym	FBbt:00002031	oboInOwl:hasExactSynonym	lda
+WARN	duplicate_exact_synonym	FBbt:00002434	oboInOwl:hasExactSynonym	lda
+WARN	duplicate_exact_synonym	FBbt:00000399	oboInOwl:hasExactSynonym	LC
+WARN	duplicate_exact_synonym	FBbt:00003870	oboInOwl:hasExactSynonym	LC
+WARN	duplicate_exact_synonym	FBbt:00100007	oboInOwl:hasExactSynonym	LC
+WARN	duplicate_exact_synonym	FBbt:00001966	oboInOwl:hasExactSynonym	LbrN
+WARN	duplicate_exact_synonym	FBbt:00100327	oboInOwl:hasExactSynonym	LbrN
+WARN	duplicate_exact_synonym	FBbt:00100328	oboInOwl:hasExactSynonym	LbrN
+WARN	duplicate_exact_synonym	FBbt:00001978	oboInOwl:hasExactSynonym	LbN
+WARN	duplicate_exact_synonym	FBbt:00004028	oboInOwl:hasExactSynonym	LbN
+WARN	duplicate_exact_synonym	FBbt:00100333	oboInOwl:hasExactSynonym	LbN
+WARN	duplicate_exact_synonym	FBbt:00049249	oboInOwl:hasExactSynonym	lateral loV
+WARN	duplicate_exact_synonym	FBbt:00049255	oboInOwl:hasExactSynonym	lateral loV
+WARN	duplicate_exact_synonym	FBbt:00000233	oboInOwl:hasExactSynonym	lateral longitudinal trunk
+WARN	duplicate_exact_synonym	FBbt:00002959	oboInOwl:hasExactSynonym	lateral longitudinal trunk
+WARN	duplicate_exact_synonym	FBbt:00049224	oboInOwl:hasExactSynonym	larval LEF
+WARN	duplicate_exact_synonym	FBbt:00049229	oboInOwl:hasExactSynonym	larval LEF
+WARN	duplicate_exact_synonym	FBbt:00007074	oboInOwl:hasExactSynonym	LALC
+WARN	duplicate_exact_synonym	FBbt:00049223	oboInOwl:hasExactSynonym	LALC
+WARN	duplicate_exact_synonym	FBbt:00003681	oboInOwl:hasExactSynonym	LAL
+WARN	duplicate_exact_synonym	FBbt:00007127	oboInOwl:hasExactSynonym	LAL
+WARN	duplicate_exact_synonym	FBbt:00002719	oboInOwl:hasExactSynonym	labial organ
+WARN	duplicate_exact_synonym	FBbt:00002720	oboInOwl:hasExactSynonym	labial organ
+WARN	duplicate_exact_synonym	FBbt:00110874	oboInOwl:hasExactSynonym	IVLP LN
+WARN	duplicate_exact_synonym	FBbt:00111353	oboInOwl:hasExactSynonym	IVLP LN
+WARN	duplicate_exact_synonym	FBbt:00001997	oboInOwl:hasExactSynonym	ISN
+WARN	duplicate_exact_synonym	FBbt:00048518	oboInOwl:hasExactSynonym	ISN
+WARN	duplicate_exact_synonym	FBbt:00049784	oboInOwl:hasExactSynonym	iPN
+WARN	duplicate_exact_synonym	FBbt:00067350	oboInOwl:hasExactSynonym	iPN
+WARN	duplicate_exact_synonym	FBbt:00001951	oboInOwl:hasExactSynonym	IPC
+WARN	duplicate_exact_synonym	FBbt:00007369	oboInOwl:hasExactSynonym	IPC
+WARN	duplicate_exact_synonym	FBbt:00047939	oboInOwl:hasExactSynonym	inter antennal connective
+WARN	duplicate_exact_synonym	FBbt:00047940	oboInOwl:hasExactSynonym	inter antennal connective
+WARN	duplicate_exact_synonym	FBbt:00040050	oboInOwl:hasExactSynonym	IB
+WARN	duplicate_exact_synonym	FBbt:00049601	oboInOwl:hasExactSynonym	IB
+WARN	duplicate_exact_synonym	FBbt:00004849	oboInOwl:hasExactSynonym	hypandrial process
+WARN	duplicate_exact_synonym	FBbt:00004855	oboInOwl:hasExactSynonym	hypandrial process
+WARN	duplicate_exact_synonym	FBbt:00004084	oboInOwl:hasExactSynonym	HCV
+WARN	duplicate_exact_synonym	FBbt:00004766	oboInOwl:hasExactSynonym	HCV
+WARN	duplicate_exact_synonym	FBbt:00001002	oboInOwl:hasExactSynonym	GS2
+WARN	duplicate_exact_synonym	FBbt:00004182	oboInOwl:hasExactSynonym	GS2
+WARN	duplicate_exact_synonym	FBbt:00001001	oboInOwl:hasExactSynonym	GS1
+WARN	duplicate_exact_synonym	FBbt:00004181	oboInOwl:hasExactSynonym	GS1
+WARN	duplicate_exact_synonym	FBbt:00000266	oboInOwl:hasExactSynonym	great dorsal commissure
+WARN	duplicate_exact_synonym	FBbt:00000275	oboInOwl:hasExactSynonym	great dorsal commissure
+WARN	duplicate_exact_synonym	FBbt:00004013	oboInOwl:hasExactSynonym	GNG
+WARN	duplicate_exact_synonym	FBbt:00014013	oboInOwl:hasExactSynonym	GNG
+WARN	duplicate_exact_synonym	FBbt:00000092	oboInOwl:hasExactSynonym	GC
+WARN	duplicate_exact_synonym	FBbt:00047941	oboInOwl:hasExactSynonym	GC
+WARN	duplicate_exact_synonym	FBbt:00047942	oboInOwl:hasExactSynonym	GC
+WARN	duplicate_exact_synonym	FBbt:00002630	oboInOwl:hasExactSynonym	FrN
+WARN	duplicate_exact_synonym	FBbt:00100329	oboInOwl:hasExactSynonym	FrN
+WARN	duplicate_exact_synonym	FBbt:00100330	oboInOwl:hasExactSynonym	FrN
+WARN	duplicate_exact_synonym	FBbt:00007073	oboInOwl:hasExactSynonym	fr m c
+WARN	duplicate_exact_synonym	FBbt:00047943	oboInOwl:hasExactSynonym	fr m c
+WARN	duplicate_exact_synonym	FBbt:00004107	oboInOwl:hasExactSynonym	FLA
+WARN	duplicate_exact_synonym	FBbt:00045050	oboInOwl:hasExactSynonym	FLA
+WARN	duplicate_exact_synonym	FBbt:00005084	oboInOwl:hasExactSynonym	FC
+WARN	duplicate_exact_synonym	FBbt:00051238	oboInOwl:hasExactSynonym	FC
+WARN	duplicate_exact_synonym	FBbt:00000349	oboInOwl:hasExactSynonym	FB9
+WARN	duplicate_exact_synonym	FBbt:00049536	oboInOwl:hasExactSynonym	FB9
+WARN	duplicate_exact_synonym	FBbt:00000348	oboInOwl:hasExactSynonym	FB8
+WARN	duplicate_exact_synonym	FBbt:00049535	oboInOwl:hasExactSynonym	FB8
+WARN	duplicate_exact_synonym	FBbt:00000347	oboInOwl:hasExactSynonym	FB7
+WARN	duplicate_exact_synonym	FBbt:00049534	oboInOwl:hasExactSynonym	FB7
+WARN	duplicate_exact_synonym	FBbt:00000346	oboInOwl:hasExactSynonym	FB6
+WARN	duplicate_exact_synonym	FBbt:00007536	oboInOwl:hasExactSynonym	FB6
+WARN	duplicate_exact_synonym	FBbt:00000345	oboInOwl:hasExactSynonym	FB5
+WARN	duplicate_exact_synonym	FBbt:00007544	oboInOwl:hasExactSynonym	FB5
+WARN	duplicate_exact_synonym	FBbt:00000344	oboInOwl:hasExactSynonym	FB4
+WARN	duplicate_exact_synonym	FBbt:00007543	oboInOwl:hasExactSynonym	FB4
+WARN	duplicate_exact_synonym	FBbt:00000343	oboInOwl:hasExactSynonym	FB3
+WARN	duplicate_exact_synonym	FBbt:00007542	oboInOwl:hasExactSynonym	FB3
+WARN	duplicate_exact_synonym	FBbt:00000342	oboInOwl:hasExactSynonym	FB2
+WARN	duplicate_exact_synonym	FBbt:00007541	oboInOwl:hasExactSynonym	FB2
+WARN	duplicate_exact_synonym	FBbt:00000341	oboInOwl:hasExactSynonym	FB1
+WARN	duplicate_exact_synonym	FBbt:00007540	oboInOwl:hasExactSynonym	FB1
+WARN	duplicate_exact_synonym	FBbt:00002635	oboInOwl:hasExactSynonym	esophageal ganglion
+WARN	duplicate_exact_synonym	FBbt:00004047	oboInOwl:hasExactSynonym	esophageal ganglion
+WARN	duplicate_exact_synonym	FBbt:00002635	oboInOwl:hasExactSynonym	EG
+WARN	duplicate_exact_synonym	FBbt:00047836	oboInOwl:hasExactSynonym	EG
+WARN	duplicate_exact_synonym	FBbt:00007038	oboInOwl:hasExactSynonym	ee
+WARN	duplicate_exact_synonym	FBbt:00047149	oboInOwl:hasExactSynonym	ee
+WARN	duplicate_exact_synonym	FBbt:00047150	oboInOwl:hasExactSynonym	ee
+WARN	duplicate_exact_synonym	FBbt:00110207	oboInOwl:hasExactSynonym	ee
+WARN	duplicate_exact_synonym	FBbt:00006049	oboInOwl:hasExactSynonym	EC
+WARN	duplicate_exact_synonym	FBbt:00007042	oboInOwl:hasExactSynonym	EC
+WARN	duplicate_exact_synonym	FBbt:00003678	oboInOwl:hasExactSynonym	EB
+WARN	duplicate_exact_synonym	FBbt:00110205	oboInOwl:hasExactSynonym	EB
+WARN	duplicate_exact_synonym	FBbt:00110206	oboInOwl:hasExactSynonym	EB
+WARN	duplicate_exact_synonym	FBbt:00000489	oboInOwl:hasExactSynonym	DPM
+WARN	duplicate_exact_synonym	FBbt:00005780	oboInOwl:hasExactSynonym	DPM
+WARN	duplicate_exact_synonym	FBbt:00007121	oboInOwl:hasExactSynonym	DPC
+WARN	duplicate_exact_synonym	FBbt:00048998	oboInOwl:hasExactSynonym	DPC
+WARN	duplicate_exact_synonym	FBbt:00004854	oboInOwl:hasExactSynonym	dorsal paramere
+WARN	duplicate_exact_synonym	FBbt:00048381	oboInOwl:hasExactSynonym	dorsal paramere
+WARN	duplicate_exact_synonym	FBbt:00005909	oboInOwl:hasExactSynonym	DMT
+WARN	duplicate_exact_synonym	FBbt:00047535	oboInOwl:hasExactSynonym	DMT
+WARN	duplicate_exact_synonym	FBbt:00000497	oboInOwl:hasExactSynonym	DM
+WARN	duplicate_exact_synonym	FBbt:00001326	oboInOwl:hasExactSynonym	DM
+WARN	duplicate_exact_synonym	FBbt:00047213	oboInOwl:hasExactSynonym	DGI
+WARN	duplicate_exact_synonym	FBbt:00047215	oboInOwl:hasExactSynonym	DGI
+WARN	duplicate_exact_synonym	FBbt:00047841	oboInOwl:hasExactSynonym	dendritic neuropil associated glial cell
+WARN	duplicate_exact_synonym	FBbt:00100505	oboInOwl:hasExactSynonym	dendritic neuropil associated glial cell
+WARN	duplicate_exact_synonym	FBbt:00049807	oboInOwl:hasExactSynonym	Delta7
+WARN	duplicate_exact_synonym	FBbt:00111057	oboInOwl:hasExactSynonym	Delta7
+WARN	duplicate_exact_synonym	FBbt:00005899	oboInOwl:hasExactSynonym	DC neuron
+WARN	duplicate_exact_synonym	FBbt:00100486	oboInOwl:hasExactSynonym	DC neuron
+WARN	duplicate_exact_synonym	FBbt:00110481	oboInOwl:hasExactSynonym	DC neuron
+WARN	duplicate_exact_synonym	FBbt:00007073	oboInOwl:hasExactSynonym	DAC2
+WARN	duplicate_exact_synonym	FBbt:00047943	oboInOwl:hasExactSynonym	DAC2
+WARN	duplicate_exact_synonym	FBbt:00007405	oboInOwl:hasExactSynonym	CSD
+WARN	duplicate_exact_synonym	FBbt:00110938	oboInOwl:hasExactSynonym	CSD
+WARN	duplicate_exact_synonym	FBbt:00007070	oboInOwl:hasExactSynonym	CPM
+WARN	duplicate_exact_synonym	FBbt:00007723	oboInOwl:hasExactSynonym	CPM
+WARN	duplicate_exact_synonym	FBbt:00004191	oboInOwl:hasExactSynonym	corneal lens
+WARN	duplicate_exact_synonym	FBbt:00004199	oboInOwl:hasExactSynonym	corneal lens
+WARN	duplicate_exact_synonym	FBbt:00007070	oboInOwl:hasExactSynonym	centroposterior medial compartment
+WARN	duplicate_exact_synonym	FBbt:00007723	oboInOwl:hasExactSynonym	centroposterior medial compartment
+WARN	duplicate_exact_synonym	FBbt:00007070	oboInOwl:hasExactSynonym	centro-posterior medial synaptic neuropil domain
+WARN	duplicate_exact_synonym	FBbt:00007723	oboInOwl:hasExactSynonym	centro-posterior medial synaptic neuropil domain
+WARN	duplicate_exact_synonym	FBbt:00001718	oboInOwl:hasExactSynonym	CC-CA
+WARN	duplicate_exact_synonym	FBbt:00049627	oboInOwl:hasExactSynonym	CC-CA
+WARN	duplicate_exact_synonym	FBbt:00004019	oboInOwl:hasExactSynonym	CC
+WARN	duplicate_exact_synonym	FBbt:00005799	oboInOwl:hasExactSynonym	CC
+WARN	duplicate_exact_synonym	FBbt:00048544	oboInOwl:hasExactSynonym	CC
+WARN	duplicate_exact_synonym	FBbt:00000395	oboInOwl:hasExactSynonym	CB
+WARN	duplicate_exact_synonym	FBbt:00045020	oboInOwl:hasExactSynonym	CB
+WARN	duplicate_exact_synonym	FBbt:00003685	oboInOwl:hasExactSynonym	CA
+WARN	duplicate_exact_synonym	FBbt:00005800	oboInOwl:hasExactSynonym	CA
+WARN	duplicate_exact_synonym	FBbt:00007118	oboInOwl:hasExactSynonym	CA
+WARN	duplicate_exact_synonym	FBbt:00007080	oboInOwl:hasExactSynonym	c op fo
+WARN	duplicate_exact_synonym	FBbt:00047941	oboInOwl:hasExactSynonym	c op fo
+WARN	duplicate_exact_synonym	FBbt:00100253	oboInOwl:hasExactSynonym	beta'm
+WARN	duplicate_exact_synonym	FBbt:00100270	oboInOwl:hasExactSynonym	beta'm
+WARN	duplicate_exact_synonym	FBbt:00001287	oboInOwl:hasExactSynonym	belt glial cell
+WARN	duplicate_exact_synonym	FBbt:00001288	oboInOwl:hasExactSynonym	belt glial cell
+WARN	duplicate_exact_synonym	FBbt:00002729	oboInOwl:hasExactSynonym	b
+WARN	duplicate_exact_synonym	FBbt:00002730	oboInOwl:hasExactSynonym	b
+WARN	duplicate_exact_synonym	FBbt:00002731	oboInOwl:hasExactSynonym	b
+WARN	duplicate_exact_synonym	FBbt:00003980	oboInOwl:hasExactSynonym	AN
+WARN	duplicate_exact_synonym	FBbt:00006045	oboInOwl:hasExactSynonym	AN
+WARN	duplicate_exact_synonym	FBbt:00110634	oboInOwl:hasExactSynonym	AMMC-VLP PN
+WARN	duplicate_exact_synonym	FBbt:00111354	oboInOwl:hasExactSynonym	AMMC-VLP PN
+WARN	duplicate_exact_synonym	FBbt:00110873	oboInOwl:hasExactSynonym	AMMC LN
+WARN	duplicate_exact_synonym	FBbt:00111352	oboInOwl:hasExactSynonym	AMMC LN
+WARN	duplicate_exact_synonym	FBbt:00001635	oboInOwl:hasExactSynonym	ALT
+WARN	duplicate_exact_synonym	FBbt:00100099	oboInOwl:hasExactSynonym	ALT
+WARN	duplicate_exact_synonym	FBbt:00100253	oboInOwl:hasExactSynonym	alpha'm
+WARN	duplicate_exact_synonym	FBbt:00100267	oboInOwl:hasExactSynonym	alpha'm
+WARN	duplicate_exact_synonym	FBbt:00048535	oboInOwl:hasExactSynonym	aEC
+WARN	duplicate_exact_synonym	FBbt:00049280	oboInOwl:hasExactSynonym	aEC
+WARN	duplicate_exact_synonym	FBbt:00007438	oboInOwl:hasExactSynonym	adPN
+WARN	duplicate_exact_synonym	FBbt:00067349	oboInOwl:hasExactSynonym	adPN
+WARN	duplicate_exact_synonym	FBbt:00001635	oboInOwl:hasExactSynonym	ACT
+WARN	duplicate_exact_synonym	FBbt:00100099	oboInOwl:hasExactSynonym	ACT
+WARN	duplicate_exact_synonym	FBbt:00004914	oboInOwl:hasExactSynonym	AcGl
+WARN	duplicate_exact_synonym	FBbt:00004959	oboInOwl:hasExactSynonym	AcGl
+WARN	duplicate_exact_synonym	FBbt:00110173	oboInOwl:hasExactSynonym	AC
+WARN	duplicate_exact_synonym	FBbt:00110300	oboInOwl:hasExactSynonym	AC
+WARN	defs_missing_xrefs	FBbt:00005137	IAO:0000115	Any of a number of aggregations of neurons, glial cells and their processes, and surrounded by a glial cell and connective tissue sheath (plural: ganglia).
+WARN	defs_missing_xrefs	FBbt:00005138	IAO:0000115	The neuron of a ganglion.
+WARN	defs_missing_xrefs	FBbt:00005386	IAO:0000115	Roundish subunit structure of synaptic neuropil, often ensheathed by glial lamellae and reflecting the terminal arborization domain(s) of one or more neurons.
+WARN	defs_missing_xrefs	FBbt:00005110	IAO:0000115	The region of a neuron receiving inputs from other neurons, typically a slender neurite, often branched. In insect neurons, this is often not a clear designation and often presynaptic sites co-extend with postsynaptic ones.
+WARN	defs_missing_xrefs	FBbt:00005111	IAO:0000115	The arborization of dendrites, defined by the number, position, branching structure, density and stratification of its branches. Dense body. Synaptic ribbon at neuromuscular junction.
+WARN	defs_missing_xrefs	FBbt:00005815	IAO:0000115	Synaptic ribbon at a neuromuscular junction.
+WARN	defs_missing_xrefs	FBbt:00005112	IAO:0000115	The output region of a neuron, generally presynaptic but in insects often also locally postsynaptic. Typically containing large numbers of mitochondria in addition to presynaptic organelles.
+WARN	defs_missing_xrefs	FBbt:00001808	IAO:0000115	Histoblast nest located in an anterior dorsal position of abdominal segment 8.
+WARN	defs_missing_xrefs	FBbt:00005113	IAO:0000115	One of the processes or extensions of a neuron, axon or dendrite or cell body fiber.
+WARN	defs_missing_xrefs	FBbt:00005107	IAO:0000115	The cell body of a neuron, containing the nucleus.
+WARN	defs_missing_xrefs	FBbt:00005114	IAO:0000115	The structural contact that is the site of transmission between neurons, identified by a presynaptic ribbon and synaptic vesicles as the input element and one or (usually) more postsynaptic elements with various specializations (membrane densities, cisternae, etc.).
+WARN	defs_missing_xrefs	FBbt:00005831	IAO:0000115	Imaginal tissue that has a dorsal location.
+WARN	defs_missing_xrefs	FBbt:00005834	IAO:0000115	Imaginal tissue that has a ventral location.
+WARN	defs_missing_xrefs	FBbt:00001817	IAO:0000115	Histoblast nest found in a posterior dorsal position in the epidermis of abdominal segment 8.
+WARN	defs_missing_xrefs	FBbt:00005122	IAO:0000115	An organelle at the input site of a synapse, the presumed structure for vesicle exocytosis, comprising a central pedestal but often with several components (e.g. a platform in recent groups of Diptera).
 INFO	lowercase_definition	BFO:0000050	IAO:0000115	a core relation that holds between a part and its whole
 INFO	lowercase_definition	BFO:0000051	IAO:0000115	a core relation that holds between a whole and its part
 INFO	lowercase_definition	FBbt:00000052	IAO:0000115	.
