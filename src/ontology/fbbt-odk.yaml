@@ -4,7 +4,12 @@ github_org: FlyBase
 repo: drosophila-anatomy-ontology
 report_fail_on: none
 use_dosdps: TRUE
-dosdp_tools_options: "--obo-prefixes=true --restrict-axioms-to=logical"
+pattern_pipelines_group:
+  products:
+    - id: logical-only
+      dosdp_tools_options: "--obo-prefixes=true --restrict-axioms-to=logical"
+    - id: all-axioms
+      dosdp_tools_options: "--obo-prefixes=true"
 namespaces: 
   - http://purl.obolibrary.org/obo/FBbt_
   - http://purl.obolibrary.org/obo/fbbt_
