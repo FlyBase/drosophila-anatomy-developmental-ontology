@@ -7,8 +7,8 @@ Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
 
 
 Ontology(<http://purl.obolibrary.org/obo/fbbt/patterns/definitions.owl>
-<http://purl.obolibrary.org/obo/fbbt/releases/2022-06-09/patterns/definitions.owl>
-Annotation(owl:versionInfo "2022-06-09"^^xsd:string)
+<http://purl.obolibrary.org/obo/fbbt/releases/2022-06-14/patterns/definitions.owl>
+Annotation(owl:versionInfo "2022-06-14"^^xsd:string)
 
 Declaration(Class(<http://purl.obolibrary.org/obo/FBbt_00000523>))
 Declaration(Class(<http://purl.obolibrary.org/obo/FBbt_00000555>))
@@ -233,8 +233,6 @@ Declaration(Class(<http://purl.obolibrary.org/obo/FBbt_00001453>))
 Declaration(Class(<http://purl.obolibrary.org/obo/FBbt_00001455>))
 Declaration(Class(<http://purl.obolibrary.org/obo/FBbt_00001456>))
 Declaration(Class(<http://purl.obolibrary.org/obo/FBbt_00001457>))
-Declaration(Class(<http://purl.obolibrary.org/obo/FBbt_00001565>))
-Declaration(Class(<http://purl.obolibrary.org/obo/FBbt_00001566>))
 Declaration(Class(<http://purl.obolibrary.org/obo/FBbt_00001567>))
 Declaration(Class(<http://purl.obolibrary.org/obo/FBbt_00001742>))
 Declaration(Class(<http://purl.obolibrary.org/obo/FBbt_00001743>))
@@ -910,8 +908,6 @@ Declaration(Class(<http://purl.obolibrary.org/obo/FBbt_00006024>))
 Declaration(Class(<http://purl.obolibrary.org/obo/FBbt_00006025>))
 Declaration(Class(<http://purl.obolibrary.org/obo/FBbt_00006026>))
 Declaration(Class(<http://purl.obolibrary.org/obo/FBbt_00006027>))
-Declaration(Class(<http://purl.obolibrary.org/obo/FBbt_00006041>))
-Declaration(Class(<http://purl.obolibrary.org/obo/FBbt_00006043>))
 Declaration(Class(<http://purl.obolibrary.org/obo/FBbt_00007255>))
 Declaration(Class(<http://purl.obolibrary.org/obo/FBbt_00007256>))
 Declaration(Class(<http://purl.obolibrary.org/obo/FBbt_00007257>))
@@ -1217,6 +1213,10 @@ Declaration(Class(<http://purl.obolibrary.org/obo/FBbt_00100029>))
 Declaration(Class(<http://purl.obolibrary.org/obo/FBbt_00100030>))
 Declaration(Class(<http://purl.obolibrary.org/obo/FBbt_00100031>))
 Declaration(Class(<http://purl.obolibrary.org/obo/FBbt_00100032>))
+Declaration(Class(<http://purl.obolibrary.org/obo/FBbt_00110225>))
+Declaration(Class(<http://purl.obolibrary.org/obo/FBbt_00110228>))
+Declaration(Class(<http://purl.obolibrary.org/obo/FBbt_00110231>))
+Declaration(Class(<http://purl.obolibrary.org/obo/FBbt_00110234>))
 Declaration(Class(<http://purl.obolibrary.org/obo/FBbt_00110238>))
 Declaration(Class(<http://purl.obolibrary.org/obo/FBbt_00110241>))
 Declaration(Class(<http://purl.obolibrary.org/obo/FBbt_00110252>))
@@ -2885,7 +2885,7 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasRelatedSyno
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> <http://purl.obolibrary.org/obo/FBbt_00002304> "abdominal 1 MN9-Ib"^^xsd:string)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> <http://purl.obolibrary.org/obo/FBbt_00002304> "abdominal 1 U1 MN"^^xsd:string)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/FBbt_00002304> "larval DO1 motor neuron of metathoracic neuromere"^^xsd:string)
-EquivalentClasses(<http://purl.obolibrary.org/obo/FBbt_00002304> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/FBbt_00001565> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002100> <http://purl.obolibrary.org/obo/FBbt_00111032>)))
+EquivalentClasses(<http://purl.obolibrary.org/obo/FBbt_00002304> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/FBbt_00110225> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002100> <http://purl.obolibrary.org/obo/FBbt_00111032>)))
 SubClassOf(<http://purl.obolibrary.org/obo/FBbt_00002304> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002105> <http://purl.obolibrary.org/obo/FBbt_00000658>))
 SubClassOf(<http://purl.obolibrary.org/obo/FBbt_00002304> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0013009> <http://purl.obolibrary.org/obo/FBbt_00000658>))
 
@@ -2905,7 +2905,7 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasRelatedSyno
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> <http://purl.obolibrary.org/obo/FBbt_00002305> "abdominal 2 MN9-Ib"^^xsd:string)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> <http://purl.obolibrary.org/obo/FBbt_00002305> "abdominal 2 U1 MN"^^xsd:string)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/FBbt_00002305> "larval DO1 motor neuron of abdominal 1 neuromere"^^xsd:string)
-EquivalentClasses(<http://purl.obolibrary.org/obo/FBbt_00002305> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/FBbt_00001565> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002100> <http://purl.obolibrary.org/obo/FBbt_00111033>)))
+EquivalentClasses(<http://purl.obolibrary.org/obo/FBbt_00002305> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/FBbt_00110225> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002100> <http://purl.obolibrary.org/obo/FBbt_00111033>)))
 SubClassOf(<http://purl.obolibrary.org/obo/FBbt_00002305> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002105> <http://purl.obolibrary.org/obo/FBbt_00000694>))
 SubClassOf(<http://purl.obolibrary.org/obo/FBbt_00002305> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0013009> <http://purl.obolibrary.org/obo/FBbt_00000694>))
 
@@ -2925,7 +2925,7 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasRelatedSyno
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> <http://purl.obolibrary.org/obo/FBbt_00002306> "abdominal 3 MN9-Ib"^^xsd:string)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> <http://purl.obolibrary.org/obo/FBbt_00002306> "abdominal 3 U1 MN"^^xsd:string)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/FBbt_00002306> "larval DO1 motor neuron of abdominal 2 neuromere"^^xsd:string)
-EquivalentClasses(<http://purl.obolibrary.org/obo/FBbt_00002306> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/FBbt_00001565> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002100> <http://purl.obolibrary.org/obo/FBbt_00111034>)))
+EquivalentClasses(<http://purl.obolibrary.org/obo/FBbt_00002306> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/FBbt_00110225> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002100> <http://purl.obolibrary.org/obo/FBbt_00111034>)))
 SubClassOf(<http://purl.obolibrary.org/obo/FBbt_00002306> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002105> <http://purl.obolibrary.org/obo/FBbt_00000739>))
 SubClassOf(<http://purl.obolibrary.org/obo/FBbt_00002306> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0013009> <http://purl.obolibrary.org/obo/FBbt_00000739>))
 
@@ -2945,7 +2945,7 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasRelatedSyno
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> <http://purl.obolibrary.org/obo/FBbt_00002307> "abdominal 4 MN9-Ib"^^xsd:string)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> <http://purl.obolibrary.org/obo/FBbt_00002307> "abdominal 4 U1 MN"^^xsd:string)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/FBbt_00002307> "larval DO1 motor neuron of abdominal 3 neuromere"^^xsd:string)
-EquivalentClasses(<http://purl.obolibrary.org/obo/FBbt_00002307> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/FBbt_00001565> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002100> <http://purl.obolibrary.org/obo/FBbt_00111035>)))
+EquivalentClasses(<http://purl.obolibrary.org/obo/FBbt_00002307> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/FBbt_00110225> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002100> <http://purl.obolibrary.org/obo/FBbt_00111035>)))
 SubClassOf(<http://purl.obolibrary.org/obo/FBbt_00002307> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002105> <http://purl.obolibrary.org/obo/FBbt_00000784>))
 SubClassOf(<http://purl.obolibrary.org/obo/FBbt_00002307> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0013009> <http://purl.obolibrary.org/obo/FBbt_00000784>))
 
@@ -2965,7 +2965,7 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasRelatedSyno
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> <http://purl.obolibrary.org/obo/FBbt_00002308> "abdominal 5 MN9-Ib"^^xsd:string)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> <http://purl.obolibrary.org/obo/FBbt_00002308> "abdominal 5 U1 MN"^^xsd:string)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/FBbt_00002308> "larval DO1 motor neuron of abdominal 4 neuromere"^^xsd:string)
-EquivalentClasses(<http://purl.obolibrary.org/obo/FBbt_00002308> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/FBbt_00001565> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002100> <http://purl.obolibrary.org/obo/FBbt_00111036>)))
+EquivalentClasses(<http://purl.obolibrary.org/obo/FBbt_00002308> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/FBbt_00110225> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002100> <http://purl.obolibrary.org/obo/FBbt_00111036>)))
 SubClassOf(<http://purl.obolibrary.org/obo/FBbt_00002308> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002105> <http://purl.obolibrary.org/obo/FBbt_00000829>))
 SubClassOf(<http://purl.obolibrary.org/obo/FBbt_00002308> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0013009> <http://purl.obolibrary.org/obo/FBbt_00000829>))
 
@@ -2985,7 +2985,7 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasRelatedSyno
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> <http://purl.obolibrary.org/obo/FBbt_00002309> "abdominal 6 MN9-Ib"^^xsd:string)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> <http://purl.obolibrary.org/obo/FBbt_00002309> "abdominal 6 U1 MN"^^xsd:string)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/FBbt_00002309> "larval DO1 motor neuron of abdominal 5 neuromere"^^xsd:string)
-EquivalentClasses(<http://purl.obolibrary.org/obo/FBbt_00002309> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/FBbt_00001565> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002100> <http://purl.obolibrary.org/obo/FBbt_00111037>)))
+EquivalentClasses(<http://purl.obolibrary.org/obo/FBbt_00002309> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/FBbt_00110225> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002100> <http://purl.obolibrary.org/obo/FBbt_00111037>)))
 SubClassOf(<http://purl.obolibrary.org/obo/FBbt_00002309> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002105> <http://purl.obolibrary.org/obo/FBbt_00000874>))
 SubClassOf(<http://purl.obolibrary.org/obo/FBbt_00002309> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0013009> <http://purl.obolibrary.org/obo/FBbt_00000874>))
 
@@ -3005,7 +3005,7 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasRelatedSyno
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> <http://purl.obolibrary.org/obo/FBbt_00002310> "abdominal 7 MN9-Ib"^^xsd:string)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> <http://purl.obolibrary.org/obo/FBbt_00002310> "abdominal 7 U1 MN"^^xsd:string)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/FBbt_00002310> "larval DO1 motor neuron of abdominal 6 neuromere"^^xsd:string)
-EquivalentClasses(<http://purl.obolibrary.org/obo/FBbt_00002310> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/FBbt_00001565> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002100> <http://purl.obolibrary.org/obo/FBbt_00111038>)))
+EquivalentClasses(<http://purl.obolibrary.org/obo/FBbt_00002310> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/FBbt_00110225> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002100> <http://purl.obolibrary.org/obo/FBbt_00111038>)))
 SubClassOf(<http://purl.obolibrary.org/obo/FBbt_00002310> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002105> <http://purl.obolibrary.org/obo/FBbt_00000919>))
 SubClassOf(<http://purl.obolibrary.org/obo/FBbt_00002310> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0013009> <http://purl.obolibrary.org/obo/FBbt_00000919>))
 
@@ -5206,7 +5206,7 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasRelatedSyno
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> <http://purl.obolibrary.org/obo/FBbt_00048718> "abdominal 1 MN4-Ib"^^xsd:string)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> <http://purl.obolibrary.org/obo/FBbt_00048718> "abdominal 1 U5 MN"^^xsd:string)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/FBbt_00048718> "larval LL1 motor neuron of metathoracic neuromere"^^xsd:string)
-EquivalentClasses(<http://purl.obolibrary.org/obo/FBbt_00048718> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/FBbt_00006043> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002100> <http://purl.obolibrary.org/obo/FBbt_00111032>)))
+EquivalentClasses(<http://purl.obolibrary.org/obo/FBbt_00048718> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/FBbt_00110234> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002100> <http://purl.obolibrary.org/obo/FBbt_00111032>)))
 SubClassOf(<http://purl.obolibrary.org/obo/FBbt_00048718> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002105> <http://purl.obolibrary.org/obo/FBbt_00000649>))
 SubClassOf(<http://purl.obolibrary.org/obo/FBbt_00048718> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0013009> <http://purl.obolibrary.org/obo/FBbt_00000649>))
 
@@ -5226,7 +5226,7 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasRelatedSyno
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> <http://purl.obolibrary.org/obo/FBbt_00048719> "abdominal 2 MN4-Ib"^^xsd:string)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> <http://purl.obolibrary.org/obo/FBbt_00048719> "abdominal 2 U5 MN"^^xsd:string)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/FBbt_00048719> "larval LL1 motor neuron of abdominal 1 neuromere"^^xsd:string)
-EquivalentClasses(<http://purl.obolibrary.org/obo/FBbt_00048719> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/FBbt_00006043> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002100> <http://purl.obolibrary.org/obo/FBbt_00111033>)))
+EquivalentClasses(<http://purl.obolibrary.org/obo/FBbt_00048719> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/FBbt_00110234> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002100> <http://purl.obolibrary.org/obo/FBbt_00111033>)))
 SubClassOf(<http://purl.obolibrary.org/obo/FBbt_00048719> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002105> <http://purl.obolibrary.org/obo/FBbt_00000710>))
 SubClassOf(<http://purl.obolibrary.org/obo/FBbt_00048719> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0013009> <http://purl.obolibrary.org/obo/FBbt_00000710>))
 
@@ -5246,7 +5246,7 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasRelatedSyno
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> <http://purl.obolibrary.org/obo/FBbt_00048720> "abdominal 3 MN4-Ib"^^xsd:string)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> <http://purl.obolibrary.org/obo/FBbt_00048720> "abdominal 3 U5 MN"^^xsd:string)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/FBbt_00048720> "larval LL1 motor neuron of abdominal 2 neuromere"^^xsd:string)
-EquivalentClasses(<http://purl.obolibrary.org/obo/FBbt_00048720> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/FBbt_00006043> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002100> <http://purl.obolibrary.org/obo/FBbt_00111034>)))
+EquivalentClasses(<http://purl.obolibrary.org/obo/FBbt_00048720> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/FBbt_00110234> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002100> <http://purl.obolibrary.org/obo/FBbt_00111034>)))
 SubClassOf(<http://purl.obolibrary.org/obo/FBbt_00048720> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002105> <http://purl.obolibrary.org/obo/FBbt_00000755>))
 SubClassOf(<http://purl.obolibrary.org/obo/FBbt_00048720> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0013009> <http://purl.obolibrary.org/obo/FBbt_00000755>))
 
@@ -5266,7 +5266,7 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasRelatedSyno
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> <http://purl.obolibrary.org/obo/FBbt_00048721> "abdominal 4 MN4-Ib"^^xsd:string)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> <http://purl.obolibrary.org/obo/FBbt_00048721> "abdominal 4 U5 MN"^^xsd:string)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/FBbt_00048721> "larval LL1 motor neuron of abdominal 3 neuromere"^^xsd:string)
-EquivalentClasses(<http://purl.obolibrary.org/obo/FBbt_00048721> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/FBbt_00006043> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002100> <http://purl.obolibrary.org/obo/FBbt_00111035>)))
+EquivalentClasses(<http://purl.obolibrary.org/obo/FBbt_00048721> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/FBbt_00110234> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002100> <http://purl.obolibrary.org/obo/FBbt_00111035>)))
 SubClassOf(<http://purl.obolibrary.org/obo/FBbt_00048721> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002105> <http://purl.obolibrary.org/obo/FBbt_00000800>))
 SubClassOf(<http://purl.obolibrary.org/obo/FBbt_00048721> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0013009> <http://purl.obolibrary.org/obo/FBbt_00000800>))
 
@@ -5286,7 +5286,7 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasRelatedSyno
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> <http://purl.obolibrary.org/obo/FBbt_00048722> "abdominal 5 MN4-Ib"^^xsd:string)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> <http://purl.obolibrary.org/obo/FBbt_00048722> "abdominal 5 U5 MN"^^xsd:string)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/FBbt_00048722> "larval LL1 motor neuron of abdominal 4 neuromere"^^xsd:string)
-EquivalentClasses(<http://purl.obolibrary.org/obo/FBbt_00048722> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/FBbt_00006043> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002100> <http://purl.obolibrary.org/obo/FBbt_00111036>)))
+EquivalentClasses(<http://purl.obolibrary.org/obo/FBbt_00048722> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/FBbt_00110234> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002100> <http://purl.obolibrary.org/obo/FBbt_00111036>)))
 SubClassOf(<http://purl.obolibrary.org/obo/FBbt_00048722> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002105> <http://purl.obolibrary.org/obo/FBbt_00000845>))
 SubClassOf(<http://purl.obolibrary.org/obo/FBbt_00048722> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0013009> <http://purl.obolibrary.org/obo/FBbt_00000845>))
 
@@ -5306,7 +5306,7 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasRelatedSyno
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> <http://purl.obolibrary.org/obo/FBbt_00048723> "abdominal 6 MN4-Ib"^^xsd:string)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> <http://purl.obolibrary.org/obo/FBbt_00048723> "abdominal 6 U5 MN"^^xsd:string)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/FBbt_00048723> "larval LL1 motor neuron of abdominal 5 neuromere"^^xsd:string)
-EquivalentClasses(<http://purl.obolibrary.org/obo/FBbt_00048723> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/FBbt_00006043> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002100> <http://purl.obolibrary.org/obo/FBbt_00111037>)))
+EquivalentClasses(<http://purl.obolibrary.org/obo/FBbt_00048723> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/FBbt_00110234> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002100> <http://purl.obolibrary.org/obo/FBbt_00111037>)))
 SubClassOf(<http://purl.obolibrary.org/obo/FBbt_00048723> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002105> <http://purl.obolibrary.org/obo/FBbt_00000890>))
 SubClassOf(<http://purl.obolibrary.org/obo/FBbt_00048723> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0013009> <http://purl.obolibrary.org/obo/FBbt_00000890>))
 
@@ -5326,7 +5326,7 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasRelatedSyno
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> <http://purl.obolibrary.org/obo/FBbt_00048724> "abdominal 7 MN4-Ib"^^xsd:string)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> <http://purl.obolibrary.org/obo/FBbt_00048724> "abdominal 7 U5 MN"^^xsd:string)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/FBbt_00048724> "larval LL1 motor neuron of abdominal 6 neuromere"^^xsd:string)
-EquivalentClasses(<http://purl.obolibrary.org/obo/FBbt_00048724> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/FBbt_00006043> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002100> <http://purl.obolibrary.org/obo/FBbt_00111038>)))
+EquivalentClasses(<http://purl.obolibrary.org/obo/FBbt_00048724> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/FBbt_00110234> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002100> <http://purl.obolibrary.org/obo/FBbt_00111038>)))
 SubClassOf(<http://purl.obolibrary.org/obo/FBbt_00048724> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002105> <http://purl.obolibrary.org/obo/FBbt_00000935>))
 SubClassOf(<http://purl.obolibrary.org/obo/FBbt_00048724> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0013009> <http://purl.obolibrary.org/obo/FBbt_00000935>))
 
@@ -5346,7 +5346,7 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasRelatedSyno
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> <http://purl.obolibrary.org/obo/FBbt_00048725> "abdominal 1 MN10-Ib"^^xsd:string)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> <http://purl.obolibrary.org/obo/FBbt_00048725> "abdominal 1 U2 MN"^^xsd:string)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/FBbt_00048725> "larval DO2 motor neuron of metathoracic neuromere"^^xsd:string)
-EquivalentClasses(<http://purl.obolibrary.org/obo/FBbt_00048725> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/FBbt_00001566> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002100> <http://purl.obolibrary.org/obo/FBbt_00111032>)))
+EquivalentClasses(<http://purl.obolibrary.org/obo/FBbt_00048725> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/FBbt_00110228> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002100> <http://purl.obolibrary.org/obo/FBbt_00111032>)))
 SubClassOf(<http://purl.obolibrary.org/obo/FBbt_00048725> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002105> <http://purl.obolibrary.org/obo/FBbt_00000659>))
 SubClassOf(<http://purl.obolibrary.org/obo/FBbt_00048725> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0013009> <http://purl.obolibrary.org/obo/FBbt_00000659>))
 
@@ -5366,7 +5366,7 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasRelatedSyno
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> <http://purl.obolibrary.org/obo/FBbt_00048726> "abdominal 2 MN10-Ib"^^xsd:string)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> <http://purl.obolibrary.org/obo/FBbt_00048726> "abdominal 2 U2 MN"^^xsd:string)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/FBbt_00048726> "larval DO2 motor neuron of abdominal 1 neuromere"^^xsd:string)
-EquivalentClasses(<http://purl.obolibrary.org/obo/FBbt_00048726> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/FBbt_00001566> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002100> <http://purl.obolibrary.org/obo/FBbt_00111033>)))
+EquivalentClasses(<http://purl.obolibrary.org/obo/FBbt_00048726> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/FBbt_00110228> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002100> <http://purl.obolibrary.org/obo/FBbt_00111033>)))
 SubClassOf(<http://purl.obolibrary.org/obo/FBbt_00048726> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002105> <http://purl.obolibrary.org/obo/FBbt_00000695>))
 SubClassOf(<http://purl.obolibrary.org/obo/FBbt_00048726> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0013009> <http://purl.obolibrary.org/obo/FBbt_00000695>))
 
@@ -5386,7 +5386,7 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasRelatedSyno
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> <http://purl.obolibrary.org/obo/FBbt_00048727> "abdominal 3 MN10-Ib"^^xsd:string)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> <http://purl.obolibrary.org/obo/FBbt_00048727> "abdominal 3 U2 MN"^^xsd:string)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/FBbt_00048727> "larval DO2 motor neuron of abdominal 2 neuromere"^^xsd:string)
-EquivalentClasses(<http://purl.obolibrary.org/obo/FBbt_00048727> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/FBbt_00001566> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002100> <http://purl.obolibrary.org/obo/FBbt_00111034>)))
+EquivalentClasses(<http://purl.obolibrary.org/obo/FBbt_00048727> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/FBbt_00110228> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002100> <http://purl.obolibrary.org/obo/FBbt_00111034>)))
 SubClassOf(<http://purl.obolibrary.org/obo/FBbt_00048727> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002105> <http://purl.obolibrary.org/obo/FBbt_00000740>))
 SubClassOf(<http://purl.obolibrary.org/obo/FBbt_00048727> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0013009> <http://purl.obolibrary.org/obo/FBbt_00000740>))
 
@@ -5406,7 +5406,7 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasRelatedSyno
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> <http://purl.obolibrary.org/obo/FBbt_00048728> "abdominal 4 MN10-Ib"^^xsd:string)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> <http://purl.obolibrary.org/obo/FBbt_00048728> "abdominal 4 U2 MN"^^xsd:string)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/FBbt_00048728> "larval DO2 motor neuron of abdominal 3 neuromere"^^xsd:string)
-EquivalentClasses(<http://purl.obolibrary.org/obo/FBbt_00048728> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/FBbt_00001566> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002100> <http://purl.obolibrary.org/obo/FBbt_00111035>)))
+EquivalentClasses(<http://purl.obolibrary.org/obo/FBbt_00048728> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/FBbt_00110228> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002100> <http://purl.obolibrary.org/obo/FBbt_00111035>)))
 SubClassOf(<http://purl.obolibrary.org/obo/FBbt_00048728> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002105> <http://purl.obolibrary.org/obo/FBbt_00000785>))
 SubClassOf(<http://purl.obolibrary.org/obo/FBbt_00048728> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0013009> <http://purl.obolibrary.org/obo/FBbt_00000785>))
 
@@ -5426,7 +5426,7 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasRelatedSyno
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> <http://purl.obolibrary.org/obo/FBbt_00048729> "abdominal 5 MN10-Ib"^^xsd:string)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> <http://purl.obolibrary.org/obo/FBbt_00048729> "abdominal 5 U2 MN"^^xsd:string)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/FBbt_00048729> "larval DO2 motor neuron of abdominal 4 neuromere"^^xsd:string)
-EquivalentClasses(<http://purl.obolibrary.org/obo/FBbt_00048729> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/FBbt_00001566> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002100> <http://purl.obolibrary.org/obo/FBbt_00111036>)))
+EquivalentClasses(<http://purl.obolibrary.org/obo/FBbt_00048729> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/FBbt_00110228> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002100> <http://purl.obolibrary.org/obo/FBbt_00111036>)))
 SubClassOf(<http://purl.obolibrary.org/obo/FBbt_00048729> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002105> <http://purl.obolibrary.org/obo/FBbt_00000830>))
 SubClassOf(<http://purl.obolibrary.org/obo/FBbt_00048729> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0013009> <http://purl.obolibrary.org/obo/FBbt_00000830>))
 
@@ -5446,7 +5446,7 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasRelatedSyno
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> <http://purl.obolibrary.org/obo/FBbt_00048730> "abdominal 6 MN10-Ib"^^xsd:string)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> <http://purl.obolibrary.org/obo/FBbt_00048730> "abdominal 6 U2 MN"^^xsd:string)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/FBbt_00048730> "larval DO2 motor neuron of abdominal 5 neuromere"^^xsd:string)
-EquivalentClasses(<http://purl.obolibrary.org/obo/FBbt_00048730> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/FBbt_00001566> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002100> <http://purl.obolibrary.org/obo/FBbt_00111037>)))
+EquivalentClasses(<http://purl.obolibrary.org/obo/FBbt_00048730> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/FBbt_00110228> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002100> <http://purl.obolibrary.org/obo/FBbt_00111037>)))
 SubClassOf(<http://purl.obolibrary.org/obo/FBbt_00048730> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002105> <http://purl.obolibrary.org/obo/FBbt_00000875>))
 SubClassOf(<http://purl.obolibrary.org/obo/FBbt_00048730> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0013009> <http://purl.obolibrary.org/obo/FBbt_00000875>))
 
@@ -5466,7 +5466,7 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasRelatedSyno
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> <http://purl.obolibrary.org/obo/FBbt_00048731> "abdominal 7 MN10-Ib"^^xsd:string)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> <http://purl.obolibrary.org/obo/FBbt_00048731> "abdominal 7 U2 MN"^^xsd:string)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/FBbt_00048731> "larval DO2 motor neuron of abdominal 6 neuromere"^^xsd:string)
-EquivalentClasses(<http://purl.obolibrary.org/obo/FBbt_00048731> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/FBbt_00001566> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002100> <http://purl.obolibrary.org/obo/FBbt_00111038>)))
+EquivalentClasses(<http://purl.obolibrary.org/obo/FBbt_00048731> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/FBbt_00110228> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002100> <http://purl.obolibrary.org/obo/FBbt_00111038>)))
 SubClassOf(<http://purl.obolibrary.org/obo/FBbt_00048731> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002105> <http://purl.obolibrary.org/obo/FBbt_00000920>))
 SubClassOf(<http://purl.obolibrary.org/obo/FBbt_00048731> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0013009> <http://purl.obolibrary.org/obo/FBbt_00000920>))
 
@@ -5486,7 +5486,7 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasRelatedSyno
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> <http://purl.obolibrary.org/obo/FBbt_00048732> "abdominal 1 MN3-Ib"^^xsd:string)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> <http://purl.obolibrary.org/obo/FBbt_00048732> "abdominal 1 U4 MN"^^xsd:string)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/FBbt_00048732> "larval DA3 motor neuron of metathoracic neuromere"^^xsd:string)
-EquivalentClasses(<http://purl.obolibrary.org/obo/FBbt_00048732> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/FBbt_00006041> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002100> <http://purl.obolibrary.org/obo/FBbt_00111032>)))
+EquivalentClasses(<http://purl.obolibrary.org/obo/FBbt_00048732> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/FBbt_00110231> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002100> <http://purl.obolibrary.org/obo/FBbt_00111032>)))
 SubClassOf(<http://purl.obolibrary.org/obo/FBbt_00048732> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002105> <http://purl.obolibrary.org/obo/FBbt_00000642>))
 SubClassOf(<http://purl.obolibrary.org/obo/FBbt_00048732> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0013009> <http://purl.obolibrary.org/obo/FBbt_00000642>))
 
@@ -5506,7 +5506,7 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasRelatedSyno
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> <http://purl.obolibrary.org/obo/FBbt_00048733> "abdominal 2 MN3-Ib"^^xsd:string)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> <http://purl.obolibrary.org/obo/FBbt_00048733> "abdominal 2 U4 MN"^^xsd:string)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/FBbt_00048733> "larval DA3 motor neuron of abdominal 1 neuromere"^^xsd:string)
-EquivalentClasses(<http://purl.obolibrary.org/obo/FBbt_00048733> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/FBbt_00006041> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002100> <http://purl.obolibrary.org/obo/FBbt_00111033>)))
+EquivalentClasses(<http://purl.obolibrary.org/obo/FBbt_00048733> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/FBbt_00110231> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002100> <http://purl.obolibrary.org/obo/FBbt_00111033>)))
 SubClassOf(<http://purl.obolibrary.org/obo/FBbt_00048733> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002105> <http://purl.obolibrary.org/obo/FBbt_00000687>))
 SubClassOf(<http://purl.obolibrary.org/obo/FBbt_00048733> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0013009> <http://purl.obolibrary.org/obo/FBbt_00000687>))
 
@@ -5526,7 +5526,7 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasRelatedSyno
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> <http://purl.obolibrary.org/obo/FBbt_00048734> "abdominal 3 MN3-Ib"^^xsd:string)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> <http://purl.obolibrary.org/obo/FBbt_00048734> "abdominal 3 U4 MN"^^xsd:string)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/FBbt_00048734> "larval DA3 motor neuron of abdominal 2 neuromere"^^xsd:string)
-EquivalentClasses(<http://purl.obolibrary.org/obo/FBbt_00048734> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/FBbt_00006041> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002100> <http://purl.obolibrary.org/obo/FBbt_00111034>)))
+EquivalentClasses(<http://purl.obolibrary.org/obo/FBbt_00048734> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/FBbt_00110231> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002100> <http://purl.obolibrary.org/obo/FBbt_00111034>)))
 SubClassOf(<http://purl.obolibrary.org/obo/FBbt_00048734> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002105> <http://purl.obolibrary.org/obo/FBbt_00000732>))
 SubClassOf(<http://purl.obolibrary.org/obo/FBbt_00048734> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0013009> <http://purl.obolibrary.org/obo/FBbt_00000732>))
 
@@ -5546,7 +5546,7 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasRelatedSyno
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> <http://purl.obolibrary.org/obo/FBbt_00048735> "abdominal 4 MN3-Ib"^^xsd:string)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> <http://purl.obolibrary.org/obo/FBbt_00048735> "abdominal 4 U4 MN"^^xsd:string)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/FBbt_00048735> "larval DA3 motor neuron of abdominal 3 neuromere"^^xsd:string)
-EquivalentClasses(<http://purl.obolibrary.org/obo/FBbt_00048735> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/FBbt_00006041> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002100> <http://purl.obolibrary.org/obo/FBbt_00111035>)))
+EquivalentClasses(<http://purl.obolibrary.org/obo/FBbt_00048735> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/FBbt_00110231> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002100> <http://purl.obolibrary.org/obo/FBbt_00111035>)))
 SubClassOf(<http://purl.obolibrary.org/obo/FBbt_00048735> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002105> <http://purl.obolibrary.org/obo/FBbt_00000777>))
 SubClassOf(<http://purl.obolibrary.org/obo/FBbt_00048735> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0013009> <http://purl.obolibrary.org/obo/FBbt_00000777>))
 
@@ -5566,7 +5566,7 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasRelatedSyno
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> <http://purl.obolibrary.org/obo/FBbt_00048736> "abdominal 5 MN3-Ib"^^xsd:string)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> <http://purl.obolibrary.org/obo/FBbt_00048736> "abdominal 5 U4 MN"^^xsd:string)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/FBbt_00048736> "larval DA3 motor neuron of abdominal 4 neuromere"^^xsd:string)
-EquivalentClasses(<http://purl.obolibrary.org/obo/FBbt_00048736> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/FBbt_00006041> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002100> <http://purl.obolibrary.org/obo/FBbt_00111036>)))
+EquivalentClasses(<http://purl.obolibrary.org/obo/FBbt_00048736> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/FBbt_00110231> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002100> <http://purl.obolibrary.org/obo/FBbt_00111036>)))
 SubClassOf(<http://purl.obolibrary.org/obo/FBbt_00048736> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002105> <http://purl.obolibrary.org/obo/FBbt_00000822>))
 SubClassOf(<http://purl.obolibrary.org/obo/FBbt_00048736> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0013009> <http://purl.obolibrary.org/obo/FBbt_00000822>))
 
@@ -5586,7 +5586,7 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasRelatedSyno
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> <http://purl.obolibrary.org/obo/FBbt_00048737> "abdominal 6 MN3-Ib"^^xsd:string)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> <http://purl.obolibrary.org/obo/FBbt_00048737> "abdominal 6 U4 MN"^^xsd:string)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/FBbt_00048737> "larval DA3 motor neuron of abdominal 5 neuromere"^^xsd:string)
-EquivalentClasses(<http://purl.obolibrary.org/obo/FBbt_00048737> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/FBbt_00006041> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002100> <http://purl.obolibrary.org/obo/FBbt_00111037>)))
+EquivalentClasses(<http://purl.obolibrary.org/obo/FBbt_00048737> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/FBbt_00110231> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002100> <http://purl.obolibrary.org/obo/FBbt_00111037>)))
 SubClassOf(<http://purl.obolibrary.org/obo/FBbt_00048737> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002105> <http://purl.obolibrary.org/obo/FBbt_00000867>))
 SubClassOf(<http://purl.obolibrary.org/obo/FBbt_00048737> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0013009> <http://purl.obolibrary.org/obo/FBbt_00000867>))
 
@@ -5606,7 +5606,7 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasRelatedSyno
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> <http://purl.obolibrary.org/obo/FBbt_00048738> "abdominal 7 MN3-Ib"^^xsd:string)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> <http://purl.obolibrary.org/obo/FBbt_00048738> "abdominal 7 U4 MN"^^xsd:string)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/FBbt_00048738> "larval DA3 motor neuron of abdominal 6 neuromere"^^xsd:string)
-EquivalentClasses(<http://purl.obolibrary.org/obo/FBbt_00048738> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/FBbt_00006041> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002100> <http://purl.obolibrary.org/obo/FBbt_00111038>)))
+EquivalentClasses(<http://purl.obolibrary.org/obo/FBbt_00048738> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/FBbt_00110231> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002100> <http://purl.obolibrary.org/obo/FBbt_00111038>)))
 SubClassOf(<http://purl.obolibrary.org/obo/FBbt_00048738> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002105> <http://purl.obolibrary.org/obo/FBbt_00000912>))
 SubClassOf(<http://purl.obolibrary.org/obo/FBbt_00048738> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0013009> <http://purl.obolibrary.org/obo/FBbt_00000912>))
 
