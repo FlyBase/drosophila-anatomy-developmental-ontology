@@ -81,9 +81,6 @@ reports/obo_qc_%.owl.txt:
 	rm -f reports/obo_qc_$*.owl
 
 reports/spellcheck.txt: fbbt-simple.obo install_flybase_scripts ../../tools/dictionaries/standard.dict
-	apt-get update && apt-get install -y python3-psycopg2
-	sed -nre 's/^# pypi-requirements: //p' ../scripts/obo_spellchecker.py ../scripts/fetch_authors.py \
-		| xargs python -m pip install
 	../scripts/obo_spellchecker.py -o $@ \
 		-d ../../tools/dictionaries/standard.dict \
 		-d '|../scripts/fetch_authors.py' \
@@ -165,9 +162,7 @@ pre_release: test $(SRC) tmp/auto_generated_definitions_dot.owl
 all_imports: $(IMPORT_FILES) components/flybase_import.owl
 
 tmp/FBgn_template.tsv: $(IMPORTSEED)
-	if [ $(IMP) = true ]; then apt-get update && apt-get install -y python3-psycopg2 && \
-	python3 -m pip install -r ../scripts/flybase_import/requirements.txt && \
-	python3 ../scripts/flybase_import/FB_import_runner.py $(IMPORTSEED) $@; fi
+	if [ $(IMP) = true ]; then python3 ../scripts/flybase_import/FB_import_runner.py $(IMPORTSEED) $@; fi
 
 components/flybase_import.owl: tmp/FBgn_template.tsv
 	if [ $(IMP) = true ]; then $(ROBOT) template --input-iri http://purl.obolibrary.org/obo/ro.owl --template $< \
