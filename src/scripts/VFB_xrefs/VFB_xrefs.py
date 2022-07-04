@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 """
-Makes a template for adding VFB xrefs to classes that are part_of some 'nervous system'.
+Makes a template for adding VFB xrefs to classes that are is_a or part_of descendants of 'nervous system' or 'sense organ'.
 """
 
 import requests
@@ -26,8 +26,8 @@ excluded_terms = new_cells['FBbt_id_long'].tolist() + new_ALLNs['FBbt_id_long'].
 
 #find all nervous systems and parts of them - nervous system = FBbt_00005093
 
-terms = ['http://purl.obolibrary.org/obo/FBbt_00005093']
-result = ['http://purl.obolibrary.org/obo/FBbt_00005093']
+terms = ['http://purl.obolibrary.org/obo/FBbt_00005093', 'http://purl.obolibrary.org/obo/FBbt_00005155']
+result = ['http://purl.obolibrary.org/obo/FBbt_00005093', 'http://purl.obolibrary.org/obo/FBbt_00005155']
 x = 1
 while x > 0:
     x = 0
