@@ -1,16 +1,25 @@
 <?xml version="1.0"?>
 <rdf:RDF xmlns="http://purl.obolibrary.org/obo/fbbt/imports/pato_import.owl#"
      xml:base="http://purl.obolibrary.org/obo/fbbt/imports/pato_import.owl"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
      xmlns:obo="http://purl.obolibrary.org/obo/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:terms="http://purl.org/dc/terms/"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/fbbt/imports/pato_import.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/fbbt/releases/2022-06-09/imports/pato_import.owl"/>
-        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2022-06-09</owl:versionInfo>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/fbbt/releases/2022-08-11/imports/pato_import.owl"/>
+        <obo:IAO_0000700 rdf:resource="http://purl.obolibrary.org/obo/PATO_0000001"/>
+        <dc:description>An ontology of phenotypic qualities (properties, attributes or characteristics).</dc:description>
+        <dc:title>PATO - the Phenotype And Trait Ontology</dc:title>
+        <terms:license rdf:resource="https://creativecommons.org/licenses/by/3.0/"/>
+        <oboInOwl:default-namespace>quality</oboInOwl:default-namespace>
+        <oboInOwl:hasOBOFormatVersion>1.2</oboInOwl:hasOBOFormatVersion>
+        <owl:versionInfo>2022-08-10</owl:versionInfo>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2022-08-11</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -32,15 +41,9 @@
     
 
 
-    <!-- http://www.geneontology.org/formats/oboInOwl#created_by -->
+    <!-- http://purl.org/dc/terms/contributor -->
 
-    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#created_by"/>
-    
-
-
-    <!-- http://www.geneontology.org/formats/oboInOwl#creation_date -->
-
-    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#creation_date"/>
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/contributor"/>
     
 
 
@@ -222,7 +225,7 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0002451">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0000001"/>
         <obo:IAO_0000115>A quality inhering in a bearer by virtue of the bearer&apos;s exhibiting a phenotypic difference between males and females of the same species.</obo:IAO_0000115>
-        <oboInOwl:creation_date>2013-03-11T09:22:04Z</oboInOwl:creation_date>
+        <terms:contributor rdf:resource="https://orcid.org/0000-0002-2061-091X"/>
         <oboInOwl:hasOBONamespace>quality</oboInOwl:hasOBONamespace>
         <oboInOwl:id>PATO:0002451</oboInOwl:id>
         <rdfs:label>sexually dimorphic</rdfs:label>
@@ -231,7 +234,7 @@
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0002451"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A quality inhering in a bearer by virtue of the bearer&apos;s exhibiting a phenotypic difference between males and females of the same species.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>PATOC:WC</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATOC:WC</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -241,7 +244,7 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0060002">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0002451"/>
         <obo:IAO_0000115>A quality inhering in a bearer by virtue of the bearer&apos;s being present in males and absent from females in members of the same species.</obo:IAO_0000115>
-        <oboInOwl:creation_date>2019-08-23T08:49:59Z</oboInOwl:creation_date>
+        <terms:contributor rdf:resource="https://orcid.org/0000-0002-1373-1705"/>
         <oboInOwl:hasOBONamespace>quality</oboInOwl:hasOBONamespace>
         <oboInOwl:id>PATO:0060002</oboInOwl:id>
         <rdfs:label>male-specific</rdfs:label>
@@ -260,7 +263,7 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0060003">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0002451"/>
         <obo:IAO_0000115>A quality inhering in a bearer by virtue of the bearer&apos;s being present in females and absent from males in members of the same species.</obo:IAO_0000115>
-        <oboInOwl:creation_date>2019-08-23T08:51:22Z</oboInOwl:creation_date>
+        <terms:contributor rdf:resource="https://orcid.org/0000-0002-1373-1705"/>
         <oboInOwl:hasOBONamespace>quality</oboInOwl:hasOBONamespace>
         <oboInOwl:id>PATO:0060003</oboInOwl:id>
         <rdfs:label>female-specific</rdfs:label>
