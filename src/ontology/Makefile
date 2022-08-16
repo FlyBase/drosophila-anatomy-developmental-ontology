@@ -46,7 +46,7 @@ TODAY ?=                    $(shell date +%Y-%m-%d)
 OBODATE ?=                  $(shell date +'%d:%m:%Y %H:%M')
 VERSION=                    $(TODAY)
 ANNOTATE_ONTOLOGY_VERSION = annotate -V $(ONTBASE)/releases/$(VERSION)/$@ --annotation owl:versionInfo $(VERSION)
-OTHER_SRC =                 $(PATTERNDIR)/definitions.owl 
+OTHER_SRC =                 $(PATTERNDIR)/definitions.owl $(COMPONENTSDIR)/fbbt_ext.owl $(COMPONENTSDIR)/exact_mappings.owl $(COMPONENTSDIR)/flybase_import.owl $(COMPONENTSDIR)/neuron_symbols.owl $(COMPONENTSDIR)/larvalbrain_compartments.owl $(COMPONENTSDIR)/larvalbrain_fascicles.owl $(COMPONENTSDIR)/hemibrain_new_cells.owl $(COMPONENTSDIR)/hemibrain_new_ALLNs.owl $(COMPONENTSDIR)/Feng_neurons.owl 
 ONTOLOGYTERMS =             $(TMPDIR)/ontologyterms.txt
 PATTERNDIR=                 ../patterns
 PATTERN_TESTER=              dosdp validate -i
@@ -311,6 +311,38 @@ refresh-%:
 .PHONY: no-mirror-refresh-%
 no-mirror-refresh-%:
 	$(MAKE) IMP=true IMP_LARGE=true MIR=false PAT=false $(IMPORTDIR)/$*_import.owl -B
+
+
+# ----------------------------------------
+# Components
+# ----------------------------------------
+# Some ontologies contain external and internal components. A component is included in the ontology in its entirety.
+
+COMP=true # Global parameter to bypass component generation
+
+.PHONY: all_components
+all_components: $(OTHER_SRC)
+
+.PHONY: recreate-components
+recreate-components:
+	$(MAKE) IMP=true MIR=true PAT=true IMP_LARGE=true all_components -B
+
+.PHONY: recreate-%
+recreate-%:
+	$(MAKE) IMP=true IMP_LARGE=true MIR=true PAT=true $(COMPONENTSDIR)/$*.owl -B
+
+$(COMPONENTSDIR)/%: | $(COMPONENTSDIR)
+	touch $@
+.PRECIOUS: $(COMPONENTSDIR)/%
+
+
+
+
+
+
+
+
+
 
 # ----------------------------------------
 # Mirroring upstream ontologies
