@@ -133,7 +133,7 @@ sub is_dbxref_legal {
     &ISBN13_check($1)
   }
   # If not ISBN, does it follow one of the other legal dbxref syntaxes?
-  elsif ($_ =~ m/FlyBase\:FBrf\d{7}|VFB_vol\:\d{8}|FBC\:\S+|SO\:ma|FlyBase\:FBim\d{7}|PMID\:\d+|http\:\/\/.+|CARO\:\S+|doi\:\d+\.\d+\/\w+|FlyBrain_NDB\:\d+|FlyPNS\:\S+|DoOR\:\S+|CHEBI\:\d+|PATO\:\d+|XCO\:\d+|EFO\:\d+|MeSH\:D\d+|GOC:\S+|GO_REF\:\d+|Reactome\:\d+|SO\:\S+|UniProt\:P\d+|UniProt\:Q\S+|WB_REF\:\S+|FB\:FBrfd{7}|Wikipedia\:\S+/) {
+  elsif ($_ =~ m/FlyBase\:FBrf\d{7}|VFB_vol\:\d{8}|FBC\:\S+|SO\:ma|FlyBase\:FBim\d{7}|PMID\:\d+|http\:\/\/.+|CARO\:\S+|doi\:\d+\.\d+\/\w+|FlyBrain_NDB\:\d+|FlyPNS\:\S+|DoOR\:\S+|CHEBI\:\d+|GO\:\d+|PATO\:\d+|XCO\:\d+|EFO\:\d+|MeSH\:D\d+|GOC:\S+|GO_REF\:\d+|Reactome\:\d+|SO\:\S+|UniProt\:P\d+|UniProt\:Q\S+|WB_REF\:\S+|FB\:FBrfd{7}|Wikipedia\:\S+/) {
     $legal_stat=1;
   } else {
     $legal_stat=0
