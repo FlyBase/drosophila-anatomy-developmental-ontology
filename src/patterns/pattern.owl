@@ -13,8 +13,11 @@ Declaration(Class(<http://purl.obolibrary.org/obo/FBbt_00005074>))
 Declaration(Class(<http://purl.obolibrary.org/obo/FBbt_00005105>))
 Declaration(Class(<http://purl.obolibrary.org/obo/FBbt_00005106>))
 Declaration(Class(<http://purl.obolibrary.org/obo/FBbt_00005140>))
+Declaration(Class(<http://purl.obolibrary.org/obo/FBbt_00005146>))
 Declaration(Class(<http://purl.obolibrary.org/obo/FBbt_00005155>))
 Declaration(Class(<http://purl.obolibrary.org/obo/FBbt_00007316>))
+Declaration(Class(<http://purl.obolibrary.org/obo/FBbt_00051424>))
+Declaration(Class(<http://purl.obolibrary.org/obo/fbbt/src/patterns/dosdp-patterns/immatureNeuronByMatureNeuron.yaml>))
 Declaration(Class(<http://purl.obolibrary.org/obo/fbbt/src/patterns/dosdp-patterns/larvalMotorNeuronBySegment.yaml>))
 Declaration(Class(<http://purl.obolibrary.org/obo/fbbt/src/patterns/dosdp-patterns/larvalSensoryNeuronBySegment.yaml>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002100>))
@@ -23,6 +26,8 @@ Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002105>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002106>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002107>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002114>))
+Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002202>))
+Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002203>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0013007>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0013009>))
 Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/IAO_0000115>))
@@ -36,6 +41,13 @@ Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#has
 ############################
 #   Classes
 ############################
+
+# Class: <http://purl.obolibrary.org/obo/fbbt/src/patterns/dosdp-patterns/immatureNeuronByMatureNeuron.yaml> (<http://purl.obolibrary.org/obo/fbbt/src/patterns/dosdp-patterns/immatureNeuronByMatureNeuron.yaml>)
+
+AnnotationAssertion(<http://purl.org/dc/terms/title> <http://purl.obolibrary.org/obo/fbbt/src/patterns/dosdp-patterns/immatureNeuronByMatureNeuron.yaml> "immatureNeuronByMatureNeuron"^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/fbbt/src/patterns/dosdp-patterns/immatureNeuronByMatureNeuron.yaml> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/FBbt_00051424> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002203> <http://purl.obolibrary.org/obo/FBbt_00005106>)))
+SubClassOf(<http://purl.obolibrary.org/obo/fbbt/src/patterns/dosdp-patterns/immatureNeuronByMatureNeuron.yaml> <http://purl.obolibrary.org/obo/FBbt_00005106>)
+SubClassOf(<http://purl.obolibrary.org/obo/fbbt/src/patterns/dosdp-patterns/immatureNeuronByMatureNeuron.yaml> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002202> <http://purl.obolibrary.org/obo/FBbt_00005146>))
 
 # Class: <http://purl.obolibrary.org/obo/fbbt/src/patterns/dosdp-patterns/larvalMotorNeuronBySegment.yaml> (larval http://www.w3.org/2002/07/owl#Thing motor neuron of neuromere neuromere)
 
