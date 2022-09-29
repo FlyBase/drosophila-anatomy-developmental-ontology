@@ -17,9 +17,12 @@ relations:
 vars:
   mature_neuron: neuron
   neuroblast: neuroblast
-  hemilineage: neuron
-  differentiation_stage: neuron
+  stage_hemilineage: neuron
 
+name:
+  text: "immature %s"
+  vars:
+     - mature_neuron
 
 logical_axioms:
    - axiom_type: equivalentTo
@@ -33,8 +36,4 @@ logical_axioms:
    - axiom_type: subClassOf
      text: "%s"
      vars:
-       - hemilineage
-   - axiom_type: subClassOf
-     text: "%s"
-     vars:
-       - differentiation_stage
+       - stage_hemilineage
