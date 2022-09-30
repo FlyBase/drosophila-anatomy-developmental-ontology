@@ -1,0 +1,39 @@
+pattern_name: immatureNeuronByMatureNeuron
+pattern_iri: http://purl.obolibrary.org/obo/fbbt/src/patterns/dosdp-patterns/immatureNeuronByMatureNeuron.yaml
+description: "Pattern for terms for immature (between birth and first morphology) Drosophila neurons defined by the mature neuron that they will develop into."
+
+contributors:
+  - https://orcid.org/0000-0002-1373-1705
+
+classes:
+  neuron: FBbt:00005106
+  immature_neuron: FBbt:00051424
+  neuroblast: FBbt:00005146
+
+relations: 
+  develops_into: RO:0002203
+  develops_from: RO:0002202
+
+vars:
+  mature_neuron: neuron
+  neuroblast: neuroblast
+  stage_hemilineage: neuron
+
+name:
+  text: "immature %s"
+  vars:
+     - mature_neuron
+
+logical_axioms:
+   - axiom_type: equivalentTo
+     text: "'immature_neuron' that 'develops_into' some %s"
+     vars:
+       - mature_neuron
+   - axiom_type: subClassOf
+     text: "'develops_from' some %s"
+     vars:
+       - neuroblast
+   - axiom_type: subClassOf
+     text: "%s"
+     vars:
+       - stage_hemilineage
