@@ -46,7 +46,7 @@ TODAY ?=                    $(shell date +%Y-%m-%d)
 OBODATE ?=                  $(shell date +'%d:%m:%Y %H:%M')
 VERSION=                    $(TODAY)
 ANNOTATE_ONTOLOGY_VERSION = annotate -V $(ONTBASE)/releases/$(VERSION)/$@ --annotation owl:versionInfo $(VERSION)
-OTHER_SRC =                 $(PATTERNDIR)/definitions.owl $(COMPONENTSDIR)/fbbt_ext.owl $(COMPONENTSDIR)/exact_mappings.owl $(COMPONENTSDIR)/flybase_import.owl $(COMPONENTSDIR)/neuron_symbols.owl $(COMPONENTSDIR)/larvalbrain_compartments.owl $(COMPONENTSDIR)/larvalbrain_fascicles.owl $(COMPONENTSDIR)/hemibrain_new_cells.owl $(COMPONENTSDIR)/hemibrain_new_ALLNs.owl $(COMPONENTSDIR)/Feng_neurons.owl 
+OTHER_SRC =                 $(PATTERNDIR)/definitions.owl $(COMPONENTSDIR)/fbbt_ext.owl $(COMPONENTSDIR)/exact_mappings.owl $(COMPONENTSDIR)/neuron_symbols.owl $(COMPONENTSDIR)/larvalbrain_compartments.owl $(COMPONENTSDIR)/larvalbrain_fascicles.owl $(COMPONENTSDIR)/hemibrain_new_cells.owl $(COMPONENTSDIR)/hemibrain_new_ALLNs.owl $(COMPONENTSDIR)/Feng_neurons.owl 
 ONTOLOGYTERMS =             $(TMPDIR)/ontologyterms.txt
 PATTERNDIR=                 ../patterns
 PATTERN_TESTER=              dosdp validate -i
@@ -334,7 +334,6 @@ recreate-%:
 $(COMPONENTSDIR)/%: | $(COMPONENTSDIR)
 	touch $@
 .PRECIOUS: $(COMPONENTSDIR)/%
-
 
 
 
