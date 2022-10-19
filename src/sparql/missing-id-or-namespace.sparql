@@ -1,19 +1,17 @@
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
-PREFIX oio: <http://www.geneontology.org/formats/oboInOwl#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX oboInOwl: <http://www.geneontology.org/formats/oboInOwl#>
 
-SELECT ?cls ?property WHERE {
-  VALUES ?property { oio:id oio:hasOBONamespace }
-
-  # Select classes missing (at least) one of the properties
-  ?cls a owl:Class .
-  FILTER NOT EXISTS { ?cls ?property ?value }
-
-  # Exclude blank nodes and obsoleted terms
-  FILTER ( ! isBlank(?cls) )
-  FILTER NOT EXISTS { ?cls owl:deprecated true }
-
-  # Exclude everything not coming from FBbt
-  # (this notably includes imported FBgn pseudo-terms)
-  FILTER regex(str(?cls), "^http://purl.obolibrary.org/obo/FBbt_")
+SELECT DISTINCT ?entity ?property ?value WHERE {
+  VALUES ?property { oboInOwl:id oboInOwl:hasOBONamespace }
+  ?entity a owl:Class .
+  FILTER NOT EXISTS {
+     ?entity ?property ?value .
+     FILTER(str(?value) != "")
+  }
+  FILTER NOT EXISTS { ?entity owl:deprecated true }
+  FILTER (!isBlank(?entity))
+  FILTER regex(str(?entity), "^http://purl.obolibrary.org/obo/FBbt_")
 }
-ORDER BY ?cls
+ORDER BY ?entity
