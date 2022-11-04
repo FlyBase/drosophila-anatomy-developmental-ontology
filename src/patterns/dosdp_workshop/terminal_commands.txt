@@ -4,7 +4,7 @@
 cd ~/git/drosophila-anatomy-developmental-ontology/src/patterns/dosdp_workshop/
 
 #generate terms
-dosdp-tools generate --obo-prefixes=true --prefixes=prefix.yaml --infile=fillers.csv --template=pattern.yaml --ontology=fbbt-edit-copy.obo --outfile=new_terms.owl
+dosdp-tools generate --obo-prefixes=true --prefixes=prefix.yaml --infile=fillers.tsv --template=pattern.yaml --ontology=fbbt-edit-copy.obo --outfile=new_terms.owl
 
 #copy to ontology folder:
 cp new_terms.owl ~/git/drosophila-anatomy-developmental-ontology/src/ontology/
