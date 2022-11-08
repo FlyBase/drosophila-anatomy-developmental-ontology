@@ -24,10 +24,10 @@ feng_ids = ['http://purl.obolibrary.org/obo/FBbt_000' + n for n in [str(i) for i
 
 excluded_terms = new_cells['FBbt_id_long'].tolist() + new_ALLNs['FBbt_id_long'].tolist() + feng_ids
 
-#find all nervous systems and parts of them - nervous system = FBbt_00005093
+#find all nervous systems and parts of them - nervous system = FBbt_00005093, sense organ = FBbt_00005155, neuroblast = FBbt_00005146
 
-terms = ['http://purl.obolibrary.org/obo/FBbt_00005093', 'http://purl.obolibrary.org/obo/FBbt_00005155']
-result = ['http://purl.obolibrary.org/obo/FBbt_00005093', 'http://purl.obolibrary.org/obo/FBbt_00005155']
+terms = ['http://purl.obolibrary.org/obo/FBbt_00005093', 'http://purl.obolibrary.org/obo/FBbt_00005155', 'http://purl.obolibrary.org/obo/FBbt_00005146']
+result = ['http://purl.obolibrary.org/obo/FBbt_00005093', 'http://purl.obolibrary.org/obo/FBbt_00005155', 'http://purl.obolibrary.org/obo/FBbt_00005146']
 x = 1
 while x > 0:
     x = 0
