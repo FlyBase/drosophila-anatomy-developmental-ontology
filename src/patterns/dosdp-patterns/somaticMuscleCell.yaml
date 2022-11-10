@@ -1,0 +1,21 @@
+pattern_name: somaticMuscleCell
+pattern_iri: http://purl.obolibrary.org/obo/fbbt/src/patterns/dosdp-patterns/somaticMuscleCell.yaml
+description: "Pattern for generating terms for the muscle cells that make up the somatic muscles."
+
+contributors:
+  - https://orcid.org/0000-0002-6095-8718
+
+classes:
+  muscle_cell: FBbt:00005074
+  somatic_muscle: FBbt:00058111
+
+relations:
+  part_of: BFO:0000050
+
+vars:
+  muscle: somatic_muscle
+
+equivalentTo:
+  text: "'muscle_cell' that 'part_of' some %s"
+  vars:
+    - muscle
