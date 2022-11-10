@@ -1,0 +1,54 @@
+pattern_name: pattern
+description: "Adding terms and basic annotations for segment-specific subclasses of neuroblasts, annotations will be manually updated, axioms will be generated from tsv."
+
+classes:
+  neuroblast: FBbt:00005146
+  segment: FBbt:00000003
+
+vars:
+  parent: neuroblast
+  segment: segment
+  other_type: neuroblast
+  segment_short2: xsd:string
+
+data_list_vars:
+  dbxrefs: xsd:string
+
+substitutions:
+   - in: segment
+     out: segment_short1
+     match: "(.+) segment(.*)"
+     sub: \1\2
+   - in: parent
+     out: parent_short1
+     match: "neuroblast (.+)"
+     sub: \1
+
+name:
+  text: "%s %s"
+  vars:
+    - segment_short1
+    - parent
+
+logical_axioms:
+   - axiom_type: subClassOf
+     text: "owl:Thing"
+
+def:
+  text: "."
+  xrefs: dbxrefs
+  
+generated_synonyms:
+  -
+    exact_synonym:
+    text: "%s %s"
+    vars:
+    - segment_short2
+    - parent_short1
+
+  -
+    exact_synonym:
+    text: "%s of %s"
+    vars:
+    - parent
+    - segment

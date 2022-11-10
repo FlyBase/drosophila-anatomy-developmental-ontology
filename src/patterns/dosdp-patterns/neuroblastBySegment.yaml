@@ -1,0 +1,29 @@
+pattern_name: neuroblastBySegment
+pattern_iri: http://purl.obolibrary.org/obo/fbbt/src/patterns/dosdp-patterns/neuroblastBySegment.yaml
+description: "Pattern for segment-specific subclasses of neuroblasts."
+
+contributors:
+  - https://orcid.org/0000-0002-1373-1705
+
+classes:
+  neuroblast: FBbt:00005146
+  segment: FBbt:00000003
+
+relations: 
+  part_of: BFO:0000050
+
+vars:
+  parent: neuroblast
+  segment: segment
+  other_type: neuroblast
+
+logical_axioms:
+   - axiom_type: equivalentTo
+     text: "%s that 'part_of' some %s"
+     vars:
+       - parent
+       - segment
+   - axiom_type: subClassOf
+     text: "%s"
+     vars:
+       - other_type
