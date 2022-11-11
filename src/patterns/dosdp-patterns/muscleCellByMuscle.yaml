@@ -1,0 +1,21 @@
+pattern_name: muscleCellByMuscle
+pattern_iri: http://purl.obolibrary.org/obo/fbbt/src/patterns/dosdp-patterns/muscleCellByMuscle.yaml
+description: "Pattern for generating terms for the muscle cells that make up the muscles."
+
+contributors:
+  - https://orcid.org/0000-0002-6095-8718
+
+classes:
+  muscle_cell: FBbt:00005074
+  multicellular_structure: FBbt:00100313
+
+relations:
+  part_of: BFO:0000050
+
+vars:
+  muscle: multicellular_structure
+
+equivalentTo:
+  text: "'muscle_cell' that 'part_of' some %s"
+  vars:
+    - muscle

@@ -17,9 +17,11 @@ Declaration(Class(<http://purl.obolibrary.org/obo/FBbt_00005146>))
 Declaration(Class(<http://purl.obolibrary.org/obo/FBbt_00005155>))
 Declaration(Class(<http://purl.obolibrary.org/obo/FBbt_00007316>))
 Declaration(Class(<http://purl.obolibrary.org/obo/FBbt_00051424>))
+Declaration(Class(<http://purl.obolibrary.org/obo/FBbt_00100313>))
 Declaration(Class(<http://purl.obolibrary.org/obo/fbbt/src/patterns/dosdp-patterns/immatureNeuronByMatureNeuron.yaml>))
 Declaration(Class(<http://purl.obolibrary.org/obo/fbbt/src/patterns/dosdp-patterns/larvalMotorNeuronBySegment.yaml>))
 Declaration(Class(<http://purl.obolibrary.org/obo/fbbt/src/patterns/dosdp-patterns/larvalSensoryNeuronBySegment.yaml>))
+Declaration(Class(<http://purl.obolibrary.org/obo/fbbt/src/patterns/dosdp-patterns/muscleCellByMuscle.yaml>))
 Declaration(Class(<http://purl.obolibrary.org/obo/fbbt/src/patterns/dosdp-patterns/neuroblastBySegment.yaml>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/BFO_0000050>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002100>))
@@ -78,6 +80,11 @@ EquivalentClasses(<http://purl.obolibrary.org/obo/fbbt/src/patterns/dosdp-patter
 SubClassOf(<http://purl.obolibrary.org/obo/fbbt/src/patterns/dosdp-patterns/larvalSensoryNeuronBySegment.yaml> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002100> <http://purl.obolibrary.org/obo/FBbt_00007316>))
 SubClassOf(<http://purl.obolibrary.org/obo/fbbt/src/patterns/dosdp-patterns/larvalSensoryNeuronBySegment.yaml> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002101> <http://purl.obolibrary.org/obo/FBbt_00005105>))
 SubClassOf(<http://purl.obolibrary.org/obo/fbbt/src/patterns/dosdp-patterns/larvalSensoryNeuronBySegment.yaml> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0013007> <http://purl.obolibrary.org/obo/FBbt_00005155>))
+
+# Class: <http://purl.obolibrary.org/obo/fbbt/src/patterns/dosdp-patterns/muscleCellByMuscle.yaml> (<http://purl.obolibrary.org/obo/fbbt/src/patterns/dosdp-patterns/muscleCellByMuscle.yaml>)
+
+AnnotationAssertion(<http://purl.org/dc/terms/title> <http://purl.obolibrary.org/obo/fbbt/src/patterns/dosdp-patterns/muscleCellByMuscle.yaml> "muscleCellByMuscle"^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/fbbt/src/patterns/dosdp-patterns/muscleCellByMuscle.yaml> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/FBbt_00005074> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000050> <http://purl.obolibrary.org/obo/FBbt_00100313>)))
 
 # Class: <http://purl.obolibrary.org/obo/fbbt/src/patterns/dosdp-patterns/neuroblastBySegment.yaml> (<http://purl.obolibrary.org/obo/fbbt/src/patterns/dosdp-patterns/neuroblastBySegment.yaml>)
 
