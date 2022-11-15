@@ -1,0 +1,55 @@
+pattern_name: neuronByBirthStageAndNotchStatusFromNeuroblastAtDevStage
+pattern_iri: http://purl.obolibrary.org/obo/fbbt/src/patterns/dosdp-patterns/neuronByBirthStageAndNotchStatusFromNeuroblastAtDevStage.yaml
+description: "Somewhat complex pattern for defining neurons based on birth stage and notch status (primary/secondary/primary Notch ON etc.), neuroblast of origin, and the developmental stage that it is in (larval/adult etc.). All fields are technically optional, but really neuroblast and birth stage/notch status (even if just 'neuron') should be specified. Stage is a list variable that can also include sex if needed. Neurotransmitter(s) can be added if known and consistent for the lineage. Other types are types that apply to all neurons defined by the birth/notch/stage combination but are not required for class membership (e.g. all NB3-3 primary neurons are Notch OFF) - this is a list variable."
+
+contributors:
+  - https://orcid.org/0000-0002-1373-1705
+
+classes:
+  neuron: FBbt:00005106
+  neuroblast: FBbt:00005146
+  organism: FBbt:00000001
+  neurotransmitter_secretion: GO:0007269
+
+relations: 
+  part_of: BFO:0000050
+  develops_from: RO:0002202
+
+vars:
+  birth_notch: neuron
+  neuroblast: neuroblast
+  neuron_type: neuron
+
+list_vars:
+  stage: organism
+  other_types: neuron
+  neurotransmitter: neurotransmitter_secretion
+
+logical_axioms:
+   - axiom_type: equivalentTo
+     multi_clause:
+      sep: " and "
+      clauses:
+        - text: "%s"
+          vars:
+            - birth_notch
+        - text: "'develops_from' some %s"
+          vars:
+            - neuroblast
+        - text: "'part_of' some %s"
+          vars:
+            - stage
+   - axiom_type: subClassOf
+     multi_clause:
+      sep: " and "
+      clauses:
+        - text: "%s"
+          vars:
+            - other_types
+   - axiom_type: subClassOf
+     multi_clause:
+      sep: " and "
+      clauses:
+        - text: "%s"
+          vars:
+            - neurotransmitter

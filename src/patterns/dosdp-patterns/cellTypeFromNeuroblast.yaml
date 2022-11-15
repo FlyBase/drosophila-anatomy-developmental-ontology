@@ -1,0 +1,32 @@
+pattern_name: cellTypeFromNeuroblast
+pattern_iri: http://purl.obolibrary.org/obo/fbbt/src/patterns/dosdp-patterns/cellTypeFromNeuroblast.yaml
+description: "Pattern for generating terms for cell types (may include glia and other non-neuronal cells) that are distinguished based on lineage e.g. 'antennal lobe projection neuron of ALl1 lineage'. Notch status can be optionally added if required. For any neuron of a lineage/hemilineage please use neuronByBirthStageAndNotchStatusFromNeuroblastAtDevStage pattern."
+
+contributors:
+  - https://orcid.org/0000-0002-1373-1705
+
+classes:
+  cell: FBbt:00007002
+  neuron: FBbt:00005106
+  neuroblast: FBbt:00005146
+
+relations:
+  develops_from: RO:0002202
+
+vars:
+  cell_type: cell
+  neuroblast: neuroblast
+  notch: neuron
+
+logical_axioms:
+   - axiom_type: equivalentTo
+     multi_clause:
+      sep: " and "
+      clauses:
+        - text: "%s that 'develops_from' some %s"
+          vars:
+            - cell_type
+            - neuroblast
+        - text: "%s"
+          vars:
+            - notch
