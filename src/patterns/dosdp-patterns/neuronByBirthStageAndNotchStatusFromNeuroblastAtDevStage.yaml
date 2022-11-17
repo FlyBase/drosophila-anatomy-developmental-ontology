@@ -10,14 +10,17 @@ classes:
   neuroblast: FBbt:00005146
   organism: FBbt:00000001
   neurotransmitter_secretion: GO:0007269
+  lineage_clone: FBbt:00007683
 
 relations: 
   part_of: BFO:0000050
   develops_from: RO:0002202
+  capable_of: RO:0002215
 
 vars:
   birth_notch: neuron
   neuroblast: neuroblast
+  clone: lineage_clone
 
 list_vars:
   stage: organism
@@ -49,6 +52,10 @@ logical_axioms:
      multi_clause:
       sep: " and "
       clauses:
-        - text: "%s"
+        - text: "'capable_of'some %s"
           vars:
             - neurotransmitter
+   - axiom_type: subClassOf
+     text: "'part_of'some %s"
+     vars:
+       - clone
