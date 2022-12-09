@@ -1,0 +1,61 @@
+pattern_name: typeIbMNByMuscle
+pattern_iri: http://purl.obolibrary.org/obo/fbbt/src/patterns/dosdp-patterns/typeIbMNByMuscle.yaml
+description: "Pattern for generating terms for Drosophila type Ib motor neurons based on the (single) muscle innervated. Motor neurons that cannot be uniquely defined by an innervated muscle cannot use this pattern. Other innervated muscles (not needed to define the type) can be added as other_muscle. This pattern is for parent types (including A1-7 terms) and not leaf nodes (e.g. A1 terms)."
+
+contributors:
+  - https://orcid.org/0000-0002-1373-1705
+
+classes:
+  motor_neuron: FBbt:00005123
+  neuroblast: FBbt:00005146
+  muscle_cell: FBbt:00005074
+  nerve: FBbt:00005105
+
+relations: 
+  sends_synaptic_output_to_cell: RO:0013009
+  develops_from: RO:0002202
+  fasciculates_with: RO:0002101
+  synapsed_via_type_Ib_bouton_to: RO:0002105
+
+vars:
+  neuroblast: neuroblast
+  muscle_cell: muscle_cell
+
+list_vars:
+  nerve: nerve
+  other_muscle: muscle_cell
+
+logical_axioms:
+   - axiom_type: equivalentTo
+     text: "'motor_neuron' that 'synapsed_via_type_Ib_bouton_to' some %s"
+     vars:
+       - muscle_cell
+   - axiom_type: subClassOf
+     multi_clause:
+      sep: " and "
+      clauses:
+        - text: "'synapsed_via_type_Ib_bouton_to' some %s"
+          vars:
+            - other_muscle
+   - axiom_type: subClassOf
+     multi_clause:
+      sep: " and "
+      clauses:
+        - text: "'sends_synaptic_output_to_cell' some %s"
+          vars:
+            - other_muscle
+   - axiom_type: subClassOf
+     multi_clause:
+      sep: " and "
+      clauses:
+        - text: "'fasciculates_with' some %s"
+          vars:
+            - nerve
+   - axiom_type: subClassOf
+     text: "'sends_synaptic_output_to_cell' some %s"
+     vars:
+       - muscle_cell
+   - axiom_type: subClassOf
+     text: "'develops_from' some %s"
+     vars:
+       - neuroblast
