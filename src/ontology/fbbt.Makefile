@@ -228,3 +228,21 @@ fbbt-cedar.obo:
 scrnaseq-slim.owl: $(ONT)-simple.owl
 	owltools --use-catalog $< --extract-ontology-subset --subset scrnaseq_slim \
 		--iri $(URIBASE)/fbbt/scrnaseq-slim.owl -o $@
+
+
+#######################################################################
+### Patterns
+#######################################################################
+
+# all filenames for pattern tsvs
+ALL_DOSDP_TSVs = $(wildcard $(PATTERNDIR)/data/*/*.tsv)
+
+# goal to update labels in tsvs used for pattern generation
+update_pattern_labels:
+	# get latest version of script and vfb_connect:
+	wget -O ../scripts/update_term_labels_in_file.py https://raw.githubusercontent.com/FlyBase/flybase-ontology-scripts/master/update_term_labels_in_file/src/update_term_labels_in_file.py
+	python3 -m pip install vfb_connect
+	# run script for each id:label column pair in each file
+	for file in $(ALL_DOSDP_TSVs) ; do \
+    python3 ../scripts/dosdp_tsv_labels.py -f $$file ; \
+	done
