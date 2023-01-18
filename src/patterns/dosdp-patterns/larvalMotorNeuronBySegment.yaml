@@ -36,7 +36,6 @@ vars:
   
 list_vars:
   nerve: nerve
-  muscle: muscle
   Ib_muscle: muscle
   Is_muscle: muscle
   II_muscle: muscle
@@ -182,7 +181,28 @@ logical_axioms:
       clauses:
         - text: "'sends_synaptic_output_to_cell' some %s"
           vars:
-            - muscle
+            - Ib_muscle
+   - axiom_type: subClassOf
+     multi_clause:
+      sep: " and "
+      clauses:
+        - text: "'sends_synaptic_output_to_cell' some %s"
+          vars:
+            - Is_muscle
+   - axiom_type: subClassOf
+     multi_clause:
+      sep: " and "
+      clauses:
+        - text: "'sends_synaptic_output_to_cell' some %s"
+          vars:
+            - II_muscle
+   - axiom_type: subClassOf
+     multi_clause:
+      sep: " and "
+      clauses:
+        - text: "'sends_synaptic_output_to_cell' some %s"
+          vars:
+            - III_muscle
    - axiom_type: subClassOf
      multi_clause:
       sep: " and "
