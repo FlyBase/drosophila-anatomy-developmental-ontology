@@ -22,11 +22,15 @@ vars:
   neuroblast: neuroblast
   Ib_muscle_cell: muscle_cell
   Is_muscle_cell: muscle_cell
+  II_muscle_cell: muscle_cell
+  III_muscle_cell: muscle_cell
 
 list_vars:
   nerve: nerve
   other_Ib_muscle: muscle_cell
   other_Is_muscle: muscle_cell
+  other_II_muscle: muscle_cell
+  other_III_muscle: muscle_cell
 
 logical_axioms:
    - axiom_type: equivalentTo
@@ -73,6 +77,50 @@ logical_axioms:
         - text: "'sends_synaptic_output_to_cell' some %s"
           vars:
             - other_Is_muscle
+   - axiom_type: equivalentTo
+     text: "'motor_neuron' that 'synapsed_via_type_Is_bouton_to' some %s"
+     vars:
+       - II_muscle_cell
+   - axiom_type: subClassOf
+     text: "'sends_synaptic_output_to_cell' some %s"
+     vars:
+       - II_muscle_cell
+   - axiom_type: subClassOf
+     multi_clause:
+      sep: " and "
+      clauses:
+        - text: "'synapsed_via_type_Is_bouton_to' some %s"
+          vars:
+            - other_II_muscle
+   - axiom_type: subClassOf
+     multi_clause:
+      sep: " and "
+      clauses:
+        - text: "'sends_synaptic_output_to_cell' some %s"
+          vars:
+            - other_II_muscle
+   - axiom_type: equivalentTo
+     text: "'motor_neuron' that 'synapsed_via_type_Is_bouton_to' some %s"
+     vars:
+       - III_muscle_cell
+   - axiom_type: subClassOf
+     text: "'sends_synaptic_output_to_cell' some %s"
+     vars:
+       - III_muscle_cell
+   - axiom_type: subClassOf
+     multi_clause:
+      sep: " and "
+      clauses:
+        - text: "'synapsed_via_type_Is_bouton_to' some %s"
+          vars:
+            - other_III_muscle
+   - axiom_type: subClassOf
+     multi_clause:
+      sep: " and "
+      clauses:
+        - text: "'sends_synaptic_output_to_cell' some %s"
+          vars:
+            - other_III_muscle
    - axiom_type: subClassOf
      multi_clause:
       sep: " and "
