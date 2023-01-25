@@ -11,21 +11,24 @@ classes:
   sense_organ: FBbt:00005155
   nerve: FBbt:00005105
   sensory_cluster: FBbt:00007316
+  sensory_precursor: FBbt:00052556
 
 relations: 
   has_sensory_dendrite_in: RO:0013007
   has_soma_location: RO:0002100
   part_of: BFO:0000050
   fasciculates_with: RO:0002101
+  develops_from: RO:0002202
 
 vars:
   neuron_type: neuron
   segment: segment
-  
+
 list_vars:
   nerve: nerve
   sense_organ: sense_organ
   cluster: sensory_cluster
+  precursor: sensory_precursor
 
 logical_axioms:
    - axiom_type: equivalentTo
@@ -54,3 +57,10 @@ logical_axioms:
         - text: "'has_soma_location' some %s"
           vars:
             - cluster
+   - axiom_type: subClassOf
+     multi_clause:
+      sep: " and "
+      clauses:
+        - text: "'develops_from' some %s"
+          vars:
+            - precursor
