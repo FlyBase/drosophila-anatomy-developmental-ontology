@@ -4,9 +4,8 @@ BEGIN {
 	print "#  FBbt: \"http://purl.obolibrary.org/obo/FBbt_\"";
 	print "#  UBERON: \"http://purl.obolibrary.org/obo/UBERON_\"";
 	print "#  CL: \"http://purl.obolibrary.org/obo/CL_\"";
-	print "#  skos: \"http://www.w3.org/2004/02/skos/core\"";
 	print "#mapping_provider: \"http://purl.obolibrary.org/obo/FBbt.owl\"";
-	print "subject_id\tsubject_label\tpredicate_id\tobject_id\tmatch_type";
+	print "subject_id\tsubject_label\tpredicate_id\tobject_id\tmapping_justification";
 }
 
 /^#/ { next }
@@ -14,10 +13,13 @@ BEGIN {
 
 {
 	if ( $3 == "exact" ) {
-		predicate = "skos:exactMatch"
+		predicate = "semapv:crossSpeciesExactMatch";
+	}
+	else if ( $3 == "broad" ) {
+		predicate = "semapv:crossSpeciesBroadMatch";
 	}
 	else {
-		predicate = "skos:relatedMatch"
+		predicate = "semapv:crossSpeciesCloseMatch"
 	}
-	print $1"\t"$4"\t"predicate"\t"$2"\tHumanCurated";
+	print $1"\t"$4"\t"predicate"\t"$2"\tsemapv:ManualMappingCuration";
 }

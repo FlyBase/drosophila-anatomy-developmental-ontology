@@ -179,7 +179,7 @@ mappings.sssom.tsv: mappings.tsv ../scripts/mappings2sssom.awk
 tmp/exact_mapping_template.tsv: mappings.sssom.tsv
 	echo 'ID	Cross-reference' > $@
 	echo 'ID	A oboInOwl:hasDbXref' >> $@
-	sed -n '/skos:exactMatch/p' $< | cut -f1,4 >> $@
+	sed -n '/semapv:crossSpeciesExact/p' $< | cut -f1,4 >> $@
 
 components/exact_mappings.owl: tmp/exact_mapping_template.tsv fbbt-edit.obo
 	$(ROBOT) template --input fbbt-edit.obo --template tmp/exact_mapping_template.tsv \
