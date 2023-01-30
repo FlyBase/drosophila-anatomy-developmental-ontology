@@ -8,7 +8,7 @@ contributors:
 classes:
   neuron: FBbt:00005106
   immature_neuron: FBbt:00051424
-  neuroblast: FBbt:00005146
+  somatic_precursor_cell: FBbt:00007008
 
 relations: 
   develops_into: RO:0002203
@@ -16,7 +16,7 @@ relations:
 
 vars:
   mature_neuron: neuron
-  neuroblast: neuroblast
+  progenitor: somatic_precursor_cell
   stage_hemilineage: neuron
 
 name:
@@ -32,7 +32,7 @@ logical_axioms:
    - axiom_type: subClassOf
      text: "'develops_from' some %s"
      vars:
-       - neuroblast
+       - progenitor
    - axiom_type: subClassOf
      text: "%s"
      vars:
