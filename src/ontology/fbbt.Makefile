@@ -158,11 +158,15 @@ pre_release: test $(SRC) tmp/auto_generated_definitions_dot.owl
 ###
 ###################################################################################
 
-.PHONY: all_imports
-all_imports: $(IMPORT_FILES) components/flybase_import.owl
+# Extract the list of terms from the -edit file. We cannot use $(IMPORT_SEED) for that,
+# as it can only be generated after all components have been generated, but we need
+# that list to generate the flybase_import.owl component (circular dependency).
+tmp/fbgn_seed.txt: $(SRC)
+	$(ROBOT) query -f csv -i $< --query ../sparql/terms.sparql $@.tmp && \
+		cat $@.tmp | sort | uniq > $@
 
-tmp/FBgn_template.tsv: $(IMPORTSEED)
-	if [ $(IMP) = true ]; then python3 ../scripts/flybase_import/FB_import_runner.py $(IMPORTSEED) $@; fi
+tmp/FBgn_template.tsv: tmp/fbgn_seed.txt
+	if [ $(IMP) = true ]; then python3 ../scripts/flybase_import/FB_import_runner.py $< $@; fi
 
 components/flybase_import.owl: tmp/FBgn_template.tsv
 	if [ $(IMP) = true ]; then $(ROBOT) template --input-iri http://purl.obolibrary.org/obo/ro.owl --template $< \
