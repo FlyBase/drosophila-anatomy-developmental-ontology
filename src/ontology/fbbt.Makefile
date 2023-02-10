@@ -16,7 +16,7 @@ prepare_release: $$(ASSETS) mappings.sssom.tsv release_reports
 	echo "Release files are now in $(RELEASEDIR) - now you should commit, push and make a release on your git hosting site such as GitHub or GitLab"
 
 MAIN_FILES := $(MAIN_FILES) fly_anatomy.obo fbbt-cedar.obo
-CLEANFILES := $(CLEANFILES) $(patsubst %, $(IMPORTDIR)/%_terms_combined.txt, $(IMPORTS))
+CLEANFILES := $(CLEANFILES) $(patsubst %, $(IMPORTDIR)/%_terms_combined.txt, $(IMPORTS)) tmp/exact_mappings_template.tsv
 
 ######################################################
 ### Code for generating additional FlyBase reports ###
@@ -188,7 +188,6 @@ components/exact_mappings.owl: tmp/exact_mapping_template.tsv fbbt-edit.obo
 	$(ROBOT) template --input fbbt-edit.obo --template tmp/exact_mapping_template.tsv \
 		--ontology-iri http://purl.obolibrary.org/obo/fbbt/components/exact_mappings.owl \
 		--output components/exact_mappings.owl
-	rm tmp/exact_mapping_template.tsv
 
 #####################################################################################
 ### Generate the flybase anatomy version of FBBT                                  ###
