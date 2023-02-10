@@ -133,8 +133,8 @@ $(ONT)-full.obo: $(ONT)-full.owl
 # special placeholder string to substitute in definitions from external ontologies
 # FBbt only uses DOT definitions - to use SUB, copy code and sparql from FBcv.
 
-tmp/merged-source-pre.owl: $(SRC) all_imports $(PATTERN_RELEASE_FILES)
-	$(ROBOT) merge -i $(SRC) --output $@
+tmp/merged-source-pre.owl: $(SRC)
+	$(ROBOT) merge -i $< --output $@
 
 LABEL_MAP = auto_generated_definitions_label_map.txt
 
@@ -146,11 +146,10 @@ tmp/auto_generated_definitions_seed_dot.txt: tmp/merged-source-pre.owl
 tmp/auto_generated_definitions_dot.owl: tmp/merged-source-pre.owl tmp/auto_generated_definitions_seed_dot.txt
 	java -jar ../scripts/eq-writer.jar $< tmp/auto_generated_definitions_seed_dot.txt flybase $@ $(LABEL_MAP) add_dot_refs
 
-pre_release: test $(SRC) tmp/auto_generated_definitions_dot.owl
+$(EDIT_PREPROCESSED): $(SRC) tmp/auto_generated_definitions_dot.owl
 	$(ROBOT) convert -i $(SRC) -o tmp/$(ONT)-edit-release-minus-defs.owl &&\
 	$(ROBOT) merge -i tmp/$(ONT)-edit-release-minus-defs.owl -i tmp/auto_generated_definitions_dot.owl --collapse-import-closure false -o tmp/$(ONT)-edit-release-plus-defs.owl &&\
-	$(ROBOT) query -i tmp/$(ONT)-edit-release-plus-defs.owl --update ../sparql/remove-dot-definitions.ru -o $(ONT)-edit-release.owl &&\
-	echo "Preprocessing done. Make sure that NO CHANGES TO THE EDIT FILE ARE COMMITTED!"
+	$(ROBOT) query -i tmp/$(ONT)-edit-release-plus-defs.owl --update ../sparql/remove-dot-definitions.ru -o $@
 
 
 ######################################################################################
