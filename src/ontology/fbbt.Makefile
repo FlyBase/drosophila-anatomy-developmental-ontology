@@ -16,7 +16,7 @@ prepare_release: $$(ASSETS) mappings.sssom.tsv release_reports
 	echo "Release files are now in $(RELEASEDIR) - now you should commit, push and make a release on your git hosting site such as GitHub or GitLab"
 
 MAIN_FILES := $(MAIN_FILES) fly_anatomy.obo fbbt-cedar.obo
-CLEANFILES := $(CLEANFILES) $(patsubst %, $(IMPORTDIR)/%_terms_combined.txt, $(IMPORTS))
+CLEANFILES := $(CLEANFILES) $(patsubst %, $(IMPORTDIR)/%_terms_combined.txt, $(IMPORTS)) tmp/exact_mappings_template.tsv
 
 ######################################################
 ### Code for generating additional FlyBase reports ###
@@ -133,8 +133,8 @@ $(ONT)-full.obo: $(ONT)-full.owl
 # special placeholder string to substitute in definitions from external ontologies
 # FBbt only uses DOT definitions - to use SUB, copy code and sparql from FBcv.
 
-tmp/merged-source-pre.owl: $(SRC) all_imports $(PATTERN_RELEASE_FILES)
-	$(ROBOT) merge -i $(SRC) --output $@
+tmp/merged-source-pre.owl: $(SRC)
+	$(ROBOT) merge -i $< --output $@
 
 LABEL_MAP = auto_generated_definitions_label_map.txt
 
@@ -146,11 +146,10 @@ tmp/auto_generated_definitions_seed_dot.txt: tmp/merged-source-pre.owl
 tmp/auto_generated_definitions_dot.owl: tmp/merged-source-pre.owl tmp/auto_generated_definitions_seed_dot.txt
 	java -jar ../scripts/eq-writer.jar $< tmp/auto_generated_definitions_seed_dot.txt flybase $@ $(LABEL_MAP) add_dot_refs
 
-pre_release: test $(SRC) tmp/auto_generated_definitions_dot.owl
+$(EDIT_PREPROCESSED): $(SRC) tmp/auto_generated_definitions_dot.owl
 	$(ROBOT) convert -i $(SRC) -o tmp/$(ONT)-edit-release-minus-defs.owl &&\
 	$(ROBOT) merge -i tmp/$(ONT)-edit-release-minus-defs.owl -i tmp/auto_generated_definitions_dot.owl --collapse-import-closure false -o tmp/$(ONT)-edit-release-plus-defs.owl &&\
-	$(ROBOT) query -i tmp/$(ONT)-edit-release-plus-defs.owl --update ../sparql/remove-dot-definitions.ru -o $(ONT)-edit-release.owl &&\
-	echo "Preprocessing done. Make sure that NO CHANGES TO THE EDIT FILE ARE COMMITTED!"
+	$(ROBOT) query -i tmp/$(ONT)-edit-release-plus-defs.owl --update ../sparql/remove-dot-definitions.ru -o $@
 
 
 ######################################################################################
@@ -158,11 +157,15 @@ pre_release: test $(SRC) tmp/auto_generated_definitions_dot.owl
 ###
 ###################################################################################
 
-.PHONY: all_imports
-all_imports: $(IMPORT_FILES) components/flybase_import.owl
+# Extract the list of terms from the -edit file. We cannot use $(IMPORT_SEED) for that,
+# as it can only be generated after all components have been generated, but we need
+# that list to generate the flybase_import.owl component (circular dependency).
+tmp/fbgn_seed.txt: $(SRC)
+	$(ROBOT) query -f csv -i $< --query ../sparql/terms.sparql $@.tmp && \
+		cat $@.tmp | sort | uniq > $@
 
-tmp/FBgn_template.tsv: $(IMPORTSEED)
-	if [ $(IMP) = true ]; then python3 ../scripts/flybase_import/FB_import_runner.py $(IMPORTSEED) $@; fi
+tmp/FBgn_template.tsv: tmp/fbgn_seed.txt
+	if [ $(IMP) = true ]; then python3 ../scripts/flybase_import/FB_import_runner.py $< $@; fi
 
 components/flybase_import.owl: tmp/FBgn_template.tsv
 	if [ $(IMP) = true ]; then $(ROBOT) template --input-iri http://purl.obolibrary.org/obo/ro.owl --template $< \
@@ -185,7 +188,6 @@ components/exact_mappings.owl: tmp/exact_mapping_template.tsv fbbt-edit.obo
 	$(ROBOT) template --input fbbt-edit.obo --template tmp/exact_mapping_template.tsv \
 		--ontology-iri http://purl.obolibrary.org/obo/fbbt/components/exact_mappings.owl \
 		--output components/exact_mappings.owl
-	rm tmp/exact_mapping_template.tsv
 
 #####################################################################################
 ### Generate the flybase anatomy version of FBBT                                  ###
