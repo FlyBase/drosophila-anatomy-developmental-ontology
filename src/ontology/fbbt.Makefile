@@ -69,6 +69,7 @@ reports/onto_metrics_calc.txt: $(ONT)-simple.obo install_flybase_scripts
 	../scripts/onto_metrics_calc.pl 'fly_anatomy.ontology' $(ONT)-simple.obo > $@
 
 reports/chado_load_check_simple.txt: install_flybase_scripts fly_anatomy.obo
+	apt-get install -y --no-install-recommends libbusiness-isbn-perl
 	../scripts/chado_load_checks.pl fly_anatomy.obo > $@
 
 reports/obo_qc_%.obo.txt:
