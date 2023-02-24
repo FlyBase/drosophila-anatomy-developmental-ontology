@@ -2,7 +2,7 @@
 use warnings;
 require OboModel;
 use strict;
-#use Business::ISBN;
+use Business::ISBN;
 
 =use chado_load_checks.pl <file to check>
 
@@ -129,8 +129,8 @@ die 'Please see output for script failure reasons', if  ($fail_stat);
 sub is_dbxref_legal {
   my $xref = $_[0];
   my $legal_stat=1;
-  if ($xref =~ m/ISBN\:(.+)/) { # Is xref a valid ISBN13 ?
-    &ISBN13_check($1)
+  if ($xref =~ m/ISBN\:(.+)/) { # Is xref a valid ISBN ?
+    &ISBN_check($1)
   }
   # If not ISBN, does it follow one of the other legal dbxref syntaxes?
   elsif ($_ =~ m/FlyBase\:FBrf\d{7}|VFB_vol\:\d{8}|FBC\:\S+|SO\:ma|FlyBase\:FBim\d{7}|PMID\:\d+|http\:\/\/.+|CARO\:\S+|doi\:\d+\.\d+\/\w+|FlyBrain_NDB\:\d+|FlyPNS\:\S+|DoOR\:\S+|CHEBI\:\d+|GO\:\d+|PATO\:\d+|XCO\:\d+|EFO\:\d+|MeSH\:D\d+|GOC:\S+|GO_REF\:\d+|Reactome\:\d+|SO\:\S+|UniProt\:P\d+|UniProt\:Q\S+|WB_REF\:\S+|FB\:FBrfd{7}|Wikipedia\:\S+/) {
@@ -142,23 +142,16 @@ sub is_dbxref_legal {
 }
 
 
-sub ISBN13_check {
-  # Checking ISBN validity
-  #my $isbn_2_test = $_[0];
-  #my $isbn = Business::ISBN->new($isbn_2_test);
-  #if ($isbn) {
-  #  print "ISBN\:$isbn_2_test is not a valid ISBN.\n", unless (my $isbn_stat = $isbn->is_valid)
-  #} else {
-  #  print "ISBN\:$isbn_2_test is not a valid ISBN\n";
-  #  return
-  #}
-  #my $isbn13 = $isbn->as_isbn13;
-  # unless ($isbn->as_string eq $isbn13->as_string) {
-  #   print "Please change ISBN\:$isbn_2_test to ISBN\:".$isbn13->as_string.", to conform to ISBN13 standard.\n";
-  #   return
-  #}
-  #unless (($isbn_2_test eq $isbn->as_string)&&($isbn_2_test eq $isbn13->as_string)) {
-  #  print "Hyphenation of ISBN\:$isbn_2_test is incorrect, please use ISBN:".$isbn13->as_string."\n";
-  #  return
-  #}
+sub ISBN_check {
+  my $isbn_2_test = $_[0];
+  my $isbn = Business::ISBN->new($isbn_2_test);
+  unless ($isbn and $isbn->is_valid) {
+    print "ISBN\:$isbn_2_test is not a valid ISBN\n";
+    return;
+  }
+  if ($isbn->type eq "ISBN13") {
+    unless ($isbn_2_test eq $isbn->as_string) {
+      print "Hyphenation of ISBN\:$isbn_2_test is incorrect, please use ISBN:".$isbn->as_string."\n";
+    }
+  }
 }
