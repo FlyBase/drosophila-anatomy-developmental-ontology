@@ -50,12 +50,15 @@ import_group:
       use_base: TRUE
     - id: caro
       use_base: TRUE
-    - id: CL
+    - id: cl
       use_base: TRUE
-    - id: SO
+    - id: so
       make_base: TRUE
     - id: ncbitaxon
+      make_base: TRUE
       mirror_from: http://purl.obolibrary.org/obo/ncbitaxon/subsets/taxslim.owl
+      base_iris:
+        - http://purl.obolibrary.org/obo/NCBITaxon_
 edit_format: obo
 robot_java_args: '-Xmx8G'
 allow_equivalents: none
