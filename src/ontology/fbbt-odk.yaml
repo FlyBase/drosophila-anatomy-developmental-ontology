@@ -34,11 +34,31 @@ components:
     - filename: hemibrain_new_ALLNs.owl
     - filename: Feng_neurons.owl
 import_group:
+  use_base_merging: TRUE
+  exclude_iri_patterns:
+    - <http://purl.obolibrary.org/obo/UBERON_*>
   products:
     - id: go
+      make_base: TRUE
+      base_iris:
+        - http://purl.obolibrary.org/obo/GOCHE_
+        - http://purl.obolibrary.org/obo/GO_
+        - http://purl.obolibrary.org/obo/GOREL_
     - id: ro
+      use_base: TRUE
     - id: pato
-      module_type: minimal
+      use_base: TRUE
+    - id: caro
+      use_base: TRUE
+    - id: cl
+      use_base: TRUE
+    - id: so
+      make_base: TRUE
+    - id: ncbitaxon
+      make_base: TRUE
+      mirror_from: http://purl.obolibrary.org/obo/ncbitaxon/subsets/taxslim.owl
+      base_iris:
+        - http://purl.obolibrary.org/obo/NCBITaxon_
 edit_format: obo
 robot_java_args: '-Xmx8G'
 allow_equivalents: none
