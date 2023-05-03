@@ -189,6 +189,9 @@ components/exact_mappings.owl: tmp/exact_mapping_template.tsv fbbt-edit.obo
 		--ontology-iri http://purl.obolibrary.org/obo/fbbt/components/exact_mappings.owl \
 		--output components/exact_mappings.owl
 
+# Ensure the mapping set is published along with the other artefacts
+RELEASE_ASSETS_AFTER_RELEASE += ../../fbbt-mappings.sssom.tsv
+
 #####################################################################################
 ### Generate the flybase anatomy version of FBBT                                  ###
 #####################################################################################
