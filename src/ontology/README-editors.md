@@ -115,9 +115,11 @@ The initial lowercase "v" is REQUIRED. The YYYY-MM-DD *must* match what is in th
 
 Release title should be YYYY-MM-DD, optionally followed by a title (e.g. "January release")
 
+Attach all the release artefacts (located in the top-level directory) to the release as release "assets".
+
 You can also add release notes (this can also be done after the fact). These are in markdown format. In future we will have better tools for auto-generating release notes.
 
-Then click "Publish release"
+Then click "Publish release".
 
 __IMPORTANT__: NO MORE THAN ONE RELEASE PER ONTOLOGY PER DAY.
 
@@ -127,6 +129,14 @@ The PURLs are already configured to pull from github. This means that BOTH ontol
  * http://purl.obolibrary.org/obo/fbbt/releases/2021-03-11/fbbt.owl <-- specific release
 
 For questions on this contact Chris Mungall or email obo-admin AT obofoundry.org
+
+## Automating release creation
+
+The last step above (6, making a release on GitHub) can be done almost entirely automtically. For that, create a [GitHub token](https://github.com/settings/tokens/new) from your GitHub account and make sure it has the `repo` scope enabled. Store the token in a `~/Library/Application Support/ontology-development-git/github/token` file.
+
+Then, to make a release, after having merged the PR in step 5 above, run `sh run.sh make public_release`.
+
+The command will automatically create a draft release with the correct tag, title, release notes, and attached release products. Check that the draft is OK, edit the release notes if desired, then publish the release.
 
 # Configurable Options:
 
