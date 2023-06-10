@@ -4,6 +4,7 @@ BEGIN {
 	print "#  FBbt: \"http://purl.obolibrary.org/obo/FBbt_\"";
 	print "#  UBERON: \"http://purl.obolibrary.org/obo/UBERON_\"";
 	print "#  CL: \"http://purl.obolibrary.org/obo/CL_\"";
+	print "#  semapv: \"https://w3id.org/semapv/vocab/\"";
 	print "#mapping_provider: \"http://purl.obolibrary.org/obo/FBbt.owl\"";
 	print "subject_id\tsubject_label\tpredicate_id\tobject_id\tmapping_justification";
 }
