@@ -2,6 +2,7 @@
 #  FBbt: "http://purl.obolibrary.org/obo/FBbt_"
 #  UBERON: "http://purl.obolibrary.org/obo/UBERON_"
 #  CL: "http://purl.obolibrary.org/obo/CL_"
+#  semapv: "https://w3id.org/semapv/vocab/"
 #mapping_provider: "http://purl.obolibrary.org/obo/FBbt.owl"
 subject_id	subject_label	predicate_id	object_id	mapping_justification
 FBbt:00000001	organism	semapv:crossSpeciesExactMatch	UBERON:0000468	semapv:ManualMappingCuration
@@ -128,11 +129,7 @@ FBbt:00001784	genital disc	semapv:crossSpeciesExactMatch	UBERON:6001784	semapv:M
 FBbt:00001785	male genital disc	semapv:crossSpeciesExactMatch	UBERON:6001785	semapv:ManualMappingCuration
 FBbt:00001787	female genital disc	semapv:crossSpeciesExactMatch	UBERON:6001787	semapv:ManualMappingCuration
 FBbt:00001789	histoblast	semapv:crossSpeciesExactMatch	CL:0000373	semapv:ManualMappingCuration
-FBbt:00001789	histoblast	semapv:crossSpeciesExactMatch	UBERON:6001789	semapv:ManualMappingCuration
 FBbt:00001790	histoblast nest	semapv:crossSpeciesExactMatch	UBERON:6001790	semapv:ManualMappingCuration
-FBbt:00001791	dorsal histoblast nest abdominal	semapv:crossSpeciesExactMatch	UBERON:6001791	semapv:ManualMappingCuration
-FBbt:00001792	anterior dorsal histoblast nest abdominal	semapv:crossSpeciesExactMatch	UBERON:6001792	semapv:ManualMappingCuration
-FBbt:00001809	posterior dorsal histoblast nest abdominal	semapv:crossSpeciesExactMatch	UBERON:6001809	semapv:ManualMappingCuration
 FBbt:00001842	embryonic/larval digestive system	semapv:crossSpeciesExactMatch	UBERON:6001842	semapv:ManualMappingCuration
 FBbt:00001845	cephalopharyngeal skeleton	semapv:crossSpeciesExactMatch	UBERON:6001845	semapv:ManualMappingCuration
 FBbt:00001848	epipharyngeal sclerite	semapv:crossSpeciesExactMatch	UBERON:6001848	semapv:ManualMappingCuration
@@ -165,12 +162,14 @@ FBbt:00003126	adult mouth	semapv:crossSpeciesExactMatch	UBERON:0000165	semapv:Ma
 FBbt:00003154	adult heart	semapv:crossSpeciesExactMatch	UBERON:0015230	semapv:ManualMappingCuration
 FBbt:00003219	adepithelial cell	semapv:crossSpeciesExactMatch	CL:0000462	semapv:ManualMappingCuration
 FBbt:00003259	adult somatic muscle	semapv:crossSpeciesExactMatch	UBERON:6003259	semapv:ManualMappingCuration
+FBbt:00003360	flight muscle cell	semapv:crossSpeciesExactMatch	CL:0000196	semapv:ManualMappingCuration
 FBbt:00003559	adult nervous system	semapv:crossSpeciesExactMatch	UBERON:6003559	semapv:ManualMappingCuration
 FBbt:00003623	adult central nervous system	semapv:crossSpeciesExactMatch	UBERON:6003623	semapv:ManualMappingCuration
 FBbt:00003624	adult brain	semapv:crossSpeciesExactMatch	UBERON:6003624	semapv:ManualMappingCuration
 FBbt:00003626	supraesophageal ganglion	semapv:crossSpeciesExactMatch	UBERON:6003626	semapv:ManualMappingCuration
 FBbt:00003627	protocerebrum	semapv:crossSpeciesExactMatch	UBERON:6003627	semapv:ManualMappingCuration
 FBbt:00003632	adult central complex	semapv:crossSpeciesExactMatch	UBERON:6003632	semapv:ManualMappingCuration
+FBbt:00003686	Kenyon cell	semapv:crossSpeciesExactMatch	CL:0000673	semapv:ManualMappingCuration
 FBbt:00003701	adult optic lobe	semapv:crossSpeciesExactMatch	UBERON:0006795	semapv:ManualMappingCuration
 FBbt:00004101	peptidergic neuron	semapv:crossSpeciesExactMatch	CL:0000110	semapv:ManualMappingCuration
 FBbt:00004114	head sensillum	semapv:crossSpeciesExactMatch	UBERON:0000963	semapv:ManualMappingCuration
@@ -187,6 +186,7 @@ FBbt:00004475	sclerite	semapv:crossSpeciesExactMatch	UBERON:6004475	semapv:Manua
 FBbt:00004476	tergite	semapv:crossSpeciesExactMatch	UBERON:6004476	semapv:ManualMappingCuration
 FBbt:00004477	sternite	semapv:crossSpeciesExactMatch	UBERON:6004477	semapv:ManualMappingCuration
 FBbt:00004481	adult external head	semapv:crossSpeciesExactMatch	UBERON:6004481	semapv:ManualMappingCuration
+FBbt:00004482	head capsule	semapv:crossSpeciesExactMatch	UBERON:0003153	semapv:ManualMappingCuration
 FBbt:00004492	occiput	semapv:crossSpeciesExactMatch	UBERON:0003155	semapv:ManualMappingCuration
 FBbt:00004505	ocellus	semapv:crossSpeciesExactMatch	UBERON:0003161	semapv:ManualMappingCuration
 FBbt:00004506	lateral ocellus	semapv:crossSpeciesExactMatch	UBERON:0003162	semapv:ManualMappingCuration
@@ -224,7 +224,7 @@ FBbt:00004850	phallus	semapv:crossSpeciesExactMatch	UBERON:0008811	semapv:Manual
 FBbt:00004856	organ system	semapv:crossSpeciesExactMatch	UBERON:0000467	semapv:ManualMappingCuration
 FBbt:00004857	reproductive system	semapv:crossSpeciesExactMatch	UBERON:0000990	semapv:ManualMappingCuration
 FBbt:00004858	gonad	semapv:crossSpeciesExactMatch	UBERON:0000991	semapv:ManualMappingCuration
-FBbt:00004861	germline stem cell	semapv:crossSpeciesExactMatch	CL:0000086	semapv:ManualMappingCuration
+FBbt:00004861	germline stem cell	semapv:crossSpeciesExactMatch	CL:0000014	semapv:ManualMappingCuration
 FBbt:00004864	female reproductive system	semapv:crossSpeciesExactMatch	UBERON:0000474	semapv:ManualMappingCuration
 FBbt:00004865	ovary	semapv:crossSpeciesExactMatch	UBERON:0000992	semapv:ManualMappingCuration
 FBbt:00004873	female germline stem cell	semapv:crossSpeciesExactMatch	CL:0000022	semapv:ManualMappingCuration
@@ -240,7 +240,7 @@ FBbt:00004921	spermathecum	semapv:crossSpeciesExactMatch	UBERON:0000994	semapv:M
 FBbt:00004924	uterus	semapv:crossSpeciesCloseMatch	UBERON:0006834	semapv:ManualMappingCuration
 FBbt:00004927	male reproductive system	semapv:crossSpeciesExactMatch	UBERON:0000079	semapv:ManualMappingCuration
 FBbt:00004928	testis	semapv:crossSpeciesExactMatch	UBERON:0000473	semapv:ManualMappingCuration
-FBbt:00004929	male germline stem cell	semapv:crossSpeciesExactMatch	CL:0000087	semapv:ManualMappingCuration
+FBbt:00004929	male germline stem cell	semapv:crossSpeciesExactMatch	CL:0000016	semapv:ManualMappingCuration
 FBbt:00004934	primary gonial cell	semapv:crossSpeciesExactMatch	CL:0000020	semapv:ManualMappingCuration
 FBbt:00004935	spermatogonium	semapv:crossSpeciesExactMatch	CL:0000020	semapv:ManualMappingCuration
 FBbt:00004936	spermatocyte	semapv:crossSpeciesExactMatch	CL:0000017	semapv:ManualMappingCuration
@@ -263,7 +263,7 @@ FBbt:00005023	imaginal precursor	semapv:crossSpeciesExactMatch	UBERON:6005023	se
 FBbt:00005024	tracheal system	semapv:crossSpeciesExactMatch	UBERON:0005155	semapv:ManualMappingCuration
 FBbt:00005036	tracheal pit	semapv:crossSpeciesExactMatch	UBERON:6005036	semapv:ManualMappingCuration
 FBbt:00005037	tracheal primordium	semapv:crossSpeciesExactMatch	UBERON:6005037	semapv:ManualMappingCuration
-FBbt:00005038	tracheocyte	semapv:crossSpeciesExactMatch	CL:0000307	semapv:ManualMappingCuration
+FBbt:00005038	tracheocyte	semapv:crossSpeciesExactMatch	CL:0008026	semapv:ManualMappingCuration
 FBbt:00005043	trachea	semapv:crossSpeciesExactMatch	UBERON:6005043	semapv:ManualMappingCuration
 FBbt:00005054	spiracle	semapv:crossSpeciesExactMatch	UBERON:6005054	semapv:ManualMappingCuration
 FBbt:00005055	digestive system	semapv:crossSpeciesExactMatch	UBERON:0001007	semapv:ManualMappingCuration
@@ -295,7 +295,7 @@ FBbt:00005123	motor neuron	semapv:crossSpeciesExactMatch	CL:0000100	semapv:Manua
 FBbt:00005124	sensory neuron	semapv:crossSpeciesExactMatch	CL:0000101	semapv:ManualMappingCuration
 FBbt:00005125	interneuron	semapv:crossSpeciesExactMatch	CL:0000099	semapv:ManualMappingCuration
 FBbt:00005128	pioneer neuron	semapv:crossSpeciesExactMatch	CL:0000116	semapv:ManualMappingCuration
-FBbt:00005130	neurosecretory neuron	semapv:crossSpeciesExactMatch	CL:0000381	semapv:ManualMappingCuration
+FBbt:00005130	neurosecretory neuron	semapv:crossSpeciesExactMatch	CL:0000165	semapv:ManualMappingCuration
 FBbt:00005131	dopaminergic neuron	semapv:crossSpeciesExactMatch	CL:0000700	semapv:ManualMappingCuration
 FBbt:00005133	serotonergic neuron	semapv:crossSpeciesExactMatch	CL:0000850	semapv:ManualMappingCuration
 FBbt:00005136	sensory nerve	semapv:crossSpeciesExactMatch	UBERON:0001027	semapv:ManualMappingCuration
@@ -304,7 +304,6 @@ FBbt:00005144	glial cell	semapv:crossSpeciesExactMatch	CL:0000125	semapv:ManualM
 FBbt:00005145	glioblast	semapv:crossSpeciesExactMatch	CL:0000340	semapv:ManualMappingCuration
 FBbt:00005146	neuroblast	semapv:crossSpeciesExactMatch	CL:0000338	semapv:ManualMappingCuration
 FBbt:00005147	neuroglioblast	semapv:crossSpeciesExactMatch	CL:0000468	semapv:ManualMappingCuration
-FBbt:00005148	neuroepidermoblast	semapv:crossSpeciesExactMatch	CL:0000405	semapv:ManualMappingCuration
 FBbt:00005149	ganglion mother cell	semapv:crossSpeciesExactMatch	CL:0000469	semapv:ManualMappingCuration
 FBbt:00005155	sense organ	semapv:crossSpeciesExactMatch	UBERON:0000020	semapv:ManualMappingCuration
 FBbt:00005157	chemosensory sensory organ	semapv:crossSpeciesExactMatch	UBERON:0000005	semapv:ManualMappingCuration
@@ -314,6 +313,7 @@ FBbt:00005162	photoreceptor	semapv:crossSpeciesExactMatch	UBERON:0000970	semapv:
 FBbt:00005168	external sensory organ	semapv:crossSpeciesExactMatch	UBERON:6005168	semapv:ManualMappingCuration
 FBbt:00005169	trichogen cell	semapv:crossSpeciesExactMatch	CL:0000374	semapv:ManualMappingCuration
 FBbt:00005171	tormogen cell	semapv:crossSpeciesExactMatch	CL:0000372	semapv:ManualMappingCuration
+FBbt:00005173	thecogen cell	semapv:crossSpeciesExactMatch	CL:0000380	semapv:ManualMappingCuration
 FBbt:00005177	chaeta	semapv:crossSpeciesExactMatch	UBERON:6005177	semapv:ManualMappingCuration
 FBbt:00005215	chordotonal organ	semapv:crossSpeciesExactMatch	UBERON:0001038	semapv:ManualMappingCuration
 FBbt:00005219	scolopale cell	semapv:crossSpeciesExactMatch	CL:0000382	semapv:ManualMappingCuration
@@ -388,6 +388,7 @@ FBbt:00007046	dorsal ectoderm derivative	semapv:crossSpeciesExactMatch	UBERON:60
 FBbt:00007060	multi-cell-component structure	semapv:crossSpeciesExactMatch	UBERON:0005162	semapv:ManualMappingCuration
 FBbt:00007070	embryonic/larval posterior inferior protocerebrum	semapv:crossSpeciesExactMatch	UBERON:6007070	semapv:ManualMappingCuration
 FBbt:00007091	subperineurial glial sheath	semapv:crossSpeciesCloseMatch	UBERON:0000202	semapv:ManualMappingCuration
+FBbt:00007108	imaginal disc epithelial cell	semapv:crossSpeciesExactMatch	CL:0000429	semapv:ManualMappingCuration
 FBbt:00007116	presumptive embryonic/larval system	semapv:crossSpeciesExactMatch	UBERON:6007116	semapv:ManualMappingCuration
 FBbt:00007145	adult protocerebrum	semapv:crossSpeciesExactMatch	UBERON:6007145	semapv:ManualMappingCuration
 FBbt:00007149	segment of antenna	semapv:crossSpeciesExactMatch	UBERON:6007149	semapv:ManualMappingCuration
@@ -431,6 +432,7 @@ FBbt:00047153	anus	semapv:crossSpeciesExactMatch	UBERON:0001245	semapv:ManualMap
 FBbt:00048032	glycinergic neuron	semapv:crossSpeciesExactMatch	CL:1001509	semapv:ManualMappingCuration
 FBbt:00057001	anterior-posterior subdivision of organism	semapv:crossSpeciesExactMatch	UBERON:6057001	semapv:ManualMappingCuration
 FBbt:00057012	female germline cell	semapv:crossSpeciesExactMatch	CL:0000025	semapv:ManualMappingCuration
+FBbt:00058020	juvenile hormone secreting cell	semapv:crossSpeciesExactMatch	CL:0000482	semapv:ManualMappingCuration
 FBbt:00058291	dorsal vessel	semapv:crossSpeciesExactMatch	UBERON:0015231	semapv:ManualMappingCuration
 FBbt:00100152	row	semapv:crossSpeciesExactMatch	UBERON:0034926	semapv:ManualMappingCuration
 FBbt:00100153	sensillum row	semapv:crossSpeciesExactMatch	UBERON:6100153	semapv:ManualMappingCuration

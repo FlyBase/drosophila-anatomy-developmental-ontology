@@ -1,12 +1,34 @@
 Level	Rule Name	Subject	Property	Value
-ERROR	multiple_labels	BFO:0000050	rdfs:label	part of
+ERROR	missing_label	obo:ncbitaxon#blast_name	rdfs:label	
+ERROR	missing_label	obo:ncbitaxon#common_name	rdfs:label	
+ERROR	missing_label	obo:ncbitaxon#genbank_common_name	rdfs:label	
+ERROR	missing_label	obo:ncbitaxon#in_part	rdfs:label	
+ERROR	missing_label	obo:ncbitaxon#scientific_name	rdfs:label	
+ERROR	missing_label	obo:ncbitaxon#synonym	rdfs:label	
+ERROR	multiple_definitions	PATO:0000001	IAO:0000115	A dependent entity that inheres in a bearer by virtue of how the bearer is related to other entities
+ERROR	multiple_definitions	PATO:0000001	IAO:0000115	A dependent entity that inheres in a bearer by virtue of how the bearer is related to other entities.
+ERROR	multiple_definitions	RO:0002100	IAO:0000115	Relation between a neuron and a material anatomical entity that its soma is part of.@en
+ERROR	multiple_definitions	RO:0002100	IAO:0000115	Relation between a neuron and an anatomical structure that its soma is part of.
+ERROR	multiple_definitions	RO:0002101	IAO:0000115	Relation between a neuron and the neuron projection bundle it fasciculates with. FOL: x fasciculates_with y iff: exists some 'neuron ; CL_0000540'(x), some 'neuron projection bundle ; CARO_0001001'(y), some 'neuron projection ; GO_0043005'(np), np part_of x AND np overlaps y AND np aligned_with y
+ERROR	multiple_definitions	RO:0002101	IAO:0000115	"relationship between a neuron and a neuron projection bundle (e.g.- tract or nerve bundle) that one or more of its projections travels through.
+@en"
+ERROR	multiple_definitions	RO:0002103	IAO:0000115	Relation between an anatomical structure (including cells) and a neuron that chemically synapses to it. @en
+ERROR	multiple_definitions	RO:0002103	IAO:0000115	Relation between an anatomical structure and a neuron that chemically synapses to it.
+ERROR	multiple_definitions	RO:0002120	IAO:0000115	" Relation between a neuron and an anatomical structure (including cells) that it chemically synapses to.
+        @en"
+ERROR	multiple_definitions	RO:0002120	IAO:0000115	Relation between a neuron and an anatomical structure that it chemically synapses to.
+ERROR	multiple_definitions	RO:0002130	IAO:0000115	A general relation between a neuron and some structure in which it either chemically synapses to some target or in which it receives (chemical) synaptic input.
+ERROR	multiple_definitions	RO:0002130	IAO:0000115	A relation between a neuron and some structure in which it either chemically synapses to some target or in which it receives (chemical) synaptic input.
+ERROR	multiple_definitions	RO:0002134	IAO:0000115	"Relation between a 'neuron projection bundle' and a region in which one or more of its component neuron projections either synapses to targets or receives synaptic input.
+T innervates some R
+Expands_to: T has_fasciculating_neuron_projection that synapse_in some R.@en"
+ERROR	multiple_definitions	RO:0002134	IAO:0000115	Relation between a 'neuron projection bundle' and a region in which one or more of its component neuron projections either synapses to targets or receives synaptic input. T innervates some R Expands_to: T has_fasciculating_neuron_projection that synapse_in some R.
 ERROR	multiple_labels	BFO:0000050	rdfs:label	part of@en
 ERROR	multiple_labels	BFO:0000050	rdfs:label	part_of
-ERROR	multiple_labels	BFO:0000051	rdfs:label	has part
 ERROR	multiple_labels	BFO:0000051	rdfs:label	has part@en
 ERROR	multiple_labels	BFO:0000051	rdfs:label	has_part
-ERROR	multiple_labels	IAO:0100001	rdfs:label	term replaced by
-ERROR	multiple_labels	IAO:0100001	rdfs:label	term replaced by@en
+ERROR	multiple_labels	IAO:0000700	rdfs:label	has ontology root term
+ERROR	multiple_labels	IAO:0000700	rdfs:label	preferred_root
 ERROR	multiple_labels	RO:0000052	rdfs:label	characteristic of@en
 ERROR	multiple_labels	RO:0000052	rdfs:label	characteristic_of
 ERROR	multiple_labels	RO:0000053	rdfs:label	has characteristic@en
@@ -47,12 +69,6 @@ ERROR	multiple_labels	RO:0002203	rdfs:label	develops into@en
 ERROR	multiple_labels	RO:0002203	rdfs:label	develops_into
 ERROR	multiple_labels	RO:0002207	rdfs:label	develops_directly_from
 ERROR	multiple_labels	RO:0002207	rdfs:label	directly develops from@en
-ERROR	multiple_labels	RO:0002211	rdfs:label	regulates
-ERROR	multiple_labels	RO:0002211	rdfs:label	regulates@en
-ERROR	multiple_labels	RO:0002212	rdfs:label	negatively regulates
-ERROR	multiple_labels	RO:0002212	rdfs:label	negatively regulates@en
-ERROR	multiple_labels	RO:0002213	rdfs:label	positively regulates
-ERROR	multiple_labels	RO:0002213	rdfs:label	positively regulates@en
 ERROR	multiple_labels	RO:0002215	rdfs:label	capable of@en
 ERROR	multiple_labels	RO:0002215	rdfs:label	capable_of
 ERROR	multiple_labels	RO:0002216	rdfs:label	capable of part of@en
@@ -85,6 +101,13 @@ ERROR	multiple_labels	RO:0013008	rdfs:label	receives synaptic input from neuron@
 ERROR	multiple_labels	RO:0013008	rdfs:label	receives_synaptic_input_from_neuron
 ERROR	multiple_labels	RO:0013009	rdfs:label	sends synaptic output to cell@en
 ERROR	multiple_labels	RO:0013009	rdfs:label	sends_synaptic_output_to_cell
+ERROR	multiple_labels	SO:0000704	rdfs:label	X
+ERROR	multiple_labels	SO:0000704	rdfs:label	gene
+WARN	annotation_whitespace	CARO:0000042	rdfs:comment	"MH: define as not part of embryo, or will not develop into embryo? MH: changed def to exclude cells so this class could be included in gross anatomical part. DOS: Changed to something that I think works for both vertebrates and invertebrates and that keeps the restriction to multicellular structures.  Old def: \""Anatomical structure that is contiguous with the embryo and is comprised of portions of tissue that will not contribute to the embryo.\"".  One remaining question - perhaps zygote is too restrictive given that some organisms have parthenogenesis e.g. aphids?
+"
+WARN	annotation_whitespace	CARO:0001008	IAO:0000115	Anatomical structure that is part of a multicellular organism and is at the gross anatomical level, e.g. above the level of a cell.  Included are portions of organism substances such as blood, multi-cell-part structures such as axon tracts, acellular anatomical structures such as hair, and organism subdivisions such as head. Excluded is the whole organism and more granular parts of the organism, such as atoms, molecules, macromolecular complexes and cells. 
+WARN	annotation_whitespace	CARO:0010004	rdfs:comment	A general term for organism that is agnostic about single cell vs multi-cellular.  Note that this is a subclass of 'anatomical structure', meaning that an organism must be a connected structure. For example, if I take one plant and make a rooted cutting from a it, I now have two (clonally related) organisms. 
+WARN	annotation_whitespace	PATO:0001241	oboInOwl:hasExactSynonym	multiply inhering quality of a physical entity 
 WARN	annotation_whitespace	RO:0001018	IAO:0000116	"Intended meaning:
 domain: material entity
 range: spatial region or site (immaterial continuant)
@@ -123,28 +146,53 @@ WARN	annotation_whitespace	RO:0002132	IAO:0000426	"(forall (?x ?y)
 
 "
 WARN	annotation_whitespace	RO:0002215	IAO:0000115	A relation between a material entity (such as a cell) and a process, in which the material entity has the ability to carry out the process. 
-WARN	defs_missing_xrefs	BFO:0000015	IAO:0000115	An occurrent that has temporal proper parts and for some time t, p s-depends_on some material entity at t.@en
+WARN	defs_missing_xrefs	CARO:0001000	IAO:0000115	A structure consisting of multiple cell components but which is not itself a cell and does not have (complete) cells as a part.
+WARN	defs_missing_xrefs	CARO:0000040	IAO:0000115	An anatomical structure that has no cells or cell parts as a part.
+WARN	defs_missing_xrefs	CARO:0001001	IAO:0000115	A fasciculated bundle of neuron projections (GO:0043005), largely or completely lacking synapses.
+WARN	defs_missing_xrefs	BFO:0000015	IAO:0000115	p is a process = Def. p is an occurrent that has temporal proper parts and for some time t, p s-depends_on some material entity at t. (axiom label in BFO2 Reference: [083-003])@en
+WARN	defs_missing_xrefs	CARO:0000042	IAO:0000115	A multicellular anatomical structure that is associated with an embryo and derived from the zygote from which it develops, but which does not contribute to the embryo proper or to structures that are part of the same organism after embryogenesis.
 WARN	defs_missing_xrefs	FBbt:00005831	IAO:0000115	Imaginal tissue that has a dorsal location.
 WARN	defs_missing_xrefs	FBbt:00005107	IAO:0000115	The cell body of a neuron, containing the nucleus.
-WARN	defs_missing_xrefs	BFO:0000020	IAO:0000115	A continuant that inheres in or is borne by other entities. Every instance of A requires some specific instance of B which must always be the same.@en
+WARN	defs_missing_xrefs	BFO:0000020	IAO:0000115	b is a specifically dependent continuant = Def. b is a continuant & there is some independent continuant c which is not a spatial region and which is such that b s-depends_on c at every time t during the course of b’s existence. (axiom label in BFO2 Reference: [050-003])@en
+WARN	defs_missing_xrefs	CARO:0001008	IAO:0000115	Anatomical structure that is part of a multicellular organism and is at the gross anatomical level, e.g. above the level of a cell.  Included are portions of organism substances such as blood, multi-cell-part structures such as axon tracts, acellular anatomical structures such as hair, and organism subdivisions such as head. Excluded is the whole organism and more granular parts of the organism, such as atoms, molecules, macromolecular complexes and cells. 
+WARN	defs_missing_xrefs	FBbt:00052548	IAO:0000115	Larval VL3/VL4 motor neuron that has its soma in the abdominal 1 neuromere and innervates the VL3 muscle of abdominal segment 2 via type Ib boutons (Wang et al., 2022). It may also innervate VL4 in the same segment, to a lesser extent (Wang et al., 2022).
 WARN	defs_missing_xrefs	FBbt:00005834	IAO:0000115	Imaginal tissue that has a ventral location.
-WARN	defs_missing_xrefs	BFO:0000031	IAO:0000115	A continuant that is dependent on one or other independent continuant bearers. For every instance of A requires some instance of (an independent continuant type) B but which instance of B serves can change from time to time.@en
+WARN	defs_missing_xrefs	FBbt:00052549	IAO:0000115	Larval VL3/VL4 motor neuron that has its soma in the abdominal 1 neuromere and innervates the VL4 muscle of abdominal segment 2 via type Ib boutons (Wang et al., 2022). It may also innervate VL3 in the same segment, to a lesser extent (Wang et al., 2022).
+WARN	defs_missing_xrefs	BFO:0000031	IAO:0000115	b is a generically dependent continuant = Def. b is a continuant that g-depends_on one or more other entities. (axiom label in BFO2 Reference: [074-001])@en
+WARN	defs_missing_xrefs	CL:0000197	IAO:0000115	A cell that is capable of detection of a stimulus involved in sensory perception.
+WARN	defs_missing_xrefs	CARO:0000012	IAO:0000115	Anatomical structure that is an individual member of a clade and, at some point in its life-cycle, consists of more than one cell.
+WARN	defs_missing_xrefs	CARO:0000013	IAO:0000115	An anatomical structure that has as its parts a maximally connected cell compartment surrounded by a plasma membrane.
+WARN	defs_missing_xrefs	CARO:0000032	IAO:0000115	Anatomical structure which is a subdivision of a whole organism, consisting of components of multiple anatomical systems, largely surrounded by a contiguous region of integument.@en
 WARN	defs_missing_xrefs	FBbt:00005122	IAO:0000115	An organelle at the input site of a synapse, the presumed structure for vesicle exocytosis, comprising a central pedestal but often with several components (e.g. a platform in recent groups of Diptera).
+WARN	defs_missing_xrefs	CARO:0000014	IAO:0000115	Anatomical structure that is part of a cell and that has a granularity level equal to that of a protein complex or higher.
+WARN	defs_missing_xrefs	CL:0000548	IAO:0000115	A native cell that is part of some Metazoa.
 WARN	defs_missing_xrefs	RO:0002577	IAO:0000115	A material entity consisting of multiple components that are causally integrated.
 WARN	defs_missing_xrefs	BFO:0000017	IAO:0000115	A specifically dependent continuant  that inheres in continuant  entities and are not exhibited in full at every time in which it inheres in an entity or group of entities. The exhibition or actualization of a realizable entity is a particular manifestation, functioning or process that occurs under certain circumstances.@en
 WARN	defs_missing_xrefs	FBbt:00005386	IAO:0000115	Roundish subunit structure of synaptic neuropil, often ensheathed by glial lamellae and reflecting the terminal arborization domain(s) of one or more neurons.
 WARN	defs_missing_xrefs	FBbt:00005110	IAO:0000115	The region of a neuron receiving inputs from other neurons, typically a slender neurite, often branched. In insect neurons, this is often not a clear designation and often presynaptic sites co-extend with postsynaptic ones.
+WARN	defs_missing_xrefs	CARO:0030000	IAO:0000115	Entity that is, is part of, or derived from an organism, virus, or viroid or a collection of them.
+WARN	defs_missing_xrefs	CARO:0010004	IAO:0000115	An individual member of a clade of cellular organisms.
+WARN	defs_missing_xrefs	CARO:0001010	IAO:0000115	Material anatomical entity that is a member of an individual species or is a viral or viroid particle.
 WARN	defs_missing_xrefs	BFO:0000002	IAO:0000115	An entity that exists in full at any time in which it exists at all, persists through time while maintaining its identity and has no temporal parts.@en
 WARN	defs_missing_xrefs	FBbt:00005815	IAO:0000115	Synaptic ribbon at a neuromuscular junction.
 WARN	defs_missing_xrefs	FBbt:00005111	IAO:0000115	The arborization of dendrites, defined by the number, position, branching structure, density and stratification of its branches. Dense body. Synaptic ribbon at neuromuscular junction.
 WARN	defs_missing_xrefs	BFO:0000003	IAO:0000115	An entity that has temporal parts and that happens, unfolds or develops through time.@en
 WARN	defs_missing_xrefs	FBbt:00001817	IAO:0000115	Histoblast nest found in a posterior dorsal position in the epidermis of abdominal segment 8.
+WARN	defs_missing_xrefs	CARO:0000003	IAO:0000115	Material anatomical entity that is a single connected structure with inherent 3D shape generated by coordinated expression of the organism's own genome.
 WARN	defs_missing_xrefs	FBbt:00005112	IAO:0000115	The output region of a neuron, generally presynaptic but in insects often also locally postsynaptic. Typically containing large numbers of mitochondria in addition to presynaptic organelles.
-WARN	defs_missing_xrefs	BFO:0000004	IAO:0000115	A continuant that is a bearer of quality and realizable entity entities, in which other entities inhere and which itself cannot inhere in anything.@en
+WARN	defs_missing_xrefs	CARO:0020000	IAO:0000115	Material anatomical entity consisting of multiple anatomical structures that are not connected to each other.
+WARN	defs_missing_xrefs	BFO:0000004	IAO:0000115	b is an independent continuant = Def. b is a continuant which is such that there is no c and no t such that b s-depends_on c at t. (axiom label in BFO2 Reference: [017-002])@en
+WARN	defs_missing_xrefs	CARO:0000004	IAO:0000115	Material anatomical entity in a gaseous, liquid, semisolid or solid state; produced by anatomical structures or derived from inhaled and ingested substances that have been modified by anatomical structures as they pass through the body and that does not have inherent 3D shape generated by coordinated expression of the organism's own genome.
 WARN	defs_missing_xrefs	FBbt:00005113	IAO:0000115	One of the processes or extensions of a neuron, axon or dendrite or cell body fiber.
+WARN	defs_missing_xrefs	CARO:0000006	IAO:0000115	An anatomical entity that has mass.
+WARN	defs_missing_xrefs	CARO:0020003	IAO:0000115	An anatomical structure consisting of one or more cells.
+WARN	defs_missing_xrefs	CARO:0000007	IAO:0000115	Anatomical entity that has no mass.
 WARN	defs_missing_xrefs	FBbt:00005114	IAO:0000115	The structural contact that is the site of transmission between neurons, identified by a presynaptic ribbon and synaptic vesicles as the input element and one or (usually) more postsynaptic elements with various specializations (membrane densities, cisternae, etc.).
+WARN	defs_missing_xrefs	PATO:0070044	IAO:0000115	A quality of continuant that exist at the anatomical level of organisation and anything under it. This includes, but is not limited to, cells , tissues, and components.
 WARN	defs_missing_xrefs	FBbt:00001808	IAO:0000115	Histoblast nest located in an anterior dorsal position of abdominal segment 8.
 WARN	defs_missing_xrefs	BFO:0000023	IAO:0000115	A realizable entity  the manifestation of which brings about some result or end that is not essential to a continuant  in virtue of the kind of thing that it is but that can be served or participated in by that kind of continuant  in some kinds of natural, social or institutional contexts.@en
+WARN	defs_missing_xrefs	CARO:0010000	IAO:0000115	An anatomical structure that has more than one cell as a part.
+WARN	defs_missing_xrefs	CL:0000679	IAO:0000115	A neuron that is capable of some neurotansmission by glutamate secretion.
 WARN	defs_missing_xrefs	FBbt:00005137	IAO:0000115	Any of a number of aggregations of neurons, glial cells and their processes, and surrounded by a glial cell and connective tissue sheath (plural: ganglia).
 WARN	defs_missing_xrefs	FBbt:00005138	IAO:0000115	The neuron of a ganglion.
 WARN	defs_missing_xrefs	BFO:0000040	IAO:0000115	An independent continuant that is spatially extended whose identity is independent of that of other entities and can be maintained through time.@en
@@ -215,10 +263,10 @@ WARN	duplicate_definition	FBbt:00051343	IAO:0000115	Larval interneuron that is e
 WARN	duplicate_definition	FBbt:00048978	IAO:0000115	Larval interneuron that is early-born in the NB5-2 Notch ON primary hemilineage and has predominantly dorsal terminals (Mark et al., 2021).
 WARN	duplicate_definition	FBbt:00048979	IAO:0000115	Larval interneuron that is early-born in the NB5-2 Notch ON primary hemilineage and has predominantly dorsal terminals (Mark et al., 2021).
 WARN	duplicate_definition	FBbt:00048980	IAO:0000115	Larval interneuron that is early-born in the NB5-2 Notch ON primary hemilineage and has predominantly dorsal terminals (Mark et al., 2021).
-WARN	duplicate_definition	FBbt:00048970	IAO:0000115	Larval interneuron that is early-born in the NB3-3 primary lineage (Mark et al., 2021).
-WARN	duplicate_definition	FBbt:00048971	IAO:0000115	Larval interneuron that is early-born in the NB3-3 primary lineage (Mark et al., 2021).
 WARN	duplicate_definition	FBbt:00047451	IAO:0000115	Larval gustatory receptor neuron of the dorsal organ group. This neuron has a cell body in the dorsal organ ganglion and innervates the dorsal organ. There is one of these cells per hemisphere and it expresses Gr2a and Gr28a (Kwon et al., 2011).
 WARN	duplicate_definition	FBbt:00047452	IAO:0000115	Larval gustatory receptor neuron of the dorsal organ group. This neuron has a cell body in the dorsal organ ganglion and innervates the dorsal organ. There is one of these cells per hemisphere and it expresses Gr2a and Gr28a (Kwon et al., 2011).
+WARN	duplicate_definition	FBbt:00048970	IAO:0000115	Larval EL neuron that is early-born in the NB3-3 primary lineage (Mark et al., 2021; Wang et al., 2022). It has ipsilateral and contralateral arbors projecting anteriorly and posteriorly and an ascending projection (Wang et al., 2022).
+WARN	duplicate_definition	FBbt:00048971	IAO:0000115	Larval EL neuron that is early-born in the NB3-3 primary lineage (Mark et al., 2021; Wang et al., 2022). It has ipsilateral and contralateral arbors projecting anteriorly and posteriorly and an ascending projection (Wang et al., 2022).
 WARN	duplicate_definition	FBbt:00047435	IAO:0000115	Gustatory receptor neuron of the larval hypophysis. There is one of these cells per hemisphere and it expresses Gr33a, Gr66a and Gr68a.
 WARN	duplicate_definition	FBbt:00047436	IAO:0000115	Gustatory receptor neuron of the larval hypophysis. There is one of these cells per hemisphere and it expresses Gr33a, Gr66a and Gr68a.
 WARN	duplicate_definition	FBbt:00047438	IAO:0000115	Gustatory receptor neuron of the larval hypophysis. There is one of these cells per hemisphere and it expresses Gr28a.
@@ -444,6 +492,10 @@ WARN	duplicate_definition	FBbt:00051115	IAO:0000115	Adult ascending neuron with 
 WARN	duplicate_definition	FBbt:00051116	IAO:0000115	Adult ascending neuron with its soma in the metathoracic neuromere (Feng et al., 2020). It is strongly excited downstream of moonwalker descending neuron activity (Feng et al., 2020). There is 1 of these cells per hemineuromere (Feng et al., 2020).
 WARN	duplicate_definition	FBbt:00051119	IAO:0000115	Adult ascending neuron with its soma in the metathoracic neuromere (Feng et al., 2020). It is strongly excited downstream of moonwalker descending neuron activity (Feng et al., 2020). There is 1 of these cells per hemineuromere (Feng et al., 2020).
 WARN	duplicate_definition	FBbt:00051120	IAO:0000115	Adult ascending neuron with its soma in the metathoracic neuromere (Feng et al., 2020). It is strongly excited downstream of moonwalker descending neuron activity (Feng et al., 2020). There is 1 of these cells per hemineuromere (Feng et al., 2020).
+WARN	duplicate_definition	CARO:0001000	IAO:0000115	A structure consisting of multiple cell components but which is not itself a cell and does not have (complete) cells as a part.
+WARN	duplicate_definition	FBbt:00007060	IAO:0000115	A structure consisting of multiple cell components but which is not itself a cell and does not have (complete) cells as a part.
+WARN	duplicate_definition	CARO:0001001	IAO:0000115	A fasciculated bundle of neuron projections (GO:0043005), largely or completely lacking synapses.
+WARN	duplicate_definition	FBbt:00005099	IAO:0000115	A fasciculated bundle of neuron projections (GO:0043005), largely or completely lacking synapses.
 WARN	duplicate_definition	FBbt:00110512	IAO:0000115	A clone of neurons in the adult brain that expresses fruitless, whose cell bodies are located in the posterior subesophageal ganglion.
 WARN	duplicate_definition	FBbt:00110514	IAO:0000115	A clone of neurons in the adult brain that expresses fruitless, whose cell bodies are located in the posterior subesophageal ganglion.
 WARN	duplicate_definition	FBbt:00110516	IAO:0000115	A clone of neurons in the adult brain that expresses fruitless, whose cell bodies are located in the posterior subesophageal ganglion.
@@ -490,7 +542,6 @@ WARN	duplicate_definition	FBbt:00004551	IAO:0000115	.
 WARN	duplicate_definition	FBbt:00004864	IAO:0000115	.
 WARN	duplicate_definition	FBbt:00004927	IAO:0000115	.
 WARN	duplicate_definition	FBbt:00005024	IAO:0000115	.
-WARN	duplicate_definition	FBbt:00005127	IAO:0000115	.
 WARN	duplicate_definition	FBbt:00005247	IAO:0000115	.
 WARN	duplicate_definition	FBbt:00005252	IAO:0000115	.
 WARN	duplicate_definition	FBbt:00005326	IAO:0000115	.
@@ -829,6 +880,8 @@ WARN	duplicate_exact_synonym	http://flybase.org/reports/FBgn0026397	oboInOwl:has
 WARN	duplicate_exact_synonym	http://flybase.org/reports/FBgn0026398	oboInOwl:hasExactSynonym	Or22a/b
 WARN	duplicate_exact_synonym	http://flybase.org/reports/FBgn0026397	oboInOwl:hasExactSynonym	Or22
 WARN	duplicate_exact_synonym	http://flybase.org/reports/FBgn0026398	oboInOwl:hasExactSynonym	Or22
+WARN	duplicate_exact_synonym	CL:0000207	oboInOwl:hasExactSynonym	olfactory sensory neuron
+WARN	duplicate_exact_synonym	FBbt:00005926	oboInOwl:hasExactSynonym	olfactory sensory neuron
 WARN	duplicate_exact_synonym	FBbt:00049817	oboInOwl:hasExactSynonym	OCG
 WARN	duplicate_exact_synonym	FBbt:00049818	oboInOwl:hasExactSynonym	OCG
 WARN	duplicate_exact_synonym	FBbt:00004847	oboInOwl:hasExactSynonym	novasternum
@@ -845,6 +898,8 @@ WARN	duplicate_exact_synonym	FBbt:00004623	oboInOwl:hasExactSynonym	metapleurum
 WARN	duplicate_exact_synonym	FBbt:00004625	oboInOwl:hasExactSynonym	metapleurum
 WARN	duplicate_exact_synonym	FBbt:00049261	oboInOwl:hasExactSynonym	MEF
 WARN	duplicate_exact_synonym	FBbt:00100342	oboInOwl:hasExactSynonym	MEF
+WARN	duplicate_exact_synonym	FBbt:00052572	oboInOwl:hasExactSynonym	mechanosensory neuron of prothoracic TrCS8
+WARN	duplicate_exact_synonym	FBbt:00052573	oboInOwl:hasExactSynonym	mechanosensory neuron of prothoracic TrCS8
 WARN	duplicate_exact_synonym	FBbt:00100319	oboInOwl:hasExactSynonym	MC
 WARN	duplicate_exact_synonym	FBbt:00111640	oboInOwl:hasExactSynonym	MC
 WARN	duplicate_exact_synonym	FBbt:00007484	oboInOwl:hasExactSynonym	MBIN
@@ -878,8 +933,6 @@ WARN	duplicate_exact_synonym	FBbt:00001851	oboInOwl:hasExactSynonym	LG
 WARN	duplicate_exact_synonym	FBbt:00110878	oboInOwl:hasExactSynonym	LG
 WARN	duplicate_exact_synonym	FBbt:00000352	oboInOwl:hasExactSynonym	LE
 WARN	duplicate_exact_synonym	FBbt:00052208	oboInOwl:hasExactSynonym	LE
-WARN	duplicate_exact_synonym	FBbt:00002181	oboInOwl:hasExactSynonym	ldb
-WARN	duplicate_exact_synonym	FBbt:00002753	oboInOwl:hasExactSynonym	ldb
 WARN	duplicate_exact_synonym	FBbt:00000399	oboInOwl:hasExactSynonym	LC
 WARN	duplicate_exact_synonym	FBbt:00003870	oboInOwl:hasExactSynonym	LC
 WARN	duplicate_exact_synonym	FBbt:00100007	oboInOwl:hasExactSynonym	LC
@@ -892,6 +945,8 @@ WARN	duplicate_exact_synonym	FBbt:00000233	oboInOwl:hasExactSynonym	lateral long
 WARN	duplicate_exact_synonym	FBbt:00002959	oboInOwl:hasExactSynonym	lateral longitudinal trunk
 WARN	duplicate_exact_synonym	FBbt:00052386	oboInOwl:hasExactSynonym	larval surface associated glial cell
 WARN	duplicate_exact_synonym	FBbt:00052387	oboInOwl:hasExactSynonym	larval surface associated glial cell
+WARN	duplicate_exact_synonym	FBbt:00002037	oboInOwl:hasExactSynonym	larval SN
+WARN	duplicate_exact_synonym	FBbt:00058245	oboInOwl:hasExactSynonym	larval SN
 WARN	duplicate_exact_synonym	FBbt:00049224	oboInOwl:hasExactSynonym	larval LEF
 WARN	duplicate_exact_synonym	FBbt:00049229	oboInOwl:hasExactSynonym	larval LEF
 WARN	duplicate_exact_synonym	FBbt:00007074	oboInOwl:hasExactSynonym	LALC
@@ -954,6 +1009,10 @@ WARN	duplicate_exact_synonym	http://flybase.org/reports/FBgn0284084	oboInOwl:has
 WARN	duplicate_exact_synonym	FBbt:00000092	oboInOwl:hasExactSynonym	GC
 WARN	duplicate_exact_synonym	FBbt:00047941	oboInOwl:hasExactSynonym	GC
 WARN	duplicate_exact_synonym	FBbt:00047942	oboInOwl:hasExactSynonym	GC
+WARN	duplicate_exact_synonym	CL:0000617	oboInOwl:hasExactSynonym	GABA-ergic neuron
+WARN	duplicate_exact_synonym	FBbt:00007228	oboInOwl:hasExactSynonym	GABA-ergic neuron
+WARN	duplicate_exact_synonym	NCBITaxon:7215	oboInOwl:hasExactSynonym	fruit fly
+WARN	duplicate_exact_synonym	NCBITaxon:7227	oboInOwl:hasExactSynonym	fruit fly
 WARN	duplicate_exact_synonym	FBbt:00002630	oboInOwl:hasExactSynonym	FrN
 WARN	duplicate_exact_synonym	FBbt:00100329	oboInOwl:hasExactSynonym	FrN
 WARN	duplicate_exact_synonym	FBbt:00100330	oboInOwl:hasExactSynonym	FrN
@@ -1101,8 +1160,60 @@ WARN	duplicate_exact_synonym	FBbt:00110173	oboInOwl:hasExactSynonym	AC
 WARN	duplicate_exact_synonym	FBbt:00110300	oboInOwl:hasExactSynonym	AC
 WARN	duplicate_exact_synonym	http://flybase.org/reports/FBgn0038789	oboInOwl:hasExactSynonym	92a
 WARN	duplicate_exact_synonym	http://flybase.org/reports/FBgn0038798	oboInOwl:hasExactSynonym	92a
+WARN	duplicate_exact_synonym	CL:0000850	oboInOwl:hasExactSynonym	5-HT neuron
+WARN	duplicate_exact_synonym	FBbt:00005133	oboInOwl:hasExactSynonym	5-HT neuron
+WARN	duplicate_label	CL:0008028	rdfs:label	visual system neuron
+WARN	duplicate_label	FBbt:00047736	rdfs:label	visual system neuron
 WARN	duplicate_label	FBbt:00005114	rdfs:label	synapse
 WARN	duplicate_label	GO:0045202	rdfs:label	synapse
+WARN	duplicate_label	CL:0002371	rdfs:label	somatic cell
+WARN	duplicate_label	FBbt:00100318	rdfs:label	somatic cell
+WARN	duplicate_label	CL:0000850	rdfs:label	serotonergic neuron
+WARN	duplicate_label	FBbt:00005133	rdfs:label	serotonergic neuron
+WARN	duplicate_label	CL:0000101	rdfs:label	sensory neuron
+WARN	duplicate_label	FBbt:00005124	rdfs:label	sensory neuron
+WARN	duplicate_label	CARO:0000032	rdfs:label	organism subdivision
+WARN	duplicate_label	FBbt:00007009	rdfs:label	organism subdivision
+WARN	duplicate_label	CARO:0001010	rdfs:label	organism
+WARN	duplicate_label	FBbt:00000001	rdfs:label	organism
+WARN	duplicate_label	CARO:0001001	rdfs:label	neuron projection bundle
+WARN	duplicate_label	FBbt:00005099	rdfs:label	neuron projection bundle
+WARN	duplicate_label	CL:0000540	rdfs:label	neuron
+WARN	duplicate_label	FBbt:00005106	rdfs:label	neuron
+WARN	duplicate_label	CARO:0000006	rdfs:label	material anatomical entity
+WARN	duplicate_label	FBbt:00007016	rdfs:label	material anatomical entity
+WARN	duplicate_label	CARO:0000007	rdfs:label	immaterial anatomical entity
+WARN	duplicate_label	FBbt:00007015	rdfs:label	immaterial anatomical entity
+WARN	duplicate_label	CL:0011110	rdfs:label	histaminergic neuron
+WARN	duplicate_label	FBbt:00007367	rdfs:label	histaminergic neuron
+WARN	duplicate_label	CL:1001509	rdfs:label	glycinergic neuron
+WARN	duplicate_label	FBbt:00048032	rdfs:label	glycinergic neuron
+WARN	duplicate_label	CL:0000679	rdfs:label	glutamatergic neuron
+WARN	duplicate_label	FBbt:00100291	rdfs:label	glutamatergic neuron
+WARN	duplicate_label	CL:0000617	rdfs:label	GABAergic neuron
+WARN	duplicate_label	FBbt:00007228	rdfs:label	GABAergic neuron
+WARN	duplicate_label	CARO:0000042	rdfs:label	extraembryonic structure
+WARN	duplicate_label	FBbt:00005835	rdfs:label	extraembryonic structure
+WARN	duplicate_label	CL:0000066	rdfs:label	epithelial cell
+WARN	duplicate_label	FBbt:00000124	rdfs:label	epithelial cell
+WARN	duplicate_label	CL:0000163	rdfs:label	endocrine cell
+WARN	duplicate_label	FBbt:00007294	rdfs:label	endocrine cell
+WARN	duplicate_label	CL:0000527	rdfs:label	efferent neuron
+WARN	duplicate_label	FBbt:00051963	rdfs:label	efferent neuron
+WARN	duplicate_label	CL:0000700	rdfs:label	dopaminergic neuron
+WARN	duplicate_label	FBbt:00005131	rdfs:label	dopaminergic neuron
+WARN	duplicate_label	CARO:0020000	rdfs:label	disconnected anatomical group
+WARN	duplicate_label	FBbt:00007276	rdfs:label	disconnected anatomical group
+WARN	duplicate_label	CL:0000108	rdfs:label	cholinergic neuron
+WARN	duplicate_label	FBbt:00007173	rdfs:label	cholinergic neuron
+WARN	duplicate_label	CARO:0000013	rdfs:label	cell
+WARN	duplicate_label	CL:0000000	rdfs:label	cell
+WARN	duplicate_label	FBbt:00007002	rdfs:label	cell
+WARN	duplicate_label	CARO:0000000	rdfs:label	anatomical entity
+WARN	duplicate_label	FBbt:10000000	rdfs:label	anatomical entity
+WARN	duplicate_label	CARO:0000040	rdfs:label	acellular anatomical structure
+WARN	duplicate_label	FBbt:00007013	rdfs:label	acellular anatomical structure
+WARN	duplicate_label_synonym	http://flybase.org/reports/FBgn0000463	oboInOwl:hasExactSynonym	Delta
 WARN	duplicate_label_synonym	http://flybase.org/reports/FBgn0004552	oboInOwl:hasExactSynonym	Akh
 WARN	duplicate_label_synonym	http://flybase.org/reports/FBgn0020299	oboInOwl:hasExactSynonym	stumps
 WARN	duplicate_label_synonym	http://flybase.org/reports/FBgn0025360	oboInOwl:hasExactSynonym	Optix
@@ -1116,10 +1227,23 @@ WARN	duplicate_label_synonym	http://flybase.org/reports/FBgn0053527	oboInOwl:has
 WARN	duplicate_label_synonym	http://flybase.org/reports/FBgn0085417	oboInOwl:hasExactSynonym	natalisin
 WARN	duplicate_label_synonym	http://flybase.org/reports/FBgn0259683	oboInOwl:hasExactSynonym	Ir40a
 WARN	duplicate_label_synonym	http://flybase.org/reports/FBgn0264953	oboInOwl:hasExactSynonym	Piezo
+WARN	duplicate_label_synonym	CL:0000210	oboInOwl:hasExactSynonym	photoreceptor cell
 WARN	duplicate_label_synonym	FBbt:00002606	oboInOwl:hasExactSynonym	larval abdominal 8 nerve
 WARN	duplicate_label_synonym	FBbt:00004921	oboInOwl:hasExactSynonym	spermatheca
+WARN	duplicate_label_synonym	FBbt:00005926	oboInOwl:hasExactSynonym	olfactory receptor neuron
 WARN	duplicate_label_synonym	FBbt:00006047	oboInOwl:hasExactSynonym	Tvb neuron
+WARN	duplicate_label_synonym	FBbt:00007012	IAO:0000118	cell component
+WARN	duplicate_label_synonym	FBbt:00007019	oboInOwl:hasExactSynonym	portion of organism substance
+WARN	duplicate_label_synonym	FBbt:00007060	IAO:0000118	multi-cell-component structure
+WARN	duplicate_label_synonym	FBbt:00007290	oboInOwl:hasExactSynonym	syncytium
 WARN	duplicate_label_synonym	FBbt:00052369	oboInOwl:hasExactSynonym	embryonic glial cell
+WARN	duplicate_label_synonym	GO:0031975	oboInOwl:hasExactSynonym	envelope
+WARN	duplicate_scoped_synonym	NCBITaxon:2759	oboInOwl:hasExactSynonym	eukaryotes
+WARN	duplicate_scoped_synonym	NCBITaxon:2759	oboInOwl:hasRelatedSynonym	eukaryotes
+WARN	duplicate_scoped_synonym	NCBITaxon:6656	oboInOwl:hasExactSynonym	arthropods
+WARN	duplicate_scoped_synonym	NCBITaxon:6656	oboInOwl:hasRelatedSynonym	arthropods
+WARN	duplicate_scoped_synonym	NCBITaxon:7147	oboInOwl:hasExactSynonym	flies
+WARN	duplicate_scoped_synonym	NCBITaxon:7147	oboInOwl:hasRelatedSynonym	flies
 WARN	missing_definition	http://flybase.org/reports/FBgn0000137	IAO:0000115	
 WARN	missing_definition	http://flybase.org/reports/FBgn0000157	IAO:0000115	
 WARN	missing_definition	http://flybase.org/reports/FBgn0000158	IAO:0000115	
@@ -1243,6 +1367,7 @@ WARN	missing_definition	http://flybase.org/reports/FBgn0032422	IAO:0000115
 WARN	missing_definition	http://flybase.org/reports/FBgn0032840	IAO:0000115	
 WARN	missing_definition	http://flybase.org/reports/FBgn0033041	IAO:0000115	
 WARN	missing_definition	http://flybase.org/reports/FBgn0033043	IAO:0000115	
+WARN	missing_definition	http://flybase.org/reports/FBgn0033259	IAO:0000115	
 WARN	missing_definition	http://flybase.org/reports/FBgn0033327	IAO:0000115	
 WARN	missing_definition	http://flybase.org/reports/FBgn0033367	IAO:0000115	
 WARN	missing_definition	http://flybase.org/reports/FBgn0033404	IAO:0000115	
@@ -1356,20 +1481,21 @@ WARN	missing_definition	http://flybase.org/reports/FBgn0283442	IAO:0000115
 WARN	missing_definition	http://flybase.org/reports/FBgn0283499	IAO:0000115	
 WARN	missing_definition	http://flybase.org/reports/FBgn0284084	IAO:0000115	
 WARN	missing_definition	http://flybase.org/reports/FBgn0285963	IAO:0000115	
+WARN	missing_definition	BFO:0000006	IAO:0000115	
 WARN	missing_definition	BFO:0000016	IAO:0000115	
 WARN	missing_definition	BFO:0000019	IAO:0000115	
 WARN	missing_definition	BFO:0000034	IAO:0000115	
 WARN	missing_definition	BFO:0000051	IAO:0000115	
-WARN	missing_definition	BFO:0000066	IAO:0000115	
-WARN	missing_definition	CARO:0000000	IAO:0000115	
-WARN	missing_definition	CARO:0000003	IAO:0000115	
-WARN	missing_definition	CARO:0000006	IAO:0000115	
-WARN	missing_definition	CARO:0001000	IAO:0000115	
-WARN	missing_definition	CARO:0001001	IAO:0000115	
-WARN	missing_definition	CARO:0010000	IAO:0000115	
-WARN	missing_definition	CARO:0030000	IAO:0000115	
-WARN	missing_definition	CL:0000000	IAO:0000115	
-WARN	missing_definition	CL:0000540	IAO:0000115	
+WARN	missing_definition	BFO:0000141	IAO:0000115	
+WARN	missing_definition	CL:0000006	IAO:0000115	
+WARN	missing_definition	CL:0000161	IAO:0000115	
+WARN	missing_definition	CL:0000167	IAO:0000115	
+WARN	missing_definition	CL:0000200	IAO:0000115	
+WARN	missing_definition	CL:0000207	IAO:0000115	
+WARN	missing_definition	CL:0000227	IAO:0000115	
+WARN	missing_definition	CL:0000255	IAO:0000115	
+WARN	missing_definition	CL:0000457	IAO:0000115	
+WARN	missing_definition	CL:0008028	IAO:0000115	
 WARN	missing_definition	FBbt:00000085	IAO:0000115	
 WARN	missing_definition	FBbt:00000112	IAO:0000115	
 WARN	missing_definition	FBbt:00000120	IAO:0000115	
@@ -1387,7 +1513,6 @@ WARN	missing_definition	FBbt:00001727	IAO:0000115
 WARN	missing_definition	FBbt:00001932	IAO:0000115	
 WARN	missing_definition	FBbt:00001956	IAO:0000115	
 WARN	missing_definition	FBbt:00002062	IAO:0000115	
-WARN	missing_definition	FBbt:00002597	IAO:0000115	
 WARN	missing_definition	FBbt:00002861	IAO:0000115	
 WARN	missing_definition	FBbt:00003061	IAO:0000115	
 WARN	missing_definition	FBbt:00003186	IAO:0000115	
@@ -1425,7 +1550,6 @@ WARN	missing_definition	FBbt:00005057	IAO:0000115
 WARN	missing_definition	FBbt:00005064	IAO:0000115	
 WARN	missing_definition	FBbt:00005071	IAO:0000115	
 WARN	missing_definition	FBbt:00005141	IAO:0000115	
-WARN	missing_definition	FBbt:00005148	IAO:0000115	
 WARN	missing_definition	FBbt:00005159	IAO:0000115	
 WARN	missing_definition	FBbt:00005196	IAO:0000115	
 WARN	missing_definition	FBbt:00005197	IAO:0000115	
@@ -1570,17 +1694,47 @@ WARN	missing_definition	FBbt:01000611	IAO:0000115
 WARN	missing_definition	FBbt:01000615	IAO:0000115	
 WARN	missing_definition	FBbt:01000625	IAO:0000115	
 WARN	missing_definition	FBbt:01000632	IAO:0000115	
-WARN	missing_definition	GO:0003674	IAO:0000115	
-WARN	missing_definition	GO:0003824	IAO:0000115	
-WARN	missing_definition	GO:0016301	IAO:0000115	
-WARN	missing_definition	GO:0016740	IAO:0000115	
-WARN	missing_definition	GO:0016772	IAO:0000115	
 WARN	missing_definition	IAO:0000028	IAO:0000115	
 WARN	missing_definition	IAO:0000115	IAO:0000115	
 WARN	missing_definition	IAO:0000231	IAO:0000115	
 WARN	missing_definition	IAO:0000700	IAO:0000115	
 WARN	missing_definition	IAO:0006011	IAO:0000115	
 WARN	missing_definition	IAO:0100001	IAO:0000115	
+WARN	missing_definition	NCBITaxon:1	IAO:0000115	
+WARN	missing_definition	NCBITaxon:1206794	IAO:0000115	
+WARN	missing_definition	NCBITaxon:131567	IAO:0000115	
+WARN	missing_definition	NCBITaxon:197562	IAO:0000115	
+WARN	missing_definition	NCBITaxon:197563	IAO:0000115	
+WARN	missing_definition	NCBITaxon:2759	IAO:0000115	
+WARN	missing_definition	NCBITaxon:32341	IAO:0000115	
+WARN	missing_definition	NCBITaxon:32346	IAO:0000115	
+WARN	missing_definition	NCBITaxon:32351	IAO:0000115	
+WARN	missing_definition	NCBITaxon:33154	IAO:0000115	
+WARN	missing_definition	NCBITaxon:33208	IAO:0000115	
+WARN	missing_definition	NCBITaxon:33213	IAO:0000115	
+WARN	missing_definition	NCBITaxon:33317	IAO:0000115	
+WARN	missing_definition	NCBITaxon:33340	IAO:0000115	
+WARN	missing_definition	NCBITaxon:33392	IAO:0000115	
+WARN	missing_definition	NCBITaxon:43733	IAO:0000115	
+WARN	missing_definition	NCBITaxon:43738	IAO:0000115	
+WARN	missing_definition	NCBITaxon:43741	IAO:0000115	
+WARN	missing_definition	NCBITaxon:43746	IAO:0000115	
+WARN	missing_definition	NCBITaxon:43845	IAO:0000115	
+WARN	missing_definition	NCBITaxon:46877	IAO:0000115	
+WARN	missing_definition	NCBITaxon:480117	IAO:0000115	
+WARN	missing_definition	NCBITaxon:480118	IAO:0000115	
+WARN	missing_definition	NCBITaxon:50557	IAO:0000115	
+WARN	missing_definition	NCBITaxon:6072	IAO:0000115	
+WARN	missing_definition	NCBITaxon:6656	IAO:0000115	
+WARN	missing_definition	NCBITaxon:6960	IAO:0000115	
+WARN	missing_definition	NCBITaxon:7147	IAO:0000115	
+WARN	missing_definition	NCBITaxon:7203	IAO:0000115	
+WARN	missing_definition	NCBITaxon:7214	IAO:0000115	
+WARN	missing_definition	NCBITaxon:7215	IAO:0000115	
+WARN	missing_definition	NCBITaxon:7227	IAO:0000115	
+WARN	missing_definition	NCBITaxon:7496	IAO:0000115	
+WARN	missing_definition	NCBITaxon:85512	IAO:0000115	
+WARN	missing_definition	NCBITaxon:88770	IAO:0000115	
 WARN	missing_definition	RO:0001018	IAO:0000115	
 WARN	missing_definition	RO:0001019	IAO:0000115	
 WARN	missing_definition	RO:0002005	IAO:0000115	
@@ -1592,6 +1746,7 @@ WARN	missing_definition	RO:0002087	IAO:0000115
 WARN	missing_definition	RO:0002090	IAO:0000115	
 WARN	missing_definition	RO:0002222	IAO:0000115	
 WARN	missing_definition	RO:0002287	IAO:0000115	
+WARN	missing_definition	RO:0002344	IAO:0000115	
 WARN	missing_definition	RO:0002360	IAO:0000115	
 WARN	missing_definition	RO:0002405	IAO:0000115	
 WARN	missing_definition	RO:0002447	IAO:0000115	
@@ -1609,7 +1764,6 @@ WARN	missing_definition	RO:0004032	IAO:0000115
 WARN	missing_definition	RO:0004033	IAO:0000115	
 WARN	missing_definition	RO:0004046	IAO:0000115	
 WARN	missing_definition	RO:0004047	IAO:0000115	
-WARN	missing_definition	SO:0000704	IAO:0000115	
 WARN	missing_definition	obo:fbbt#BRAIN_NAME_ABV	IAO:0000115	
 WARN	missing_definition	obo:fbbt#BRAND_NAME	IAO:0000115	
 WARN	missing_definition	obo:fbbt#FORMULA	IAO:0000115	
@@ -1621,6 +1775,12 @@ WARN	missing_definition	obo:fbbt#SMILES	IAO:0000115
 WARN	missing_definition	obo:fbbt#VFB_SYMBOL	IAO:0000115	
 WARN	missing_definition	obo:fbbt#syngo_official_label	IAO:0000115	
 WARN	missing_definition	obo:fbbt#systematic_synonym	IAO:0000115	
+WARN	missing_definition	obo:ncbitaxon#blast_name	IAO:0000115	
+WARN	missing_definition	obo:ncbitaxon#common_name	IAO:0000115	
+WARN	missing_definition	obo:ncbitaxon#genbank_common_name	IAO:0000115	
+WARN	missing_definition	obo:ncbitaxon#in_part	IAO:0000115	
+WARN	missing_definition	obo:ncbitaxon#scientific_name	IAO:0000115	
+WARN	missing_definition	obo:ncbitaxon#synonym	IAO:0000115	
 WARN	missing_definition	oboInOwl:SubsetProperty	IAO:0000115	
 WARN	missing_definition	oboInOwl:SynonymTypeProperty	IAO:0000115	
 WARN	missing_definition	oboInOwl:consider	IAO:0000115	
@@ -1636,11 +1796,21 @@ WARN	missing_definition	oboInOwl:hasScope	IAO:0000115
 WARN	missing_definition	oboInOwl:hasSynonymType	IAO:0000115	
 WARN	missing_definition	oboInOwl:inSubset	IAO:0000115	
 WARN	missing_definition	oboInOwl:shorthand	IAO:0000115	
+WARN	missing_superclass	GO:0003674	rdfs:subClassOf	
 WARN	missing_superclass	GO:0005575	rdfs:subClassOf	
-WARN	missing_superclass	SO:0000704	rdfs:subClassOf	
+WARN	missing_superclass	GO:0008150	rdfs:subClassOf	
+WARN	missing_superclass	NCBITaxon:1	rdfs:subClassOf	
+WARN	missing_superclass	PATO:0000001	rdfs:subClassOf	
+WARN	missing_superclass	SO:0000110	rdfs:subClassOf	
+INFO	lowercase_definition	BFO:0000004	IAO:0000115	b is an independent continuant = Def. b is a continuant which is such that there is no c and no t such that b s-depends_on c at t. (axiom label in BFO2 Reference: [017-002])@en
+INFO	lowercase_definition	BFO:0000015	IAO:0000115	p is a process = Def. p is an occurrent that has temporal proper parts and for some time t, p s-depends_on some material entity at t. (axiom label in BFO2 Reference: [083-003])@en
+INFO	lowercase_definition	BFO:0000020	IAO:0000115	b is a specifically dependent continuant = Def. b is a continuant & there is some independent continuant c which is not a spatial region and which is such that b s-depends_on c at every time t during the course of b’s existence. (axiom label in BFO2 Reference: [050-003])@en
+INFO	lowercase_definition	BFO:0000031	IAO:0000115	b is a generically dependent continuant = Def. b is a continuant that g-depends_on one or more other entities. (axiom label in BFO2 Reference: [074-001])@en
 INFO	lowercase_definition	BFO:0000050	IAO:0000115	a core relation that holds between a part and its whole@en
 INFO	lowercase_definition	BFO:0000062	IAO:0000115	x is preceded by y if and only if the time point at which y ends is before or equivalent to the time point at which x starts. Formally: x preceded by y iff ω(y) <= α(x), where α is a function that maps a process to a start point, and ω is a function that maps a process to an end point.@en
 INFO	lowercase_definition	BFO:0000063	IAO:0000115	x precedes y if and only if the time point at which x ends is before or equivalent to the time point at which y starts. Formally: x precedes y iff ω(x) <= α(y), where α is a function that maps a process to a start point, and ω is a function that maps a process to an end point.@en
+INFO	lowercase_definition	BFO:0000066	IAO:0000115	b occurs_in c =def b is a process and c is a material entity or immaterial entity& there exists a spatiotemporal region r and b occupies_spatiotemporal_region r.& forall(t) if b exists_at t then c exists_at t & there exist spatial regions s and s’ where & b spatially_projects_onto s at t& c is occupies_spatial_region s’ at t& s is a proper_continuant_part_of s’ at t@en
+INFO	lowercase_definition	BFO:0000067	IAO:0000115	[copied from inverse property 'occurs in'] b occurs_in c =def b is a process and c is a material entity or immaterial entity& there exists a spatiotemporal region r and b occupies_spatiotemporal_region r.& forall(t) if b exists_at t then c exists_at t & there exist spatial regions s and s’ where & b spatially_projects_onto s at t& c is occupies_spatial_region s’ at t& s is a proper_continuant_part_of s’ at t@en
 INFO	lowercase_definition	FBbt:00000052	IAO:0000115	.
 INFO	lowercase_definition	FBbt:00000094	IAO:0000115	.
 INFO	lowercase_definition	FBbt:00000116	IAO:0000115	.
@@ -1701,7 +1871,6 @@ INFO	lowercase_definition	FBbt:00004551	IAO:0000115	.
 INFO	lowercase_definition	FBbt:00004864	IAO:0000115	.
 INFO	lowercase_definition	FBbt:00004927	IAO:0000115	.
 INFO	lowercase_definition	FBbt:00005024	IAO:0000115	.
-INFO	lowercase_definition	FBbt:00005127	IAO:0000115	.
 INFO	lowercase_definition	FBbt:00005247	IAO:0000115	.
 INFO	lowercase_definition	FBbt:00005252	IAO:0000115	.
 INFO	lowercase_definition	FBbt:00005326	IAO:0000115	.
@@ -1933,6 +2102,8 @@ INFO	lowercase_definition	RO:0000086	IAO:0000115	a relation between an independe
 INFO	lowercase_definition	RO:0000087	IAO:0000115	a relation between an independent continuant (the bearer) and a role, in which the role specifically depends on the bearer for its existence@en
 INFO	lowercase_definition	RO:0000091	IAO:0000115	a relation between an independent continuant (the bearer) and a disposition, in which the disposition specifically depends on the bearer for its existence@en
 INFO	lowercase_definition	RO:0000092	IAO:0000115	inverse of has disposition
+INFO	lowercase_definition	RO:0001015	IAO:0000115	a relation between two independent continuants, the location and the target, in which the target is entirely within the location@en
+INFO	lowercase_definition	RO:0001025	IAO:0000115	a relation between two independent continuants, the target and the location, in which the target is entirely within the location@en
 INFO	lowercase_definition	RO:0002018	IAO:0000115	w 'has process component' p if p and w are processes,  w 'has part' p and w is such that it can be directly disassembled into into n parts p, p2, p3, ..., pn, where these parts are of similar type.
 INFO	lowercase_definition	RO:0002101	IAO:0000115	"relationship between a neuron and a neuron projection bundle (e.g.- tract or nerve bundle) that one or more of its projections travels through.
 @en"
@@ -1940,6 +2111,8 @@ INFO	lowercase_definition	RO:0002120	IAO:0000115	" Relation between a neuron and
         @en"
 INFO	lowercase_definition	RO:0002131	IAO:0000115	x overlaps y if and only if there exists some z such that x has part z and z part of y
 INFO	lowercase_definition	RO:0002151	IAO:0000115	x partially overlaps y iff there exists some z such that z is part of x and z is part of y, and it is also the case that neither x is part of y or y is part of x
+INFO	lowercase_definition	RO:0002160	IAO:0000115	x only in taxon y if and only if x is in taxon y, and there is no other organism z such that y!=z a and x is in taxon z.
+INFO	lowercase_definition	RO:0002162	IAO:0000115	x is in taxon y if an only if y is an organism, and the relationship between x and y is one of: part of (reflexive), developmentally preceded by, derives from, secreted by, expressed.
 INFO	lowercase_definition	RO:0002170	IAO:0000115	a is connected to b if and only if a and b are discrete structure, and there exists some connecting structure c, such that c connects a and b
 INFO	lowercase_definition	RO:0002177	IAO:0000115	a is attached to part of b if a is attached to b, or a is attached to some p, where p is part of b.
 INFO	lowercase_definition	RO:0002180	IAO:0000115	w 'has component' p if w 'has part' p and w is such that it can be directly disassembled into into n parts p, p2, p3, ..., pn, where these parts are of similar type.
@@ -1952,11 +2125,13 @@ INFO	lowercase_definition	RO:0002212	IAO:0000115	p negatively regulates q iff p 
 INFO	lowercase_definition	RO:0002213	IAO:0000115	p positively regulates q iff p regulates q, and p increases the rate or magnitude of execution of q.
 INFO	lowercase_definition	RO:0002216	IAO:0000115	c stands in this relationship to p if and only if there exists some p' such that c is capable_of p', and p' is part_of p.
 INFO	lowercase_definition	RO:0002225	IAO:0000115	x develops from part of y if and only if there exists some z such that x develops from z and z is part of y
+INFO	lowercase_definition	RO:0002226	IAO:0000115	x develops_in y if x is located in y whilst x is developing
 INFO	lowercase_definition	RO:0002233	IAO:0000115	p has input c iff: p is a process, c is a material entity, c is a participant in p, c is present at the start of p, and the state of c is modified during p.
 INFO	lowercase_definition	RO:0002254	IAO:0000115	x has developmental contribution from y iff x has some part z such that z develops from y@en
 INFO	lowercase_definition	RO:0002255	IAO:0000115	inverse of has developmental contribution from
 INFO	lowercase_definition	RO:0002263	IAO:0000115	c acts upstream of p if and only if c enables some f that is involved in p' and p' occurs chronologically before p, is not part of p, and affects the execution of p. c is a material entity and f, p, p' are processes.
 INFO	lowercase_definition	RO:0002264	IAO:0000115	c acts upstream of or within p if c is enables f, and f is causally upstream of or within p. c is a material entity and p is an process.
+INFO	lowercase_definition	RO:0002292	IAO:0000115	y expresses x if and only if there is a gene expression process (GO:0010467) that occurs in y, and one of the following holds: (i) x is a gene, and x is transcribed into a transcript as part of the gene expression process (ii) x is a transcript, and x was transcribed from a gene as part of the gene expression process (iii) x is a mature gene product (protein or RNA), and x was translated or otherwise processed from a transcript that was transcribed as part of the gene expression process.
 INFO	lowercase_definition	RO:0002304	IAO:0000115	p is causally upstream of, positive effect q iff p is casually upstream of q, and the execution of p is required for the execution of q.
 INFO	lowercase_definition	RO:0002305	IAO:0000115	p is causally upstream of, negative effect q iff p is casually upstream of q, and the execution of p decreases the execution of q.
 INFO	lowercase_definition	RO:0002314	IAO:0000115	q characteristic of part of w if and only if there exists some p such that q inheres in p and p part of w.
@@ -1970,6 +2145,7 @@ INFO	lowercase_definition	RO:0002335	IAO:0000115	inverse of negatively regulates
 INFO	lowercase_definition	RO:0002336	IAO:0000115	inverse of positively regulates
 INFO	lowercase_definition	RO:0002352	IAO:0000115	inverse of has input
 INFO	lowercase_definition	RO:0002371	IAO:0000115	a is attached to b if and only if a and b are discrete objects or object parts, and there are physical connections between a and b such that a force pulling a will move b, or a force pulling b will move a
+INFO	lowercase_definition	RO:0002379	IAO:0000115	x spatially_coextensive_with y if and inly if x and y have the same location
 INFO	lowercase_definition	RO:0002384	IAO:0000115	x has developmental potential involving y iff x is capable of a developmental process with output y. y may be the successor of x, or may be a different structure in the vicinity (as for example in the case of developmental induction).@en
 INFO	lowercase_definition	RO:0002385	IAO:0000115	x has potential to developmentrally contribute to y iff x developmentally contributes to y or x is capable of developmentally contributing to y@en
 INFO	lowercase_definition	RO:0002387	IAO:0000115	x has the potential to develop into y iff x develops into y or if x is capable of developing into y@en
@@ -1986,6 +2162,8 @@ INFO	lowercase_definition	RO:0002428	IAO:0000115	c involved in regulation of p i
 INFO	lowercase_definition	RO:0002429	IAO:0000115	c involved in regulation of p if c is involved in some p' and p' positively regulates some p
 INFO	lowercase_definition	RO:0002430	IAO:0000115	c involved in regulation of p if c is involved in some p' and p' negatively regulates some p
 INFO	lowercase_definition	RO:0002431	IAO:0000115	c involved in or regulates p if and only if either (i) c is involved in p or (ii) c is involved in regulation of p
+INFO	lowercase_definition	RO:0002432	IAO:0000115	c executes activity in d if and only if c enables p and p occurs_in d.  Assuming no action at a distance by gene products, if a gene product enables (is capable of) a process that occurs in some structure, it must have at least some part in that structure.
+INFO	lowercase_definition	RO:0002479	IAO:0000115	p has part that occurs in c if and only if there exists some p1, such that p has_part p1, and p1 occurs in c.
 INFO	lowercase_definition	RO:0002501	IAO:0000115	p is causally related to q if and only if p or any part of p and q or any part of q are linked by a chain of events where each event pair is one where the execution of p influences the execution of q. p may be upstream, downstream, part of, or a container of q.
 INFO	lowercase_definition	RO:0002578	IAO:0000115	p directly regulates q iff p is immediately causally upstream of q and p regulates q.
 INFO	lowercase_definition	RO:0002584	IAO:0000115	s 'has part structure that is capable of' p if and only if there exists some part x such that s 'has part' x and x 'capable of' p
@@ -1995,3 +2173,4 @@ INFO	lowercase_definition	RO:0004034	IAO:0000115	c 'acts upstream of, positive e
 INFO	lowercase_definition	RO:0004035	IAO:0000115	c 'acts upstream of, negative effect' p if c is enables f, and f is causally upstream of p, and the direction of f is negative
 INFO	lowercase_definition	RO:0012011	IAO:0000115	p is indirectly causally upstream of q iff p is causally upstream of q and there exists some process r such that p is causally upstream of r and r is causally upstream of q.
 INFO	lowercase_definition	RO:0012012	IAO:0000115	p indirectly regulates q iff p is indirectly causally upstream of q and p regulates q.
+INFO	lowercase_definition	RO:0015011	IAO:0000115	s3 has_cross_section s3 if and only if : there exists some 2d plane that intersects the bearer of s3, and the impression of s3 upon that plane has shape quality s2.
