@@ -72,6 +72,7 @@ FBbt:00058020	CL:0000482	exact	juvenile hormone secreting cell
 
 # Mappings with UBERON
 FBbt:00004482	UBERON:0003153	exact	head capsule
+FBbt:00047166	UBERON:0003929	exact	gut epithelium
 
 # Imported mappings from UBERON's xrefs
 FBbt:00005157	UBERON:0000005	exact	chemosensory sensory organ
@@ -79,7 +80,6 @@ FBbt:00005098	UBERON:0000010	exact	peripheral nervous system
 FBbt:00004508	UBERON:0000018	exact	eye
 FBbt:00005155	UBERON:0000020	exact	sense organ
 FBbt:00007000	UBERON:0000026	exact	appendage
-FBbt:00000004	UBERON:0000033	exact	head
 FBbt:00100314	UBERON:0000058	exact	duct
 FBbt:00007001	UBERON:0000061	exact	anatomical structure
 FBbt:00004927	UBERON:0000079	exact	male reproductive system
@@ -178,15 +178,15 @@ FBbt:00004492	UBERON:0003155	exact	occiput	Uberon term commented as “belonging
 FBbt:00004505	UBERON:0003161	exact	ocellus
 FBbt:00004506	UBERON:0003162	exact	lateral ocellus
 FBbt:00004751	UBERON:0003194	exact	wing vein
-FBbt:00004894	UBERON:0003199	exact	egg chamber	Uberon term commented as “candidate for obsoletion”
+FBbt:00004894	UBERON:0003199	exact	egg chamber
 FBbt:00004973	UBERON:0003201	exact	exocuticle
 FBbt:00004974	UBERON:0003202	exact	endocuticle	Conflicting definition (inner layer in Uberon; middle layer in FBbt)
-FBbt:00004507	UBERON:0003211	exact	medial ocellus	Uberon term should be under ‘dorsal ocellus’ (CL:0003161)
+FBbt:00004507	UBERON:0003211	exact	medial ocellus	Uberon term should be under ‘dorsal ocellus’ (UBERON:0003161)
 FBbt:00005159	UBERON:0003212	exact	gustatory sensory organ
 FBbt:00007474	UBERON:0003914	exact	epithelial tube
 FBbt:00005066	UBERON:0003917	exact	fat body	Uberon definition makes it a single gland localized dorsally to the gut; FBbt definition makes it distributed throughout the body; and not sure it's correct to define it as a gland
 FBbt:00005317	UBERON:0004734	exact	gastrula embryo	marked as deprecated in FBbt (but without suggested replacement)
-FBbt:00001956	UBERON:0004904	exact	optic nerve	To check
+FBbt:00001956	UBERON:0004904	exact	optic nerve
 FBbt:00005811	UBERON:0004905	exact	articulation
 FBbt:00100315	UBERON:0004921	exact	gut section
 FBbt:00005024	UBERON:0005155	exact	tracheal system
@@ -195,7 +195,7 @@ FBbt:00004200	UBERON:0005388	exact	retina
 FBbt:00007006	UBERON:0005423	exact	developing material anatomical entity
 FBbt:00004640	UBERON:0005895	exact	leg
 FBbt:00004522	UBERON:0005905	exact	labrum	"Uberon term has “insect labium” as EXACT synonym while “labium” is a different part in FBbt"
-FBbt:00005380	UBERON:0006562	exact	pharynx
+FBbt:00005380	UBERON:6005380	exact	pharynx
 FBbt:00003701	UBERON:0006795	exact	adult optic lobe
 FBbt:00007410	UBERON:0006832	exact	tracheal lumen
 FBbt:00004924	UBERON:0006834	close	uterus	Debatable: The fly uterus is the site of egg fertilisation, not of embryo development (oviposition happens quickly after fertilization, so not a lot of developpment occurs while the egg is still in the uterus)
@@ -221,7 +221,7 @@ FBbt:00058291	UBERON:0015231	exact	dorsal vessel
 FBbt:00005338	UBERON:0018382	exact	second instar larva	marked as deprecated in FBbt (but without suggested replacement)
 FBbt:00004987	UBERON:0018656	exact	puparium cuticle
 FBbt:00100152	UBERON:0034926	exact	row
-FBbt:00000002	UBERON:6000002	exact	tagma	Uberon term is incorrectly classified (Uberon ticket 1990)
+FBbt:00000002	UBERON:6000002	exact	tagma
 FBbt:00000004	UBERON:6000004	exact	head	Somewhat redundant with ‘insect {adult/larval} head’
 FBbt:00000005	UBERON:6000005	exact	ocular segment
 FBbt:00000006	UBERON:6000006	exact	head segment
@@ -346,7 +346,6 @@ FBbt:00003624	UBERON:6003624	exact	adult brain
 FBbt:00003626	UBERON:6003626	exact	supraesophageal ganglion
 FBbt:00003627	UBERON:6003627	exact	protocerebrum
 FBbt:00003632	UBERON:6003632	exact	adult central complex
-FBbt:00004203	UBERON:6004203	exact	adult clypeo-labral anlage
 FBbt:00004296	UBERON:6004296	exact	sex comb
 FBbt:00004340	UBERON:6004340	exact	wing hair
 FBbt:00004475	UBERON:6004475	exact	sclerite
@@ -385,12 +384,7 @@ FBbt:00005177	UBERON:6005177	exact	chaeta
 FBbt:00005378	UBERON:6005378	exact	wing margin
 FBbt:00005393	UBERON:6005393	exact	embryonic/larval integumentary system
 FBbt:00005396	UBERON:6005396	exact	adult integumentary system
-FBbt:00005413	UBERON:6005413	exact	anlage in statu nascendi
 FBbt:00005427	UBERON:6005427	exact	ectoderm anlage
-FBbt:00005428	UBERON:6005428	exact	dorsal ectoderm anlage
-FBbt:00005434	UBERON:6005434	exact	visual anlage
-FBbt:00005436	UBERON:6005436	exact	trunk mesoderm anlage
-FBbt:00005439	UBERON:6005439	exact	clypeo-labral anlage
 FBbt:00005461	UBERON:6005461	exact	circulatory system primordium
 FBbt:00005467	UBERON:6005467	exact	lymph gland primordium
 FBbt:00005514	UBERON:6005514	exact	clypeo-labral disc primordium
@@ -429,7 +423,6 @@ FBbt:00007331	UBERON:6007331	exact	segmental subdivision of organ system
 FBbt:00007373	UBERON:6007373	exact	internal sense organ
 FBbt:00007424	UBERON:6007424	exact	epithelial furrow
 FBbt:00016022	UBERON:6016022	exact	abdominal histoblast primordium
-FBbt:00017021	UBERON:6017021	exact	abdominal histoblast anlage
 FBbt:00040003	UBERON:6040003	exact	non-connected developing system
 FBbt:00040005	UBERON:6040005	exact	synaptic neuropil
 FBbt:00040007	UBERON:6040007	exact	synaptic neuropil domain
