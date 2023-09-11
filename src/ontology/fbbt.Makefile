@@ -171,6 +171,24 @@ $(COMPONENTSDIR)/flybase_import.owl: $(TMPDIR)/FBgn_template.tsv | $(COMPONENTSD
 	annotate --ontology-iri "http://purl.obolibrary.org/obo/fbbt/components/flybase_import.owl" --output $@ && rm $<; fi
 
 
+######################################################################################
+### Update neuron_symbols.owl
+###################################################################################
+
+OTHERCOMPONENTS := $(filter-out $(COMPONENTSDIR)/neuron_symbols.owl, $(OTHER_SRC))
+OTHERSRCMERGED = $(TMPDIR)/nosymbolsmerged-$(SRC)
+
+$(OTHERSRCMERGED): $(EDIT_PREPROCESSED) $(OTHERCOMPONENTS)
+	$(ROBOT) remove --input $< --select imports --trim false \
+		merge  $(patsubst %, -i %, $(OTHERCOMPONENTS)) -o $@
+
+$(TMPDIR)/symbols_template.tsv: neuron_symbols.tsv $(OTHERSRCMERGED) | $(TMPDIR)
+	if [ $(IMP) = true ]; then python3 $(SCRIPTSDIR)/neuron_symbols/symbol_template.py $(OTHERSRCMERGED) $< $@; fi
+
+$(COMPONENTSDIR)/neuron_symbols.owl: $(TMPDIR)/symbols_template.tsv | $(COMPONENTSDIR)
+	if [ $(IMP) = true ]; then $(ROBOT) template --input-iri http://purl.obolibrary.org/obo/ro.owl --template $< \
+	annotate --ontology-iri "http://purl.obolibrary.org/obo/fbbt/components/neuron_symbols.owl" --output $@ && rm $<; fi
+
 #######################################################################
 ### Update exact_mappings.owl
 #######################################################################
