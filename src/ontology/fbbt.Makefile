@@ -16,13 +16,13 @@ prepare_release: $$(ASSETS) mappings.sssom.tsv release_reports
 	echo "Release files are now in $(RELEASEDIR) - now you should commit, push and make a release on your git hosting site such as GitHub or GitLab"
 
 MAIN_FILES := $(MAIN_FILES) fly_anatomy.obo fbbt-cedar.obo
-CLEANFILES := $(CLEANFILES) $(patsubst %, $(IMPORTDIR)/%_terms_combined.txt, $(IMPORTS)) tmp/exact_mappings_template.tsv
+CLEANFILES := $(CLEANFILES) $(patsubst %, $(IMPORTDIR)/%_terms_combined.txt, $(IMPORTS)) $(TMPDIR)/exact_mappings_template.tsv
 
 ######################################################
 ### Code for generating additional FlyBase reports ###
 ######################################################
 
-FLYBASE_REPORTS = reports/obo_qc_fbbt.obo.txt reports/obo_qc_fbbt.owl.txt reports/obo_track_new_simple.txt reports/robot_simple_diff.txt reports/onto_metrics_calc.txt reports/chado_load_check_simple.txt reports/spellcheck.txt
+FLYBASE_REPORTS = $(REPORTDIR)/obo_qc_fbbt.obo.txt $(REPORTDIR)/obo_qc_fbbt.owl.txt $(REPORTDIR)/obo_track_new_simple.txt $(REPORTDIR)/robot_simple_diff.txt $(REPORTDIR)/onto_metrics_calc.txt $(REPORTDIR)/chado_load_check_simple.txt $(REPORTDIR)/spellcheck.txt
 
 .PHONY: flybase_reports
 flybase_reports: $(FLYBASE_REPORTS)
@@ -34,7 +34,7 @@ all_reports: custom_reports robot_reports flybase_reports
 release_reports: robot_reports flybase_reports
 
 SIMPLE_PURL =	http://purl.obolibrary.org/obo/fbbt/fbbt-simple.obo
-LAST_DEPLOYED_SIMPLE=tmp/$(ONT)-simple-last.obo
+LAST_DEPLOYED_SIMPLE=$(TMPDIR)/$(ONT)-simple-last.obo
 
 $(LAST_DEPLOYED_SIMPLE):
 	wget -O $@ $(SIMPLE_PURL)
@@ -51,39 +51,39 @@ fetch_authors=$(flybase_ontology_script_base)misc/fetch_flybase_authors.py
 
 export PERL5LIB := ${realpath ../scripts}
 install_flybase_scripts:
-	wget -O ../scripts/OboModel.pm $(obo_model)
-	wget -O ../scripts/onto_metrics_calc.pl $(onto_metrics_calc) && chmod +x ../scripts/onto_metrics_calc.pl
-	wget -O ../scripts/chado_load_checks.pl $(chado_load_checks) && chmod +x ../scripts/chado_load_checks.pl
-	wget -O ../scripts/obo_track_new.pl $(obo_track_new) && chmod +x ../scripts/obo_track_new.pl
-	wget -O ../scripts/auto_def_sub.pl $(auto_def_sub) && chmod +x ../scripts/auto_def_sub.pl
-	wget -O ../scripts/obo_spellchecker.py $(spellchecker) && chmod +x ../scripts/obo_spellchecker.py
-	wget -O ../scripts/fetch_authors.py $(fetch_authors) && chmod +x ../scripts/fetch_authors.py
+	wget -O $(SCRIPTSDIR)/OboModel.pm $(obo_model)
+	wget -O $(SCRIPTSDIR)/onto_metrics_calc.pl $(onto_metrics_calc) && chmod +x $(SCRIPTSDIR)/onto_metrics_calc.pl
+	wget -O $(SCRIPTSDIR)/chado_load_checks.pl $(chado_load_checks) && chmod +x $(SCRIPTSDIR)/chado_load_checks.pl
+	wget -O $(SCRIPTSDIR)/obo_track_new.pl $(obo_track_new) && chmod +x $(SCRIPTSDIR)/obo_track_new.pl
+	wget -O $(SCRIPTSDIR)/auto_def_sub.pl $(auto_def_sub) && chmod +x $(SCRIPTSDIR)/auto_def_sub.pl
+	wget -O $(SCRIPTSDIR)/obo_spellchecker.py $(spellchecker) && chmod +x $(SCRIPTSDIR)/obo_spellchecker.py
+	wget -O $(SCRIPTSDIR)/fetch_authors.py $(fetch_authors) && chmod +x $(SCRIPTSDIR)/fetch_authors.py
 
-reports/obo_track_new_simple.txt: $(LAST_DEPLOYED_SIMPLE) install_flybase_scripts $(ONT)-simple.obo
-	echo "Comparing with: "$(SIMPLE_PURL) && ../scripts/obo_track_new.pl $(LAST_DEPLOYED_SIMPLE) $(ONT)-simple.obo > $@
+$(REPORTDIR)/obo_track_new_simple.txt: $(LAST_DEPLOYED_SIMPLE) install_flybase_scripts $(ONT)-simple.obo
+	echo "Comparing with: "$(SIMPLE_PURL) && $(SCRIPTSDIR)/obo_track_new.pl $(LAST_DEPLOYED_SIMPLE) $(ONT)-simple.obo > $@
 
-reports/robot_simple_diff.txt: $(LAST_DEPLOYED_SIMPLE) $(ONT)-simple.obo
+$(REPORTDIR)/robot_simple_diff.txt: $(LAST_DEPLOYED_SIMPLE) $(ONT)-simple.obo
 	$(ROBOT) diff --left $(ONT)-simple.obo --right $(LAST_DEPLOYED_SIMPLE) --output $@
 
-reports/onto_metrics_calc.txt: $(ONT)-simple.obo install_flybase_scripts
-	../scripts/onto_metrics_calc.pl 'fly_anatomy.ontology' $(ONT)-simple.obo > $@
+$(REPORTDIR)/onto_metrics_calc.txt: $(ONT)-simple.obo install_flybase_scripts
+	$(SCRIPTSDIR)/onto_metrics_calc.pl 'fly_anatomy.ontology' $(ONT)-simple.obo > $@
 
-reports/chado_load_check_simple.txt: install_flybase_scripts fly_anatomy.obo
+$(REPORTDIR)/chado_load_check_simple.txt: install_flybase_scripts fly_anatomy.obo
 	apt-get install -y --no-install-recommends libbusiness-isbn-perl
-	../scripts/chado_load_checks.pl fly_anatomy.obo > $@
+	$(SCRIPTSDIR)/chado_load_checks.pl fly_anatomy.obo > $@
 
-reports/obo_qc_%.obo.txt:
+$(REPORTDIR)/obo_qc_%.obo.txt:
 	$(ROBOT) report -i $*.obo --profile qc-profile.txt --fail-on ERROR --print 5 -o $@
 
-reports/obo_qc_%.owl.txt:
-	$(ROBOT) merge -i $*.owl -i components/qc_assertions.owl unmerge -i components/qc_assertions_unmerge.owl -o reports/obo_qc_$*.owl &&\
-	$(ROBOT) report -i reports/obo_qc_$*.owl --profile qc-profile.txt --fail-on None --print 5 -o $@ &&\
-	rm -f reports/obo_qc_$*.owl
+$(REPORTDIR)/obo_qc_%.owl.txt:
+	$(ROBOT) merge -i $*.owl -i $(COMPONENTSDIR)/qc_assertions.owl unmerge -i $(COMPONENTSDIR)/qc_assertions_unmerge.owl -o $(REPORTDIR)/obo_qc_$*.owl &&\
+	$(ROBOT) report -i $(REPORTDIR)/obo_qc_$*.owl --profile qc-profile.txt --fail-on None --print 5 -o $@ &&\
+	rm -f $(REPORTDIR)/obo_qc_$*.owl
 
-reports/spellcheck.txt: fbbt-simple.obo install_flybase_scripts ../../tools/dictionaries/standard.dict
-	../scripts/obo_spellchecker.py -o $@ \
+$(REPORTDIR)/spellcheck.txt: fbbt-simple.obo install_flybase_scripts ../../tools/dictionaries/standard.dict
+	$(SCRIPTSDIR)/obo_spellchecker.py -o $@ \
 		-d ../../tools/dictionaries/standard.dict \
-		-d '|../scripts/fetch_authors.py' \
+		-d '|$(SCRIPTSDIR)/fetch_authors.py' \
 		fbbt-simple.obo
 
 
@@ -133,76 +133,93 @@ $(ONT)-full.obo: $(ONT)-full.owl
 # special placeholder string to substitute in definitions from external ontologies
 # FBbt only uses DOT definitions - to use SUB, copy code and sparql from FBcv.
 
-tmp/merged-source-pre.owl: $(SRC)
+$(TMPDIR)/merged-source-pre.owl: $(SRC)
 	$(ROBOT) merge -i $< --output $@
 
 LABEL_MAP = auto_generated_definitions_label_map.txt
 
-tmp/auto_generated_definitions_seed_dot.txt: tmp/merged-source-pre.owl
+$(TMPDIR)/auto_generated_definitions_seed_dot.txt: $(TMPDIR)/merged-source-pre.owl
 	$(ROBOT) query --use-graphs false -f csv -i $< --query ../sparql/dot-definitions.sparql $@.tmp &&\
 	cat $@.tmp | sort | uniq >  $@
 	rm -f $@.tmp
 
-tmp/auto_generated_definitions_dot.owl: tmp/merged-source-pre.owl tmp/auto_generated_definitions_seed_dot.txt
-	java -jar ../scripts/eq-writer.jar $< tmp/auto_generated_definitions_seed_dot.txt flybase $@ $(LABEL_MAP) add_dot_refs
+$(TMPDIR)/auto_generated_definitions_dot.owl: $(TMPDIR)/merged-source-pre.owl $(TMPDIR)/auto_generated_definitions_seed_dot.txt
+	java -jar $(SCRIPTSDIR)/eq-writer.jar $< $(TMPDIR)/auto_generated_definitions_seed_dot.txt flybase $@ $(LABEL_MAP) add_dot_refs
 
-$(EDIT_PREPROCESSED): $(SRC) tmp/auto_generated_definitions_dot.owl
-	$(ROBOT) convert -i $(SRC) -o tmp/$(ONT)-edit-release-minus-defs.owl &&\
-	$(ROBOT) merge -i tmp/$(ONT)-edit-release-minus-defs.owl -i tmp/auto_generated_definitions_dot.owl --collapse-import-closure false -o tmp/$(ONT)-edit-release-plus-defs.owl &&\
-	$(ROBOT) query -i tmp/$(ONT)-edit-release-plus-defs.owl --update ../sparql/remove-dot-definitions.ru -o $@
+$(EDIT_PREPROCESSED): $(SRC) $(TMPDIR)/auto_generated_definitions_dot.owl
+	$(ROBOT) convert -i $(SRC) -o $(TMPDIR)/$(ONT)-edit-release-minus-defs.owl &&\
+	$(ROBOT) merge -i $(TMPDIR)/$(ONT)-edit-release-minus-defs.owl -i $(TMPDIR)/auto_generated_definitions_dot.owl --collapse-import-closure false -o $(TMPDIR)/$(ONT)-edit-release-plus-defs.owl &&\
+	$(ROBOT) query -i $(TMPDIR)/$(ONT)-edit-release-plus-defs.owl --update ../sparql/remove-dot-definitions.ru -o $@
 
 
 ######################################################################################
 ### Update flybase_import.owl
-###
 ###################################################################################
 
 # Extract the list of terms from the -edit file. We cannot use $(IMPORT_SEED) for that,
 # as it can only be generated after all components have been generated, but we need
 # that list to generate the flybase_import.owl component (circular dependency).
-tmp/fbgn_seed.txt: $(SRC)
+$(TMPDIR)/fbgn_seed.txt: $(SRC) | $(TMPDIR)
 	$(ROBOT) query -f csv -i $< --query ../sparql/terms.sparql $@.tmp && \
 		cat $@.tmp | sort | uniq > $@
 
-tmp/FBgn_template.tsv: tmp/fbgn_seed.txt
-	if [ $(IMP) = true ]; then python3 ../scripts/flybase_import/FB_import_runner.py $< $@; fi
+$(TMPDIR)/FBgn_template.tsv: $(TMPDIR)/fbgn_seed.txt | $(TMPDIR)
+	if [ $(IMP) = true ]; then python3 $(SCRIPTSDIR)/flybase_import/FB_import_runner.py $< $@; fi
 
-components/flybase_import.owl: tmp/FBgn_template.tsv
+$(COMPONENTSDIR)/flybase_import.owl: $(TMPDIR)/FBgn_template.tsv | $(COMPONENTSDIR)
 	if [ $(IMP) = true ]; then $(ROBOT) template --input-iri http://purl.obolibrary.org/obo/ro.owl --template $< \
 	annotate --ontology-iri "http://purl.obolibrary.org/obo/fbbt/components/flybase_import.owl" --output $@ && rm $<; fi
 
+
+######################################################################################
+### Update neuron_symbols.owl
+###################################################################################
+
+OTHERCOMPONENTS := $(filter-out $(COMPONENTSDIR)/neuron_symbols.owl, $(OTHER_SRC))
+OTHERSRCMERGED = $(TMPDIR)/nosymbolsmerged-$(SRC)
+
+$(OTHERSRCMERGED): $(EDIT_PREPROCESSED) $(OTHERCOMPONENTS)
+	$(ROBOT) remove --input $< --select imports --trim false \
+		merge  $(patsubst %, -i %, $(OTHERCOMPONENTS)) -o $@
+
+$(TMPDIR)/symbols_template.tsv: neuron_symbols.tsv $(OTHERSRCMERGED) | $(TMPDIR)
+	if [ $(IMP) = true ]; then python3 $(SCRIPTSDIR)/neuron_symbols/symbol_template.py $(OTHERSRCMERGED) $< $@; fi
+
+$(COMPONENTSDIR)/neuron_symbols.owl: $(TMPDIR)/symbols_template.tsv | $(COMPONENTSDIR)
+	if [ $(IMP) = true ]; then $(ROBOT) template --input-iri http://purl.obolibrary.org/obo/ro.owl --template $< \
+	annotate --ontology-iri "http://purl.obolibrary.org/obo/fbbt/components/neuron_symbols.owl" --output $@ && rm $<; fi
 
 #######################################################################
 ### Update exact_mappings.owl
 #######################################################################
 
-mappings.sssom.tsv: mappings.tsv ../scripts/mappings2sssom.awk
-	sort -t'	' -k1,4 $< | awk -f ../scripts/mappings2sssom.awk > $@
+mappings.sssom.tsv: mappings.tsv $(SCRIPTSDIR)/mappings2sssom.awk
+	sort -t'	' -k1,4 $< | awk -f $(SCRIPTSDIR)/mappings2sssom.awk > $@
 
-tmp/exact_mapping_template.tsv: mappings.sssom.tsv
+$(TMPDIR)/exact_mapping_template.tsv: mappings.sssom.tsv
 	echo 'ID	Cross-reference' > $@
 	echo 'ID	A oboInOwl:hasDbXref' >> $@
 	sed -n '/semapv:crossSpeciesExact/p' $< | cut -f1,4 >> $@
 
-components/exact_mappings.owl: tmp/exact_mapping_template.tsv fbbt-edit.obo
-	$(ROBOT) template --input fbbt-edit.obo --template tmp/exact_mapping_template.tsv \
+$(COMPONENTSDIR)/exact_mappings.owl: $(TMPDIR)/exact_mapping_template.tsv fbbt-edit.obo
+	$(ROBOT) template --input fbbt-edit.obo --template $(TMPDIR)/exact_mapping_template.tsv \
 		--ontology-iri http://purl.obolibrary.org/obo/fbbt/components/exact_mappings.owl \
-		--output components/exact_mappings.owl
+		--output $(COMPONENTSDIR)/exact_mappings.owl
 
 # Ensure the mapping set is published along with the other artefacts
 RELEASE_ASSETS_AFTER_RELEASE += ../../fbbt-mappings.sssom.tsv
 
 #####################################################################################
-### Generate the flybase anatomy version of FBBT                                  ###
+### Generate the flybase anatomy version of FBBT
 #####################################################################################
 
-tmp/fbbt-obj.obo:
+$(TMPDIR)/fbbt-obj.obo:
 	$(ROBOT) remove -i fbbt-simple.obo --select object-properties --trim true -o $@.tmp.obo && grep -v ^owl-axioms $@.tmp.obo > $@ && rm $@.tmp.obo
 
-fly_anatomy.obo: tmp/fbbt-obj.obo rem_flybase.txt
-	cp fbbt-simple.obo tmp/fbbt-simple-stripped.obo
-	$(ROBOT) remove -vv -i tmp/fbbt-simple-stripped.obo --select "owl:deprecated='true'^^xsd:boolean" --trim true \
-		merge --collapse-import-closure false --input tmp/fbbt-obj.obo \
+fly_anatomy.obo: $(TMPDIR)/fbbt-obj.obo rem_flybase.txt
+	cp fbbt-simple.obo $(TMPDIR)/fbbt-simple-stripped.obo
+	$(ROBOT) remove -vv -i $(TMPDIR)/fbbt-simple-stripped.obo --select "owl:deprecated='true'^^xsd:boolean" --trim true \
+		merge --collapse-import-closure false --input $(TMPDIR)/fbbt-obj.obo \
 		remove --term-file rem_flybase.txt --trim false \
 		query --update ../sparql/force-obo.ru \
 		convert -f obo --check false -o $@.tmp.obo
@@ -245,9 +262,9 @@ ALL_DOSDP_TSVs = $(wildcard $(PATTERNDIR)/data/*/*.tsv)
 # goal to update labels in tsvs used for pattern generation
 update_pattern_labels:
 	# get latest version of script and vfb_connect:
-	wget -O ../scripts/update_term_labels_in_file.py https://raw.githubusercontent.com/FlyBase/flybase-ontology-scripts/master/update_term_labels_in_file/src/update_term_labels_in_file.py
+	wget -O $(SCRIPTSDIR)/update_term_labels_in_file.py https://raw.githubusercontent.com/FlyBase/flybase-ontology-scripts/master/update_term_labels_in_file/src/update_term_labels_in_file.py
 	python3 -m pip install vfb_connect
 	# run script for each id:label column pair in each file
 	for file in $(ALL_DOSDP_TSVs) ; do \
-    python3 ../scripts/dosdp_tsv_labels.py -f $$file ; \
+    python3 $(SCRIPTSDIR)/dosdp_tsv_labels.py -f $$file ; \
 	done
