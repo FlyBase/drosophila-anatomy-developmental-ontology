@@ -216,14 +216,17 @@ RELEASE_ASSETS_AFTER_RELEASE += ../../fbbt-mappings.sssom.tsv
 $(TMPDIR)/fbbt-obj.obo:
 	$(ROBOT) remove -i fbbt-simple.obo --select object-properties --trim true -o $@.tmp.obo && grep -v ^owl-axioms $@.tmp.obo > $@ && rm $@.tmp.obo
 
-fly_anatomy.obo: $(TMPDIR)/fbbt-obj.obo rem_flybase.txt
+flybase_additions.obo: fbbt-simple.obo
+	python3 $(SCRIPTSDIR)/FB_typedefs.py
+
+fly_anatomy.obo: $(TMPDIR)/fbbt-obj.obo flybase_removals.txt flybase_additions.obo
 	cp fbbt-simple.obo $(TMPDIR)/fbbt-simple-stripped.obo
 	$(ROBOT) remove -vv -i $(TMPDIR)/fbbt-simple-stripped.obo --select "owl:deprecated='true'^^xsd:boolean" --trim true \
-		merge --collapse-import-closure false --input $(TMPDIR)/fbbt-obj.obo \
-		remove --term-file rem_flybase.txt --trim false \
+		merge --collapse-import-closure false --input $(TMPDIR)/fbbt-obj.obo --input flybase_additions.obo \
+		remove --term-file flybase_removals.txt --trim false \
 		query --update ../sparql/force-obo.ru \
 		convert -f obo --check false -o $@.tmp.obo
-	cat $@.tmp.obo | sed '/./{H;$!d;} ; x ; s/\(\[Typedef\]\nid:[ ]\)\([[:lower:][:punct:]]*\n\)\(name:[ ]\)\([[:lower:][:punct:] ]*\n\)/\1\2\3\2/' | grep -v property_value: | grep -v ^owl-axioms | sed 's/^default-namespace: fly_anatomy.ontology/default-namespace: FlyBase anatomy CV/' | grep -v ^expand_expression_to | grep -v gci_filler | grep -v '^namespace: uberon' | grep -v '^namespace: protein' | grep -v '^namespace: chebi_ontology' | grep -v '^is_cyclic: false' | grep -v 'FlyBase_miscellaneous_CV' | sed '/^date[:]/c\date: $(OBODATE)' | sed '/^data-version[:]/c\data-version: $(DATE)' > $@  && rm $@.tmp.obo
+	cat $@.tmp.obo | sed '/./{H;$!d;} ; x ; s/\(\[Typedef\]\nid:[ ]\)\([[:alpha:]_]*\n\)\(name:[ ]\)\([[:alpha:][:punct:] ]*\n\)/\1\2\3\2/' | grep -v property_value: | grep -v ^owl-axioms | sed 's/^default-namespace: fly_anatomy.ontology/default-namespace: FlyBase anatomy CV/' | grep -v ^expand_expression_to | grep -v gci_filler | grep -v '^namespace: uberon' | grep -v '^namespace: protein' | grep -v '^namespace: chebi_ontology' | grep -v '^is_cyclic: false' | grep -v 'FlyBase_miscellaneous_CV' | sed '/^date[:]/c\date: $(OBODATE)' | sed '/^data-version[:]/c\data-version: $(DATE)' > $@  && rm $@.tmp.obo
 	$(ROBOT) convert --input $@ -f obo --output $@
 	sed -i 's/^xref[:][ ]OBO_REL[:]\(.*\)/xref_analog: OBO_REL:\1/' $@
 
