@@ -237,14 +237,6 @@ fbbt-cedar.obo:
 	--annotation rdfs:comment "This release artefact contains only the classification hierarchy (no relationships) and will not be suitable for most users." \
 	convert -f obo $(OBO_FORMAT_OPTIONS) -o $@
 
-#post_release: obo_qc fly_anatomy.obo fbbt-cedar.obo reports/chado_load_check_simple.txt
-#	mv fly_anatomy.obo ../..
-#	mv fbbt-cedar.obo ../..
-#	mv obo_qc_$(ONT).obo.txt reports/obo_qc_$(ONT).obo.txt
-#	mv obo_qc_$(ONT).owl.txt reports/obo_qc_$(ONT).owl.txt
-#	rm -f $(CLEANFILES) &&\
-#	rm -f imports/*_terms_combined.txt
-
 
 #######################################################################
 ### Subsets
