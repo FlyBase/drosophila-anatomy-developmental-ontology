@@ -11,11 +11,13 @@ classes:
   clone: FBbt:00007683
   organism: FBbt:00000001
   gene: SO:0000704
+  anatomical_entity: FBbt:10000000
 
 relations:
   develops_from: RO:0002202
   expresses: RO:0002292
   part_of: BFO:0000050
+  has_soma_location: RO:0002100
 
 vars:
   neuroblast: neuroblast
@@ -23,6 +25,9 @@ vars:
   sex: organism
   neuron: neuron
   fruitless: gene
+
+list_vars:
+  soma_location: anatomical_entity
 
 logical_axioms:
    - axiom_type: subClassOf
@@ -45,3 +50,10 @@ logical_axioms:
      text: "'develops_from' some %s"
      vars:
        - neuroblast
+   - axiom_type: subClassOf
+     multi_clause:
+      sep: " and "
+      clauses:
+        - text: "'has_soma_location' some %s"
+          vars:
+            - soma_location
