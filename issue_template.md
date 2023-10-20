@@ -1,21 +1,9 @@
 For new term requests, please provide the following information:
 
-## Preferred term label
+## Reference(s) (Required)
 
-(e.g., Asplenia)
+Publication(s) with information about this term (FBrf, DOI or PMID)
 
-## Synonyms
+## Term label(s)
 
-(e.g., Absent spleen)
-
-## Textual definition
-
-the definition should be understandable even for non-specialists. Include a PubMed ID to refer to any relevant article that provides additional information about the suggested term.
-
-## Suggested parent term
-
-Please look in the hierarchy in a browser such as [OLS](http://www.ebi.ac.uk/ols/ontologies/fbbt)
-
-## Attribution
-
-If you would like a nanoattribution, please indicate your ORCID id
+Name(s) given to the new entities in above publication(s), or location of type names in publication (e.g. table).
