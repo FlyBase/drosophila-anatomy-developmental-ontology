@@ -7,8 +7,8 @@ Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
 
 
 Ontology(<http://purl.obolibrary.org/obo/fbbt/patterns/definitions.owl>
-<http://purl.obolibrary.org/obo/fbbt/releases/2023-11-06/patterns/definitions.owl>
-Annotation(owl:versionInfo "2023-11-06")
+<http://purl.obolibrary.org/obo/fbbt/releases/2023-11-07/patterns/definitions.owl>
+Annotation(owl:versionInfo "2023-11-07")
 
 Declaration(Class(<http://flybase.org/reports/FBgn0004652>))
 Declaration(Class(<http://purl.obolibrary.org/obo/FBbt_00000011>))
@@ -2719,6 +2719,7 @@ Declaration(Class(<http://purl.obolibrary.org/obo/FBbt_00052676>))
 Declaration(Class(<http://purl.obolibrary.org/obo/FBbt_00052677>))
 Declaration(Class(<http://purl.obolibrary.org/obo/FBbt_00052687>))
 Declaration(Class(<http://purl.obolibrary.org/obo/FBbt_00052688>))
+Declaration(Class(<http://purl.obolibrary.org/obo/FBbt_00052690>))
 Declaration(Class(<http://purl.obolibrary.org/obo/FBbt_00058101>))
 Declaration(Class(<http://purl.obolibrary.org/obo/FBbt_00058102>))
 Declaration(Class(<http://purl.obolibrary.org/obo/FBbt_00058103>))
@@ -16291,6 +16292,11 @@ EquivalentClasses(<http://purl.obolibrary.org/obo/FBbt_00052676> ObjectIntersect
 
 EquivalentClasses(<http://purl.obolibrary.org/obo/FBbt_00052677> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/FBbt_00005074> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000050> <http://purl.obolibrary.org/obo/FBbt_00052674>)))
 
+# Class: <http://purl.obolibrary.org/obo/FBbt_00052690> (<http://purl.obolibrary.org/obo/FBbt_00052690>)
+
+SubClassOf(<http://purl.obolibrary.org/obo/FBbt_00052690> <http://purl.obolibrary.org/obo/FBbt_00110483>)
+SubClassOf(<http://purl.obolibrary.org/obo/FBbt_00052690> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002292> <http://flybase.org/reports/FBgn0004652>))
+
 # Class: <http://purl.obolibrary.org/obo/FBbt_00058101> (<http://purl.obolibrary.org/obo/FBbt_00058101>)
 
 EquivalentClasses(<http://purl.obolibrary.org/obo/FBbt_00058101> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/FBbt_00005074> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000050> <http://purl.obolibrary.org/obo/FBbt_00059096>)))
@@ -17822,7 +17828,7 @@ SubClassOf(<http://purl.obolibrary.org/obo/FBbt_00110481> ObjectSomeValuesFrom(<
 SubClassOf(<http://purl.obolibrary.org/obo/FBbt_00110483> <http://purl.obolibrary.org/obo/FBbt_00047095>)
 SubClassOf(<http://purl.obolibrary.org/obo/FBbt_00110483> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000050> <http://purl.obolibrary.org/obo/FBbt_00110482>))
 SubClassOf(<http://purl.obolibrary.org/obo/FBbt_00110483> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002100> <http://purl.obolibrary.org/obo/FBbt_00100201>))
-SubClassOf(<http://purl.obolibrary.org/obo/FBbt_00110483> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002202> <http://purl.obolibrary.org/obo/FBbt_00050160>))
+SubClassOf(<http://purl.obolibrary.org/obo/FBbt_00110483> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002202> <http://purl.obolibrary.org/obo/FBbt_00100626>))
 SubClassOf(<http://purl.obolibrary.org/obo/FBbt_00110483> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002292> <http://flybase.org/reports/FBgn0004652>))
 
 # Class: <http://purl.obolibrary.org/obo/FBbt_00110485> (<http://purl.obolibrary.org/obo/FBbt_00110485>)
@@ -18707,9 +18713,8 @@ SubClassOf(<http://purl.obolibrary.org/obo/FBbt_00111182> ObjectSomeValuesFrom(<
 
 # Class: <http://purl.obolibrary.org/obo/FBbt_00111184> (<http://purl.obolibrary.org/obo/FBbt_00111184>)
 
-SubClassOf(<http://purl.obolibrary.org/obo/FBbt_00111184> <http://purl.obolibrary.org/obo/FBbt_00047095>)
+SubClassOf(<http://purl.obolibrary.org/obo/FBbt_00111184> <http://purl.obolibrary.org/obo/FBbt_00110483>)
 SubClassOf(<http://purl.obolibrary.org/obo/FBbt_00111184> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000050> <http://purl.obolibrary.org/obo/FBbt_00111183>))
-SubClassOf(<http://purl.obolibrary.org/obo/FBbt_00111184> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002100> <http://purl.obolibrary.org/obo/FBbt_00100201>))
 SubClassOf(<http://purl.obolibrary.org/obo/FBbt_00111184> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002292> <http://flybase.org/reports/FBgn0004652>))
 
 # Class: <http://purl.obolibrary.org/obo/FBbt_00111186> (<http://purl.obolibrary.org/obo/FBbt_00111186>)
