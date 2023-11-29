@@ -11,8 +11,8 @@ def check_mapping_file(symbols_input_file):
     Also strips extra spaces in cells."""
     input = pd.read_csv(symbols_input_file, sep='\t')\
         .fillna("")\
-        .applymap(str)\
-        .applymap(lambda y: y.strip())
+        .map(str)\
+        .map(lambda y: y.strip())
 
     dup_FBbt = list(input['FBbt_id'].value_counts()[
                                        input['FBbt_id'].value_counts() > 1].index)
