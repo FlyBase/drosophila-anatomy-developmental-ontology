@@ -1,0 +1,39 @@
+pattern_name: glomerulusWithNeuropilAndInputNeurons
+pattern_iri: http://purl.obolibrary.org/obo/fbbt/src/patterns/dosdp-patterns/glomerulusWithNeuropilAndInputNeurons.yaml
+description: "Pattern for generating terms for glomeruli. Can add SC axioms for neuropil partonomy and input neurons (can specify multiple neurons separated by '|'). Not to be used for logically-defined grouping classes."
+
+contributors:
+  - https://orcid.org/0000-0002-1373-1705
+
+classes:
+  glomerulus: FBbt:00005386
+  synaptic_neuropil: FBbt:00040005
+  neuron: FBbt:00005106
+
+relations:
+  part_of: BFO:0000050
+  receives_input_from: RO:0002485
+
+vars:
+  glomerulus: glomerulus
+  neuropil: synaptic_neuropil
+
+list_vars:
+  input: neuron
+
+logical_axioms:
+   - axiom_type: subClassOf
+     text: "'part_of' some %s"
+     vars:
+       - neuropil
+   - axiom_type: subClassOf
+     text: "%s"
+     vars:
+       - glomerulus
+   - axiom_type: subClassOf
+     multi_clause:
+      sep: " and "
+      clauses:
+        - text: "'receives_input_from' some %s"
+          vars:
+            - input
