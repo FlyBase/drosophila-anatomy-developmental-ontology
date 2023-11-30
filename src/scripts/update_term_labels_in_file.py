@@ -35,7 +35,7 @@ else:
 
 def get_id_cols(filename=file):
     """Returns column names from the given file if 'FBbt:' is in the column."""
-    mapping = pd.read_csv(filename, sep='\t').applymap(str)
+    mapping = pd.read_csv(filename, sep='\t').map(str)
 
     id_cols = []
     for col in mapping.columns:
