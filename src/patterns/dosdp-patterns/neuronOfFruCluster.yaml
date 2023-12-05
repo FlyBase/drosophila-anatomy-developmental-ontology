@@ -9,7 +9,6 @@ classes:
   neuron: FBbt:00005106
   neuroblast: FBbt:00005146
   clone: FBbt:00007683
-  organism: FBbt:00000001
   gene: SO:0000704
   anatomical_entity: FBbt:10000000
 
@@ -22,7 +21,6 @@ relations:
 vars:
   neuroblast: neuroblast
   cluster: clone
-  sex: organism
   neuron: neuron
   fruitless: gene
 
@@ -38,10 +36,6 @@ logical_axioms:
      text: "%s"
      vars:
        - neuron
-   - axiom_type: subClassOf
-     text: "'part_of' some %s"
-     vars:
-       - sex
    - axiom_type: subClassOf
      text: "'part_of' some %s"
      vars:
