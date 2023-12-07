@@ -263,3 +263,10 @@ update_pattern_labels:
 	for file in $(ALL_DOSDP_TSVs) ; do \
     python3 $(SCRIPTSDIR)/dosdp_tsv_labels.py -f $$file ; \
 	done
+
+
+.PHONY: update_repo
+# don't keep adding extra imports
+update_repo:
+	sh $(SCRIPTSDIR)/update_repo.sh
+	rm -f $(foreach n,$(IMPORTS), $(IMPORTDIR)/$(n)_import.owl)
