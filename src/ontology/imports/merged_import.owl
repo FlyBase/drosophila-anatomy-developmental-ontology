@@ -7,8 +7,8 @@ Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
 
 
 Ontology(<http://purl.obolibrary.org/obo/fbbt/imports/merged_import.owl>
-<http://purl.obolibrary.org/obo/fbbt/releases/2023-10-18/imports/merged_import.owl>
-Annotation(owl:versionInfo "2023-10-18")
+<http://purl.obolibrary.org/obo/fbbt/releases/2023-12-07/imports/merged_import.owl>
+Annotation(owl:versionInfo "2023-12-07")
 
 Declaration(Class(<http://purl.obolibrary.org/obo/BFO_0000002>))
 Declaration(Class(<http://purl.obolibrary.org/obo/BFO_0000003>))
@@ -1126,7 +1126,7 @@ Declaration(AnnotationProperty(rdfs:comment))
 Declaration(AnnotationProperty(rdfs:label))
 Declaration(AnnotationProperty(owl:deprecated))
 Declaration(AnnotationProperty(<http://www.w3.org/2004/02/skos/core#closeMatch>))
-Declaration(AnnotationProperty(<http://xmlns.com/foaf/0.1/depicted_by>))
+Declaration(AnnotationProperty(<http://xmlns.com/foaf/0.1/depiction>))
 ############################
 #   Annotation Properties
 ############################
@@ -3760,7 +3760,7 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynony
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#inSubset> <http://purl.obolibrary.org/obo/CL_0000066> <http://purl.obolibrary.org/obo/cl#general_cell_types_upper_slim>)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#inSubset> <http://purl.obolibrary.org/obo/CL_0000066> <http://purl.obolibrary.org/obo/uberon/core#human_reference_atlas>)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CL_0000066> "epithelial cell")
-AnnotationAssertion(<http://xmlns.com/foaf/0.1/depicted_by> <http://purl.obolibrary.org/obo/CL_0000066> "https://www.swissbiopics.org/api/image/Epithelial_cells.svg"^^xsd:anyURI)
+AnnotationAssertion(<http://xmlns.com/foaf/0.1/depiction> <http://purl.obolibrary.org/obo/CL_0000066> "https://www.swissbiopics.org/api/image/Epithelial_cells.svg"^^xsd:anyURI)
 SubClassOf(<http://purl.obolibrary.org/obo/CL_0000066> <http://purl.obolibrary.org/obo/CL_0000000>)
 
 # Class: <http://purl.obolibrary.org/obo/CL_0000075> (columnar/cuboidal epithelial cell)
@@ -3814,10 +3814,8 @@ SubClassOf(<http://purl.obolibrary.org/obo/CL_0000133> <http://purl.obolibrary.o
 # Class: <http://purl.obolibrary.org/obo/CL_0000151> (secretory cell)
 
 AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "GOC:tfm") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "ISBN:0721662544") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/CL_0000151> "A cell that specializes in controlled release of one or more substances.")
-AnnotationAssertion(<http://purl.obolibrary.org/obo/RO_0002175> <http://purl.obolibrary.org/obo/CL_0000151> <http://purl.obolibrary.org/obo/NCBITaxon_9606>)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/CL_0000151> "BTO:0003659")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/CL_0000151> "FMA:86916")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#inSubset> <http://purl.obolibrary.org/obo/CL_0000151> <http://purl.obolibrary.org/obo/uberon/core#human_reference_atlas>)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CL_0000151> "secretory cell")
 EquivalentClasses(<http://purl.obolibrary.org/obo/CL_0000151> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/CL_0000000> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002215> <http://purl.obolibrary.org/obo/GO_0032940>)))
 
@@ -3917,7 +3915,7 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <ht
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/CL_0000210> "CALOHA:TS-0868")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/CL_0000210> "FMA:86740")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CL_0000210> "photoreceptor cell")
-AnnotationAssertion(<http://xmlns.com/foaf/0.1/depicted_by> <http://purl.obolibrary.org/obo/CL_0000210> "https://www.swissbiopics.org/api/image/Photoreceptor_cell.svg"^^xsd:anyURI)
+AnnotationAssertion(<http://xmlns.com/foaf/0.1/depiction> <http://purl.obolibrary.org/obo/CL_0000210> "https://www.swissbiopics.org/api/image/Photoreceptor_cell.svg"^^xsd:anyURI)
 EquivalentClasses(<http://purl.obolibrary.org/obo/CL_0000210> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/CL_0000540> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002215> <http://purl.obolibrary.org/obo/GO_0050962>)))
 SubClassOf(Annotation(<http://www.geneontology.org/formats/oboInOwl#is_inferred> "true") <http://purl.obolibrary.org/obo/CL_0000210> <http://purl.obolibrary.org/obo/CL_0000006>)
 
@@ -4045,7 +4043,7 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#inSubset> <htt
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#inSubset> <http://purl.obolibrary.org/obo/CL_0000540> <http://purl.obolibrary.org/obo/uberon/core#human_reference_atlas>)
 AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/CL_0000540> "These cells are also reportedly CD4-negative and CD200-positive. They are also capable of producing CD40L and IFN-gamma.")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CL_0000540> "neuron")
-AnnotationAssertion(<http://xmlns.com/foaf/0.1/depicted_by> <http://purl.obolibrary.org/obo/CL_0000540> "https://www.swissbiopics.org/api/image/Neuron_cells.svg"^^xsd:anyURI)
+AnnotationAssertion(<http://xmlns.com/foaf/0.1/depiction> <http://purl.obolibrary.org/obo/CL_0000540> "https://www.swissbiopics.org/api/image/Neuron_cells.svg"^^xsd:anyURI)
 SubClassOf(<http://purl.obolibrary.org/obo/CL_0000540> <http://purl.obolibrary.org/obo/CL_0000393>)
 SubClassOf(<http://purl.obolibrary.org/obo/CL_0000540> <http://purl.obolibrary.org/obo/CL_0000404>)
 SubClassOf(<http://purl.obolibrary.org/obo/CL_0000540> <http://purl.obolibrary.org/obo/CL_0002319>)
@@ -4176,7 +4174,6 @@ AnnotationAssertion(<http://purl.org/dc/terms/contributor> <http://purl.obolibra
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#creation_date> <http://purl.obolibrary.org/obo/CL_0002321> "2010-09-15T03:39:21Z")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/CL_0002321> "CALOHA:TS-0263")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/CL_0002321> "FMA:82840")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/CL_0002321> "FMA:82841")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/CL_0002321> "WBbt:0007028")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CL_0002321> "embryonic cell (metazoa)")
 SubClassOf(<http://purl.obolibrary.org/obo/CL_0002321> <http://purl.obolibrary.org/obo/CL_0000000>)
@@ -4578,7 +4575,7 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#inSubset> <htt
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#inSubset> <http://purl.obolibrary.org/obo/GO_0003674> <http://purl.obolibrary.org/obo/go#goslim_pir>)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#inSubset> <http://purl.obolibrary.org/obo/GO_0003674> <http://purl.obolibrary.org/obo/go#goslim_plant>)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#inSubset> <http://purl.obolibrary.org/obo/GO_0003674> <http://purl.obolibrary.org/obo/go#goslim_yeast>)
-AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/GO_0003674> "Note that, in addition to forming the root of the molecular function ontology, this term is recommended for use for the annotation of gene products whose molecular function is unknown. When this term is used for annotation, it indicates that no information was available about the molecular function of the gene product annotated as of the date the annotation was made; the evidence code 'no data' (ND), is used to indicate this. Despite its name, this is not a type of 'function' in the sense typically defined by upper ontologies such as Basic Formal Ontology (BFO). It is instead a BFO:process carried out by a single gene product or complex.")
+AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/GO_0003674> "Note that, in addition to forming the root of the molecular function ontology, this term is recommended for the annotation of gene products whose molecular function is unknown. When this term is used for annotation, it indicates that no information was available about the molecular function of the gene product annotated as of the date the annotation was made; the evidence code 'no data' (ND), is used to indicate this. Despite its name, this is not a type of 'function' in the sense typically defined by upper ontologies such as Basic Formal Ontology (BFO). It is instead a BFO:process carried out by a single gene product or complex.")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/GO_0003674> "molecular_function")
 
 # Class: <http://purl.obolibrary.org/obo/GO_0003824> (catalytic activity)
@@ -4613,7 +4610,8 @@ SubClassOf(<http://purl.obolibrary.org/obo/GO_0005513> <http://purl.obolibrary.o
 
 # Class: <http://purl.obolibrary.org/obo/GO_0005575> (cellular_component)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "GOC:pdt") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "NIF_Subcellular:sao1337158144") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/GO_0005575> "A location, relative to cellular compartments and structures, occupied by a macromolecular machine when it carries out a molecular function. There are two ways in which the gene ontology describes locations of gene products: (1) relative to cellular structures (e.g., cytoplasmic side of plasma membrane) or compartments (e.g., mitochondrion), and (2) the stable macromolecular complexes of which they are parts (e.g., the ribosome).")
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "GOC:pdt") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/GO_0005575> "A location, relative to cellular compartments and structures, occupied by a macromolecular machine. There are three types of  cellular components described in the gene ontology: (1) the cellular anatomical entity where a gene product carries out a molecular function (e.g., plasma membrane, cytoskeleton) or membrane-enclosed compartments (e.g., mitochondrion); (2) virion components, where viral proteins act, and (3) the stable macromolecular complexes of which gene product are parts (e.g., the clathrin complex).")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000233> <http://purl.obolibrary.org/obo/GO_0005575> "https://github.com/geneontology/go-ontology/issues/17729"^^xsd:anyURI)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasAlternativeId> <http://purl.obolibrary.org/obo/GO_0005575> "GO:0008372")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/GO_0005575> "NIF_Subcellular:sao1337158144")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/GO_0005575> "cell or subcellular entity")
@@ -4627,7 +4625,7 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#inSubset> <htt
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#inSubset> <http://purl.obolibrary.org/obo/GO_0005575> <http://purl.obolibrary.org/obo/go#goslim_pir>)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#inSubset> <http://purl.obolibrary.org/obo/GO_0005575> <http://purl.obolibrary.org/obo/go#goslim_plant>)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#inSubset> <http://purl.obolibrary.org/obo/GO_0005575> <http://purl.obolibrary.org/obo/go#goslim_yeast>)
-AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/GO_0005575> "Note that, in addition to forming the root of the cellular component ontology, this term is recommended for use for the annotation of gene products whose cellular component is unknown. When this term is used for annotation, it indicates that no information was available about the cellular component of the gene product annotated as of the date the annotation was made; the evidence code 'no data' (ND), is used to indicate this.")
+AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/GO_0005575> "Note that, in addition to forming the root of the cellular component ontology, this term is recommended for the annotation of gene products whose cellular component is unknown. When this term is used for annotation, it indicates that no information was available about the cellular component of the gene product annotated as of the date the annotation was made; the evidence code 'no data' (ND), is used to indicate this.")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/GO_0005575> "cellular_component")
 
 # Class: <http://purl.obolibrary.org/obo/GO_0005622> (intracellular anatomical structure)
@@ -4762,7 +4760,9 @@ SubClassOf(<http://purl.obolibrary.org/obo/GO_0005886> ObjectSomeValuesFrom(<htt
 # Class: <http://purl.obolibrary.org/obo/GO_0005938> (cell cortex)
 
 AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "GOC:mah") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "ISBN:0815316194") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/GO_0005938> "The region of a cell that lies just beneath the plasma membrane and often, but not always, contains a network of actin filaments and associated proteins.")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000233> <http://purl.obolibrary.org/obo/GO_0005938> "https://github.com/geneontology/go-ontology/issues/26298"^^xsd:anyURI)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/GO_0005938> "Wikipedia:Cell_cortex")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym> <http://purl.obolibrary.org/obo/GO_0005938> "ectoplasm")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/GO_0005938> "cellular_component")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> <http://purl.obolibrary.org/obo/GO_0005938> "cell periphery")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> <http://purl.obolibrary.org/obo/GO_0005938> "peripheral cytoplasm")
@@ -5480,7 +5480,7 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#inSubset> <htt
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#inSubset> <http://purl.obolibrary.org/obo/GO_0008150> <http://purl.obolibrary.org/obo/go#goslim_plant>)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#inSubset> <http://purl.obolibrary.org/obo/GO_0008150> <http://purl.obolibrary.org/obo/go#goslim_pombe>)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#inSubset> <http://purl.obolibrary.org/obo/GO_0008150> <http://purl.obolibrary.org/obo/go#goslim_yeast>)
-AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/GO_0008150> "Note that, in addition to forming the root of the biological process ontology, this term is recommended for use for the annotation of gene products whose biological process is unknown. When this term is used for annotation, it indicates that no information was available about the biological process of the gene product annotated as of the date the annotation was made; the evidence code 'no data' (ND), is used to indicate this.")
+AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/GO_0008150> "Note that, in addition to forming the root of the biological process ontology, this term is recommended for the annotation of gene products whose biological process is unknown. When this term is used for annotation, it indicates that no information was available about the biological process of the gene product annotated as of the date the annotation was made; the evidence code 'no data' (ND), is used to indicate this.")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/GO_0008150> "biological_process")
 
 # Class: <http://purl.obolibrary.org/obo/GO_0008152> (metabolic process)

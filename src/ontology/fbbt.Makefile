@@ -175,7 +175,7 @@ $(COMPONENTSDIR)/flybase_import.owl: $(TMPDIR)/FBgn_template.tsv | $(COMPONENTSD
 ### Update neuron_symbols.owl
 ###################################################################################
 
-OTHERCOMPONENTS := $(filter-out $(COMPONENTSDIR)/neuron_symbols.owl, $(OTHER_SRC))
+OTHERCOMPONENTS := $(filter-out $(COMPONENTSDIR)/neuron_symbols.owl $(COMPONENTSDIR)/flybase_import.owl, $(OTHER_SRC))
 OTHERSRCMERGED = $(TMPDIR)/nosymbolsmerged-$(SRC)
 
 $(OTHERSRCMERGED): $(EDIT_PREPROCESSED) $(OTHERCOMPONENTS)
@@ -263,3 +263,10 @@ update_pattern_labels:
 	for file in $(ALL_DOSDP_TSVs) ; do \
     python3 $(SCRIPTSDIR)/dosdp_tsv_labels.py -f $$file ; \
 	done
+
+
+.PHONY: update_repo
+# don't keep adding extra imports
+update_repo:
+	sh $(SCRIPTSDIR)/update_repo.sh
+	rm -f $(foreach n,$(IMPORTS), $(IMPORTDIR)/$(n)_import.owl)
