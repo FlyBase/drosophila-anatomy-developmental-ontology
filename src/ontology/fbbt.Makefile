@@ -175,7 +175,7 @@ $(COMPONENTSDIR)/flybase_import.owl: $(TMPDIR)/FBgn_template.tsv | $(COMPONENTSD
 ### Update neuron_symbols.owl
 ###################################################################################
 
-OTHERCOMPONENTS := $(filter-out $(COMPONENTSDIR)/neuron_symbols.owl, $(OTHER_SRC))
+OTHERCOMPONENTS := $(filter-out $(COMPONENTSDIR)/neuron_symbols.owl $(COMPONENTSDIR)/flybase_import.owl, $(OTHER_SRC))
 OTHERSRCMERGED = $(TMPDIR)/nosymbolsmerged-$(SRC)
 
 $(OTHERSRCMERGED): $(EDIT_PREPROCESSED) $(OTHERCOMPONENTS)
