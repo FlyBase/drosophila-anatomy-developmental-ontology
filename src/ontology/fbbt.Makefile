@@ -133,23 +133,14 @@ $(ONT)-full.obo: $(ONT)-full.owl
 # special placeholder string to substitute in definitions from external ontologies
 # FBbt only uses DOT definitions - to use SUB, copy code and sparql from FBcv.
 
-$(TMPDIR)/merged-source-pre.owl: $(SRC)
-	$(ROBOT) merge -i $< --output $@
+export ROBOT_PLUGINS_DIRECTORY = $(TMPDIR)/plugins
 
-LABEL_MAP = auto_generated_definitions_label_map.txt
+$(ROBOT_PLUGINS_DIRECTORY)/flybase.jar:
+	mkdir -p $(ROBOT_PLUGINS_DIRECTORY)
+	curl -L -o $@ https://github.com/FlyBase/flybase-robot-plugin/releases/download/flybase-robot-plugin-0.1.0/flybase.jar
 
-$(TMPDIR)/auto_generated_definitions_seed_dot.txt: $(TMPDIR)/merged-source-pre.owl
-	$(ROBOT) query --use-graphs false -f csv -i $< --query ../sparql/dot-definitions.sparql $@.tmp &&\
-	cat $@.tmp | sort | uniq >  $@
-	rm -f $@.tmp
-
-$(TMPDIR)/auto_generated_definitions_dot.owl: $(TMPDIR)/merged-source-pre.owl $(TMPDIR)/auto_generated_definitions_seed_dot.txt
-	java -jar $(SCRIPTSDIR)/eq-writer.jar $< $(TMPDIR)/auto_generated_definitions_seed_dot.txt flybase $@ $(LABEL_MAP) add_dot_refs
-
-$(EDIT_PREPROCESSED): $(SRC) $(TMPDIR)/auto_generated_definitions_dot.owl
-	$(ROBOT) convert -i $(SRC) -o $(TMPDIR)/$(ONT)-edit-release-minus-defs.owl &&\
-	$(ROBOT) merge -i $(TMPDIR)/$(ONT)-edit-release-minus-defs.owl -i $(TMPDIR)/auto_generated_definitions_dot.owl --collapse-import-closure false -o $(TMPDIR)/$(ONT)-edit-release-plus-defs.owl &&\
-	$(ROBOT) query -i $(TMPDIR)/$(ONT)-edit-release-plus-defs.owl --update ../sparql/remove-dot-definitions.ru -o $@
+$(EDIT_PREPROCESSED): $(SRC) $(ROBOT_PLUGINS_DIRECTORY)/flybase.jar
+	$(ROBOT) flybase:rewrite-def -i $< --dot-definitions --filter-prefix FBbt -o $@
 
 
 ######################################################################################
