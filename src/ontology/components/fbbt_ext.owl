@@ -46,6 +46,8 @@ Declaration(Class(<http://purl.obolibrary.org/obo/FBbt_00005124>))
 Declaration(Class(<http://purl.obolibrary.org/obo/FBbt_00005155>))
 Declaration(Class(<http://purl.obolibrary.org/obo/FBbt_00005387>))
 Declaration(Class(<http://purl.obolibrary.org/obo/FBbt_00005388>))
+Declaration(Class(<http://purl.obolibrary.org/obo/FBbt_00005461>))
+Declaration(Class(<http://purl.obolibrary.org/obo/FBbt_00005495>))
 Declaration(Class(<http://purl.obolibrary.org/obo/FBbt_00005757>))
 Declaration(Class(<http://purl.obolibrary.org/obo/FBbt_00005918>))
 Declaration(Class(<http://purl.obolibrary.org/obo/FBbt_00005919>))
@@ -173,6 +175,7 @@ Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002100>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002101>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002131>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002202>))
+Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002203>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002215>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002339>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0013002>))
@@ -194,6 +197,10 @@ Declaration(AnnotationProperty(rdfs:label))
 # Class: <http://purl.obolibrary.org/obo/FBbt_00001722> (ring gland)
 
 SubClassOf(<http://purl.obolibrary.org/obo/FBbt_00001722> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002215> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/GO_0046879> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002339> <http://purl.obolibrary.org/obo/FBbt_00005057>))))
+
+# Class: <http://purl.obolibrary.org/obo/FBbt_00005461> (circulatory system primordium)
+
+EquivalentClasses(<http://purl.obolibrary.org/obo/FBbt_00005461> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/FBbt_00005495> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002203> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/FBbt_10000000> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000050> <http://purl.obolibrary.org/obo/FBbt_00005057>)))))
 
 # Class: <http://purl.obolibrary.org/obo/FBbt_00005757> (neurohemal organ)
 
