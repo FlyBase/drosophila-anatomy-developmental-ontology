@@ -35,7 +35,7 @@ else:
 
 def get_id_cols(filename=file):
     """Returns column names from the given file if 'FBbt:' is in the column."""
-    mapping = pd.read_csv(filename, sep='\t').map(str)
+    mapping = pd.read_csv(filename, sep='\t', dtype=str)
 
     id_cols = []
     for col in mapping.columns:
@@ -99,7 +99,7 @@ def replace_labels_in_file(filename, id_col_name='FBbt_id', label_col_name='FBbt
     """Updates labels from latest FBbt release (from VFB) based on IDs.
 
     Input is a file - default for ID column to be 'FBbt_id' and label column as 'FBbt_name'."""
-    input_dataframe = pd.read_csv(filename, sep='\t')
+    input_dataframe = pd.read_csv(filename, sep='\t', dtype=str)
     output_dataframe = replace_labels(input_dataframe, id_col_name, label_col_name, sep)
 
     output_dataframe.to_csv(filename, sep='\t', index=False)

@@ -1,0 +1,24 @@
+pattern_name: neuroblastBySegment
+pattern_iri: http://purl.obolibrary.org/obo/fbbt/src/patterns/dosdp-patterns/neuroblastBySegment.yaml
+description: "Pattern for segment-specific subclasses of anatomical entities - some more specific patterns exist for certain entities, please check before using this generic one."
+
+contributors:
+  - https://orcid.org/0000-0002-1373-1705
+
+classes:
+  anatomical_entity: FBbt:10000000
+  segment: FBbt:00000003
+
+relations: 
+  part_of: BFO:0000050
+
+vars:
+  parent: anatomical_entity
+  segment: segment
+
+logical_axioms:
+   - axiom_type: equivalentTo
+     text: "%s that 'part_of' some %s"
+     vars:
+       - parent
+       - segment
