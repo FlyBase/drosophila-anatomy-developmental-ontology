@@ -1,28 +1,958 @@
-defined_class	defined_class_label	parent	parent_label	segment	segment_label
-FBbt:00000187	mesothoracic tracheal primordium	FBbt:00005037	tracheal primordium	FBbt:00000169	embryonic mesothoracic segment
-FBbt:00000188	metathoracic tracheal primordium	FBbt:00005037	tracheal primordium	FBbt:00000170	embryonic metathoracic segment
-FBbt:00000189	abdominal tracheal primordium	FBbt:00005037	tracheal primordium	FBbt:00000172	embryonic abdominal segment
-FBbt:00000190	abdominal tracheal primordium 1	FBbt:00005037	tracheal primordium	FBbt:00000173	embryonic abdominal segment 1
-FBbt:00000191	abdominal tracheal primordium 2	FBbt:00005037	tracheal primordium	FBbt:00000174	embryonic abdominal segment 2
-FBbt:00000192	abdominal tracheal primordium 3	FBbt:00005037	tracheal primordium	FBbt:00000175	embryonic abdominal segment 3
-FBbt:00000193	abdominal tracheal primordium 4	FBbt:00005037	tracheal primordium	FBbt:00000176	embryonic abdominal segment 4
-FBbt:00000194	abdominal tracheal primordium 5	FBbt:00005037	tracheal primordium	FBbt:00000177	embryonic abdominal segment 5
-FBbt:00000195	abdominal tracheal primordium 6	FBbt:00005037	tracheal primordium	FBbt:00000178	embryonic abdominal segment 6
-FBbt:00000196	abdominal tracheal primordium 7	FBbt:00005037	tracheal primordium	FBbt:00000179	embryonic abdominal segment 7
-FBbt:00000199	mesothoracic tracheal pit	FBbt:00005036	tracheal pit	FBbt:00000169	embryonic mesothoracic segment
-FBbt:00000200	metathoracic tracheal pit	FBbt:00005036	tracheal pit	FBbt:00000170	embryonic metathoracic segment
-FBbt:00000201	abdominal tracheal pit	FBbt:00005036	tracheal pit	FBbt:00000172	embryonic abdominal segment
-FBbt:00000202	abdominal tracheal pit 1	FBbt:00005036	tracheal pit	FBbt:00000173	embryonic abdominal segment 1
-FBbt:00000203	abdominal tracheal pit 2	FBbt:00005036	tracheal pit	FBbt:00000174	embryonic abdominal segment 2
-FBbt:00000204	abdominal tracheal pit 3	FBbt:00005036	tracheal pit	FBbt:00000175	embryonic abdominal segment 3
-FBbt:00000205	abdominal tracheal pit 4	FBbt:00005036	tracheal pit	FBbt:00000176	embryonic abdominal segment 4
-FBbt:00000206	abdominal tracheal pit 5	FBbt:00005036	tracheal pit	FBbt:00000177	embryonic abdominal segment 5
-FBbt:00000207	abdominal tracheal pit 6	FBbt:00005036	tracheal pit	FBbt:00000178	embryonic abdominal segment 6
-FBbt:00000208	abdominal tracheal pit 7	FBbt:00005036	tracheal pit	FBbt:00000179	embryonic abdominal segment 7
-FBbt:00000209	abdominal tracheal pit 8	FBbt:00005036	tracheal pit	FBbt:00000180	embryonic abdominal segment 8
-FBbt:00001654	dorsal prothoracic disc primordium	FBbt:00001653	dorsal thoracic disc primordium	FBbt:00000168	embryonic prothoracic segment
-FBbt:00001655	dorsal mesothoracic disc primordium	FBbt:00001653	dorsal thoracic disc primordium	FBbt:00000169	embryonic mesothoracic segment
-FBbt:00001656	dorsal metathoracic disc primordium	FBbt:00001653	dorsal thoracic disc primordium	FBbt:00000170	embryonic metathoracic segment
-FBbt:00001658	ventral prothoracic disc primordium	FBbt:00001657	ventral thoracic disc primordium	FBbt:00000168	embryonic prothoracic segment
-FBbt:00001659	ventral mesothoracic disc primordium	FBbt:00001657	ventral thoracic disc primordium	FBbt:00000169	embryonic mesothoracic segment
-FBbt:00001660	ventral metathoracic disc primordium	FBbt:00001657	ventral thoracic disc primordium	FBbt:00000170	embryonic metathoracic segment
+defined_class	defined_class_label	parent	parent_label	segment	segment_label	stage_segment	stage_segment_label
+FBbt:00000187	mesothoracic tracheal primordium	FBbt:00005037	tracheal primordium	FBbt:00000018	mesothoracic segment	FBbt:00000169	embryonic mesothoracic segment
+FBbt:00000188	metathoracic tracheal primordium	FBbt:00005037	tracheal primordium	FBbt:00000019	metathoracic segment	FBbt:00000170	embryonic metathoracic segment
+FBbt:00000189	abdominal tracheal primordium	FBbt:00005037	tracheal primordium	FBbt:00000021	abdominal segment	FBbt:00000172	embryonic abdominal segment
+FBbt:00000190	abdominal tracheal primordium 1	FBbt:00005037	tracheal primordium	FBbt:00000022	abdominal segment 1	FBbt:00000173	embryonic abdominal segment 1
+FBbt:00000191	abdominal tracheal primordium 2	FBbt:00005037	tracheal primordium	FBbt:00000023	abdominal segment 2	FBbt:00000174	embryonic abdominal segment 2
+FBbt:00000192	abdominal tracheal primordium 3	FBbt:00005037	tracheal primordium	FBbt:00000024	abdominal segment 3	FBbt:00000175	embryonic abdominal segment 3
+FBbt:00000193	abdominal tracheal primordium 4	FBbt:00005037	tracheal primordium	FBbt:00000025	abdominal segment 4	FBbt:00000176	embryonic abdominal segment 4
+FBbt:00000194	abdominal tracheal primordium 5	FBbt:00005037	tracheal primordium	FBbt:00000026	abdominal segment 5	FBbt:00000177	embryonic abdominal segment 5
+FBbt:00000195	abdominal tracheal primordium 6	FBbt:00005037	tracheal primordium	FBbt:00000027	abdominal segment 6	FBbt:00000178	embryonic abdominal segment 6
+FBbt:00000196	abdominal tracheal primordium 7	FBbt:00005037	tracheal primordium	FBbt:00000028	abdominal segment 7	FBbt:00000179	embryonic abdominal segment 7
+FBbt:00000199	mesothoracic tracheal pit	FBbt:00005036	tracheal pit	FBbt:00000018	mesothoracic segment	FBbt:00000169	embryonic mesothoracic segment
+FBbt:00000200	metathoracic tracheal pit	FBbt:00005036	tracheal pit	FBbt:00000019	metathoracic segment	FBbt:00000170	embryonic metathoracic segment
+FBbt:00000201	abdominal tracheal pit	FBbt:00005036	tracheal pit	FBbt:00000021	abdominal segment	FBbt:00000172	embryonic abdominal segment
+FBbt:00000202	abdominal tracheal pit 1	FBbt:00005036	tracheal pit	FBbt:00000022	abdominal segment 1	FBbt:00000173	embryonic abdominal segment 1
+FBbt:00000203	abdominal tracheal pit 2	FBbt:00005036	tracheal pit	FBbt:00000023	abdominal segment 2	FBbt:00000174	embryonic abdominal segment 2
+FBbt:00000204	abdominal tracheal pit 3	FBbt:00005036	tracheal pit	FBbt:00000024	abdominal segment 3	FBbt:00000175	embryonic abdominal segment 3
+FBbt:00000205	abdominal tracheal pit 4	FBbt:00005036	tracheal pit	FBbt:00000025	abdominal segment 4	FBbt:00000176	embryonic abdominal segment 4
+FBbt:00000206	abdominal tracheal pit 5	FBbt:00005036	tracheal pit	FBbt:00000026	abdominal segment 5	FBbt:00000177	embryonic abdominal segment 5
+FBbt:00000207	abdominal tracheal pit 6	FBbt:00005036	tracheal pit	FBbt:00000027	abdominal segment 6	FBbt:00000178	embryonic abdominal segment 6
+FBbt:00000208	abdominal tracheal pit 7	FBbt:00005036	tracheal pit	FBbt:00000028	abdominal segment 7	FBbt:00000179	embryonic abdominal segment 7
+FBbt:00000209	abdominal tracheal pit 8	FBbt:00005036	tracheal pit	FBbt:00000029	abdominal segment 8	FBbt:00000180	embryonic abdominal segment 8
+FBbt:00000413	non-functional larval spiracle of thoracic segment	FBbt:00000412	non-functional larval spiracle	FBbt:00000016	thoracic segment	FBbt:00001742	larval thoracic segment
+FBbt:00000415	non-functional larval spiracle of thoracic segment 3	FBbt:00000412	non-functional larval spiracle	FBbt:00000019	metathoracic segment	FBbt:00001745	larval metathoracic segment
+FBbt:00000416	non-functional larval spiracle of abdominal segment	FBbt:00000412	non-functional larval spiracle	FBbt:00000021	abdominal segment	FBbt:00001747	larval abdominal segment
+FBbt:00000417	non-functional larval spiracle of abdominal segment 1	FBbt:00000412	non-functional larval spiracle	FBbt:00000022	abdominal segment 1	FBbt:00001748	larval abdominal segment 1
+FBbt:00000418	non-functional larval spiracle of abdominal segment 2	FBbt:00000412	non-functional larval spiracle	FBbt:00000023	abdominal segment 2	FBbt:00001749	larval abdominal segment 2
+FBbt:00000419	non-functional larval spiracle of abdominal segment 3	FBbt:00000412	non-functional larval spiracle	FBbt:00000024	abdominal segment 3	FBbt:00001750	larval abdominal segment 3
+FBbt:00000420	non-functional larval spiracle of abdominal segment 4	FBbt:00000412	non-functional larval spiracle	FBbt:00000025	abdominal segment 4	FBbt:00001751	larval abdominal segment 4
+FBbt:00000421	non-functional larval spiracle of abdominal segment 5	FBbt:00000412	non-functional larval spiracle	FBbt:00000026	abdominal segment 5	FBbt:00001752	larval abdominal segment 5
+FBbt:00000422	non-functional larval spiracle of abdominal segment 6	FBbt:00000412	non-functional larval spiracle	FBbt:00000027	abdominal segment 6	FBbt:00001753	larval abdominal segment 6
+FBbt:00000423	non-functional larval spiracle of abdominal segment 7	FBbt:00000412	non-functional larval spiracle	FBbt:00000028	abdominal segment 7	FBbt:00001754	larval abdominal segment 7
+FBbt:00001019	embryonic/larval abdominal 1 intrasegmental apodeme 1	FBbt:00001021	embryonic/larval A1-7 intrasegmental apodeme 1	FBbt:00000022	abdominal segment 1	FBbt:00001748	larval abdominal segment 1
+FBbt:00001020	embryonic/larval abdominal 1 intrasegmental apodeme 2	FBbt:00001028	embryonic/larval A1-7 intrasegmental apodeme 2	FBbt:00000022	abdominal segment 1	FBbt:00001748	larval abdominal segment 1
+FBbt:00001022	embryonic/larval abdominal 2 intrasegmental apodeme 1	FBbt:00001021	embryonic/larval A1-7 intrasegmental apodeme 1	FBbt:00000023	abdominal segment 2	FBbt:00001749	larval abdominal segment 2
+FBbt:00001023	embryonic/larval abdominal 3 intrasegmental apodeme 1	FBbt:00001021	embryonic/larval A1-7 intrasegmental apodeme 1	FBbt:00000024	abdominal segment 3	FBbt:00001750	larval abdominal segment 3
+FBbt:00001024	embryonic/larval abdominal 4 intrasegmental apodeme 1	FBbt:00001021	embryonic/larval A1-7 intrasegmental apodeme 1	FBbt:00000025	abdominal segment 4	FBbt:00001751	larval abdominal segment 4
+FBbt:00001025	embryonic/larval abdominal 5 intrasegmental apodeme 1	FBbt:00001021	embryonic/larval A1-7 intrasegmental apodeme 1	FBbt:00000026	abdominal segment 5	FBbt:00001752	larval abdominal segment 5
+FBbt:00001026	embryonic/larval abdominal 6 intrasegmental apodeme 1	FBbt:00001021	embryonic/larval A1-7 intrasegmental apodeme 1	FBbt:00000027	abdominal segment 6	FBbt:00001753	larval abdominal segment 6
+FBbt:00001027	embryonic/larval abdominal 7 intrasegmental apodeme 1	FBbt:00001021	embryonic/larval A1-7 intrasegmental apodeme 1	FBbt:00000028	abdominal segment 7	FBbt:00001754	larval abdominal segment 7
+FBbt:00001029	embryonic/larval abdominal 2 intrasegmental apodeme 2	FBbt:00001028	embryonic/larval A1-7 intrasegmental apodeme 2	FBbt:00000023	abdominal segment 2	FBbt:00001749	larval abdominal segment 2
+FBbt:00001030	embryonic/larval abdominal 3 intrasegmental apodeme 2	FBbt:00001028	embryonic/larval A1-7 intrasegmental apodeme 2	FBbt:00000024	abdominal segment 3	FBbt:00001750	larval abdominal segment 3
+FBbt:00001031	embryonic/larval abdominal 4 intrasegmental apodeme 2	FBbt:00001028	embryonic/larval A1-7 intrasegmental apodeme 2	FBbt:00000025	abdominal segment 4	FBbt:00001751	larval abdominal segment 4
+FBbt:00001032	embryonic/larval abdominal 5 intrasegmental apodeme 2	FBbt:00001028	embryonic/larval A1-7 intrasegmental apodeme 2	FBbt:00000026	abdominal segment 5	FBbt:00001752	larval abdominal segment 5
+FBbt:00001033	embryonic/larval abdominal 6 intrasegmental apodeme 2	FBbt:00001028	embryonic/larval A1-7 intrasegmental apodeme 2	FBbt:00000027	abdominal segment 6	FBbt:00001753	larval abdominal segment 6
+FBbt:00001034	embryonic/larval abdominal 7 intrasegmental apodeme 2	FBbt:00001028	embryonic/larval A1-7 intrasegmental apodeme 2	FBbt:00000028	abdominal segment 7	FBbt:00001754	larval abdominal segment 7
+FBbt:00001067	embryonic deutocerebrum	FBbt:00052717		FBbt:00000009	antennal segment	FBbt:00000160	embryonic antennal segment
+FBbt:00001068	embryonic tritocerebrum	FBbt:00052717		FBbt:00000010	intercalary segment	FBbt:00000161	embryonic intercalary segment
+FBbt:00001084	embryonic labial neuromere	FBbt:00052717		FBbt:00000014	labial segment	FBbt:00000165	embryonic labial segment
+FBbt:00001085	embryonic maxillary neuromere	FBbt:00052717		FBbt:00000013	maxillary segment	FBbt:00000164	embryonic maxillary segment
+FBbt:00001086	embryonic mandibular neuromere	FBbt:00052717		FBbt:00000012	mandibular segment	FBbt:00000163	embryonic mandibular segment
+FBbt:00001088	embryonic thoracic neuromere	FBbt:00052717		FBbt:00000016	thoracic segment	FBbt:00000167	embryonic thoracic segment
+FBbt:00001089	embryonic prothoracic neuromere	FBbt:00052717		FBbt:00000017	prothoracic segment	FBbt:00000168	embryonic prothoracic segment
+FBbt:00001090	embryonic mesothoracic neuromere	FBbt:00052717		FBbt:00000018	mesothoracic segment	FBbt:00000169	embryonic mesothoracic segment
+FBbt:00001091	embryonic metathoracic neuromere	FBbt:00052717		FBbt:00000019	metathoracic segment	FBbt:00000170	embryonic metathoracic segment
+FBbt:00001092	embryonic abdominal neuromere	FBbt:00052717		FBbt:00000021	abdominal segment	FBbt:00000172	embryonic abdominal segment
+FBbt:00001093	embryonic abdominal 1 neuromere	FBbt:00052717		FBbt:00000022	abdominal segment 1	FBbt:00000173	embryonic abdominal segment 1
+FBbt:00001094	embryonic abdominal 2 neuromere	FBbt:00052717		FBbt:00000023	abdominal segment 2	FBbt:00000174	embryonic abdominal segment 2
+FBbt:00001095	embryonic abdominal 3 neuromere	FBbt:00052717		FBbt:00000024	abdominal segment 3	FBbt:00000175	embryonic abdominal segment 3
+FBbt:00001096	embryonic abdominal 4 neuromere	FBbt:00052717		FBbt:00000025	abdominal segment 4	FBbt:00000176	embryonic abdominal segment 4
+FBbt:00001097	embryonic abdominal 5 neuromere	FBbt:00052717		FBbt:00000026	abdominal segment 5	FBbt:00000177	embryonic abdominal segment 5
+FBbt:00001098	embryonic abdominal 6 neuromere	FBbt:00052717		FBbt:00000027	abdominal segment 6	FBbt:00000178	embryonic abdominal segment 6
+FBbt:00001099	embryonic abdominal 7 neuromere	FBbt:00052717		FBbt:00000028	abdominal segment 7	FBbt:00000179	embryonic abdominal segment 7
+FBbt:00001100	embryonic abdominal 8 neuromere	FBbt:00052717		FBbt:00000029	abdominal segment 8	FBbt:00000180	embryonic abdominal segment 8
+FBbt:00001101	embryonic abdominal 9 neuromere	FBbt:00052717		FBbt:00000030	abdominal segment 9	FBbt:00000181	embryonic abdominal segment 9
+FBbt:00001140	embryonic thoracic dorsal sensory organ precursor cluster	FBbt:00059182	embryonic dorsal sensory organ precursor cluster	FBbt:00000016	thoracic segment	FBbt:00000167	embryonic thoracic segment
+FBbt:00001158	embryonic thoracic lateral sensory organ precursor cluster	FBbt:00059197	embryonic lateral sensory organ precursor cluster	FBbt:00000016	thoracic segment	FBbt:00000167	embryonic thoracic segment
+FBbt:00001172	embryonic thoracic ventral sensory organ precursor cluster group	FBbt:00059198	embryonic ventral sensory organ precursor cluster group	FBbt:00000016	thoracic segment	FBbt:00000167	embryonic thoracic segment
+FBbt:00001190	embryonic abdominal dorsal sensory organ precursor cluster	FBbt:00059182	embryonic dorsal sensory organ precursor cluster	FBbt:00000021	abdominal segment	FBbt:00000172	embryonic abdominal segment
+FBbt:00001204	embryonic abdominal lateral sensory organ precursor cluster	FBbt:00059197	embryonic lateral sensory organ precursor cluster	FBbt:00000021	abdominal segment	FBbt:00000172	embryonic abdominal segment
+FBbt:00001220	embryonic abdominal ventral sensory organ precursor cluster group	FBbt:00059198	embryonic ventral sensory organ precursor cluster group	FBbt:00000021	abdominal segment	FBbt:00000172	embryonic abdominal segment
+FBbt:00001654	dorsal prothoracic disc primordium	FBbt:00001653	dorsal thoracic disc primordium	FBbt:00000017	prothoracic segment	FBbt:00000168	embryonic prothoracic segment
+FBbt:00001655	dorsal mesothoracic disc primordium	FBbt:00001653	dorsal thoracic disc primordium	FBbt:00000018	mesothoracic segment	FBbt:00000169	embryonic mesothoracic segment
+FBbt:00001656	dorsal metathoracic disc primordium	FBbt:00001653	dorsal thoracic disc primordium	FBbt:00000019	metathoracic segment	FBbt:00000170	embryonic metathoracic segment
+FBbt:00001658	ventral prothoracic disc primordium	FBbt:00001657	ventral thoracic disc primordium	FBbt:00000017	prothoracic segment	FBbt:00000168	embryonic prothoracic segment
+FBbt:00001659	ventral mesothoracic disc primordium	FBbt:00001657	ventral thoracic disc primordium	FBbt:00000018	mesothoracic segment	FBbt:00000169	embryonic mesothoracic segment
+FBbt:00001660	ventral metathoracic disc primordium	FBbt:00001657	ventral thoracic disc primordium	FBbt:00000019	metathoracic segment	FBbt:00000170	embryonic metathoracic segment
+FBbt:00001696	abdominal 1 larval oenocyte group	FBbt:00001695	abdominal larval oenocyte group	FBbt:00000022	abdominal segment 1	FBbt:00001748	larval abdominal segment 1
+FBbt:00001697	abdominal 2 larval oenocyte group	FBbt:00001695	abdominal larval oenocyte group	FBbt:00000023	abdominal segment 2	FBbt:00001749	larval abdominal segment 2
+FBbt:00001698	abdominal 3 larval oenocyte group	FBbt:00001695	abdominal larval oenocyte group	FBbt:00000024	abdominal segment 3	FBbt:00001750	larval abdominal segment 3
+FBbt:00001699	abdominal 4 larval oenocyte group	FBbt:00001695	abdominal larval oenocyte group	FBbt:00000025	abdominal segment 4	FBbt:00001751	larval abdominal segment 4
+FBbt:00001700	abdominal 5 larval oenocyte group	FBbt:00001695	abdominal larval oenocyte group	FBbt:00000026	abdominal segment 5	FBbt:00001752	larval abdominal segment 5
+FBbt:00001701	abdominal 6 larval oenocyte group	FBbt:00001695	abdominal larval oenocyte group	FBbt:00000027	abdominal segment 6	FBbt:00001753	larval abdominal segment 6
+FBbt:00001702	abdominal 7 larval oenocyte group	FBbt:00001695	abdominal larval oenocyte group	FBbt:00000028	abdominal segment 7	FBbt:00001754	larval abdominal segment 7
+FBbt:00001777	humeral disc	FBbt:00001776	dorsal thoracic disc	FBbt:00000017	prothoracic segment	FBbt:00001743	larval prothoracic segment
+FBbt:00001778	wing disc	FBbt:00001776	dorsal thoracic disc	FBbt:00000018	mesothoracic segment	FBbt:00001744	larval mesothoracic segment
+FBbt:00001779	haltere disc	FBbt:00001776	dorsal thoracic disc	FBbt:00000019	metathoracic segment	FBbt:00001745	larval metathoracic segment
+FBbt:00001781	prothoracic leg disc	FBbt:00001780	leg disc	FBbt:00000017	prothoracic segment	FBbt:00001743	larval prothoracic segment
+FBbt:00001782	mesothoracic leg disc	FBbt:00001780	leg disc	FBbt:00000018	mesothoracic segment	FBbt:00001744	larval mesothoracic segment
+FBbt:00001783	metathoracic leg disc	FBbt:00001780	leg disc	FBbt:00000019	metathoracic segment	FBbt:00001745	larval metathoracic segment
+FBbt:00001794	anterior dorsal histoblast nest abdominal 1	FBbt:00001792	anterior dorsal histoblast nest abdominal	FBbt:00000022	abdominal segment 1	FBbt:00001748	larval abdominal segment 1
+FBbt:00001795	small cell associated with anterior dorsal histoblasts abdominal 1	FBbt:00001793	small cell associated with anterior dorsal histoblasts abdominal	FBbt:00000022	abdominal segment 1	FBbt:00001748	larval abdominal segment 1
+FBbt:00001796	anterior dorsal histoblast nest abdominal 2	FBbt:00001792	anterior dorsal histoblast nest abdominal	FBbt:00000023	abdominal segment 2	FBbt:00001749	larval abdominal segment 2
+FBbt:00001797	small cell associated with anterior dorsal histoblasts abdominal 2	FBbt:00001793	small cell associated with anterior dorsal histoblasts abdominal	FBbt:00000023	abdominal segment 2	FBbt:00001749	larval abdominal segment 2
+FBbt:00001798	anterior dorsal histoblast nest abdominal 3	FBbt:00001792	anterior dorsal histoblast nest abdominal	FBbt:00000024	abdominal segment 3	FBbt:00001750	larval abdominal segment 3
+FBbt:00001799	small cell associated with anterior dorsal histoblasts abdominal 3	FBbt:00001793	small cell associated with anterior dorsal histoblasts abdominal	FBbt:00000024	abdominal segment 3	FBbt:00001750	larval abdominal segment 3
+FBbt:00001800	anterior dorsal histoblast nest abdominal 4	FBbt:00001792	anterior dorsal histoblast nest abdominal	FBbt:00000025	abdominal segment 4	FBbt:00001751	larval abdominal segment 4
+FBbt:00001801	small cell associated with anterior dorsal histoblasts abdominal 4	FBbt:00001793	small cell associated with anterior dorsal histoblasts abdominal	FBbt:00000025	abdominal segment 4	FBbt:00001751	larval abdominal segment 4
+FBbt:00001802	anterior dorsal histoblast nest abdominal 5	FBbt:00001792	anterior dorsal histoblast nest abdominal	FBbt:00000026	abdominal segment 5	FBbt:00001752	larval abdominal segment 5
+FBbt:00001803	small cell associated with anterior dorsal histoblasts abdominal 5	FBbt:00001793	small cell associated with anterior dorsal histoblasts abdominal	FBbt:00000026	abdominal segment 5	FBbt:00001752	larval abdominal segment 5
+FBbt:00001804	anterior dorsal histoblast nest abdominal 6	FBbt:00001792	anterior dorsal histoblast nest abdominal	FBbt:00000027	abdominal segment 6	FBbt:00001753	larval abdominal segment 6
+FBbt:00001805	small cell associated with anterior dorsal histoblasts abdominal 6	FBbt:00001793	small cell associated with anterior dorsal histoblasts abdominal	FBbt:00000027	abdominal segment 6	FBbt:00001753	larval abdominal segment 6
+FBbt:00001806	anterior dorsal histoblast nest abdominal 7	FBbt:00001792	anterior dorsal histoblast nest abdominal	FBbt:00000028	abdominal segment 7	FBbt:00001754	larval abdominal segment 7
+FBbt:00001807	small cell associated with anterior dorsal histoblasts abdominal 7	FBbt:00001793	small cell associated with anterior dorsal histoblasts abdominal	FBbt:00000028	abdominal segment 7	FBbt:00001754	larval abdominal segment 7
+FBbt:00001808	anterior dorsal histoblast nest abdominal 8	FBbt:00001792	anterior dorsal histoblast nest abdominal	FBbt:00000029	abdominal segment 8	FBbt:00001755	larval abdominal segment 8
+FBbt:00001810	posterior dorsal histoblast nest abdominal 1	FBbt:00001809	posterior dorsal histoblast nest abdominal	FBbt:00000022	abdominal segment 1	FBbt:00001748	larval abdominal segment 1
+FBbt:00001811	posterior dorsal histoblast nest abdominal 2	FBbt:00001809	posterior dorsal histoblast nest abdominal	FBbt:00000023	abdominal segment 2	FBbt:00001749	larval abdominal segment 2
+FBbt:00001812	posterior dorsal histoblast nest abdominal 3	FBbt:00001809	posterior dorsal histoblast nest abdominal	FBbt:00000024	abdominal segment 3	FBbt:00001750	larval abdominal segment 3
+FBbt:00001813	posterior dorsal histoblast nest abdominal 4	FBbt:00001809	posterior dorsal histoblast nest abdominal	FBbt:00000025	abdominal segment 4	FBbt:00001751	larval abdominal segment 4
+FBbt:00001814	posterior dorsal histoblast nest abdominal 5	FBbt:00001809	posterior dorsal histoblast nest abdominal	FBbt:00000026	abdominal segment 5	FBbt:00001752	larval abdominal segment 5
+FBbt:00001815	posterior dorsal histoblast nest abdominal 6	FBbt:00001809	posterior dorsal histoblast nest abdominal	FBbt:00000027	abdominal segment 6	FBbt:00001753	larval abdominal segment 6
+FBbt:00001816	posterior dorsal histoblast nest abdominal 7	FBbt:00001809	posterior dorsal histoblast nest abdominal	FBbt:00000028	abdominal segment 7	FBbt:00001754	larval abdominal segment 7
+FBbt:00001817	posterior dorsal histoblast nest abdominal 8	FBbt:00001809	posterior dorsal histoblast nest abdominal	FBbt:00000029	abdominal segment 8	FBbt:00001755	larval abdominal segment 8
+FBbt:00001819	ventral histoblast nest abdominal 1	FBbt:00001818	ventral histoblast nest abdominal	FBbt:00000022	abdominal segment 1	FBbt:00001748	larval abdominal segment 1
+FBbt:00001820	ventral histoblast nest abdominal 2	FBbt:00001818	ventral histoblast nest abdominal	FBbt:00000023	abdominal segment 2	FBbt:00001749	larval abdominal segment 2
+FBbt:00001821	ventral histoblast nest abdominal 3	FBbt:00001818	ventral histoblast nest abdominal	FBbt:00000024	abdominal segment 3	FBbt:00001750	larval abdominal segment 3
+FBbt:00001822	ventral histoblast nest abdominal 4	FBbt:00001818	ventral histoblast nest abdominal	FBbt:00000025	abdominal segment 4	FBbt:00001751	larval abdominal segment 4
+FBbt:00001823	ventral histoblast nest abdominal 5	FBbt:00001818	ventral histoblast nest abdominal	FBbt:00000026	abdominal segment 5	FBbt:00001752	larval abdominal segment 5
+FBbt:00001824	ventral histoblast nest abdominal 6	FBbt:00001818	ventral histoblast nest abdominal	FBbt:00000027	abdominal segment 6	FBbt:00001753	larval abdominal segment 6
+FBbt:00001825	ventral histoblast nest abdominal 7	FBbt:00001818	ventral histoblast nest abdominal	FBbt:00000028	abdominal segment 7	FBbt:00001754	larval abdominal segment 7
+FBbt:00001827	spiracular histoblast nest abdominal 1	FBbt:00001826	spiracular histoblast nest abdominal	FBbt:00000022	abdominal segment 1	FBbt:00001748	larval abdominal segment 1
+FBbt:00001828	spiracular histoblast nest abdominal 2	FBbt:00001826	spiracular histoblast nest abdominal	FBbt:00000023	abdominal segment 2	FBbt:00001749	larval abdominal segment 2
+FBbt:00001829	spiracular histoblast nest abdominal 3	FBbt:00001826	spiracular histoblast nest abdominal	FBbt:00000024	abdominal segment 3	FBbt:00001750	larval abdominal segment 3
+FBbt:00001830	spiracular histoblast nest abdominal 4	FBbt:00001826	spiracular histoblast nest abdominal	FBbt:00000025	abdominal segment 4	FBbt:00001751	larval abdominal segment 4
+FBbt:00001831	spiracular histoblast nest abdominal 5	FBbt:00001826	spiracular histoblast nest abdominal	FBbt:00000026	abdominal segment 5	FBbt:00001752	larval abdominal segment 5
+FBbt:00001832	spiracular histoblast nest abdominal 6	FBbt:00001826	spiracular histoblast nest abdominal	FBbt:00000027	abdominal segment 6	FBbt:00001753	larval abdominal segment 6
+FBbt:00001833	spiracular histoblast nest abdominal 7	FBbt:00001826	spiracular histoblast nest abdominal	FBbt:00000028	abdominal segment 7	FBbt:00001754	larval abdominal segment 7
+FBbt:00001957	embryonic/larval deutocerebrum	FBbt:00001912	larval neuromere	FBbt:00000009	antennal segment	FBbt:00001735	larval antennal segment
+FBbt:00001962	embryonic/larval tritocerebrum	FBbt:00001912	larval neuromere	FBbt:00000010	intercalary segment	FBbt:00001736	larval intercalary segment
+FBbt:00001973	larval mandibular neuromere	FBbt:00001912	larval neuromere	FBbt:00000012	mandibular segment	FBbt:00001738	larval mandibular segment
+FBbt:00001974	larval labial neuromere	FBbt:00001912	larval neuromere	FBbt:00000014	labial segment	FBbt:00001740	larval labial segment
+FBbt:00001975	larval maxillary neuromere	FBbt:00001912	larval neuromere	FBbt:00000013	maxillary segment	FBbt:00001739	larval maxillary segment
+FBbt:00002063	prothoracic nerve	FBbt:00005105	nerve	FBbt:00000017	prothoracic segment		
+FBbt:00002064	larval prothoracic intersegmental nerve	FBbt:00001997	larval intersegmental nerve	FBbt:00000017	prothoracic segment	FBbt:00001743	larval prothoracic segment
+FBbt:00002085	larval prothoracic segmental nerve	FBbt:00002037	larval segmental nerve	FBbt:00000017	prothoracic segment	FBbt:00001743	larval prothoracic segment
+FBbt:00002103	mesothoracic nerve	FBbt:00005105	nerve	FBbt:00000018	mesothoracic segment		
+FBbt:00002104	larval mesothoracic intersegmental nerve	FBbt:00001997	larval intersegmental nerve	FBbt:00000018	mesothoracic segment	FBbt:00001744	larval mesothoracic segment
+FBbt:00002125	larval mesothoracic segmental nerve	FBbt:00002037	larval segmental nerve	FBbt:00000018	mesothoracic segment	FBbt:00001744	larval mesothoracic segment
+FBbt:00002141	metathoracic nerve	FBbt:00005105	nerve	FBbt:00000019	metathoracic segment		
+FBbt:00002142	larval metathoracic intersegmental nerve	FBbt:00001997	larval intersegmental nerve	FBbt:00000019	metathoracic segment	FBbt:00001745	larval metathoracic segment
+FBbt:00002163	larval metathoracic segmental nerve	FBbt:00002037	larval segmental nerve	FBbt:00000019	metathoracic segment	FBbt:00001745	larval metathoracic segment
+FBbt:00002197	larval abdominal segmental nerve	FBbt:00002037	larval segmental nerve	FBbt:00000021	abdominal segment	FBbt:00007586	larval abdominal segment A1-7
+FBbt:00002319	larval abdominal intersegmental nerve	FBbt:00001997	larval intersegmental nerve	FBbt:00000021	abdominal segment	FBbt:00007586	larval abdominal segment A1-7
+FBbt:00002598	larval abdominal 1 median nerve	FBbt:00002597	larval abdominal median nerve	FBbt:00000022	abdominal segment 1	FBbt:00001748	larval abdominal segment 1
+FBbt:00002599	larval abdominal 2 median nerve	FBbt:00002597	larval abdominal median nerve	FBbt:00000023	abdominal segment 2	FBbt:00001749	larval abdominal segment 2
+FBbt:00002600	larval abdominal 3 median nerve	FBbt:00002597	larval abdominal median nerve	FBbt:00000024	abdominal segment 3	FBbt:00001750	larval abdominal segment 3
+FBbt:00002601	larval abdominal 4 median nerve	FBbt:00002597	larval abdominal median nerve	FBbt:00000025	abdominal segment 4	FBbt:00001751	larval abdominal segment 4
+FBbt:00002602	larval abdominal 5 median nerve	FBbt:00002597	larval abdominal median nerve	FBbt:00000026	abdominal segment 5	FBbt:00001752	larval abdominal segment 5
+FBbt:00002603	larval abdominal 6 median nerve	FBbt:00002597	larval abdominal median nerve	FBbt:00000027	abdominal segment 6	FBbt:00001753	larval abdominal segment 6
+FBbt:00002604	larval abdominal 7 median nerve	FBbt:00002597	larval abdominal median nerve	FBbt:00000028	abdominal segment 7	FBbt:00001754	larval abdominal segment 7
+FBbt:00002605	larval abdominal 8 median nerve	FBbt:00002597	larval abdominal median nerve	FBbt:00000029	abdominal segment 8	FBbt:00001755	larval abdominal segment 8
+FBbt:00002642	embryonic/larval ocular segment sensillum	FBbt:00002639	embryonic/larval sense organ	FBbt:00000005	ocular segment	FBbt:00001731	larval ocular segment
+FBbt:00002649	embryonic/larval labral segment sense organ	FBbt:00002639	embryonic/larval sense organ	FBbt:00000008	labral segment	FBbt:00001734	larval labral segment
+FBbt:00002654	embryonic/larval antennal segment sensillum	FBbt:00002639	embryonic/larval sense organ	FBbt:00000009	antennal segment	FBbt:00001735	larval antennal segment
+FBbt:00002664	intercalary segment sense organ	FBbt:00005155	sense organ	FBbt:00000010	intercalary segment		
+FBbt:00002685	larval mandibular segment sensillum	FBbt:00002639	embryonic/larval sense organ	FBbt:00000012	mandibular segment	FBbt:00001738	larval mandibular segment
+FBbt:00002689	larval maxillary segment sense organ	FBbt:00002639	embryonic/larval sense organ	FBbt:00000013	maxillary segment	FBbt:00001739	larval maxillary segment
+FBbt:00002718	embryonic/larval labial segment sensillum	FBbt:00007240	embryonic/larval sensillum	FBbt:00000014	labial segment	FBbt:00001740	larval labial segment
+FBbt:00002721	labial sensillum	FBbt:00007152	sensillum	FBbt:00000014	labial segment		
+FBbt:00002725	embryonic/larval prothoracic sensillum	FBbt:00007240	embryonic/larval sensillum	FBbt:00000017	prothoracic segment	FBbt:00001743	larval prothoracic segment
+FBbt:00002744	prothoracic dorsal trichome	FBbt:00004980	dorsal hair	FBbt:00000017	prothoracic segment	FBbt:00001743	larval prothoracic segment
+FBbt:00002745	prothoracic ventral denticle belt	FBbt:00005201	denticle belt	FBbt:00000017	prothoracic segment	FBbt:00001743	larval prothoracic segment
+FBbt:00002746	larval mesothoracic sensillum	FBbt:00007240	embryonic/larval sensillum	FBbt:00000018	mesothoracic segment	FBbt:00001744	larval mesothoracic segment
+FBbt:00002762	mesothoracic dorsal trichome	FBbt:00004980	dorsal hair	FBbt:00000018	mesothoracic segment	FBbt:00001744	larval mesothoracic segment
+FBbt:00002763	mesothoracic ventral denticle belt	FBbt:00005201	denticle belt	FBbt:00000018	mesothoracic segment	FBbt:00001744	larval mesothoracic segment
+FBbt:00002764	larval metathoracic sensillum	FBbt:00007240	embryonic/larval sensillum	FBbt:00000019	metathoracic segment	FBbt:00001745	larval metathoracic segment
+FBbt:00002780	metathoracic dorsal trichome	FBbt:00004980	dorsal hair	FBbt:00000019	metathoracic segment	FBbt:00001745	larval metathoracic segment
+FBbt:00002781	metathoracic ventral denticle belt	FBbt:00005201	denticle belt	FBbt:00000019	metathoracic segment	FBbt:00001745	larval metathoracic segment
+FBbt:00002784	abdominal 1 dorsal trichoid sensillum dh1	FBbt:00002783	abdominal dorsal trichoid sensillum dh1	FBbt:00000022	abdominal segment 1	FBbt:00001748	larval abdominal segment 1
+FBbt:00002785	abdominal 2 dorsal trichoid sensillum dh1	FBbt:00002783	abdominal dorsal trichoid sensillum dh1	FBbt:00000023	abdominal segment 2	FBbt:00001749	larval abdominal segment 2
+FBbt:00002786	abdominal 3 dorsal trichoid sensillum dh1	FBbt:00002783	abdominal dorsal trichoid sensillum dh1	FBbt:00000024	abdominal segment 3	FBbt:00001750	larval abdominal segment 3
+FBbt:00002787	abdominal 4 dorsal trichoid sensillum dh1	FBbt:00002783	abdominal dorsal trichoid sensillum dh1	FBbt:00000025	abdominal segment 4	FBbt:00001751	larval abdominal segment 4
+FBbt:00002788	abdominal 5 dorsal trichoid sensillum dh1	FBbt:00002783	abdominal dorsal trichoid sensillum dh1	FBbt:00000026	abdominal segment 5	FBbt:00001752	larval abdominal segment 5
+FBbt:00002789	abdominal 6 dorsal trichoid sensillum dh1	FBbt:00002783	abdominal dorsal trichoid sensillum dh1	FBbt:00000027	abdominal segment 6	FBbt:00001753	larval abdominal segment 6
+FBbt:00002790	abdominal 7 dorsal trichoid sensillum dh1	FBbt:00002783	abdominal dorsal trichoid sensillum dh1	FBbt:00000028	abdominal segment 7	FBbt:00001754	larval abdominal segment 7
+FBbt:00002800	abdominal 1 dorsal campaniform sensillum dc1	FBbt:00002799	abdominal dorsal campaniform sensillum dc1	FBbt:00000022	abdominal segment 1	FBbt:00001748	larval abdominal segment 1
+FBbt:00002801	abdominal 2 dorsal campaniform sensillum dc1	FBbt:00002799	abdominal dorsal campaniform sensillum dc1	FBbt:00000023	abdominal segment 2	FBbt:00001749	larval abdominal segment 2
+FBbt:00002802	abdominal 3 dorsal campaniform sensillum dc1	FBbt:00002799	abdominal dorsal campaniform sensillum dc1	FBbt:00000024	abdominal segment 3	FBbt:00001750	larval abdominal segment 3
+FBbt:00002803	abdominal 4 dorsal campaniform sensillum dc1	FBbt:00002799	abdominal dorsal campaniform sensillum dc1	FBbt:00000025	abdominal segment 4	FBbt:00001751	larval abdominal segment 4
+FBbt:00002804	abdominal 5 dorsal campaniform sensillum dc1	FBbt:00002799	abdominal dorsal campaniform sensillum dc1	FBbt:00000026	abdominal segment 5	FBbt:00001752	larval abdominal segment 5
+FBbt:00002805	abdominal 6 dorsal campaniform sensillum dc1	FBbt:00002799	abdominal dorsal campaniform sensillum dc1	FBbt:00000027	abdominal segment 6	FBbt:00001753	larval abdominal segment 6
+FBbt:00002806	abdominal 7 dorsal campaniform sensillum dc1	FBbt:00002799	abdominal dorsal campaniform sensillum dc1	FBbt:00000028	abdominal segment 7	FBbt:00001754	larval abdominal segment 7
+FBbt:00002808	abdominal 1 dorsal campaniform sensillum dc2	FBbt:00002807	abdominal dorsal campaniform sensillum dc2	FBbt:00000022	abdominal segment 1	FBbt:00001748	larval abdominal segment 1
+FBbt:00002809	abdominal 2 dorsal campaniform sensillum dc2	FBbt:00002807	abdominal dorsal campaniform sensillum dc2	FBbt:00000023	abdominal segment 2	FBbt:00001749	larval abdominal segment 2
+FBbt:00002810	abdominal 3 dorsal campaniform sensillum dc2	FBbt:00002807	abdominal dorsal campaniform sensillum dc2	FBbt:00000024	abdominal segment 3	FBbt:00001750	larval abdominal segment 3
+FBbt:00002811	abdominal 4 dorsal campaniform sensillum dc2	FBbt:00002807	abdominal dorsal campaniform sensillum dc2	FBbt:00000025	abdominal segment 4	FBbt:00001751	larval abdominal segment 4
+FBbt:00002812	abdominal 5 dorsal campaniform sensillum dc2	FBbt:00002807	abdominal dorsal campaniform sensillum dc2	FBbt:00000026	abdominal segment 5	FBbt:00001752	larval abdominal segment 5
+FBbt:00002813	abdominal 6 dorsal campaniform sensillum dc2	FBbt:00002807	abdominal dorsal campaniform sensillum dc2	FBbt:00000027	abdominal segment 6	FBbt:00001753	larval abdominal segment 6
+FBbt:00002814	abdominal 7 dorsal campaniform sensillum dc2	FBbt:00002807	abdominal dorsal campaniform sensillum dc2	FBbt:00000028	abdominal segment 7	FBbt:00001754	larval abdominal segment 7
+FBbt:00002824	abdominal 1 lateral monoscolopidial chordotonal organ lch1	FBbt:00002823	abdominal lateral monoscolopidial chordotonal organ lch1	FBbt:00000022	abdominal segment 1	FBbt:00001748	larval abdominal segment 1
+FBbt:00002825	abdominal 2 lateral monoscolopidial chordotonal organ lch1	FBbt:00002823	abdominal lateral monoscolopidial chordotonal organ lch1	FBbt:00000023	abdominal segment 2	FBbt:00001749	larval abdominal segment 2
+FBbt:00002826	abdominal 3 lateral monoscolopidial chordotonal organ lch1	FBbt:00002823	abdominal lateral monoscolopidial chordotonal organ lch1	FBbt:00000024	abdominal segment 3	FBbt:00001750	larval abdominal segment 3
+FBbt:00002827	abdominal 4 lateral monoscolopidial chordotonal organ lch1	FBbt:00002823	abdominal lateral monoscolopidial chordotonal organ lch1	FBbt:00000025	abdominal segment 4	FBbt:00001751	larval abdominal segment 4
+FBbt:00002828	abdominal 5 lateral monoscolopidial chordotonal organ lch1	FBbt:00002823	abdominal lateral monoscolopidial chordotonal organ lch1	FBbt:00000026	abdominal segment 5	FBbt:00001752	larval abdominal segment 5
+FBbt:00002829	abdominal 6 lateral monoscolopidial chordotonal organ lch1	FBbt:00002823	abdominal lateral monoscolopidial chordotonal organ lch1	FBbt:00000027	abdominal segment 6	FBbt:00001753	larval abdominal segment 6
+FBbt:00002830	abdominal 7 lateral monoscolopidial chordotonal organ lch1	FBbt:00002823	abdominal lateral monoscolopidial chordotonal organ lch1	FBbt:00000028	abdominal segment 7	FBbt:00001754	larval abdominal segment 7
+FBbt:00002832	abdominal 1 lateral pentascolopidial chordotonal organ lch5	FBbt:00002831	abdominal lateral pentascolopidial chordotonal organ lch5	FBbt:00000022	abdominal segment 1	FBbt:00001748	larval abdominal segment 1
+FBbt:00002833	abdominal 2 lateral pentascolopidial chordotonal organ lch5	FBbt:00002831	abdominal lateral pentascolopidial chordotonal organ lch5	FBbt:00000023	abdominal segment 2	FBbt:00001749	larval abdominal segment 2
+FBbt:00002834	abdominal 3 lateral pentascolopidial chordotonal organ lch5	FBbt:00002831	abdominal lateral pentascolopidial chordotonal organ lch5	FBbt:00000024	abdominal segment 3	FBbt:00001750	larval abdominal segment 3
+FBbt:00002835	abdominal 4 lateral pentascolopidial chordotonal organ lch5	FBbt:00002831	abdominal lateral pentascolopidial chordotonal organ lch5	FBbt:00000025	abdominal segment 4	FBbt:00001751	larval abdominal segment 4
+FBbt:00002836	abdominal 5 lateral pentascolopidial chordotonal organ lch5	FBbt:00002831	abdominal lateral pentascolopidial chordotonal organ lch5	FBbt:00000026	abdominal segment 5	FBbt:00001752	larval abdominal segment 5
+FBbt:00002837	abdominal 6 lateral pentascolopidial chordotonal organ lch5	FBbt:00002831	abdominal lateral pentascolopidial chordotonal organ lch5	FBbt:00000027	abdominal segment 6	FBbt:00001753	larval abdominal segment 6
+FBbt:00002838	abdominal 7 lateral pentascolopidial chordotonal organ lch5	FBbt:00002831	abdominal lateral pentascolopidial chordotonal organ lch5	FBbt:00000028	abdominal segment 7	FBbt:00001754	larval abdominal segment 7
+FBbt:00002840	abdominal 1 lateral trichoid sensillum lh1	FBbt:00002839	abdominal lateral trichoid sensillum lh1	FBbt:00000022	abdominal segment 1	FBbt:00001748	larval abdominal segment 1
+FBbt:00002841	abdominal 2 lateral trichoid sensillum lh1	FBbt:00002839	abdominal lateral trichoid sensillum lh1	FBbt:00000023	abdominal segment 2	FBbt:00001749	larval abdominal segment 2
+FBbt:00002842	abdominal 3 lateral trichoid sensillum lh1	FBbt:00002839	abdominal lateral trichoid sensillum lh1	FBbt:00000024	abdominal segment 3	FBbt:00001750	larval abdominal segment 3
+FBbt:00002843	abdominal 4 lateral trichoid sensillum lh1	FBbt:00002839	abdominal lateral trichoid sensillum lh1	FBbt:00000025	abdominal segment 4	FBbt:00001751	larval abdominal segment 4
+FBbt:00002844	abdominal 5 lateral trichoid sensillum lh1	FBbt:00002839	abdominal lateral trichoid sensillum lh1	FBbt:00000026	abdominal segment 5	FBbt:00001752	larval abdominal segment 5
+FBbt:00002845	abdominal 6 lateral trichoid sensillum lh1	FBbt:00002839	abdominal lateral trichoid sensillum lh1	FBbt:00000027	abdominal segment 6	FBbt:00001753	larval abdominal segment 6
+FBbt:00002846	abdominal 7 lateral trichoid sensillum lh1	FBbt:00002839	abdominal lateral trichoid sensillum lh1	FBbt:00000028	abdominal segment 7	FBbt:00001754	larval abdominal segment 7
+FBbt:00002848	abdominal 1 lateral trichoid sensillum lh2	FBbt:00002847	abdominal lateral trichoid sensillum lh2	FBbt:00000022	abdominal segment 1	FBbt:00001748	larval abdominal segment 1
+FBbt:00002849	abdominal 2 lateral trichoid sensillum lh2	FBbt:00002847	abdominal lateral trichoid sensillum lh2	FBbt:00000023	abdominal segment 2	FBbt:00001749	larval abdominal segment 2
+FBbt:00002850	abdominal 3 lateral trichoid sensillum lh2	FBbt:00002847	abdominal lateral trichoid sensillum lh2	FBbt:00000024	abdominal segment 3	FBbt:00001750	larval abdominal segment 3
+FBbt:00002851	abdominal 4 lateral trichoid sensillum lh2	FBbt:00002847	abdominal lateral trichoid sensillum lh2	FBbt:00000025	abdominal segment 4	FBbt:00001751	larval abdominal segment 4
+FBbt:00002852	abdominal 5 lateral trichoid sensillum lh2	FBbt:00002847	abdominal lateral trichoid sensillum lh2	FBbt:00000026	abdominal segment 5	FBbt:00001752	larval abdominal segment 5
+FBbt:00002853	abdominal 6 lateral trichoid sensillum lh2	FBbt:00002847	abdominal lateral trichoid sensillum lh2	FBbt:00000027	abdominal segment 6	FBbt:00001753	larval abdominal segment 6
+FBbt:00002854	abdominal 7 lateral trichoid sensillum lh2	FBbt:00002847	abdominal lateral trichoid sensillum lh2	FBbt:00000028	abdominal segment 7	FBbt:00001754	larval abdominal segment 7
+FBbt:00002856	abdominal 1 lateral campaniform sensillum lc1	FBbt:00002855	abdominal lateral campaniform sensillum lc1	FBbt:00000022	abdominal segment 1	FBbt:00001748	larval abdominal segment 1
+FBbt:00002857	abdominal 2 lateral campaniform sensillum lc1	FBbt:00002855	abdominal lateral campaniform sensillum lc1	FBbt:00000023	abdominal segment 2	FBbt:00001749	larval abdominal segment 2
+FBbt:00002858	abdominal 3 lateral campaniform sensillum lc1	FBbt:00002855	abdominal lateral campaniform sensillum lc1	FBbt:00000024	abdominal segment 3	FBbt:00001750	larval abdominal segment 3
+FBbt:00002859	abdominal 4 lateral campaniform sensillum lc1	FBbt:00002855	abdominal lateral campaniform sensillum lc1	FBbt:00000025	abdominal segment 4	FBbt:00001751	larval abdominal segment 4
+FBbt:00002860	abdominal 5 lateral campaniform sensillum lc1	FBbt:00002855	abdominal lateral campaniform sensillum lc1	FBbt:00000026	abdominal segment 5	FBbt:00001752	larval abdominal segment 5
+FBbt:00002861	abdominal 6 lateral campaniform sensillum lc1	FBbt:00002855	abdominal lateral campaniform sensillum lc1	FBbt:00000027	abdominal segment 6	FBbt:00001753	larval abdominal segment 6
+FBbt:00002862	abdominal 7 lateral campaniform sensillum lc1	FBbt:00002855	abdominal lateral campaniform sensillum lc1	FBbt:00000028	abdominal segment 7	FBbt:00001754	larval abdominal segment 7
+FBbt:00002864	abdominal 1 ventral campaniform sensillum vc1	FBbt:00002863	abdominal ventral campaniform sensillum vc1	FBbt:00000022	abdominal segment 1	FBbt:00001748	larval abdominal segment 1
+FBbt:00002865	abdominal 2 ventral campaniform sensillum vc1	FBbt:00002863	abdominal ventral campaniform sensillum vc1	FBbt:00000023	abdominal segment 2	FBbt:00001749	larval abdominal segment 2
+FBbt:00002866	abdominal 3 ventral campaniform sensillum vc1	FBbt:00002863	abdominal ventral campaniform sensillum vc1	FBbt:00000024	abdominal segment 3	FBbt:00001750	larval abdominal segment 3
+FBbt:00002867	abdominal 4 ventral campaniform sensillum vc1	FBbt:00002863	abdominal ventral campaniform sensillum vc1	FBbt:00000025	abdominal segment 4	FBbt:00001751	larval abdominal segment 4
+FBbt:00002868	abdominal 5 ventral campaniform sensillum vc1	FBbt:00002863	abdominal ventral campaniform sensillum vc1	FBbt:00000026	abdominal segment 5	FBbt:00001752	larval abdominal segment 5
+FBbt:00002869	abdominal 6 ventral campaniform sensillum vc1	FBbt:00002863	abdominal ventral campaniform sensillum vc1	FBbt:00000027	abdominal segment 6	FBbt:00001753	larval abdominal segment 6
+FBbt:00002870	abdominal 7 ventral campaniform sensillum vc1	FBbt:00002863	abdominal ventral campaniform sensillum vc1	FBbt:00000028	abdominal segment 7	FBbt:00001754	larval abdominal segment 7
+FBbt:00002872	abdominal 1 ventral campaniform sensillum vc2	FBbt:00002871	abdominal ventral campaniform sensillum vc2	FBbt:00000022	abdominal segment 1	FBbt:00001748	larval abdominal segment 1
+FBbt:00002873	abdominal 2 ventral campaniform sensillum vc2	FBbt:00002871	abdominal ventral campaniform sensillum vc2	FBbt:00000023	abdominal segment 2	FBbt:00001749	larval abdominal segment 2
+FBbt:00002874	abdominal 3 ventral campaniform sensillum vc2	FBbt:00002871	abdominal ventral campaniform sensillum vc2	FBbt:00000024	abdominal segment 3	FBbt:00001750	larval abdominal segment 3
+FBbt:00002875	abdominal 4 ventral campaniform sensillum vc2	FBbt:00002871	abdominal ventral campaniform sensillum vc2	FBbt:00000025	abdominal segment 4	FBbt:00001751	larval abdominal segment 4
+FBbt:00002876	abdominal 5 ventral campaniform sensillum vc2	FBbt:00002871	abdominal ventral campaniform sensillum vc2	FBbt:00000026	abdominal segment 5	FBbt:00001752	larval abdominal segment 5
+FBbt:00002877	abdominal 6 ventral campaniform sensillum vc2	FBbt:00002871	abdominal ventral campaniform sensillum vc2	FBbt:00000027	abdominal segment 6	FBbt:00001753	larval abdominal segment 6
+FBbt:00002878	abdominal 7 ventral campaniform sensillum vc2	FBbt:00002871	abdominal ventral campaniform sensillum vc2	FBbt:00000028	abdominal segment 7	FBbt:00001754	larval abdominal segment 7
+FBbt:00002880	abdominal 1 ventral campaniform sensillum vc3	FBbt:00002879	abdominal ventral campaniform sensillum vc3	FBbt:00000022	abdominal segment 1	FBbt:00001748	larval abdominal segment 1
+FBbt:00002881	abdominal 2 ventral campaniform sensillum vc3	FBbt:00002879	abdominal ventral campaniform sensillum vc3	FBbt:00000023	abdominal segment 2	FBbt:00001749	larval abdominal segment 2
+FBbt:00002882	abdominal 3 ventral campaniform sensillum vc3	FBbt:00002879	abdominal ventral campaniform sensillum vc3	FBbt:00000024	abdominal segment 3	FBbt:00001750	larval abdominal segment 3
+FBbt:00002883	abdominal 4 ventral campaniform sensillum vc3	FBbt:00002879	abdominal ventral campaniform sensillum vc3	FBbt:00000025	abdominal segment 4	FBbt:00001751	larval abdominal segment 4
+FBbt:00002884	abdominal 5 ventral campaniform sensillum vc3	FBbt:00002879	abdominal ventral campaniform sensillum vc3	FBbt:00000026	abdominal segment 5	FBbt:00001752	larval abdominal segment 5
+FBbt:00002885	abdominal 6 ventral campaniform sensillum vc3	FBbt:00002879	abdominal ventral campaniform sensillum vc3	FBbt:00000027	abdominal segment 6	FBbt:00001753	larval abdominal segment 6
+FBbt:00002886	abdominal 7 ventral campaniform sensillum vc3	FBbt:00002879	abdominal ventral campaniform sensillum vc3	FBbt:00000028	abdominal segment 7	FBbt:00001754	larval abdominal segment 7
+FBbt:00002888	abdominal 1 ventral campaniform sensillum vc4a	FBbt:00002887	abdominal ventral campaniform sensillum vc4a	FBbt:00000022	abdominal segment 1	FBbt:00001748	larval abdominal segment 1
+FBbt:00002889	abdominal 2 ventral campaniform sensillum vc4a	FBbt:00002887	abdominal ventral campaniform sensillum vc4a	FBbt:00000023	abdominal segment 2	FBbt:00001749	larval abdominal segment 2
+FBbt:00002890	abdominal 3 ventral campaniform sensillum vc4a	FBbt:00002887	abdominal ventral campaniform sensillum vc4a	FBbt:00000024	abdominal segment 3	FBbt:00001750	larval abdominal segment 3
+FBbt:00002891	abdominal 4 ventral campaniform sensillum vc4a	FBbt:00002887	abdominal ventral campaniform sensillum vc4a	FBbt:00000025	abdominal segment 4	FBbt:00001751	larval abdominal segment 4
+FBbt:00002892	abdominal 5 ventral campaniform sensillum vc4a	FBbt:00002887	abdominal ventral campaniform sensillum vc4a	FBbt:00000026	abdominal segment 5	FBbt:00001752	larval abdominal segment 5
+FBbt:00002893	abdominal 6 ventral campaniform sensillum vc4a	FBbt:00002887	abdominal ventral campaniform sensillum vc4a	FBbt:00000027	abdominal segment 6	FBbt:00001753	larval abdominal segment 6
+FBbt:00002894	abdominal 7 ventral campaniform sensillum vc4a	FBbt:00002887	abdominal ventral campaniform sensillum vc4a	FBbt:00000028	abdominal segment 7	FBbt:00001754	larval abdominal segment 7
+FBbt:00002896	abdominal 1 ventral campaniform sensillum vc4b	FBbt:00002895	abdominal ventral campaniform sensillum vc4b	FBbt:00000022	abdominal segment 1	FBbt:00001748	larval abdominal segment 1
+FBbt:00002897	abdominal 2 ventral campaniform sensillum vc4b	FBbt:00002895	abdominal ventral campaniform sensillum vc4b	FBbt:00000023	abdominal segment 2	FBbt:00001749	larval abdominal segment 2
+FBbt:00002898	abdominal 3 ventral campaniform sensillum vc4b	FBbt:00002895	abdominal ventral campaniform sensillum vc4b	FBbt:00000024	abdominal segment 3	FBbt:00001750	larval abdominal segment 3
+FBbt:00002899	abdominal 4 ventral campaniform sensillum vc4b	FBbt:00002895	abdominal ventral campaniform sensillum vc4b	FBbt:00000025	abdominal segment 4	FBbt:00001751	larval abdominal segment 4
+FBbt:00002900	abdominal 5 ventral campaniform sensillum vc4b	FBbt:00002895	abdominal ventral campaniform sensillum vc4b	FBbt:00000026	abdominal segment 5	FBbt:00001752	larval abdominal segment 5
+FBbt:00002901	abdominal 6 ventral campaniform sensillum vc4b	FBbt:00002895	abdominal ventral campaniform sensillum vc4b	FBbt:00000027	abdominal segment 6	FBbt:00001753	larval abdominal segment 6
+FBbt:00002902	abdominal 7 ventral campaniform sensillum vc4b	FBbt:00002895	abdominal ventral campaniform sensillum vc4b	FBbt:00000028	abdominal segment 7	FBbt:00001754	larval abdominal segment 7
+FBbt:00002905	abdominal 1 ventral monoscolopidial chordotonal organ vch1	FBbt:00002904	abdominal ventral monoscolopidial chordotonal organ vch1	FBbt:00000022	abdominal segment 1	FBbt:00001748	larval abdominal segment 1
+FBbt:00002906	abdominal 2 ventral monoscolopidial chordotonal organ vch1	FBbt:00002904	abdominal ventral monoscolopidial chordotonal organ vch1	FBbt:00000023	abdominal segment 2	FBbt:00001749	larval abdominal segment 2
+FBbt:00002907	abdominal 3 ventral monoscolopidial chordotonal organ vch1	FBbt:00002904	abdominal ventral monoscolopidial chordotonal organ vch1	FBbt:00000024	abdominal segment 3	FBbt:00001750	larval abdominal segment 3
+FBbt:00002908	abdominal 4 ventral monoscolopidial chordotonal organ vch1	FBbt:00002904	abdominal ventral monoscolopidial chordotonal organ vch1	FBbt:00000025	abdominal segment 4	FBbt:00001751	larval abdominal segment 4
+FBbt:00002909	abdominal 5 ventral monoscolopidial chordotonal organ vch1	FBbt:00002904	abdominal ventral monoscolopidial chordotonal organ vch1	FBbt:00000026	abdominal segment 5	FBbt:00001752	larval abdominal segment 5
+FBbt:00002910	abdominal 6 ventral monoscolopidial chordotonal organ vch1	FBbt:00002904	abdominal ventral monoscolopidial chordotonal organ vch1	FBbt:00000027	abdominal segment 6	FBbt:00001753	larval abdominal segment 6
+FBbt:00002911	abdominal 7 ventral monoscolopidial chordotonal organ vch1	FBbt:00002904	abdominal ventral monoscolopidial chordotonal organ vch1	FBbt:00000028	abdominal segment 7	FBbt:00001754	larval abdominal segment 7
+FBbt:00002912	abdominal dorsal trichome	FBbt:00004980	dorsal hair	FBbt:00000021	abdominal segment	FBbt:00001747	larval abdominal segment
+FBbt:00002913	abdominal 1 dorsal trichome	FBbt:00004980	dorsal hair	FBbt:00000022	abdominal segment 1	FBbt:00001748	larval abdominal segment 1
+FBbt:00002914	abdominal 2 dorsal trichome	FBbt:00004980	dorsal hair	FBbt:00000023	abdominal segment 2	FBbt:00001749	larval abdominal segment 2
+FBbt:00002915	abdominal 3 dorsal trichome	FBbt:00004980	dorsal hair	FBbt:00000024	abdominal segment 3	FBbt:00001750	larval abdominal segment 3
+FBbt:00002916	abdominal 4 dorsal trichome	FBbt:00004980	dorsal hair	FBbt:00000025	abdominal segment 4	FBbt:00001751	larval abdominal segment 4
+FBbt:00002917	abdominal 5 dorsal trichome	FBbt:00004980	dorsal hair	FBbt:00000026	abdominal segment 5	FBbt:00001752	larval abdominal segment 5
+FBbt:00002918	abdominal 6 dorsal trichome	FBbt:00004980	dorsal hair	FBbt:00000027	abdominal segment 6	FBbt:00001753	larval abdominal segment 6
+FBbt:00002919	abdominal 7 dorsal trichome	FBbt:00004980	dorsal hair	FBbt:00000028	abdominal segment 7	FBbt:00001754	larval abdominal segment 7
+FBbt:00002920	abdominal ventral denticle belt	FBbt:00005201	denticle belt	FBbt:00000021	abdominal segment	FBbt:00001747	larval abdominal segment
+FBbt:00002921	abdominal 1 ventral denticle belt	FBbt:00005201	denticle belt	FBbt:00000022	abdominal segment 1	FBbt:00001748	larval abdominal segment 1
+FBbt:00002922	abdominal 2 ventral denticle belt	FBbt:00005201	denticle belt	FBbt:00000023	abdominal segment 2	FBbt:00001749	larval abdominal segment 2
+FBbt:00002923	abdominal 3 ventral denticle belt	FBbt:00005201	denticle belt	FBbt:00000024	abdominal segment 3	FBbt:00001750	larval abdominal segment 3
+FBbt:00002924	abdominal 4 ventral denticle belt	FBbt:00005201	denticle belt	FBbt:00000025	abdominal segment 4	FBbt:00001751	larval abdominal segment 4
+FBbt:00002925	abdominal 5 ventral denticle belt	FBbt:00005201	denticle belt	FBbt:00000026	abdominal segment 5	FBbt:00001752	larval abdominal segment 5
+FBbt:00002926	abdominal 6 ventral denticle belt	FBbt:00005201	denticle belt	FBbt:00000027	abdominal segment 6	FBbt:00001753	larval abdominal segment 6
+FBbt:00002927	abdominal 7 ventral denticle belt	FBbt:00005201	denticle belt	FBbt:00000028	abdominal segment 7	FBbt:00001754	larval abdominal segment 7
+FBbt:00002928	embryonic/larval abdominal 8 sensillum	FBbt:00007240	embryonic/larval sensillum	FBbt:00000029	abdominal segment 8	FBbt:00001755	larval abdominal segment 8
+FBbt:00002940	abdominal 8 dorsal trichome	FBbt:00004980	dorsal hair	FBbt:00000029	abdominal segment 8	FBbt:00001755	larval abdominal segment 8
+FBbt:00002941	abdominal 8 ventral denticle belt	FBbt:00005201	denticle belt	FBbt:00000029	abdominal segment 8	FBbt:00001755	larval abdominal segment 8
+FBbt:00002942	embryonic/larval abdominal 9 sensillum	FBbt:00007240	embryonic/larval sensillum	FBbt:00000030	abdominal segment 9	FBbt:00001756	larval abdominal segment 9
+FBbt:00002946	abdominal 9 ventral denticle belt	FBbt:00005201	denticle belt	FBbt:00000030	abdominal segment 9	FBbt:00001756	larval abdominal segment 9
+FBbt:00002947	embryonic/larval abdominal 10 sensillum	FBbt:00007240	embryonic/larval sensillum	FBbt:00000031	abdominal segment 10	FBbt:00001757	larval abdominal segment 10
+FBbt:00002950	embryonic/larval abdominal 11 sensillum	FBbt:00007240	embryonic/larval sensillum	FBbt:00000032	abdominal segment 11	FBbt:00001758	larval abdominal segment 11
+FBbt:00003043	adult tracheal transverse connective 2	FBbt:00003041	adult tracheal transverse connective	FBbt:00000022	abdominal segment 1	FBbt:00003025	adult abdominal segment 1
+FBbt:00003044	adult tracheal transverse connective 3	FBbt:00003041	adult tracheal transverse connective	FBbt:00000023	abdominal segment 2	FBbt:00003026	adult abdominal segment 2
+FBbt:00003045	adult tracheal transverse connective 4	FBbt:00003041	adult tracheal transverse connective	FBbt:00000024	abdominal segment 3	FBbt:00003027	adult abdominal segment 3
+FBbt:00003046	adult tracheal transverse connective 5	FBbt:00003041	adult tracheal transverse connective	FBbt:00000025	abdominal segment 4	FBbt:00003028	adult abdominal segment 4
+FBbt:00003047	adult tracheal transverse connective 6	FBbt:00003041	adult tracheal transverse connective	FBbt:00000026	abdominal segment 5	FBbt:00003029	adult abdominal segment 5
+FBbt:00003048	adult tracheal transverse connective 7	FBbt:00003041	adult tracheal transverse connective	FBbt:00000027	abdominal segment 6	FBbt:00003030	adult abdominal segment 6
+FBbt:00003054	adult abdominal dorsal tracheal branch	FBbt:00003051	adult dorsal tracheal branch	FBbt:00000021	abdominal segment	FBbt:00003024	adult abdominal segment
+FBbt:00003055	adult abdominal dorsal tracheal branch 3	FBbt:00003051	adult dorsal tracheal branch	FBbt:00000022	abdominal segment 1	FBbt:00003025	adult abdominal segment 1
+FBbt:00003056	adult abdominal dorsal tracheal branch 4	FBbt:00003051	adult dorsal tracheal branch	FBbt:00000023	abdominal segment 2	FBbt:00003026	adult abdominal segment 2
+FBbt:00003057	adult abdominal dorsal tracheal branch 5	FBbt:00003051	adult dorsal tracheal branch	FBbt:00000024	abdominal segment 3	FBbt:00003027	adult abdominal segment 3
+FBbt:00003058	adult abdominal dorsal tracheal branch 6	FBbt:00003051	adult dorsal tracheal branch	FBbt:00000025	abdominal segment 4	FBbt:00003028	adult abdominal segment 4
+FBbt:00003059	adult abdominal dorsal tracheal branch 7	FBbt:00003051	adult dorsal tracheal branch	FBbt:00000026	abdominal segment 5	FBbt:00003029	adult abdominal segment 5
+FBbt:00003060	adult abdominal dorsal tracheal branch 8	FBbt:00003051	adult dorsal tracheal branch	FBbt:00000027	abdominal segment 6	FBbt:00003030	adult abdominal segment 6
+FBbt:00003224	adepithelial cell of prothoracic leg disc	FBbt:00100788	adepithelial cell of leg disc	FBbt:00000017	prothoracic segment	FBbt:00001743	larval prothoracic segment
+FBbt:00003226	adepithelial cell of mesothoracic leg disc	FBbt:00100788	adepithelial cell of leg disc	FBbt:00000018	mesothoracic segment	FBbt:00001744	larval mesothoracic segment
+FBbt:00003228	adepithelial cell of metathoracic leg disc	FBbt:00100788	adepithelial cell of leg disc	FBbt:00000019	metathoracic segment	FBbt:00001745	larval metathoracic segment
+FBbt:00003233	thoracic adult muscle precursor cell	FBbt:00003232	embryonic precursor cell of adult muscle	FBbt:00000016	thoracic segment		
+FBbt:00003234	abdominal adult muscle precursor cell	FBbt:00003232	embryonic precursor cell of adult muscle	FBbt:00000021	abdominal segment		
+FBbt:00003236	abdominal 1 dorsal adult muscle precursor cell	FBbt:00003235	abdominal dorsal adult muscle precursor cell	FBbt:00000022	abdominal segment 1		
+FBbt:00003237	abdominal 2 dorsal adult muscle precursor cell	FBbt:00003235	abdominal dorsal adult muscle precursor cell	FBbt:00000023	abdominal segment 2		
+FBbt:00003238	abdominal 3 dorsal adult muscle precursor cell	FBbt:00003235	abdominal dorsal adult muscle precursor cell	FBbt:00000024	abdominal segment 3		
+FBbt:00003239	abdominal 4 dorsal adult muscle precursor cell	FBbt:00003235	abdominal dorsal adult muscle precursor cell	FBbt:00000025	abdominal segment 4		
+FBbt:00003240	abdominal 5 dorsal adult muscle precursor cell	FBbt:00003235	abdominal dorsal adult muscle precursor cell	FBbt:00000026	abdominal segment 5		
+FBbt:00003241	abdominal 6 dorsal adult muscle precursor cell	FBbt:00003235	abdominal dorsal adult muscle precursor cell	FBbt:00000027	abdominal segment 6		
+FBbt:00003242	abdominal 7 dorsal adult muscle precursor cell	FBbt:00003235	abdominal dorsal adult muscle precursor cell	FBbt:00000028	abdominal segment 7		
+FBbt:00003244	abdominal 1 lateral adult muscle precursor cell	FBbt:00003243	abdominal lateral adult muscle precursor cell	FBbt:00000022	abdominal segment 1		
+FBbt:00003245	abdominal 2 lateral adult muscle precursor cell	FBbt:00003243	abdominal lateral adult muscle precursor cell	FBbt:00000023	abdominal segment 2		
+FBbt:00003246	abdominal 3 lateral adult muscle precursor cell	FBbt:00003243	abdominal lateral adult muscle precursor cell	FBbt:00000024	abdominal segment 3		
+FBbt:00003247	abdominal 4 lateral adult muscle precursor cell	FBbt:00003243	abdominal lateral adult muscle precursor cell	FBbt:00000025	abdominal segment 4		
+FBbt:00003248	abdominal 5 lateral adult muscle precursor cell	FBbt:00003243	abdominal lateral adult muscle precursor cell	FBbt:00000026	abdominal segment 5		
+FBbt:00003249	abdominal 6 lateral adult muscle precursor cell	FBbt:00003243	abdominal lateral adult muscle precursor cell	FBbt:00000027	abdominal segment 6		
+FBbt:00003250	abdominal 7 lateral adult muscle precursor cell	FBbt:00003243	abdominal lateral adult muscle precursor cell	FBbt:00000028	abdominal segment 7		
+FBbt:00003252	abdominal 1 ventral adult muscle precursor cell	FBbt:00003251	abdominal ventral adult muscle precursor cell	FBbt:00000022	abdominal segment 1		
+FBbt:00003253	abdominal 2 ventral adult muscle precursor cell	FBbt:00003251	abdominal ventral adult muscle precursor cell	FBbt:00000023	abdominal segment 2		
+FBbt:00003254	abdominal 3 ventral adult muscle precursor cell	FBbt:00003251	abdominal ventral adult muscle precursor cell	FBbt:00000024	abdominal segment 3		
+FBbt:00003255	abdominal 4 ventral adult muscle precursor cell	FBbt:00003251	abdominal ventral adult muscle precursor cell	FBbt:00000025	abdominal segment 4		
+FBbt:00003256	abdominal 5 ventral adult muscle precursor cell	FBbt:00003251	abdominal ventral adult muscle precursor cell	FBbt:00000026	abdominal segment 5		
+FBbt:00003257	abdominal 6 ventral adult muscle precursor cell	FBbt:00003251	abdominal ventral adult muscle precursor cell	FBbt:00000027	abdominal segment 6		
+FBbt:00003258	abdominal 7 ventral adult muscle precursor cell	FBbt:00003251	abdominal ventral adult muscle precursor cell	FBbt:00000028	abdominal segment 7		
+FBbt:00003923	deutocerebrum	FBbt:00005140	neuromere	FBbt:00000009	antennal segment		
+FBbt:00003999	tritocerebrum	FBbt:00005140	neuromere	FBbt:00000010	intercalary segment		
+FBbt:00004054	prothoracic neuromere	FBbt:00005140	neuromere	FBbt:00000017	prothoracic segment		
+FBbt:00004059	mesothoracic neuromere	FBbt:00005140	neuromere	FBbt:00000018	mesothoracic segment		
+FBbt:00004063	adult mesothoracic leg nerve	FBbt:00049553	adult leg nerve	FBbt:00000018	mesothoracic segment	FBbt:00003021	adult mesothoracic segment
+FBbt:00004092	metathoracic neuromere	FBbt:00005140	neuromere	FBbt:00000019	metathoracic segment		
+FBbt:00004096	adult metathoracic leg nerve	FBbt:00049553	adult leg nerve	FBbt:00000019	metathoracic segment	FBbt:00003022	adult metathoracic segment
+FBbt:00004097	abdominal neuromere	FBbt:00005140	neuromere	FBbt:00000021	abdominal segment		
+FBbt:00004247	adult prothoracic sensillum	FBbt:00007239	adult sensillum	FBbt:00000017	prothoracic segment	FBbt:00003020	adult prothoracic segment
+FBbt:00004248	chordotonal organ of prothoracic segment	FBbt:00005215	chordotonal organ	FBbt:00000017	prothoracic segment		
+FBbt:00004297	adult mesothoracic sensillum	FBbt:00007239	adult sensillum	FBbt:00000018	mesothoracic segment	FBbt:00003021	adult mesothoracic segment
+FBbt:00004407	adult metathoracic sensillum	FBbt:00007239	adult sensillum	FBbt:00000019	metathoracic segment	FBbt:00003022	adult metathoracic segment
+FBbt:00004600	mesothoracic suture	FBbt:00004479	suture	FBbt:00000018	mesothoracic segment		
+FBbt:00004609	adult anterior thoracic spiracle	FBbt:00003120	adult spiracle	FBbt:00000018	mesothoracic segment	FBbt:00004590	ventral mesothorax
+FBbt:00004631	adult metathoracic spiracle	FBbt:00003120	adult spiracle	FBbt:00000019	metathoracic segment	FBbt:00004787	haltere sclerite
+FBbt:00004663	prothoracic leg	FBbt:00004640	leg	FBbt:00000017	prothoracic segment	FBbt:00003020	adult prothoracic segment
+FBbt:00004685	mesothoracic leg	FBbt:00004640	leg	FBbt:00000018	mesothoracic segment	FBbt:00003021	adult mesothoracic segment
+FBbt:00004707	metathoracic leg	FBbt:00004640	leg	FBbt:00000019	metathoracic segment	FBbt:00003022	adult metathoracic segment
+FBbt:00004790	abdominal tergite 1	FBbt:00004476	tergite	FBbt:00000022	abdominal segment 1	FBbt:00007286	integument of adult abdominal segment 1
+FBbt:00004791	abdominal tergite 2	FBbt:00004476	tergite	FBbt:00000023	abdominal segment 2	FBbt:00003026	adult abdominal segment 2
+FBbt:00004792	abdominal tergite 3	FBbt:00004476	tergite	FBbt:00000024	abdominal segment 3	FBbt:00003027	adult abdominal segment 3
+FBbt:00004793	abdominal tergite 4	FBbt:00004476	tergite	FBbt:00000025	abdominal segment 4	FBbt:00003028	adult abdominal segment 4
+FBbt:00004794	abdominal tergite 5	FBbt:00004476	tergite	FBbt:00000026	abdominal segment 5	FBbt:00003029	adult abdominal segment 5
+FBbt:00004795	abdominal tergite 6	FBbt:00004476	tergite	FBbt:00000027	abdominal segment 6	FBbt:00003030	adult abdominal segment 6
+FBbt:00004796	abdominal tergite 7	FBbt:00004476	tergite	FBbt:00000028	abdominal segment 7	FBbt:00003031	adult abdominal segment 7
+FBbt:00004797	abdominal tergite 8	FBbt:00004476	tergite	FBbt:00000029	abdominal segment 8	FBbt:00003032	adult abdominal segment 8
+FBbt:00004800	abdominal sternite 2	FBbt:00004477	sternite	FBbt:00000023	abdominal segment 2	FBbt:00003026	adult abdominal segment 2
+FBbt:00004801	abdominal sternite 3	FBbt:00004477	sternite	FBbt:00000024	abdominal segment 3	FBbt:00003027	adult abdominal segment 3
+FBbt:00004802	abdominal sternite 4	FBbt:00004477	sternite	FBbt:00000025	abdominal segment 4	FBbt:00003028	adult abdominal segment 4
+FBbt:00004803	abdominal sternite 5	FBbt:00004477	sternite	FBbt:00000026	abdominal segment 5	FBbt:00003029	adult abdominal segment 5
+FBbt:00004804	abdominal sternite 6	FBbt:00004477	sternite	FBbt:00000027	abdominal segment 6	FBbt:00003030	adult abdominal segment 6
+FBbt:00004805	abdominal sternite 7	FBbt:00004477	sternite	FBbt:00000028	abdominal segment 7	FBbt:00003031	adult abdominal segment 7
+FBbt:00004806	abdominal sternite 11	FBbt:00004477	sternite	FBbt:00000032	abdominal segment 11	FBbt:00003035	adult abdominal segment 11
+FBbt:00004814	adult abdominal spiracle	FBbt:00003120	adult spiracle	FBbt:00000021	abdominal segment	FBbt:00003024	adult abdominal segment
+FBbt:00004815	adult abdominal spiracle 3	FBbt:00003120	adult spiracle	FBbt:00000024	abdominal segment 3	FBbt:00003027	adult abdominal segment 3
+FBbt:00004816	adult abdominal spiracle 4	FBbt:00003120	adult spiracle	FBbt:00000025	abdominal segment 4	FBbt:00003028	adult abdominal segment 4
+FBbt:00004817	adult abdominal spiracle 5	FBbt:00003120	adult spiracle	FBbt:00000026	abdominal segment 5	FBbt:00003029	adult abdominal segment 5
+FBbt:00004818	adult abdominal spiracle 6	FBbt:00003120	adult spiracle	FBbt:00000027	abdominal segment 6	FBbt:00003030	adult abdominal segment 6
+FBbt:00004819	adult abdominal spiracle 7	FBbt:00003120	adult spiracle	FBbt:00000028	abdominal segment 7	FBbt:00003031	adult abdominal segment 7
+FBbt:00005224	abdominal 1 ventral campaniform sensillum vc5	FBbt:00002903	abdominal ventral campaniform sensillum vc5	FBbt:00000022	abdominal segment 1	FBbt:00001748	larval abdominal segment 1
+FBbt:00005225	abdominal 2 ventral campaniform sensillum vc5	FBbt:00002903	abdominal ventral campaniform sensillum vc5	FBbt:00000023	abdominal segment 2	FBbt:00001749	larval abdominal segment 2
+FBbt:00005226	abdominal 3 ventral campaniform sensillum vc5	FBbt:00002903	abdominal ventral campaniform sensillum vc5	FBbt:00000024	abdominal segment 3	FBbt:00001750	larval abdominal segment 3
+FBbt:00005227	abdominal 4 ventral campaniform sensillum vc5	FBbt:00002903	abdominal ventral campaniform sensillum vc5	FBbt:00000025	abdominal segment 4	FBbt:00001751	larval abdominal segment 4
+FBbt:00005228	abdominal 5 ventral campaniform sensillum vc5	FBbt:00002903	abdominal ventral campaniform sensillum vc5	FBbt:00000026	abdominal segment 5	FBbt:00001752	larval abdominal segment 5
+FBbt:00005229	abdominal 6 ventral campaniform sensillum vc5	FBbt:00002903	abdominal ventral campaniform sensillum vc5	FBbt:00000027	abdominal segment 6	FBbt:00001753	larval abdominal segment 6
+FBbt:00005230	abdominal 7 ventral campaniform sensillum vc5	FBbt:00002903	abdominal ventral campaniform sensillum vc5	FBbt:00000028	abdominal segment 7	FBbt:00001754	larval abdominal segment 7
+FBbt:00005806	antennal sense organ	FBbt:00005155	sense organ	FBbt:00000009	antennal segment		
+FBbt:00007146	adult deutocerebrum	FBbt:00052718		FBbt:00000009	antennal segment	FBbt:00003012	adult antennal segment
+FBbt:00007147	adult tritocerebrum	FBbt:00052718		FBbt:00000010	intercalary segment	FBbt:00003013	adult intercalary segment
+FBbt:00007158	adult maxillary neuromere	FBbt:00052718		FBbt:00000013	maxillary segment	FBbt:00003016	adult maxillary segment
+FBbt:00007159	adult mandibular neuromere	FBbt:00052718		FBbt:00000012	mandibular segment	FBbt:00003015	adult mandibular segment
+FBbt:00007160	adult labial neuromere	FBbt:00052718		FBbt:00000014	labial segment	FBbt:00003017	adult labial segment
+FBbt:00007249	adult chordotonal organ of prothoracic segment	FBbt:00052719		FBbt:00000017	prothoracic segment	FBbt:00003020	adult prothoracic segment
+FBbt:00007265	abdominal 7 ventral monoscolopidial chordotonal organ vch2	FBbt:00007255	abdominal ventral monoscolopidial chordotonal organ vch2	FBbt:00000028	abdominal segment 7	FBbt:00001754	larval abdominal segment 7
+FBbt:00007266	abdominal 2 ventral monoscolopidial chordotonal organ vch2	FBbt:00007255	abdominal ventral monoscolopidial chordotonal organ vch2	FBbt:00000023	abdominal segment 2	FBbt:00001749	larval abdominal segment 2
+FBbt:00007267	abdominal 3 ventral monoscolopidial chordotonal organ vch2	FBbt:00007255	abdominal ventral monoscolopidial chordotonal organ vch2	FBbt:00000024	abdominal segment 3	FBbt:00001750	larval abdominal segment 3
+FBbt:00007268	abdominal 4 ventral monoscolopidial chordotonal organ vch2	FBbt:00007255	abdominal ventral monoscolopidial chordotonal organ vch2	FBbt:00000025	abdominal segment 4	FBbt:00001751	larval abdominal segment 4
+FBbt:00007269	abdominal 5 ventral monoscolopidial chordotonal organ vch2	FBbt:00007255	abdominal ventral monoscolopidial chordotonal organ vch2	FBbt:00000026	abdominal segment 5	FBbt:00001752	larval abdominal segment 5
+FBbt:00007270	abdominal 6 ventral monoscolopidial chordotonal organ vch2	FBbt:00007255	abdominal ventral monoscolopidial chordotonal organ vch2	FBbt:00000027	abdominal segment 6	FBbt:00001753	larval abdominal segment 6
+FBbt:00007271	abdominal 1 ventral monoscolopidial chordotonal organ vch2	FBbt:00007255	abdominal ventral monoscolopidial chordotonal organ vch2	FBbt:00000022	abdominal segment 1	FBbt:00001748	larval abdominal segment 1
+FBbt:00007286	integument of adult abdominal segment 1	FBbt:00052723		FBbt:00000022	abdominal segment 1	FBbt:00003025	adult abdominal segment 1
+FBbt:00007298	larval mesothoracic dorsal sensory cluster	FBbt:00007296	larval dorsal sensory cluster	FBbt:00000018	mesothoracic segment	FBbt:00001744	larval mesothoracic segment
+FBbt:00007299	larval prothoracic dorsal sensory cluster	FBbt:00007296	larval dorsal sensory cluster	FBbt:00000017	prothoracic segment	FBbt:00001743	larval prothoracic segment
+FBbt:00007300	larval metathoracic dorsal sensory cluster	FBbt:00007296	larval dorsal sensory cluster	FBbt:00000019	metathoracic segment	FBbt:00001745	larval metathoracic segment
+FBbt:00007301	larval dorsal sensory cluster of A1-7	FBbt:00007296	larval dorsal sensory cluster	FBbt:00052393	anterior abdominal segment	FBbt:00007586	larval abdominal segment A1-7
+FBbt:00007302	larval prothoracic lateral sensory cluster	FBbt:00007297	larval lateral sensory cluster	FBbt:00000017	prothoracic segment	FBbt:00001743	larval prothoracic segment
+FBbt:00007303	larval mesothoracic lateral sensory cluster	FBbt:00007297	larval lateral sensory cluster	FBbt:00000018	mesothoracic segment	FBbt:00001744	larval mesothoracic segment
+FBbt:00007304	larval metathoracic lateral sensory cluster	FBbt:00007297	larval lateral sensory cluster	FBbt:00000019	metathoracic segment	FBbt:00001745	larval metathoracic segment
+FBbt:00007305	larval lateral sensory cluster of A1-7	FBbt:00007297	larval lateral sensory cluster	FBbt:00052393	anterior abdominal segment	FBbt:00007586	larval abdominal segment A1-7
+FBbt:00007306	larval prothoracic ventral sensory cluster group	FBbt:00007295	larval ventral sensory cluster group	FBbt:00000017	prothoracic segment	FBbt:00001743	larval prothoracic segment
+FBbt:00007307	larval mesothoracic ventral sensory cluster group	FBbt:00007295	larval ventral sensory cluster group	FBbt:00000018	mesothoracic segment	FBbt:00001744	larval mesothoracic segment
+FBbt:00007308	larval metathoracic ventral sensory cluster group	FBbt:00007295	larval ventral sensory cluster group	FBbt:00000019	metathoracic segment	FBbt:00001745	larval metathoracic segment
+FBbt:00007309	larval ventral sensory cluster group of A1-7	FBbt:00007295	larval ventral sensory cluster group	FBbt:00052393	anterior abdominal segment	FBbt:00007586	larval abdominal segment A1-7
+FBbt:00007310	integument of larval mesothoracic segment	FBbt:00052722		FBbt:00000018	mesothoracic segment	FBbt:00001744	larval mesothoracic segment
+FBbt:00007311	integument of larval metathoracic segment	FBbt:00052722		FBbt:00000019	metathoracic segment	FBbt:00001745	larval metathoracic segment
+FBbt:00007312	integument of larval prothoracic segment	FBbt:00052722		FBbt:00000017	prothoracic segment	FBbt:00001743	larval prothoracic segment
+FBbt:00007313	integument of larval segment A1-7	FBbt:00052722		FBbt:00052393	anterior abdominal segment	FBbt:00007586	larval abdominal segment A1-7
+FBbt:00007335	embryonic/larval intercalary segment sense organ	FBbt:00002639	embryonic/larval sense organ	FBbt:00000010	intercalary segment	FBbt:00001736	larval intercalary segment
+FBbt:00007398	larval thoracic dorsal sensory cluster	FBbt:00007296	larval dorsal sensory cluster	FBbt:00000016	thoracic segment	FBbt:00001742	larval thoracic segment
+FBbt:00007399	larval thoracic lateral sensory cluster	FBbt:00007297	larval lateral sensory cluster	FBbt:00000016	thoracic segment	FBbt:00001742	larval thoracic segment
+FBbt:00007400	larval thoracic ventral sensory cluster group	FBbt:00007295	larval ventral sensory cluster group	FBbt:00000016	thoracic segment	FBbt:00001742	larval thoracic segment
+FBbt:00007470	abdominal tracheal primordium 8	FBbt:00005037	tracheal primordium	FBbt:00000029	abdominal segment 8	FBbt:00000180	embryonic abdominal segment 8
+FBbt:00007606	abdominal segment 1 anterior compartment	FBbt:00111533	embryonic segment anterior compartment	FBbt:00000022	abdominal segment 1	FBbt:00000144	parasegment 6
+FBbt:00007607	abdominal segment 1 posterior compartment	FBbt:00111532	embryonic segment posterior compartment	FBbt:00000022	abdominal segment 1	FBbt:00000145	parasegment 7
+FBbt:00007608	abdominal segment 10 anterior compartment	FBbt:00111533	embryonic segment anterior compartment	FBbt:00000031	abdominal segment 10	FBbt:00000153	parasegment 15
+FBbt:00007609	abdominal segment 10 posterior compartment	FBbt:00111532	embryonic segment posterior compartment	FBbt:00000031	abdominal segment 10		
+FBbt:00007610	abdominal segment 2 anterior compartment	FBbt:00111533	embryonic segment anterior compartment	FBbt:00000023	abdominal segment 2	FBbt:00000145	parasegment 7
+FBbt:00007611	abdominal segment 2 posterior compartment	FBbt:00111532	embryonic segment posterior compartment	FBbt:00000023	abdominal segment 2	FBbt:00000146	parasegment 8
+FBbt:00007612	abdominal segment 3 anterior compartment	FBbt:00111533	embryonic segment anterior compartment	FBbt:00000024	abdominal segment 3	FBbt:00000146	parasegment 8
+FBbt:00007613	abdominal segment 3 posterior compartment	FBbt:00111532	embryonic segment posterior compartment	FBbt:00000024	abdominal segment 3	FBbt:00000147	parasegment 9
+FBbt:00007614	abdominal segment 4 anterior compartment	FBbt:00111533	embryonic segment anterior compartment	FBbt:00000025	abdominal segment 4	FBbt:00000147	parasegment 9
+FBbt:00007615	abdominal segment 4 posterior compartment	FBbt:00111532	embryonic segment posterior compartment	FBbt:00000025	abdominal segment 4	FBbt:00000148	parasegment 10
+FBbt:00007616	abdominal segment 5 anterior compartment	FBbt:00111533	embryonic segment anterior compartment	FBbt:00000026	abdominal segment 5	FBbt:00000148	parasegment 10
+FBbt:00007617	abdominal segment 5 posterior compartment	FBbt:00111532	embryonic segment posterior compartment	FBbt:00000026	abdominal segment 5	FBbt:00000149	parasegment 11
+FBbt:00007618	abdominal segment 6 anterior compartment	FBbt:00111533	embryonic segment anterior compartment	FBbt:00000027	abdominal segment 6	FBbt:00000149	parasegment 11
+FBbt:00007619	abdominal segment 6 posterior compartment	FBbt:00111532	embryonic segment posterior compartment	FBbt:00000027	abdominal segment 6	FBbt:00000150	parasegment 12
+FBbt:00007620	abdominal segment 7 anterior compartment	FBbt:00111533	embryonic segment anterior compartment	FBbt:00000028	abdominal segment 7	FBbt:00000150	parasegment 12
+FBbt:00007621	abdominal segment 7 posterior compartment	FBbt:00111532	embryonic segment posterior compartment	FBbt:00000028	abdominal segment 7	FBbt:00000151	parasegment 13
+FBbt:00007622	abdominal segment 8 anterior compartment	FBbt:00111533	embryonic segment anterior compartment	FBbt:00000029	abdominal segment 8	FBbt:00000151	parasegment 13
+FBbt:00007623	abdominal segment 8 posterior compartment	FBbt:00111532	embryonic segment posterior compartment	FBbt:00000029	abdominal segment 8	FBbt:00000152	parasegment 14
+FBbt:00007624	abdominal segment 9 anterior compartment	FBbt:00111533	embryonic segment anterior compartment	FBbt:00000030	abdominal segment 9	FBbt:00000152	parasegment 14
+FBbt:00007625	abdominal segment 9 posterior compartment	FBbt:00111532	embryonic segment posterior compartment	FBbt:00000030	abdominal segment 9	FBbt:00000153	parasegment 15
+FBbt:00007626	mandibular segment anterior compartment	FBbt:00111533	embryonic segment anterior compartment	FBbt:00000012	mandibular segment		
+FBbt:00007627	mandibular segment posterior compartment	FBbt:00111532	embryonic segment posterior compartment	FBbt:00000012	mandibular segment	FBbt:00000139	parasegment 1
+FBbt:00007628	maxillary segment anterior compartment	FBbt:00111533	embryonic segment anterior compartment	FBbt:00000013	maxillary segment	FBbt:00000139	parasegment 1
+FBbt:00007629	maxillary segment posterior compartment	FBbt:00111532	embryonic segment posterior compartment	FBbt:00000013	maxillary segment	FBbt:00000140	parasegment 2
+FBbt:00007630	labial segment anterior compartment	FBbt:00111533	embryonic segment anterior compartment	FBbt:00000014	labial segment	FBbt:00000140	parasegment 2
+FBbt:00007631	labial segment posterior compartment	FBbt:00111532	embryonic segment posterior compartment	FBbt:00000014	labial segment	FBbt:00000141	parasegment 3
+FBbt:00007632	prothoracic segment anterior compartment	FBbt:00111533	embryonic segment anterior compartment	FBbt:00000017	prothoracic segment	FBbt:00000141	parasegment 3
+FBbt:00007633	prothoracic segment posterior compartment	FBbt:00111532	embryonic segment posterior compartment	FBbt:00000017	prothoracic segment	FBbt:00000142	parasegment 4
+FBbt:00007634	mesothoracic segment anterior compartment	FBbt:00111533	embryonic segment anterior compartment	FBbt:00000018	mesothoracic segment	FBbt:00000142	parasegment 4
+FBbt:00007635	mesothoracic segment posterior compartment	FBbt:00111532	embryonic segment posterior compartment	FBbt:00000018	mesothoracic segment	FBbt:00000143	parasegment 5
+FBbt:00007636	metathoracic segment anterior compartment	FBbt:00111533	embryonic segment anterior compartment	FBbt:00000019	metathoracic segment	FBbt:00000143	parasegment 5
+FBbt:00007637	metathoracic segment posterior compartment	FBbt:00111532	embryonic segment posterior compartment	FBbt:00000019	metathoracic segment	FBbt:00000144	parasegment 6
+FBbt:00007657	adult prothoracic leg nerve	FBbt:00049553	adult leg nerve	FBbt:00000017	prothoracic segment	FBbt:00003020	adult prothoracic segment
+FBbt:00013244	abdominal 1 dorsolateral adult muscle precursor cell	FBbt:00013243	abdominal dorso-lateral adult muscle precursor cell	FBbt:00000022	abdominal segment 1		
+FBbt:00013245	abdominal 2 dorsolateral adult muscle precursor cell	FBbt:00013243	abdominal dorso-lateral adult muscle precursor cell	FBbt:00000023	abdominal segment 2		
+FBbt:00013246	abdominal 3 dorsolateral adult muscle precursor cell	FBbt:00013243	abdominal dorso-lateral adult muscle precursor cell	FBbt:00000024	abdominal segment 3		
+FBbt:00013247	abdominal 4 dorsolateral adult muscle precursor cell	FBbt:00013243	abdominal dorso-lateral adult muscle precursor cell	FBbt:00000025	abdominal segment 4		
+FBbt:00013248	abdominal 5 dorsolateral adult muscle precursor cell	FBbt:00013243	abdominal dorso-lateral adult muscle precursor cell	FBbt:00000026	abdominal segment 5		
+FBbt:00013249	abdominal 6 dorsolateral adult muscle precursor cell	FBbt:00013243	abdominal dorso-lateral adult muscle precursor cell	FBbt:00000027	abdominal segment 6		
+FBbt:00013250	abdominal 7 dorsolateral adult muscle precursor cell	FBbt:00013243	abdominal dorso-lateral adult muscle precursor cell	FBbt:00000028	abdominal segment 7		
+FBbt:00014814	adult thoracic spiracle	FBbt:00003120	adult spiracle	FBbt:00000016	thoracic segment	FBbt:00003019	adult thoracic segment
+FBbt:00014815	adult abdominal spiracle 2	FBbt:00003120	adult spiracle	FBbt:00000023	abdominal segment 2	FBbt:00003026	adult abdominal segment 2
+FBbt:00014816	adult abdominal spiracle 1	FBbt:00003120	adult spiracle	FBbt:00000022	abdominal segment 1	FBbt:00003025	adult abdominal segment 1
+FBbt:00048510	larval terminal abdominal neuromere	FBbt:00001912	larval neuromere	FBbt:00052388	terminal segment	FBbt:00052389	larval terminal segment
+FBbt:00052111	integument of larval thoracic segment	FBbt:00052722		FBbt:00000016	thoracic segment	FBbt:00001742	larval thoracic segment
+FBbt:00052117	larval thoracic ventral sensory cluster	FBbt:00052115	larval ventral sensory cluster	FBbt:00000016	thoracic segment	FBbt:00007400	larval thoracic ventral sensory cluster group
+FBbt:00052118	larval prothoracic ventral sensory cluster	FBbt:00052115	larval ventral sensory cluster	FBbt:00000017	prothoracic segment	FBbt:00007306	larval prothoracic ventral sensory cluster group
+FBbt:00052119	larval mesothoracic ventral sensory cluster	FBbt:00052115	larval ventral sensory cluster	FBbt:00000018	mesothoracic segment	FBbt:00007307	larval mesothoracic ventral sensory cluster group
+FBbt:00052120	larval metathoracic ventral sensory cluster	FBbt:00052115	larval ventral sensory cluster	FBbt:00000019	metathoracic segment	FBbt:00007308	larval metathoracic ventral sensory cluster group
+FBbt:00052121	larval ventral sensory cluster of A1-7	FBbt:00052115	larval ventral sensory cluster	FBbt:00052393	anterior abdominal segment	FBbt:00007309	larval ventral sensory cluster group of A1-7
+FBbt:00052122	larval ventral' sensory cluster of A1-7	FBbt:00052116	larval ventral' sensory cluster	FBbt:00052393	anterior abdominal segment	FBbt:00007309	larval ventral sensory cluster group of A1-7
+FBbt:00052123	larval thoracic ventral' sensory cluster	FBbt:00052116	larval ventral' sensory cluster	FBbt:00000016	thoracic segment	FBbt:00007400	larval thoracic ventral sensory cluster group
+FBbt:00052124	larval prothoracic ventral' sensory cluster	FBbt:00052116	larval ventral' sensory cluster	FBbt:00000017	prothoracic segment	FBbt:00007306	larval prothoracic ventral sensory cluster group
+FBbt:00052125	larval mesothoracic ventral' sensory cluster	FBbt:00052116	larval ventral' sensory cluster	FBbt:00000018	mesothoracic segment	FBbt:00007307	larval mesothoracic ventral sensory cluster group
+FBbt:00052126	larval metathoracic ventral' sensory cluster	FBbt:00052116	larval ventral' sensory cluster	FBbt:00000019	metathoracic segment	FBbt:00007308	larval metathoracic ventral sensory cluster group
+FBbt:00052540	larval abdominal 1 transverse nerve	FBbt:00001996	larval transverse nerve	FBbt:00000022	abdominal segment 1	FBbt:00001748	larval abdominal segment 1
+FBbt:00052541	larval abdominal 2 transverse nerve	FBbt:00001996	larval transverse nerve	FBbt:00000023	abdominal segment 2	FBbt:00001749	larval abdominal segment 2
+FBbt:00052542	larval abdominal 3 transverse nerve	FBbt:00001996	larval transverse nerve	FBbt:00000024	abdominal segment 3	FBbt:00001750	larval abdominal segment 3
+FBbt:00052543	larval abdominal 4 transverse nerve	FBbt:00001996	larval transverse nerve	FBbt:00000025	abdominal segment 4	FBbt:00001751	larval abdominal segment 4
+FBbt:00052544	larval abdominal 5 transverse nerve	FBbt:00001996	larval transverse nerve	FBbt:00000026	abdominal segment 5	FBbt:00001752	larval abdominal segment 5
+FBbt:00052545	larval abdominal 6 transverse nerve	FBbt:00001996	larval transverse nerve	FBbt:00000027	abdominal segment 6	FBbt:00001753	larval abdominal segment 6
+FBbt:00052546	larval abdominal 7 transverse nerve	FBbt:00001996	larval transverse nerve	FBbt:00000028	abdominal segment 7	FBbt:00001754	larval abdominal segment 7
+FBbt:00052547	larval abdominal 8 transverse nerve	FBbt:00001996	larval transverse nerve	FBbt:00000029	abdominal segment 8	FBbt:00001755	larval abdominal segment 8
+FBbt:00058326	hypodermal muscle of prothorax	FBbt:00058298	embryonic/larval hypodermal muscle	FBbt:00000017	prothoracic segment	FBbt:00001743	larval prothoracic segment
+FBbt:00058333	prothoracic dorsal oblique muscle	FBbt:00058300	dorsal oblique muscle	FBbt:00000017	prothoracic segment	FBbt:00001743	larval prothoracic segment
+FBbt:00058334	prothoracic dorsal oblique muscle 1	FBbt:00059132	dorsal oblique muscle 1	FBbt:00000017	prothoracic segment	FBbt:00001743	larval prothoracic segment
+FBbt:00058335	prothoracic dorsal oblique muscle 2	FBbt:00059133	dorsal oblique muscle 2	FBbt:00000017	prothoracic segment	FBbt:00001743	larval prothoracic segment
+FBbt:00058336	prothoracic dorsal oblique muscle 3	FBbt:00059135	dorsal oblique muscle 3	FBbt:00000017	prothoracic segment	FBbt:00001743	larval prothoracic segment
+FBbt:00058337	prothoracic dorsal oblique muscle 4	FBbt:00059136	dorsal oblique muscle 4	FBbt:00000017	prothoracic segment	FBbt:00001743	larval prothoracic segment
+FBbt:00058338	prothoracic transverse muscle	FBbt:00058303	transverse muscle	FBbt:00000017	prothoracic segment	FBbt:00001743	larval prothoracic segment
+FBbt:00058339	prothoracic ventral transverse muscle	FBbt:00058306	ventral transverse muscle	FBbt:00000017	prothoracic segment	FBbt:00001743	larval prothoracic segment
+FBbt:00058341	prothoracic acute muscle	FBbt:00058307	acute muscle	FBbt:00000017	prothoracic segment	FBbt:00001743	larval prothoracic segment
+FBbt:00058342	prothoracic lateral acute muscle	FBbt:00058309	lateral acute muscle	FBbt:00000017	prothoracic segment	FBbt:00001743	larval prothoracic segment
+FBbt:00058351	hypodermal muscle of mesothorax	FBbt:00058298	embryonic/larval hypodermal muscle	FBbt:00000018	mesothoracic segment	FBbt:00001744	larval mesothoracic segment
+FBbt:00058352	mesothoracic acute muscle	FBbt:00058307	acute muscle	FBbt:00000018	mesothoracic segment	FBbt:00001744	larval mesothoracic segment
+FBbt:00058352	mesothoracic acute muscle	FBbt:00058307	acute muscle	FBbt:00000018	mesothoracic segment	FBbt:00001744	larval mesothoracic segment
+FBbt:00058353	mesothoracic dorsal acute muscle	FBbt:00058308	dorsal acute muscle	FBbt:00000018	mesothoracic segment	FBbt:00001743	larval prothoracic segment
+FBbt:00058354	mesothoracic dorsal acute muscle 1	FBbt:00059130	dorsal acute muscle 1	FBbt:00000018	mesothoracic segment	FBbt:00001744	larval mesothoracic segment
+FBbt:00058355	mesothoracic dorsal acute muscle 2	FBbt:00059131	dorsal acute muscle 2	FBbt:00000018	mesothoracic segment	FBbt:00001744	larval mesothoracic segment
+FBbt:00058356	mesothoracic dorsal acute muscle 3	FBbt:00059134	dorsal acute muscle 3	FBbt:00000018	mesothoracic segment	FBbt:00001744	larval mesothoracic segment
+FBbt:00058358	mesothoracic oblique muscle	FBbt:00058299	oblique muscle	FBbt:00000017	prothoracic segment	FBbt:00001743	larval prothoracic segment
+FBbt:00058358	mesothoracic oblique muscle	FBbt:00058299	oblique muscle	FBbt:00000018	mesothoracic segment	FBbt:00001744	larval mesothoracic segment
+FBbt:00058359	mesothoracic dorsal oblique muscle	FBbt:00058300	dorsal oblique muscle	FBbt:00000018	mesothoracic segment	FBbt:00001744	larval mesothoracic segment
+FBbt:00058360	mesothoracic dorsal oblique muscle 1	FBbt:00059132	dorsal oblique muscle 1	FBbt:00000018	mesothoracic segment	FBbt:00001744	larval mesothoracic segment
+FBbt:00058361	mesothoracic dorsal oblique muscle 2	FBbt:00059133	dorsal oblique muscle 2	FBbt:00000018	mesothoracic segment	FBbt:00001744	larval mesothoracic segment
+FBbt:00058362	mesothoracic dorsal oblique muscle 3	FBbt:00059135	dorsal oblique muscle 3	FBbt:00000018	mesothoracic segment	FBbt:00001744	larval mesothoracic segment
+FBbt:00058363	mesothoracic dorsal oblique muscle 4	FBbt:00059136	dorsal oblique muscle 4	FBbt:00000018	mesothoracic segment	FBbt:00001744	larval mesothoracic segment
+FBbt:00058364	mesothoracic lateral oblique muscle	FBbt:00058301	lateral oblique muscle 1	FBbt:00000018	mesothoracic segment	FBbt:00001744	larval mesothoracic segment
+FBbt:00058366	mesothoracic ventral oblique muscle	FBbt:00058302	ventral oblique muscle	FBbt:00000018	mesothoracic segment	FBbt:00001744	larval mesothoracic segment
+FBbt:00058367	mesothoracic ventral oblique muscle 1	FBbt:00059140	ventral oblique muscle 1	FBbt:00000018	mesothoracic segment	FBbt:00001744	larval mesothoracic segment
+FBbt:00058368	mesothoracic ventral oblique muscle 2	FBbt:00059137	ventral oblique muscle 2	FBbt:00000018	mesothoracic segment	FBbt:00001744	larval mesothoracic segment
+FBbt:00058369	mesothoracic segment border muscle	FBbt:00058316	segment border muscle	FBbt:00000018	mesothoracic segment	FBbt:00001744	larval mesothoracic segment
+FBbt:00058370	mesothoracic transverse muscle	FBbt:00058303	transverse muscle	FBbt:00000018	mesothoracic segment	FBbt:00001744	larval mesothoracic segment
+FBbt:00058371	mesothoracic lateral transverse muscle	FBbt:00058305	lateral transverse muscle	FBbt:00000018	mesothoracic segment	FBbt:00001744	larval mesothoracic segment
+FBbt:00058372	mesothoracic lateral transverse muscle 1	FBbt:00059143	lateral transverse muscle 1	FBbt:00000018	mesothoracic segment	FBbt:00001744	larval mesothoracic segment
+FBbt:00058373	mesothoracic lateral transverse muscle 2	FBbt:00059144	lateral transverse muscle 2	FBbt:00000018	mesothoracic segment	FBbt:00001744	larval mesothoracic segment
+FBbt:00058374	mesothoracic lateral transverse muscle 3	FBbt:00059145	lateral transverse muscle 3	FBbt:00000018	mesothoracic segment	FBbt:00001744	larval mesothoracic segment
+FBbt:00058375	mesothoracic lateral transverse muscle 4	FBbt:00059146	lateral transverse muscle 4	FBbt:00000018	mesothoracic segment	FBbt:00001744	larval mesothoracic segment
+FBbt:00058376	mesothoracic longitudinal muscle	FBbt:00058313	longitudinal muscle	FBbt:00000018	mesothoracic segment	FBbt:00001744	larval mesothoracic segment
+FBbt:00058377	mesothoracic lateral longitudinal muscle	FBbt:00058314	lateral longitudinal muscle 1	FBbt:00000018	mesothoracic segment	FBbt:00001744	larval mesothoracic segment
+FBbt:00058379	mesothoracic ventral longitudinal muscle	FBbt:00058315	ventral longitudinal muscle	FBbt:00000018	mesothoracic segment	FBbt:00001744	larval mesothoracic segment
+FBbt:00058380	mesothoracic ventral longitudinal muscle 1	FBbt:00059151	ventral longitudinal muscle 1	FBbt:00000018	mesothoracic segment	FBbt:00001744	larval mesothoracic segment
+FBbt:00058381	mesothoracic ventral longitudinal muscle 2	FBbt:00059149	ventral longitudinal muscle 2	FBbt:00000018	mesothoracic segment	FBbt:00001744	larval mesothoracic segment
+FBbt:00058382	mesothoracic ventral longitudinal muscle 3	FBbt:00059138	ventral longitudinal muscle 3	FBbt:00000018	mesothoracic segment	FBbt:00001744	larval mesothoracic segment
+FBbt:00058383	hypodermal muscle of metathorax	FBbt:00058298	embryonic/larval hypodermal muscle	FBbt:00000019	metathoracic segment	FBbt:00001745	larval metathoracic segment
+FBbt:00058384	metathoracic acute muscle	FBbt:00058307	acute muscle	FBbt:00000019	metathoracic segment	FBbt:00001745	larval metathoracic segment
+FBbt:00058385	metathoracic dorsal acute muscle	FBbt:00058308	dorsal acute muscle	FBbt:00000019	metathoracic segment	FBbt:00001744	larval mesothoracic segment
+FBbt:00058386	metathoracic dorsal acute muscle 1	FBbt:00059130	dorsal acute muscle 1	FBbt:00000019	metathoracic segment	FBbt:00001745	larval metathoracic segment
+FBbt:00058387	metathoracic dorsal acute muscle 2	FBbt:00059131	dorsal acute muscle 2	FBbt:00000019	metathoracic segment	FBbt:00001745	larval metathoracic segment
+FBbt:00058388	metathoracic dorsal acute muscle 3	FBbt:00059134	dorsal acute muscle 3	FBbt:00000019	metathoracic segment	FBbt:00001745	larval metathoracic segment
+FBbt:00058390	metathoracic ventral acute muscle	FBbt:00058310	ventral acute muscle	FBbt:00000019	metathoracic segment	FBbt:00001745	larval metathoracic segment
+FBbt:00058391	metathoracic ventral acute muscle 1	FBbt:00059141	ventral acute muscle 1	FBbt:00000019	metathoracic segment	FBbt:00001745	larval metathoracic segment
+FBbt:00058392	metathoracic oblique muscle	FBbt:00058299	oblique muscle	FBbt:00000019	metathoracic segment	FBbt:00001745	larval metathoracic segment
+FBbt:00058393	metathoracic dorsal oblique muscle	FBbt:00058300	dorsal oblique muscle	FBbt:00000019	metathoracic segment	FBbt:00001745	larval metathoracic segment
+FBbt:00058394	metathoracic dorsal oblique muscle 1	FBbt:00059132	dorsal oblique muscle 1	FBbt:00000019	metathoracic segment	FBbt:00001745	larval metathoracic segment
+FBbt:00058395	metathoracic dorsal oblique muscle 2	FBbt:00059133	dorsal oblique muscle 2	FBbt:00000019	metathoracic segment	FBbt:00001745	larval metathoracic segment
+FBbt:00058396	metathoracic dorsal oblique muscle 3	FBbt:00059135	dorsal oblique muscle 3	FBbt:00000019	metathoracic segment	FBbt:00001745	larval metathoracic segment
+FBbt:00058397	metathoracic dorsal oblique muscle 4	FBbt:00059136	dorsal oblique muscle 4	FBbt:00000019	metathoracic segment	FBbt:00001745	larval metathoracic segment
+FBbt:00058398	metathoracic lateral oblique muscle	FBbt:00058301	lateral oblique muscle 1	FBbt:00000019	metathoracic segment	FBbt:00001745	larval metathoracic segment
+FBbt:00058400	metathoracic ventral oblique muscle	FBbt:00058302	ventral oblique muscle	FBbt:00000019	metathoracic segment	FBbt:00001745	larval metathoracic segment
+FBbt:00058401	metathoracic ventral oblique muscle 1	FBbt:00059140	ventral oblique muscle 1	FBbt:00000019	metathoracic segment	FBbt:00001745	larval metathoracic segment
+FBbt:00058402	metathoracic ventral oblique muscle 2	FBbt:00059137	ventral oblique muscle 2	FBbt:00000019	metathoracic segment	FBbt:00001745	larval metathoracic segment
+FBbt:00058403	metathoracic ventral oblique muscle 3	FBbt:00059148	ventral oblique muscle 3	FBbt:00000019	metathoracic segment	FBbt:00001745	larval metathoracic segment
+FBbt:00058404	metathoracic segment border muscle	FBbt:00058316	segment border muscle	FBbt:00000019	metathoracic segment	FBbt:00001745	larval metathoracic segment
+FBbt:00058405	metathoracic transverse muscle	FBbt:00058303	transverse muscle	FBbt:00000019	metathoracic segment	FBbt:00001745	larval metathoracic segment
+FBbt:00058406	metathoracic lateral transverse muscle	FBbt:00058305	lateral transverse muscle	FBbt:00000019	metathoracic segment	FBbt:00001745	larval metathoracic segment
+FBbt:00058407	metathoracic lateral transverse muscle 1	FBbt:00059143	lateral transverse muscle 1	FBbt:00000019	metathoracic segment	FBbt:00001745	larval metathoracic segment
+FBbt:00058408	metathoracic lateral transverse muscle 2	FBbt:00059144	lateral transverse muscle 2	FBbt:00000019	metathoracic segment	FBbt:00001745	larval metathoracic segment
+FBbt:00058409	metathoracic lateral transverse muscle 3	FBbt:00059145	lateral transverse muscle 3	FBbt:00000019	metathoracic segment	FBbt:00001745	larval metathoracic segment
+FBbt:00058410	metathoracic lateral transverse muscle 4	FBbt:00059146	lateral transverse muscle 4	FBbt:00000019	metathoracic segment	FBbt:00001745	larval metathoracic segment
+FBbt:00058411	metathoracic longitudinal muscle	FBbt:00058313	longitudinal muscle	FBbt:00000019	metathoracic segment	FBbt:00001745	larval metathoracic segment
+FBbt:00058412	metathoracic lateral longitudinal muscle	FBbt:00058314	lateral longitudinal muscle 1	FBbt:00000019	metathoracic segment	FBbt:00001745	larval metathoracic segment
+FBbt:00058414	metathoracic ventral longitudinal muscle	FBbt:00058315	ventral longitudinal muscle	FBbt:00000019	metathoracic segment	FBbt:00001745	larval metathoracic segment
+FBbt:00058415	metathoracic ventral longitudinal muscle 1	FBbt:00059151	ventral longitudinal muscle 1	FBbt:00000019	metathoracic segment	FBbt:00001745	larval metathoracic segment
+FBbt:00058416	metathoracic ventral longitudinal muscle 2	FBbt:00059149	ventral longitudinal muscle 2	FBbt:00000019	metathoracic segment	FBbt:00001745	larval metathoracic segment
+FBbt:00058417	metathoracic ventral longitudinal muscle 3	FBbt:00059138	ventral longitudinal muscle 3	FBbt:00000019	metathoracic segment	FBbt:00001745	larval metathoracic segment
+FBbt:00058418	metathoracic ventral longitudinal muscle 4	FBbt:00059139	ventral longitudinal muscle 4	FBbt:00000019	metathoracic segment	FBbt:00001745	larval metathoracic segment
+FBbt:00058419	A1-7 acute muscle	FBbt:00058307	acute muscle	FBbt:00052393	anterior abdominal segment	FBbt:00007586	larval abdominal segment A1-7
+FBbt:00058420	A1-7 dorsal acute muscle	FBbt:00058308	dorsal acute muscle	FBbt:00052393	anterior abdominal segment	FBbt:00007586	larval abdominal segment A1-7
+FBbt:00058421	A1-7 dorsal acute muscle 1	FBbt:00059130	dorsal acute muscle 1	FBbt:00052393	anterior abdominal segment	FBbt:00110209	larval abdominal segment A2-7
+FBbt:00058422	A1-7 dorsal acute muscle 2	FBbt:00059131	dorsal acute muscle 2	FBbt:00052393	anterior abdominal segment	FBbt:00110209	larval abdominal segment A2-7
+FBbt:00058423	A1-7 dorsal acute muscle 3	FBbt:00059134	dorsal acute muscle 3	FBbt:00052393	anterior abdominal segment	FBbt:00110209	larval abdominal segment A2-7
+FBbt:00058424	A1-7 ventral acute muscle	FBbt:00058310	ventral acute muscle	FBbt:00052393	anterior abdominal segment	FBbt:00007586	larval abdominal segment A1-7
+FBbt:00058424	A1-7 ventral acute muscle	FBbt:00058310	ventral acute muscle	FBbt:00052393	anterior abdominal segment	FBbt:00007586	larval abdominal segment A1-7
+FBbt:00058425	A1-7 ventral acute muscle 1	FBbt:00059141	ventral acute muscle 1	FBbt:00052393	anterior abdominal segment	FBbt:00007586	larval abdominal segment A1-7
+FBbt:00058427	A1-7 longitudinal muscle	FBbt:00058313	longitudinal muscle	FBbt:00052393	anterior abdominal segment	FBbt:00007586	larval abdominal segment A1-7
+FBbt:00058428	A1-7 lateral longitudinal muscle 1	FBbt:00058314	lateral longitudinal muscle 1	FBbt:00052393	anterior abdominal segment	FBbt:00007586	larval abdominal segment A1-7
+FBbt:00058429	A1-7 ventral longitudinal muscle	FBbt:00058315	ventral longitudinal muscle	FBbt:00052393	anterior abdominal segment	FBbt:00007586	larval abdominal segment A1-7
+FBbt:00058430	A1-7 ventral longitudinal muscle 1	FBbt:00059151	ventral longitudinal muscle 1	FBbt:00052393	anterior abdominal segment	FBbt:00007586	larval abdominal segment A1-7
+FBbt:00058431	A1-7 ventral longitudinal muscle 2	FBbt:00059149	ventral longitudinal muscle 2	FBbt:00052393	anterior abdominal segment	FBbt:00007586	larval abdominal segment A1-7
+FBbt:00058432	A1-7 ventral longitudinal muscle 3	FBbt:00059138	ventral longitudinal muscle 3	FBbt:00052393	anterior abdominal segment	FBbt:00007586	larval abdominal segment A1-7
+FBbt:00058433	A1-7 ventral longitudinal muscle 4	FBbt:00059139	ventral longitudinal muscle 4	FBbt:00052393	anterior abdominal segment	FBbt:00007586	larval abdominal segment A1-7
+FBbt:00058434	A1-7 segment border muscle	FBbt:00058316	segment border muscle	FBbt:00052393	anterior abdominal segment	FBbt:00007586	larval abdominal segment A1-7
+FBbt:00058435	A1-7 oblique muscle	FBbt:00058299	oblique muscle	FBbt:00052393	anterior abdominal segment	FBbt:00007586	larval abdominal segment A1-7
+FBbt:00058436	A1-7 dorsal oblique muscle	FBbt:00058300	dorsal oblique muscle	FBbt:00052393	anterior abdominal segment	FBbt:00007586	larval abdominal segment A1-7
+FBbt:00058437	A1-7 dorsal oblique muscle 1	FBbt:00059132	dorsal oblique muscle 1	FBbt:00052393	anterior abdominal segment	FBbt:00007586	larval abdominal segment A1-7
+FBbt:00058438	A1-7 dorsal oblique muscle 2	FBbt:00059133	dorsal oblique muscle 2	FBbt:00052393	anterior abdominal segment	FBbt:00007586	larval abdominal segment A1-7
+FBbt:00058439	A1-7 dorsal oblique muscle 3	FBbt:00059135	dorsal oblique muscle 3	FBbt:00052393	anterior abdominal segment	FBbt:00007586	larval abdominal segment A1-7
+FBbt:00058440	A1-7 dorsal oblique muscle 4	FBbt:00059136	dorsal oblique muscle 4	FBbt:00052393	anterior abdominal segment	FBbt:00007586	larval abdominal segment A1-7
+FBbt:00058442	A1-7 lateral oblique muscle 1	FBbt:00058301	lateral oblique muscle 1	FBbt:00052393	anterior abdominal segment	FBbt:00007586	larval abdominal segment A1-7
+FBbt:00058443	A1-7 ventral oblique muscle	FBbt:00058302	ventral oblique muscle	FBbt:00052393	anterior abdominal segment	FBbt:00007586	larval abdominal segment A1-7
+FBbt:00058444	A1-7 ventral oblique muscle 1	FBbt:00059140	ventral oblique muscle 1	FBbt:00052393	anterior abdominal segment	FBbt:00007586	larval abdominal segment A1-7
+FBbt:00058445	A1-7 ventral oblique muscle 2	FBbt:00059137	ventral oblique muscle 2	FBbt:00052393	anterior abdominal segment	FBbt:00007586	larval abdominal segment A1-7
+FBbt:00058446	A1-7 ventral oblique muscle 3	FBbt:00059148	ventral oblique muscle 3	FBbt:00052393	anterior abdominal segment	FBbt:00007586	larval abdominal segment A1-7
+FBbt:00058450	A1-7 transverse muscle	FBbt:00058303	transverse muscle	FBbt:00052393	anterior abdominal segment	FBbt:00007586	larval abdominal segment A1-7
+FBbt:00058451	A1-7 dorsal transverse muscle 1	FBbt:00058304	dorsal transverse muscle	FBbt:00052393	anterior abdominal segment	FBbt:00007586	larval abdominal segment A1-7
+FBbt:00058452	A1-7 lateral transverse muscle	FBbt:00058305	lateral transverse muscle	FBbt:00052393	anterior abdominal segment	FBbt:00007586	larval abdominal segment A1-7
+FBbt:00058453	A1-7 lateral transverse muscle 1	FBbt:00059143	lateral transverse muscle 1	FBbt:00052393	anterior abdominal segment	FBbt:00007586	larval abdominal segment A1-7
+FBbt:00058454	A1-7 lateral transverse muscle 2	FBbt:00059144	lateral transverse muscle 2	FBbt:00052393	anterior abdominal segment	FBbt:00007586	larval abdominal segment A1-7
+FBbt:00058455	A1-7 lateral transverse muscle 3	FBbt:00059145	lateral transverse muscle 3	FBbt:00052393	anterior abdominal segment	FBbt:00007586	larval abdominal segment A1-7
+FBbt:00058456	A1-7 lateral transverse muscle 4	FBbt:00059146	lateral transverse muscle 4	FBbt:00052393	anterior abdominal segment	FBbt:00007586	larval abdominal segment A1-7
+FBbt:00058457	A1-7 ventral transverse muscle	FBbt:00058306	ventral transverse muscle	FBbt:00052393	anterior abdominal segment	FBbt:00007586	larval abdominal segment A1-7
+FBbt:00058458	A2-7 ventral transverse muscle 1	FBbt:00059147	ventral transverse muscle 1	FBbt:00052393	anterior abdominal segment	FBbt:00110209	larval abdominal segment A2-7
+FBbt:00058460	hypodermal muscle of larval abdominal 1	FBbt:00058298	embryonic/larval hypodermal muscle	FBbt:00000022	abdominal segment 1	FBbt:00001748	larval abdominal segment 1
+FBbt:00058461	abdominal 1 acute muscle	FBbt:00058307	acute muscle	FBbt:00000022	abdominal segment 1	FBbt:00001748	larval abdominal segment 1
+FBbt:00058462	abdominal 1 dorsal acute muscle	FBbt:00058308	dorsal acute muscle	FBbt:00000022	abdominal segment 1	FBbt:00001748	larval abdominal segment 1
+FBbt:00058463	abdominal 1 dorsal acute muscle 1	FBbt:00059130	dorsal acute muscle 1	FBbt:00000022	abdominal segment 1	FBbt:00001748	larval abdominal segment 1
+FBbt:00058464	abdominal 1 dorsal acute muscle 2	FBbt:00059131	dorsal acute muscle 2	FBbt:00000022	abdominal segment 1	FBbt:00001748	larval abdominal segment 1
+FBbt:00058465	abdominal 1 dorsal acute muscle 3	FBbt:00059134	dorsal acute muscle 3	FBbt:00000022	abdominal segment 1	FBbt:00001748	larval abdominal segment 1
+FBbt:00058466	abdominal 1 ventral acute muscle	FBbt:00058310	ventral acute muscle	FBbt:00000022	abdominal segment 1	FBbt:00001748	larval abdominal segment 1
+FBbt:00058466	abdominal 1 ventral acute muscle	FBbt:00058310	ventral acute muscle	FBbt:00000022	abdominal segment 1	FBbt:00001748	larval abdominal segment 1
+FBbt:00058467	abdominal 1 ventral acute muscle 1	FBbt:00059141	ventral acute muscle 1	FBbt:00000022	abdominal segment 1	FBbt:00001748	larval abdominal segment 1
+FBbt:00058468	abdominal 1 ventral acute muscle 2	FBbt:00059142	ventral acute muscle 2	FBbt:00000022	abdominal segment 1	FBbt:00001748	larval abdominal segment 1
+FBbt:00058469	abdominal 1 ventral acute muscle 3	FBbt:00058426	ventral acute muscle 3	FBbt:00000022	abdominal segment 1	FBbt:00001748	larval abdominal segment 1
+FBbt:00058470	abdominal 1 longitudinal muscle	FBbt:00058313	longitudinal muscle	FBbt:00000022	abdominal segment 1	FBbt:00001748	larval abdominal segment 1
+FBbt:00058471	abdominal 1 lateral longitudinal muscle 1	FBbt:00058314	lateral longitudinal muscle 1	FBbt:00000022	abdominal segment 1	FBbt:00001748	larval abdominal segment 1
+FBbt:00058472	abdominal 1 ventral longitudinal muscle	FBbt:00058315	ventral longitudinal muscle	FBbt:00000022	abdominal segment 1	FBbt:00001748	larval abdominal segment 1
+FBbt:00058473	abdominal 1 ventral longitudinal muscle 1	FBbt:00059151	ventral longitudinal muscle 1	FBbt:00000022	abdominal segment 1	FBbt:00001748	larval abdominal segment 1
+FBbt:00058474	abdominal 1 ventral longitudinal muscle 2	FBbt:00059149	ventral longitudinal muscle 2	FBbt:00000022	abdominal segment 1	FBbt:00001748	larval abdominal segment 1
+FBbt:00058475	abdominal 1 ventral longitudinal muscle 3	FBbt:00059138	ventral longitudinal muscle 3	FBbt:00000022	abdominal segment 1	FBbt:00001748	larval abdominal segment 1
+FBbt:00058476	abdominal 1 ventral longitudinal muscle 4	FBbt:00059139	ventral longitudinal muscle 4	FBbt:00000022	abdominal segment 1	FBbt:00001748	larval abdominal segment 1
+FBbt:00058477	abdominal 1 segment border muscle	FBbt:00058316	segment border muscle	FBbt:00000022	abdominal segment 1	FBbt:00001748	larval abdominal segment 1
+FBbt:00058478	abdominal 1 oblique muscle	FBbt:00058299	oblique muscle	FBbt:00000022	abdominal segment 1	FBbt:00001748	larval abdominal segment 1
+FBbt:00058479	abdominal 1 dorsal oblique muscle	FBbt:00058300	dorsal oblique muscle	FBbt:00000022	abdominal segment 1	FBbt:00001748	larval abdominal segment 1
+FBbt:00058480	abdominal 1 dorsal oblique muscle 1	FBbt:00059132	dorsal oblique muscle 1	FBbt:00000022	abdominal segment 1	FBbt:00001748	larval abdominal segment 1
+FBbt:00058481	abdominal 1 dorsal oblique muscle 2	FBbt:00059133	dorsal oblique muscle 2	FBbt:00000022	abdominal segment 1	FBbt:00001748	larval abdominal segment 1
+FBbt:00058482	abdominal 1 dorsal oblique muscle 3	FBbt:00059135	dorsal oblique muscle 3	FBbt:00000022	abdominal segment 1	FBbt:00001748	larval abdominal segment 1
+FBbt:00058483	abdominal 1 dorsal oblique muscle 4	FBbt:00059136	dorsal oblique muscle 4	FBbt:00000022	abdominal segment 1	FBbt:00001748	larval abdominal segment 1
+FBbt:00058484	abdominal 1 dorsal oblique muscle 5	FBbt:00058441	dorsal oblique muscle 5	FBbt:00000022	abdominal segment 1	FBbt:00001748	larval abdominal segment 1
+FBbt:00058485	abdominal 1 lateral oblique muscle 1	FBbt:00058301	lateral oblique muscle 1	FBbt:00000022	abdominal segment 1	FBbt:00001748	larval abdominal segment 1
+FBbt:00058486	abdominal 1 ventral oblique muscle	FBbt:00058302	ventral oblique muscle	FBbt:00000022	abdominal segment 1	FBbt:00001748	larval abdominal segment 1
+FBbt:00058487	abdominal 1 ventral oblique muscle 1	FBbt:00059140	ventral oblique muscle 1	FBbt:00000022	abdominal segment 1	FBbt:00001748	larval abdominal segment 1
+FBbt:00058488	abdominal 1 ventral oblique muscle 2	FBbt:00059137	ventral oblique muscle 2	FBbt:00000022	abdominal segment 1	FBbt:00001748	larval abdominal segment 1
+FBbt:00058491	abdominal 1 ventral oblique muscle 3	FBbt:00059148	ventral oblique muscle 3	FBbt:00000022	abdominal segment 1	FBbt:00001748	larval abdominal segment 1
+FBbt:00058492	abdominal 1 transverse muscle	FBbt:00058303	transverse muscle	FBbt:00000022	abdominal segment 1	FBbt:00001748	larval abdominal segment 1
+FBbt:00058493	abdominal 1 dorsal transverse muscle 1	FBbt:00058304	dorsal transverse muscle	FBbt:00000022	abdominal segment 1	FBbt:00001748	larval abdominal segment 1
+FBbt:00058494	abdominal 1 lateral transverse muscle	FBbt:00058305	lateral transverse muscle	FBbt:00000022	abdominal segment 1	FBbt:00001748	larval abdominal segment 1
+FBbt:00058495	abdominal 1 lateral transverse muscle 1	FBbt:00059143	lateral transverse muscle 1	FBbt:00000022	abdominal segment 1	FBbt:00001748	larval abdominal segment 1
+FBbt:00058496	abdominal 1 lateral transverse muscle 2	FBbt:00059144	lateral transverse muscle 2	FBbt:00000022	abdominal segment 1	FBbt:00001748	larval abdominal segment 1
+FBbt:00058497	abdominal 1 lateral transverse muscle 3	FBbt:00059145	lateral transverse muscle 3	FBbt:00000022	abdominal segment 1	FBbt:00001748	larval abdominal segment 1
+FBbt:00058498	abdominal 1 lateral transverse muscle 4	FBbt:00059146	lateral transverse muscle 4	FBbt:00000022	abdominal segment 1	FBbt:00001748	larval abdominal segment 1
+FBbt:00058501	hypodermal muscle of larval abdominal 2	FBbt:00058298	embryonic/larval hypodermal muscle	FBbt:00000023	abdominal segment 2	FBbt:00001749	larval abdominal segment 2
+FBbt:00058502	abdominal 2 acute muscle	FBbt:00058307	acute muscle	FBbt:00000023	abdominal segment 2	FBbt:00001749	larval abdominal segment 2
+FBbt:00058503	abdominal 2 dorsal acute muscle	FBbt:00058308	dorsal acute muscle	FBbt:00000023	abdominal segment 2	FBbt:00001749	larval abdominal segment 2
+FBbt:00058504	abdominal 2 dorsal acute muscle 1	FBbt:00059130	dorsal acute muscle 1	FBbt:00000023	abdominal segment 2	FBbt:00001749	larval abdominal segment 2
+FBbt:00058505	abdominal 2 dorsal acute muscle 2	FBbt:00059131	dorsal acute muscle 2	FBbt:00000023	abdominal segment 2	FBbt:00001749	larval abdominal segment 2
+FBbt:00058506	abdominal 2 dorsal acute muscle 3	FBbt:00059134	dorsal acute muscle 3	FBbt:00000023	abdominal segment 2	FBbt:00001749	larval abdominal segment 2
+FBbt:00058507	abdominal 2 ventral acute muscle	FBbt:00058310	ventral acute muscle	FBbt:00000023	abdominal segment 2	FBbt:00001749	larval abdominal segment 2
+FBbt:00058507	abdominal 2 ventral acute muscle	FBbt:00058310	ventral acute muscle	FBbt:00000023	abdominal segment 2	FBbt:00001749	larval abdominal segment 2
+FBbt:00058508	abdominal 2 ventral acute muscle 1	FBbt:00059141	ventral acute muscle 1	FBbt:00000023	abdominal segment 2	FBbt:00001749	larval abdominal segment 2
+FBbt:00058509	abdominal 2 ventral acute muscle 2	FBbt:00059142	ventral acute muscle 2	FBbt:00000023	abdominal segment 2	FBbt:00001749	larval abdominal segment 2
+FBbt:00058510	abdominal 2 ventral acute muscle 3	FBbt:00058426	ventral acute muscle 3	FBbt:00000023	abdominal segment 2	FBbt:00001749	larval abdominal segment 2
+FBbt:00058511	abdominal 2 oblique muscle	FBbt:00058299	oblique muscle	FBbt:00000023	abdominal segment 2	FBbt:00001749	larval abdominal segment 2
+FBbt:00058512	abdominal 2 dorsal oblique muscle	FBbt:00058300	dorsal oblique muscle	FBbt:00000023	abdominal segment 2	FBbt:00001749	larval abdominal segment 2
+FBbt:00058513	abdominal 2 dorsal oblique muscle 1	FBbt:00059132	dorsal oblique muscle 1	FBbt:00000023	abdominal segment 2	FBbt:00001749	larval abdominal segment 2
+FBbt:00058514	abdominal 2 dorsal oblique muscle 2	FBbt:00059133	dorsal oblique muscle 2	FBbt:00000023	abdominal segment 2	FBbt:00001749	larval abdominal segment 2
+FBbt:00058515	abdominal 2 dorsal oblique muscle 3	FBbt:00059135	dorsal oblique muscle 3	FBbt:00000023	abdominal segment 2	FBbt:00001749	larval abdominal segment 2
+FBbt:00058516	abdominal 2 dorsal oblique muscle 4	FBbt:00059136	dorsal oblique muscle 4	FBbt:00000023	abdominal segment 2	FBbt:00001749	larval abdominal segment 2
+FBbt:00058517	abdominal 2 dorsal oblique muscle 5	FBbt:00058441	dorsal oblique muscle 5	FBbt:00000023	abdominal segment 2	FBbt:00001749	larval abdominal segment 2
+FBbt:00058518	abdominal 2 lateral oblique muscle 1	FBbt:00058301	lateral oblique muscle 1	FBbt:00000023	abdominal segment 2	FBbt:00001749	larval abdominal segment 2
+FBbt:00058519	abdominal 2 ventral oblique muscle	FBbt:00058302	ventral oblique muscle	FBbt:00000023	abdominal segment 2	FBbt:00001749	larval abdominal segment 2
+FBbt:00058520	abdominal 2 ventral oblique muscle 1	FBbt:00059140	ventral oblique muscle 1	FBbt:00000023	abdominal segment 2	FBbt:00001749	larval abdominal segment 2
+FBbt:00058521	abdominal 2 ventral oblique muscle 2	FBbt:00059137	ventral oblique muscle 2	FBbt:00000023	abdominal segment 2	FBbt:00001749	larval abdominal segment 2
+FBbt:00058522	abdominal 2 ventral oblique muscle 3	FBbt:00059148	ventral oblique muscle 3	FBbt:00000023	abdominal segment 2	FBbt:00001749	larval abdominal segment 2
+FBbt:00058525	abdominal 2 ventral oblique muscle 6	FBbt:00058449	ventral oblique muscle 6	FBbt:00000023	abdominal segment 2	FBbt:00001749	larval abdominal segment 2
+FBbt:00058526	abdominal 2 longitudinal muscle	FBbt:00058313	longitudinal muscle	FBbt:00000023	abdominal segment 2	FBbt:00001749	larval abdominal segment 2
+FBbt:00058527	abdominal 2 lateral longitudinal muscle 1	FBbt:00058314	lateral longitudinal muscle 1	FBbt:00000023	abdominal segment 2	FBbt:00001749	larval abdominal segment 2
+FBbt:00058528	abdominal 2 ventral longitudinal muscle	FBbt:00058315	ventral longitudinal muscle	FBbt:00000023	abdominal segment 2	FBbt:00001749	larval abdominal segment 2
+FBbt:00058529	abdominal 2 ventral longitudinal muscle 1	FBbt:00059151	ventral longitudinal muscle 1	FBbt:00000023	abdominal segment 2	FBbt:00001749	larval abdominal segment 2
+FBbt:00058530	abdominal 2 ventral longitudinal muscle 2	FBbt:00059149	ventral longitudinal muscle 2	FBbt:00000023	abdominal segment 2	FBbt:00001749	larval abdominal segment 2
+FBbt:00058531	abdominal 2 ventral longitudinal muscle 3	FBbt:00059138	ventral longitudinal muscle 3	FBbt:00000023	abdominal segment 2	FBbt:00001749	larval abdominal segment 2
+FBbt:00058532	abdominal 2 ventral longitudinal muscle 4	FBbt:00059139	ventral longitudinal muscle 4	FBbt:00000023	abdominal segment 2	FBbt:00001749	larval abdominal segment 2
+FBbt:00058533	abdominal 2 segment border muscle	FBbt:00058316	segment border muscle	FBbt:00000023	abdominal segment 2	FBbt:00001749	larval abdominal segment 2
+FBbt:00058534	abdominal 2 transverse muscle	FBbt:00058303	transverse muscle	FBbt:00000023	abdominal segment 2	FBbt:00001749	larval abdominal segment 2
+FBbt:00058535	abdominal 2 dorsal transverse muscle 1	FBbt:00058304	dorsal transverse muscle	FBbt:00000023	abdominal segment 2	FBbt:00001749	larval abdominal segment 2
+FBbt:00058536	abdominal 2 lateral transverse muscle	FBbt:00058305	lateral transverse muscle	FBbt:00000023	abdominal segment 2	FBbt:00001749	larval abdominal segment 2
+FBbt:00058537	abdominal 2 lateral transverse muscle 1	FBbt:00059143	lateral transverse muscle 1	FBbt:00000023	abdominal segment 2	FBbt:00001749	larval abdominal segment 2
+FBbt:00058538	abdominal 2 lateral transverse muscle 2	FBbt:00059144	lateral transverse muscle 2	FBbt:00000023	abdominal segment 2	FBbt:00001749	larval abdominal segment 2
+FBbt:00058539	abdominal 2 lateral transverse muscle 3	FBbt:00059145	lateral transverse muscle 3	FBbt:00000023	abdominal segment 2	FBbt:00001749	larval abdominal segment 2
+FBbt:00058540	abdominal 2 lateral transverse muscle 4	FBbt:00059146	lateral transverse muscle 4	FBbt:00000023	abdominal segment 2	FBbt:00001749	larval abdominal segment 2
+FBbt:00058541	abdominal 2 ventral transverse muscle	FBbt:00058306	ventral transverse muscle	FBbt:00000023	abdominal segment 2	FBbt:00001749	larval abdominal segment 2
+FBbt:00058542	abdominal 2 ventral transverse muscle 1	FBbt:00059147	ventral transverse muscle 1	FBbt:00000023	abdominal segment 2	FBbt:00001749	larval abdominal segment 2
+FBbt:00058543	hypodermal muscle of larval abdominal 3	FBbt:00058298	embryonic/larval hypodermal muscle	FBbt:00000024	abdominal segment 3	FBbt:00001750	larval abdominal segment 3
+FBbt:00058544	abdominal 3 acute muscle	FBbt:00058307	acute muscle	FBbt:00000024	abdominal segment 3	FBbt:00001750	larval abdominal segment 3
+FBbt:00058545	abdominal 3 dorsal acute muscle	FBbt:00058308	dorsal acute muscle	FBbt:00000024	abdominal segment 3	FBbt:00001750	larval abdominal segment 3
+FBbt:00058546	abdominal 3 dorsal acute muscle 1	FBbt:00059130	dorsal acute muscle 1	FBbt:00000024	abdominal segment 3	FBbt:00001750	larval abdominal segment 3
+FBbt:00058547	abdominal 3 dorsal acute muscle 2	FBbt:00059131	dorsal acute muscle 2	FBbt:00000024	abdominal segment 3	FBbt:00001750	larval abdominal segment 3
+FBbt:00058548	abdominal 3 dorsal acute muscle 3	FBbt:00059134	dorsal acute muscle 3	FBbt:00000024	abdominal segment 3	FBbt:00001750	larval abdominal segment 3
+FBbt:00058549	abdominal 3 ventral acute muscle	FBbt:00058310	ventral acute muscle	FBbt:00000024	abdominal segment 3	FBbt:00001750	larval abdominal segment 3
+FBbt:00058549	abdominal 3 ventral acute muscle	FBbt:00058310	ventral acute muscle	FBbt:00000024	abdominal segment 3	FBbt:00001750	larval abdominal segment 3
+FBbt:00058550	abdominal 3 ventral acute muscle 1	FBbt:00059141	ventral acute muscle 1	FBbt:00000024	abdominal segment 3	FBbt:00001750	larval abdominal segment 3
+FBbt:00058551	abdominal 3 ventral acute muscle 2	FBbt:00059142	ventral acute muscle 2	FBbt:00000024	abdominal segment 3	FBbt:00001750	larval abdominal segment 3
+FBbt:00058552	abdominal 3 ventral acute muscle 3	FBbt:00058426	ventral acute muscle 3	FBbt:00000024	abdominal segment 3	FBbt:00001750	larval abdominal segment 3
+FBbt:00058553	abdominal 3 oblique muscle	FBbt:00058299	oblique muscle	FBbt:00000024	abdominal segment 3	FBbt:00001750	larval abdominal segment 3
+FBbt:00058554	abdominal 3 dorsal oblique muscle	FBbt:00058300	dorsal oblique muscle	FBbt:00000024	abdominal segment 3	FBbt:00001750	larval abdominal segment 3
+FBbt:00058555	abdominal 3 dorsal oblique muscle 1	FBbt:00059132	dorsal oblique muscle 1	FBbt:00000024	abdominal segment 3	FBbt:00001750	larval abdominal segment 3
+FBbt:00058556	abdominal 3 dorsal oblique muscle 2	FBbt:00059133	dorsal oblique muscle 2	FBbt:00000024	abdominal segment 3	FBbt:00001750	larval abdominal segment 3
+FBbt:00058557	abdominal 3 dorsal oblique muscle 3	FBbt:00059135	dorsal oblique muscle 3	FBbt:00000024	abdominal segment 3	FBbt:00001750	larval abdominal segment 3
+FBbt:00058558	abdominal 3 dorsal oblique muscle 4	FBbt:00059136	dorsal oblique muscle 4	FBbt:00000024	abdominal segment 3	FBbt:00001750	larval abdominal segment 3
+FBbt:00058559	abdominal 3 dorsal oblique muscle 5	FBbt:00058441	dorsal oblique muscle 5	FBbt:00000024	abdominal segment 3	FBbt:00001750	larval abdominal segment 3
+FBbt:00058560	abdominal 3 lateral oblique muscle 1	FBbt:00058301	lateral oblique muscle 1	FBbt:00000024	abdominal segment 3	FBbt:00001750	larval abdominal segment 3
+FBbt:00058561	abdominal 3 ventral oblique muscle	FBbt:00058302	ventral oblique muscle	FBbt:00000024	abdominal segment 3	FBbt:00001750	larval abdominal segment 3
+FBbt:00058562	abdominal 3 ventral oblique muscle 1	FBbt:00059140	ventral oblique muscle 1	FBbt:00000024	abdominal segment 3	FBbt:00001750	larval abdominal segment 3
+FBbt:00058563	abdominal 3 ventral oblique muscle 2	FBbt:00059137	ventral oblique muscle 2	FBbt:00000024	abdominal segment 3	FBbt:00001750	larval abdominal segment 3
+FBbt:00058564	abdominal 3 ventral oblique muscle 3	FBbt:00059148	ventral oblique muscle 3	FBbt:00000024	abdominal segment 3	FBbt:00001750	larval abdominal segment 3
+FBbt:00058567	abdominal 3 ventral oblique muscle 6	FBbt:00058449	ventral oblique muscle 6	FBbt:00000024	abdominal segment 3	FBbt:00001750	larval abdominal segment 3
+FBbt:00058568	abdominal 3 longitudinal muscle	FBbt:00058313	longitudinal muscle	FBbt:00000024	abdominal segment 3	FBbt:00001750	larval abdominal segment 3
+FBbt:00058569	abdominal 3 lateral longitudinal muscle 1	FBbt:00058314	lateral longitudinal muscle 1	FBbt:00000024	abdominal segment 3	FBbt:00001750	larval abdominal segment 3
+FBbt:00058570	abdominal 3 ventral longitudinal muscle	FBbt:00058315	ventral longitudinal muscle	FBbt:00000024	abdominal segment 3	FBbt:00001750	larval abdominal segment 3
+FBbt:00058571	abdominal 3 ventral longitudinal muscle 1	FBbt:00059151	ventral longitudinal muscle 1	FBbt:00000024	abdominal segment 3	FBbt:00001750	larval abdominal segment 3
+FBbt:00058572	abdominal 3 ventral longitudinal muscle 2	FBbt:00059149	ventral longitudinal muscle 2	FBbt:00000024	abdominal segment 3	FBbt:00001750	larval abdominal segment 3
+FBbt:00058573	abdominal 3 ventral longitudinal muscle 3	FBbt:00059138	ventral longitudinal muscle 3	FBbt:00000024	abdominal segment 3	FBbt:00001750	larval abdominal segment 3
+FBbt:00058574	abdominal 3 ventral longitudinal muscle 4	FBbt:00059139	ventral longitudinal muscle 4	FBbt:00000024	abdominal segment 3	FBbt:00001750	larval abdominal segment 3
+FBbt:00058575	abdominal 3 segment border muscle	FBbt:00058316	segment border muscle	FBbt:00000024	abdominal segment 3	FBbt:00001750	larval abdominal segment 3
+FBbt:00058576	abdominal 3 transverse muscle	FBbt:00058303	transverse muscle	FBbt:00000024	abdominal segment 3	FBbt:00001750	larval abdominal segment 3
+FBbt:00058577	abdominal 3 dorsal transverse muscle 1	FBbt:00058304	dorsal transverse muscle	FBbt:00000024	abdominal segment 3	FBbt:00001750	larval abdominal segment 3
+FBbt:00058578	abdominal 3 lateral transverse muscle	FBbt:00058305	lateral transverse muscle	FBbt:00000024	abdominal segment 3	FBbt:00001750	larval abdominal segment 3
+FBbt:00058579	abdominal 3 lateral transverse muscle 1	FBbt:00059143	lateral transverse muscle 1	FBbt:00000024	abdominal segment 3	FBbt:00001750	larval abdominal segment 3
+FBbt:00058580	abdominal 3 lateral transverse muscle 2	FBbt:00059144	lateral transverse muscle 2	FBbt:00000024	abdominal segment 3	FBbt:00001750	larval abdominal segment 3
+FBbt:00058581	abdominal 3 lateral transverse muscle 3	FBbt:00059145	lateral transverse muscle 3	FBbt:00000024	abdominal segment 3	FBbt:00001750	larval abdominal segment 3
+FBbt:00058582	abdominal 3 lateral transverse muscle 4	FBbt:00059146	lateral transverse muscle 4	FBbt:00000024	abdominal segment 3	FBbt:00001750	larval abdominal segment 3
+FBbt:00058583	abdominal 3 ventral transverse muscle	FBbt:00058306	ventral transverse muscle	FBbt:00000024	abdominal segment 3	FBbt:00001750	larval abdominal segment 3
+FBbt:00058584	abdominal 3 ventral transverse muscle 1	FBbt:00059147	ventral transverse muscle 1	FBbt:00000024	abdominal segment 3	FBbt:00001750	larval abdominal segment 3
+FBbt:00058585	hypodermal muscle of larval abdominal 4	FBbt:00058298	embryonic/larval hypodermal muscle	FBbt:00000025	abdominal segment 4	FBbt:00001751	larval abdominal segment 4
+FBbt:00058586	abdominal 4 acute muscle	FBbt:00058307	acute muscle	FBbt:00000025	abdominal segment 4	FBbt:00001751	larval abdominal segment 4
+FBbt:00058587	abdominal 4 dorsal acute muscle	FBbt:00058308	dorsal acute muscle	FBbt:00000025	abdominal segment 4	FBbt:00001751	larval abdominal segment 4
+FBbt:00058588	abdominal 4 dorsal acute muscle 1	FBbt:00059130	dorsal acute muscle 1	FBbt:00000025	abdominal segment 4	FBbt:00001751	larval abdominal segment 4
+FBbt:00058589	abdominal 4 dorsal acute muscle 2	FBbt:00059131	dorsal acute muscle 2	FBbt:00000025	abdominal segment 4	FBbt:00001751	larval abdominal segment 4
+FBbt:00058590	abdominal 4 dorsal acute muscle 3	FBbt:00059134	dorsal acute muscle 3	FBbt:00000025	abdominal segment 4	FBbt:00001751	larval abdominal segment 4
+FBbt:00058591	abdominal 4 ventral acute muscle	FBbt:00058310	ventral acute muscle	FBbt:00000025	abdominal segment 4	FBbt:00001751	larval abdominal segment 4
+FBbt:00058591	abdominal 4 ventral acute muscle	FBbt:00058310	ventral acute muscle	FBbt:00000025	abdominal segment 4	FBbt:00001751	larval abdominal segment 4
+FBbt:00058592	abdominal 4 ventral acute muscle 1	FBbt:00059141	ventral acute muscle 1	FBbt:00000025	abdominal segment 4	FBbt:00001751	larval abdominal segment 4
+FBbt:00058593	abdominal 4 ventral acute muscle 2	FBbt:00059142	ventral acute muscle 2	FBbt:00000025	abdominal segment 4	FBbt:00001751	larval abdominal segment 4
+FBbt:00058594	abdominal 4 ventral acute muscle 3	FBbt:00058426	ventral acute muscle 3	FBbt:00000025	abdominal segment 4	FBbt:00001751	larval abdominal segment 4
+FBbt:00058595	abdominal 4 oblique muscle	FBbt:00058299	oblique muscle	FBbt:00000025	abdominal segment 4	FBbt:00001751	larval abdominal segment 4
+FBbt:00058596	abdominal 4 dorsal oblique muscle	FBbt:00058300	dorsal oblique muscle	FBbt:00000025	abdominal segment 4	FBbt:00001751	larval abdominal segment 4
+FBbt:00058597	abdominal 4 dorsal oblique muscle 1	FBbt:00059132	dorsal oblique muscle 1	FBbt:00000025	abdominal segment 4	FBbt:00001751	larval abdominal segment 4
+FBbt:00058598	abdominal 4 dorsal oblique muscle 2	FBbt:00059133	dorsal oblique muscle 2	FBbt:00000025	abdominal segment 4	FBbt:00001751	larval abdominal segment 4
+FBbt:00058599	abdominal 4 dorsal oblique muscle 3	FBbt:00059135	dorsal oblique muscle 3	FBbt:00000025	abdominal segment 4	FBbt:00001751	larval abdominal segment 4
+FBbt:00058600	abdominal 4 dorsal oblique muscle 4	FBbt:00059136	dorsal oblique muscle 4	FBbt:00000025	abdominal segment 4	FBbt:00001751	larval abdominal segment 4
+FBbt:00058601	abdominal 4 dorsal oblique muscle 5	FBbt:00058441	dorsal oblique muscle 5	FBbt:00000025	abdominal segment 4	FBbt:00001751	larval abdominal segment 4
+FBbt:00058602	abdominal 4 lateral oblique muscle 1	FBbt:00058301	lateral oblique muscle 1	FBbt:00000025	abdominal segment 4	FBbt:00001751	larval abdominal segment 4
+FBbt:00058603	abdominal 4 ventral oblique muscle	FBbt:00058302	ventral oblique muscle	FBbt:00000025	abdominal segment 4	FBbt:00001751	larval abdominal segment 4
+FBbt:00058604	abdominal 4 ventral oblique muscle 1	FBbt:00059140	ventral oblique muscle 1	FBbt:00000025	abdominal segment 4	FBbt:00001751	larval abdominal segment 4
+FBbt:00058605	abdominal 4 ventral oblique muscle 2	FBbt:00059137	ventral oblique muscle 2	FBbt:00000025	abdominal segment 4	FBbt:00001751	larval abdominal segment 4
+FBbt:00058606	abdominal 4 ventral oblique muscle 3	FBbt:00059148	ventral oblique muscle 3	FBbt:00000025	abdominal segment 4	FBbt:00001751	larval abdominal segment 4
+FBbt:00058609	abdominal 4 ventral oblique muscle 6	FBbt:00058449	ventral oblique muscle 6	FBbt:00000025	abdominal segment 4	FBbt:00001751	larval abdominal segment 4
+FBbt:00058610	abdominal 4 longitudinal muscle	FBbt:00058313	longitudinal muscle	FBbt:00000025	abdominal segment 4	FBbt:00001751	larval abdominal segment 4
+FBbt:00058611	abdominal 4 lateral longitudinal muscle 1	FBbt:00058314	lateral longitudinal muscle 1	FBbt:00000025	abdominal segment 4	FBbt:00001751	larval abdominal segment 4
+FBbt:00058612	abdominal 4 ventral longitudinal muscle	FBbt:00058315	ventral longitudinal muscle	FBbt:00000025	abdominal segment 4	FBbt:00001751	larval abdominal segment 4
+FBbt:00058613	abdominal 4 ventral longitudinal muscle 1	FBbt:00059151	ventral longitudinal muscle 1	FBbt:00000025	abdominal segment 4	FBbt:00001751	larval abdominal segment 4
+FBbt:00058614	abdominal 4 ventral longitudinal muscle 2	FBbt:00059149	ventral longitudinal muscle 2	FBbt:00000025	abdominal segment 4	FBbt:00001751	larval abdominal segment 4
+FBbt:00058615	abdominal 4 ventral longitudinal muscle 3	FBbt:00059138	ventral longitudinal muscle 3	FBbt:00000025	abdominal segment 4	FBbt:00001751	larval abdominal segment 4
+FBbt:00058616	abdominal 4 ventral longitudinal muscle 4	FBbt:00059139	ventral longitudinal muscle 4	FBbt:00000025	abdominal segment 4	FBbt:00001751	larval abdominal segment 4
+FBbt:00058617	abdominal 4 segment border muscle	FBbt:00058316	segment border muscle	FBbt:00000025	abdominal segment 4	FBbt:00001751	larval abdominal segment 4
+FBbt:00058618	abdominal 4 transverse muscle	FBbt:00058303	transverse muscle	FBbt:00000025	abdominal segment 4	FBbt:00001751	larval abdominal segment 4
+FBbt:00058619	abdominal 4 dorsal transverse muscle 1	FBbt:00058304	dorsal transverse muscle	FBbt:00000025	abdominal segment 4	FBbt:00001751	larval abdominal segment 4
+FBbt:00058620	abdominal 4 lateral transverse muscle	FBbt:00058305	lateral transverse muscle	FBbt:00000025	abdominal segment 4	FBbt:00001751	larval abdominal segment 4
+FBbt:00058621	abdominal 4 lateral transverse muscle 1	FBbt:00059143	lateral transverse muscle 1	FBbt:00000025	abdominal segment 4	FBbt:00001751	larval abdominal segment 4
+FBbt:00058622	abdominal 4 lateral transverse muscle 2	FBbt:00059144	lateral transverse muscle 2	FBbt:00000025	abdominal segment 4	FBbt:00001751	larval abdominal segment 4
+FBbt:00058623	abdominal 4 lateral transverse muscle 3	FBbt:00059145	lateral transverse muscle 3	FBbt:00000025	abdominal segment 4	FBbt:00001751	larval abdominal segment 4
+FBbt:00058624	abdominal 4 lateral transverse muscle 4	FBbt:00059146	lateral transverse muscle 4	FBbt:00000025	abdominal segment 4	FBbt:00001751	larval abdominal segment 4
+FBbt:00058625	abdominal 4 ventral transverse muscle	FBbt:00058306	ventral transverse muscle	FBbt:00000025	abdominal segment 4	FBbt:00001751	larval abdominal segment 4
+FBbt:00058626	abdominal 4 ventral transverse muscle 1	FBbt:00059147	ventral transverse muscle 1	FBbt:00000025	abdominal segment 4	FBbt:00001751	larval abdominal segment 4
+FBbt:00058627	hypodermal muscle of larval abdominal 5	FBbt:00058298	embryonic/larval hypodermal muscle	FBbt:00000026	abdominal segment 5	FBbt:00001752	larval abdominal segment 5
+FBbt:00058628	abdominal 5 acute muscle	FBbt:00058307	acute muscle	FBbt:00000026	abdominal segment 5	FBbt:00001752	larval abdominal segment 5
+FBbt:00058629	abdominal 5 dorsal acute muscle	FBbt:00058308	dorsal acute muscle	FBbt:00000026	abdominal segment 5	FBbt:00001752	larval abdominal segment 5
+FBbt:00058630	abdominal 5 dorsal acute muscle 1	FBbt:00059130	dorsal acute muscle 1	FBbt:00000026	abdominal segment 5	FBbt:00001752	larval abdominal segment 5
+FBbt:00058631	abdominal 5 dorsal acute muscle 2	FBbt:00059131	dorsal acute muscle 2	FBbt:00000026	abdominal segment 5	FBbt:00001752	larval abdominal segment 5
+FBbt:00058632	abdominal 5 dorsal acute muscle 3	FBbt:00059134	dorsal acute muscle 3	FBbt:00000026	abdominal segment 5	FBbt:00001752	larval abdominal segment 5
+FBbt:00058633	abdominal 5 ventral acute muscle	FBbt:00058310	ventral acute muscle	FBbt:00000026	abdominal segment 5	FBbt:00001752	larval abdominal segment 5
+FBbt:00058633	abdominal 5 ventral acute muscle	FBbt:00058310	ventral acute muscle	FBbt:00000026	abdominal segment 5	FBbt:00001752	larval abdominal segment 5
+FBbt:00058634	abdominal 5 ventral acute muscle 1	FBbt:00059141	ventral acute muscle 1	FBbt:00000026	abdominal segment 5	FBbt:00001752	larval abdominal segment 5
+FBbt:00058635	abdominal 5 ventral acute muscle 2	FBbt:00059142	ventral acute muscle 2	FBbt:00000026	abdominal segment 5	FBbt:00001752	larval abdominal segment 5
+FBbt:00058636	abdominal 5 ventral acute muscle 3	FBbt:00058426	ventral acute muscle 3	FBbt:00000026	abdominal segment 5	FBbt:00001752	larval abdominal segment 5
+FBbt:00058637	abdominal 5 oblique muscle	FBbt:00058299	oblique muscle	FBbt:00000026	abdominal segment 5	FBbt:00001752	larval abdominal segment 5
+FBbt:00058638	abdominal 5 dorsal oblique muscle	FBbt:00058300	dorsal oblique muscle	FBbt:00000026	abdominal segment 5	FBbt:00001752	larval abdominal segment 5
+FBbt:00058639	abdominal 5 dorsal oblique muscle 1	FBbt:00059132	dorsal oblique muscle 1	FBbt:00000026	abdominal segment 5	FBbt:00001752	larval abdominal segment 5
+FBbt:00058640	abdominal 5 dorsal oblique muscle 2	FBbt:00059133	dorsal oblique muscle 2	FBbt:00000026	abdominal segment 5	FBbt:00001752	larval abdominal segment 5
+FBbt:00058641	abdominal 5 dorsal oblique muscle 3	FBbt:00059135	dorsal oblique muscle 3	FBbt:00000026	abdominal segment 5	FBbt:00001752	larval abdominal segment 5
+FBbt:00058642	abdominal 5 dorsal oblique muscle 4	FBbt:00059136	dorsal oblique muscle 4	FBbt:00000026	abdominal segment 5	FBbt:00001752	larval abdominal segment 5
+FBbt:00058643	abdominal 5 dorsal oblique muscle 5	FBbt:00058441	dorsal oblique muscle 5	FBbt:00000026	abdominal segment 5	FBbt:00001752	larval abdominal segment 5
+FBbt:00058644	abdominal 5 lateral oblique muscle 1	FBbt:00058301	lateral oblique muscle 1	FBbt:00000026	abdominal segment 5	FBbt:00001752	larval abdominal segment 5
+FBbt:00058645	abdominal 5 ventral oblique muscle	FBbt:00058302	ventral oblique muscle	FBbt:00000026	abdominal segment 5	FBbt:00001752	larval abdominal segment 5
+FBbt:00058646	abdominal 5 ventral oblique muscle 1	FBbt:00059140	ventral oblique muscle 1	FBbt:00000026	abdominal segment 5	FBbt:00001752	larval abdominal segment 5
+FBbt:00058647	abdominal 5 ventral oblique muscle 2	FBbt:00059137	ventral oblique muscle 2	FBbt:00000026	abdominal segment 5	FBbt:00001752	larval abdominal segment 5
+FBbt:00058648	abdominal 5 ventral oblique muscle 3	FBbt:00059148	ventral oblique muscle 3	FBbt:00000026	abdominal segment 5	FBbt:00001752	larval abdominal segment 5
+FBbt:00058651	abdominal 5 ventral oblique muscle 6	FBbt:00058449	ventral oblique muscle 6	FBbt:00000026	abdominal segment 5	FBbt:00001752	larval abdominal segment 5
+FBbt:00058652	abdominal 5 longitudinal muscle	FBbt:00058313	longitudinal muscle	FBbt:00000026	abdominal segment 5	FBbt:00001752	larval abdominal segment 5
+FBbt:00058653	abdominal 5 lateral longitudinal muscle 1	FBbt:00058314	lateral longitudinal muscle 1	FBbt:00000026	abdominal segment 5	FBbt:00001752	larval abdominal segment 5
+FBbt:00058654	abdominal 5 ventral longitudinal muscle	FBbt:00058315	ventral longitudinal muscle	FBbt:00000026	abdominal segment 5	FBbt:00001752	larval abdominal segment 5
+FBbt:00058655	abdominal 5 ventral longitudinal muscle 1	FBbt:00059151	ventral longitudinal muscle 1	FBbt:00000026	abdominal segment 5	FBbt:00001752	larval abdominal segment 5
+FBbt:00058656	abdominal 5 ventral longitudinal muscle 2	FBbt:00059149	ventral longitudinal muscle 2	FBbt:00000026	abdominal segment 5	FBbt:00001752	larval abdominal segment 5
+FBbt:00058657	abdominal 5 ventral longitudinal muscle 3	FBbt:00059138	ventral longitudinal muscle 3	FBbt:00000026	abdominal segment 5	FBbt:00001752	larval abdominal segment 5
+FBbt:00058658	abdominal 5 ventral longitudinal muscle 4	FBbt:00059139	ventral longitudinal muscle 4	FBbt:00000026	abdominal segment 5	FBbt:00001752	larval abdominal segment 5
+FBbt:00058659	abdominal 5 segment border muscle	FBbt:00058316	segment border muscle	FBbt:00000026	abdominal segment 5	FBbt:00001752	larval abdominal segment 5
+FBbt:00058660	abdominal 5 transverse muscle	FBbt:00058303	transverse muscle	FBbt:00000026	abdominal segment 5	FBbt:00001752	larval abdominal segment 5
+FBbt:00058661	abdominal 5 dorsal transverse muscle 1	FBbt:00058304	dorsal transverse muscle	FBbt:00000026	abdominal segment 5	FBbt:00001752	larval abdominal segment 5
+FBbt:00058662	abdominal 5 lateral transverse muscle	FBbt:00058305	lateral transverse muscle	FBbt:00000026	abdominal segment 5	FBbt:00001752	larval abdominal segment 5
+FBbt:00058663	abdominal 5 lateral transverse muscle 1	FBbt:00059143	lateral transverse muscle 1	FBbt:00000026	abdominal segment 5	FBbt:00001752	larval abdominal segment 5
+FBbt:00058664	abdominal 5 lateral transverse muscle 2	FBbt:00059144	lateral transverse muscle 2	FBbt:00000026	abdominal segment 5	FBbt:00001752	larval abdominal segment 5
+FBbt:00058665	abdominal 5 lateral transverse muscle 3	FBbt:00059145	lateral transverse muscle 3	FBbt:00000026	abdominal segment 5	FBbt:00001752	larval abdominal segment 5
+FBbt:00058666	abdominal 5 lateral transverse muscle 4	FBbt:00059146	lateral transverse muscle 4	FBbt:00000026	abdominal segment 5	FBbt:00001752	larval abdominal segment 5
+FBbt:00058667	abdominal 5 ventral transverse muscle	FBbt:00058306	ventral transverse muscle	FBbt:00000026	abdominal segment 5	FBbt:00001752	larval abdominal segment 5
+FBbt:00058668	abdominal 5 ventral transverse muscle 1	FBbt:00059147	ventral transverse muscle 1	FBbt:00000026	abdominal segment 5	FBbt:00001752	larval abdominal segment 5
+FBbt:00058669	hypodermal muscle of larval abdominal 6	FBbt:00058298	embryonic/larval hypodermal muscle	FBbt:00000027	abdominal segment 6	FBbt:00001753	larval abdominal segment 6
+FBbt:00058670	abdominal 6 acute muscle	FBbt:00058307	acute muscle	FBbt:00000027	abdominal segment 6	FBbt:00001753	larval abdominal segment 6
+FBbt:00058671	abdominal 6 dorsal acute muscle	FBbt:00058308	dorsal acute muscle	FBbt:00000027	abdominal segment 6	FBbt:00001753	larval abdominal segment 6
+FBbt:00058672	abdominal 6 dorsal acute muscle 1	FBbt:00059130	dorsal acute muscle 1	FBbt:00000027	abdominal segment 6	FBbt:00001753	larval abdominal segment 6
+FBbt:00058673	abdominal 6 dorsal acute muscle 2	FBbt:00059131	dorsal acute muscle 2	FBbt:00000027	abdominal segment 6	FBbt:00001753	larval abdominal segment 6
+FBbt:00058674	abdominal 6 dorsal acute muscle 3	FBbt:00059134	dorsal acute muscle 3	FBbt:00000027	abdominal segment 6	FBbt:00001753	larval abdominal segment 6
+FBbt:00058675	abdominal 6 ventral acute muscle	FBbt:00058310	ventral acute muscle	FBbt:00000027	abdominal segment 6	FBbt:00001753	larval abdominal segment 6
+FBbt:00058675	abdominal 6 ventral acute muscle	FBbt:00058310	ventral acute muscle	FBbt:00000027	abdominal segment 6	FBbt:00001753	larval abdominal segment 6
+FBbt:00058676	abdominal 6 ventral acute muscle 1	FBbt:00059141	ventral acute muscle 1	FBbt:00000027	abdominal segment 6	FBbt:00001753	larval abdominal segment 6
+FBbt:00058677	abdominal 6 ventral acute muscle 2	FBbt:00059142	ventral acute muscle 2	FBbt:00000027	abdominal segment 6	FBbt:00001753	larval abdominal segment 6
+FBbt:00058678	abdominal 6 ventral acute muscle 3	FBbt:00058426	ventral acute muscle 3	FBbt:00000027	abdominal segment 6	FBbt:00001753	larval abdominal segment 6
+FBbt:00058679	abdominal 6 oblique muscle	FBbt:00058299	oblique muscle	FBbt:00000027	abdominal segment 6	FBbt:00001753	larval abdominal segment 6
+FBbt:00058680	abdominal 6 dorsal oblique muscle	FBbt:00058300	dorsal oblique muscle	FBbt:00000027	abdominal segment 6	FBbt:00001753	larval abdominal segment 6
+FBbt:00058681	abdominal 6 dorsal oblique muscle 1	FBbt:00059132	dorsal oblique muscle 1	FBbt:00000027	abdominal segment 6	FBbt:00001753	larval abdominal segment 6
+FBbt:00058682	abdominal 6 dorsal oblique muscle 2	FBbt:00059133	dorsal oblique muscle 2	FBbt:00000027	abdominal segment 6	FBbt:00001753	larval abdominal segment 6
+FBbt:00058683	abdominal 6 dorsal oblique muscle 3	FBbt:00059135	dorsal oblique muscle 3	FBbt:00000027	abdominal segment 6	FBbt:00001753	larval abdominal segment 6
+FBbt:00058684	abdominal 6 dorsal oblique muscle 4	FBbt:00059136	dorsal oblique muscle 4	FBbt:00000027	abdominal segment 6	FBbt:00001753	larval abdominal segment 6
+FBbt:00058685	abdominal 6 dorsal oblique muscle 5	FBbt:00058441	dorsal oblique muscle 5	FBbt:00000027	abdominal segment 6	FBbt:00001753	larval abdominal segment 6
+FBbt:00058686	abdominal 6 lateral oblique muscle 1	FBbt:00058301	lateral oblique muscle 1	FBbt:00000027	abdominal segment 6	FBbt:00001753	larval abdominal segment 6
+FBbt:00058687	abdominal 6 ventral oblique muscle	FBbt:00058302	ventral oblique muscle	FBbt:00000027	abdominal segment 6	FBbt:00001753	larval abdominal segment 6
+FBbt:00058688	abdominal 6 ventral oblique muscle 1	FBbt:00059140	ventral oblique muscle 1	FBbt:00000027	abdominal segment 6	FBbt:00001753	larval abdominal segment 6
+FBbt:00058689	abdominal 6 ventral oblique muscle 2	FBbt:00059137	ventral oblique muscle 2	FBbt:00000027	abdominal segment 6	FBbt:00001753	larval abdominal segment 6
+FBbt:00058690	abdominal 6 ventral oblique muscle 3	FBbt:00059148	ventral oblique muscle 3	FBbt:00000027	abdominal segment 6	FBbt:00001753	larval abdominal segment 6
+FBbt:00058693	abdominal 6 ventral oblique muscle 6	FBbt:00058449	ventral oblique muscle 6	FBbt:00000027	abdominal segment 6	FBbt:00001753	larval abdominal segment 6
+FBbt:00058694	abdominal 6 longitudinal muscle	FBbt:00058313	longitudinal muscle	FBbt:00000027	abdominal segment 6	FBbt:00001753	larval abdominal segment 6
+FBbt:00058695	abdominal 6 lateral longitudinal muscle 1	FBbt:00058314	lateral longitudinal muscle 1	FBbt:00000027	abdominal segment 6	FBbt:00001753	larval abdominal segment 6
+FBbt:00058696	abdominal 6 ventral longitudinal muscle	FBbt:00058315	ventral longitudinal muscle	FBbt:00000027	abdominal segment 6	FBbt:00001753	larval abdominal segment 6
+FBbt:00058697	abdominal 6 ventral longitudinal muscle 1	FBbt:00059151	ventral longitudinal muscle 1	FBbt:00000027	abdominal segment 6	FBbt:00001753	larval abdominal segment 6
+FBbt:00058698	abdominal 6 ventral longitudinal muscle 2	FBbt:00059149	ventral longitudinal muscle 2	FBbt:00000027	abdominal segment 6	FBbt:00001753	larval abdominal segment 6
+FBbt:00058699	abdominal 6 ventral longitudinal muscle 3	FBbt:00059138	ventral longitudinal muscle 3	FBbt:00000027	abdominal segment 6	FBbt:00001753	larval abdominal segment 6
+FBbt:00058700	abdominal 6 ventral longitudinal muscle 4	FBbt:00059139	ventral longitudinal muscle 4	FBbt:00000027	abdominal segment 6	FBbt:00001753	larval abdominal segment 6
+FBbt:00058701	abdominal 6 segment border muscle	FBbt:00058316	segment border muscle	FBbt:00000027	abdominal segment 6	FBbt:00001753	larval abdominal segment 6
+FBbt:00058702	abdominal 6 transverse muscle	FBbt:00058303	transverse muscle	FBbt:00000027	abdominal segment 6	FBbt:00001753	larval abdominal segment 6
+FBbt:00058703	abdominal 6 dorsal transverse muscle 1	FBbt:00058304	dorsal transverse muscle	FBbt:00000027	abdominal segment 6	FBbt:00001753	larval abdominal segment 6
+FBbt:00058704	abdominal 6 lateral transverse muscle	FBbt:00058305	lateral transverse muscle	FBbt:00000027	abdominal segment 6	FBbt:00001753	larval abdominal segment 6
+FBbt:00058705	abdominal 6 lateral transverse muscle 1	FBbt:00059143	lateral transverse muscle 1	FBbt:00000027	abdominal segment 6	FBbt:00001753	larval abdominal segment 6
+FBbt:00058706	abdominal 6 lateral transverse muscle 2	FBbt:00059144	lateral transverse muscle 2	FBbt:00000027	abdominal segment 6	FBbt:00001753	larval abdominal segment 6
+FBbt:00058707	abdominal 6 lateral transverse muscle 3	FBbt:00059145	lateral transverse muscle 3	FBbt:00000027	abdominal segment 6	FBbt:00001753	larval abdominal segment 6
+FBbt:00058708	abdominal 6 lateral transverse muscle 4	FBbt:00059146	lateral transverse muscle 4	FBbt:00000027	abdominal segment 6	FBbt:00001753	larval abdominal segment 6
+FBbt:00058709	abdominal 6 ventral transverse muscle	FBbt:00058306	ventral transverse muscle	FBbt:00000027	abdominal segment 6	FBbt:00001753	larval abdominal segment 6
+FBbt:00058710	abdominal 6 ventral transverse muscle 1	FBbt:00059147	ventral transverse muscle 1	FBbt:00000027	abdominal segment 6	FBbt:00001753	larval abdominal segment 6
+FBbt:00058711	hypodermal muscle of larval abdominal 7	FBbt:00058298	embryonic/larval hypodermal muscle	FBbt:00000028	abdominal segment 7	FBbt:00001754	larval abdominal segment 7
+FBbt:00058712	abdominal 7 acute muscle	FBbt:00058307	acute muscle	FBbt:00000028	abdominal segment 7	FBbt:00001754	larval abdominal segment 7
+FBbt:00058713	abdominal 7 dorsal acute muscle	FBbt:00058308	dorsal acute muscle	FBbt:00000028	abdominal segment 7	FBbt:00001754	larval abdominal segment 7
+FBbt:00058714	abdominal 7 dorsal acute muscle 1	FBbt:00059130	dorsal acute muscle 1	FBbt:00000028	abdominal segment 7	FBbt:00001754	larval abdominal segment 7
+FBbt:00058715	abdominal 7 dorsal acute muscle 2	FBbt:00059131	dorsal acute muscle 2	FBbt:00000028	abdominal segment 7	FBbt:00001754	larval abdominal segment 7
+FBbt:00058716	abdominal 7 dorsal acute muscle 3	FBbt:00059134	dorsal acute muscle 3	FBbt:00000028	abdominal segment 7	FBbt:00001754	larval abdominal segment 7
+FBbt:00058717	abdominal 7 ventral acute muscle	FBbt:00058310	ventral acute muscle	FBbt:00000028	abdominal segment 7	FBbt:00001754	larval abdominal segment 7
+FBbt:00058717	abdominal 7 ventral acute muscle	FBbt:00058310	ventral acute muscle	FBbt:00000028	abdominal segment 7	FBbt:00001754	larval abdominal segment 7
+FBbt:00058718	abdominal 7 ventral acute muscle 1	FBbt:00059141	ventral acute muscle 1	FBbt:00000028	abdominal segment 7	FBbt:00001754	larval abdominal segment 7
+FBbt:00058719	abdominal 7 ventral acute muscle 2	FBbt:00059142	ventral acute muscle 2	FBbt:00000028	abdominal segment 7	FBbt:00001754	larval abdominal segment 7
+FBbt:00058720	abdominal 7 ventral acute muscle 3	FBbt:00058426	ventral acute muscle 3	FBbt:00000028	abdominal segment 7	FBbt:00001754	larval abdominal segment 7
+FBbt:00058721	abdominal 7 oblique muscle	FBbt:00058299	oblique muscle	FBbt:00000028	abdominal segment 7	FBbt:00001754	larval abdominal segment 7
+FBbt:00058722	abdominal 7 dorsal oblique muscle	FBbt:00058300	dorsal oblique muscle	FBbt:00000028	abdominal segment 7	FBbt:00001754	larval abdominal segment 7
+FBbt:00058723	abdominal 7 dorsal oblique muscle 1	FBbt:00059132	dorsal oblique muscle 1	FBbt:00000028	abdominal segment 7	FBbt:00001754	larval abdominal segment 7
+FBbt:00058724	abdominal 7 dorsal oblique muscle 2	FBbt:00059133	dorsal oblique muscle 2	FBbt:00000028	abdominal segment 7	FBbt:00001754	larval abdominal segment 7
+FBbt:00058725	abdominal 7 dorsal oblique muscle 3	FBbt:00059135	dorsal oblique muscle 3	FBbt:00000028	abdominal segment 7	FBbt:00001754	larval abdominal segment 7
+FBbt:00058726	abdominal 7 dorsal oblique muscle 4	FBbt:00059136	dorsal oblique muscle 4	FBbt:00000028	abdominal segment 7	FBbt:00001754	larval abdominal segment 7
+FBbt:00058727	abdominal 7 dorsal oblique muscle 5	FBbt:00058441	dorsal oblique muscle 5	FBbt:00000028	abdominal segment 7	FBbt:00001754	larval abdominal segment 7
+FBbt:00058728	abdominal 7 lateral oblique muscle 1	FBbt:00058301	lateral oblique muscle 1	FBbt:00000028	abdominal segment 7	FBbt:00001754	larval abdominal segment 7
+FBbt:00058729	abdominal 7 ventral oblique muscle	FBbt:00058302	ventral oblique muscle	FBbt:00000028	abdominal segment 7	FBbt:00001754	larval abdominal segment 7
+FBbt:00058730	abdominal 7 ventral oblique muscle 1	FBbt:00059140	ventral oblique muscle 1	FBbt:00000028	abdominal segment 7	FBbt:00001754	larval abdominal segment 7
+FBbt:00058731	abdominal 7 ventral oblique muscle 2	FBbt:00059137	ventral oblique muscle 2	FBbt:00000028	abdominal segment 7	FBbt:00001754	larval abdominal segment 7
+FBbt:00058732	abdominal 7 ventral oblique muscle 3	FBbt:00059148	ventral oblique muscle 3	FBbt:00000028	abdominal segment 7	FBbt:00001754	larval abdominal segment 7
+FBbt:00058735	abdominal 7 ventral oblique muscle 6	FBbt:00058449	ventral oblique muscle 6	FBbt:00000028	abdominal segment 7	FBbt:00001754	larval abdominal segment 7
+FBbt:00058736	abdominal 7 longitudinal muscle	FBbt:00058313	longitudinal muscle	FBbt:00000028	abdominal segment 7	FBbt:00001754	larval abdominal segment 7
+FBbt:00058737	abdominal 7 lateral longitudinal muscle 1	FBbt:00058314	lateral longitudinal muscle 1	FBbt:00000028	abdominal segment 7	FBbt:00001754	larval abdominal segment 7
+FBbt:00058738	abdominal 7 ventral longitudinal muscle	FBbt:00058315	ventral longitudinal muscle	FBbt:00000028	abdominal segment 7	FBbt:00001754	larval abdominal segment 7
+FBbt:00058739	abdominal 7 ventral longitudinal muscle 1	FBbt:00059151	ventral longitudinal muscle 1	FBbt:00000028	abdominal segment 7	FBbt:00001754	larval abdominal segment 7
+FBbt:00058740	abdominal 7 ventral longitudinal muscle 2	FBbt:00059149	ventral longitudinal muscle 2	FBbt:00000028	abdominal segment 7	FBbt:00001754	larval abdominal segment 7
+FBbt:00058741	abdominal 7 ventral longitudinal muscle 3	FBbt:00059138	ventral longitudinal muscle 3	FBbt:00000028	abdominal segment 7	FBbt:00001754	larval abdominal segment 7
+FBbt:00058742	abdominal 7 ventral longitudinal muscle 4	FBbt:00059139	ventral longitudinal muscle 4	FBbt:00000028	abdominal segment 7	FBbt:00001754	larval abdominal segment 7
+FBbt:00058743	abdominal 7 segment border muscle	FBbt:00058316	segment border muscle	FBbt:00000028	abdominal segment 7	FBbt:00001754	larval abdominal segment 7
+FBbt:00058744	abdominal 7 transverse muscle	FBbt:00058303	transverse muscle	FBbt:00000028	abdominal segment 7	FBbt:00001754	larval abdominal segment 7
+FBbt:00058745	abdominal 7 dorsal transverse muscle 1	FBbt:00058304	dorsal transverse muscle	FBbt:00000028	abdominal segment 7	FBbt:00001754	larval abdominal segment 7
+FBbt:00058746	abdominal 7 lateral transverse muscle	FBbt:00058305	lateral transverse muscle	FBbt:00000028	abdominal segment 7	FBbt:00001754	larval abdominal segment 7
+FBbt:00058747	abdominal 7 lateral transverse muscle 1	FBbt:00059143	lateral transverse muscle 1	FBbt:00000028	abdominal segment 7	FBbt:00001754	larval abdominal segment 7
+FBbt:00058748	abdominal 7 lateral transverse muscle 2	FBbt:00059144	lateral transverse muscle 2	FBbt:00000028	abdominal segment 7	FBbt:00001754	larval abdominal segment 7
+FBbt:00058749	abdominal 7 lateral transverse muscle 3	FBbt:00059145	lateral transverse muscle 3	FBbt:00000028	abdominal segment 7	FBbt:00001754	larval abdominal segment 7
+FBbt:00058750	abdominal 7 lateral transverse muscle 4	FBbt:00059146	lateral transverse muscle 4	FBbt:00000028	abdominal segment 7	FBbt:00001754	larval abdominal segment 7
+FBbt:00058751	abdominal 7 ventral transverse muscle	FBbt:00058306	ventral transverse muscle	FBbt:00000028	abdominal segment 7	FBbt:00001754	larval abdominal segment 7
+FBbt:00058752	abdominal 7 ventral transverse muscle 1	FBbt:00059147	ventral transverse muscle 1	FBbt:00000028	abdominal segment 7	FBbt:00001754	larval abdominal segment 7
+FBbt:00058753	hypodermal muscle of larval abdominal 8	FBbt:00058298	embryonic/larval hypodermal muscle	FBbt:00000029	abdominal segment 8	FBbt:00001755	larval abdominal segment 8
+FBbt:00058754	abdominal 8 oblique muscle	FBbt:00058299	oblique muscle	FBbt:00000029	abdominal segment 8	FBbt:00001755	larval abdominal segment 8
+FBbt:00058755	abdominal 8 dorsal oblique muscle	FBbt:00058300	dorsal oblique muscle	FBbt:00000029	abdominal segment 8	FBbt:00001755	larval abdominal segment 8
+FBbt:00058756	abdominal 8 dorsal oblique muscle 1	FBbt:00059132	dorsal oblique muscle 1	FBbt:00000029	abdominal segment 8	FBbt:00001755	larval abdominal segment 8
+FBbt:00058757	abdominal 8 ventral oblique muscle	FBbt:00058302	ventral oblique muscle	FBbt:00000029	abdominal segment 8	FBbt:00001755	larval abdominal segment 8
+FBbt:00058758	abdominal 8 ventral oblique muscle 1	FBbt:00059140	ventral oblique muscle 1	FBbt:00000029	abdominal segment 8	FBbt:00001755	larval abdominal segment 8
+FBbt:00058759	abdominal 8 ventral oblique muscle 2	FBbt:00059137	ventral oblique muscle 2	FBbt:00000029	abdominal segment 8	FBbt:00001755	larval abdominal segment 8
+FBbt:00058760	abdominal 8 ventral oblique muscle 3	FBbt:00059148	ventral oblique muscle 3	FBbt:00000029	abdominal segment 8	FBbt:00001755	larval abdominal segment 8
+FBbt:00058761	abdominal 8 transverse muscle	FBbt:00058303	transverse muscle	FBbt:00000029	abdominal segment 8	FBbt:00001755	larval abdominal segment 8
+FBbt:00058762	abdominal 8 dorsal transverse muscle 1	FBbt:00058304	dorsal transverse muscle	FBbt:00000029	abdominal segment 8	FBbt:00001755	larval abdominal segment 8
+FBbt:00058763	abdominal 8 lateral transverse muscle	FBbt:00058305	lateral transverse muscle	FBbt:00000029	abdominal segment 8	FBbt:00001755	larval abdominal segment 8
+FBbt:00058764	abdominal 8 lateral transverse muscle 1	FBbt:00059143	lateral transverse muscle 1	FBbt:00000029	abdominal segment 8	FBbt:00001755	larval abdominal segment 8
+FBbt:00058765	abdominal 8 ventral transverse muscle	FBbt:00058306	ventral transverse muscle	FBbt:00000029	abdominal segment 8	FBbt:00001755	larval abdominal segment 8
+FBbt:00058766	abdominal 8 ventral transverse muscle 1	FBbt:00059147	ventral transverse muscle 1	FBbt:00000029	abdominal segment 8	FBbt:00001755	larval abdominal segment 8
+FBbt:00058768	abdominal 8 longitudinal muscle	FBbt:00058313	longitudinal muscle	FBbt:00000029	abdominal segment 8	FBbt:00001755	larval abdominal segment 8
+FBbt:00058769	abdominal 8 ventral longitudinal muscle	FBbt:00058315	ventral longitudinal muscle	FBbt:00000029	abdominal segment 8	FBbt:00001755	larval abdominal segment 8
+FBbt:00058770	abdominal 8 ventral longitudinal muscle 1	FBbt:00059151	ventral longitudinal muscle 1	FBbt:00000029	abdominal segment 8	FBbt:00001755	larval abdominal segment 8
+FBbt:00058771	abdominal 8 ventral longitudinal muscle 2	FBbt:00059149	ventral longitudinal muscle 2	FBbt:00000029	abdominal segment 8	FBbt:00001755	larval abdominal segment 8
+FBbt:00058772	abdominal 8 ventral longitudinal muscle 3	FBbt:00059138	ventral longitudinal muscle 3	FBbt:00000029	abdominal segment 8	FBbt:00001755	larval abdominal segment 8
+FBbt:00058773	abdominal 8 ventral longitudinal muscle 4	FBbt:00059139	ventral longitudinal muscle 4	FBbt:00000029	abdominal segment 8	FBbt:00001755	larval abdominal segment 8
+FBbt:00058774	hypodermal muscle of larval abdominal 9	FBbt:00058298	embryonic/larval hypodermal muscle	FBbt:00000030	abdominal segment 9	FBbt:00001756	larval abdominal segment 9
+FBbt:00058856	somatic muscle of prothorax	FBbt:00058784	adult somatic muscle	FBbt:00000017	prothoracic segment	FBbt:00003020	adult prothoracic segment
+FBbt:00058880	somatic muscle of mesothorax	FBbt:00058784	adult somatic muscle	FBbt:00000018	mesothoracic segment	FBbt:00003021	adult mesothoracic segment
+FBbt:00058937	somatic muscle of metathorax	FBbt:00058784	adult somatic muscle	FBbt:00000019	metathoracic segment	FBbt:00003022	adult metathoracic segment
+FBbt:00059036	abdominal 8 ventral acute muscle 1	FBbt:00059141	ventral acute muscle 1	FBbt:00000029	abdominal segment 8	FBbt:00001755	larval abdominal segment 8
+FBbt:00059150	hypodermal muscle of A1-7	FBbt:00058298	embryonic/larval hypodermal muscle	FBbt:00052393	anterior abdominal segment	FBbt:00007586	larval abdominal segment A1-7
+FBbt:00100034	abdominal 1 dorsal trichoid sensillum dh2	FBbt:00100033	abdominal dorsal trichoid sensillum dh2	FBbt:00000022	abdominal segment 1	FBbt:00001748	larval abdominal segment 1
+FBbt:00100035	abdominal 2 dorsal trichoid sensillum dh2	FBbt:00100033	abdominal dorsal trichoid sensillum dh2	FBbt:00000023	abdominal segment 2	FBbt:00001749	larval abdominal segment 2
+FBbt:00100036	abdominal 3 dorsal trichoid sensillum dh2	FBbt:00100033	abdominal dorsal trichoid sensillum dh2	FBbt:00000024	abdominal segment 3	FBbt:00001750	larval abdominal segment 3
+FBbt:00100037	abdominal 4 dorsal trichoid sensillum dh2	FBbt:00100033	abdominal dorsal trichoid sensillum dh2	FBbt:00000025	abdominal segment 4	FBbt:00001751	larval abdominal segment 4
+FBbt:00100038	abdominal 5 dorsal trichoid sensillum dh2	FBbt:00100033	abdominal dorsal trichoid sensillum dh2	FBbt:00000026	abdominal segment 5	FBbt:00001752	larval abdominal segment 5
+FBbt:00100039	abdominal 6 dorsal trichoid sensillum dh2	FBbt:00100033	abdominal dorsal trichoid sensillum dh2	FBbt:00000027	abdominal segment 6	FBbt:00001753	larval abdominal segment 6
+FBbt:00100040	abdominal 7 dorsal trichoid sensillum dh2	FBbt:00100033	abdominal dorsal trichoid sensillum dh2	FBbt:00000028	abdominal segment 7	FBbt:00001754	larval abdominal segment 7
+FBbt:00110173	adult abdominal neuromere	FBbt:00052718		FBbt:00000021	abdominal segment	FBbt:00003024	adult abdominal segment
+FBbt:00110174	adult prothoracic neuromere	FBbt:00052718		FBbt:00000017	prothoracic segment	FBbt:00003020	adult prothoracic segment
+FBbt:00110175	adult mesothoracic neuromere	FBbt:00052718		FBbt:00000018	mesothoracic segment	FBbt:00003021	adult mesothoracic segment
+FBbt:00110176	adult metathoracic neuromere	FBbt:00052718		FBbt:00000019	metathoracic segment	FBbt:00003022	adult metathoracic segment
+FBbt:00111026	thoracic neuromere	FBbt:00005140	neuromere	FBbt:00000016	thoracic segment		
+FBbt:00111027	adult thoracic neuromere	FBbt:00052718		FBbt:00000016	thoracic segment	FBbt:00003019	adult thoracic segment
+FBbt:00111028	larval abdominal neuromere	FBbt:00001912	larval neuromere	FBbt:00000021	abdominal segment	FBbt:00001747	larval abdominal segment
+FBbt:00111029	larval thoracic neuromere	FBbt:00001912	larval neuromere	FBbt:00000016	thoracic segment	FBbt:00001742	larval thoracic segment
+FBbt:00111030	larval prothoracic neuromere	FBbt:00001912	larval neuromere	FBbt:00000017	prothoracic segment	FBbt:00001743	larval prothoracic segment
+FBbt:00111031	larval mesothoracic neuromere	FBbt:00001912	larval neuromere	FBbt:00000018	mesothoracic segment	FBbt:00001744	larval mesothoracic segment
+FBbt:00111032	larval metathoracic neuromere	FBbt:00001912	larval neuromere	FBbt:00000019	metathoracic segment	FBbt:00001745	larval metathoracic segment
+FBbt:00111033	larval abdominal 1 neuromere	FBbt:00001912	larval neuromere	FBbt:00000022	abdominal segment 1	FBbt:00001748	larval abdominal segment 1
+FBbt:00111034	larval abdominal 2 neuromere	FBbt:00001912	larval neuromere	FBbt:00000023	abdominal segment 2	FBbt:00001749	larval abdominal segment 2
+FBbt:00111035	larval abdominal 3 neuromere	FBbt:00001912	larval neuromere	FBbt:00000024	abdominal segment 3	FBbt:00001750	larval abdominal segment 3
+FBbt:00111036	larval abdominal 4 neuromere	FBbt:00001912	larval neuromere	FBbt:00000025	abdominal segment 4	FBbt:00001751	larval abdominal segment 4
+FBbt:00111037	larval abdominal 5 neuromere	FBbt:00001912	larval neuromere	FBbt:00000026	abdominal segment 5	FBbt:00001752	larval abdominal segment 5
+FBbt:00111038	larval abdominal 6 neuromere	FBbt:00001912	larval neuromere	FBbt:00000027	abdominal segment 6	FBbt:00001753	larval abdominal segment 6
+FBbt:00111039	larval abdominal 7 neuromere	FBbt:00001912	larval neuromere	FBbt:00000028	abdominal segment 7	FBbt:00001754	larval abdominal segment 7
+FBbt:00111040	larval abdominal 8 neuromere	FBbt:00001912	larval neuromere	FBbt:00000029	abdominal segment 8	FBbt:00001755	larval abdominal segment 8
+FBbt:00111041	larval abdominal 9 neuromere	FBbt:00001912	larval neuromere	FBbt:00000030	abdominal segment 9	FBbt:00001756	larval abdominal segment 9
+FBbt:00111042	larval abdominal 10 neuromere	FBbt:00001912	larval neuromere	FBbt:00000031	abdominal segment 10	FBbt:00001757	larval abdominal segment 10
+FBbt:00111044	adult gnathal neuromere	FBbt:00052718		FBbt:00000011	gnathal segment	FBbt:00003014	adult gnathal segment
+FBbt:00111045	larval gnathal neuromere	FBbt:00001912	larval neuromere	FBbt:00000011	gnathal segment	FBbt:00001737	larval gnathal segment
+FBbt:00111266	gnathal neuromere	FBbt:00005140	neuromere	FBbt:00000011	gnathal segment		
+FBbt:00111560	abdominal segment 11 anterior compartment	FBbt:00111533	embryonic segment anterior compartment	FBbt:00000032	abdominal segment 11		
+FBbt:00111561	abdominal segment 11 posterior compartment	FBbt:00111532	embryonic segment posterior compartment	FBbt:00000032	abdominal segment 11		
+FBbt:00111575	adult thoracic segment anterior compartment	FBbt:00111573	adult segment anterior compartment	FBbt:00000016	thoracic segment	FBbt:00003019	adult thoracic segment
+FBbt:00111576	adult prothoracic segment anterior compartment	FBbt:00111573	adult segment anterior compartment	FBbt:00000017	prothoracic segment	FBbt:00003020	adult prothoracic segment
+FBbt:00111577	adult mesothoracic segment anterior compartment	FBbt:00111573	adult segment anterior compartment	FBbt:00000018	mesothoracic segment	FBbt:00003021	adult mesothoracic segment
+FBbt:00111578	adult metathoracic segment anterior compartment	FBbt:00111573	adult segment anterior compartment	FBbt:00000019	metathoracic segment	FBbt:00003022	adult metathoracic segment
+FBbt:00111579	adult thoracic segment posterior compartment	FBbt:00111574	adult segment posterior compartment	FBbt:00000016	thoracic segment	FBbt:00003019	adult thoracic segment
+FBbt:00111580	adult prothoracic segment posterior compartment	FBbt:00111574	adult segment posterior compartment	FBbt:00000017	prothoracic segment	FBbt:00003020	adult prothoracic segment
+FBbt:00111581	adult mesothoracic segment posterior compartment	FBbt:00111574	adult segment posterior compartment	FBbt:00000018	mesothoracic segment	FBbt:00003021	adult mesothoracic segment
+FBbt:00111582	adult metathoracic segment posterior compartment	FBbt:00111574	adult segment posterior compartment	FBbt:00000019	metathoracic segment	FBbt:00003022	adult metathoracic segment
+FBbt:00111583	adult abdominal segment anterior compartment	FBbt:00111573	adult segment anterior compartment	FBbt:00000021	abdominal segment	FBbt:00003024	adult abdominal segment
+FBbt:00111584	adult abdominal segment 1 anterior compartment	FBbt:00111573	adult segment anterior compartment	FBbt:00000022	abdominal segment 1	FBbt:00003025	adult abdominal segment 1
+FBbt:00111585	adult abdominal segment 2 anterior compartment	FBbt:00111573	adult segment anterior compartment	FBbt:00000023	abdominal segment 2	FBbt:00003026	adult abdominal segment 2
+FBbt:00111586	adult abdominal segment 3 anterior compartment	FBbt:00111573	adult segment anterior compartment	FBbt:00000024	abdominal segment 3	FBbt:00003027	adult abdominal segment 3
+FBbt:00111587	adult abdominal segment 4 anterior compartment	FBbt:00111573	adult segment anterior compartment	FBbt:00000025	abdominal segment 4	FBbt:00003028	adult abdominal segment 4
+FBbt:00111588	adult abdominal segment 5 anterior compartment	FBbt:00111573	adult segment anterior compartment	FBbt:00000026	abdominal segment 5	FBbt:00003029	adult abdominal segment 5
+FBbt:00111589	adult abdominal segment 6 anterior compartment	FBbt:00111573	adult segment anterior compartment	FBbt:00000027	abdominal segment 6	FBbt:00003030	adult abdominal segment 6
+FBbt:00111590	adult abdominal segment 7 anterior compartment	FBbt:00111573	adult segment anterior compartment	FBbt:00000028	abdominal segment 7	FBbt:00003031	adult abdominal segment 7
+FBbt:00111591	adult abdominal segment 8 anterior compartment	FBbt:00111573	adult segment anterior compartment	FBbt:00000029	abdominal segment 8	FBbt:00003032	adult abdominal segment 8
+FBbt:00111592	adult abdominal segment 9 anterior compartment	FBbt:00111573	adult segment anterior compartment	FBbt:00000030	abdominal segment 9	FBbt:00003033	adult abdominal segment 9
+FBbt:00111593	adult abdominal segment 10 anterior compartment	FBbt:00111573	adult segment anterior compartment	FBbt:00000031	abdominal segment 10	FBbt:00003034	adult abdominal segment 10
+FBbt:00111594	adult abdominal segment 11 anterior compartment	FBbt:00111573	adult segment anterior compartment	FBbt:00000032	abdominal segment 11	FBbt:00003035	adult abdominal segment 11
+FBbt:00111595	adult abdominal segment posterior compartment	FBbt:00111574	adult segment posterior compartment	FBbt:00000021	abdominal segment	FBbt:00003024	adult abdominal segment
+FBbt:00111596	adult abdominal segment 1 posterior compartment	FBbt:00111574	adult segment posterior compartment	FBbt:00000022	abdominal segment 1	FBbt:00003025	adult abdominal segment 1
+FBbt:00111597	adult abdominal segment 2 posterior compartment	FBbt:00111574	adult segment posterior compartment	FBbt:00000023	abdominal segment 2	FBbt:00003026	adult abdominal segment 2
+FBbt:00111598	adult abdominal segment 3 posterior compartment	FBbt:00111574	adult segment posterior compartment	FBbt:00000024	abdominal segment 3	FBbt:00003027	adult abdominal segment 3
+FBbt:00111599	adult abdominal segment 4 posterior compartment	FBbt:00111574	adult segment posterior compartment	FBbt:00000025	abdominal segment 4	FBbt:00003028	adult abdominal segment 4
+FBbt:00111600	adult abdominal segment 5 posterior compartment	FBbt:00111574	adult segment posterior compartment	FBbt:00000026	abdominal segment 5	FBbt:00003029	adult abdominal segment 5
+FBbt:00111601	adult abdominal segment 6 posterior compartment	FBbt:00111574	adult segment posterior compartment	FBbt:00000027	abdominal segment 6	FBbt:00003030	adult abdominal segment 6
+FBbt:00111602	adult abdominal segment 7 posterior compartment	FBbt:00111574	adult segment posterior compartment	FBbt:00000028	abdominal segment 7	FBbt:00003031	adult abdominal segment 7
+FBbt:00111603	adult abdominal segment 8 posterior compartment	FBbt:00111574	adult segment posterior compartment	FBbt:00000029	abdominal segment 8	FBbt:00003032	adult abdominal segment 8
+FBbt:00111604	adult abdominal segment 9 posterior compartment	FBbt:00111574	adult segment posterior compartment	FBbt:00000030	abdominal segment 9	FBbt:00003033	adult abdominal segment 9
+FBbt:00111605	adult abdominal segment 10 posterior compartment	FBbt:00111574	adult segment posterior compartment	FBbt:00000031	abdominal segment 10	FBbt:00003034	adult abdominal segment 10
+FBbt:00111606	adult abdominal segment 11 posterior compartment	FBbt:00111574	adult segment posterior compartment	FBbt:00000032	abdominal segment 11	FBbt:00003035	adult abdominal segment 11
