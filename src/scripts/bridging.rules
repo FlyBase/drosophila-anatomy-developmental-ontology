@@ -1,0 +1,22 @@
+prefix BFO:       <http://purl.obolibrary.org/obo/BFO_>
+prefix CL:        <http://purl.obolibrary.org/obo/CL_>
+prefix FBbt:      <http://purl.obolibrary.org/obo/FBbt_>
+prefix IAO:       <http://purl.obolibrary.org/obo/IAO_>
+prefix NCBITaxon: <http://purl.obolibrary.org/obo/NCBITaxon_>
+prefix UBERON:    <http://purl.obolibrary.org/obo/UBERON_>
+
+# Make sure FBbt classes are on the subject side
+object==FBbt:* -> invert();
+
+# Ignore any mapping that is not about FBbt
+# (there shouldn't be any but just in case)
+!subject==FBbt:* -> stop();
+
+# Ignore any mapping to an inexistent or obsolete foreign class.
+predicate==* -> check_object_existence();
+
+# Generate actual bridging axioms
+(object==UBERON:* || object==CL:*) && predicate==semapv:crossSpeciesExactMatch -> {
+    annotate_subject(IAO:0000589, "%object_label (Drosophila)");
+    create_axiom("%subject_id EquivalentTo: %object_id and (BFO:0000050 some NCBITaxon:7227)");
+}

@@ -1,0 +1,81 @@
+name: Uberon integration
+
+on:
+  # Manual triggering only
+  workflow_dispatch:
+
+jobs:
+  uberon_integration:
+    runs-on: ubuntu-latest
+    container: obolibrary/odkfull:v1.4.3
+
+    steps:
+
+      - name: Checkout current FBbt
+        uses: actions/checkout@v4
+        with:
+          path: fbbt
+
+      - name: Checkout current Uberon
+        uses: actions/checkout@v4
+        with:
+          repository: obophenotype/uberon
+          path: uberon
+
+      - name: Checkout current CL
+        uses: actions/checkout@v4
+        with:
+          repository: obophenotype/cell-ontology
+          path: cl
+
+      - name: Build FBbt
+        run: |
+          cd fbbt/src/ontology
+          make fbbt.owl mappings.sssom.tsv MIR=false IMP=false PAT=false
+
+      - name: Build Uberon
+        run: |
+          cd uberon/src/ontology
+          make uberon.owl MIR=false IMP=false PAT=false BRI=false GH_ACTION=true
+
+      - name: Build CL
+        run: |
+          cd cl/src/ontology
+          make cl.owl MIR=false IMP=false PAT=false
+
+      - name: Merge all ontologies together
+        env:
+          ROBOT_PLUGINS_DIRECTORY: uberon/src/ontology/tmp/plugins
+        run: |
+          robot merge -i fbbt/src/ontology/fbbt.owl \
+                      -i uberon/src/ontology/uberon.owl \
+                      -i cl/src/ontology/cl.owl \
+                sssom:inject --sssom fbbt/src/ontology/mappings.sssom.tsv \
+                             --ruleset fbbt/src/scripts/bridging.rules \
+                annotate --ontology-iri http://purl.obolibrary.org/obo/fbbt/fbbt-uberon-cl-merge.owl \
+                         --output fbbt-uberon-cl-merge.owl \
+                reason --reasoner ELK | tee merge.log
+
+      - name: Upload merged ontology
+        uses: actions/upload-artifact@v4
+        with:
+          name: merged-ontology
+          path: fbbt-uberon-cl-merge.owl
+
+      - name: Check and explain unsats
+        run: |
+          if grep -q unsat merge.log ; then
+            robot explain -i fbbt-uberon-cl-merge.owl \
+                          --reasoner ELK \
+                          --mode unsatisfiability \
+                          --unsatisfiable all \
+                          --explanation unsats.md
+            exit 1
+          fi
+
+      - name: Upload explanations
+        if: ${{ failure() }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: explanations
+          path: unsats.md
