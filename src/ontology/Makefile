@@ -50,7 +50,7 @@ OBODATE ?=                  $(shell date +'%d:%m:%Y %H:%M')
 VERSION=                    $(TODAY)
 ANNOTATE_ONTOLOGY_VERSION = annotate -V $(ONTBASE)/releases/$(VERSION)/$@ --annotation owl:versionInfo $(VERSION)
 ANNOTATE_CONVERT_FILE =     annotate --ontology-iri $(ONTBASE)/$@ $(ANNOTATE_ONTOLOGY_VERSION) convert -f ofn --output $@.tmp.owl && mv $@.tmp.owl $@
-OTHER_SRC =                 $(PATTERNDIR)/definitions.owl $(COMPONENTSDIR)/fbbt_ext.owl $(COMPONENTSDIR)/exact_mappings.owl $(COMPONENTSDIR)/neuron_symbols.owl $(COMPONENTSDIR)/larvalbrain_compartments.owl $(COMPONENTSDIR)/larvalbrain_fascicles.owl $(COMPONENTSDIR)/hemibrain_new_cells.owl $(COMPONENTSDIR)/hemibrain_new_ALLNs.owl $(COMPONENTSDIR)/Feng_neurons.owl $(COMPONENTSDIR)/flybase_import.owl 
+OTHER_SRC =                 $(PATTERNDIR)/definitions.owl $(COMPONENTSDIR)/fbbt_ext.owl $(COMPONENTSDIR)/exact_mappings.owl $(COMPONENTSDIR)/neuron_symbols.owl $(COMPONENTSDIR)/larvalbrain_compartments.owl $(COMPONENTSDIR)/larvalbrain_fascicles.owl $(COMPONENTSDIR)/hemibrain_new_cells.owl $(COMPONENTSDIR)/hemibrain_new_ALLNs.owl $(COMPONENTSDIR)/Feng_neurons.owl $(COMPONENTSDIR)/flybase_import.owl $(COMPONENTSDIR)/flywire_neurons.owl 
 ONTOLOGYTERMS =             $(TMPDIR)/ontologyterms.txt
 EDIT_PREPROCESSED =         $(TMPDIR)/$(ONT)-preprocess.owl
 PATTERNDIR=                 ../patterns
@@ -388,6 +388,7 @@ no-mirror-recreate-%:
 $(COMPONENTSDIR)/%: | $(COMPONENTSDIR)
 	touch $@
 .PRECIOUS: $(COMPONENTSDIR)/%
+
 
 
 
