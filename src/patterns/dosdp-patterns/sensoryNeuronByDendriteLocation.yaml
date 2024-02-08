@@ -1,0 +1,61 @@
+pattern_name: sensoryNeuronByDendriteLocation
+pattern_iri: http://purl.obolibrary.org/obo/fbbt/src/patterns/dosdp-patterns/sensoryNeuronByDendriteLocation.yaml
+description: "Pattern for sensory neurons that can be uniquely defined by their sensory dendrite location (optionally in combination with modality). If modality/modalities not necessary for logical def, add as SC axiom instead using other_modality - separated by '|'. Can optionally add soma location(s) and nerve(s) - separated by '|'. Not for segment-specific subclasses of larval neurons (see larvalSensoryNeuronBySegment)."
+
+contributors:
+  - https://orcid.org/0000-0002-1373-1705
+
+classes:
+  anatomical_entity: FBbt:10000000
+  detection_of_stimulus: GO:0051606
+  nerve: FBbt:00005105
+  neuron: FBbt:00005106
+
+relations: 
+  has_sensory_dendrite_in: RO:0013007
+  capable_of: RO:0002215
+  has_soma_location: RO:0002100
+  fasciculates_with: RO:0002101
+
+vars:
+  defining_modality: detection_of_stimulus
+  dendrite_location: anatomical_entity
+
+
+list_vars:
+  nerve: nerve
+  soma_location: anatomical_entity
+  other_modality: detection_of_stimulus
+
+logical_axioms:
+   - axiom_type: equivalentTo
+     multi_clause:
+      sep: " and "
+      clauses:
+        - text: "neuron that has_sensory_dendrite_in some %s"
+          vars:
+            - dendrite_location
+        - text: "'capable_of' some %s"
+          vars:
+            - defining_modality
+   - axiom_type: subClassOf
+     multi_clause:
+      sep: " and "
+      clauses:
+        - text: "'capable_of'some %s"
+          vars:
+            - other_modality
+   - axiom_type: subClassOf
+     multi_clause:
+      sep: " and "
+      clauses:
+        - text: "'fasciculates_with'some %s"
+          vars:
+            - nerve
+   - axiom_type: subClassOf
+     multi_clause:
+      sep: " and "
+      clauses:
+        - text: "'has_soma_location'some %s"
+          vars:
+            - soma_location
