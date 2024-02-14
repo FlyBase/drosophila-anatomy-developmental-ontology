@@ -38,11 +38,12 @@ def symbol_template_maker(ontology_file, symbols_input_file, output_file):
     # prepare an empty template:
     template_seed = OrderedDict([('ID', 'ID'), ('CLASS_TYPE', 'CLASS_TYPE'),
                                  ('RDF_Type', 'TYPE'), ("Symbol", "A IAO:0000028"),
-                                 ('ref1', ">A oboInOwl:hasDbXref"),
+                                 ('ref1', ">A oboInOwl:hasDbXref SPLIT=|"),
                                  ('Synonym_gr', "A oboInOwl:hasExactSynonym"),
-                                 ('ref2', ">A oboInOwl:hasDbXref"),
+                                 ('ref2', ">A oboInOwl:hasDbXref SPLIT=|"),
+                                 ('Synonym_type', ">AI oboInOwl:hasSynonymType"),
                                  ('Synonym_en', "A oboInOwl:hasExactSynonym"),
-                                 ('ref3', ">A oboInOwl:hasDbXref")])
+                                 ('ref3', ">A oboInOwl:hasDbXref SPLIT=|")])
     template = pd.DataFrame.from_records([template_seed])
     
     # Make a Term for each row of symbols_input_file and add details to template
@@ -52,10 +53,6 @@ def symbol_template_maker(ontology_file, symbols_input_file, output_file):
                          id=symbol_table['FBbt_id'][i], 
                          symbol=replace_spelled(symbol_table.symbol[i]), 
                          reference = symbol_table['reference'][i])
-        """try:
-            FBbt_term.reference = symbol_table['reference'][i]
-        except ValueError:
-            pass"""
             
         FBbt_term.get_synonym_info()
         FBbt_term.check_existing_info()
@@ -77,6 +74,7 @@ def symbol_template_maker(ontology_file, symbols_input_file, output_file):
         # synonyms if not present
         if FBbt_term.add_as_synonym_gr:
             row_od["Synonym_gr"] = FBbt_term.symbol
+            row_od["Synonym_type"] = "http://purl.obolibrary.org/obo/fbbt#VFB_SYMBOL"
             if FBbt_term.reference:
                 row_od["ref2"] = FBbt_term.reference
         if FBbt_term.add_as_synonym_en:
