@@ -1,0 +1,32 @@
+pattern_name: fbTangentialNeuronByLayerAndLineage
+pattern_iri: http://purl.obolibrary.org/obo/fbbt/src/patterns/dosdp-patterns/fbTangentialNeuronByLayerAndLineage.yaml
+description: "Pattern for fan-shaped body tangential neurons by layer and (optionally) lineage."
+
+contributors:
+  - https://orcid.org/0000-0002-1373-1705
+
+classes:
+  neuron: FBbt:00005106
+  neuroblast: FBbt:00005146
+  fb_layer: FBbt:00040035
+
+relations: 
+  has_synaptic_IO_throughout: RO:0013004
+  develops_from: RO:0002202
+
+vars:
+  layer: fb_layer
+  neuroblast: neuroblast
+
+logical_axioms:
+   - axiom_type: equivalentTo
+     multi_clause:
+      sep: " and "
+      clauses:
+        - text: "neuron that 'has_synaptic_IO_throughout' some %s"
+          vars:
+            - layer
+        - text: "'develops_from' some %s"
+          vars:
+            - neuroblast
+
