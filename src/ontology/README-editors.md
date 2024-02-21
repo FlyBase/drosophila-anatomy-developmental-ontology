@@ -132,11 +132,11 @@ For questions on this contact Chris Mungall or email obo-admin AT obofoundry.org
 
 ## Automating release creation
 
-The last step above (6, making a release on GitHub) can be done almost entirely automtically. For that, create a [GitHub token](https://github.com/settings/tokens/new) from your GitHub account and make sure it has the `repo` scope enabled. Store the token in a `~/Library/Application Support/ontology-development-git/github/token` file.
+The last step above (6, making a release on GitHub) can be done almost entirely automatically. For that, create a [GitHub token](https://github.com/settings/tokens/new) from your GitHub account and make sure it has the `repo` scope enabled. Store the token in a `~/Library/Application Support/ontology-development-kit/github/token` file.
 
 Then, to make a release, after having merged the PR in step 5 above, run `sh run.sh make public_release`.
 
-The command will automatically create a draft release with the correct tag, title, release notes, and attached release products. Check that the draft is OK, edit the release notes if desired, then publish the release.
+The command will automatically create a draft release with the correct tag, title, release notes, and attached release assets. Check that the draft is OK, edit the release notes if desired, then publish the release.
 
 # Configurable Options:
 
