@@ -72,9 +72,9 @@ sub obo_array {
     my @v=split(/\n/,$_);
     foreach(@v) {
 # Warn of unknown tags with STDERR
-     print STDERR "Unrecognized tag \"$_\"\n", unless ($_ =~ m/^name\: |^id\: |^namespace\: |^def\: |^comment\: |^intersection_of\: |^relationship\: |^xref\: |^synonym\: |^is_a\: |^subset\: |^union_of\: |^is_obsolete\: |^is_anonymous\: |^disjoint_from\: |^alt_id\: |^consider\: |^replaced_by\: |^creation_date\: |^created_by\: |^exact_synonym\: |^broad_synonym\: |^narrow_synonym\: |^related_synonym\: |^xref_analog\: |^equivalent_to\: /);
-     print STDERR "Badly formated relationship: $_\n", if (($_ =~ m/(intersection|is_a)\: \w+\:\d+/) && (!($_ =~ m/(intersection|is_a)\: \w+\:\d+( \!|$)/)));
-     print STDERR "Badly formated relationship: $_\n", if (($_ =~ m/(intersection|relationship)\:  \S+ \w+\:\d+/) && (!($_ =~ m/(intersection|is_a)\: \S+ \w+\:\d+( \!|$)/)));
+     print STDERR "Unrecognized tag \"$_\"\n", unless ($_ =~ m/^name\: |^id\: |^namespace\: |^def\: |^comment\: |^intersection_of\: |^relationship\: |^xref\: |^synonym\: |^is_a\: |^subset\: |^union_of\: |^is_obsolete\: |^is_anonymous\: |^disjoint_from\: |^alt_id\: |^consider\: |^replaced_by\: |^creation_date\: |^created_by\: |^exact_synonym\: |^broad_synonym\: |^narrow_synonym\: |^related_synonym\: |^xref_analog\: |^equivalent_to\: |^property_value\: /);
+     #print STDERR "Badly formated relationship: $_\n", if (($_ =~ m/(intersection|is_a)\: \w+\:\d+/) && (!($_ =~ m/(intersection|is_a)\: \w+\:\d+( \!|$)/)));
+     #print STDERR "Badly formated relationship: $_\n", if (($_ =~ m/(intersection|relationship)\:  \S+ \w+\:\d+/) && (!($_ =~ m/(intersection|is_a)\: \S+ \w+\:\d+( \!|$)/)));
      push @ir, { estat => 'rel', rel => $1, obj => $2, an =>'', axref => '' }, if ($_ =~ m/relationship\: (\S+) (\w+\:\d+)/);
      push @ir, { estat => 'int', rel => $1, obj => $2, an => '', axref => '' }, if ($_ =~ m/intersection_of\: (\S+) (\w+\:\d+)/);
      push @ir, { estat => 'int', rel => 'is_a', obj => $1, an => '', axref => '' }, if ($_ =~ m/intersection_of\: (\w+\:\d+)/);
