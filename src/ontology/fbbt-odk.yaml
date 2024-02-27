@@ -11,6 +11,10 @@ pattern_pipelines_group:
       dosdp_tools_options: "--obo-prefixes=true --restrict-axioms-to=logical"
     - id: all-axioms
       dosdp_tools_options: "--obo-prefixes=true"
+robot_plugins:
+  plugins:
+    - name: flybase
+      mirror_from: https://github.com/FlyBase/flybase-robot-plugin/releases/download/flybase-robot-plugin-0.1.1/flybase.jar
 namespaces: 
   - http://purl.obolibrary.org/obo/FBbt_
   - http://purl.obolibrary.org/obo/fbbt_

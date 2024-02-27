@@ -132,13 +132,7 @@ $(ONT)-full.obo: $(ONT)-full.owl
 # special placeholder string to substitute in definitions from external ontologies
 # FBbt only uses DOT definitions - to use SUB, copy code and sparql from FBcv.
 
-export ROBOT_PLUGINS_DIRECTORY = $(TMPDIR)/plugins
-
-$(ROBOT_PLUGINS_DIRECTORY)/flybase.jar:
-	mkdir -p $(ROBOT_PLUGINS_DIRECTORY)
-	curl -L -o $@ https://github.com/FlyBase/flybase-robot-plugin/releases/download/flybase-robot-plugin-0.1.0/flybase.jar
-
-$(EDIT_PREPROCESSED): $(SRC) $(ROBOT_PLUGINS_DIRECTORY)/flybase.jar
+$(EDIT_PREPROCESSED): $(SRC) all_robot_plugins
 	$(ROBOT) flybase:rewrite-def -i $< --dot-definitions --filter-prefix FBbt -o $@
 
 
