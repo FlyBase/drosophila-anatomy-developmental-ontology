@@ -11,11 +11,13 @@ classes:
   organism: FBbt:00000001
   neurotransmitter_secretion: GO:0007269
   lineage_clone: FBbt:00007683
+  anatomical_entity: FBbt:10000000
 
 relations: 
   part_of: BFO:0000050
   develops_from: RO:0002202
   capable_of: RO:0002215
+  has_soma_location: RO:0002100
 
 vars:
   birth_notch: neuron
@@ -26,6 +28,7 @@ list_vars:
   stage: organism
   other_types: neuron
   neurotransmitter: neurotransmitter_secretion
+  soma: anatomical_entity
 
 logical_axioms:
    - axiom_type: equivalentTo
@@ -59,3 +62,10 @@ logical_axioms:
      text: "'part_of'some %s"
      vars:
        - clone
+   - axiom_type: subClassOf
+     multi_clause:
+      sep: " and "
+      clauses:
+        - text: "'has_soma_location' some %s"
+          vars:
+            - soma
