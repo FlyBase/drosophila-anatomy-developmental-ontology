@@ -69,7 +69,6 @@ $(REPORTDIR)/onto_metrics_calc.txt: $(ONT)-simple.obo install_flybase_scripts
 	$(SCRIPTSDIR)/onto_metrics_calc.pl 'fly_anatomy.ontology' $(ONT)-simple.obo > $@
 
 $(REPORTDIR)/chado_load_check_simple.txt: install_flybase_scripts fly_anatomy.obo
-	apt-get install -y --no-install-recommends libbusiness-isbn-perl
 	$(SCRIPTSDIR)/chado_load_checks.pl fly_anatomy.obo > $@
 
 $(REPORTDIR)/obo_qc_%.obo.txt:
@@ -133,13 +132,7 @@ $(ONT)-full.obo: $(ONT)-full.owl
 # special placeholder string to substitute in definitions from external ontologies
 # FBbt only uses DOT definitions - to use SUB, copy code and sparql from FBcv.
 
-export ROBOT_PLUGINS_DIRECTORY = $(TMPDIR)/plugins
-
-$(ROBOT_PLUGINS_DIRECTORY)/flybase.jar:
-	mkdir -p $(ROBOT_PLUGINS_DIRECTORY)
-	curl -L -o $@ https://github.com/FlyBase/flybase-robot-plugin/releases/download/flybase-robot-plugin-0.1.0/flybase.jar
-
-$(EDIT_PREPROCESSED): $(SRC) $(ROBOT_PLUGINS_DIRECTORY)/flybase.jar
+$(EDIT_PREPROCESSED): $(SRC) all_robot_plugins
 	$(ROBOT) flybase:rewrite-def -i $< --dot-definitions --filter-prefix FBbt -o $@
 
 
