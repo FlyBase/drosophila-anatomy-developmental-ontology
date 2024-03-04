@@ -44,6 +44,10 @@ import_group:
   use_base_merging: TRUE
   exclude_iri_patterns:
     - <http://purl.obolibrary.org/obo/UBERON_*>
+  annotation_properties:
+    - RO:0002582
+    - rdfs:label
+    - IAO:0000115
   products:
     - id: go
       make_base: TRUE
