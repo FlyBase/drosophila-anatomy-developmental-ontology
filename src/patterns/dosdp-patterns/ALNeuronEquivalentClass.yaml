@@ -1,0 +1,67 @@
+pattern_name: ALNeuronEquivalentClass
+pattern_iri: http://purl.obolibrary.org/obo/fbbt/src/patterns/dosdp-patterns/ALNeuronEquivalentClass.yaml
+description: "Pattern for logically defining neurons based on some combination of features. Please use ALNeuronSubClass pattern for features that should not be part of the logical definition (most neurons that fit this pattern, should probably use both patterns). Unlike the subclass pattern, this uses an overlaps relationship to the organism ('stage') term, rather than a specific location ('partonomy') that the entity is part_of."
+
+contributors:
+  - https://orcid.org/0000-0002-1373-1705
+
+classes:
+  neuron: FBbt:00005106
+  organism: FBbt:00000001
+  neurotransmitter_secretion: GO:0007269
+  anatomical_entity: FBbt:10000000
+  AL_glomerulus: FBbt:00003925
+  tract: FBbt:00005100
+  phys_obj_quality: PATO:0001241
+
+relations: 
+  overlaps: RO:0002131
+  develops_from: RO:0002202
+  capable_of: RO:0002215
+  has_soma_location: RO:0002100
+  fasciculates_with: RO:0002101
+  receives_synaptic_input_throughout: RO:0013005
+  capable_of: RO:0002215
+  has_characteristic: RO:0000053
+
+vars:
+  precursor: anatomical_entity
+  stage: organism
+  tract: tract
+  input_glomerulus: AL_glomerulus
+  neurotransmitter: neurotransmitter_secretion
+  soma: anatomical_entity
+  laterality: phys_obj_quality
+
+list_vars:
+  parent_type: neuron
+
+logical_axioms:
+   - axiom_type: equivalentTo
+     multi_clause:
+      sep: " and "
+      clauses:
+        - text: "%s"
+          vars:
+            - parent_type
+        - text: "'develops_from' some %s"
+          vars:
+            - precursor
+        - text: "'overlaps' some %s"
+          vars:
+            - stage
+        - text: "'fasciculates_with' some %s"
+          vars:
+            - tract
+        - text: "'receives_synaptic_input_throughout' some %s"
+          vars:
+            - input_glomerulus
+        - text: "'capable_of' some %s"
+          vars:
+            - neurotransmitter
+        - text: "'has_soma_location' some %s"
+          vars:
+            - soma
+        - text: "'has_characteristic' some %s"
+          vars:
+            - laterality

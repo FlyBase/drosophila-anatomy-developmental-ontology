@@ -1,0 +1,99 @@
+pattern_name: ALNeuronSubClass
+pattern_iri: http://purl.obolibrary.org/obo/fbbt/src/patterns/dosdp-patterns/ALNeuronSubClass.yaml
+description: "Pattern for adding SC axioms to antennal lobe neurons for various features. Please use ALNeuronEquivalentClass pattern for features that can be combined to logically define a cell type (possibly in addition to this pattern). Unlike the equvalence pattern, this uses the most specific location ('partonomy') that the entity is part_of, rather than an overlaps relation to the organism ('stage') term."
+
+contributors:
+  - https://orcid.org/0000-0002-1373-1705
+
+classes:
+  neuron: FBbt:00005106
+  anatomical_entity: FBbt:10000000
+  AL_glomerulus: FBbt:00003925
+  tract: FBbt:00005100
+  phys_obj_quality: PATO:0001241
+  neurotransmitter_secretion: GO:0007269
+
+relations: 
+  part_of: BFO:0000050
+  develops_from: RO:0002202
+  has_soma_location: RO:0002100
+  fasciculates_with: RO:0002101
+  receives_synaptic_input_throughout: RO:0013005
+  has_characteristic: RO:0000053
+  capable_of: RO:0002215
+  receives_synaptic_input_in_region: RO:0013002
+
+vars:
+  laterality: phys_obj_quality
+
+list_vars:
+  parent_type: neuron
+  tract: tract
+  input_glomerulus: AL_glomerulus
+  multi_input_glomerulus: AL_glomerulus
+  soma: anatomical_entity
+  partonomy: anatomical_entity
+  neurotransmitter: neurotransmitter_secretion
+  precursor: anatomical_entity
+
+logical_axioms:
+   - axiom_type: subClassOf
+     multi_clause:
+      sep: " and "
+      clauses:
+        - text: "%s"
+          vars:
+            - parent_type
+   - axiom_type: subClassOf
+     multi_clause:
+      sep: " and "
+      clauses:
+        - text: "'part_of' some %s"
+          vars:
+            - partonomy
+   - axiom_type: subClassOf
+     multi_clause:
+      sep: " and "
+      clauses:
+        - text: "'fasciculates_with' some %s"
+          vars:
+            - tract
+   - axiom_type: subClassOf
+     multi_clause:
+      sep: " and "
+      clauses:
+        - text: "'receives_synaptic_input_throughout' some %s"
+          vars:
+            - input_glomerulus
+   - axiom_type: subClassOf
+     multi_clause:
+      sep: " and "
+      clauses:
+        - text: "'receives_synaptic_input_in_region' some %s"
+          vars:
+            - multi_input_glomerulus
+   - axiom_type: subClassOf
+     multi_clause:
+      sep: " and "
+      clauses:
+        - text: "'develops_from' some %s"
+          vars:
+            - precursor
+   - axiom_type: subClassOf
+     multi_clause:
+      sep: " and "
+      clauses:
+        - text: "'has_soma_location' some %s"
+          vars:
+            - soma
+   - axiom_type: subClassOf
+     multi_clause:
+      sep: " and "
+      clauses:
+        - text: "'capable_of' some %s"
+          vars:
+            - neurotransmitter
+   - axiom_type: subClassOf
+     text: "'has_characteristic' some %s"
+     vars:
+       - laterality

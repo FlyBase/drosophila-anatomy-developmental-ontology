@@ -10,7 +10,9 @@ Ontology(<urn:unnamed:ontology#ont1>
 
 Declaration(Class(<http://purl.obolibrary.org/obo/FBbt_00000001>))
 Declaration(Class(<http://purl.obolibrary.org/obo/FBbt_00000003>))
+Declaration(Class(<http://purl.obolibrary.org/obo/FBbt_00003925>))
 Declaration(Class(<http://purl.obolibrary.org/obo/FBbt_00005074>))
+Declaration(Class(<http://purl.obolibrary.org/obo/FBbt_00005100>))
 Declaration(Class(<http://purl.obolibrary.org/obo/FBbt_00005105>))
 Declaration(Class(<http://purl.obolibrary.org/obo/FBbt_00005106>))
 Declaration(Class(<http://purl.obolibrary.org/obo/FBbt_00005123>))
@@ -32,7 +34,10 @@ Declaration(Class(<http://purl.obolibrary.org/obo/FBbt_00100313>))
 Declaration(Class(<http://purl.obolibrary.org/obo/FBbt_10000000>))
 Declaration(Class(<http://purl.obolibrary.org/obo/GO_0007269>))
 Declaration(Class(<http://purl.obolibrary.org/obo/GO_0051606>))
+Declaration(Class(<http://purl.obolibrary.org/obo/PATO_0001241>))
 Declaration(Class(<http://purl.obolibrary.org/obo/SO_0000704>))
+Declaration(Class(<http://purl.obolibrary.org/obo/fbbt/src/patterns/dosdp-patterns/ALNeuronEquivalentClass.yaml>))
+Declaration(Class(<http://purl.obolibrary.org/obo/fbbt/src/patterns/dosdp-patterns/ALNeuronSubClass.yaml>))
 Declaration(Class(<http://purl.obolibrary.org/obo/fbbt/src/patterns/dosdp-patterns/anatomicalEntityBySegment.yaml>))
 Declaration(Class(<http://purl.obolibrary.org/obo/fbbt/src/patterns/dosdp-patterns/anatomicalEntityBySex.yaml>))
 Declaration(Class(<http://purl.obolibrary.org/obo/fbbt/src/patterns/dosdp-patterns/cellTypeFromNeuroblast.yaml>))
@@ -50,18 +55,22 @@ Declaration(Class(<http://purl.obolibrary.org/obo/fbbt/src/patterns/dosdp-patter
 Declaration(Class(<http://purl.obolibrary.org/obo/fbbt/src/patterns/dosdp-patterns/neuronOfFruCluster.yaml>))
 Declaration(Class(<http://purl.obolibrary.org/obo/fbbt/src/patterns/dosdp-patterns/sensoryNeuronByDendriteLocation.yaml>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/BFO_0000050>))
+Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0000053>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002100>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002101>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002105>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002106>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002107>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002114>))
+Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002131>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002202>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002203>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002215>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002292>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002485>))
+Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0013002>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0013004>))
+Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0013005>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0013007>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0013009>))
 Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/IAO_0000115>))
@@ -75,6 +84,24 @@ Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#has
 ############################
 #   Classes
 ############################
+
+# Class: <http://purl.obolibrary.org/obo/fbbt/src/patterns/dosdp-patterns/ALNeuronEquivalentClass.yaml> (<http://purl.obolibrary.org/obo/fbbt/src/patterns/dosdp-patterns/ALNeuronEquivalentClass.yaml>)
+
+AnnotationAssertion(<http://purl.org/dc/terms/title> <http://purl.obolibrary.org/obo/fbbt/src/patterns/dosdp-patterns/ALNeuronEquivalentClass.yaml> "ALNeuronEquivalentClass"^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/fbbt/src/patterns/dosdp-patterns/ALNeuronEquivalentClass.yaml> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/FBbt_00005106> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000053> <http://purl.obolibrary.org/obo/PATO_0001241>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002100> <http://purl.obolibrary.org/obo/FBbt_10000000>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002101> <http://purl.obolibrary.org/obo/FBbt_00005100>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002131> <http://purl.obolibrary.org/obo/FBbt_00000001>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002202> <http://purl.obolibrary.org/obo/FBbt_10000000>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002215> <http://purl.obolibrary.org/obo/GO_0007269>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0013005> <http://purl.obolibrary.org/obo/FBbt_00003925>)))
+
+# Class: <http://purl.obolibrary.org/obo/fbbt/src/patterns/dosdp-patterns/ALNeuronSubClass.yaml> (<http://purl.obolibrary.org/obo/fbbt/src/patterns/dosdp-patterns/ALNeuronSubClass.yaml>)
+
+AnnotationAssertion(<http://purl.org/dc/terms/title> <http://purl.obolibrary.org/obo/fbbt/src/patterns/dosdp-patterns/ALNeuronSubClass.yaml> "ALNeuronSubClass"^^xsd:string)
+SubClassOf(<http://purl.obolibrary.org/obo/fbbt/src/patterns/dosdp-patterns/ALNeuronSubClass.yaml> <http://purl.obolibrary.org/obo/FBbt_00005106>)
+SubClassOf(<http://purl.obolibrary.org/obo/fbbt/src/patterns/dosdp-patterns/ALNeuronSubClass.yaml> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000050> <http://purl.obolibrary.org/obo/FBbt_10000000>))
+SubClassOf(<http://purl.obolibrary.org/obo/fbbt/src/patterns/dosdp-patterns/ALNeuronSubClass.yaml> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000053> <http://purl.obolibrary.org/obo/PATO_0001241>))
+SubClassOf(<http://purl.obolibrary.org/obo/fbbt/src/patterns/dosdp-patterns/ALNeuronSubClass.yaml> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002100> <http://purl.obolibrary.org/obo/FBbt_10000000>))
+SubClassOf(<http://purl.obolibrary.org/obo/fbbt/src/patterns/dosdp-patterns/ALNeuronSubClass.yaml> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002101> <http://purl.obolibrary.org/obo/FBbt_00005100>))
+SubClassOf(<http://purl.obolibrary.org/obo/fbbt/src/patterns/dosdp-patterns/ALNeuronSubClass.yaml> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002202> <http://purl.obolibrary.org/obo/FBbt_10000000>))
+SubClassOf(<http://purl.obolibrary.org/obo/fbbt/src/patterns/dosdp-patterns/ALNeuronSubClass.yaml> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002215> <http://purl.obolibrary.org/obo/GO_0007269>))
+SubClassOf(<http://purl.obolibrary.org/obo/fbbt/src/patterns/dosdp-patterns/ALNeuronSubClass.yaml> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0013002> <http://purl.obolibrary.org/obo/FBbt_00003925>))
+SubClassOf(<http://purl.obolibrary.org/obo/fbbt/src/patterns/dosdp-patterns/ALNeuronSubClass.yaml> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0013005> <http://purl.obolibrary.org/obo/FBbt_00003925>))
 
 # Class: <http://purl.obolibrary.org/obo/fbbt/src/patterns/dosdp-patterns/anatomicalEntityBySegment.yaml> (<http://purl.obolibrary.org/obo/fbbt/src/patterns/dosdp-patterns/anatomicalEntityBySegment.yaml>)
 
