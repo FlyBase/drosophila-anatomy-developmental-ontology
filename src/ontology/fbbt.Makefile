@@ -250,13 +250,9 @@ update_pattern_labels:
 
 # Validation fails for ALNeuronEquivalentClass pattern,
 # but it is not invalid because a definitions.owl file can be correctly built.
-.PHONY: patterns
-patterns dosdp:
+$(TMPDIR)/pattern_schema_checks:
+	touch $@
 	echo "Skipping pattern validation step"
-	echo "Building $(PATTERNDIR)/definitions.owl"
-	$(MAKE) $(PATTERNDIR)/pattern.owl $(PATTERNDIR)/definitions.owl
-
-
 
 .PHONY: update_repo
 # don't keep adding extra imports
