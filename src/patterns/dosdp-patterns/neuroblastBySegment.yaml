@@ -13,7 +13,7 @@ relations:
   part_of: BFO:0000050
 
 vars:
-  parent: neuroblast
+  neuroblast: neuroblast
   segment: segment
   other_type: neuroblast
 
@@ -21,7 +21,7 @@ logical_axioms:
    - axiom_type: equivalentTo
      text: "%s that 'part_of' some %s"
      vars:
-       - parent
+       - neuroblast
        - segment
    - axiom_type: subClassOf
      text: "%s"
