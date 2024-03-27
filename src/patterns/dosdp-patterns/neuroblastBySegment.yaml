@@ -8,14 +8,32 @@ contributors:
 classes:
   neuroblast: FBbt:00005146
   segment: FBbt:00000003
+  thing: owl:Thing
 
 relations: 
   part_of: BFO:0000050
 
+annotationProperties:
+  synonym_type: oboInOwl:hasSynonymType
+
 vars:
   neuroblast: neuroblast
   segment: segment
+  segment_abr: thing
   other_type: neuroblast
+  ito_lee: thing
+  hartenstein: thing
+  primary: thing
+  secondary: thing
+  nb_label: thing
+  ito_lee_synonym_type: thing
+  hartenstein_synonym_type: thing
+  primary_synonym_type: thing
+  secondary_synonym_type: thing
+  segment_label: thing
+
+data_list_vars:
+  reference: thing
 
 logical_axioms:
    - axiom_type: equivalentTo
@@ -27,3 +45,83 @@ logical_axioms:
      text: "%s"
      vars:
        - other_type
+
+substitutions:
+   - in: segment
+     out: segment_short
+     match: "(.+) segment(.*)"
+     sub: \1\2
+
+name:
+  text: "%s neuroblast %s"
+  vars:
+     - segment_short
+     - nb_label
+
+generated_synonyms:
+  - text: "%s neuroblast %s"
+    vars:
+      - segment_short
+      - ito_lee
+    xrefs: reference
+    annotations:
+      - annotationProperty: synonym_type
+        var: ito_lee_synonym_type
+  - text: "%s neuroblast %s"
+    vars:
+      - segment_short
+      - hartenstein
+    xrefs: reference
+    annotations:
+      - annotationProperty: synonym_type
+        var: hartenstein_synonym_type
+  - text: "%s neuroblast %s"
+    vars:
+      - segment_short
+      - primary
+    xrefs: reference
+    annotations:
+      - annotationProperty: synonym_type
+        var: primary_synonym_type
+  - text: "%s neuroblast %s"
+    vars:
+      - segment_short
+      - secondary
+    xrefs: reference
+    annotations:
+      - annotationProperty: synonym_type
+        var: secondary_synonym_type
+
+  - text: "neuroblast %s of %s"
+    vars:
+      - ito_lee
+      - segment
+  - text: "neuroblast %s of %s"
+    vars:
+      - hartenstein
+      - segment
+  - text: "neuroblast %s of %s"
+    vars:
+      - primary
+      - segment
+  - text: "neuroblast %s of %s"
+    vars:
+      - secondary
+      - segment
+
+  - text: "%s neuroblast %s"
+    vars:
+      - segment_abr
+      - ito_lee
+  - text: "%s neuroblast %s"
+    vars:
+      - segment_abr
+      - hartenstein
+  - text: "%s neuroblast %s"
+    vars:
+      - segment_abr
+      - primary
+  - text: "%s neuroblast %s"
+    vars:
+      - segment_abr
+      - secondary
