@@ -75,16 +75,21 @@ class lineageInfo:
             self.notch = 'Notch OFF'
         else:
             self.notch = None
-
-        if table_row['other_types'] in secondary_neuron:
-            self.other_prim_sec.extend(['secondary', 'larval-born','postembryonic'])
-        elif table_row['other_types'] in primary_neuron:
-            self.other_prim_sec.extend(['primary', 'embryonic-born', 'embryonic'])
         
-        if table_row['other_types'] in notch_on_neuron:
-            self.other_notch = list(set([self.notch, 'Notch ON']))
-        elif table_row['other_types'] in notch_off_neuron:
-            self.other_notch = list(set([self.notch, 'Notch OFF']))
+        if table_row.notnull()['other_types']:
+            other_types = table_row['other_types'].split('|')
+
+            if any(x in other_types for x in secondary_neuron):
+                self.other_prim_sec.extend(['secondary', 'larval-born','postembryonic'])
+            elif any(x in other_types for x in primary_neuron):
+                self.other_prim_sec.extend(['primary', 'embryonic-born', 'embryonic'])
+            
+            if any(x in other_types for x in notch_on_neuron):
+                self.other_notch = list(set([self.notch, 'Notch ON']))
+            elif any(x in other_types for x in notch_off_neuron):
+                self.other_notch = list(set([self.notch, 'Notch OFF']))
+            else:
+                self.other_notch = [self.notch]
         else:
             self.other_notch = [self.notch]
 
