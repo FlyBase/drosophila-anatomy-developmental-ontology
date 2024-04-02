@@ -29,19 +29,25 @@ notch_off_neuron = ['FBbt:00049540', 'FBbt:00049542', 'FBbt:00047105']
 adult = ['FBbt:00003004']
 
 
-def neuron_name_printer(neuroblast, org_stage='', lineage_type='lineage', birth_stage=None, notch_status=None, vnc_secondary=False):
+def neuron_name_printer(neuroblast, org_stage='', birth_stage=None, notch_status=None, vnc_secondary=False, notch_letter=False):
+    notch_dict = {'Notch ON': 'A', 'Notch OFF': 'B'}
+    notch_AB = notch_dict.get(notch_status, '')
     if vnc_secondary:
-        notch_dict = {'ON': 'A', 'OFF': 'B'}
-        notch_letter = notch_dict.get(notch_status, '')
-        neuron_name = f"{org_stage} {lineage_type} {neuroblast}{notch_letter}".strip()
+        if notch_status:
+            neuron_name = f"{org_stage} hemilineage {neuroblast}{notch_AB}".strip()
+        else:
+            neuron_name = f"{org_stage} lineage {neuroblast}".strip()
         if birth_stage:
             neuron_name += f" {birth_stage}"
         neuron_name += " neuron"
     else:
         neuron_name = f"{org_stage} {neuroblast}".strip()
-        if notch_status:
-            neuron_name += f" Notch {notch_status}"
-        neuron_name += f" {lineage_type}"
+        if notch_letter:
+            neuron_name += f" hemilineage {notch_AB}"
+        elif notch_status:
+            neuron_name += f" {notch_status} hemilineage"
+        else:
+            neuron_name += f" lineage"
         if birth_stage:
             neuron_name += f" {birth_stage}"
         neuron_name += " neuron"
@@ -55,48 +61,32 @@ class lineageInfo:
         
         if table_row['birth_notch'] in secondary_neuron:
             self.prim_sec = 'secondary'
-            self.emb_lv = ['larval-born','postembryonic']
+            self.other_prim_sec = ['secondary', 'larval-born','postembryonic']
         elif table_row['birth_notch'] in primary_neuron:
             self.prim_sec = 'primary'
-            self.emb_lv = ['embryonic-born', 'embryonic']
+            self.other_prim_sec = ['primary', 'embryonic-born', 'embryonic']
         else:
             self.prim_sec = None
-            self.emb_lv = None
+            self.other_prim_sec = [None]
         
         if table_row['birth_notch'] in notch_on_neuron:
-            self.notch = 'ON'
-            self.lin_type = 'hemilineage'
+            self.notch = 'Notch ON'
         elif table_row['birth_notch'] in notch_off_neuron:
-            self.notch = 'OFF'
-            self.lin_type = 'hemilineage'
+            self.notch = 'Notch OFF'
         else:
             self.notch = None
-            self.lin_type = 'lineage'
-
-        if table_row.notnull()['other_types']:
-            self.other = True
-        else:
-            self.other = False
 
         if table_row['other_types'] in secondary_neuron:
-            self.other_prim_sec = 'secondary'
-            self.other_emb_lv = ['larval-born','postembryonic']
+            self.other_prim_sec.extend(['secondary', 'larval-born','postembryonic'])
         elif table_row['other_types'] in primary_neuron:
-            self.other_prim_sec = 'primary'
-            self.other_emb_lv = ['embryonic-born', 'embryonic']
-        else:
-            self.other_prim_sec = self.prim_sec
-            self.other_emb_lv = self.emb_lv
+            self.other_prim_sec.extend(['primary', 'embryonic-born', 'embryonic'])
         
         if table_row['other_types'] in notch_on_neuron:
-            self.other_notch = 'ON'
-            self.other_lin_type = 'hemilineage'
+            self.other_notch = list(set([self.notch, 'Notch ON']))
         elif table_row['other_types'] in notch_off_neuron:
-            self.other_notch = 'OFF'
-            self.other_lin_type = 'hemilineage'
+            self.other_notch = list(set([self.notch, 'Notch OFF']))
         else:
-            self.other_notch = self.notch
-            self.other_lin_type = self.lin_type
+            self.other_notch = [self.notch]
 
         if table_row['stage'] in adult:
             self.stage = 'adult'
@@ -105,19 +95,18 @@ class lineageInfo:
 
 
     def write_names(self, colnames):
+        notch_dict = {'Notch ON': 'A', 'Notch OFF': 'B'}
         other_synonyms = []
         for c in colnames:
             if self.table_row.notnull()[c]:
-                neuron_name = neuron_name_printer(neuroblast = self.table_row[c], org_stage=self.stage, lineage_type=self.lin_type, birth_stage=self.prim_sec, notch_status=self.notch, vnc_secondary=(c=='secondary'))
-                if self.emb_lv:
-                    for e in self.emb_lv:
-                        other_synonyms.append(neuron_name_printer(neuroblast = self.table_row[c], org_stage=self.stage, lineage_type=self.lin_type, birth_stage=e, notch_status=self.notch, vnc_secondary=(c=='secondary')))
-                if self.other:
-                    other_synonyms.append(neuron_name_printer(neuroblast = self.table_row[c], org_stage=self.stage, lineage_type=self.other_lin_type, birth_stage=self.other_prim_sec, notch_status=self.other_notch, vnc_secondary=(c=='secondary')))
-                    if self.other_emb_lv:
-                        for e in self.other_emb_lv:
-                            other_synonyms.append(neuron_name_printer(neuroblast = self.table_row[c], org_stage=self.stage, lineage_type=self.other_lin_type, birth_stage=e, notch_status=self.other_notch, vnc_secondary=(c=='secondary')))
+                neuron_name = neuron_name_printer(neuroblast = self.table_row[c], org_stage=self.stage, birth_stage=self.prim_sec, notch_status=self.notch, vnc_secondary=(c=='secondary'))
+                for e in self.other_prim_sec:
+                    for n in self.other_notch:
+                        other_synonyms.append(neuron_name_printer(neuroblast = self.table_row[c], org_stage=self.stage, birth_stage=e, notch_status=n, vnc_secondary=(c=='secondary')))
+                        if n and not (c=='secondary'):
+                            other_synonyms.append(neuron_name_printer(neuroblast = self.table_row[c], org_stage=self.stage, birth_stage=e, notch_status=n, notch_letter=True, vnc_secondary=(c=='secondary')))
                 self.table_row[c] = neuron_name
+                other_synonyms = list(set([o for o in other_synonyms if o!=neuron_name]))
         self.table_row['other_synonyms'] = '|'.join(other_synonyms)
         return self.table_row
 
