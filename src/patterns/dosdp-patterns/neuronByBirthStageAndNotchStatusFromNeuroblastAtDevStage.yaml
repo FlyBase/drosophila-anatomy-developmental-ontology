@@ -19,16 +19,34 @@ relations:
   capable_of: RO:0002215
   has_soma_location: RO:0002100
 
+annotationProperties:
+  synonym_type: oboInOwl:hasSynonymType
+  database_cross_reference: oboInOwl:hasDbXref
+  exact_synonym: oboInOwl:hasExactSynonym
+
 vars:
   birth_notch: neuron
   neuroblast: neuroblast
   clone: lineage_clone
+  ito_lee: thing
+  hartenstein: thing
+  primary: thing
+  secondary: thing
+  nb_label: thing
+  ito_lee_synonym_type: thing
+  hartenstein_synonym_type: thing
+  primary_synonym_type: thing
+  secondary_synonym_type: thing
 
 list_vars:
   stage: organism
   other_types: neuron
   neurotransmitter: neurotransmitter_secretion
   soma: anatomical_entity
+  other_synonyms: thing
+
+data_list_vars:
+  reference: thing
 
 logical_axioms:
    - axiom_type: equivalentTo
@@ -69,3 +87,42 @@ logical_axioms:
         - text: "'has_soma_location' some %s"
           vars:
             - soma
+
+name:
+  text: "%s"
+  vars:
+    - nb_label
+
+generated_synonyms:
+  - text: "%s"
+    vars:
+      - ito_lee
+    xrefs: reference
+    annotations:
+      - annotationProperty: synonym_type
+        var: ito_lee_synonym_type
+  - text: "%s"
+    vars:
+      - hartenstein
+    xrefs: reference
+    annotations:
+      - annotationProperty: synonym_type
+        var: hartenstein_synonym_type
+  - text: "%s"
+    vars:
+      - primary
+    xrefs: reference
+    annotations:
+      - annotationProperty: synonym_type
+        var: primary_synonym_type
+  - text: "%s"
+    vars:
+      - secondary
+    xrefs: reference
+    annotations:
+      - annotationProperty: synonym_type
+        var: secondary_synonym_type
+
+exact_synonym:
+  value: other_synonyms
+

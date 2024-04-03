@@ -1,0 +1,82 @@
+pattern_name: neuroblastAnnotations
+pattern_iri: http://purl.obolibrary.org/obo/fbbt/src/patterns/dosdp-patterns/neuroblastAnnotations.yaml
+description: "Pattern for segment-specific subclasses of neuroblasts."
+
+contributors:
+  - https://orcid.org/0000-0002-1373-1705
+
+classes:
+  neuroblast: FBbt:00005146
+  segment: FBbt:00000003
+  thing: owl:Thing
+
+relations: 
+  part_of: BFO:0000050
+
+annotationProperties:
+  synonym_type: oboInOwl:hasSynonymType
+  database_cross_reference: oboInOwl:hasDbXref
+ 
+vars:
+  ito_lee: thing
+  hartenstein: thing
+  primary: thing
+  secondary: thing
+  nb_label: thing
+  ito_lee_synonym_type: thing
+  hartenstein_synonym_type: thing
+  primary_synonym_type: thing
+  secondary_synonym_type: thing
+
+data_list_vars:
+  reference: thing
+
+name:
+  text: "neuroblast %s"
+  vars:
+     - nb_label
+
+generated_synonyms:
+  - text: "neuroblast %s"
+    vars:
+      - ito_lee
+    xrefs: reference
+    annotations:
+      - annotationProperty: synonym_type
+        var: ito_lee_synonym_type
+  - text: "neuroblast %s"
+    vars:
+      - hartenstein
+    xrefs: reference
+    annotations:
+      - annotationProperty: synonym_type
+        var: hartenstein_synonym_type
+  - text: "neuroblast %s"
+    vars:
+      - primary
+    xrefs: reference
+    annotations:
+      - annotationProperty: synonym_type
+        var: primary_synonym_type
+  - text: "lineage %s neuroblast"
+    vars:
+      - primary
+  - text: "neuroblast %s"
+    vars:
+      - secondary
+    xrefs: reference
+    annotations:
+      - annotationProperty: synonym_type
+        var: secondary_synonym_type
+  - text: "NB %s"
+    vars:
+      - secondary
+    annotations:
+       - annotationProperty: database_cross_reference
+         text: "FlyBase:FBrf0209606"
+  - text: "lineage %s neuroblast"
+    vars:
+      - secondary
+    annotations:
+       - annotationProperty: database_cross_reference
+         text: "FlyBase:FBrf0231327"

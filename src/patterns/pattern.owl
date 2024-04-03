@@ -197,15 +197,22 @@ AnnotationAssertion(<http://purl.org/dc/terms/title> <http://purl.obolibrary.org
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/fbbt/src/patterns/dosdp-patterns/muscleCellByMuscle.yaml> "muscle cell of multicellular_structure"^^xsd:string)
 EquivalentClasses(<http://purl.obolibrary.org/obo/fbbt/src/patterns/dosdp-patterns/muscleCellByMuscle.yaml> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/FBbt_00005074> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000050> <http://purl.obolibrary.org/obo/FBbt_00100313>)))
 
-# Class: <http://purl.obolibrary.org/obo/fbbt/src/patterns/dosdp-patterns/neuroblastBySegment.yaml> (<http://purl.obolibrary.org/obo/fbbt/src/patterns/dosdp-patterns/neuroblastBySegment.yaml>)
+# Class: <http://purl.obolibrary.org/obo/fbbt/src/patterns/dosdp-patterns/neuroblastBySegment.yaml> (segment neuroblast thing)
 
 AnnotationAssertion(<http://purl.org/dc/terms/title> <http://purl.obolibrary.org/obo/fbbt/src/patterns/dosdp-patterns/neuroblastBySegment.yaml> "neuroblastBySegment"^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/fbbt/src/patterns/dosdp-patterns/neuroblastBySegment.yaml> "neuroblast thing of segment"^^xsd:string)
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "thing"^^xsd:string) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/fbbt/src/patterns/dosdp-patterns/neuroblastBySegment.yaml> "segment neuroblast thing"^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/fbbt/src/patterns/dosdp-patterns/neuroblastBySegment.yaml> "thing neuroblast thing"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/fbbt/src/patterns/dosdp-patterns/neuroblastBySegment.yaml> "segment neuroblast thing"^^xsd:string)
 EquivalentClasses(<http://purl.obolibrary.org/obo/fbbt/src/patterns/dosdp-patterns/neuroblastBySegment.yaml> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/FBbt_00005146> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000050> <http://purl.obolibrary.org/obo/FBbt_00000003>)))
 SubClassOf(<http://purl.obolibrary.org/obo/fbbt/src/patterns/dosdp-patterns/neuroblastBySegment.yaml> <http://purl.obolibrary.org/obo/FBbt_00005146>)
 
-# Class: <http://purl.obolibrary.org/obo/fbbt/src/patterns/dosdp-patterns/neuronByBirthStageAndNotchStatusFromNeuroblastAtDevStage.yaml> (<http://purl.obolibrary.org/obo/fbbt/src/patterns/dosdp-patterns/neuronByBirthStageAndNotchStatusFromNeuroblastAtDevStage.yaml>)
+# Class: <http://purl.obolibrary.org/obo/fbbt/src/patterns/dosdp-patterns/neuronByBirthStageAndNotchStatusFromNeuroblastAtDevStage.yaml> (thing)
 
 AnnotationAssertion(<http://purl.org/dc/terms/title> <http://purl.obolibrary.org/obo/fbbt/src/patterns/dosdp-patterns/neuronByBirthStageAndNotchStatusFromNeuroblastAtDevStage.yaml> "neuronByBirthStageAndNotchStatusFromNeuroblastAtDevStage"^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/fbbt/src/patterns/dosdp-patterns/neuronByBirthStageAndNotchStatusFromNeuroblastAtDevStage.yaml> "thing"^^xsd:string)
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "thing"^^xsd:string) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/fbbt/src/patterns/dosdp-patterns/neuronByBirthStageAndNotchStatusFromNeuroblastAtDevStage.yaml> "thing"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/fbbt/src/patterns/dosdp-patterns/neuronByBirthStageAndNotchStatusFromNeuroblastAtDevStage.yaml> "thing"^^xsd:string)
 EquivalentClasses(<http://purl.obolibrary.org/obo/fbbt/src/patterns/dosdp-patterns/neuronByBirthStageAndNotchStatusFromNeuroblastAtDevStage.yaml> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/FBbt_00005106> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000050> <http://purl.obolibrary.org/obo/FBbt_00000001>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002202> <http://purl.obolibrary.org/obo/FBbt_00005146>)))
 SubClassOf(<http://purl.obolibrary.org/obo/fbbt/src/patterns/dosdp-patterns/neuronByBirthStageAndNotchStatusFromNeuroblastAtDevStage.yaml> <http://purl.obolibrary.org/obo/FBbt_00005106>)
 SubClassOf(<http://purl.obolibrary.org/obo/fbbt/src/patterns/dosdp-patterns/neuronByBirthStageAndNotchStatusFromNeuroblastAtDevStage.yaml> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000050> <http://purl.obolibrary.org/obo/FBbt_00007683>))
@@ -238,4 +245,10 @@ SubClassOf(<http://purl.obolibrary.org/obo/fbbt/src/patterns/dosdp-patterns/sens
 SubClassOf(<http://purl.obolibrary.org/obo/fbbt/src/patterns/dosdp-patterns/sensoryNeuronByDendriteLocation.yaml> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002215> <http://purl.obolibrary.org/obo/GO_0051606>))
 
 
+AnnotationAssertion(<http://purl.org/dc/terms/title> <http://purl.obolibrary.org/obo/fbbt/src/patterns/dosdp-patterns/neuroblastAnnotations.yaml> "neuroblastAnnotations"^^xsd:string)
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0209606"^^xsd:string) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/fbbt/src/patterns/dosdp-patterns/neuroblastAnnotations.yaml> "NB thing"^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/fbbt/src/patterns/dosdp-patterns/neuroblastAnnotations.yaml> "lineage thing neuroblast"^^xsd:string)
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0231327"^^xsd:string) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/fbbt/src/patterns/dosdp-patterns/neuroblastAnnotations.yaml> "lineage thing neuroblast"^^xsd:string)
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "thing"^^xsd:string) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/fbbt/src/patterns/dosdp-patterns/neuroblastAnnotations.yaml> "neuroblast thing"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/fbbt/src/patterns/dosdp-patterns/neuroblastAnnotations.yaml> "neuroblast thing"^^xsd:string)
 )
