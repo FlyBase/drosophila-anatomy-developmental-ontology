@@ -178,7 +178,7 @@ $(COMPONENTSDIR)/neuron_symbols.owl: $(TMPDIR)/symbols_template.tsv | $(COMPONEN
 #######################################################################
 
 $(MAPPINGDIR)/fbbt.sssom.tsv: $(MAPPINGDIR)/mappings.tsv $(SCRIPTSDIR)/mappings2sssom.awk
-	sort -t'	' -k1,4 $< | awk -f $(SCRIPTSDIR)/mappings2sssom.awk > $@
+	sort -t'	' -k1,4 $< | awk -f $(SCRIPTSDIR)/mappings2sssom.awk -v date=$(shell stat -c %x $< | cut -d' ' -f1) > $@
 
 $(TMPDIR)/exact_mapping_template.tsv: $(MAPPINGDIR)/fbbt.sssom.tsv
 	echo 'ID	Cross-reference' > $@
