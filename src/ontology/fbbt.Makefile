@@ -8,10 +8,10 @@ DATE   ?= $(shell date +%Y-%m-%d)
 # Using .SECONDEXPANSION to include custom FlyBase files in $(ASSETS). Also rsyncing $(IMPORTS) and $(REPORT_FILES).
 .SECONDEXPANSION:
 .PHONY: prepare_release
-prepare_release: $$(ASSETS) mappings.sssom.tsv release_reports
+prepare_release: $$(ASSETS) $(MAPPINGDIR)/fbbt.sssom.tsv release_reports
 	rsync -R $(RELEASE_ASSETS) $(REPORT_FILES) $(FLYBASE_REPORTS) $(IMPORT_FILES) $(RELEASEDIR) &&\
 	mkdir -p $(RELEASEDIR)/patterns && cp -rf $(PATTERN_RELEASE_FILES) $(RELEASEDIR)/patterns &&\
-	cp mappings.sssom.tsv $(RELEASEDIR)/fbbt-mappings.sssom.tsv &&\
+	cp $(MAPPINGDIR)/fbbt.sssom.tsv $(RELEASEDIR)/fbbt.sssom.tsv &&\
 	rm -f $(CLEANFILES)
 	echo "Release files are now in $(RELEASEDIR) - now you should commit, push and make a release on your git hosting site such as GitHub or GitLab"
 
@@ -177,10 +177,10 @@ $(COMPONENTSDIR)/neuron_symbols.owl: $(TMPDIR)/symbols_template.tsv | $(COMPONEN
 ### Update exact_mappings.owl
 #######################################################################
 
-mappings.sssom.tsv: mappings.tsv $(SCRIPTSDIR)/mappings2sssom.awk
+$(MAPPINGDIR)/fbbt.sssom.tsv: $(MAPPINGDIR)/mappings.tsv $(SCRIPTSDIR)/mappings2sssom.awk
 	sort -t'	' -k1,4 $< | awk -f $(SCRIPTSDIR)/mappings2sssom.awk > $@
 
-$(TMPDIR)/exact_mapping_template.tsv: mappings.sssom.tsv
+$(TMPDIR)/exact_mapping_template.tsv: $(MAPPINGDIR)/fbbt.sssom.tsv
 	echo 'ID	Cross-reference' > $@
 	echo 'ID	A oboInOwl:hasDbXref' >> $@
 	sed -n '/semapv:crossSpeciesExact/p' $< | cut -f1,4 >> $@
@@ -191,7 +191,7 @@ $(COMPONENTSDIR)/exact_mappings.owl: $(TMPDIR)/exact_mapping_template.tsv fbbt-e
 		--output $(COMPONENTSDIR)/exact_mappings.owl
 
 # Ensure the mapping set is published along with the other artefacts
-RELEASE_ASSETS_AFTER_RELEASE += ../../fbbt-mappings.sssom.tsv
+RELEASE_ASSETS_AFTER_RELEASE += ../../fbbt.sssom.tsv
 
 #####################################################################################
 ### Generate the flybase anatomy version of FBBT
