@@ -180,15 +180,11 @@ $(COMPONENTSDIR)/neuron_symbols.owl: $(TMPDIR)/symbols_template.tsv | $(COMPONEN
 $(MAPPINGDIR)/fbbt.sssom.tsv: $(MAPPINGDIR)/mappings.tsv $(SCRIPTSDIR)/mappings2sssom.awk
 	sort -t'	' -k1,4 $< | awk -f $(SCRIPTSDIR)/mappings2sssom.awk -v date=$(shell stat -c %x $< | cut -d' ' -f1) > $@
 
-$(TMPDIR)/exact_mapping_template.tsv: $(MAPPINGDIR)/fbbt.sssom.tsv
-	echo 'ID	Cross-reference' > $@
-	echo 'ID	A oboInOwl:hasDbXref' >> $@
-	sed -n '/semapv:crossSpeciesExact/p' $< | cut -f1,4 >> $@
-
-$(COMPONENTSDIR)/exact_mappings.owl: $(TMPDIR)/exact_mapping_template.tsv fbbt-edit.obo
-	$(ROBOT) template --input fbbt-edit.obo --template $(TMPDIR)/exact_mapping_template.tsv \
-		--ontology-iri http://purl.obolibrary.org/obo/fbbt/components/exact_mappings.owl \
-		--output $(COMPONENTSDIR)/exact_mappings.owl
+$(COMPONENTSDIR)/exact_mappings.owl: $(MAPPINGDIR)/fbbt.sssom.tsv $(SCRIPTSDIR)/sssom2xrefs.rules | all_robot_plugins
+	$(ROBOT) sssom:inject --create --sssom $(MAPPINGDIR)/fbbt.sssom.tsv \
+		              --ruleset $(SCRIPTSDIR)/sssom2xrefs.rules \
+		 annotate --ontology-iri http://purl.obolibrary.org/obo/fbbt/components/exact_mappings.owl \
+			  --output $@
 
 # Ensure the mapping set is published along with the other artefacts
 RELEASE_ASSETS_AFTER_RELEASE += ../../fbbt.sssom.tsv
