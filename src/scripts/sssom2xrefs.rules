@@ -1,0 +1,4 @@
+prefix FBbt: <http://purl.obolibrary.org/obo/FBbt_>
+prefix oio: <http://www.geneontology.org/formats/oboInOwl#>
+
+subject==FBbt:* predicate==semapv:crossSpeciesExactMatch -> annotate_subject(oio:hasDbXref, "%object_curie");

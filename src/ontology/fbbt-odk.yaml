@@ -4,6 +4,7 @@ github_org: FlyBase
 repo: drosophila-anatomy-ontology
 git_main_branch: master
 use_env_file_docker: True
+use_mappings: True
 report_fail_on: none
 use_dosdps: TRUE
 pattern_pipelines_group:
@@ -71,6 +72,10 @@ import_group:
       mirror_from: http://purl.obolibrary.org/obo/ncbitaxon/subsets/taxslim.owl
       base_iris:
         - http://purl.obolibrary.org/obo/NCBITaxon_
+sssom_mappingset_group:
+  products:
+    - id: fbbt
+      maintenance: manual
 edit_format: obo
 robot_java_args: '-Xmx8G'
 allow_equivalents: none
