@@ -10,7 +10,7 @@
 # More information: https://github.com/INCATools/ontology-development-kit/
 
 # Fingerprint of the configuration file when this Makefile was last generated
-CONFIG_HASH=                659f8feb33ba18fc4fd164c28d292e2feb02ab30b2c5bb85fa49067033277ca1
+CONFIG_HASH=                cad12ac59a379f848bdab6edaad40bac1ad8fe6828fa3890c620bcf50aa045a6
 
 
 # ----------------------------------------
@@ -60,6 +60,12 @@ PATTERNDIR=                 ../patterns
 PATTERN_TESTER=             dosdp validate -i
 DOSDPT=                     dosdp-tools
 PATTERN_RELEASE_FILES=      $(PATTERNDIR)/definitions.owl $(PATTERNDIR)/pattern.owl
+
+MAPPINGDIR=                 ../mappings
+MAPPING_TESTER=             sssom validate
+SSSOMPY=                    sssom
+MAPPINGS=                   fbbt 
+MAPPING_RELEASE_FILES=      $(foreach n,$(MAPPINGS), $(MAPPINGDIR)/$(n).sssom.tsv)
 
 
 FORMATS = $(sort  owl obo json owl)
@@ -195,7 +201,7 @@ all_subsets: $(SUBSET_FILES)
 # ----------------------------------------
 
 
-MAPPINGS = 
+MAPPINGS =  fbbt
 
 MAPPING_FILES = $(patsubst %, $(MAPPINGDIR)/%.sssom.tsv, $(MAPPINGS))
 
@@ -699,6 +705,22 @@ $(PATTERNDIR)/definitions.owl: $(DOSDP_OWL_FILES_DEFAULT)   $(DOSDP_OWL_FILES_LO
 	if [ $(PAT) = true ] && [ "${DOSDP_PATTERN_NAMES_DEFAULT}" ]   || [ "${DOSDP_PATTERN_NAMES_LOGICAL-ONLY}" ] || [ "${DOSDP_PATTERN_NAMES_ALL-AXIOMS}" ] && [ $(PAT) = true ]; then $(ROBOT) merge $(addprefix -i , $^) \
 		annotate --ontology-iri $(ONTBASE)/patterns/definitions.owl  --version-iri $(ONTBASE)/releases/$(TODAY)/patterns/definitions.owl \
       --annotation owl:versionInfo $(VERSION) -o definitions.ofn && mv definitions.ofn $@; fi
+
+
+# ----------------------------------------
+# SSSOM Mapping Files
+# ----------------------------------------
+
+validate-sssom-%:
+	tsvalid $(MAPPINGDIR)/$*.sssom.tsv --comment "#"
+	sssom validate $(MAPPINGDIR)/$*.sssom.tsv
+
+# This mappingset is manually curated, so we only check that the file actually exists.
+$(MAPPINGDIR)/fbbt.sssom.tsv:
+	test -f $@
+
+validate_mappings:
+	$(MAKE_FAST) $(foreach n,$(MAPPINGS), validate-sssom-$(n))
 
 
 
