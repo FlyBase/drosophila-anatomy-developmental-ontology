@@ -1,0 +1,23 @@
+pattern_name: neuronBySomaLocation
+pattern_iri: http://purl.obolibrary.org/obo/fbbt/src/patterns/dosdp-patterns/neuronBySomaLocation.yaml
+description: "Pattern for generating logical definitions for neurons that can be differentiated from sibling and parent terms based on soma location. Use more specific patterns if available (e.g. for larval motor neurons)."
+
+contributors:
+  - https://orcid.org/0000-0002-1373-1705
+
+classes:
+  neuron: FBbt:00005106
+  anatomical_entity: FBbt:10000000
+
+relations:
+  has_soma_location: RO:0002100
+
+vars:
+  parent: neuron
+  soma_loc: anatomical_entity
+
+equivalentTo:
+  text: "%s that 'has_soma_location' some %s"
+  vars:
+    - parent
+    - soma_loc

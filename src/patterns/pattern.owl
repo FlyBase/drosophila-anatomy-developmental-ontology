@@ -52,6 +52,7 @@ Declaration(Class(<http://purl.obolibrary.org/obo/fbbt/src/patterns/dosdp-patter
 Declaration(Class(<http://purl.obolibrary.org/obo/fbbt/src/patterns/dosdp-patterns/neuroblastBySegment.yaml>))
 Declaration(Class(<http://purl.obolibrary.org/obo/fbbt/src/patterns/dosdp-patterns/neuronByBirthStageAndNotchStatusFromNeuroblastAtDevStage.yaml>))
 Declaration(Class(<http://purl.obolibrary.org/obo/fbbt/src/patterns/dosdp-patterns/neuronByPrimaryNeuriteTract.yaml>))
+Declaration(Class(<http://purl.obolibrary.org/obo/fbbt/src/patterns/dosdp-patterns/neuronBySomaLocation.yaml>))
 Declaration(Class(<http://purl.obolibrary.org/obo/fbbt/src/patterns/dosdp-patterns/neuronOfFruCluster.yaml>))
 Declaration(Class(<http://purl.obolibrary.org/obo/fbbt/src/patterns/dosdp-patterns/sensoryNeuronByDendriteLocation.yaml>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/BFO_0000050>))
@@ -226,6 +227,11 @@ AnnotationAssertion(<http://purl.org/dc/terms/title> <http://purl.obolibrary.org
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/fbbt/src/patterns/dosdp-patterns/neuronByPrimaryNeuriteTract.yaml> "http://www.w3.org/2002/07/owl#Thing neuron"^^xsd:string)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/fbbt/src/patterns/dosdp-patterns/neuronByPrimaryNeuriteTract.yaml> "http://www.w3.org/2002/07/owl#Thing"^^xsd:string)
 EquivalentClasses(<http://purl.obolibrary.org/obo/fbbt/src/patterns/dosdp-patterns/neuronByPrimaryNeuriteTract.yaml> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/FBbt_00005106> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002101> <http://purl.obolibrary.org/obo/FBbt_00049287>)))
+
+# Class: <http://purl.obolibrary.org/obo/fbbt/src/patterns/dosdp-patterns/neuronBySomaLocation.yaml> (<http://purl.obolibrary.org/obo/fbbt/src/patterns/dosdp-patterns/neuronBySomaLocation.yaml>)
+
+AnnotationAssertion(<http://purl.org/dc/terms/title> <http://purl.obolibrary.org/obo/fbbt/src/patterns/dosdp-patterns/neuronBySomaLocation.yaml> "neuronBySomaLocation"^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/fbbt/src/patterns/dosdp-patterns/neuronBySomaLocation.yaml> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/FBbt_00005106> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002100> <http://purl.obolibrary.org/obo/FBbt_10000000>)))
 
 # Class: <http://purl.obolibrary.org/obo/fbbt/src/patterns/dosdp-patterns/neuronOfFruCluster.yaml> (<http://purl.obolibrary.org/obo/fbbt/src/patterns/dosdp-patterns/neuronOfFruCluster.yaml>)
 
