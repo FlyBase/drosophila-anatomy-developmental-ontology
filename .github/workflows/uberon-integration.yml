@@ -7,7 +7,7 @@ on:
 jobs:
   uberon_integration:
     runs-on: ubuntu-latest
-    container: obolibrary/odkfull:v1.4.3
+    container: obolibrary/odkfull:v1.5
 
     steps:
 
@@ -31,7 +31,7 @@ jobs:
       - name: Build FBbt
         run: |
           cd fbbt/src/ontology
-          make fbbt.owl mappings.sssom.tsv MIR=false IMP=false PAT=false
+          make fbbt.owl ../mappings/fbbt.sssom.tsv MIR=false IMP=false PAT=false
 
       - name: Build Uberon
         run: |
@@ -50,7 +50,7 @@ jobs:
           robot merge -i fbbt/src/ontology/fbbt.owl \
                       -i uberon/src/ontology/uberon.owl \
                       -i cl/src/ontology/cl.owl \
-                sssom:inject --sssom fbbt/src/ontology/mappings.sssom.tsv \
+                sssom:inject --sssom fbbt/src/mappings/fbbt.sssom.tsv \
                              --ruleset fbbt/src/scripts/bridging.rules \
                 annotate --ontology-iri http://purl.obolibrary.org/obo/fbbt/fbbt-uberon-cl-merge.owl \
                          --output fbbt-uberon-cl-merge.owl \
