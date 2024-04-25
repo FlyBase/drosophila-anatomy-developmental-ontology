@@ -154,6 +154,21 @@ $(COMPONENTSDIR)/flybase_import.owl: $(TMPDIR)/FBgn_template.tsv | $(COMPONENTSD
 	if [ $(IMP) = true ]; then $(ROBOT) template --input-iri http://purl.obolibrary.org/obo/ro.owl --template $< \
 	annotate --ontology-iri "http://purl.obolibrary.org/obo/fbbt/components/flybase_import.owl" --output $@ && rm $<; fi
 
+######################################################################################
+### Update VFB_xrefs.owl
+###################################################################################
+
+$(TMPDIR)/fbbt-merged.json:
+	$(ROBOT) merge -i fbbt-edit.obo \
+	relax \
+	convert -f json -o $@
+
+$(COMPONENTSDIR)/VFB_xrefs.owl: $(TMPDIR)/fbbt-merged.json
+	python3 ../scripts/VFB_xrefs.py && \
+	$(ROBOT) template --input-iri http://purl.obolibrary.org/obo/fbbt.owl --template $(TMPDIR)/xref_template.tsv \
+	annotate --ontology-iri "http://purl.obolibrary.org/obo/fbbt/components/VFB_xrefs.owl" \
+	--output $@ && \
+	rm $(TMPDIR)/xref_template.tsv
 
 ######################################################################################
 ### Update neuron_symbols.owl
