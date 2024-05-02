@@ -259,6 +259,9 @@ update_pattern_labels:
     python3 $(SCRIPTSDIR)/dosdp_tsv_labels.py -f $$file ; \
 	done
 
+update_lineage_nomenclature: $(PATTERNDIR)/data/all-axioms/neuroblastAnnotations.tsv
+	python3 $(SCRIPTSDIR)/update_lineage_nomenclature.py
+	
 # Validation fails for ALNeuronEquivalentClass pattern,
 # but it is not invalid because a definitions.owl file can be correctly built.
 $(TMPDIR)/pattern_schema_checks:

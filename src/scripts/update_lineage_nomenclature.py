@@ -112,7 +112,7 @@ class lineageInfo:
                             other_synonyms.append(neuron_name_printer(neuroblast = self.table_row[c], org_stage=self.stage, birth_stage=e, notch_status=n, notch_letter=True, vnc_secondary=(c=='secondary')))
                 self.table_row[c] = neuron_name
                 other_synonyms = list(set([o for o in other_synonyms if o!=neuron_name]))
-        self.table_row['other_synonyms'] = '|'.join(other_synonyms)
+        self.table_row['other_synonyms'] = '|'.join(sorted(other_synonyms))
         return self.table_row
 
 
