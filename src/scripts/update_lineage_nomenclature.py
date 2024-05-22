@@ -3,7 +3,8 @@ import pandas as pd
 # replace nomenclature columns in other lineage patterns with those from the neuroblast patterns
 dir = '../patterns/data/all-axioms/'
 lineage_pattern_files = {'seg_nbs': dir + 'neuroblastBySegment.tsv',
-                         'neurons': dir + 'neuronByBirthStageAndNotchStatusFromNeuroblastAtDevStage.tsv'}
+                         'neurons': dir + 'neuronByBirthStageAndNotchStatusFromNeuroblastAtDevStage.tsv',
+                         'clones': dir + 'cloneWithNeuroblastAndStage.tsv'}
 nb_pattern_file = dir + 'neuroblastAnnotations.tsv'
 
 nomenclature_cols = ['ito_lee', 'hartenstein', 'primary', 'secondary', 'reference', 'hartenstein_synonym_type', 'ito_lee_synonym_type', 'primary_synonym_type', 'secondary_synonym_type']
@@ -55,7 +56,7 @@ def neuron_name_printer(neuroblast, org_stage='', birth_stage=None, notch_status
     return neuron_name
 
 
-class lineageInfo:
+class neuronLineageInfo:
     def __init__(self, table_row):
         self.table_row = table_row
         
@@ -123,14 +124,17 @@ nb_pattern.to_csv(nb_pattern_file, sep='\t', index=None)
 # update nomenclature cols then choose an nb_label for each lineage pattern file
 for pat in lineage_pattern_files:
     lineage_data = pd.read_csv(lineage_pattern_files[pat], sep='\t', dtype='str')
-    lineage_data.drop(columns=nomenclature_cols, inplace=True)
+    lineage_data.drop(columns=nomenclature_cols, inplace=True, errors='ignore')
     merged_data = lineage_data.merge(nb_to_merge, how='left', on='neuroblast')
-    if pat == 'seg_nbs':
+    if pat == 'clones':
+        sec_merged_data = merged_data[merged_data['stage'].isin(['FBbt:00003004'])]
+        non_sec_merged_data = merged_data[~merged_data.index.isin(sec_merged_data.index)]
+    elif pat == 'seg_nbs':
         non_sec_merged_data = merged_data
         sec_merged_data = pd.DataFrame({})
-    if pat == 'neurons':
+    elif pat == 'neurons':
         # update nomenclature columns to names
-        merged_data = merged_data.apply(lambda x: lineageInfo(x).write_names(col_order_non_sec), axis=1)
+        merged_data = merged_data.apply(lambda x: neuronLineageInfo(x).write_names(col_order_non_sec), axis=1)
         # secondary or adult
         sec_merged_data = merged_data[merged_data['birth_notch'].isin(['FBbt:00047096','FBbt:00049541','FBbt:00049542']) | merged_data['stage'].isin(['FBbt:00003004'])]
         non_sec_merged_data = merged_data[~merged_data.index.isin(sec_merged_data.index)]
