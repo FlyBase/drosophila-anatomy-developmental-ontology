@@ -43,6 +43,7 @@ Declaration(Class(<http://purl.obolibrary.org/obo/fbbt/src/patterns/dosdp-patter
 Declaration(Class(<http://purl.obolibrary.org/obo/fbbt/src/patterns/dosdp-patterns/anatomicalEntityBySex.yaml>))
 Declaration(Class(<http://purl.obolibrary.org/obo/fbbt/src/patterns/dosdp-patterns/cellByAnatomicalEntity.yaml>))
 Declaration(Class(<http://purl.obolibrary.org/obo/fbbt/src/patterns/dosdp-patterns/cellTypeFromNeuroblast.yaml>))
+Declaration(Class(<http://purl.obolibrary.org/obo/fbbt/src/patterns/dosdp-patterns/cloneWithNeuroblastAndStage.yaml>))
 Declaration(Class(<http://purl.obolibrary.org/obo/fbbt/src/patterns/dosdp-patterns/developingEntityWithEarlierAndLaterStructures.yaml>))
 Declaration(Class(<http://purl.obolibrary.org/obo/fbbt/src/patterns/dosdp-patterns/fbTangentialNeuronByLayerAndLineage.yaml>))
 Declaration(Class(<http://purl.obolibrary.org/obo/fbbt/src/patterns/dosdp-patterns/glomerulusWithNeuropilAndInputNeurons.yaml>))
@@ -128,6 +129,15 @@ EquivalentClasses(<http://purl.obolibrary.org/obo/fbbt/src/patterns/dosdp-patter
 
 AnnotationAssertion(<http://purl.org/dc/terms/title> <http://purl.obolibrary.org/obo/fbbt/src/patterns/dosdp-patterns/cellTypeFromNeuroblast.yaml> "cellTypeFromNeuroblast"^^xsd:string)
 EquivalentClasses(<http://purl.obolibrary.org/obo/fbbt/src/patterns/dosdp-patterns/cellTypeFromNeuroblast.yaml> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/FBbt_00005106> <http://purl.obolibrary.org/obo/FBbt_00007002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002202> <http://purl.obolibrary.org/obo/FBbt_00005146>)))
+
+# Class: <http://purl.obolibrary.org/obo/fbbt/src/patterns/dosdp-patterns/cloneWithNeuroblastAndStage.yaml> (thing)
+
+AnnotationAssertion(<http://purl.org/dc/terms/title> <http://purl.obolibrary.org/obo/fbbt/src/patterns/dosdp-patterns/cloneWithNeuroblastAndStage.yaml> "cloneWithNeuroblastAndStage"^^xsd:string)
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "thing"^^xsd:string) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/fbbt/src/patterns/dosdp-patterns/cloneWithNeuroblastAndStage.yaml> "thing"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/fbbt/src/patterns/dosdp-patterns/cloneWithNeuroblastAndStage.yaml> "thing"^^xsd:string)
+SubClassOf(<http://purl.obolibrary.org/obo/fbbt/src/patterns/dosdp-patterns/cloneWithNeuroblastAndStage.yaml> <http://purl.obolibrary.org/obo/FBbt_00007683>)
+SubClassOf(<http://purl.obolibrary.org/obo/fbbt/src/patterns/dosdp-patterns/cloneWithNeuroblastAndStage.yaml> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000050> <http://purl.obolibrary.org/obo/FBbt_00000001>))
+SubClassOf(<http://purl.obolibrary.org/obo/fbbt/src/patterns/dosdp-patterns/cloneWithNeuroblastAndStage.yaml> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002202> <http://purl.obolibrary.org/obo/FBbt_00005146>))
 
 # Class: <http://purl.obolibrary.org/obo/fbbt/src/patterns/dosdp-patterns/developingEntityWithEarlierAndLaterStructures.yaml> (<http://purl.obolibrary.org/obo/fbbt/src/patterns/dosdp-patterns/developingEntityWithEarlierAndLaterStructures.yaml>)
 
