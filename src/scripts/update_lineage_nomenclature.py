@@ -1,11 +1,11 @@
 import pandas as pd
 
 # replace nomenclature columns in other lineage patterns with those from the neuroblast patterns
-dir = '../patterns/data/all-axioms/'
-lineage_pattern_files = {'seg_nbs': dir + 'neuroblastBySegment.tsv',
-                         'neurons': dir + 'neuronByBirthStageAndNotchStatusFromNeuroblastAtDevStage.tsv',
-                         'clones': dir + 'cloneWithNeuroblastAndStage.tsv'}
-nb_pattern_file = dir + 'neuroblastAnnotations.tsv'
+pat_dir = '../patterns/data/all-axioms/'
+lineage_pattern_files = {'seg_nbs': pat_dir + 'neuroblastBySegment.tsv',
+                         'neurons': pat_dir + 'neuronByBirthStageAndNotchStatusFromNeuroblastAtDevStage.tsv',
+                         'clones': pat_dir + 'cloneWithNeuroblastAndStage.tsv'}
+nb_pattern_file = pat_dir + 'neuroblastAnnotations.tsv'
 
 nomenclature_cols = ['ito_lee', 'hartenstein', 'primary', 'secondary', 'reference', 'hartenstein_synonym_type', 'ito_lee_synonym_type', 'primary_synonym_type', 'secondary_synonym_type']
 
@@ -138,7 +138,8 @@ for pat in lineage_pattern_files:
         # secondary or adult
         sec_merged_data = merged_data[merged_data['birth_notch'].isin(['FBbt:00047096','FBbt:00049541','FBbt:00049542']) | merged_data['stage'].isin(['FBbt:00003004'])]
         non_sec_merged_data = merged_data[~merged_data.index.isin(sec_merged_data.index)]
-    non_sec_merged_data = non_sec_merged_data.apply(choose_label, axis=1, col_order=col_order_non_sec)
+    if not non_sec_merged_data.empty:
+        non_sec_merged_data = non_sec_merged_data.apply(choose_label, axis=1, col_order=col_order_non_sec)
     if not sec_merged_data.empty:
         sec_merged_data = sec_merged_data.apply(choose_label, axis=1, col_order=col_order_sec)
         merged_data = pd.concat([non_sec_merged_data, sec_merged_data])
