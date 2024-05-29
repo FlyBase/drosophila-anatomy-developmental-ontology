@@ -1,0 +1,93 @@
+pattern_name: cloneWithNeuroblastAndStage
+pattern_iri: http://purl.obolibrary.org/obo/fbbt/src/patterns/dosdp-patterns/cloneWithNeuroblastAndStage.yaml
+description: "Pattern for adding axioms for neuroblast of origin and stage (e.g. adult) for lineage clones and making labels/synonyms to fit nomenclature schema. Stage not required, but all current clones are adult (2024-05-22). Neuroblast nomenclature columns can be updated using update_lineage_nomenclature."
+
+contributors:
+  - https://orcid.org/0000-0002-1373-1705
+
+classes:
+  neuroblast: FBbt:00005146
+  organism: FBbt:00000001
+  lineage_clone: FBbt:00007683
+
+relations: 
+  part_of: BFO:0000050
+  develops_from: RO:0002202
+
+annotationProperties:
+  synonym_type: oboInOwl:hasSynonymType
+  database_cross_reference: oboInOwl:hasDbXref
+  exact_synonym: oboInOwl:hasExactSynonym
+
+vars:
+  clone: lineage_clone
+  neuroblast: neuroblast
+  stage: organism
+  ito_lee: thing
+  hartenstein: thing
+  primary: thing
+  secondary: thing
+  nb_label: thing
+  ito_lee_synonym_type: thing
+  hartenstein_synonym_type: thing
+  primary_synonym_type: thing
+  secondary_synonym_type: thing
+
+data_list_vars:
+  reference: thing
+
+substitutions:
+   - in: stage
+     out: stage_space
+     match: "(.+)"
+     sub: \1 
+
+logical_axioms:
+   - axiom_type: subClassOf
+     text: "%s"
+     vars:
+       - clone
+   - axiom_type: subClassOf
+     text: "'part_of' some %s"
+     vars:
+       - stage
+   - axiom_type: subClassOf
+     text: "'develops_from' some %s"
+     vars:
+       - neuroblast
+
+name:
+  text: "%s"
+  vars:
+    - nb_label
+
+generated_synonyms:
+  - text: "%s"
+    vars:
+      - ito_lee
+    xrefs: reference
+    annotations:
+      - annotationProperty: synonym_type
+        var: ito_lee_synonym_type
+  - text: "%s"
+    vars:
+      - hartenstein
+    xrefs: reference
+    annotations:
+      - annotationProperty: synonym_type
+        var: hartenstein_synonym_type
+  - text: "%s"
+    vars:
+      - primary
+    xrefs: reference
+    annotations:
+      - annotationProperty: synonym_type
+        var: primary_synonym_type
+  - text: "%s"
+    vars:
+      - secondary
+    xrefs: reference
+    annotations:
+      - annotationProperty: synonym_type
+        var: secondary_synonym_type
+
