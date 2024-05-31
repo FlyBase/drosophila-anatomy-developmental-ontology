@@ -1,0 +1,21 @@
+pattern_name: externalAnatomyLinkouts
+pattern_iri: http://purl.obolibrary.org/obo/fbbt/src/patterns/dosdp-patterns/externalAnatomyLinkouts.yaml
+description: "Pattern for producing linkouts to https://www.ento.csiro.au/biology/drosophila/melanogaster.html# on terms for external anatomical features."
+
+contributors:
+  - https://orcid.org/0000-0002-1373-1705
+
+classes:
+  thing: owl:Thing
+
+annotationProperties:
+  database_cross_reference: oboInOwl:hasDbXref
+
+vars:
+  term: thing
+
+annotations:
+  - annotationProperty: database_cross_reference
+    text: 'https://www.ento.csiro.au/biology/drosophila/melanogaster.html?%s'
+    vars:
+      - term
