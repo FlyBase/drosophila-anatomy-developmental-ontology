@@ -249,15 +249,16 @@ scrnaseq-slim.owl: $(ONT)-simple.owl
 # all filenames for pattern tsvs
 ALL_DOSDP_TSVs = $(wildcard $(PATTERNDIR)/data/*/*.tsv)
 
-# goal to update labels in tsvs used for pattern generation
-update_pattern_labels:
-	# get latest version of script and vfb_connect:
+$(TMPDIR)/$(ONT)-merged.db: $(SRC)
+	$(ROBOT) merge -i $< -o $(TMPDIR)/$(ONT)-merged.owl
+	semsql make $@
+
+update_pattern_labels: $(TMPDIR)/$(ONT)-merged.db
 	wget -O $(SCRIPTSDIR)/update_term_labels_in_file.py https://raw.githubusercontent.com/FlyBase/flybase-ontology-scripts/master/update_term_labels_in_file/src/update_term_labels_in_file.py
-	python3 -m pip install vfb_connect
-	# run script for each id:label column pair in each file
 	for file in $(ALL_DOSDP_TSVs) ; do \
-    python3 $(SCRIPTSDIR)/dosdp_tsv_labels.py -f $$file ; \
+    python3 $(SCRIPTSDIR)/update_term_labels_in_file.py -f $$file -i auto -c $< ; \
 	done
+	
 
 update_lineage_nomenclature: $(PATTERNDIR)/data/all-axioms/neuroblastAnnotations.tsv
 	python3 $(SCRIPTSDIR)/update_lineage_nomenclature.py
