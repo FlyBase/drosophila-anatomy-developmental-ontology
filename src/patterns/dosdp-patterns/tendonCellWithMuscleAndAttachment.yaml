@@ -1,0 +1,51 @@
+pattern_name: tendonCellWithMuscleAndAttachment
+pattern_iri: http://purl.obolibrary.org/obo/fbbt/src/patterns/dosdp-patterns/tendonCellWithMuscleAndAttachment.yaml
+description: "Pattern for generating subclass axioms for tendon cells."
+
+contributors:
+  - https://orcid.org/0000-0002-1373-1705
+
+classes:
+  muscle: FBbt:00058111
+  muscle_cell: FBbt:00005073
+  anatomical_entity: FBbt:10000000
+  tendon: FBbt:00005090
+
+relations:
+  part_of: BFO:0000050
+  attached_to: RO:0002371
+
+vars:
+  tendon: tendon
+
+list_vars:
+  muscle: muscle
+  cell_attachment: muscle_cell
+  body_attachment: anatomical_entity
+
+logical_axioms:
+   - axiom_type: subClassOf
+     multi_clause:
+      sep: " and "
+      clauses:
+        - text: "'part_of' some %s"
+          vars:
+            - muscle
+   - axiom_type: subClassOf
+     multi_clause:
+      sep: " and "
+      clauses:
+        - text: "'attached_to' some %s"
+          vars:
+            - cell_attachment
+   - axiom_type: subClassOf
+     multi_clause:
+      sep: " and "
+      clauses:
+        - text: "'attached_to' some %s"
+          vars:
+            - body_attachment
+   - axiom_type: subClassOf
+     text: "%s"
+     vars:
+       - tendon
