@@ -1,0 +1,35 @@
+pattern_name: anatomicalEntityByStage
+pattern_iri: http://purl.obolibrary.org/obo/fbbt/src/patterns/dosdp-patterns/anatomicalEntityByStage.yaml
+description: "Pattern for creating logical definitions for classes of anatomical entity that can be uniquely defined based on their (non-sex-specific) parent class ('entity') and the sex ('sex') of the organism they are found in."
+
+contributors:
+  - https://orcid.org/0000-0002-1373-1705
+
+classes:
+  anatomical_entity: FBbt:10000000
+  organism: FBbt:00000001
+
+relations:
+  overlaps: RO:0002131
+  part_of: BFO:0000050
+
+vars:
+  parent: anatomical_entity
+  stage: organism
+
+list_vars:
+  partonomy: anatomical_entity
+
+logical_axioms:
+   - axiom_type: equivalentTo
+     text: "%s that 'overlaps' some %s"
+     vars:
+       - parent
+       - stage
+   - axiom_type: subClassOf
+     multi_clause:
+       sep: " and "
+       clauses:
+         - text: "'part_of' some %s"
+           vars:
+             - partonomy
