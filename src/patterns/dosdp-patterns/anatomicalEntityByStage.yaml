@@ -1,6 +1,6 @@
 pattern_name: anatomicalEntityByStage
 pattern_iri: http://purl.obolibrary.org/obo/fbbt/src/patterns/dosdp-patterns/anatomicalEntityByStage.yaml
-description: "Pattern for creating logical definitions for classes of anatomical entity that can be uniquely defined based on their (non-sex-specific) parent class ('entity') and the sex ('sex') of the organism they are found in."
+description: "Pattern for creating logical definitions for classes of anatomical entity that can be uniquely defined based on their stage. Due to curation practice of using larval/adult terms for fully-formed entities at the embryonic/pupal stage, take care using this for embryonic/pupal stage terms to avoid autoclassification of larval/adult entities in the late embryo/pupa as embryonic/pupal entities. If a larval/adult term might be used to annotate at the embryonic/pupal stage, the analagous embryonic/pupal entity should use anatomicalEntityWithStage (no equivalentTo axioms)."
 
 contributors:
   - https://orcid.org/0000-0002-1373-1705
