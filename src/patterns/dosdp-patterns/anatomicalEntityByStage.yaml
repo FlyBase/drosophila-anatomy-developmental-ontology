@@ -8,6 +8,7 @@ contributors:
 classes:
   anatomical_entity: FBbt:10000000
   organism: FBbt:00000001
+  thing: owl:Thing
 
 relations:
   overlaps: RO:0002131
@@ -19,6 +20,16 @@ vars:
 
 list_vars:
   partonomy: anatomical_entity
+
+data_list_vars:
+  def_xrefs: thing
+
+def:
+  text: "Any %s of the %s."
+  vars:
+    - parent
+    - stage
+  xrefs: def_xrefs
 
 logical_axioms:
    - axiom_type: equivalentTo
