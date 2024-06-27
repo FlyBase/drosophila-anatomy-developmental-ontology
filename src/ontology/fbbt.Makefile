@@ -89,35 +89,46 @@ $(REPORTDIR)/spellcheck.txt: fbbt-simple.obo install_flybase_scripts ../../tools
 ######################################################
 ### Overwriting some default artefacts ###
 ######################################################
+# remove redundant overlaps rels from owl files
+# should no longer be necessary if https://github.com/ontodev/robot/issues/1208 gets fixed
+OWL_FILES = $(foreach n,$(RELEASE_ARTEFACTS), $(n).owl)
+strip_overlaps: $(OWL_FILES)
+	for file in $(OWL_FILES); do \
+		$(ROBOT) query -input $$file \
+		--update $(SPARQLDIR)/remove_redundant_overlaps.ru \
+		--output $$file ; \
+	done
+
+
 # Removing excess defs, labels, comments from obo files
 
-$(ONT)-simple.obo: $(ONT)-simple.owl
+$(ONT)-simple.obo: $(ONT)-simple.owl strip_overlaps
 	$(ROBOT) convert --input $< --check false -f obo $(OBO_FORMAT_OPTIONS) -o $@.tmp.obo &&\
 	cat $@.tmp.obo | grep -v ^owl-axioms | grep -v 'namespace[:][ ]external' | grep -v 'namespace[:][ ]quality' > $@.tmp &&\
 	cat $@.tmp | perl -0777 -e '$$_ = <>; s/(?:name[:].*\n)+name[:]/name:/g; print' | perl -0777 -e '$$_ = <>; s/(?:comment[:].*\n)+comment[:]/comment:/g; print' | perl -0777 -e '$$_ = <>; s/(?:def[:].*\n)+def[:]/def:/g; print' > $@
 	rm -f $@.tmp.obo $@.tmp
 
 # We want the OBO release to be based on the simple release. It needs to be annotated however in the way map releases (fbbt.owl) are annotated.
-$(ONT).obo: $(ONT)-simple.owl
+$(ONT).obo: $(ONT)-simple.owl strip_overlaps
 	$(ROBOT)  annotate --input $< --ontology-iri $(URIBASE)/$@ --version-iri $(ONTBASE)/releases/$(TODAY) \
 	convert --check false -f obo $(OBO_FORMAT_OPTIONS) -o $@.tmp.obo &&\
 	cat $@.tmp.obo | grep -v ^owl-axioms | grep -v 'namespace[:][ ]external' | grep -v 'namespace[:][ ]quality' > $@.tmp &&\
 	cat $@.tmp | perl -0777 -e '$$_ = <>; s/(?:name[:].*\n)+name[:]/name:/g; print' | perl -0777 -e '$$_ = <>; s/(?:comment[:].*\n)+comment[:]/comment:/g; print' | perl -0777 -e '$$_ = <>; s/(?:def[:].*\n)+def[:]/def:/g; print' > $@
 	rm -f $@.tmp.obo $@.tmp
 
-$(ONT)-base.obo: $(ONT)-base.owl
+$(ONT)-base.obo: $(ONT)-base.owl strip_overlaps
 	$(ROBOT) convert --input $< --check false -f obo $(OBO_FORMAT_OPTIONS) -o $@.tmp.obo &&\
 	cat $@.tmp.obo | grep -v ^owl-axioms > $@.tmp &&\
 	cat $@.tmp | perl -0777 -e '$$_ = <>; s/(?:name[:].*\n)+name[:]/name:/g; print' | perl -0777 -e '$$_ = <>; s/(?:comment[:].*\n)+comment[:]/comment:/g; print' | perl -0777 -e '$$_ = <>; s/(?:def[:].*\n)+def[:]/def:/g; print' > $@
 	rm -f $@.tmp.obo $@.tmp
 
-$(ONT)-non-classified.obo: $(ONT)-non-classified.owl
+$(ONT)-non-classified.obo: $(ONT)-non-classified.owl strip_overlaps
 	$(ROBOT) convert --input $< --check false -f obo $(OBO_FORMAT_OPTIONS) -o $@.tmp.obo &&\
 	cat $@.tmp.obo | grep -v ^owl-axioms > $@.tmp &&\
 	cat $@.tmp | perl -0777 -e '$$_ = <>; s/(?:name[:].*\n)+name[:]/name:/g; print' | perl -0777 -e '$$_ = <>; s/(?:comment[:].*\n)+comment[:]/comment:/g; print' | perl -0777 -e '$$_ = <>; s/(?:def[:].*\n)+def[:]/def:/g; print' > $@
 	rm -f $@.tmp.obo $@.tmp
 
-$(ONT)-full.obo: $(ONT)-full.owl
+$(ONT)-full.obo: $(ONT)-full.owl strip_overlaps
 	$(ROBOT) convert --input $< --check false -f obo $(OBO_FORMAT_OPTIONS) -o $@.tmp.obo &&\
 	cat $@.tmp.obo | grep -v ^owl-axioms > $@.tmp &&\
 	cat $@.tmp | perl -0777 -e '$$_ = <>; s/(?:name[:].*\n)+name[:]/name:/g; print' | perl -0777 -e '$$_ = <>; s/(?:comment[:].*\n)+comment[:]/comment:/g; print' | perl -0777 -e '$$_ = <>; s/(?:def[:].*\n)+def[:]/def:/g; print' > $@
