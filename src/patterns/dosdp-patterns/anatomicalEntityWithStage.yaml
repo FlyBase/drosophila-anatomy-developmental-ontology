@@ -1,6 +1,6 @@
 pattern_name: anatomicalEntityWithStage
 pattern_iri: http://purl.obolibrary.org/obo/fbbt/src/patterns/dosdp-patterns/anatomicalEntityWithStage.yaml
-description: "Pattern for creating subClassOf axioms for classes of anatomical entity that are stage-specific to the larva or pupa. `stage` column is not used, need to specify a stage-specific `partonomy`. NB this pattern allows multiple `parent`s to assert classes that might have been inferred if `parent` was logically-defined."
+description: "Pattern for creating subClassOf axioms for classes of anatomical entity that are stage-specific to the larva or pupa. `stage` column is not used, need to specify a stage-specific `partonomy`. NB multiple `parent`s must be spcified by extra rows (to assert classes that might have been inferred if `parent` was logically-defined)."
 
 contributors:
   - https://orcid.org/0000-0002-1373-1705
@@ -11,18 +11,17 @@ classes:
 relations:
   part_of: BFO:0000050
 
-list_vars:
+vars:
   parent: anatomical_entity
+
+list_vars:
   partonomy: anatomical_entity
 
 logical_axioms:
    - axiom_type: subClassOf
-     multi_clause:
-       sep: " and "
-       clauses:
-         - text: "%s"
-           vars:
-             - parent
+     text: "%s"
+     vars:
+       - parent
    - axiom_type: subClassOf
      multi_clause:
        sep: " and "
