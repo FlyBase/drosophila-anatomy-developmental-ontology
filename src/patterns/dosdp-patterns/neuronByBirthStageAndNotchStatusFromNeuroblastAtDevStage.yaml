@@ -1,6 +1,6 @@
 pattern_name: neuronByBirthStageAndNotchStatusFromNeuroblastAtDevStage
 pattern_iri: http://purl.obolibrary.org/obo/fbbt/src/patterns/dosdp-patterns/neuronByBirthStageAndNotchStatusFromNeuroblastAtDevStage.yaml
-description: "Somewhat complex pattern for defining neurons based on birth stage and notch status (primary/secondary/primary Notch ON etc.), neuroblast of origin, and the developmental stage that it is in (larval/adult etc.). All fields are technically optional, but really neuroblast and birth stage/notch status (even if just 'neuron') should be specified. Stage is a list variable that can also include sex if needed. Neurotransmitter(s) can be added if known and consistent for the lineage. Other types are types that apply to all neurons defined by the birth/notch/stage combination but are not required for class membership (e.g. all NB3-3 primary neurons are Notch OFF) - this is a list variable. Neuroblast nomenclature columns can be updated using update_lineage_nomenclature."
+description: "Somewhat complex pattern for defining neurons based on birth stage and notch status (primary/secondary/primary Notch ON etc.), neuroblast of origin, and the developmental stage that it is in (larval/adult etc.). All fields are technically optional, but really neuroblast and birth stage/notch status (even if just 'neuron') should be specified. Stage is a list variable that can also include sex if needed. Neurotransmitter(s) can be added if known and consistent for the lineage. Other types are types that apply to all neurons defined by the birth/notch/stage combination but are not required for class membership (e.g. all NB3-3 primary neurons are Notch OFF), multiple `other_type`s must be spcified by extra rows. Neuroblast nomenclature columns can be updated using update_lineage_nomenclature."
 
 contributors:
   - https://orcid.org/0000-0002-1373-1705
@@ -37,10 +37,10 @@ vars:
   hartenstein_synonym_type: thing
   primary_synonym_type: thing
   secondary_synonym_type: thing
+  other_type: neuron
 
 list_vars:
   stage: organism
-  other_types: neuron
   neurotransmitter: neurotransmitter_secretion
   soma: anatomical_entity
   other_synonyms: thing
@@ -63,21 +63,18 @@ logical_axioms:
           vars:
             - stage
    - axiom_type: subClassOf
-     multi_clause:
-      sep: " and "
-      clauses:
-        - text: "%s"
-          vars:
-            - other_types
+     text: "%s"
+     vars:
+       - other_type
    - axiom_type: subClassOf
      multi_clause:
       sep: " and "
       clauses:
-        - text: "'capable_of'some %s"
+        - text: "'capable_of' some %s"
           vars:
             - neurotransmitter
    - axiom_type: subClassOf
-     text: "'part_of'some %s"
+     text: "'part_of' some %s"
      vars:
        - clone
    - axiom_type: subClassOf

@@ -1,6 +1,6 @@
 pattern_name: ALNeuronSubClass
 pattern_iri: http://purl.obolibrary.org/obo/fbbt/src/patterns/dosdp-patterns/ALNeuronSubClass.yaml
-description: "Pattern for adding SC axioms to antennal lobe neurons for various features. Please use ALNeuronEquivalentClass pattern for features that can be combined to logically define a cell type (possibly in addition to this pattern). Unlike the equvalence pattern, this uses the most specific location ('partonomy') that the entity is part_of, rather than an overlaps relation to the organism ('stage') term."
+description: "Pattern for adding SC axioms to antennal lobe neurons for various features. Please use ALNeuronEquivalentClass pattern for features that can be combined to logically define a cell type (possibly in addition to this pattern). Unlike the equvalence pattern, this uses the most specific location ('partonomy') that the entity is part_of, rather than an overlaps relation to the organism ('stage') term. NB multiple `parent_type`s must be spcified by extra rows."
 
 contributors:
   - https://orcid.org/0000-0002-1373-1705
@@ -25,9 +25,9 @@ relations:
 
 vars:
   laterality: phys_obj_quality
+  parent_type: neuron
 
 list_vars:
-  parent_type: neuron
   tract: tract
   input_glomerulus: AL_glomerulus
   multi_input_glomerulus: AL_glomerulus
@@ -38,12 +38,9 @@ list_vars:
 
 logical_axioms:
    - axiom_type: subClassOf
-     multi_clause:
-      sep: " and "
-      clauses:
-        - text: "%s"
-          vars:
-            - parent_type
+     text: "%s"
+     vars:
+       - parent_type
    - axiom_type: subClassOf
      multi_clause:
       sep: " and "
