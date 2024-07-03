@@ -156,7 +156,8 @@ $(EDIT_PREPROCESSED): $(SRC) all_robot_plugins
 # that list to generate the flybase_import.owl component (circular dependency).
 $(TMPDIR)/fbgn_seed.txt: $(SRC) | $(TMPDIR)
 	$(ROBOT) query -f csv -i $< --query ../sparql/terms.sparql $@.tmp && \
-		cat $@.tmp | sort | uniq > $@
+		cat $@.tmp | sort | uniq > $@ && \
+		rm -f $@.tmp
 
 $(TMPDIR)/FBgn_template.tsv: $(TMPDIR)/fbgn_seed.txt | $(TMPDIR)
 	if [ $(IMP) = true ]; then python3 $(SCRIPTSDIR)/flybase_import/FB_import_runner.py $< $@; fi
