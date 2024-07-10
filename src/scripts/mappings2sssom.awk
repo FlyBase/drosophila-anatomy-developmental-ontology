@@ -1,6 +1,8 @@
 BEGIN {
 	FS = "\t";
 	print "#curie_map:";
+	print "#  BSPO: http://purl.obolibrary.org/obo/BSPO_";
+	print "#  CARO: http://purl.obolibrary.org/obo/CARO_";
 	print "#  CL: http://purl.obolibrary.org/obo/CL_";
 	print "#  FBbt: http://purl.obolibrary.org/obo/FBbt_";
 	print "#  GO: http://purl.obolibrary.org/obo/GO_";
@@ -31,12 +33,6 @@ BEGIN {
 	else {
 		predicate = "semapv:crossSpeciesCloseMatch"
 	}
-	if ( $2 ~ /^UBERON:/ ) {
-		object_source = "obo:uberon.owl";
-	} else if ( $2 ~ /^CL:/ ) {
-		object_source = "obo:cl.owl";
-	} else if ( $2 ~ /^GO:/ ) {
-		object_source = "obo:go.owl";
-	}
+	object_source = "obo:" tolower(substr($2, 1, index($2, ":") - 1)) ".owl";
 	print $1"\t"$4"\t"predicate"\t"$2"\tsemapv:ManualMappingCuration\t"object_source;
 }
