@@ -16,7 +16,7 @@ prepare_release: $$(ASSETS) $(MAPPINGDIR)/fbbt.sssom.tsv release_reports
 	echo "Release files are now in $(RELEASEDIR) - now you should commit, push and make a release on your git hosting site such as GitHub or GitLab"
 
 MAIN_FILES := $(MAIN_FILES) fly_anatomy.obo fbbt-cedar.obo
-CLEANFILES := $(CLEANFILES) $(patsubst %, $(IMPORTDIR)/%_terms_combined.txt, $(IMPORTS)) $(TMPDIR)/exact_mappings_template.tsv
+CLEANFILES := $(CLEANFILES) $(patsubst %, $(IMPORTDIR)/%_terms_combined.txt, $(IMPORTS))
 
 ######################################################
 ### Code for generating additional FlyBase reports ###
