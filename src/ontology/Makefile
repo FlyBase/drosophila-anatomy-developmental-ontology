@@ -10,7 +10,7 @@
 # More information: https://github.com/INCATools/ontology-development-kit/
 
 # Fingerprint of the configuration file when this Makefile was last generated
-CONFIG_HASH=                bd7b3de4c5406c63b113ab1c6f60664b9af8bf0a6c645ee88fcca884bc0a7c03
+CONFIG_HASH=                8e16e68a36840b35083ec09fa6a60576eb42e0da63b45f9f5a59bee9a7746c94
 
 
 # ----------------------------------------
@@ -53,7 +53,7 @@ OBODATE ?=                  $(shell date +'%d:%m:%Y %H:%M')
 VERSION=                    $(TODAY)
 ANNOTATE_ONTOLOGY_VERSION = annotate -V $(ONTBASE)/releases/$(VERSION)/$@ --annotation owl:versionInfo $(VERSION)
 ANNOTATE_CONVERT_FILE =     annotate --ontology-iri $(ONTBASE)/$@ $(ANNOTATE_ONTOLOGY_VERSION) convert -f ofn --output $@.tmp.owl && mv $@.tmp.owl $@
-OTHER_SRC =                 $(PATTERNDIR)/definitions.owl $(COMPONENTSDIR)/fbbt_ext.owl $(COMPONENTSDIR)/exact_mappings.owl $(COMPONENTSDIR)/neuron_symbols.owl $(COMPONENTSDIR)/larvalbrain_compartments.owl $(COMPONENTSDIR)/larvalbrain_fascicles.owl $(COMPONENTSDIR)/hemibrain_new_cells.owl $(COMPONENTSDIR)/hemibrain_new_ALLNs.owl $(COMPONENTSDIR)/VNC_new_cells.owl $(COMPONENTSDIR)/flybase_import.owl $(COMPONENTSDIR)/flywire_neurons.owl $(COMPONENTSDIR)/VFB_xrefs.owl 
+OTHER_SRC =                 $(PATTERNDIR)/definitions.owl $(COMPONENTSDIR)/fbbt_ext.owl $(COMPONENTSDIR)/exact_mappings.owl $(COMPONENTSDIR)/neuron_symbols.owl $(COMPONENTSDIR)/hemibrain_new_cells.owl $(COMPONENTSDIR)/hemibrain_new_ALLNs.owl $(COMPONENTSDIR)/VNC_new_cells.owl $(COMPONENTSDIR)/flybase_import.owl $(COMPONENTSDIR)/flywire_neurons.owl $(COMPONENTSDIR)/VFB_xrefs.owl 
 ONTOLOGYTERMS =             $(TMPDIR)/ontologyterms.txt
 EDIT_PREPROCESSED =         $(TMPDIR)/$(ONT)-preprocess.owl
 PATTERNDIR=                 ../patterns
@@ -453,8 +453,6 @@ no-mirror-recreate-%:
 $(COMPONENTSDIR)/%.owl: | $(COMPONENTSDIR)
 	test -f $@ || touch $@
 .PRECIOUS: $(COMPONENTSDIR)/%.owl
-
-
 
 
 
