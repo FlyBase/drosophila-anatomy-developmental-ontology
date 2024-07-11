@@ -1,4 +1,5 @@
 prefix FBbt: <http://purl.obolibrary.org/obo/FBbt_>
 prefix oio: <http://www.geneontology.org/formats/oboInOwl#>
+prefix DoOR: <http://neuro.uni-konstanz.de/DoOR/content/receptor.php?OR=>
 
-subject==FBbt:* predicate==semapv:crossSpeciesExactMatch -> annotate_subject(oio:hasDbXref, "%object_curie");
+subject==FBbt:* (predicate==semapv:crossSpeciesExactMatch || predicate==skos:exactMatch) -> annotate_subject(oio:hasDbXref, "%object_curie");
