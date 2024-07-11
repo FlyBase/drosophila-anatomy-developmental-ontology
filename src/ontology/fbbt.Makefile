@@ -205,10 +205,10 @@ $(COMPONENTSDIR)/neuron_symbols.owl: $(TMPDIR)/symbols_template.tsv | $(COMPONEN
 #######################################################################
 
 $(MAPPINGDIR)/fbbt.sssom.tsv: $(MAPPINGDIR)/mappings.tsv $(SCRIPTSDIR)/mappings2sssom.awk \
-			      $(MAPPINGDIR)/door.sssom.tsv
+			      $(MAPPINGDIR)/door.sssom.tsv $(MAPPINGDIR)/larvalbrain.sssom.tsv
 	sort -t'	' -k1,4 $< | \
 		awk -f $(SCRIPTSDIR)/mappings2sssom.awk -v date=$(shell stat -c %x $< | cut -d' ' -f1) | \
-		sssom-cli -i - -i $(MAPPINGDIR)/door.sssom.tsv -o $@
+		sssom-cli -i - -i $(MAPPINGDIR)/door.sssom.tsv -i $(MAPPINGDIR)/larvalbrain.sssom.tsv -o $@
 
 $(COMPONENTSDIR)/exact_mappings.owl: $(MAPPINGDIR)/fbbt.sssom.tsv $(SCRIPTSDIR)/sssom2xrefs.rules | all_robot_plugins
 	$(ROBOT) sssom:inject --create --sssom $(MAPPINGDIR)/fbbt.sssom.tsv \
