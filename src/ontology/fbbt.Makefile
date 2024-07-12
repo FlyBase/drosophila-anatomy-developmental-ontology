@@ -204,13 +204,16 @@ $(COMPONENTSDIR)/neuron_symbols.owl: $(TMPDIR)/symbols_template.tsv | $(COMPONEN
 ### Update exact_mappings.owl
 #######################################################################
 
-$(MAPPINGDIR)/fbbt.sssom.tsv: $(MAPPINGDIR)/mappings.tsv $(SCRIPTSDIR)/mappings2sssom.awk \
-			      $(MAPPINGDIR)/door.sssom.tsv $(MAPPINGDIR)/larvalbrain.sssom.tsv \
-			      $(MAPPINGDIR)/flybrain.sssom.tsv
-	sort -t'	' -k1,4 $< | \
-		awk -f $(SCRIPTSDIR)/mappings2sssom.awk -v date=$(shell stat -c %x $< | cut -d' ' -f1) | \
-		sssom-cli -i - -i $(MAPPINGDIR)/door.sssom.tsv -i $(MAPPINGDIR)/larvalbrain.sssom.tsv \
-			  -i $(MAPPINGDIR)/flybrain.sssom.tsv -o $@
+MAPPING_SETS = common door larvalbrain flybrain
+
+$(MAPPINGDIR)/fbbt.sssom.tsv: $(foreach set, $(MAPPING_SETS), $(MAPPINGDIR)/$(set).sssom.tsv)
+	sssom-cli $(foreach prereq, $^, -i $(prereq)) -a -p \
+		--rule 'object==UBERON:* -> assign("object_source", "http://purl.obolibrary.org/obo/uberon.owl")' \
+		--rule 'object==CL:*     -> assign("object_source", "http://purl.obolibrary.org/obo/cl.owl")' \
+		--rule 'object==BSPO:*   -> assign("object_source", "http://purl.obolibrary.org/obo/bspo.owl")' \
+		--rule 'object==CARO:*   -> assign("object_source", "http://purl.obolibrary.org/obo/caro.owl")' \
+		--rule 'object==GO:*     -> assign("object_source", "http://purl.obolibrary.org/obo/go.owl")' \
+		--output $@
 
 $(COMPONENTSDIR)/exact_mappings.owl: $(MAPPINGDIR)/fbbt.sssom.tsv $(SCRIPTSDIR)/sssom2xrefs.rules | all_robot_plugins
 	$(ROBOT) sssom:inject --create --sssom $(MAPPINGDIR)/fbbt.sssom.tsv \
