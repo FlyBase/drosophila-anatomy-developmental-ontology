@@ -204,7 +204,7 @@ $(COMPONENTSDIR)/neuron_symbols.owl: $(TMPDIR)/symbols_template.tsv | $(COMPONEN
 ### Update mappings_xrefs.owl
 #######################################################################
 
-MAPPING_SETS = common door larvalbrain flybrain
+MAPPING_SETS = common door larvalbrain flybrain anatomical-atlas
 
 $(MAPPINGDIR)/fbbt.sssom.tsv: $(foreach set, $(MAPPING_SETS), $(MAPPINGDIR)/$(set).sssom.tsv)
 	sssom-cli $(foreach prereq, $^, -i $(prereq)) -a -p \
