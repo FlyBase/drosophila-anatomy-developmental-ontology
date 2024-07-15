@@ -201,7 +201,7 @@ $(COMPONENTSDIR)/neuron_symbols.owl: $(TMPDIR)/symbols_template.tsv | $(COMPONEN
 	annotate --ontology-iri "http://purl.obolibrary.org/obo/fbbt/components/neuron_symbols.owl" --output $@ && rm $<; fi
 
 #######################################################################
-### Update exact_mappings.owl
+### Update mappings_xrefs.owl
 #######################################################################
 
 MAPPING_SETS = common door larvalbrain flybrain
@@ -215,10 +215,10 @@ $(MAPPINGDIR)/fbbt.sssom.tsv: $(foreach set, $(MAPPING_SETS), $(MAPPINGDIR)/$(se
 		--rule 'object==GO:*     -> assign("object_source", "http://purl.obolibrary.org/obo/go.owl")' \
 		--output $@
 
-$(COMPONENTSDIR)/exact_mappings.owl: $(MAPPINGDIR)/fbbt.sssom.tsv $(SCRIPTSDIR)/sssom2xrefs.rules | all_robot_plugins
+$(COMPONENTSDIR)/mappings_xrefs.owl: $(MAPPINGDIR)/fbbt.sssom.tsv $(SCRIPTSDIR)/sssom2xrefs.rules | all_robot_plugins
 	$(ROBOT) sssom:inject --create --sssom $(MAPPINGDIR)/fbbt.sssom.tsv \
 		              --ruleset $(SCRIPTSDIR)/sssom2xrefs.rules \
-		 annotate --ontology-iri http://purl.obolibrary.org/obo/fbbt/components/exact_mappings.owl \
+		 annotate --ontology-iri http://purl.obolibrary.org/obo/fbbt/components/mappings_xrefs.owl \
 			  --output $@
 
 # Ensure the mapping set is published along with the other artefacts
