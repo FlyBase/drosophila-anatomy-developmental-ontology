@@ -16,7 +16,7 @@ prepare_release: $$(ASSETS) $(MAPPINGDIR)/fbbt.sssom.tsv release_reports
 	echo "Release files are now in $(RELEASEDIR) - now you should commit, push and make a release on your git hosting site such as GitHub or GitLab"
 
 MAIN_FILES := $(MAIN_FILES) fly_anatomy.obo fbbt-cedar.obo
-CLEANFILES := $(CLEANFILES) $(patsubst %, $(IMPORTDIR)/%_terms_combined.txt, $(IMPORTS)) $(TMPDIR)/exact_mappings_template.tsv
+CLEANFILES := $(CLEANFILES) $(patsubst %, $(IMPORTDIR)/%_terms_combined.txt, $(IMPORTS))
 
 ######################################################
 ### Code for generating additional FlyBase reports ###
@@ -201,16 +201,24 @@ $(COMPONENTSDIR)/neuron_symbols.owl: $(TMPDIR)/symbols_template.tsv | $(COMPONEN
 	annotate --ontology-iri "http://purl.obolibrary.org/obo/fbbt/components/neuron_symbols.owl" --output $@ && rm $<; fi
 
 #######################################################################
-### Update exact_mappings.owl
+### Update mappings_xrefs.owl
 #######################################################################
 
-$(MAPPINGDIR)/fbbt.sssom.tsv: $(MAPPINGDIR)/mappings.tsv $(SCRIPTSDIR)/mappings2sssom.awk
-	sort -t'	' -k1,4 $< | awk -f $(SCRIPTSDIR)/mappings2sssom.awk -v date=$(shell stat -c %x $< | cut -d' ' -f1) > $@
+MAPPING_SETS = common door larvalbrain flybrain anatomical-atlas
 
-$(COMPONENTSDIR)/exact_mappings.owl: $(MAPPINGDIR)/fbbt.sssom.tsv $(SCRIPTSDIR)/sssom2xrefs.rules | all_robot_plugins
+$(MAPPINGDIR)/fbbt.sssom.tsv: $(foreach set, $(MAPPING_SETS), $(MAPPINGDIR)/$(set).sssom.tsv)
+	sssom-cli $(foreach prereq, $^, -i $(prereq)) -a -p \
+		--rule 'object==UBERON:* -> assign("object_source", "http://purl.obolibrary.org/obo/uberon.owl")' \
+		--rule 'object==CL:*     -> assign("object_source", "http://purl.obolibrary.org/obo/cl.owl")' \
+		--rule 'object==BSPO:*   -> assign("object_source", "http://purl.obolibrary.org/obo/bspo.owl")' \
+		--rule 'object==CARO:*   -> assign("object_source", "http://purl.obolibrary.org/obo/caro.owl")' \
+		--rule 'object==GO:*     -> assign("object_source", "http://purl.obolibrary.org/obo/go.owl")' \
+		--output $@
+
+$(COMPONENTSDIR)/mappings_xrefs.owl: $(MAPPINGDIR)/fbbt.sssom.tsv $(SCRIPTSDIR)/sssom2xrefs.rules | all_robot_plugins
 	$(ROBOT) sssom:inject --create --sssom $(MAPPINGDIR)/fbbt.sssom.tsv \
 		              --ruleset $(SCRIPTSDIR)/sssom2xrefs.rules \
-		 annotate --ontology-iri http://purl.obolibrary.org/obo/fbbt/components/exact_mappings.owl \
+		 annotate --ontology-iri http://purl.obolibrary.org/obo/fbbt/components/mappings_xrefs.owl \
 			  --output $@
 
 # Ensure the mapping set is published along with the other artefacts
