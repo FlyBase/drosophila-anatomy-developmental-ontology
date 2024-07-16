@@ -1,4 +1,13 @@
 prefix FBbt: <http://purl.obolibrary.org/obo/FBbt_>
 prefix oio: <http://www.geneontology.org/formats/oboInOwl#>
+prefix DoOR: <http://neuro.uni-konstanz.de/DoOR/content/receptor.php?OR=>
+prefix larvalbrain_neuropil: <http://www.larvalbrain.org/#/browse/neuropil/>
+prefix larvalbrain_axon_tract: <http://www.larvalbrain.org/#/browse/axontract/>
+prefix FlyBrain_NDB: <https://flybrain-ndb.virtualflybrain.org/neuronrec->
 
-subject==FBbt:* predicate==semapv:crossSpeciesExactMatch -> annotate_subject(oio:hasDbXref, "%object_curie");
+subject==FBbt:*
+  (    predicate==semapv:crossSpeciesExactMatch
+    || predicate==skos:exactMatch
+    || predicate==skos:narrowMatch
+    || predicate==skos:relatedMatch)
+  -> annotate_subject(oio:hasDbXref, "%object_curie");
