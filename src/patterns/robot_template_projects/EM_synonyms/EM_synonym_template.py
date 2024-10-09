@@ -34,7 +34,7 @@ class Mapping:
 
         elif self.source == 'flywire':
             self.synonym_type = 'name_in_flywire_fafb'
-            self.reference = 'doi:10.1101/2023.06.27.546055' #Schlegel2023
+            self.reference = 'FlyBase:FBrf0260535' #Schlegel2024
             self.synonym_column = 'cell_type'
 
         elif self.source == 'hemibrain':
