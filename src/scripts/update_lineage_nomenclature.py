@@ -77,17 +77,17 @@ class neuronLineageInfo:
         else:
             self.notch = None
         
-        if table_row['other_types']:
-            other_types = table_row['other_types'].split('|')
+        if table_row['other_type']:
+            other_type = table_row['other_type']
 
-            if any(x in other_types for x in secondary_neuron):
+            if other_type in secondary_neuron:
                 self.other_prim_sec.extend(['secondary', 'larval-born','postembryonic'])
-            elif any(x in other_types for x in primary_neuron):
+            elif other_type in primary_neuron:
                 self.other_prim_sec.extend(['primary', 'embryonic-born', 'embryonic'])
             
-            if any(x in other_types for x in notch_on_neuron):
+            if other_type in notch_on_neuron:
                 self.other_notch = list(set([self.notch, 'Notch ON']))
-            elif any(x in other_types for x in notch_off_neuron):
+            elif other_type in notch_off_neuron:
                 self.other_notch = list(set([self.notch, 'Notch OFF']))
             else:
                 self.other_notch = [self.notch]
