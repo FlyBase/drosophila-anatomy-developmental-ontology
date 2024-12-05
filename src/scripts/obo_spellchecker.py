@@ -188,13 +188,13 @@ class PatternChecker(OntologyTermChecker):
 class RepeatedWordsChecker(PatternChecker):
 
     def __init__(self):
-        PatternChecker.__init__(self, 'repeated words', '\\b(\w+)\s+\\1\\b')
+        PatternChecker.__init__(self, 'repeated words', r'\b(\w+)\s+\1\b')
 
 
 class RepeatedSpacesChecker(PatternChecker):
 
     def __init__(self):
-        PatternChecker.__init__(self, 'repeated spaces', '(\s)\\1+')
+        PatternChecker.__init__(self, 'repeated spaces', r'(\s)\1+')
 
     def get_errors(self, value):
         m = self._pattern.findall(value)
@@ -208,7 +208,7 @@ class RepeatedPunctuationChecker(PatternChecker):
 
     def __init__(self):
         PatternChecker.__init__(self, 'repeated punctuation',
-                                '(?:[^.]\.\.(?:[^.]|\Z))|(?:,,)|(?:\?\?)|(?:!!)|(?:;;)')
+                                r'(?:[^.]\.\.(?:[^.]|\Z))|(?:,,)|(?:\?\?)|(?:!!)|(?:;;)')
 
 
 class TermSpellChecker(OntologyTermChecker):

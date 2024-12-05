@@ -224,6 +224,9 @@ $(COMPONENTSDIR)/mappings_xrefs.owl: $(MAPPINGDIR)/fbbt.sssom.tsv $(SCRIPTSDIR)/
 # Ensure the mapping set is published along with the other artefacts
 RELEASE_ASSETS_AFTER_RELEASE += ../../fbbt.sssom.tsv
 
+# Also publish the synonyms with EM source
+RELEASE_ASSETS_AFTER_RELEASE += ../../EM_synonyms.owl
+
 #####################################################################################
 ### Generate the flybase anatomy version of FBBT
 #####################################################################################
