@@ -10,7 +10,7 @@ before_install:
   - docker pull obolibrary/odkfull
 
 # command to run tests
-script: cd src/ontology && travis_wait sh travis.sh
+script: travis_wait cd src/ontology && sh travis.sh
 
 #after_success:
 #  coveralls
