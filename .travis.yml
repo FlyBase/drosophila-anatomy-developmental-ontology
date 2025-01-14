@@ -12,7 +12,7 @@ before_install:
 # command to run tests
 script:
   - cd src/ontology
-  - travis_wait 40 sleep infinity & sh travis.sh
+  - travis_wait 60 sleep infinity & sh travis.sh
 
 #after_success:
 #  coveralls
