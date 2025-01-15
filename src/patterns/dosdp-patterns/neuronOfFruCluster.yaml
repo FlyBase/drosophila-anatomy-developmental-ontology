@@ -1,6 +1,6 @@
 pattern_name: neuronOfFruCluster
 pattern_iri: http://purl.obolibrary.org/obo/fbbt/src/patterns/dosdp-patterns/neuronOfFruCluster.yaml
-description: "Pattern for generating terms for fru-expressing neurons belonging to a cluster that is likely lineage-based in the CNS. Should usually be used for terms that are directly below 'fruitless-expressing neuron' and not subclasses."
+description: "Pattern for generating terms for fru-expressing neurons belonging to a cluster that is likely lineage-based in the CNS. Should usually be used for terms that are directly below 'fruitless-expressing neuron' and not subclasses. Clone (cluster) terms are now obsolete, so no longer adding clone partonomy."
 
 contributors:
   - https://orcid.org/0000-0002-1373-1705
@@ -8,7 +8,6 @@ contributors:
 classes:
   neuron: FBbt:00005106
   neuroblast: FBbt:00005146
-  clone: FBbt:00007683
   gene: SO:0000704
   anatomical_entity: FBbt:10000000
 
@@ -20,7 +19,6 @@ relations:
 
 vars:
   neuroblast: neuroblast
-  cluster: clone
   neuron: neuron
   fruitless: gene
 
@@ -36,10 +34,6 @@ logical_axioms:
      text: "%s"
      vars:
        - neuron
-   - axiom_type: subClassOf
-     text: "'part_of' some %s"
-     vars:
-       - cluster
    - axiom_type: subClassOf
      text: "'develops_from' some %s"
      vars:
