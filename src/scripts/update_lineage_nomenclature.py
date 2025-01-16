@@ -7,7 +7,7 @@ lineage_pattern_files = {'seg_nbs': pat_dir + 'neuroblastBySegment.tsv',
                          'clones': pat_dir + 'cloneWithNeuroblastAndStage.tsv'}
 nb_pattern_file = pat_dir + 'neuroblastAnnotations.tsv'
 
-nomenclature_cols = ['ito_lee', 'hartenstein', 'primary', 'secondary', 'reference', 'hartenstein_synonym_type', 'ito_lee_synonym_type', 'primary_synonym_type', 'secondary_synonym_type']
+nomenclature_cols = ['ito_lee', 'hartenstein', 'primary', 'secondary', 'technau', 'reference', 'technau_reference', 'hartenstein_synonym_type', 'ito_lee_synonym_type', 'primary_synonym_type', 'secondary_synonym_type', 'technau_synonym_type']
 
 nb_pattern = pd.read_csv(nb_pattern_file, sep='\t', dtype='str', na_filter=False)
 nb_to_merge = nb_pattern[['defined_class'] + nomenclature_cols].rename(columns={'defined_class':'neuroblast'})
@@ -20,8 +20,8 @@ def choose_label(row, col_order):
             break
     return row
 
-col_order_non_sec = ['primary', 'hartenstein', 'secondary', 'ito_lee']
-col_order_sec = ['secondary', 'ito_lee', 'primary', 'hartenstein']
+col_order_non_sec = ['primary', 'hartenstein', 'secondary', 'ito_lee', 'technau']
+col_order_sec = ['secondary', 'ito_lee', 'primary', 'hartenstein', 'technau']
 
 secondary_neuron = ['FBbt:00047096','FBbt:00049541','FBbt:00049542']
 primary_neuron = ['FBbt:00047097', 'FBbt:00047105', 'FBbt:00047106']
