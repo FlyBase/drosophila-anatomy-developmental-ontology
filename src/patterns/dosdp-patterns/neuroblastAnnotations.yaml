@@ -22,14 +22,17 @@ vars:
   hartenstein: thing
   primary: thing
   secondary: thing
+  technau: thing
   nb_label: thing
   ito_lee_synonym_type: thing
   hartenstein_synonym_type: thing
   primary_synonym_type: thing
   secondary_synonym_type: thing
+  technau_synonym_type: thing
 
 data_list_vars:
   reference: thing
+  technau_reference: thing
 
 name:
   text: "neuroblast %s"
@@ -80,3 +83,10 @@ generated_synonyms:
     annotations:
        - annotationProperty: database_cross_reference
          text: "FlyBase:FBrf0231327"
+  - text: "neuroblast %s"
+    vars:
+      - technau
+    xrefs: technau_reference
+    annotations:
+      - annotationProperty: synonym_type
+        var: technau_synonym_type
