@@ -25,15 +25,18 @@ vars:
   hartenstein: thing
   primary: thing
   secondary: thing
+  technau: thing
   nb_label: thing
   ito_lee_synonym_type: thing
   hartenstein_synonym_type: thing
   primary_synonym_type: thing
   secondary_synonym_type: thing
   segment_label: thing
+  technau_synonym_type: thing
 
 data_list_vars:
   reference: thing
+  technau_reference: thing
 
 logical_axioms:
    - axiom_type: equivalentTo
@@ -91,6 +94,14 @@ generated_synonyms:
     annotations:
       - annotationProperty: synonym_type
         var: secondary_synonym_type
+  - text: "%s neuroblast %s"
+    vars:
+      - segment_short
+      - technau
+    xrefs: technau_reference
+    annotations:
+      - annotationProperty: synonym_type
+        var: technau_synonym_type
 
   - text: "neuroblast %s of %s"
     vars:
@@ -108,6 +119,10 @@ generated_synonyms:
     vars:
       - secondary
       - segment
+  - text: "neuroblast %s of %s"
+    vars:
+      - technau
+      - segment
 
   - text: "%s neuroblast %s"
     vars:
@@ -125,3 +140,7 @@ generated_synonyms:
     vars:
       - segment_abr
       - secondary
+  - text: "%s neuroblast %s"
+    vars:
+      - segment_abr
+      - technau

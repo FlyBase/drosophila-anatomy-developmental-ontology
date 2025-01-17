@@ -32,11 +32,13 @@ vars:
   hartenstein: thing
   primary: thing
   secondary: thing
+  technau: thing
   nb_label: thing
   ito_lee_synonym_type: thing
   hartenstein_synonym_type: thing
   primary_synonym_type: thing
   secondary_synonym_type: thing
+  technau_synonym_type: thing
   other_type: neuron
 
 list_vars:
@@ -47,6 +49,7 @@ list_vars:
 
 data_list_vars:
   reference: thing
+  technau_reference: thing
 
 logical_axioms:
    - axiom_type: equivalentTo
@@ -112,6 +115,13 @@ generated_synonyms:
     annotations:
       - annotationProperty: synonym_type
         var: secondary_synonym_type
+  - text: "%s"
+    vars:
+      - technau
+    xrefs: technau_reference
+    annotations:
+      - annotationProperty: synonym_type
+        var: technau_synonym_type
 
 exact_synonym:
   value: other_synonyms
