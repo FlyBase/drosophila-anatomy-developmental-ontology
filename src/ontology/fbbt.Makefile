@@ -6,7 +6,7 @@
 # Using .SECONDEXPANSION to include custom FlyBase files in $(ASSETS). Also rsyncing $(IMPORTS) and $(REPORT_FILES).
 .SECONDEXPANSION:
 .PHONY: prepare_release
-prepare_release: $$(ASSETS) $(MAPPINGDIR)/fbbt.sssom.tsv release_reports
+prepare_release: $$(ASSETS) $(MAPPINGDIR)/fbbt.sssom.tsv flybase_reports
 	rsync -R $(RELEASE_ASSETS) $(REPORT_FILES) $(FLYBASE_REPORTS) $(IMPORT_FILES) $(RELEASEDIR) &&\
 	mkdir -p $(RELEASEDIR)/patterns && cp -rf $(PATTERN_RELEASE_FILES) $(RELEASEDIR)/patterns &&\
 	cp $(MAPPINGDIR)/fbbt.sssom.tsv $(RELEASEDIR)/fbbt.sssom.tsv &&\
@@ -20,16 +20,14 @@ CLEANFILES := $(CLEANFILES) $(patsubst %, $(IMPORTDIR)/%_terms_combined.txt, $(I
 ### Code for generating additional FlyBase reports ###
 ######################################################
 
-FLYBASE_REPORTS = $(REPORTDIR)/obo_qc_fbbt.obo.txt $(REPORTDIR)/obo_qc_fbbt.owl.txt $(REPORTDIR)/obo_track_new_simple.txt $(REPORTDIR)/robot_simple_diff.txt $(REPORTDIR)/onto_metrics_calc.txt $(REPORTDIR)/chado_load_check_simple.txt $(REPORTDIR)/spellcheck.txt
+FLYBASE_REPORTS = odkversion reason_test sparql_test $(REPORTDIR)/obo_qc_fbbt.obo.txt $(REPORTDIR)/obo_track_new_simple.txt $(REPORTDIR)/robot_simple_diff.txt $(REPORTDIR)/onto_metrics_calc.txt $(REPORTDIR)/chado_load_check_simple.txt $(REPORTDIR)/spellcheck.txt $(REPORTDIR)/validate_profile_owl2dl_$(ONT).owl.txt
 
 .PHONY: flybase_reports
 flybase_reports: $(FLYBASE_REPORTS)
 
+# add fb to all_reports
 .PHONY: all_reports
-all_reports: custom_reports robot_reports flybase_reports
-
-.PHONY: release_reports
-release_reports: robot_reports flybase_reports
+all_reports: flybase_reports
 
 SIMPLE_PURL =	http://purl.obolibrary.org/obo/fbbt/fbbt-simple.obo
 LAST_DEPLOYED_SIMPLE=$(TMPDIR)/$(ONT)-simple-last.obo
@@ -69,9 +67,10 @@ $(REPORTDIR)/onto_metrics_calc.txt: $(ONT)-simple.obo install_flybase_scripts
 $(REPORTDIR)/chado_load_check_simple.txt: install_flybase_scripts fly_anatomy.obo
 	$(SCRIPTSDIR)/chado_load_checks.pl fly_anatomy.obo > $@
 
-$(REPORTDIR)/obo_qc_%.obo.txt:
+$(REPORTDIR)/obo_qc_%.obo.txt: $*.obo
 	$(ROBOT) report -i $*.obo --profile qc-profile.txt --fail-on ERROR --print 5 -o $@
 
+# no longer making this
 $(REPORTDIR)/obo_qc_%.owl.txt:
 	$(ROBOT) merge -i $*.owl -i $(COMPONENTSDIR)/qc_assertions.owl unmerge -i $(COMPONENTSDIR)/qc_assertions_unmerge.owl -o $(REPORTDIR)/obo_qc_$*.owl &&\
 	$(ROBOT) report -i $(REPORTDIR)/obo_qc_$*.owl --profile qc-profile.txt --fail-on None --print 5 -o $@ &&\
