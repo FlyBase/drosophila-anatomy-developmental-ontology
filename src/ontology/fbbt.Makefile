@@ -3,12 +3,10 @@
 ## If you need to customize your Makefile, make
 ## changes here rather than in the main Makefile
 
-DATE   ?= $(shell date +%Y-%m-%d)
-
 # Using .SECONDEXPANSION to include custom FlyBase files in $(ASSETS). Also rsyncing $(IMPORTS) and $(REPORT_FILES).
 .SECONDEXPANSION:
 .PHONY: prepare_release
-prepare_release: $$(ASSETS) $(MAPPINGDIR)/fbbt.sssom.tsv release_reports
+prepare_release: $$(ASSETS) $(MAPPINGDIR)/fbbt.sssom.tsv flybase_reports
 	rsync -R $(RELEASE_ASSETS) $(REPORT_FILES) $(FLYBASE_REPORTS) $(IMPORT_FILES) $(RELEASEDIR) &&\
 	mkdir -p $(RELEASEDIR)/patterns && cp -rf $(PATTERN_RELEASE_FILES) $(RELEASEDIR)/patterns &&\
 	cp $(MAPPINGDIR)/fbbt.sssom.tsv $(RELEASEDIR)/fbbt.sssom.tsv &&\
@@ -18,20 +16,21 @@ prepare_release: $$(ASSETS) $(MAPPINGDIR)/fbbt.sssom.tsv release_reports
 MAIN_FILES := $(MAIN_FILES) fly_anatomy.obo fbbt-cedar.obo
 CLEANFILES := $(CLEANFILES) $(patsubst %, $(IMPORTDIR)/%_terms_combined.txt, $(IMPORTS))
 
+.PHONY: travis_checks
+travis_checks: odkversion reason_test sparql_test flybase_reports $(REPORTDIR)/validate_profile_owl2dl_$(ONT).owl.txt
+
 ######################################################
 ### Code for generating additional FlyBase reports ###
 ######################################################
 
-FLYBASE_REPORTS = $(REPORTDIR)/obo_qc_fbbt.obo.txt $(REPORTDIR)/obo_qc_fbbt.owl.txt $(REPORTDIR)/obo_track_new_simple.txt $(REPORTDIR)/robot_simple_diff.txt $(REPORTDIR)/onto_metrics_calc.txt $(REPORTDIR)/chado_load_check_simple.txt $(REPORTDIR)/spellcheck.txt
+FLYBASE_REPORTS = $(REPORTDIR)/obo_qc_fbbt.obo.txt $(REPORTDIR)/obo_track_new_simple.txt $(REPORTDIR)/robot_simple_diff.txt $(REPORTDIR)/onto_metrics_calc.txt $(REPORTDIR)/chado_load_check_simple.txt $(REPORTDIR)/spellcheck.txt
 
 .PHONY: flybase_reports
 flybase_reports: $(FLYBASE_REPORTS)
 
+# add fb to all_reports
 .PHONY: all_reports
-all_reports: custom_reports robot_reports flybase_reports
-
-.PHONY: release_reports
-release_reports: robot_reports flybase_reports
+all_reports: flybase_reports
 
 SIMPLE_PURL =	http://purl.obolibrary.org/obo/fbbt/fbbt-simple.obo
 LAST_DEPLOYED_SIMPLE=$(TMPDIR)/$(ONT)-simple-last.obo
@@ -71,9 +70,10 @@ $(REPORTDIR)/onto_metrics_calc.txt: $(ONT)-simple.obo install_flybase_scripts
 $(REPORTDIR)/chado_load_check_simple.txt: install_flybase_scripts fly_anatomy.obo
 	$(SCRIPTSDIR)/chado_load_checks.pl fly_anatomy.obo > $@
 
-$(REPORTDIR)/obo_qc_%.obo.txt:
+$(REPORTDIR)/obo_qc_%.obo.txt: $*.obo
 	$(ROBOT) report -i $*.obo --profile qc-profile.txt --fail-on ERROR --print 5 -o $@
 
+# no longer making this
 $(REPORTDIR)/obo_qc_%.owl.txt:
 	$(ROBOT) merge -i $*.owl -i $(COMPONENTSDIR)/qc_assertions.owl unmerge -i $(COMPONENTSDIR)/qc_assertions_unmerge.owl -o $(REPORTDIR)/obo_qc_$*.owl &&\
 	$(ROBOT) report -i $(REPORTDIR)/obo_qc_$*.owl --profile qc-profile.txt --fail-on None --print 5 -o $@ &&\
@@ -244,7 +244,7 @@ fly_anatomy.obo: $(TMPDIR)/fbbt-obj.obo flybase_removals.txt flybase_additions.o
 		remove --term-file flybase_removals.txt --trim false \
 		query --update ../sparql/force-obo.ru \
 		convert -f obo --check false -o $@.tmp.obo
-	cat $@.tmp.obo | sed '/./{H;$!d;} ; x ; s/\(\[Typedef\]\nid:[ ]\)\([[:alpha:]_]*\n\)\(name:[ ]\)\([[:alpha:][:punct:] ]*\n\)/\1\2\3\2/' | grep -v property_value: | grep -v ^owl-axioms | sed 's/^default-namespace: fly_anatomy.ontology/default-namespace: FlyBase anatomy CV/' | grep -v ^expand_expression_to | grep -v gci_filler | grep -v '^namespace: uberon' | grep -v '^namespace: protein' | grep -v '^namespace: chebi_ontology' | grep -v '^is_cyclic: false' | grep -v 'FlyBase_miscellaneous_CV' | sed '/^date[:]/c\date: $(OBODATE)' | sed '/^data-version[:]/c\data-version: $(DATE)' > $@  && rm $@.tmp.obo
+	cat $@.tmp.obo | sed '/./{H;$!d;} ; x ; s/\(\[Typedef\]\nid:[ ]\)\([[:alpha:]_]*\n\)\(name:[ ]\)\([[:alpha:][:punct:] ]*\n\)/\1\2\3\2/' | grep -v property_value: | grep -v ^owl-axioms | sed 's/^default-namespace: fly_anatomy.ontology/default-namespace: FlyBase anatomy CV/' | grep -v ^expand_expression_to | grep -v gci_filler | grep -v '^namespace: uberon' | grep -v '^namespace: protein' | grep -v '^namespace: chebi_ontology' | grep -v '^is_cyclic: false' | grep -v 'FlyBase_miscellaneous_CV' | sed '/^date[:]/c\date: $(OBODATE)' | sed '/^data-version[:]/c\data-version: $(TODAY)' > $@  && rm $@.tmp.obo
 	$(ROBOT) convert --input $@ -f obo --output $@
 	sed -i 's/^xref[:][ ]OBO_REL[:]\(.*\)/xref_analog: OBO_REL:\1/' $@
 
