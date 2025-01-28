@@ -16,11 +16,14 @@ prepare_release: $$(ASSETS) $(MAPPINGDIR)/fbbt.sssom.tsv flybase_reports
 MAIN_FILES := $(MAIN_FILES) fly_anatomy.obo fbbt-cedar.obo
 CLEANFILES := $(CLEANFILES) $(patsubst %, $(IMPORTDIR)/%_terms_combined.txt, $(IMPORTS))
 
+.PHONY: travis_checks
+travis_checks: odkversion reason_test sparql_test flybase_reports $(REPORTDIR)/validate_profile_owl2dl_$(ONT).owl.txt
+
 ######################################################
 ### Code for generating additional FlyBase reports ###
 ######################################################
 
-FLYBASE_REPORTS = odkversion reason_test sparql_test $(REPORTDIR)/obo_qc_fbbt.obo.txt $(REPORTDIR)/obo_track_new_simple.txt $(REPORTDIR)/robot_simple_diff.txt $(REPORTDIR)/onto_metrics_calc.txt $(REPORTDIR)/chado_load_check_simple.txt $(REPORTDIR)/spellcheck.txt $(REPORTDIR)/validate_profile_owl2dl_$(ONT).owl.txt
+FLYBASE_REPORTS = $(REPORTDIR)/obo_qc_fbbt.obo.txt $(REPORTDIR)/obo_track_new_simple.txt $(REPORTDIR)/robot_simple_diff.txt $(REPORTDIR)/onto_metrics_calc.txt $(REPORTDIR)/chado_load_check_simple.txt $(REPORTDIR)/spellcheck.txt
 
 .PHONY: flybase_reports
 flybase_reports: $(FLYBASE_REPORTS)
