@@ -70,7 +70,7 @@ $(REPORTDIR)/onto_metrics_calc.txt: $(ONT)-simple.obo install_flybase_scripts
 $(REPORTDIR)/chado_load_check_simple.txt: install_flybase_scripts fly_anatomy.obo
 	$(SCRIPTSDIR)/chado_load_checks.pl fly_anatomy.obo > $@
 
-$(REPORTDIR)/obo_qc_%.obo.txt: $*.obo
+$(REPORTDIR)/obo_qc_%.obo.txt: %.obo
 	$(ROBOT) report -i $*.obo --profile qc-profile.txt --fail-on ERROR --print 5 -o $@
 
 # no longer making this
