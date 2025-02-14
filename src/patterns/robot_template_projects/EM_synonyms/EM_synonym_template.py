@@ -6,7 +6,7 @@ import re
 source_filepaths = ['../../../../../neuprint_optic_lobe_curation/OL_FBbt_mapping.tsv',
                     '../../../../../manc_curation/resources/manc_cell_type_fbbt_mapping.tsv',
                     '../../../../../FlyWire_curation/src/resources/flywire_fbbt_mapping_Clare.tsv',
-                    '../../../../../hemibrain_metadata/hemibrain_1-1_type_mapping.tsv']
+                    '../../../../../hemibrain_metadata/hemibrain_1-2_type_mapping.tsv']
 local_filepaths = [f.split('/')[-1] for f in source_filepaths]
 
 synonym_types = ['name_in_neuprint_optic_lobe', 'name_in_manc', 'name_in_flywire_fafb', 'name_in_hemibrain']
