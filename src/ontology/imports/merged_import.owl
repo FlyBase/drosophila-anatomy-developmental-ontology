@@ -7,8 +7,8 @@ Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
 
 
 Ontology(<http://purl.obolibrary.org/obo/fbbt/imports/merged_import.owl>
-<http://purl.obolibrary.org/obo/fbbt/releases/2025-02-13/imports/merged_import.owl>
-Annotation(owl:versionInfo "2025-02-13")
+<http://purl.obolibrary.org/obo/fbbt/releases/2025-03-13/imports/merged_import.owl>
+Annotation(owl:versionInfo "2025-03-13")
 
 Declaration(Class(<http://purl.obolibrary.org/obo/BFO_0000001>))
 Declaration(Class(<http://purl.obolibrary.org/obo/BFO_0000002>))
@@ -79,7 +79,6 @@ Declaration(Class(<http://purl.obolibrary.org/obo/CL_0000710>))
 Declaration(Class(<http://purl.obolibrary.org/obo/CL_0000850>))
 Declaration(Class(<http://purl.obolibrary.org/obo/CL_0002076>))
 Declaration(Class(<http://purl.obolibrary.org/obo/CL_0002077>))
-Declaration(Class(<http://purl.obolibrary.org/obo/CL_0002167>))
 Declaration(Class(<http://purl.obolibrary.org/obo/CL_0002274>))
 Declaration(Class(<http://purl.obolibrary.org/obo/CL_0002319>))
 Declaration(Class(<http://purl.obolibrary.org/obo/CL_0002321>))
@@ -860,6 +859,7 @@ Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0013006>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0013007>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0013008>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0013009>))
+Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0013010>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0015011>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/so#member_of>))
 Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/IAO_0000028>))
@@ -1509,6 +1509,7 @@ ObjectPropertyRange(<http://purl.obolibrary.org/obo/RO_0002150> <http://purl.obo
 # Object Property: <http://purl.obolibrary.org/obo/RO_0002162> (in taxon)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/RO_0002162> "x is in taxon y if an only if y is an organism, and the relationship between x and y is one of: part of (reflexive), developmentally preceded by, derives from, secreted by, expressed.")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym> <http://purl.obolibrary.org/obo/RO_0002162> "life cycle stage of"@en)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#inSubset> <http://purl.obolibrary.org/obo/RO_0002162> <http://purl.obolibrary.org/obo/ro/subsets#ro-eco>)
 AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/RO_0002162> "Connects a biological entity to its taxon of origin.")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/RO_0002162> "in taxon")
@@ -1847,6 +1848,7 @@ SubObjectPropertyOf(<http://purl.obolibrary.org/obo/RO_0002385> <http://purl.obo
 # Object Property: <http://purl.obolibrary.org/obo/RO_0002387> (has potential to develop into)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/RO_0002387> "x has the potential to develop into y iff x develops into y or if x is capable of developing into y"@en)
+AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/RO_0002387> "This relation has a stronger meaning than merely indicating that X may develop into Y, in that the capability of developing into Y is always present, even if X does not always actually develop into Y. In particular, this means that if Y is restricted to a given taxon T, X is necessarily likewise restricted.")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/RO_0002387> "has potential to develop into"@en)
 SubObjectPropertyOf(<http://purl.obolibrary.org/obo/RO_0002387> <http://purl.obolibrary.org/obo/RO_0002384>)
 
@@ -2062,6 +2064,16 @@ AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.ob
 AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/RO_0013009> "Not restricting range to 'cell' - object may be a muscle containing a cell targeted by the neuron.")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/RO_0013009> "sends synaptic output to cell"@en)
 SubObjectPropertyOf(<http://purl.obolibrary.org/obo/RO_0013009> <http://purl.obolibrary.org/obo/RO_0002120>)
+
+# Object Property: <http://purl.obolibrary.org/obo/RO_0013010> (synapses restricted to region)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/RO_0013010> "A relationship between a neuron and a region, where all of the functionally relevant input and output synapses are in that region.")
+AnnotationAssertion(<http://purl.org/dc/terms/contributor> <http://purl.obolibrary.org/obo/RO_0013010> <https://orcid.org/0000-0002-1373-1705>)
+AnnotationAssertion(<http://purl.org/dc/terms/date> <http://purl.obolibrary.org/obo/RO_0013010> "2023-08-17T12:17:24Z"^^xsd:dateTime)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/RO_0013010> "intrinsic to")
+AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/RO_0013010> "This relation may still be used if a very small number of synapses fall slightly outside the boundaries of the region, but any class using this relation should not have another restriction using this relation to another non-overlapping region.")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/RO_0013010> "synapses restricted to region"@en)
+SubObjectPropertyOf(<http://purl.obolibrary.org/obo/RO_0013010> <http://purl.obolibrary.org/obo/RO_0013001>)
 
 # Object Property: <http://purl.obolibrary.org/obo/RO_0015011> (has cross section)
 
@@ -2750,19 +2762,6 @@ SubClassOf(<http://purl.obolibrary.org/obo/CL_0002077> <http://purl.obolibrary.o
 SubClassOf(<http://purl.obolibrary.org/obo/CL_0002077> <http://purl.obolibrary.org/obo/CL_0000066>)
 SubClassOf(<http://purl.obolibrary.org/obo/CL_0002077> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002202> <http://purl.obolibrary.org/obo/CL_0000221>))
 
-# Class: <http://purl.obolibrary.org/obo/CL_0002167> (olfactory epithelial cell)
-
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "GOC:tfm") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "PMID:7143026") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/CL_0002167> "A specialized cell involved in sensory perception of smell.")
-AnnotationAssertion(<http://purl.org/dc/terms/contributor> <http://purl.obolibrary.org/obo/CL_0002167> <https://orcid.org/0000-0003-1980-3228>)
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/CL_0002167> "FMA:67870")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#inSubset> <http://purl.obolibrary.org/obo/CL_0002167> <http://purl.obolibrary.org/obo/cl#cellxgene_subset>)
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CL_0002167> "olfactory epithelial cell")
-EquivalentClasses(<http://purl.obolibrary.org/obo/CL_0002167> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/CL_0000066> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002215> <http://purl.obolibrary.org/obo/GO_0050911>)))
-SubClassOf(<http://purl.obolibrary.org/obo/CL_0002167> <http://purl.obolibrary.org/obo/CL_0000098>)
-SubClassOf(<http://purl.obolibrary.org/obo/CL_0002167> <http://purl.obolibrary.org/obo/CL_0000206>)
-SubClassOf(<http://purl.obolibrary.org/obo/CL_0002167> <http://purl.obolibrary.org/obo/CL_0000710>)
-SubClassOf(<http://purl.obolibrary.org/obo/CL_0002167> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002215> <http://purl.obolibrary.org/obo/GO_0050911>))
-
 # Class: <http://purl.obolibrary.org/obo/CL_0002274> (histamine secreting cell)
 
 AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "GOC:tfm") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/CL_0002274> "A cell type that secretes histamine.")
@@ -2786,11 +2785,11 @@ SubClassOf(<http://purl.obolibrary.org/obo/CL_0002319> <http://purl.obolibrary.o
 
 AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FMA:0618947256") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/CL_0002321> "A cell of the embryo.")
 AnnotationAssertion(<http://purl.org/dc/terms/contributor> <http://purl.obolibrary.org/obo/CL_0002321> <https://orcid.org/0000-0003-1980-3228>)
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "DOI:10.1002/iub.1404") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "DOI:10.1093/molehr/gan048") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "https://www.ncbi.nlm.nih.gov/books/NBK9906/") <http://purl.org/dc/terms/description> <http://purl.obolibrary.org/obo/CL_0002321> "This extended description was generated by ChatGPT and reviewed by the CellGuide team, who added references, and by the CL editors, who approved it for inclusion in CL. It may contain information that applies only to some subtypes and species, and so should not be considered definitional.
-
-Embryonic cells in metazoans, which include all multicellular animals, are biological units in their earliest developmental stages from conception until the organism is fully formed. 
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "DOI:10.1002/iub.1404") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "DOI:10.1093/molehr/gan048") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "https://www.ncbi.nlm.nih.gov/books/NBK9906/") <http://purl.org/dc/terms/description> <http://purl.obolibrary.org/obo/CL_0002321> "Embryonic cells in metazoans, which include all multicellular animals, are biological units in their earliest developmental stages from conception until the organism is fully formed. 
 They are derived from a fertilized egg, which undergoes a series of cell divisions to produce a multicellular organism. During the early phases of embryonic development, these cells exhibit pluripotency, meaning they possess the potential to differentiate into a diverse array of specialized cell types that constitute different body tissues and structures. 
-The balance between cell proliferation and differentiation in embryonic cells is crucial for successful development. When cells continue to divide without differentiating, overgrowth may occur leading to conditions such as teratomas (tumors of embryonic cells). Conversely, if cell differentiation proceeds at the expense of cell proliferation, developmental anomalies could occur regarding size or mass of the organism or its parts.")
+The balance between cell proliferation and differentiation in embryonic cells is crucial for successful development. When cells continue to divide without differentiating, overgrowth may occur leading to conditions such as teratomas (tumors of embryonic cells). Conversely, if cell differentiation proceeds at the expense of cell proliferation, developmental anomalies could occur regarding size or mass of the organism or its parts.
+
+(This extended description was generated by ChatGPT and reviewed by the CellGuide team, who added references, and by the CL editors, who approved it for inclusion in CL. It may contain information that applies only to some subtypes and species, and so should not be considered definitional.)")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/CL_0002321> "CALOHA:TS-0263")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/CL_0002321> "FMA:82840")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/CL_0002321> "WBbt:0007028")
@@ -11423,8 +11422,8 @@ SubObjectPropertyOf(ObjectPropertyChain(<http://purl.obolibrary.org/obo/BFO_0000
 SubObjectPropertyOf(Annotation(<http://purl.obolibrary.org/obo/RO_0002582> "true"^^xsd:boolean) ObjectPropertyChain(<http://purl.obolibrary.org/obo/BFO_0000051> <http://purl.obolibrary.org/obo/BFO_0000050>) <http://purl.obolibrary.org/obo/RO_0002131>)
 SubObjectPropertyOf(ObjectPropertyChain(<http://purl.obolibrary.org/obo/BFO_0000051> <http://purl.obolibrary.org/obo/RO_0002131>) <http://purl.obolibrary.org/obo/RO_0002131>)
 SubObjectPropertyOf(ObjectPropertyChain(<http://purl.obolibrary.org/obo/BFO_0000051> <http://purl.obolibrary.org/obo/RO_0002162>) <http://purl.obolibrary.org/obo/RO_0002162>)
-SubObjectPropertyOf(ObjectPropertyChain(<http://purl.obolibrary.org/obo/BFO_0000051> <http://purl.obolibrary.org/obo/RO_0002202>) <http://purl.obolibrary.org/obo/RO_0002254>)
 SubObjectPropertyOf(ObjectPropertyChain(<http://purl.obolibrary.org/obo/BFO_0000051> <http://purl.obolibrary.org/obo/RO_0002215>) <http://purl.obolibrary.org/obo/RO_0002584>)
+SubObjectPropertyOf(ObjectPropertyChain(<http://purl.obolibrary.org/obo/BFO_0000051> <http://purl.obolibrary.org/obo/RO_0002254>) <http://purl.obolibrary.org/obo/RO_0002254>)
 SubObjectPropertyOf(ObjectPropertyChain(<http://purl.obolibrary.org/obo/BFO_0000066> <http://purl.obolibrary.org/obo/BFO_0000050>) <http://purl.obolibrary.org/obo/BFO_0000066>)
 SubObjectPropertyOf(Annotation(<http://purl.obolibrary.org/obo/RO_0002582> "true"^^xsd:boolean) ObjectPropertyChain(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/BFO_0000050>) <http://purl.obolibrary.org/obo/RO_0002314>)
 SubObjectPropertyOf(ObjectPropertyChain(<http://purl.obolibrary.org/obo/RO_0001025> <http://purl.obolibrary.org/obo/BFO_0000050>) <http://purl.obolibrary.org/obo/RO_0001025>)
@@ -11435,25 +11434,27 @@ SubObjectPropertyOf(ObjectPropertyChain(<http://purl.obolibrary.org/obo/RO_00021
 SubObjectPropertyOf(ObjectPropertyChain(<http://purl.obolibrary.org/obo/RO_0002130> <http://purl.obolibrary.org/obo/BFO_0000050>) <http://purl.obolibrary.org/obo/RO_0002130>)
 SubObjectPropertyOf(ObjectPropertyChain(<http://purl.obolibrary.org/obo/RO_0002131> <http://purl.obolibrary.org/obo/BFO_0000050>) <http://purl.obolibrary.org/obo/RO_0002131>)
 SubObjectPropertyOf(ObjectPropertyChain(<http://purl.obolibrary.org/obo/RO_0002134> <http://purl.obolibrary.org/obo/BFO_0000050>) <http://purl.obolibrary.org/obo/RO_0002134>)
-SubObjectPropertyOf(ObjectPropertyChain(<http://purl.obolibrary.org/obo/RO_0002202> <http://purl.obolibrary.org/obo/RO_0002162>) <http://purl.obolibrary.org/obo/RO_0002162>)
 SubObjectPropertyOf(ObjectPropertyChain(<http://purl.obolibrary.org/obo/RO_0002203> <http://purl.obolibrary.org/obo/BFO_0000050>) <http://purl.obolibrary.org/obo/RO_0002255>)
 SubObjectPropertyOf(ObjectPropertyChain(<http://purl.obolibrary.org/obo/RO_0002206> <http://purl.obolibrary.org/obo/BFO_0000050>) <http://purl.obolibrary.org/obo/RO_0002206>)
 SubObjectPropertyOf(ObjectPropertyChain(<http://purl.obolibrary.org/obo/RO_0002206> <http://purl.obolibrary.org/obo/RO_0002162>) <http://purl.obolibrary.org/obo/RO_0002162>)
 SubObjectPropertyOf(ObjectPropertyChain(<http://purl.obolibrary.org/obo/RO_0002207> <http://purl.obolibrary.org/obo/BFO_0000050>) <http://purl.obolibrary.org/obo/RO_0002225>)
 SubObjectPropertyOf(ObjectPropertyChain(<http://purl.obolibrary.org/obo/RO_0002207> <http://purl.obolibrary.org/obo/RO_0001025>) <http://purl.obolibrary.org/obo/RO_0002226>)
+SubObjectPropertyOf(ObjectPropertyChain(<http://purl.obolibrary.org/obo/RO_0002211> <http://purl.obolibrary.org/obo/RO_0002162>) <http://purl.obolibrary.org/obo/RO_0002162>)
 SubObjectPropertyOf(ObjectPropertyChain(<http://purl.obolibrary.org/obo/RO_0002212> <http://purl.obolibrary.org/obo/RO_0002212>) <http://purl.obolibrary.org/obo/RO_0002213>)
 SubObjectPropertyOf(Annotation(<http://purl.obolibrary.org/obo/RO_0002582> "true"^^xsd:boolean) ObjectPropertyChain(<http://purl.obolibrary.org/obo/RO_0002215> <http://purl.obolibrary.org/obo/BFO_0000050>) <http://purl.obolibrary.org/obo/RO_0002216>)
 SubObjectPropertyOf(ObjectPropertyChain(<http://purl.obolibrary.org/obo/RO_0002215> <http://purl.obolibrary.org/obo/RO_0002162>) <http://purl.obolibrary.org/obo/RO_0002162>)
 SubObjectPropertyOf(ObjectPropertyChain(<http://purl.obolibrary.org/obo/RO_0002215> <http://purl.obolibrary.org/obo/RO_0002211>) <http://purl.obolibrary.org/obo/RO_0002596>)
 SubObjectPropertyOf(ObjectPropertyChain(<http://purl.obolibrary.org/obo/RO_0002215> <http://purl.obolibrary.org/obo/RO_0002212>) <http://purl.obolibrary.org/obo/RO_0002597>)
 SubObjectPropertyOf(ObjectPropertyChain(<http://purl.obolibrary.org/obo/RO_0002215> <http://purl.obolibrary.org/obo/RO_0002213>) <http://purl.obolibrary.org/obo/RO_0002598>)
-SubObjectPropertyOf(ObjectPropertyChain(<http://purl.obolibrary.org/obo/RO_0002225> <http://purl.obolibrary.org/obo/RO_0002162>) <http://purl.obolibrary.org/obo/RO_0002162>)
 SubObjectPropertyOf(ObjectPropertyChain(<http://purl.obolibrary.org/obo/RO_0002254> <http://purl.obolibrary.org/obo/RO_0002162>) <http://purl.obolibrary.org/obo/RO_0002162>)
 SubObjectPropertyOf(ObjectPropertyChain(<http://purl.obolibrary.org/obo/RO_0002314> <http://purl.obolibrary.org/obo/BFO_0000050>) <http://purl.obolibrary.org/obo/RO_0002314>)
 SubObjectPropertyOf(ObjectPropertyChain(<http://purl.obolibrary.org/obo/RO_0002339> <http://purl.obolibrary.org/obo/BFO_0000050>) <http://purl.obolibrary.org/obo/RO_0002339>)
 SubObjectPropertyOf(Annotation(<http://purl.obolibrary.org/obo/RO_0002582> "true"^^xsd:boolean) ObjectPropertyChain(<http://purl.obolibrary.org/obo/RO_0002371> <http://purl.obolibrary.org/obo/BFO_0000050>) <http://purl.obolibrary.org/obo/RO_0002177>)
+SubObjectPropertyOf(ObjectPropertyChain(<http://purl.obolibrary.org/obo/RO_0002387> <http://purl.obolibrary.org/obo/RO_0002162>) <http://purl.obolibrary.org/obo/RO_0002162>)
+SubObjectPropertyOf(ObjectPropertyChain(<http://purl.obolibrary.org/obo/RO_0002418> <http://purl.obolibrary.org/obo/BFO_0000050>) <http://purl.obolibrary.org/obo/RO_0002418>)
 SubObjectPropertyOf(ObjectPropertyChain(<http://purl.obolibrary.org/obo/RO_0013001> <http://purl.obolibrary.org/obo/BFO_0000050>) <http://purl.obolibrary.org/obo/RO_0013001>)
 SubObjectPropertyOf(ObjectPropertyChain(<http://purl.obolibrary.org/obo/RO_0013002> <http://purl.obolibrary.org/obo/BFO_0000050>) <http://purl.obolibrary.org/obo/RO_0013002>)
 SubObjectPropertyOf(ObjectPropertyChain(<http://purl.obolibrary.org/obo/RO_0013003> <http://purl.obolibrary.org/obo/BFO_0000050>) <http://purl.obolibrary.org/obo/RO_0013003>)
 SubObjectPropertyOf(ObjectPropertyChain(<http://purl.obolibrary.org/obo/RO_0013007> <http://purl.obolibrary.org/obo/BFO_0000050>) <http://purl.obolibrary.org/obo/RO_0013007>)
+SubObjectPropertyOf(ObjectPropertyChain(<http://purl.obolibrary.org/obo/RO_0013010> <http://purl.obolibrary.org/obo/BFO_0000050>) <http://purl.obolibrary.org/obo/RO_0013010>)
 )
