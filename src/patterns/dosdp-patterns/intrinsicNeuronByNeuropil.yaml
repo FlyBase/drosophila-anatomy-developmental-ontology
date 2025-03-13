@@ -1,0 +1,22 @@
+pattern_name: intrinsicNeuronByNeuropil
+pattern_iri: http://purl.obolibrary.org/obo/fbbt/src/patterns/dosdp-patterns/intrinsicNeuronByNeuropil.yaml
+description: "Pattern for intrinsic neurons that can be definined by their region of arborization (using `synapses restricted to region`)."
+
+contributors:
+  - https://orcid.org/0000-0002-1373-1705
+
+classes:
+  anatomical_entity: FBbt:10000000
+  neuron: FBbt:00005106
+
+relations: 
+  synapses_restricted_to_region: RO:0013010
+
+vars:
+  neuropil: anatomical_entity
+
+logical_axioms:
+   - axiom_type: equivalentTo
+     text: "'neuron' that 'synapses_restricted_to_region' some %s"
+     vars:
+       - neuropil
