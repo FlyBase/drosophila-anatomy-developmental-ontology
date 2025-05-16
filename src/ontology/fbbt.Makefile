@@ -51,11 +51,17 @@ fetch_authors=$(flybase_ontology_script_base)misc/fetch_flybase_authors.py
 export PERL5LIB := ${realpath ../scripts}
 install_flybase_scripts:
 	wget -O $(SCRIPTSDIR)/OboModel.pm $(obo_model)
+	sleep 3
 	wget -O $(SCRIPTSDIR)/onto_metrics_calc.pl $(onto_metrics_calc) && chmod +x $(SCRIPTSDIR)/onto_metrics_calc.pl
+	sleep 3
 	wget -O $(SCRIPTSDIR)/chado_load_checks.pl $(chado_load_checks) && chmod +x $(SCRIPTSDIR)/chado_load_checks.pl
+	sleep 3
 	wget -O $(SCRIPTSDIR)/obo_track_new.pl $(obo_track_new) && chmod +x $(SCRIPTSDIR)/obo_track_new.pl
+	sleep 3
 	wget -O $(SCRIPTSDIR)/auto_def_sub.pl $(auto_def_sub) && chmod +x $(SCRIPTSDIR)/auto_def_sub.pl
+	sleep 3
 	wget -O $(SCRIPTSDIR)/obo_spellchecker.py $(spellchecker) && chmod +x $(SCRIPTSDIR)/obo_spellchecker.py
+	sleep 3
 	wget -O $(SCRIPTSDIR)/fetch_authors.py $(fetch_authors) && chmod +x $(SCRIPTSDIR)/fetch_authors.py
 
 $(REPORTDIR)/obo_track_new_simple.txt: $(LAST_DEPLOYED_SIMPLE) install_flybase_scripts $(ONT)-simple.obo
