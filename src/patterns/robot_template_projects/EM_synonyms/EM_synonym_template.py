@@ -5,13 +5,13 @@ import re
 # update files from local copies (requires relevant mapping repos in same parent folder as fbbt repo)
 source_filepaths = ['../../../../../neuprint_optic_lobe_curation/OL_FBbt_mapping.tsv',
                     '../../../../../manc_curation/resources/manc_cell_type_fbbt_mapping.tsv',
-                    '../../../../../FlyWire_curation/src/resources/flywire_fbbt_mapping_Clare.tsv',
+                    '../../../../../FlyWire_curation/src/resources/flywire_fbbt_mapping.tsv',
                     '../../../../../hemibrain_metadata/hemibrain_1-2_type_mapping.tsv']
 local_filepaths = [f.split('/')[-1] for f in source_filepaths]
 
 synonym_types = ['name_in_neuprint_optic_lobe', 'name_in_manc', 'name_in_flywire_fafb', 'name_in_hemibrain']
 
-update_files = False
+update_files = True
 if update_files:
     for f in source_filepaths:
         shutil.copy2(f, f.split('/')[-1])
@@ -24,18 +24,18 @@ class Mapping:
         
         if self.source == 'OL':
             self.synonym_type = 'name_in_neuprint_optic_lobe'
-            self.reference = 'doi:10.1101/2024.04.16.589741' #Nern2024
+            self.reference = 'doi:10.1038/s41586-025-08746-0' #Nern2025
             self.synonym_column = 'OL_type'
 
         elif self.source == 'manc':
             self.synonym_type = 'name_in_manc'
-            self.reference = 'doi:10.1101/2023.06.05.543407' #Marin2024
+            self.reference = 'doi:10.7554/eLife.97766.1' #Marin2024
             self.synonym_column = 'type'
 
         elif self.source == 'flywire':
             self.synonym_type = 'name_in_flywire_fafb'
             self.reference = 'FlyBase:FBrf0260535' #Schlegel2024
-            self.synonym_column = 'cell_type'
+            self.synonym_column = 'primary_type'
 
         elif self.source == 'hemibrain':
             self.synonym_type = 'name_in_hemibrain'
