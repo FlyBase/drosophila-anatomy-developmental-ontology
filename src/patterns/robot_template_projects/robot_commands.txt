@@ -17,5 +17,5 @@ robot merge --collapse-import-closure false --input fbbt-edit.obo --input terms.
 
 #OPTIONAL - annotation (replacing template command above)
 robot template --input-iri http://purl.obolibrary.org/obo/fbbt.owl --template template.tsv \
-annotate --ontology-iri "http://purl.obolibrary.org/obo/fbbt/components/neuron_symbols.owl" \
---output neuron_symbols.owl
+annotate --ontology-iri "http://purl.obolibrary.org/obo/fbbt/components/manc_new_cells.owl" \
+--output manc_new_cells.owl
