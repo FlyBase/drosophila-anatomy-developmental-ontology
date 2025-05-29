@@ -490,6 +490,111 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/FBbt_00111768 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FBbt_00111768"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FBbt_20001652 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FBbt_20001652"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FBbt_20001934 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FBbt_20001934">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBbt_00048286"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000053"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PATO_0000618"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0013002"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FBbt_00040017"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0013002"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FBbt_00040050"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0013002"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FBbt_00045040"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0013002"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FBbt_00111743"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0013002"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FBbt_00111744"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0013003"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FBbt_00040050"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0013003"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FBbt_00045040"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115>Adult lobula visual projection neuron of the LoVP26 group (Nern et al., 2025). It receives input in the ipsilateral lobula layer 6, superior posterior slope, lobula layer 5A and lobula layer 5B, the contralateral superior posterior slope, and the inferior bridge (Nern et al., 2025). It sends output to the ipsilateral superior posterior slope, the contralateral superior posterior slope, and the inferior bridge (Nern et al., 2025). There are approximately 6 of these cells per hemisphere (Nern et al., 2025).</obo:IAO_0000115>
+        <terms:contributor rdf:resource="http://orcid.org/0000-0002-1373-1705"/>
+        <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-07-30T12:00:00Z</terms:date>
+        <oboInOwl:hasOBONamespace>fly_anatomy.ontology</oboInOwl:hasOBONamespace>
+        <oboInOwl:hasRelatedSynonym>LTe65</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>PS179</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>PS273</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:id>FBbt:20001934</oboInOwl:id>
+        <rdfs:comment>Cell type identified in multiple EM datasets (Nern et al., 2025). Synapse locations are given where each cell of this type in neuprint has at least 10 connections. Other information from Nern et al. (2025) supplements. This cell type was originally hemibrain PS179 (Scheffer et al., 2020 - FBrf0246888). Modification to LoVP26 is a slight broadening of meaning.</rdfs:comment>
+        <rdfs:label>adult lobula visual projection neuron LoVP26</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBbt_20001934"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+        <owl:annotatedTarget>LTe65</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>FlyBase:FBrf0260535</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>doi:10.1038/s41586-025-08746-0</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBbt_20001934"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+        <owl:annotatedTarget>PS179</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>FlyBase:FBrf0246888</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>doi:10.1038/s41586-025-08746-0</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBbt_20001934"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+        <owl:annotatedTarget>PS273</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>FlyBase:FBrf0246888</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>doi:10.1038/s41586-025-08746-0</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBbt_20001934"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>Adult lobula visual projection neuron of the LoVP26 group (Nern et al., 2025). It receives input in the ipsilateral lobula layer 6, superior posterior slope, lobula layer 5A and lobula layer 5B, the contralateral superior posterior slope, and the inferior bridge (Nern et al., 2025). It sends output to the ipsilateral superior posterior slope, the contralateral superior posterior slope, and the inferior bridge (Nern et al., 2025). There are approximately 6 of these cells per hemisphere (Nern et al., 2025).</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>doi:10.1038/s41586-025-08746-0</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/FBbt_20011362 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FBbt_20011362">
@@ -571,16 +676,16 @@
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBbt_20011363"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
-        <owl:annotatedTarget>Sm10</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>FlyBase:FBrf0260545</oboInOwl:hasDbXref>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>Adult central medulla intrinsic neuron of the Cm10 group (Nern et al., 2025). It receives input in the ipsilateral medulla serpentine layer (Nern et al., 2025). It sends output to the ipsilateral medulla (Nern et al., 2025). Its predicted neurotransmitter is GABA (Eckstein et al., 2024; Nern et al., 2025). There are approximately 44 of these cells per hemisphere (Nern et al., 2025).</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>FlyBase:FBrf0259490</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>doi:10.1038/s41586-025-08746-0</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBbt_20011363"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>Adult central medulla intrinsic neuron of the Cm10 group (Nern et al., 2025). It receives input in the ipsilateral medulla serpentine layer (Nern et al., 2025). It sends output to the ipsilateral medulla (Nern et al., 2025). Its predicted neurotransmitter is GABA (Eckstein et al., 2024; Nern et al., 2025). There are approximately 44 of these cells per hemisphere (Nern et al., 2025).</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>FlyBase:FBrf0259490</oboInOwl:hasDbXref>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+        <owl:annotatedTarget>Sm10</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>FlyBase:FBrf0260545</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>doi:10.1038/s41586-025-08746-0</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -1995,8 +2100,6 @@
         <terms:contributor rdf:resource="http://orcid.org/0000-0002-1373-1705"/>
         <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-04-28T12:00:00Z</terms:date>
         <oboInOwl:hasOBONamespace>fly_anatomy.ontology</oboInOwl:hasOBONamespace>
-        <oboInOwl:hasRelatedSynonym>LC28a</oboInOwl:hasRelatedSynonym>
-        <oboInOwl:hasRelatedSynonym>LC28b</oboInOwl:hasRelatedSynonym>
         <oboInOwl:id>FBbt:20011387</oboInOwl:id>
         <rdfs:comment>Cell type identified in multiple EM datasets (Nern et al., 2025). Synapse locations are given where each cell of this type in neuprint has at least 10 connections. Other information from Nern et al. (2025) supplements.</rdfs:comment>
         <rdfs:label>adult lobula columnar neuron LC28</rdfs:label>
@@ -2006,27 +2109,6 @@
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Adult lobula columnar neuron of the LC28 group (Nern et al., 2025). It receives input in the ipsilateral lobula layer 4, lobula layer 6, lobula layer 5A and lobula layer 5B (Nern et al., 2025). It sends output to the ipsilateral lobula layer 5A and lobula layer 5B (Nern et al., 2025). Its predicted neurotransmitter is acetylcholine (Eckstein et al., 2024; Nern et al., 2025). There are approximately 31 of these cells per hemisphere (Nern et al., 2025).</owl:annotatedTarget>
         <oboInOwl:hasDbXref>FlyBase:FBrf0259490</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>doi:10.1038/s41586-025-08746-0</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBbt_20011387"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
-        <owl:annotatedTarget>LC28a</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>FlyBase:FBrf0246888</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>doi:10.1038/s41586-025-08746-0</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBbt_20011387"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
-        <owl:annotatedTarget>LC28a</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>FlyBase:FBrf0260535</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>doi:10.1038/s41586-025-08746-0</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBbt_20011387"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
-        <owl:annotatedTarget>LC28b</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>FlyBase:FBrf0246888</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>doi:10.1038/s41586-025-08746-0</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -2082,7 +2164,6 @@
         <terms:contributor rdf:resource="http://orcid.org/0000-0002-1373-1705"/>
         <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-04-28T12:00:00Z</terms:date>
         <oboInOwl:hasOBONamespace>fly_anatomy.ontology</oboInOwl:hasOBONamespace>
-        <oboInOwl:hasRelatedSynonym>LC29</oboInOwl:hasRelatedSynonym>
         <oboInOwl:id>FBbt:20011388</oboInOwl:id>
         <rdfs:comment>Cell type identified in multiple EM datasets and at light level (Nern et al., 2025). Synapse locations are given where each cell of this type in neuprint has at least 10 connections. Other information from Nern et al. (2025) supplements.</rdfs:comment>
         <rdfs:label>adult lobula columnar neuron LC29</rdfs:label>
@@ -2092,20 +2173,6 @@
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Adult lobula columnar neuron of the LC29 group (Nern et al., 2025). It receives input in the ipsilateral lobula layer 4, posterior lateral protocerebrum, lobula layer 5A and lobula layer 5B (Nern et al., 2025). It sends output to the ipsilateral lobula and posterior lateral protocerebrum (Nern et al., 2025). Its predicted neurotransmitter is acetylcholine (Eckstein et al., 2024; Nern et al., 2025). There are approximately 19 of these cells per hemisphere (Nern et al., 2025).</owl:annotatedTarget>
         <oboInOwl:hasDbXref>FlyBase:FBrf0259490</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>doi:10.1038/s41586-025-08746-0</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBbt_20011388"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
-        <owl:annotatedTarget>LC29</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>FlyBase:FBrf0246888</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>doi:10.1038/s41586-025-08746-0</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBbt_20011388"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
-        <owl:annotatedTarget>LC29</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>FlyBase:FBrf0260535</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>doi:10.1038/s41586-025-08746-0</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -2179,8 +2246,6 @@
         <terms:contributor rdf:resource="http://orcid.org/0000-0002-1373-1705"/>
         <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-04-28T12:00:00Z</terms:date>
         <oboInOwl:hasOBONamespace>fly_anatomy.ontology</oboInOwl:hasOBONamespace>
-        <oboInOwl:hasRelatedSynonym>LC31</oboInOwl:hasRelatedSynonym>
-        <oboInOwl:hasRelatedSynonym>LC31a</oboInOwl:hasRelatedSynonym>
         <oboInOwl:id>FBbt:20011389</oboInOwl:id>
         <rdfs:comment>Cell type identified in multiple EM datasets and at light level (Nern et al., 2025). Synapse locations are given where each cell of this type in neuprint has at least 10 connections. Other information from Nern et al. (2025) supplements.</rdfs:comment>
         <rdfs:label>adult lobula columnar neuron LC31a</rdfs:label>
@@ -2190,20 +2255,6 @@
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Adult lobula columnar neuron of the LC31a group (Nern et al., 2025). It receives input in the ipsilateral lobula layer 2, lobula layer 3, lobula layer 4, posterior ventrolateral protocerebrum, anterior ventrolateral protocerebrum, lobula layer 5A and lobula layer 5B (Nern et al., 2025). It sends output to the ipsilateral posterior ventrolateral protocerebrum and anterior ventrolateral protocerebrum (Nern et al., 2025). Its predicted neurotransmitter is acetylcholine (Eckstein et al., 2024; Nern et al., 2025). There are approximately 16 of these cells per hemisphere (Nern et al., 2025).</owl:annotatedTarget>
         <oboInOwl:hasDbXref>FlyBase:FBrf0259490</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>doi:10.1038/s41586-025-08746-0</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBbt_20011389"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
-        <owl:annotatedTarget>LC31</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>FlyBase:FBrf0246888</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>doi:10.1038/s41586-025-08746-0</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBbt_20011389"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
-        <owl:annotatedTarget>LC31a</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>FlyBase:FBrf0260535</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>doi:10.1038/s41586-025-08746-0</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -2271,8 +2322,6 @@
         <terms:contributor rdf:resource="http://orcid.org/0000-0002-1373-1705"/>
         <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-04-28T12:00:00Z</terms:date>
         <oboInOwl:hasOBONamespace>fly_anatomy.ontology</oboInOwl:hasOBONamespace>
-        <oboInOwl:hasRelatedSynonym>LC31b</oboInOwl:hasRelatedSynonym>
-        <oboInOwl:hasRelatedSynonym>LC31c</oboInOwl:hasRelatedSynonym>
         <oboInOwl:id>FBbt:20011390</oboInOwl:id>
         <rdfs:comment>Cell type identified in multiple EM datasets and at light level (Nern et al., 2025). Synapse locations are given where each cell of this type in neuprint has at least 10 connections. Other information from Nern et al. (2025) supplements.</rdfs:comment>
         <rdfs:label>adult lobula columnar neuron LC31b</rdfs:label>
@@ -2281,20 +2330,6 @@
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBbt_20011390"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Adult lobula columnar neuron of the LC31b group (Nern et al., 2025). It receives input in the ipsilateral lobula layer 3, lobula layer 4, lobula layer 6, posterior ventrolateral protocerebrum, anterior ventrolateral protocerebrum, lobula layer 5A and lobula layer 5B (Nern et al., 2025). It sends output to the ipsilateral posterior ventrolateral protocerebrum and anterior ventrolateral protocerebrum (Nern et al., 2025). There are approximately 6 of these cells per hemisphere (Nern et al., 2025).</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>doi:10.1038/s41586-025-08746-0</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBbt_20011390"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
-        <owl:annotatedTarget>LC31b</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>FlyBase:FBrf0260535</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>doi:10.1038/s41586-025-08746-0</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBbt_20011390"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
-        <owl:annotatedTarget>LC31c</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>FlyBase:FBrf0260535</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>doi:10.1038/s41586-025-08746-0</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -2350,7 +2385,6 @@
         <terms:contributor rdf:resource="http://orcid.org/0000-0002-1373-1705"/>
         <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-04-28T12:00:00Z</terms:date>
         <oboInOwl:hasOBONamespace>fly_anatomy.ontology</oboInOwl:hasOBONamespace>
-        <oboInOwl:hasRelatedSynonym>LC34</oboInOwl:hasRelatedSynonym>
         <oboInOwl:id>FBbt:20011391</oboInOwl:id>
         <rdfs:comment>Cell type identified in multiple EM datasets (Nern et al., 2025). Synapse locations are given where each cell of this type in neuprint has at least 10 connections. Other information from Nern et al. (2025) supplements.</rdfs:comment>
         <rdfs:label>adult lobula columnar neuron LC34</rdfs:label>
@@ -2360,20 +2394,6 @@
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Adult lobula columnar neuron of the LC34 group (Nern et al., 2025). It receives input in the ipsilateral lobula layer 6, inferior clamp and lobula layer 5B (Nern et al., 2025). It sends output to the ipsilateral lobula layer 6, posterior lateral protocerebrum and inferior clamp (Nern et al., 2025). Its predicted neurotransmitter is acetylcholine (Eckstein et al., 2024; Nern et al., 2025). There are approximately 6 of these cells per hemisphere (Nern et al., 2025).</owl:annotatedTarget>
         <oboInOwl:hasDbXref>FlyBase:FBrf0259490</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>doi:10.1038/s41586-025-08746-0</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBbt_20011391"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
-        <owl:annotatedTarget>LC34</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>FlyBase:FBrf0246888</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>doi:10.1038/s41586-025-08746-0</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBbt_20011391"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
-        <owl:annotatedTarget>LC34</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>FlyBase:FBrf0260535</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>doi:10.1038/s41586-025-08746-0</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -2459,7 +2479,6 @@
         <terms:contributor rdf:resource="http://orcid.org/0000-0002-1373-1705"/>
         <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-04-28T12:00:00Z</terms:date>
         <oboInOwl:hasOBONamespace>fly_anatomy.ontology</oboInOwl:hasOBONamespace>
-        <oboInOwl:hasRelatedSynonym>LC35</oboInOwl:hasRelatedSynonym>
         <oboInOwl:id>FBbt:20011392</oboInOwl:id>
         <rdfs:comment>Cell type identified in multiple EM datasets (Nern et al., 2025). Synapse locations are given where each cell of this type in neuprint has at least 10 connections. Other information from Nern et al. (2025) supplements.</rdfs:comment>
         <rdfs:label>adult lobula columnar neuron LC35a</rdfs:label>
@@ -2469,20 +2488,6 @@
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Adult lobula columnar neuron of the LC35a group (Nern et al., 2025). It receives input in the ipsilateral lobula layer 3, lobula layer 4, lobula layer 6, posterior lateral protocerebrum, superior posterior slope, lobula layer 5A and lobula layer 5B (Nern et al., 2025). It sends output to the ipsilateral lobula layer 4, posterior lateral protocerebrum, superior posterior slope and lobula layer 5A (Nern et al., 2025). Its predicted neurotransmitter is acetylcholine (Eckstein et al., 2024; Nern et al., 2025). There are approximately 5 of these cells per hemisphere (Nern et al., 2025).</owl:annotatedTarget>
         <oboInOwl:hasDbXref>FlyBase:FBrf0259490</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>doi:10.1038/s41586-025-08746-0</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBbt_20011392"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
-        <owl:annotatedTarget>LC35</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>FlyBase:FBrf0246888</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>doi:10.1038/s41586-025-08746-0</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBbt_20011392"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
-        <owl:annotatedTarget>LC35</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>FlyBase:FBrf0260535</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>doi:10.1038/s41586-025-08746-0</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -2568,7 +2573,6 @@
         <terms:contributor rdf:resource="http://orcid.org/0000-0002-1373-1705"/>
         <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-04-28T12:00:00Z</terms:date>
         <oboInOwl:hasOBONamespace>fly_anatomy.ontology</oboInOwl:hasOBONamespace>
-        <oboInOwl:hasRelatedSynonym>LC35</oboInOwl:hasRelatedSynonym>
         <oboInOwl:id>FBbt:20011393</oboInOwl:id>
         <rdfs:comment>Cell type identified in multiple EM datasets (Nern et al., 2025). Synapse locations are given where each cell of this type in neuprint has at least 10 connections. Other information from Nern et al. (2025) supplements.</rdfs:comment>
         <rdfs:label>adult lobula columnar neuron LC35b</rdfs:label>
@@ -2578,20 +2582,6 @@
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Adult lobula columnar neuron of the LC35b group (Nern et al., 2025). It receives input in the ipsilateral lobula layer 4, lobula layer 6, posterior lateral protocerebrum, superior posterior slope, lobula layer 5A and lobula layer 5B (Nern et al., 2025). It sends output to the ipsilateral lobula layer 4, posterior lateral protocerebrum, superior posterior slope, lobula layer 5A and lobula layer 5B (Nern et al., 2025). Its predicted neurotransmitter is acetylcholine (Eckstein et al., 2024; Nern et al., 2025). There is one of these cells per hemisphere (Nern et al., 2025).</owl:annotatedTarget>
         <oboInOwl:hasDbXref>FlyBase:FBrf0259490</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>doi:10.1038/s41586-025-08746-0</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBbt_20011393"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
-        <owl:annotatedTarget>LC35</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>FlyBase:FBrf0246888</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>doi:10.1038/s41586-025-08746-0</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBbt_20011393"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
-        <owl:annotatedTarget>LC35</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>FlyBase:FBrf0260535</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>doi:10.1038/s41586-025-08746-0</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -2635,7 +2625,6 @@
         <terms:contributor rdf:resource="http://orcid.org/0000-0002-1373-1705"/>
         <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-04-28T12:00:00Z</terms:date>
         <oboInOwl:hasOBONamespace>fly_anatomy.ontology</oboInOwl:hasOBONamespace>
-        <oboInOwl:hasRelatedSynonym>LC36</oboInOwl:hasRelatedSynonym>
         <oboInOwl:id>FBbt:20011394</oboInOwl:id>
         <rdfs:comment>Cell type identified in multiple EM datasets and at light level (Nern et al., 2025). Synapse locations are given where each cell of this type in neuprint has at least 10 connections. Other information from Nern et al. (2025) supplements.</rdfs:comment>
         <rdfs:label>adult lobula columnar neuron LC36</rdfs:label>
@@ -2645,20 +2634,6 @@
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Adult lobula columnar neuron of the LC36 group (Nern et al., 2025). It receives input in the ipsilateral lobula layer 6 and lobula layer 5B (Nern et al., 2025). It sends output to the ipsilateral posterior lateral protocerebrum and superior posterior slope (Nern et al., 2025). Its predicted neurotransmitter is acetylcholine (Eckstein et al., 2024; Nern et al., 2025). There are approximately 16 of these cells per hemisphere (Nern et al., 2025).</owl:annotatedTarget>
         <oboInOwl:hasDbXref>FlyBase:FBrf0259490</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>doi:10.1038/s41586-025-08746-0</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBbt_20011394"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
-        <owl:annotatedTarget>LC36</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>FlyBase:FBrf0246888</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>doi:10.1038/s41586-025-08746-0</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBbt_20011394"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
-        <owl:annotatedTarget>LC36</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>FlyBase:FBrf0260535</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>doi:10.1038/s41586-025-08746-0</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -2726,9 +2701,6 @@
         <terms:contributor rdf:resource="http://orcid.org/0000-0002-1373-1705"/>
         <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-04-28T12:00:00Z</terms:date>
         <oboInOwl:hasOBONamespace>fly_anatomy.ontology</oboInOwl:hasOBONamespace>
-        <oboInOwl:hasRelatedSynonym>LC37</oboInOwl:hasRelatedSynonym>
-        <oboInOwl:hasRelatedSynonym>LC37a</oboInOwl:hasRelatedSynonym>
-        <oboInOwl:hasRelatedSynonym>LC37b</oboInOwl:hasRelatedSynonym>
         <oboInOwl:id>FBbt:20011395</oboInOwl:id>
         <rdfs:comment>Cell type identified in multiple EM datasets and at light level (Nern et al., 2025). Synapse locations are given where each cell of this type in neuprint has at least 10 connections. Other information from Nern et al. (2025) supplements.</rdfs:comment>
         <rdfs:label>adult lobula columnar neuron LC37</rdfs:label>
@@ -2738,27 +2710,6 @@
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Adult lobula columnar neuron of the LC37 group (Nern et al., 2025). It receives input in the ipsilateral lobula layer 6, inferior clamp and lobula layer 5B, and the inferior bridge (Nern et al., 2025). It sends output to the ipsilateral lobula, inferior clamp and superior posterior slope, and the inferior bridge (Nern et al., 2025). Its predicted neurotransmitter is glutamate (Eckstein et al., 2024; Nern et al., 2025). There are approximately 8 of these cells per hemisphere (Nern et al., 2025).</owl:annotatedTarget>
         <oboInOwl:hasDbXref>FlyBase:FBrf0259490</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>doi:10.1038/s41586-025-08746-0</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBbt_20011395"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
-        <owl:annotatedTarget>LC37</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>FlyBase:FBrf0260535</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>doi:10.1038/s41586-025-08746-0</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBbt_20011395"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
-        <owl:annotatedTarget>LC37a</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>FlyBase:FBrf0246888</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>doi:10.1038/s41586-025-08746-0</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBbt_20011395"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
-        <owl:annotatedTarget>LC37b</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>FlyBase:FBrf0246888</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>doi:10.1038/s41586-025-08746-0</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -2850,7 +2801,6 @@
         <terms:contributor rdf:resource="http://orcid.org/0000-0002-1373-1705"/>
         <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-04-28T12:00:00Z</terms:date>
         <oboInOwl:hasOBONamespace>fly_anatomy.ontology</oboInOwl:hasOBONamespace>
-        <oboInOwl:hasRelatedSynonym>LC39</oboInOwl:hasRelatedSynonym>
         <oboInOwl:id>FBbt:20011396</oboInOwl:id>
         <rdfs:comment>Cell type identified in multiple EM datasets (Nern et al., 2025). Synapse locations are given where each cell of this type in neuprint has at least 10 connections. Other information from Nern et al. (2025) supplements.</rdfs:comment>
         <rdfs:label>adult lobula columnar neuron LC39a</rdfs:label>
@@ -2860,20 +2810,6 @@
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Adult lobula columnar neuron of the LC39a group (Nern et al., 2025). It receives input in the ipsilateral lobula layer 4, lobula layer 6, posterior lateral protocerebrum, inferior clamp, lobula layer 5A and lobula layer 5B (Nern et al., 2025). It sends output to the ipsilateral lobula layer 6, posterior lateral protocerebrum, inferior clamp, superior posterior slope, lobula layer 5A and lobula layer 5B (Nern et al., 2025). Its predicted neurotransmitter is glutamate (Eckstein et al., 2024; Nern et al., 2025). There are approximately 3 of these cells per hemisphere (Nern et al., 2025).</owl:annotatedTarget>
         <oboInOwl:hasDbXref>FlyBase:FBrf0259490</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>doi:10.1038/s41586-025-08746-0</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBbt_20011396"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
-        <owl:annotatedTarget>LC39</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>FlyBase:FBrf0246888</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>doi:10.1038/s41586-025-08746-0</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBbt_20011396"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
-        <owl:annotatedTarget>LC39</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>FlyBase:FBrf0260535</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>doi:10.1038/s41586-025-08746-0</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -2977,7 +2913,6 @@
         <terms:contributor rdf:resource="http://orcid.org/0000-0002-1373-1705"/>
         <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-04-28T12:00:00Z</terms:date>
         <oboInOwl:hasOBONamespace>fly_anatomy.ontology</oboInOwl:hasOBONamespace>
-        <oboInOwl:hasRelatedSynonym>LC39</oboInOwl:hasRelatedSynonym>
         <oboInOwl:id>FBbt:20011397</oboInOwl:id>
         <rdfs:comment>Cell type identified in multiple EM datasets (Nern et al., 2025). Synapse locations are given where each cell of this type in neuprint has at least 10 connections. Other information from Nern et al. (2025) supplements.</rdfs:comment>
         <rdfs:label>adult lobula columnar neuron LC39b</rdfs:label>
@@ -2986,20 +2921,6 @@
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBbt_20011397"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Adult lobula columnar neuron of the LC39b group (Nern et al., 2025). It receives input in the ipsilateral lobula layer 4, lobula layer 6, posterior ventrolateral protocerebrum, posterior lateral protocerebrum, inferior clamp, lobula layer 5A and lobula layer 5B (Nern et al., 2025). It sends output to the ipsilateral lobula layer 4, lobula layer 6, posterior ventrolateral protocerebrum, posterior lateral protocerebrum, inferior clamp, superior posterior slope, lobula layer 5A and lobula layer 5B (Nern et al., 2025). There is one of these cells per hemisphere (Nern et al., 2025).</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>doi:10.1038/s41586-025-08746-0</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBbt_20011397"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
-        <owl:annotatedTarget>LC39</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>FlyBase:FBrf0246888</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>doi:10.1038/s41586-025-08746-0</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBbt_20011397"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
-        <owl:annotatedTarget>LC39</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>FlyBase:FBrf0260535</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>doi:10.1038/s41586-025-08746-0</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -3049,9 +2970,6 @@
         <terms:contributor rdf:resource="http://orcid.org/0000-0002-1373-1705"/>
         <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-04-28T12:00:00Z</terms:date>
         <oboInOwl:hasOBONamespace>fly_anatomy.ontology</oboInOwl:hasOBONamespace>
-        <oboInOwl:hasRelatedSynonym>LC40</oboInOwl:hasRelatedSynonym>
-        <oboInOwl:hasRelatedSynonym>LC40a</oboInOwl:hasRelatedSynonym>
-        <oboInOwl:hasRelatedSynonym>LC40b</oboInOwl:hasRelatedSynonym>
         <oboInOwl:id>FBbt:20011398</oboInOwl:id>
         <rdfs:comment>Cell type identified in multiple EM datasets (Nern et al., 2025). Synapse locations are given where each cell of this type in neuprint has at least 10 connections. Other information from Nern et al. (2025) supplements.</rdfs:comment>
         <rdfs:label>adult lobula columnar neuron LC40</rdfs:label>
@@ -3061,27 +2979,6 @@
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Adult lobula columnar neuron of the LC40 group (Nern et al., 2025). It receives input in the ipsilateral lobula layer 6, posterior lateral protocerebrum and lobula layer 5B (Nern et al., 2025). It sends output to the ipsilateral lobula layer 6 and posterior lateral protocerebrum (Nern et al., 2025). Its predicted neurotransmitter is acetylcholine (Eckstein et al., 2024; Nern et al., 2025). There are approximately 15 of these cells per hemisphere (Nern et al., 2025).</owl:annotatedTarget>
         <oboInOwl:hasDbXref>FlyBase:FBrf0259490</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>doi:10.1038/s41586-025-08746-0</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBbt_20011398"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
-        <owl:annotatedTarget>LC40</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>FlyBase:FBrf0260535</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>doi:10.1038/s41586-025-08746-0</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBbt_20011398"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
-        <owl:annotatedTarget>LC40a</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>FlyBase:FBrf0246888</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>doi:10.1038/s41586-025-08746-0</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBbt_20011398"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
-        <owl:annotatedTarget>LC40b</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>FlyBase:FBrf0246888</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>doi:10.1038/s41586-025-08746-0</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -3149,7 +3046,6 @@
         <terms:contributor rdf:resource="http://orcid.org/0000-0002-1373-1705"/>
         <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-04-28T12:00:00Z</terms:date>
         <oboInOwl:hasOBONamespace>fly_anatomy.ontology</oboInOwl:hasOBONamespace>
-        <oboInOwl:hasRelatedSynonym>LC41</oboInOwl:hasRelatedSynonym>
         <oboInOwl:id>FBbt:20011399</oboInOwl:id>
         <rdfs:comment>Cell type identified in multiple EM datasets (Nern et al., 2025). Synapse locations are given where each cell of this type in neuprint has at least 10 connections. Other information from Nern et al. (2025) supplements.</rdfs:comment>
         <rdfs:label>adult lobula columnar neuron LC41</rdfs:label>
@@ -3159,20 +3055,6 @@
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Adult lobula columnar neuron of the LC41 group (Nern et al., 2025). It receives input in the ipsilateral lobula layer 6, posterior lateral protocerebrum, inferior clamp and lobula layer 5B (Nern et al., 2025). It sends output to the ipsilateral lobula layer 6, posterior lateral protocerebrum, superior clamp and inferior clamp (Nern et al., 2025). Its predicted neurotransmitter is acetylcholine (Eckstein et al., 2024; Nern et al., 2025). There are approximately 6 of these cells per hemisphere (Nern et al., 2025).</owl:annotatedTarget>
         <oboInOwl:hasDbXref>FlyBase:FBrf0259490</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>doi:10.1038/s41586-025-08746-0</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBbt_20011399"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
-        <owl:annotatedTarget>LC41</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>FlyBase:FBrf0246888</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>doi:10.1038/s41586-025-08746-0</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBbt_20011399"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
-        <owl:annotatedTarget>LC41</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>FlyBase:FBrf0260535</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>doi:10.1038/s41586-025-08746-0</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -3222,7 +3104,6 @@
         <terms:contributor rdf:resource="http://orcid.org/0000-0002-1373-1705"/>
         <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-04-28T12:00:00Z</terms:date>
         <oboInOwl:hasOBONamespace>fly_anatomy.ontology</oboInOwl:hasOBONamespace>
-        <oboInOwl:hasRelatedSynonym>LC43</oboInOwl:hasRelatedSynonym>
         <oboInOwl:id>FBbt:20011400</oboInOwl:id>
         <rdfs:comment>Cell type identified in multiple EM datasets and at light level (Nern et al., 2025). Synapse locations are given where each cell of this type in neuprint has at least 10 connections. Other information from Nern et al. (2025) supplements.</rdfs:comment>
         <rdfs:label>adult lobula columnar neuron LC43</rdfs:label>
@@ -3231,20 +3112,6 @@
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBbt_20011400"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Adult lobula columnar neuron of the LC43 group (Nern et al., 2025). It receives input in the ipsilateral lobula layer 4, lateral horn, lobula layer 5A and lobula layer 5B (Nern et al., 2025). It sends output to the ipsilateral lateral horn and posterior lateral protocerebrum (Nern et al., 2025). There are approximately 6 of these cells per hemisphere (Nern et al., 2025).</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>doi:10.1038/s41586-025-08746-0</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBbt_20011400"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
-        <owl:annotatedTarget>LC43</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>FlyBase:FBrf0246888</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>doi:10.1038/s41586-025-08746-0</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBbt_20011400"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
-        <owl:annotatedTarget>LC43</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>FlyBase:FBrf0260535</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>doi:10.1038/s41586-025-08746-0</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -3294,7 +3161,6 @@
         <terms:contributor rdf:resource="http://orcid.org/0000-0002-1373-1705"/>
         <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-04-28T12:00:00Z</terms:date>
         <oboInOwl:hasOBONamespace>fly_anatomy.ontology</oboInOwl:hasOBONamespace>
-        <oboInOwl:hasRelatedSynonym>LC44</oboInOwl:hasRelatedSynonym>
         <oboInOwl:id>FBbt:20011401</oboInOwl:id>
         <rdfs:comment>Cell type identified in multiple EM datasets (Nern et al., 2025). Synapse locations are given where each cell of this type in neuprint has at least 10 connections. Other information from Nern et al. (2025) supplements.</rdfs:comment>
         <rdfs:label>adult lobula columnar neuron LC44</rdfs:label>
@@ -3304,20 +3170,6 @@
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Adult lobula columnar neuron of the LC44 group (Nern et al., 2025). It receives input in the ipsilateral lobula layer 6, posterior lateral protocerebrum and lobula layer 5B (Nern et al., 2025). It sends output to the ipsilateral lobula layer 6 and posterior lateral protocerebrum (Nern et al., 2025). Its predicted neurotransmitter is acetylcholine (Eckstein et al., 2024; Nern et al., 2025). There are approximately 3 of these cells per hemisphere (Nern et al., 2025).</owl:annotatedTarget>
         <oboInOwl:hasDbXref>FlyBase:FBrf0259490</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>doi:10.1038/s41586-025-08746-0</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBbt_20011401"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
-        <owl:annotatedTarget>LC44</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>FlyBase:FBrf0246888</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>doi:10.1038/s41586-025-08746-0</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBbt_20011401"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
-        <owl:annotatedTarget>LC44</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>FlyBase:FBrf0260535</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>doi:10.1038/s41586-025-08746-0</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -3367,9 +3219,6 @@
         <terms:contributor rdf:resource="http://orcid.org/0000-0002-1373-1705"/>
         <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-04-28T12:00:00Z</terms:date>
         <oboInOwl:hasOBONamespace>fly_anatomy.ontology</oboInOwl:hasOBONamespace>
-        <oboInOwl:hasRelatedSynonym>LC46</oboInOwl:hasRelatedSynonym>
-        <oboInOwl:hasRelatedSynonym>LC46a</oboInOwl:hasRelatedSynonym>
-        <oboInOwl:hasRelatedSynonym>LC46b</oboInOwl:hasRelatedSynonym>
         <oboInOwl:id>FBbt:20011402</oboInOwl:id>
         <rdfs:comment>Cell type identified in multiple EM datasets (Nern et al., 2025). Synapse locations are given where each cell of this type in neuprint has at least 10 connections. Other information from Nern et al. (2025) supplements.</rdfs:comment>
         <rdfs:label>adult lobula columnar neuron LC46b</rdfs:label>
@@ -3379,27 +3228,6 @@
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Adult lobula columnar neuron of the LC46b group (Nern et al., 2025). It receives input in the ipsilateral lobula layer 6, superior posterior slope and lobula layer 5B (Nern et al., 2025). It sends output to the ipsilateral lobula layer 6 and superior posterior slope (Nern et al., 2025). Its predicted neurotransmitter is acetylcholine (Eckstein et al., 2024; Nern et al., 2025). There are approximately 5 of these cells per hemisphere (Nern et al., 2025).</owl:annotatedTarget>
         <oboInOwl:hasDbXref>FlyBase:FBrf0259490</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>doi:10.1038/s41586-025-08746-0</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBbt_20011402"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
-        <owl:annotatedTarget>LC46</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>FlyBase:FBrf0260535</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>doi:10.1038/s41586-025-08746-0</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBbt_20011402"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
-        <owl:annotatedTarget>LC46a</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>FlyBase:FBrf0246888</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>doi:10.1038/s41586-025-08746-0</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBbt_20011402"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
-        <owl:annotatedTarget>LC46b</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>FlyBase:FBrf0246888</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>doi:10.1038/s41586-025-08746-0</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -3653,7 +3481,6 @@
         <terms:contributor rdf:resource="http://orcid.org/0000-0002-1373-1705"/>
         <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-04-28T12:00:00Z</terms:date>
         <oboInOwl:hasOBONamespace>fly_anatomy.ontology</oboInOwl:hasOBONamespace>
-        <oboInOwl:hasRelatedSynonym>Li12</oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasRelatedSynonym>Li27</oboInOwl:hasRelatedSynonym>
         <oboInOwl:id>FBbt:20011405</oboInOwl:id>
         <rdfs:comment>Cell type identified in multiple EM datasets (Nern et al., 2025). Synapse locations are given where each cell of this type in neuprint has at least 10 connections. Other information from Nern et al. (2025) supplements.</rdfs:comment>
@@ -3665,20 +3492,6 @@
         <owl:annotatedTarget>Adult lobula intrinsic neuron of the Li12 group (Nern et al., 2025). It receives input in the ipsilateral lobula layer 4, lobula layer 6, lobula layer 5A and lobula layer 5B (Nern et al., 2025). It sends output to the ipsilateral lobula layer 4, lobula layer 6, lobula layer 5A and lobula layer 5B (Nern et al., 2025). Its predicted neurotransmitter is glutamate (Eckstein et al., 2024; Nern et al., 2025). There are approximately 2 of these cells per hemisphere (Nern et al., 2025). The pair of them form a jigsaw pattern, tiling the neuropil (Matsliah et al., 2024).</owl:annotatedTarget>
         <oboInOwl:hasDbXref>FlyBase:FBrf0259490</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>FlyBase:FBrf0260545</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>doi:10.1038/s41586-025-08746-0</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBbt_20011405"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
-        <owl:annotatedTarget>Li12</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>FlyBase:FBrf0246888</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>doi:10.1038/s41586-025-08746-0</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBbt_20011405"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
-        <owl:annotatedTarget>Li12</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>FlyBase:FBrf0260535</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>doi:10.1038/s41586-025-08746-0</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
@@ -3739,20 +3552,6 @@
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Adult lobula intrinsic neuron of the Li13 group (Nern et al., 2025). It receives input in the ipsilateral lobula layer 6, lobula layer 5A and lobula layer 5B (Nern et al., 2025). It sends output to the ipsilateral lobula layer 5B (Nern et al., 2025). Its predicted neurotransmitter is GABA (Eckstein et al., 2024; Nern et al., 2025). There are approximately 32 of these cells per hemisphere (Nern et al., 2025).</owl:annotatedTarget>
         <oboInOwl:hasDbXref>FlyBase:FBrf0259490</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>doi:10.1038/s41586-025-08746-0</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBbt_20011406"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
-        <owl:annotatedTarget>Li13</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>FlyBase:FBrf0246888</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>doi:10.1038/s41586-025-08746-0</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBbt_20011406"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
-        <owl:annotatedTarget>Li13</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>FlyBase:FBrf0260535</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>doi:10.1038/s41586-025-08746-0</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
@@ -3833,7 +3632,6 @@
         <terms:contributor rdf:resource="http://orcid.org/0000-0002-1373-1705"/>
         <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-04-28T12:00:00Z</terms:date>
         <oboInOwl:hasOBONamespace>fly_anatomy.ontology</oboInOwl:hasOBONamespace>
-        <oboInOwl:hasRelatedSynonym>Li16</oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasRelatedSynonym>Li28</oboInOwl:hasRelatedSynonym>
         <oboInOwl:id>FBbt:20011407</oboInOwl:id>
         <rdfs:comment>Cell type identified in multiple EM datasets (Nern et al., 2025). Synapse locations are given where each cell of this type in neuprint has at least 10 connections. Other information from Nern et al. (2025) supplements.</rdfs:comment>
@@ -3845,20 +3643,6 @@
         <owl:annotatedTarget>Adult lobula intrinsic neuron of the Li16 group (Nern et al., 2025). It receives input in the ipsilateral lobula layer 3, lobula layer 4, lobula layer 6, lobula layer 5A and lobula layer 5B (Nern et al., 2025). It sends output to the ipsilateral lobula layer 4, lobula layer 6, lobula layer 5A and lobula layer 5B (Nern et al., 2025). Its predicted neurotransmitter is glutamate (Eckstein et al., 2024; Nern et al., 2025). There are approximately 2 of these cells per hemisphere (Nern et al., 2025). The pair of them form a jigsaw pattern, tiling the neuropil (Matsliah et al., 2024).</owl:annotatedTarget>
         <oboInOwl:hasDbXref>FlyBase:FBrf0259490</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>FlyBase:FBrf0260545</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>doi:10.1038/s41586-025-08746-0</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBbt_20011407"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
-        <owl:annotatedTarget>Li16</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>FlyBase:FBrf0246888</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>doi:10.1038/s41586-025-08746-0</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBbt_20011407"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
-        <owl:annotatedTarget>Li16</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>FlyBase:FBrf0260535</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>doi:10.1038/s41586-025-08746-0</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
@@ -3958,7 +3742,6 @@
         <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-04-28T12:00:00Z</terms:date>
         <oboInOwl:hasOBONamespace>fly_anatomy.ontology</oboInOwl:hasOBONamespace>
         <oboInOwl:hasRelatedSynonym>Li18</oboInOwl:hasRelatedSynonym>
-        <oboInOwl:hasRelatedSynonym>Li19</oboInOwl:hasRelatedSynonym>
         <oboInOwl:id>FBbt:20011409</oboInOwl:id>
         <rdfs:comment>Cell type identified in multiple EM datasets and at light level (Nern et al., 2025). Synapse locations are given where each cell of this type in neuprint has at least 10 connections. Other information from Nern et al. (2025) supplements.</rdfs:comment>
         <rdfs:label>adult lobula intrinsic neuron Li19</rdfs:label>
@@ -3975,20 +3758,6 @@
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
         <owl:annotatedTarget>Li18</owl:annotatedTarget>
         <oboInOwl:hasDbXref>FlyBase:FBrf0260545</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>doi:10.1038/s41586-025-08746-0</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBbt_20011409"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
-        <owl:annotatedTarget>Li19</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>FlyBase:FBrf0246888</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>doi:10.1038/s41586-025-08746-0</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBbt_20011409"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
-        <owl:annotatedTarget>Li19</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>FlyBase:FBrf0260535</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>doi:10.1038/s41586-025-08746-0</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -6589,6 +6358,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FBbt_20011436">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBbt_00048286"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBbt_20001652"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002215"/>
@@ -7382,7 +7152,6 @@
         <terms:contributor rdf:resource="http://orcid.org/0000-0002-1373-1705"/>
         <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-04-28T12:00:00Z</terms:date>
         <oboInOwl:hasOBONamespace>fly_anatomy.ontology</oboInOwl:hasOBONamespace>
-        <oboInOwl:hasRelatedSynonym>LT34</oboInOwl:hasRelatedSynonym>
         <oboInOwl:id>FBbt:20011442</oboInOwl:id>
         <rdfs:comment>Cell type identified in multiple EM datasets and at light level (Nern et al., 2025). Synapse locations are given where each cell of this type in neuprint has at least 10 connections. Other information from Nern et al. (2025) supplements.</rdfs:comment>
         <rdfs:label>adult lobula tangential neuron LT34</rdfs:label>
@@ -7392,20 +7161,6 @@
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Adult lobula tangential neuron of the LT34 group (Nern et al., 2025). It receives input in the ipsilateral lateral accessory lobe, superior medial protocerebrum, anterior optic tubercle, mushroom body alpha&apos;-lobe, lobula layer 6, gorget, epaulette, posterior ventrolateral protocerebrum, posterior lateral protocerebrum, superior clamp, inferior clamp, superior intermediate protocerebrum, superior posterior slope and lobula layer 5B, and the inferior bridge (Nern et al., 2025). It sends output to the ipsilateral superior medial protocerebrum, lobula layer 6, superior intermediate protocerebrum, superior posterior slope, lobula layer 5A and lobula layer 5B (Nern et al., 2025). Its predicted neurotransmitter is GABA (Eckstein et al., 2024; Nern et al., 2025). There is one of these cells per hemisphere (Nern et al., 2025).</owl:annotatedTarget>
         <oboInOwl:hasDbXref>FlyBase:FBrf0259490</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>doi:10.1038/s41586-025-08746-0</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBbt_20011442"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
-        <owl:annotatedTarget>LT34</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>FlyBase:FBrf0246888</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>doi:10.1038/s41586-025-08746-0</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBbt_20011442"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
-        <owl:annotatedTarget>LT34</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>FlyBase:FBrf0260535</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>doi:10.1038/s41586-025-08746-0</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -7576,7 +7331,6 @@
         <terms:contributor rdf:resource="http://orcid.org/0000-0002-1373-1705"/>
         <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-04-28T12:00:00Z</terms:date>
         <oboInOwl:hasOBONamespace>fly_anatomy.ontology</oboInOwl:hasOBONamespace>
-        <oboInOwl:hasRelatedSynonym>LT36</oboInOwl:hasRelatedSynonym>
         <oboInOwl:id>FBbt:20011443</oboInOwl:id>
         <rdfs:comment>Cell type identified in multiple EM datasets (Nern et al., 2025). Synapse locations are given where each cell of this type in neuprint has at least 10 connections. Other information from Nern et al. (2025) supplements.</rdfs:comment>
         <rdfs:label>adult lobula tangential neuron LT36</rdfs:label>
@@ -7586,20 +7340,6 @@
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Adult lobula tangential neuron of the LT36 group (Nern et al., 2025). It receives input in the ipsilateral vest, posterior lateral protocerebrum, inferior clamp and superior posterior slope, the contralateral lateral accessory lobe, antennal mechanosensory and motor center, superior medial protocerebrum, antennal lobe, lobula layer 6, epaulette, vest, posterior ventrolateral protocerebrum, posterior lateral protocerebrum, inferior clamp, wedge, superior posterior slope, lobula layer 5A and lobula layer 5B, and the gnathal ganglion, inferior bridge and saddle (Nern et al., 2025). It sends output to the contralateral lobula layer 6, vest, posterior lateral protocerebrum, inferior clamp, superior posterior slope, lobula layer 5A and lobula layer 5B, and the inferior bridge (Nern et al., 2025). Its predicted neurotransmitter is GABA (Eckstein et al., 2024; Nern et al., 2025). There is one of these cells per hemisphere (Nern et al., 2025).</owl:annotatedTarget>
         <oboInOwl:hasDbXref>FlyBase:FBrf0259490</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>doi:10.1038/s41586-025-08746-0</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBbt_20011443"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
-        <owl:annotatedTarget>LT36</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>FlyBase:FBrf0246888</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>doi:10.1038/s41586-025-08746-0</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBbt_20011443"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
-        <owl:annotatedTarget>LT36</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>FlyBase:FBrf0260535</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>doi:10.1038/s41586-025-08746-0</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -7740,7 +7480,6 @@
         <terms:contributor rdf:resource="http://orcid.org/0000-0002-1373-1705"/>
         <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-04-28T12:00:00Z</terms:date>
         <oboInOwl:hasOBONamespace>fly_anatomy.ontology</oboInOwl:hasOBONamespace>
-        <oboInOwl:hasRelatedSynonym>LT37</oboInOwl:hasRelatedSynonym>
         <oboInOwl:id>FBbt:20011444</oboInOwl:id>
         <rdfs:comment>Cell type identified in multiple EM datasets (Nern et al., 2025). Synapse locations are given where each cell of this type in neuprint has at least 10 connections. Other information from Nern et al. (2025) supplements.</rdfs:comment>
         <rdfs:label>adult lobula tangential neuron LT37</rdfs:label>
@@ -7750,20 +7489,6 @@
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Adult lobula tangential neuron of the LT37 group (Nern et al., 2025). It receives input in the ipsilateral lobula layer 4, superior medial protocerebrum, lobula layer 6, posterior lateral protocerebrum, inferior clamp, wedge, antler, superior posterior slope, inferior posterior slope, lobula layer 5A and lobula layer 5B, the contralateral superior posterior slope, and the gnathal ganglion and inferior bridge (Nern et al., 2025). It sends output to the ipsilateral lobula layer 4, lobula layer 6, superior posterior slope, lobula layer 5A and lobula layer 5B, and the inferior bridge (Nern et al., 2025). Its predicted neurotransmitter is GABA (Eckstein et al., 2024; Nern et al., 2025). There is one of these cells per hemisphere (Nern et al., 2025).</owl:annotatedTarget>
         <oboInOwl:hasDbXref>FlyBase:FBrf0259490</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>doi:10.1038/s41586-025-08746-0</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBbt_20011444"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
-        <owl:annotatedTarget>LT37</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>FlyBase:FBrf0246888</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>doi:10.1038/s41586-025-08746-0</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBbt_20011444"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
-        <owl:annotatedTarget>LT37</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>FlyBase:FBrf0260535</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>doi:10.1038/s41586-025-08746-0</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -7910,7 +7635,6 @@
         <terms:contributor rdf:resource="http://orcid.org/0000-0002-1373-1705"/>
         <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-04-28T12:00:00Z</terms:date>
         <oboInOwl:hasOBONamespace>fly_anatomy.ontology</oboInOwl:hasOBONamespace>
-        <oboInOwl:hasRelatedSynonym>LT39</oboInOwl:hasRelatedSynonym>
         <oboInOwl:id>FBbt:20011445</oboInOwl:id>
         <rdfs:comment>Cell type identified in multiple EM datasets and at light level (Nern et al., 2025). Synapse locations are given where each cell of this type in neuprint has at least 10 connections. Other information from Nern et al. (2025) supplements.</rdfs:comment>
         <rdfs:label>adult lobula tangential neuron LT39</rdfs:label>
@@ -7920,20 +7644,6 @@
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Adult lobula tangential neuron of the LT39 group (Nern et al., 2025). It receives input in the ipsilateral lateral accessory lobe, lobula layer 4, lobula layer 6, gorget, posterior ventrolateral protocerebrum, anterior ventrolateral protocerebrum, posterior lateral protocerebrum, inferior clamp, wedge, superior intermediate protocerebrum, superior posterior slope, inferior posterior slope, cantle, lobula layer 5A and lobula layer 5B, the contralateral superior posterior slope, and the inferior bridge (Nern et al., 2025). It sends output to the ipsilateral lobula layer 4, lobula layer 6, lobula layer 5A and lobula layer 5B (Nern et al., 2025). Its predicted neurotransmitter is GABA (Eckstein et al., 2024; Nern et al., 2025). There is one of these cells per hemisphere (Nern et al., 2025).</owl:annotatedTarget>
         <oboInOwl:hasDbXref>FlyBase:FBrf0259490</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>doi:10.1038/s41586-025-08746-0</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBbt_20011445"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
-        <owl:annotatedTarget>LT39</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>FlyBase:FBrf0246888</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>doi:10.1038/s41586-025-08746-0</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBbt_20011445"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
-        <owl:annotatedTarget>LT39</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>FlyBase:FBrf0260535</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>doi:10.1038/s41586-025-08746-0</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -8128,7 +7838,6 @@
         <terms:contributor rdf:resource="http://orcid.org/0000-0002-1373-1705"/>
         <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-04-28T12:00:00Z</terms:date>
         <oboInOwl:hasOBONamespace>fly_anatomy.ontology</oboInOwl:hasOBONamespace>
-        <oboInOwl:hasRelatedSynonym>LT40</oboInOwl:hasRelatedSynonym>
         <oboInOwl:id>FBbt:20011446</oboInOwl:id>
         <rdfs:comment>Cell type identified in multiple EM datasets (Nern et al., 2025). Synapse locations are given where each cell of this type in neuprint has at least 10 connections. Other information from Nern et al. (2025) supplements.</rdfs:comment>
         <rdfs:label>adult lobula tangential neuron LT40</rdfs:label>
@@ -8138,20 +7847,6 @@
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Adult lobula tangential neuron of the LT40 group (Nern et al., 2025). It receives input in the ipsilateral lateral accessory lobe, lobula layer 3, lobula layer 4, lobula layer 6, epaulette, vest, posterior ventrolateral protocerebrum, anterior ventrolateral protocerebrum, posterior lateral protocerebrum, inferior clamp, wedge, superior intermediate protocerebrum, superior posterior slope, inferior posterior slope, lobula layer 5A and lobula layer 5B, and the gnathal ganglion and saddle (Nern et al., 2025). It sends output to the ipsilateral lobula layer 3, lobula layer 4, epaulette, vest, posterior ventrolateral protocerebrum, anterior ventrolateral protocerebrum, posterior lateral protocerebrum, superior posterior slope, lobula layer 5A and lobula layer 5B, and the saddle (Nern et al., 2025). Its predicted neurotransmitter is GABA (Eckstein et al., 2024; Nern et al., 2025). There is one of these cells per hemisphere (Nern et al., 2025).</owl:annotatedTarget>
         <oboInOwl:hasDbXref>FlyBase:FBrf0259490</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>doi:10.1038/s41586-025-08746-0</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBbt_20011446"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
-        <owl:annotatedTarget>LT40</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>FlyBase:FBrf0246888</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>doi:10.1038/s41586-025-08746-0</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBbt_20011446"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
-        <owl:annotatedTarget>LT40</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>FlyBase:FBrf0260535</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>doi:10.1038/s41586-025-08746-0</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -8316,7 +8011,6 @@
         <terms:contributor rdf:resource="http://orcid.org/0000-0002-1373-1705"/>
         <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-04-28T12:00:00Z</terms:date>
         <oboInOwl:hasOBONamespace>fly_anatomy.ontology</oboInOwl:hasOBONamespace>
-        <oboInOwl:hasRelatedSynonym>LT41</oboInOwl:hasRelatedSynonym>
         <oboInOwl:id>FBbt:20011447</oboInOwl:id>
         <rdfs:comment>Cell type identified in multiple EM datasets (Nern et al., 2025). Synapse locations are given where each cell of this type in neuprint has at least 10 connections. Other information from Nern et al. (2025) supplements.</rdfs:comment>
         <rdfs:label>adult lobula tangential neuron LT41</rdfs:label>
@@ -8326,20 +8020,6 @@
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Adult lobula tangential neuron of the LT41 group (Nern et al., 2025). It receives input in the ipsilateral lateral accessory lobe, lobula layer 4, anterior optic tubercle, lobula layer 6, epaulette, vest, posterior ventrolateral protocerebrum, anterior ventrolateral protocerebrum, posterior lateral protocerebrum, superior clamp, inferior clamp, wedge, superior intermediate protocerebrum, crepine, superior posterior slope, inferior posterior slope, lobula layer 5A and lobula layer 5B (Nern et al., 2025). It sends output to the ipsilateral lateral accessory lobe, lobula layer 4, lobula layer 6, posterior ventrolateral protocerebrum, lobula layer 5A and lobula layer 5B (Nern et al., 2025). Its predicted neurotransmitter is GABA (Eckstein et al., 2024; Nern et al., 2025). There is one of these cells per hemisphere (Nern et al., 2025).</owl:annotatedTarget>
         <oboInOwl:hasDbXref>FlyBase:FBrf0259490</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>doi:10.1038/s41586-025-08746-0</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBbt_20011447"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
-        <owl:annotatedTarget>LT41</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>FlyBase:FBrf0246888</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>doi:10.1038/s41586-025-08746-0</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBbt_20011447"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
-        <owl:annotatedTarget>LT41</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>FlyBase:FBrf0260535</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>doi:10.1038/s41586-025-08746-0</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -8546,7 +8226,6 @@
         <terms:contributor rdf:resource="http://orcid.org/0000-0002-1373-1705"/>
         <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-04-28T12:00:00Z</terms:date>
         <oboInOwl:hasOBONamespace>fly_anatomy.ontology</oboInOwl:hasOBONamespace>
-        <oboInOwl:hasRelatedSynonym>LT42</oboInOwl:hasRelatedSynonym>
         <oboInOwl:id>FBbt:20011448</oboInOwl:id>
         <rdfs:comment>Cell type identified in multiple EM datasets and at light level (Nern et al., 2025). Synapse locations are given where each cell of this type in neuprint has at least 10 connections. Other information from Nern et al. (2025) supplements.</rdfs:comment>
         <rdfs:label>adult lobula tangential neuron LT42</rdfs:label>
@@ -8556,20 +8235,6 @@
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Adult lobula tangential neuron of the LT42 group (Nern et al., 2025). It receives input in the ipsilateral lateral accessory lobe, lobula layer 4, lobula layer 6, gorget, epaulette, vest, posterior ventrolateral protocerebrum, anterior ventrolateral protocerebrum, posterior lateral protocerebrum, inferior clamp, wedge, superior intermediate protocerebrum, crepine, superior posterior slope, inferior posterior slope, cantle, lobula layer 5A and lobula layer 5B, the contralateral superior posterior slope, and the gnathal ganglion, inferior bridge and saddle (Nern et al., 2025). It sends output to the ipsilateral lateral accessory lobe, lobula layer 4, vest, posterior ventrolateral protocerebrum, posterior lateral protocerebrum, superior posterior slope, inferior posterior slope, lobula layer 5A and lobula layer 5B (Nern et al., 2025). Its predicted neurotransmitter is GABA (Eckstein et al., 2024; Nern et al., 2025). There is one of these cells per hemisphere (Nern et al., 2025).</owl:annotatedTarget>
         <oboInOwl:hasDbXref>FlyBase:FBrf0259490</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>doi:10.1038/s41586-025-08746-0</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBbt_20011448"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
-        <owl:annotatedTarget>LT42</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>FlyBase:FBrf0246888</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>doi:10.1038/s41586-025-08746-0</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBbt_20011448"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
-        <owl:annotatedTarget>LT42</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>FlyBase:FBrf0260535</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>doi:10.1038/s41586-025-08746-0</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -8650,7 +8315,6 @@
         <terms:contributor rdf:resource="http://orcid.org/0000-0002-1373-1705"/>
         <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-04-28T12:00:00Z</terms:date>
         <oboInOwl:hasOBONamespace>fly_anatomy.ontology</oboInOwl:hasOBONamespace>
-        <oboInOwl:hasRelatedSynonym>LT43</oboInOwl:hasRelatedSynonym>
         <oboInOwl:id>FBbt:20011449</oboInOwl:id>
         <rdfs:comment>Cell type identified in multiple EM datasets and at light level (Nern et al., 2025). Synapse locations are given where each cell of this type in neuprint has at least 10 connections. Other information from Nern et al. (2025) supplements.</rdfs:comment>
         <rdfs:label>adult lobula tangential neuron LT43</rdfs:label>
@@ -8660,20 +8324,6 @@
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Adult lobula tangential neuron of the LT43 group (Nern et al., 2025). It receives input in the ipsilateral anterior optic tubercle, lobula layer 6, posterior lateral protocerebrum, inferior clamp, superior posterior slope and lobula layer 5B (Nern et al., 2025). It sends output to the ipsilateral anterior optic tubercle, lobula layer 6, posterior lateral protocerebrum and lobula layer 5B (Nern et al., 2025). Its predicted neurotransmitter is GABA (Eckstein et al., 2024; Nern et al., 2025). There are approximately 2 of these cells per hemisphere (Nern et al., 2025).</owl:annotatedTarget>
         <oboInOwl:hasDbXref>FlyBase:FBrf0259490</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>doi:10.1038/s41586-025-08746-0</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBbt_20011449"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
-        <owl:annotatedTarget>LT43</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>FlyBase:FBrf0246888</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>doi:10.1038/s41586-025-08746-0</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBbt_20011449"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
-        <owl:annotatedTarget>LT43</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>FlyBase:FBrf0260535</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>doi:10.1038/s41586-025-08746-0</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -8784,7 +8434,6 @@
         <terms:contributor rdf:resource="http://orcid.org/0000-0002-1373-1705"/>
         <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-04-28T12:00:00Z</terms:date>
         <oboInOwl:hasOBONamespace>fly_anatomy.ontology</oboInOwl:hasOBONamespace>
-        <oboInOwl:hasRelatedSynonym>LT47</oboInOwl:hasRelatedSynonym>
         <oboInOwl:id>FBbt:20011450</oboInOwl:id>
         <rdfs:comment>Cell type identified in multiple EM datasets (Nern et al., 2025). Synapse locations are given where each cell of this type in neuprint has at least 10 connections. Other information from Nern et al. (2025) supplements.</rdfs:comment>
         <rdfs:label>adult lobula tangential neuron LT47</rdfs:label>
@@ -8794,20 +8443,6 @@
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Adult lobula tangential neuron of the LT47 group (Nern et al., 2025). It receives input in the ipsilateral lobula layer 3, lobula layer 4, lobula layer 6, vest, posterior lateral protocerebrum, wedge, lobula layer 5A and lobula layer 5B, and the saddle (Nern et al., 2025). It sends output to the ipsilateral lobula layer 4, vest, wedge, lobula layer 5A and lobula layer 5B, and the saddle (Nern et al., 2025). Its predicted neurotransmitter is acetylcholine (Eckstein et al., 2024; Nern et al., 2025). There is one of these cells per hemisphere (Nern et al., 2025).</owl:annotatedTarget>
         <oboInOwl:hasDbXref>FlyBase:FBrf0259490</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>doi:10.1038/s41586-025-08746-0</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBbt_20011450"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
-        <owl:annotatedTarget>LT47</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>FlyBase:FBrf0246888</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>doi:10.1038/s41586-025-08746-0</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBbt_20011450"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
-        <owl:annotatedTarget>LT47</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>FlyBase:FBrf0260535</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>doi:10.1038/s41586-025-08746-0</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -8864,7 +8499,6 @@
         <terms:contributor rdf:resource="http://orcid.org/0000-0002-1373-1705"/>
         <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-04-28T12:00:00Z</terms:date>
         <oboInOwl:hasOBONamespace>fly_anatomy.ontology</oboInOwl:hasOBONamespace>
-        <oboInOwl:hasRelatedSynonym>LT52</oboInOwl:hasRelatedSynonym>
         <oboInOwl:id>FBbt:20011451</oboInOwl:id>
         <rdfs:comment>Cell type identified in multiple EM datasets and at light level (Nern et al., 2025). Synapse locations are given where each cell of this type in neuprint has at least 10 connections. Other information from Nern et al. (2025) supplements.</rdfs:comment>
         <rdfs:label>adult lobula tangential neuron LT52</rdfs:label>
@@ -8874,20 +8508,6 @@
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Adult lobula tangential neuron of the LT52 group (Nern et al., 2025). It receives input in the ipsilateral anterior optic tubercle, lobula layer 6 and lobula layer 5B (Nern et al., 2025). It sends output to the ipsilateral anterior optic tubercle, lobula layer 6 and lobula layer 5B (Nern et al., 2025). Its predicted neurotransmitter is glutamate (Eckstein et al., 2024; Nern et al., 2025). There are approximately 17 of these cells per hemisphere (Nern et al., 2025).</owl:annotatedTarget>
         <oboInOwl:hasDbXref>FlyBase:FBrf0259490</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>doi:10.1038/s41586-025-08746-0</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBbt_20011451"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
-        <owl:annotatedTarget>LT52</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>FlyBase:FBrf0246888</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>doi:10.1038/s41586-025-08746-0</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBbt_20011451"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
-        <owl:annotatedTarget>LT52</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>FlyBase:FBrf0260535</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>doi:10.1038/s41586-025-08746-0</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -8950,7 +8570,6 @@
         <terms:contributor rdf:resource="http://orcid.org/0000-0002-1373-1705"/>
         <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-04-28T12:00:00Z</terms:date>
         <oboInOwl:hasOBONamespace>fly_anatomy.ontology</oboInOwl:hasOBONamespace>
-        <oboInOwl:hasRelatedSynonym>LT55</oboInOwl:hasRelatedSynonym>
         <oboInOwl:id>FBbt:20011452</oboInOwl:id>
         <rdfs:comment>Cell type identified in multiple EM datasets and at light level (Nern et al., 2025). Synapse locations are given where each cell of this type in neuprint has at least 10 connections. Other information from Nern et al. (2025) supplements.</rdfs:comment>
         <rdfs:label>adult lobula tangential neuron LT55</rdfs:label>
@@ -8960,20 +8579,6 @@
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Adult lobula tangential neuron of the LT55 group (Nern et al., 2025). It receives input in the ipsilateral lobula layer 6, posterior lateral protocerebrum and lobula layer 5B, and the contralateral anterior optic tubercle and lobula layer 6 (Nern et al., 2025). It sends output to the ipsilateral lobula layer 6, and the contralateral anterior optic tubercle and lobula layer 6 (Nern et al., 2025). Its predicted neurotransmitter is glutamate (Eckstein et al., 2024; Nern et al., 2025). There is one of these cells per hemisphere (Nern et al., 2025).</owl:annotatedTarget>
         <oboInOwl:hasDbXref>FlyBase:FBrf0259490</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>doi:10.1038/s41586-025-08746-0</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBbt_20011452"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
-        <owl:annotatedTarget>LT55</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>FlyBase:FBrf0246888</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>doi:10.1038/s41586-025-08746-0</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBbt_20011452"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
-        <owl:annotatedTarget>LT55</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>FlyBase:FBrf0260535</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>doi:10.1038/s41586-025-08746-0</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -9120,7 +8725,6 @@
         <terms:contributor rdf:resource="http://orcid.org/0000-0002-1373-1705"/>
         <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-04-28T12:00:00Z</terms:date>
         <oboInOwl:hasOBONamespace>fly_anatomy.ontology</oboInOwl:hasOBONamespace>
-        <oboInOwl:hasRelatedSynonym>LT56</oboInOwl:hasRelatedSynonym>
         <oboInOwl:id>FBbt:20011453</oboInOwl:id>
         <rdfs:comment>Cell type identified in multiple EM datasets and at light level (Nern et al., 2025). Synapse locations are given where each cell of this type in neuprint has at least 10 connections. Other information from Nern et al. (2025) supplements.</rdfs:comment>
         <rdfs:label>adult lobula tangential neuron LT56</rdfs:label>
@@ -9130,20 +8734,6 @@
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Adult lobula tangential neuron of the LT56 group (Nern et al., 2025). It receives input in the ipsilateral lateral accessory lobe, lobula layer 2, lobula layer 3, lobula layer 4, lobula layer 6, gorget, epaulette, posterior ventrolateral protocerebrum, anterior ventrolateral protocerebrum, posterior lateral protocerebrum, inferior clamp, superior posterior slope, lobula layer 5A and lobula layer 5B (Nern et al., 2025). It sends output to the ipsilateral lobula layer 2, lobula layer 3, lobula layer 4, posterior ventrolateral protocerebrum, anterior ventrolateral protocerebrum, lobula layer 5A and lobula layer 5B (Nern et al., 2025). Its predicted neurotransmitter is glutamate (Eckstein et al., 2024; Nern et al., 2025). There is one of these cells per hemisphere (Nern et al., 2025).</owl:annotatedTarget>
         <oboInOwl:hasDbXref>FlyBase:FBrf0259490</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>doi:10.1038/s41586-025-08746-0</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBbt_20011453"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
-        <owl:annotatedTarget>LT56</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>FlyBase:FBrf0246888</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>doi:10.1038/s41586-025-08746-0</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBbt_20011453"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
-        <owl:annotatedTarget>LT56</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>FlyBase:FBrf0260535</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>doi:10.1038/s41586-025-08746-0</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -9260,7 +8850,6 @@
         <terms:contributor rdf:resource="http://orcid.org/0000-0002-1373-1705"/>
         <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-04-28T12:00:00Z</terms:date>
         <oboInOwl:hasOBONamespace>fly_anatomy.ontology</oboInOwl:hasOBONamespace>
-        <oboInOwl:hasRelatedSynonym>LT58</oboInOwl:hasRelatedSynonym>
         <oboInOwl:id>FBbt:20011454</oboInOwl:id>
         <rdfs:comment>Cell type identified in multiple EM datasets (Nern et al., 2025). Synapse locations are given where each cell of this type in neuprint has at least 10 connections. Other information from Nern et al. (2025) supplements.</rdfs:comment>
         <rdfs:label>adult lobula tangential neuron LT58</rdfs:label>
@@ -9270,20 +8859,6 @@
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Adult lobula tangential neuron of the LT58 group (Nern et al., 2025). It receives input in the ipsilateral medulla layer M6, medulla serpentine layer, medulla layer M8, lobula layer 4, lobula layer 6, posterior lateral protocerebrum, accessory medulla, lobula layer 5A and lobula layer 5B (Nern et al., 2025). It sends output to the ipsilateral medulla layer M6, medulla serpentine layer, medulla layer M8, lobula layer 6, posterior lateral protocerebrum, lobula layer 5A and lobula layer 5B (Nern et al., 2025). Its predicted neurotransmitter is glutamate (Eckstein et al., 2024; Nern et al., 2025). There is one of these cells per hemisphere (Nern et al., 2025).</owl:annotatedTarget>
         <oboInOwl:hasDbXref>FlyBase:FBrf0259490</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>doi:10.1038/s41586-025-08746-0</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBbt_20011454"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
-        <owl:annotatedTarget>LT58</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>FlyBase:FBrf0246888</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>doi:10.1038/s41586-025-08746-0</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBbt_20011454"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
-        <owl:annotatedTarget>LT58</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>FlyBase:FBrf0260535</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>doi:10.1038/s41586-025-08746-0</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -9376,7 +8951,6 @@
         <terms:contributor rdf:resource="http://orcid.org/0000-0002-1373-1705"/>
         <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-04-28T12:00:00Z</terms:date>
         <oboInOwl:hasOBONamespace>fly_anatomy.ontology</oboInOwl:hasOBONamespace>
-        <oboInOwl:hasRelatedSynonym>LT59</oboInOwl:hasRelatedSynonym>
         <oboInOwl:id>FBbt:20011455</oboInOwl:id>
         <rdfs:comment>Cell type identified in multiple EM datasets (Nern et al., 2025). Synapse locations are given where each cell of this type in neuprint has at least 10 connections. Other information from Nern et al. (2025) supplements.</rdfs:comment>
         <rdfs:label>adult lobula tangential neuron LT59</rdfs:label>
@@ -9386,20 +8960,6 @@
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Adult lobula tangential neuron of the LT59 group (Nern et al., 2025). It receives input in the ipsilateral lobula layer 6, posterior lateral protocerebrum, inferior clamp, superior posterior slope and lobula layer 5B, and the inferior bridge (Nern et al., 2025). It sends output to the ipsilateral lobula layer 6, posterior lateral protocerebrum, inferior clamp, superior posterior slope and lobula layer 5B, and the inferior bridge (Nern et al., 2025). Its predicted neurotransmitter is acetylcholine (Eckstein et al., 2024; Nern et al., 2025). There is one of these cells per hemisphere (Nern et al., 2025).</owl:annotatedTarget>
         <oboInOwl:hasDbXref>FlyBase:FBrf0259490</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>doi:10.1038/s41586-025-08746-0</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBbt_20011455"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
-        <owl:annotatedTarget>LT59</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>FlyBase:FBrf0246888</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>doi:10.1038/s41586-025-08746-0</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBbt_20011455"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
-        <owl:annotatedTarget>LT59</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>FlyBase:FBrf0260535</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>doi:10.1038/s41586-025-08746-0</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -9498,7 +9058,6 @@
         <terms:contributor rdf:resource="http://orcid.org/0000-0002-1373-1705"/>
         <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-04-28T12:00:00Z</terms:date>
         <oboInOwl:hasOBONamespace>fly_anatomy.ontology</oboInOwl:hasOBONamespace>
-        <oboInOwl:hasRelatedSynonym>LT60</oboInOwl:hasRelatedSynonym>
         <oboInOwl:id>FBbt:20011456</oboInOwl:id>
         <rdfs:comment>Cell type identified in multiple EM datasets (Nern et al., 2025). Synapse locations are given where each cell of this type in neuprint has at least 10 connections. Other information from Nern et al. (2025) supplements.</rdfs:comment>
         <rdfs:label>adult lobula tangential neuron LT60</rdfs:label>
@@ -9508,20 +9067,6 @@
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Adult lobula tangential neuron of the LT60 group (Nern et al., 2025). It receives input in the ipsilateral lobula layer 2, lobula layer 3, lobula layer 4, posterior ventrolateral protocerebrum, anterior ventrolateral protocerebrum, lobula layer 5A and lobula layer 5B, and the contralateral posterior ventrolateral protocerebrum and anterior ventrolateral protocerebrum (Nern et al., 2025). It sends output to the ipsilateral lobula layer 3, lobula layer 4, posterior ventrolateral protocerebrum, anterior ventrolateral protocerebrum and lobula layer 5A, and the contralateral posterior ventrolateral protocerebrum and anterior ventrolateral protocerebrum (Nern et al., 2025). Its predicted neurotransmitter is acetylcholine (Eckstein et al., 2024; Nern et al., 2025). There is one of these cells per hemisphere (Nern et al., 2025).</owl:annotatedTarget>
         <oboInOwl:hasDbXref>FlyBase:FBrf0259490</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>doi:10.1038/s41586-025-08746-0</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBbt_20011456"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
-        <owl:annotatedTarget>LT60</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>FlyBase:FBrf0246888</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>doi:10.1038/s41586-025-08746-0</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBbt_20011456"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
-        <owl:annotatedTarget>LT60</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>FlyBase:FBrf0260535</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>doi:10.1038/s41586-025-08746-0</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -9608,8 +9153,6 @@
         <terms:contributor rdf:resource="http://orcid.org/0000-0002-1373-1705"/>
         <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-04-28T12:00:00Z</terms:date>
         <oboInOwl:hasOBONamespace>fly_anatomy.ontology</oboInOwl:hasOBONamespace>
-        <oboInOwl:hasRelatedSynonym>LT61</oboInOwl:hasRelatedSynonym>
-        <oboInOwl:hasRelatedSynonym>LT61a</oboInOwl:hasRelatedSynonym>
         <oboInOwl:id>FBbt:20011457</oboInOwl:id>
         <rdfs:comment>Cell type identified in multiple EM datasets and at light level (Nern et al., 2025). Synapse locations are given where each cell of this type in neuprint has at least 10 connections. Other information from Nern et al. (2025) supplements.</rdfs:comment>
         <rdfs:label>adult lobula tangential neuron LT61a</rdfs:label>
@@ -9618,20 +9161,6 @@
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBbt_20011457"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Adult lobula tangential neuron of the LT61a group (Nern et al., 2025). It receives input in the ipsilateral lobula layer 2, lobula layer 3, lobula layer 4, posterior ventrolateral protocerebrum, anterior ventrolateral protocerebrum, lobula layer 5A and lobula layer 5B, and the contralateral posterior ventrolateral protocerebrum and anterior ventrolateral protocerebrum (Nern et al., 2025). It sends output to the ipsilateral lobula, posterior ventrolateral protocerebrum, anterior ventrolateral protocerebrum and posterior lateral protocerebrum, and the contralateral posterior ventrolateral protocerebrum and anterior ventrolateral protocerebrum (Nern et al., 2025). There is one of these cells per hemisphere (Nern et al., 2025).</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>doi:10.1038/s41586-025-08746-0</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBbt_20011457"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
-        <owl:annotatedTarget>LT61</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>FlyBase:FBrf0246888</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>doi:10.1038/s41586-025-08746-0</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBbt_20011457"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
-        <owl:annotatedTarget>LT61a</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>FlyBase:FBrf0260535</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>doi:10.1038/s41586-025-08746-0</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -9742,8 +9271,6 @@
         <terms:contributor rdf:resource="http://orcid.org/0000-0002-1373-1705"/>
         <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-04-28T12:00:00Z</terms:date>
         <oboInOwl:hasOBONamespace>fly_anatomy.ontology</oboInOwl:hasOBONamespace>
-        <oboInOwl:hasRelatedSynonym>LT61</oboInOwl:hasRelatedSynonym>
-        <oboInOwl:hasRelatedSynonym>LT61b</oboInOwl:hasRelatedSynonym>
         <oboInOwl:id>FBbt:20011458</oboInOwl:id>
         <rdfs:comment>Cell type identified in multiple EM datasets (Nern et al., 2025). Synapse locations are given where each cell of this type in neuprint has at least 10 connections. Other information from Nern et al. (2025) supplements.</rdfs:comment>
         <rdfs:label>adult lobula tangential neuron LT61b</rdfs:label>
@@ -9753,20 +9280,6 @@
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Adult lobula tangential neuron of the LT61b group (Nern et al., 2025). It receives input in the ipsilateral lobula layer 2, lobula layer 3, lobula layer 4, lobula layer 6, posterior ventrolateral protocerebrum, anterior ventrolateral protocerebrum, lobula layer 5A and lobula layer 5B, and the contralateral posterior ventrolateral protocerebrum and anterior ventrolateral protocerebrum (Nern et al., 2025). It sends output to the ipsilateral lobula layer 3, lobula layer 4, posterior ventrolateral protocerebrum, anterior ventrolateral protocerebrum, posterior lateral protocerebrum and lobula layer 5A, and the contralateral posterior ventrolateral protocerebrum and anterior ventrolateral protocerebrum (Nern et al., 2025). Its predicted neurotransmitter is acetylcholine (Eckstein et al., 2024; Nern et al., 2025). There is one of these cells per hemisphere (Nern et al., 2025).</owl:annotatedTarget>
         <oboInOwl:hasDbXref>FlyBase:FBrf0259490</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>doi:10.1038/s41586-025-08746-0</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBbt_20011458"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
-        <owl:annotatedTarget>LT61</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>FlyBase:FBrf0246888</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>doi:10.1038/s41586-025-08746-0</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBbt_20011458"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
-        <owl:annotatedTarget>LT61b</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>FlyBase:FBrf0260535</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>doi:10.1038/s41586-025-08746-0</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -9859,7 +9372,6 @@
         <terms:contributor rdf:resource="http://orcid.org/0000-0002-1373-1705"/>
         <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-04-28T12:00:00Z</terms:date>
         <oboInOwl:hasOBONamespace>fly_anatomy.ontology</oboInOwl:hasOBONamespace>
-        <oboInOwl:hasRelatedSynonym>LT62</oboInOwl:hasRelatedSynonym>
         <oboInOwl:id>FBbt:20011459</oboInOwl:id>
         <rdfs:comment>Cell type identified in multiple EM datasets (Nern et al., 2025). Synapse locations are given where each cell of this type in neuprint has at least 10 connections. Other information from Nern et al. (2025) supplements.</rdfs:comment>
         <rdfs:label>adult lobula tangential neuron LT62</rdfs:label>
@@ -9868,20 +9380,6 @@
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBbt_20011459"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Adult lobula tangential neuron of the LT62 group (Nern et al., 2025). It receives input in the ipsilateral lobula layer 2, lobula layer 3, lobula layer 4, gorget, posterior ventrolateral protocerebrum, anterior ventrolateral protocerebrum, lobula layer 5A and lobula layer 5B, and the contralateral gorget, posterior ventrolateral protocerebrum and anterior ventrolateral protocerebrum (Nern et al., 2025). It sends output to the ipsilateral lobula, gorget, posterior ventrolateral protocerebrum and anterior ventrolateral protocerebrum, and the contralateral gorget, posterior ventrolateral protocerebrum and anterior ventrolateral protocerebrum (Nern et al., 2025). There is one of these cells per hemisphere (Nern et al., 2025).</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>doi:10.1038/s41586-025-08746-0</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBbt_20011459"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
-        <owl:annotatedTarget>LT62</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>FlyBase:FBrf0246888</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>doi:10.1038/s41586-025-08746-0</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBbt_20011459"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
-        <owl:annotatedTarget>LT62</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>FlyBase:FBrf0260535</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>doi:10.1038/s41586-025-08746-0</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -9974,7 +9472,6 @@
         <terms:contributor rdf:resource="http://orcid.org/0000-0002-1373-1705"/>
         <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-04-28T12:00:00Z</terms:date>
         <oboInOwl:hasOBONamespace>fly_anatomy.ontology</oboInOwl:hasOBONamespace>
-        <oboInOwl:hasRelatedSynonym>LT63</oboInOwl:hasRelatedSynonym>
         <oboInOwl:id>FBbt:20011460</oboInOwl:id>
         <rdfs:comment>Cell type identified in multiple EM datasets (Nern et al., 2025). Synapse locations are given where each cell of this type in neuprint has at least 10 connections. Other information from Nern et al. (2025) supplements.</rdfs:comment>
         <rdfs:label>adult lobula tangential neuron LT63</rdfs:label>
@@ -9984,20 +9481,6 @@
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Adult lobula tangential neuron of the LT63 group (Nern et al., 2025). It receives input in the ipsilateral lobula layer 6, posterior lateral protocerebrum, inferior clamp, superior posterior slope, lobula layer 5A and lobula layer 5B (Nern et al., 2025). It sends output to the ipsilateral lobula layer 6, posterior lateral protocerebrum, inferior clamp, superior posterior slope and lobula layer 5B, and the inferior bridge (Nern et al., 2025). Its predicted neurotransmitter is acetylcholine (Eckstein et al., 2024; Nern et al., 2025). There are approximately 2 of these cells per hemisphere (Nern et al., 2025).</owl:annotatedTarget>
         <oboInOwl:hasDbXref>FlyBase:FBrf0259490</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>doi:10.1038/s41586-025-08746-0</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBbt_20011460"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
-        <owl:annotatedTarget>LT63</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>FlyBase:FBrf0246888</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>doi:10.1038/s41586-025-08746-0</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBbt_20011460"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
-        <owl:annotatedTarget>LT63</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>FlyBase:FBrf0260535</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>doi:10.1038/s41586-025-08746-0</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -10096,7 +9579,6 @@
         <terms:contributor rdf:resource="http://orcid.org/0000-0002-1373-1705"/>
         <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-04-28T12:00:00Z</terms:date>
         <oboInOwl:hasOBONamespace>fly_anatomy.ontology</oboInOwl:hasOBONamespace>
-        <oboInOwl:hasRelatedSynonym>LT64</oboInOwl:hasRelatedSynonym>
         <oboInOwl:id>FBbt:20011461</oboInOwl:id>
         <rdfs:comment>Cell type identified in multiple EM datasets (Nern et al., 2025). Synapse locations are given where each cell of this type in neuprint has at least 10 connections. Other information from Nern et al. (2025) supplements.</rdfs:comment>
         <rdfs:label>adult lobula tangential neuron LT64</rdfs:label>
@@ -10106,20 +9588,6 @@
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Adult lobula tangential neuron of the LT64 group (Nern et al., 2025). It receives input in the ipsilateral lobula layer 4, lobula layer 6, posterior lateral protocerebrum, inferior clamp, superior posterior slope, lobula layer 5A and lobula layer 5B, and the inferior bridge (Nern et al., 2025). It sends output to the ipsilateral lobula layer 6, posterior lateral protocerebrum, inferior clamp, superior posterior slope and lobula layer 5B (Nern et al., 2025). Its predicted neurotransmitter is acetylcholine (Eckstein et al., 2024; Nern et al., 2025). There is one of these cells per hemisphere (Nern et al., 2025).</owl:annotatedTarget>
         <oboInOwl:hasDbXref>FlyBase:FBrf0259490</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>doi:10.1038/s41586-025-08746-0</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBbt_20011461"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
-        <owl:annotatedTarget>LT64</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>FlyBase:FBrf0246888</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>doi:10.1038/s41586-025-08746-0</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBbt_20011461"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
-        <owl:annotatedTarget>LT64</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>FlyBase:FBrf0260535</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>doi:10.1038/s41586-025-08746-0</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -10212,7 +9680,6 @@
         <terms:contributor rdf:resource="http://orcid.org/0000-0002-1373-1705"/>
         <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-04-28T12:00:00Z</terms:date>
         <oboInOwl:hasOBONamespace>fly_anatomy.ontology</oboInOwl:hasOBONamespace>
-        <oboInOwl:hasRelatedSynonym>LT65</oboInOwl:hasRelatedSynonym>
         <oboInOwl:id>FBbt:20011462</oboInOwl:id>
         <rdfs:comment>Cell type identified in multiple EM datasets (Nern et al., 2025). Synapse locations are given where each cell of this type in neuprint has at least 10 connections. Other information from Nern et al. (2025) supplements.</rdfs:comment>
         <rdfs:label>adult lobula tangential neuron LT65</rdfs:label>
@@ -10222,20 +9689,6 @@
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Adult lobula tangential neuron of the LT65 group (Nern et al., 2025). It receives input in the ipsilateral lobula layer 4, lobula layer 6, posterior ventrolateral protocerebrum, posterior lateral protocerebrum, lobula layer 5A and lobula layer 5B (Nern et al., 2025). It sends output to the ipsilateral lobula layer 4, lobula layer 6, posterior ventrolateral protocerebrum, posterior lateral protocerebrum, lobula layer 5A and lobula layer 5B (Nern et al., 2025). Its predicted neurotransmitter is acetylcholine (Eckstein et al., 2024; Nern et al., 2025). There is one of these cells per hemisphere (Nern et al., 2025).</owl:annotatedTarget>
         <oboInOwl:hasDbXref>FlyBase:FBrf0259490</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>doi:10.1038/s41586-025-08746-0</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBbt_20011462"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
-        <owl:annotatedTarget>LT65</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>FlyBase:FBrf0246888</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>doi:10.1038/s41586-025-08746-0</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBbt_20011462"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
-        <owl:annotatedTarget>LT65</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>FlyBase:FBrf0260535</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>doi:10.1038/s41586-025-08746-0</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -10394,7 +9847,6 @@
         <terms:contributor rdf:resource="http://orcid.org/0000-0002-1373-1705"/>
         <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-04-28T12:00:00Z</terms:date>
         <oboInOwl:hasOBONamespace>fly_anatomy.ontology</oboInOwl:hasOBONamespace>
-        <oboInOwl:hasRelatedSynonym>LT66</oboInOwl:hasRelatedSynonym>
         <oboInOwl:id>FBbt:20011463</oboInOwl:id>
         <rdfs:comment>Cell type identified in multiple EM datasets (Nern et al., 2025). Synapse locations are given where each cell of this type in neuprint has at least 10 connections. Other information from Nern et al. (2025) supplements.</rdfs:comment>
         <rdfs:label>adult lobula tangential neuron LT66</rdfs:label>
@@ -10404,20 +9856,6 @@
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Adult lobula tangential neuron of the LT66 group (Nern et al., 2025). It receives input in the ipsilateral lobula layer 2, lobula layer 3, lobula layer 4, lobula layer 6, posterior ventrolateral protocerebrum, anterior ventrolateral protocerebrum, inferior clamp, superior posterior slope, lobula layer 5A and lobula layer 5B, and the contralateral lobula, posterior ventrolateral protocerebrum, anterior ventrolateral protocerebrum and superior posterior slope (Nern et al., 2025). It sends output to the ipsilateral lobula layer 1, lobula layer 2, lobula layer 3, lobula layer 4, gorget, posterior ventrolateral protocerebrum, anterior ventrolateral protocerebrum, posterior lateral protocerebrum, inferior clamp and superior posterior slope, and the contralateral lobula layer 2, lobula layer 4, lobula plate layer 1, gorget, posterior ventrolateral protocerebrum, anterior ventrolateral protocerebrum, posterior lateral protocerebrum, inferior clamp, superior posterior slope and lobula layer 5A (Nern et al., 2025). Its predicted neurotransmitter is acetylcholine (Eckstein et al., 2024; Nern et al., 2025). There is one of these cells per hemisphere (Nern et al., 2025).</owl:annotatedTarget>
         <oboInOwl:hasDbXref>FlyBase:FBrf0259490</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>doi:10.1038/s41586-025-08746-0</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBbt_20011463"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
-        <owl:annotatedTarget>LT66</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>FlyBase:FBrf0246888</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>doi:10.1038/s41586-025-08746-0</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBbt_20011463"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
-        <owl:annotatedTarget>LT66</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>FlyBase:FBrf0260535</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>doi:10.1038/s41586-025-08746-0</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -10498,7 +9936,6 @@
         <terms:contributor rdf:resource="http://orcid.org/0000-0002-1373-1705"/>
         <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-04-28T12:00:00Z</terms:date>
         <oboInOwl:hasOBONamespace>fly_anatomy.ontology</oboInOwl:hasOBONamespace>
-        <oboInOwl:hasRelatedSynonym>LT67</oboInOwl:hasRelatedSynonym>
         <oboInOwl:id>FBbt:20011464</oboInOwl:id>
         <rdfs:comment>Cell type identified in multiple EM datasets (Nern et al., 2025). Synapse locations are given where each cell of this type in neuprint has at least 10 connections. Other information from Nern et al. (2025) supplements.</rdfs:comment>
         <rdfs:label>adult lobula tangential neuron LT67</rdfs:label>
@@ -10507,20 +9944,6 @@
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBbt_20011464"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Adult lobula tangential neuron of the LT67 group (Nern et al., 2025). It receives input in the ipsilateral lobula layer 6, posterior ventrolateral protocerebrum, posterior lateral protocerebrum, superior clamp, lobula layer 5A and lobula layer 5B (Nern et al., 2025). It sends output to the ipsilateral optic lobe, posterior ventrolateral protocerebrum, anterior ventrolateral protocerebrum, posterior lateral protocerebrum and superior clamp (Nern et al., 2025). There is one of these cells per hemisphere (Nern et al., 2025).</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>doi:10.1038/s41586-025-08746-0</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBbt_20011464"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
-        <owl:annotatedTarget>LT67</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>FlyBase:FBrf0246888</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>doi:10.1038/s41586-025-08746-0</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBbt_20011464"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
-        <owl:annotatedTarget>LT67</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>FlyBase:FBrf0260535</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>doi:10.1038/s41586-025-08746-0</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -10565,7 +9988,6 @@
         <terms:contributor rdf:resource="http://orcid.org/0000-0002-1373-1705"/>
         <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-04-28T12:00:00Z</terms:date>
         <oboInOwl:hasOBONamespace>fly_anatomy.ontology</oboInOwl:hasOBONamespace>
-        <oboInOwl:hasRelatedSynonym>LT68</oboInOwl:hasRelatedSynonym>
         <oboInOwl:id>FBbt:20011465</oboInOwl:id>
         <rdfs:comment>Cell type identified in multiple EM datasets (Nern et al., 2025). Synapse locations are given where each cell of this type in neuprint has at least 10 connections. Other information from Nern et al. (2025) supplements.</rdfs:comment>
         <rdfs:label>adult lobula tangential neuron LT68</rdfs:label>
@@ -10574,20 +9996,6 @@
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBbt_20011465"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Adult lobula tangential neuron of the LT68 group (Nern et al., 2025). It receives input in the ipsilateral lobula layer 6, posterior lateral protocerebrum and lobula layer 5B (Nern et al., 2025). It sends output to the ipsilateral lobula layer 6 and posterior lateral protocerebrum (Nern et al., 2025). There are approximately 2 of these cells per hemisphere (Nern et al., 2025).</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>doi:10.1038/s41586-025-08746-0</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBbt_20011465"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
-        <owl:annotatedTarget>LT68</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>FlyBase:FBrf0246888</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>doi:10.1038/s41586-025-08746-0</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBbt_20011465"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
-        <owl:annotatedTarget>LT68</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>FlyBase:FBrf0260535</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>doi:10.1038/s41586-025-08746-0</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -10680,7 +10088,6 @@
         <terms:contributor rdf:resource="http://orcid.org/0000-0002-1373-1705"/>
         <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-04-28T12:00:00Z</terms:date>
         <oboInOwl:hasOBONamespace>fly_anatomy.ontology</oboInOwl:hasOBONamespace>
-        <oboInOwl:hasRelatedSynonym>LT69</oboInOwl:hasRelatedSynonym>
         <oboInOwl:id>FBbt:20011466</oboInOwl:id>
         <rdfs:comment>Cell type identified in multiple EM datasets (Nern et al., 2025). Synapse locations are given where each cell of this type in neuprint has at least 10 connections. Other information from Nern et al. (2025) supplements.</rdfs:comment>
         <rdfs:label>adult lobula tangential neuron LT69</rdfs:label>
@@ -10690,20 +10097,6 @@
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Adult lobula tangential neuron of the LT69 group (Nern et al., 2025). It receives input in the ipsilateral lobula layer 6, posterior lateral protocerebrum, inferior clamp, superior posterior slope, lobula layer 5A and lobula layer 5B (Nern et al., 2025). It sends output to the ipsilateral lobula layer 6, posterior lateral protocerebrum, inferior clamp, superior posterior slope and lobula layer 5B, and the inferior bridge (Nern et al., 2025). Its predicted neurotransmitter is acetylcholine (Eckstein et al., 2024; Nern et al., 2025). There is one of these cells per hemisphere (Nern et al., 2025).</owl:annotatedTarget>
         <oboInOwl:hasDbXref>FlyBase:FBrf0259490</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>doi:10.1038/s41586-025-08746-0</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBbt_20011466"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
-        <owl:annotatedTarget>LT69</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>FlyBase:FBrf0246888</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>doi:10.1038/s41586-025-08746-0</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBbt_20011466"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
-        <owl:annotatedTarget>LT69</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>FlyBase:FBrf0260535</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>doi:10.1038/s41586-025-08746-0</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -10754,7 +10147,6 @@
         <terms:contributor rdf:resource="http://orcid.org/0000-0002-1373-1705"/>
         <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-04-28T12:00:00Z</terms:date>
         <oboInOwl:hasOBONamespace>fly_anatomy.ontology</oboInOwl:hasOBONamespace>
-        <oboInOwl:hasRelatedSynonym>LT70</oboInOwl:hasRelatedSynonym>
         <oboInOwl:id>FBbt:20011467</oboInOwl:id>
         <rdfs:comment>Cell type identified in multiple EM datasets and at light level (Nern et al., 2025). Synapse locations are given where each cell of this type in neuprint has at least 10 connections. Other information from Nern et al. (2025) supplements.</rdfs:comment>
         <rdfs:label>adult lobula tangential neuron LT70</rdfs:label>
@@ -10764,20 +10156,6 @@
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Adult lobula tangential neuron of the LT70 group (Nern et al., 2025). It receives input in the ipsilateral lobula layer 6, posterior lateral protocerebrum and lobula layer 5B (Nern et al., 2025). It sends output to the ipsilateral lobula layer 6 and lobula layer 5B (Nern et al., 2025). Its predicted neurotransmitter is GABA (Eckstein et al., 2024; Nern et al., 2025). There are approximately 6 of these cells per hemisphere (Nern et al., 2025).</owl:annotatedTarget>
         <oboInOwl:hasDbXref>FlyBase:FBrf0259490</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>doi:10.1038/s41586-025-08746-0</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBbt_20011467"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
-        <owl:annotatedTarget>LT70</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>FlyBase:FBrf0246888</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>doi:10.1038/s41586-025-08746-0</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBbt_20011467"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
-        <owl:annotatedTarget>LT70</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>FlyBase:FBrf0260535</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>doi:10.1038/s41586-025-08746-0</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -10882,7 +10260,6 @@
         <terms:contributor rdf:resource="http://orcid.org/0000-0002-1373-1705"/>
         <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-04-28T12:00:00Z</terms:date>
         <oboInOwl:hasOBONamespace>fly_anatomy.ontology</oboInOwl:hasOBONamespace>
-        <oboInOwl:hasRelatedSynonym>LT72</oboInOwl:hasRelatedSynonym>
         <oboInOwl:id>FBbt:20011468</oboInOwl:id>
         <rdfs:comment>Cell type identified in multiple EM datasets (Nern et al., 2025). Synapse locations are given where each cell of this type in neuprint has at least 10 connections. Other information from Nern et al. (2025) supplements.</rdfs:comment>
         <rdfs:label>adult lobula tangential neuron LT72</rdfs:label>
@@ -10892,20 +10269,6 @@
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Adult lobula tangential neuron of the LT72 group (Nern et al., 2025). It receives input in the ipsilateral superior lateral protocerebrum, lobula layer 6, posterior lateral protocerebrum, superior clamp, inferior clamp, lobula layer 5A and lobula layer 5B (Nern et al., 2025). It sends output to the ipsilateral superior lateral protocerebrum, lobula layer 6, posterior lateral protocerebrum, superior clamp, inferior clamp, superior posterior slope and lobula layer 5B (Nern et al., 2025). Its predicted neurotransmitter is acetylcholine (Eckstein et al., 2024; Nern et al., 2025). There is one of these cells per hemisphere (Nern et al., 2025).</owl:annotatedTarget>
         <oboInOwl:hasDbXref>FlyBase:FBrf0259490</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>doi:10.1038/s41586-025-08746-0</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBbt_20011468"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
-        <owl:annotatedTarget>LT72</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>FlyBase:FBrf0246888</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>doi:10.1038/s41586-025-08746-0</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBbt_20011468"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
-        <owl:annotatedTarget>LT72</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>FlyBase:FBrf0260535</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>doi:10.1038/s41586-025-08746-0</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -10998,7 +10361,6 @@
         <terms:contributor rdf:resource="http://orcid.org/0000-0002-1373-1705"/>
         <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-04-28T12:00:00Z</terms:date>
         <oboInOwl:hasOBONamespace>fly_anatomy.ontology</oboInOwl:hasOBONamespace>
-        <oboInOwl:hasRelatedSynonym>LT73</oboInOwl:hasRelatedSynonym>
         <oboInOwl:id>FBbt:20011469</oboInOwl:id>
         <rdfs:comment>Cell type identified in multiple EM datasets (Nern et al., 2025). Synapse locations are given where each cell of this type in neuprint has at least 10 connections. Other information from Nern et al. (2025) supplements.</rdfs:comment>
         <rdfs:label>adult lobula tangential neuron LT73</rdfs:label>
@@ -11008,20 +10370,6 @@
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Adult lobula tangential neuron of the LT73 group (Nern et al., 2025). It receives input in the ipsilateral lobula layer 4, lobula layer 6, posterior ventrolateral protocerebrum, anterior ventrolateral protocerebrum, posterior lateral protocerebrum, lobula layer 5A and lobula layer 5B (Nern et al., 2025). It sends output to the ipsilateral posterior ventrolateral protocerebrum, anterior ventrolateral protocerebrum, posterior lateral protocerebrum, lobula layer 5A and lobula layer 5B (Nern et al., 2025). Its predicted neurotransmitter is glutamate (Eckstein et al., 2024; Nern et al., 2025). There are approximately 2 of these cells per hemisphere (Nern et al., 2025).</owl:annotatedTarget>
         <oboInOwl:hasDbXref>FlyBase:FBrf0259490</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>doi:10.1038/s41586-025-08746-0</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBbt_20011469"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
-        <owl:annotatedTarget>LT73</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>FlyBase:FBrf0246888</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>doi:10.1038/s41586-025-08746-0</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBbt_20011469"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
-        <owl:annotatedTarget>LT73</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>FlyBase:FBrf0260535</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>doi:10.1038/s41586-025-08746-0</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -11120,7 +10468,6 @@
         <terms:contributor rdf:resource="http://orcid.org/0000-0002-1373-1705"/>
         <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-04-28T12:00:00Z</terms:date>
         <oboInOwl:hasOBONamespace>fly_anatomy.ontology</oboInOwl:hasOBONamespace>
-        <oboInOwl:hasRelatedSynonym>LT74</oboInOwl:hasRelatedSynonym>
         <oboInOwl:id>FBbt:20011470</oboInOwl:id>
         <rdfs:comment>Cell type identified in multiple EM datasets and at light level (Nern et al., 2025). Synapse locations are given where each cell of this type in neuprint has at least 10 connections. Other information from Nern et al. (2025) supplements.</rdfs:comment>
         <rdfs:label>adult lobula tangential neuron LT74</rdfs:label>
@@ -11130,20 +10477,6 @@
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Adult lobula tangential neuron of the LT74 group (Nern et al., 2025). It receives input in the ipsilateral lobula layer 3, lobula layer 4, posterior ventrolateral protocerebrum, anterior ventrolateral protocerebrum, posterior lateral protocerebrum, lobula layer 5A and lobula layer 5B (Nern et al., 2025). It sends output to the ipsilateral lobula layer 3, lobula layer 4, posterior ventrolateral protocerebrum, anterior ventrolateral protocerebrum, posterior lateral protocerebrum and lobula layer 5A (Nern et al., 2025). Its predicted neurotransmitter is glutamate (Eckstein et al., 2024; Nern et al., 2025). There are approximately 3 of these cells per hemisphere (Nern et al., 2025).</owl:annotatedTarget>
         <oboInOwl:hasDbXref>FlyBase:FBrf0259490</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>doi:10.1038/s41586-025-08746-0</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBbt_20011470"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
-        <owl:annotatedTarget>LT74</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>FlyBase:FBrf0246888</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>doi:10.1038/s41586-025-08746-0</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBbt_20011470"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
-        <owl:annotatedTarget>LT74</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>FlyBase:FBrf0260535</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>doi:10.1038/s41586-025-08746-0</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -11248,7 +10581,6 @@
         <terms:contributor rdf:resource="http://orcid.org/0000-0002-1373-1705"/>
         <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-04-28T12:00:00Z</terms:date>
         <oboInOwl:hasOBONamespace>fly_anatomy.ontology</oboInOwl:hasOBONamespace>
-        <oboInOwl:hasRelatedSynonym>LT75</oboInOwl:hasRelatedSynonym>
         <oboInOwl:id>FBbt:20011471</oboInOwl:id>
         <rdfs:comment>Cell type identified in multiple EM datasets (Nern et al., 2025). Synapse locations are given where each cell of this type in neuprint has at least 10 connections. Other information from Nern et al. (2025) supplements.</rdfs:comment>
         <rdfs:label>adult lobula tangential neuron LT75</rdfs:label>
@@ -11257,20 +10589,6 @@
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBbt_20011471"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Adult lobula tangential neuron of the LT75 group (Nern et al., 2025). It receives input in the ipsilateral lobula layer 4, lobula layer 6, posterior ventrolateral protocerebrum, posterior lateral protocerebrum, superior clamp, inferior clamp, lobula layer 5A and lobula layer 5B (Nern et al., 2025). It sends output to the ipsilateral optic lobe, superior lateral protocerebrum, posterior ventrolateral protocerebrum, anterior ventrolateral protocerebrum, posterior lateral protocerebrum, superior clamp and inferior clamp (Nern et al., 2025). There is one of these cells per hemisphere (Nern et al., 2025).</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>doi:10.1038/s41586-025-08746-0</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBbt_20011471"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
-        <owl:annotatedTarget>LT75</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>FlyBase:FBrf0246888</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>doi:10.1038/s41586-025-08746-0</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBbt_20011471"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
-        <owl:annotatedTarget>LT75</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>FlyBase:FBrf0260535</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>doi:10.1038/s41586-025-08746-0</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -11363,7 +10681,6 @@
         <terms:contributor rdf:resource="http://orcid.org/0000-0002-1373-1705"/>
         <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-04-28T12:00:00Z</terms:date>
         <oboInOwl:hasOBONamespace>fly_anatomy.ontology</oboInOwl:hasOBONamespace>
-        <oboInOwl:hasRelatedSynonym>LT76</oboInOwl:hasRelatedSynonym>
         <oboInOwl:id>FBbt:20011472</oboInOwl:id>
         <rdfs:comment>Cell type identified in multiple EM datasets (Nern et al., 2025). Synapse locations are given where each cell of this type in neuprint has at least 10 connections. Other information from Nern et al. (2025) supplements.</rdfs:comment>
         <rdfs:label>adult lobula tangential neuron LT76</rdfs:label>
@@ -11372,20 +10689,6 @@
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBbt_20011472"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Adult lobula tangential neuron of the LT76 group (Nern et al., 2025). It receives input in the ipsilateral lobula layer 3, lobula layer 4, lobula layer 6, posterior lateral protocerebrum, superior clamp, inferior clamp, lobula layer 5A and lobula layer 5B (Nern et al., 2025). It sends output to the ipsilateral optic lobe, posterior lateral protocerebrum, superior clamp, inferior clamp and superior posterior slope (Nern et al., 2025). There is one of these cells per hemisphere (Nern et al., 2025).</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>doi:10.1038/s41586-025-08746-0</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBbt_20011472"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
-        <owl:annotatedTarget>LT76</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>FlyBase:FBrf0246888</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>doi:10.1038/s41586-025-08746-0</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBbt_20011472"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
-        <owl:annotatedTarget>LT76</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>FlyBase:FBrf0260535</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>doi:10.1038/s41586-025-08746-0</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -11484,7 +10787,6 @@
         <terms:contributor rdf:resource="http://orcid.org/0000-0002-1373-1705"/>
         <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-04-28T12:00:00Z</terms:date>
         <oboInOwl:hasOBONamespace>fly_anatomy.ontology</oboInOwl:hasOBONamespace>
-        <oboInOwl:hasRelatedSynonym>LT77</oboInOwl:hasRelatedSynonym>
         <oboInOwl:id>FBbt:20011473</oboInOwl:id>
         <rdfs:comment>Cell type identified in multiple EM datasets (Nern et al., 2025). Synapse locations are given where each cell of this type in neuprint has at least 10 connections. Other information from Nern et al. (2025) supplements.</rdfs:comment>
         <rdfs:label>adult lobula tangential neuron LT77</rdfs:label>
@@ -11494,20 +10796,6 @@
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Adult lobula tangential neuron of the LT77 group (Nern et al., 2025). It receives input in the ipsilateral lobula layer 3, lobula layer 4, lobula layer 6, posterior ventrolateral protocerebrum, posterior lateral protocerebrum, lobula layer 5A and lobula layer 5B (Nern et al., 2025). It sends output to the ipsilateral lobula layer 4, lobula layer 6, posterior ventrolateral protocerebrum, posterior lateral protocerebrum, lobula layer 5A and lobula layer 5B (Nern et al., 2025). Its predicted neurotransmitter is glutamate (Eckstein et al., 2024; Nern et al., 2025). There are approximately 3 of these cells per hemisphere (Nern et al., 2025).</owl:annotatedTarget>
         <oboInOwl:hasDbXref>FlyBase:FBrf0259490</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>doi:10.1038/s41586-025-08746-0</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBbt_20011473"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
-        <owl:annotatedTarget>LT77</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>FlyBase:FBrf0246888</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>doi:10.1038/s41586-025-08746-0</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBbt_20011473"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
-        <owl:annotatedTarget>LT77</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>FlyBase:FBrf0260535</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>doi:10.1038/s41586-025-08746-0</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -11606,7 +10894,6 @@
         <terms:contributor rdf:resource="http://orcid.org/0000-0002-1373-1705"/>
         <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-04-28T12:00:00Z</terms:date>
         <oboInOwl:hasOBONamespace>fly_anatomy.ontology</oboInOwl:hasOBONamespace>
-        <oboInOwl:hasRelatedSynonym>LT78</oboInOwl:hasRelatedSynonym>
         <oboInOwl:id>FBbt:20011474</oboInOwl:id>
         <rdfs:comment>Cell type identified in multiple EM datasets and at light level (Nern et al., 2025). Synapse locations are given where each cell of this type in neuprint has at least 10 connections. Other information from Nern et al. (2025) supplements.</rdfs:comment>
         <rdfs:label>adult lobula tangential neuron LT78</rdfs:label>
@@ -11616,20 +10903,6 @@
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Adult lobula tangential neuron of the LT78 group (Nern et al., 2025). It receives input in the ipsilateral lobula layer 3, lobula layer 4, lobula layer 6, posterior ventrolateral protocerebrum, posterior lateral protocerebrum, lobula layer 5A and lobula layer 5B (Nern et al., 2025). It sends output to the ipsilateral lobula layer 4, lobula layer 6, posterior ventrolateral protocerebrum, posterior lateral protocerebrum, lobula layer 5A and lobula layer 5B (Nern et al., 2025). Its predicted neurotransmitter is glutamate (Eckstein et al., 2024; Nern et al., 2025). There are approximately 4 of these cells per hemisphere (Nern et al., 2025).</owl:annotatedTarget>
         <oboInOwl:hasDbXref>FlyBase:FBrf0259490</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>doi:10.1038/s41586-025-08746-0</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBbt_20011474"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
-        <owl:annotatedTarget>LT78</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>FlyBase:FBrf0246888</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>doi:10.1038/s41586-025-08746-0</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBbt_20011474"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
-        <owl:annotatedTarget>LT78</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>FlyBase:FBrf0260535</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>doi:10.1038/s41586-025-08746-0</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -11746,7 +11019,6 @@
         <terms:contributor rdf:resource="http://orcid.org/0000-0002-1373-1705"/>
         <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-04-28T12:00:00Z</terms:date>
         <oboInOwl:hasOBONamespace>fly_anatomy.ontology</oboInOwl:hasOBONamespace>
-        <oboInOwl:hasRelatedSynonym>LT79</oboInOwl:hasRelatedSynonym>
         <oboInOwl:id>FBbt:20011475</oboInOwl:id>
         <rdfs:comment>Cell type identified in multiple EM datasets (Nern et al., 2025). Synapse locations are given where each cell of this type in neuprint has at least 10 connections. Other information from Nern et al. (2025) supplements.</rdfs:comment>
         <rdfs:label>adult lobula tangential neuron LT79</rdfs:label>
@@ -11755,20 +11027,6 @@
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBbt_20011475"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Adult lobula tangential neuron of the LT79 group (Nern et al., 2025). It receives input in the ipsilateral lobula layer 3, lobula layer 4, lobula layer 6, posterior ventrolateral protocerebrum, anterior ventrolateral protocerebrum, posterior lateral protocerebrum, inferior clamp, lobula layer 5A and lobula layer 5B (Nern et al., 2025). It sends output to the ipsilateral lobula layer 6, posterior ventrolateral protocerebrum, anterior ventrolateral protocerebrum, posterior lateral protocerebrum, superior clamp, inferior clamp, lobula layer 5A and lobula layer 5B (Nern et al., 2025). There is one of these cells per hemisphere (Nern et al., 2025).</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>doi:10.1038/s41586-025-08746-0</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBbt_20011475"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
-        <owl:annotatedTarget>LT79</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>FlyBase:FBrf0246888</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>doi:10.1038/s41586-025-08746-0</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBbt_20011475"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
-        <owl:annotatedTarget>LT79</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>FlyBase:FBrf0260535</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>doi:10.1038/s41586-025-08746-0</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -11867,7 +11125,6 @@
         <terms:contributor rdf:resource="http://orcid.org/0000-0002-1373-1705"/>
         <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-04-28T12:00:00Z</terms:date>
         <oboInOwl:hasOBONamespace>fly_anatomy.ontology</oboInOwl:hasOBONamespace>
-        <oboInOwl:hasRelatedSynonym>LT80</oboInOwl:hasRelatedSynonym>
         <oboInOwl:id>FBbt:20011476</oboInOwl:id>
         <rdfs:comment>Cell type identified in multiple EM datasets (Nern et al., 2025). Synapse locations are given where each cell of this type in neuprint has at least 10 connections. Other information from Nern et al. (2025) supplements.</rdfs:comment>
         <rdfs:label>adult lobula tangential neuron LT80</rdfs:label>
@@ -11877,20 +11134,6 @@
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Adult lobula tangential neuron of the LT80 group (Nern et al., 2025). It receives input in the ipsilateral lobula layer 3, lobula layer 4, lobula layer 6, posterior ventrolateral protocerebrum, anterior ventrolateral protocerebrum, lobula layer 5A and lobula layer 5B (Nern et al., 2025). It sends output to the ipsilateral lobula layer 3, lobula layer 4, posterior ventrolateral protocerebrum, anterior ventrolateral protocerebrum, lobula layer 5A and lobula layer 5B (Nern et al., 2025). Its predicted neurotransmitter is acetylcholine (Eckstein et al., 2024; Nern et al., 2025). There are approximately 2 of these cells per hemisphere (Nern et al., 2025).</owl:annotatedTarget>
         <oboInOwl:hasDbXref>FlyBase:FBrf0259490</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>doi:10.1038/s41586-025-08746-0</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBbt_20011476"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
-        <owl:annotatedTarget>LT80</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>FlyBase:FBrf0246888</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>doi:10.1038/s41586-025-08746-0</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBbt_20011476"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
-        <owl:annotatedTarget>LT80</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>FlyBase:FBrf0260535</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>doi:10.1038/s41586-025-08746-0</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -11935,7 +11178,6 @@
         <terms:contributor rdf:resource="http://orcid.org/0000-0002-1373-1705"/>
         <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-04-28T12:00:00Z</terms:date>
         <oboInOwl:hasOBONamespace>fly_anatomy.ontology</oboInOwl:hasOBONamespace>
-        <oboInOwl:hasRelatedSynonym>LT81</oboInOwl:hasRelatedSynonym>
         <oboInOwl:id>FBbt:20011477</oboInOwl:id>
         <rdfs:comment>Cell type identified in multiple EM datasets and at light level (Nern et al., 2025). Synapse locations are given where each cell of this type in neuprint has at least 10 connections. Other information from Nern et al. (2025) supplements.</rdfs:comment>
         <rdfs:label>adult lobula tangential neuron LT81</rdfs:label>
@@ -11944,20 +11186,6 @@
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBbt_20011477"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Adult lobula tangential neuron of the LT81 group (Nern et al., 2025). It receives input in the ipsilateral lobula layer 6, and the contralateral posterior lateral protocerebrum (Nern et al., 2025). It sends output to the contralateral posterior lateral protocerebrum and superior posterior slope (Nern et al., 2025). There are approximately 6 of these cells per hemisphere (Nern et al., 2025).</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>doi:10.1038/s41586-025-08746-0</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBbt_20011477"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
-        <owl:annotatedTarget>LT81</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>FlyBase:FBrf0246888</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>doi:10.1038/s41586-025-08746-0</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBbt_20011477"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
-        <owl:annotatedTarget>LT81</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>FlyBase:FBrf0260535</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>doi:10.1038/s41586-025-08746-0</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -12074,8 +11302,6 @@
         <terms:contributor rdf:resource="http://orcid.org/0000-0002-1373-1705"/>
         <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-04-28T12:00:00Z</terms:date>
         <oboInOwl:hasOBONamespace>fly_anatomy.ontology</oboInOwl:hasOBONamespace>
-        <oboInOwl:hasRelatedSynonym>LT82a</oboInOwl:hasRelatedSynonym>
-        <oboInOwl:hasRelatedSynonym>LT82b</oboInOwl:hasRelatedSynonym>
         <oboInOwl:id>FBbt:20011478</oboInOwl:id>
         <rdfs:comment>Cell type identified in multiple EM datasets and at light level (Nern et al., 2025). Synapse locations are given where each cell of this type in neuprint has at least 10 connections. Other information from Nern et al. (2025) supplements.</rdfs:comment>
         <rdfs:label>adult lobula tangential neuron LT82a</rdfs:label>
@@ -12084,27 +11310,6 @@
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBbt_20011478"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Adult lobula tangential neuron of the LT82a group (Nern et al., 2025). It receives input in the ipsilateral lobula layer 2, lobula layer 3, lobula layer 4, epaulette, vest, posterior ventrolateral protocerebrum, posterior lateral protocerebrum, superior posterior slope, lobula layer 5A and lobula layer 5B (Nern et al., 2025). It sends output to the ipsilateral lateral accessory lobe, lobula, epaulette, vest, posterior ventrolateral protocerebrum, posterior lateral protocerebrum and superior posterior slope (Nern et al., 2025). There are approximately 2 of these cells per hemisphere (Nern et al., 2025).</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>doi:10.1038/s41586-025-08746-0</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBbt_20011478"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
-        <owl:annotatedTarget>LT82a</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>FlyBase:FBrf0246888</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>doi:10.1038/s41586-025-08746-0</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBbt_20011478"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
-        <owl:annotatedTarget>LT82a</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>FlyBase:FBrf0260535</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>doi:10.1038/s41586-025-08746-0</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBbt_20011478"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
-        <owl:annotatedTarget>LT82b</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>FlyBase:FBrf0246888</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>doi:10.1038/s41586-025-08746-0</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -12227,8 +11432,6 @@
         <terms:contributor rdf:resource="http://orcid.org/0000-0002-1373-1705"/>
         <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-04-28T12:00:00Z</terms:date>
         <oboInOwl:hasOBONamespace>fly_anatomy.ontology</oboInOwl:hasOBONamespace>
-        <oboInOwl:hasRelatedSynonym>LT82a</oboInOwl:hasRelatedSynonym>
-        <oboInOwl:hasRelatedSynonym>LT82b</oboInOwl:hasRelatedSynonym>
         <oboInOwl:id>FBbt:20011479</oboInOwl:id>
         <rdfs:comment>Cell type identified in multiple EM datasets and at light level (Nern et al., 2025). Synapse locations are given where each cell of this type in neuprint has at least 10 connections. Other information from Nern et al. (2025) supplements.</rdfs:comment>
         <rdfs:label>adult lobula tangential neuron LT82b</rdfs:label>
@@ -12237,27 +11440,6 @@
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBbt_20011479"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Adult lobula tangential neuron of the LT82b group (Nern et al., 2025). It receives input in the ipsilateral lobula layer 2, lobula layer 3, lobula layer 4, epaulette, posterior ventrolateral protocerebrum, posterior lateral protocerebrum, superior posterior slope, inferior posterior slope, lobula layer 5A and lobula layer 5B (Nern et al., 2025). It sends output to the ipsilateral lateral accessory lobe, optic lobe, epaulette, posterior ventrolateral protocerebrum, posterior lateral protocerebrum, wedge, superior posterior slope and inferior posterior slope (Nern et al., 2025). There is one of these cells per hemisphere (Nern et al., 2025).</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>doi:10.1038/s41586-025-08746-0</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBbt_20011479"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
-        <owl:annotatedTarget>LT82a</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>FlyBase:FBrf0246888</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>doi:10.1038/s41586-025-08746-0</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBbt_20011479"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
-        <owl:annotatedTarget>LT82b</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>FlyBase:FBrf0246888</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>doi:10.1038/s41586-025-08746-0</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBbt_20011479"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
-        <owl:annotatedTarget>LT82b</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>FlyBase:FBrf0260535</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>doi:10.1038/s41586-025-08746-0</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -12350,7 +11532,6 @@
         <terms:contributor rdf:resource="http://orcid.org/0000-0002-1373-1705"/>
         <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-04-28T12:00:00Z</terms:date>
         <oboInOwl:hasOBONamespace>fly_anatomy.ontology</oboInOwl:hasOBONamespace>
-        <oboInOwl:hasRelatedSynonym>LT83</oboInOwl:hasRelatedSynonym>
         <oboInOwl:id>FBbt:20011480</oboInOwl:id>
         <rdfs:comment>Cell type identified in multiple EM datasets (Nern et al., 2025). Synapse locations are given where each cell of this type in neuprint has at least 10 connections. Other information from Nern et al. (2025) supplements.</rdfs:comment>
         <rdfs:label>adult lobula tangential neuron LT83</rdfs:label>
@@ -12360,20 +11541,6 @@
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Adult lobula tangential neuron of the LT83 group (Nern et al., 2025). It receives input in the ipsilateral lobula layer 2, lobula layer 3, lobula layer 4, posterior ventrolateral protocerebrum, anterior ventrolateral protocerebrum, posterior lateral protocerebrum, lobula layer 5A and lobula layer 5B (Nern et al., 2025). It sends output to the ipsilateral lobula layer 3, lobula layer 4, posterior ventrolateral protocerebrum and anterior ventrolateral protocerebrum (Nern et al., 2025). Its predicted neurotransmitter is acetylcholine (Eckstein et al., 2024; Nern et al., 2025). There is one of these cells per hemisphere (Nern et al., 2025).</owl:annotatedTarget>
         <oboInOwl:hasDbXref>FlyBase:FBrf0259490</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>doi:10.1038/s41586-025-08746-0</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBbt_20011480"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
-        <owl:annotatedTarget>LT83</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>FlyBase:FBrf0246888</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>doi:10.1038/s41586-025-08746-0</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBbt_20011480"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
-        <owl:annotatedTarget>LT83</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>FlyBase:FBrf0260535</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>doi:10.1038/s41586-025-08746-0</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -12484,7 +11651,6 @@
         <terms:contributor rdf:resource="http://orcid.org/0000-0002-1373-1705"/>
         <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-04-28T12:00:00Z</terms:date>
         <oboInOwl:hasOBONamespace>fly_anatomy.ontology</oboInOwl:hasOBONamespace>
-        <oboInOwl:hasRelatedSynonym>LT84</oboInOwl:hasRelatedSynonym>
         <oboInOwl:id>FBbt:20011481</oboInOwl:id>
         <rdfs:comment>Cell type identified in multiple EM datasets (Nern et al., 2025). Synapse locations are given where each cell of this type in neuprint has at least 10 connections. Other information from Nern et al. (2025) supplements.</rdfs:comment>
         <rdfs:label>adult lobula tangential neuron LT84</rdfs:label>
@@ -12494,20 +11660,6 @@
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Adult lobula tangential neuron of the LT84 group (Nern et al., 2025). It receives input in the ipsilateral lobula layer 4, anterior optic tubercle, lobula layer 6, posterior lateral protocerebrum, inferior clamp, superior intermediate protocerebrum, lobula layer 5A and lobula layer 5B (Nern et al., 2025). It sends output to the ipsilateral superior medial protocerebrum, anterior optic tubercle, lobula layer 6, inferior clamp, superior intermediate protocerebrum, lobula layer 5A and lobula layer 5B (Nern et al., 2025). Its predicted neurotransmitter is acetylcholine (Eckstein et al., 2024; Nern et al., 2025). There is one of these cells per hemisphere (Nern et al., 2025).</owl:annotatedTarget>
         <oboInOwl:hasDbXref>FlyBase:FBrf0259490</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>doi:10.1038/s41586-025-08746-0</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBbt_20011481"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
-        <owl:annotatedTarget>LT84</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>FlyBase:FBrf0246888</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>doi:10.1038/s41586-025-08746-0</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBbt_20011481"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
-        <owl:annotatedTarget>LT84</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>FlyBase:FBrf0260535</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>doi:10.1038/s41586-025-08746-0</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -12666,7 +11818,6 @@
         <terms:contributor rdf:resource="http://orcid.org/0000-0002-1373-1705"/>
         <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-04-28T12:00:00Z</terms:date>
         <oboInOwl:hasOBONamespace>fly_anatomy.ontology</oboInOwl:hasOBONamespace>
-        <oboInOwl:hasRelatedSynonym>LT85</oboInOwl:hasRelatedSynonym>
         <oboInOwl:id>FBbt:20011482</oboInOwl:id>
         <rdfs:comment>Cell type identified in multiple EM datasets (Nern et al., 2025). Synapse locations are given where each cell of this type in neuprint has at least 10 connections. Other information from Nern et al. (2025) supplements.</rdfs:comment>
         <rdfs:label>adult lobula tangential neuron LT85</rdfs:label>
@@ -12676,20 +11827,6 @@
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Adult lobula tangential neuron of the LT85 group (Nern et al., 2025). It receives input in the ipsilateral lobula layer 4, lobula layer 6, vest, posterior ventrolateral protocerebrum, posterior lateral protocerebrum, superior clamp, inferior clamp, superior posterior slope, lobula layer 5A and lobula layer 5B, and the inferior bridge and saddle (Nern et al., 2025). It sends output to the ipsilateral lobula layer 6, vest, posterior ventrolateral protocerebrum, posterior lateral protocerebrum, superior clamp, inferior clamp, superior posterior slope, lobula layer 5A and lobula layer 5B, and the inferior bridge and saddle (Nern et al., 2025). Its predicted neurotransmitter is acetylcholine (Eckstein et al., 2024; Nern et al., 2025). There is one of these cells per hemisphere (Nern et al., 2025).</owl:annotatedTarget>
         <oboInOwl:hasDbXref>FlyBase:FBrf0259490</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>doi:10.1038/s41586-025-08746-0</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBbt_20011482"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
-        <owl:annotatedTarget>LT85</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>FlyBase:FBrf0246888</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>doi:10.1038/s41586-025-08746-0</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBbt_20011482"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
-        <owl:annotatedTarget>LT85</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>FlyBase:FBrf0260535</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>doi:10.1038/s41586-025-08746-0</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -12812,7 +11949,6 @@
         <terms:contributor rdf:resource="http://orcid.org/0000-0002-1373-1705"/>
         <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-04-28T12:00:00Z</terms:date>
         <oboInOwl:hasOBONamespace>fly_anatomy.ontology</oboInOwl:hasOBONamespace>
-        <oboInOwl:hasRelatedSynonym>LT86</oboInOwl:hasRelatedSynonym>
         <oboInOwl:id>FBbt:20011483</oboInOwl:id>
         <rdfs:comment>Cell type identified in multiple EM datasets (Nern et al., 2025). Synapse locations are given where each cell of this type in neuprint has at least 10 connections. Other information from Nern et al. (2025) supplements.</rdfs:comment>
         <rdfs:label>adult lobula tangential neuron LT86</rdfs:label>
@@ -12821,20 +11957,6 @@
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBbt_20011483"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Adult lobula tangential neuron of the LT86 group (Nern et al., 2025). It receives input in the ipsilateral lobula layer 4, lobula layer 6, vest, posterior lateral protocerebrum, inferior clamp, superior posterior slope, lobula layer 5A and lobula layer 5B, and the inferior bridge and saddle (Nern et al., 2025). It sends output to the ipsilateral lateral accessory lobe, vest, posterior lateral protocerebrum, inferior clamp, superior posterior slope and lobula layer 5B, and the inferior bridge and saddle (Nern et al., 2025). There is one of these cells per hemisphere (Nern et al., 2025).</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>doi:10.1038/s41586-025-08746-0</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBbt_20011483"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
-        <owl:annotatedTarget>LT86</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>FlyBase:FBrf0246888</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>doi:10.1038/s41586-025-08746-0</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBbt_20011483"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
-        <owl:annotatedTarget>LT86</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>FlyBase:FBrf0260535</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>doi:10.1038/s41586-025-08746-0</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -12939,7 +12061,6 @@
         <terms:contributor rdf:resource="http://orcid.org/0000-0002-1373-1705"/>
         <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-04-28T12:00:00Z</terms:date>
         <oboInOwl:hasOBONamespace>fly_anatomy.ontology</oboInOwl:hasOBONamespace>
-        <oboInOwl:hasRelatedSynonym>LT87</oboInOwl:hasRelatedSynonym>
         <oboInOwl:id>FBbt:20011484</oboInOwl:id>
         <rdfs:comment>Cell type identified in multiple EM datasets (Nern et al., 2025). Synapse locations are given where each cell of this type in neuprint has at least 10 connections. Other information from Nern et al. (2025) supplements.</rdfs:comment>
         <rdfs:label>adult lobula tangential neuron LT87</rdfs:label>
@@ -12950,20 +12071,6 @@
         <owl:annotatedTarget>Adult lobula tangential neuron of the LT87 group (Nern et al., 2025). It receives input in the ipsilateral lobula layer 2, lobula layer 3, lobula layer 4, lobula layer 6, posterior ventrolateral protocerebrum, anterior ventrolateral protocerebrum, lobula layer 5A and lobula layer 5B (Nern et al., 2025). It sends output to the ipsilateral lobula layer 3, lobula layer 4, lobula layer 6, posterior ventrolateral protocerebrum, anterior ventrolateral protocerebrum, posterior lateral protocerebrum and lobula layer 5B (Nern et al., 2025). There is one of these cells per hemisphere (Nern et al., 2025).</owl:annotatedTarget>
         <oboInOwl:hasDbXref>doi:10.1038/s41586-025-08746-0</oboInOwl:hasDbXref>
     </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBbt_20011484"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
-        <owl:annotatedTarget>LT87</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>FlyBase:FBrf0246888</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>doi:10.1038/s41586-025-08746-0</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FBbt_20011484"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
-        <owl:annotatedTarget>LT87</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>FlyBase:FBrf0260535</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>doi:10.1038/s41586-025-08746-0</oboInOwl:hasDbXref>
-    </owl:Axiom>
     
 
 
@@ -12971,6 +12078,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FBbt_20011485">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBbt_00048286"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBbt_00111768"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002215"/>
@@ -13039,6 +12147,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FBbt_20011486">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBbt_00048286"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBbt_00111768"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002215"/>
@@ -13095,6 +12204,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FBbt_20011487">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBbt_00048286"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FBbt_00111768"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0013002"/>
