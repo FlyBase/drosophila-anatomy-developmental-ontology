@@ -7,6 +7,9 @@ use_env_file_docker: True
 use_mappings: True
 report_fail_on: none
 use_dosdps: TRUE
+workflows:
+  - ci
+manage_import_declarations: false
 pattern_pipelines_group:
   products:
     - id: logical-only
@@ -78,6 +81,7 @@ sssom_mappingset_group:
   products:
     - id: fbbt
       maintenance: manual
+      release_mappings: true
 edit_format: obo
 robot_java_args: '-Xmx8G'
 allow_equivalents: none
