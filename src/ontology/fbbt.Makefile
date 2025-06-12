@@ -3,19 +3,6 @@
 ## If you need to customize your Makefile, make
 ## changes here rather than in the main Makefile
 
-# Using .SECONDEXPANSION to include custom FlyBase files in $(ASSETS). Also rsyncing $(IMPORTS) and $(REPORT_FILES).
-.SECONDEXPANSION:
-.PHONY: prepare_release
-prepare_release: $$(ASSETS) $(MAPPINGDIR)/fbbt.sssom.tsv flybase_reports
-	rsync -R $(RELEASE_ASSETS) $(REPORT_FILES) $(FLYBASE_REPORTS) $(IMPORT_FILES) $(RELEASEDIR) &&\
-	mkdir -p $(RELEASEDIR)/patterns && cp -rf $(PATTERN_RELEASE_FILES) $(RELEASEDIR)/patterns &&\
-	cp $(MAPPINGDIR)/fbbt.sssom.tsv $(RELEASEDIR)/fbbt.sssom.tsv &&\
-	rm -f $(CLEANFILES)
-	echo "Release files are now in $(RELEASEDIR) - now you should commit, push and make a release on your git hosting site such as GitHub or GitLab"
-
-MAIN_FILES := $(MAIN_FILES) fly_anatomy.obo fbbt-cedar.obo
-CLEANFILES := $(CLEANFILES) $(patsubst %, $(IMPORTDIR)/%_terms_combined.txt, $(IMPORTS))
-
 .PHONY: travis_checks
 travis_checks: odkversion fbbt-simple.obo reason_test sparql_test $(REPORTDIR)/obo_qc_fbbt.obo.txt $(REPORTDIR)/chado_load_check_simple.txt $(REPORTDIR)/validate_profile_owl2dl_$(ONT).owl.txt
 
@@ -95,50 +82,13 @@ $(REPORTDIR)/spellcheck.txt: fbbt-simple.obo install_flybase_scripts ../../tools
 ######################################################
 ### Overwriting some default artefacts ###
 ######################################################
-# remove redundant overlaps rels from owl files
-# should no longer be necessary if https://github.com/ontodev/robot/issues/1208 gets fixed
-OWL_FILES = $(foreach n,$(RELEASE_ARTEFACTS), $(n).owl)
-strip_overlaps: $(OWL_FILES)
-	for file in $(OWL_FILES); do \
-		$(ROBOT) query -input $$file \
-		--update $(SPARQLDIR)/remove_redundant_overlaps.ru \
-		--output $$file ; \
-	done
-
-
-# Removing excess defs, labels, comments from obo files
-
-$(ONT)-simple.obo: $(ONT)-simple.owl strip_overlaps
-	$(ROBOT) convert --input $< --check false -f obo $(OBO_FORMAT_OPTIONS) -o $@.tmp.obo &&\
-	cat $@.tmp.obo | grep -v ^owl-axioms | grep -v 'namespace[:][ ]external' | grep -v 'namespace[:][ ]quality' > $@.tmp &&\
-	cat $@.tmp | perl -0777 -e '$$_ = <>; s/(?:name[:].*\n)+name[:]/name:/g; print' | perl -0777 -e '$$_ = <>; s/(?:comment[:].*\n)+comment[:]/comment:/g; print' | perl -0777 -e '$$_ = <>; s/(?:def[:].*\n)+def[:]/def:/g; print' > $@
-	rm -f $@.tmp.obo $@.tmp
 
 # We want the OBO release to be based on the simple release. It needs to be annotated however in the way map releases (fbbt.owl) are annotated.
-$(ONT).obo: $(ONT)-simple.owl strip_overlaps
-	$(ROBOT)  annotate --input $< --ontology-iri $(URIBASE)/$@ --version-iri $(ONTBASE)/releases/$(TODAY) \
-	convert --check false -f obo $(OBO_FORMAT_OPTIONS) -o $@.tmp.obo &&\
-	cat $@.tmp.obo | grep -v ^owl-axioms | grep -v 'namespace[:][ ]external' | grep -v 'namespace[:][ ]quality' > $@.tmp &&\
-	cat $@.tmp | perl -0777 -e '$$_ = <>; s/(?:name[:].*\n)+name[:]/name:/g; print' | perl -0777 -e '$$_ = <>; s/(?:comment[:].*\n)+comment[:]/comment:/g; print' | perl -0777 -e '$$_ = <>; s/(?:def[:].*\n)+def[:]/def:/g; print' > $@
-	rm -f $@.tmp.obo $@.tmp
-
-$(ONT)-base.obo: $(ONT)-base.owl strip_overlaps
-	$(ROBOT) convert --input $< --check false -f obo $(OBO_FORMAT_OPTIONS) -o $@.tmp.obo &&\
-	cat $@.tmp.obo | grep -v ^owl-axioms > $@.tmp &&\
-	cat $@.tmp | perl -0777 -e '$$_ = <>; s/(?:name[:].*\n)+name[:]/name:/g; print' | perl -0777 -e '$$_ = <>; s/(?:comment[:].*\n)+comment[:]/comment:/g; print' | perl -0777 -e '$$_ = <>; s/(?:def[:].*\n)+def[:]/def:/g; print' > $@
-	rm -f $@.tmp.obo $@.tmp
-
-$(ONT)-non-classified.obo: $(ONT)-non-classified.owl strip_overlaps
-	$(ROBOT) convert --input $< --check false -f obo $(OBO_FORMAT_OPTIONS) -o $@.tmp.obo &&\
-	cat $@.tmp.obo | grep -v ^owl-axioms > $@.tmp &&\
-	cat $@.tmp | perl -0777 -e '$$_ = <>; s/(?:name[:].*\n)+name[:]/name:/g; print' | perl -0777 -e '$$_ = <>; s/(?:comment[:].*\n)+comment[:]/comment:/g; print' | perl -0777 -e '$$_ = <>; s/(?:def[:].*\n)+def[:]/def:/g; print' > $@
-	rm -f $@.tmp.obo $@.tmp
-
-$(ONT)-full.obo: $(ONT)-full.owl strip_overlaps
-	$(ROBOT) convert --input $< --check false -f obo $(OBO_FORMAT_OPTIONS) -o $@.tmp.obo &&\
-	cat $@.tmp.obo | grep -v ^owl-axioms > $@.tmp &&\
-	cat $@.tmp | perl -0777 -e '$$_ = <>; s/(?:name[:].*\n)+name[:]/name:/g; print' | perl -0777 -e '$$_ = <>; s/(?:comment[:].*\n)+comment[:]/comment:/g; print' | perl -0777 -e '$$_ = <>; s/(?:def[:].*\n)+def[:]/def:/g; print' > $@
-	rm -f $@.tmp.obo $@.tmp
+$(ONT).obo: $(ONT)-simple.owl
+	$(ROBOT)  annotate --input $< \
+		           --ontology-iri $(URIBASE)/$@ \
+		           --version-iri $(ONTBASE)/releases/$(TODAY) \
+		  convert --check false -f obo $(OBO_FORMAT_OPTIONS) -o $@
 
 
 #####################################################################################
@@ -227,12 +177,6 @@ $(COMPONENTSDIR)/mappings_xrefs.owl: $(MAPPINGDIR)/fbbt.sssom.tsv $(SCRIPTSDIR)/
 		 annotate --ontology-iri http://purl.obolibrary.org/obo/fbbt/components/mappings_xrefs.owl \
 			  --output $@
 
-# Ensure the mapping set is published along with the other artefacts
-RELEASE_ASSETS_AFTER_RELEASE += ../../fbbt.sssom.tsv
-
-# Also publish the synonyms with EM source
-RELEASE_ASSETS_AFTER_RELEASE += ../../EM_synonyms.owl
-
 #####################################################################################
 ### Generate the flybase anatomy version of FBBT
 #####################################################################################
@@ -261,6 +205,13 @@ fbbt-cedar.obo:
 	--annotation rdfs:comment "This release artefact contains only the classification hierarchy (no relationships) and will not be suitable for most users." \
 	convert -f obo $(OBO_FORMAT_OPTIONS) -o $@
 
+# Make sure the flybase versions are included in $(ASSETS)
+# and generated as needed
+MAIN_FILES += fly_anatomy.obo fbbt-cedar.obo
+all_assets: fly_anatomy.obo fbbt-cedar.obo
+
+# Ensure the synonyms with EM source are published along with the other artefacts
+RELEASE_ASSETS_AFTER_RELEASE += ../../EM_synonyms.owl
 
 #######################################################################
 ### Subsets
@@ -297,9 +248,3 @@ update_lineage_nomenclature: $(PATTERNDIR)/data/all-axioms/neuroblastAnnotations
 $(TMPDIR)/pattern_schema_checks:
 	touch $@
 	echo "Skipping pattern validation step"
-
-.PHONY: update_repo
-# don't keep adding extra imports
-update_repo:
-	sh $(SCRIPTSDIR)/update_repo.sh
-	rm -f $(foreach n,$(IMPORTS), $(IMPORTDIR)/$(n)_import.owl)
