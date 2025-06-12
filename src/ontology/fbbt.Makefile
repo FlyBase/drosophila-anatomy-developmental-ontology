@@ -3,19 +3,6 @@
 ## If you need to customize your Makefile, make
 ## changes here rather than in the main Makefile
 
-# Using .SECONDEXPANSION to include custom FlyBase files in $(ASSETS). Also rsyncing $(IMPORTS) and $(REPORT_FILES).
-.SECONDEXPANSION:
-.PHONY: prepare_release
-prepare_release: $$(ASSETS) $(MAPPINGDIR)/fbbt.sssom.tsv flybase_reports
-	rsync -R $(RELEASE_ASSETS) $(REPORT_FILES) $(FLYBASE_REPORTS) $(IMPORT_FILES) $(RELEASEDIR) &&\
-	mkdir -p $(RELEASEDIR)/patterns && cp -rf $(PATTERN_RELEASE_FILES) $(RELEASEDIR)/patterns &&\
-	cp $(MAPPINGDIR)/fbbt.sssom.tsv $(RELEASEDIR)/fbbt.sssom.tsv &&\
-	rm -f $(CLEANFILES)
-	echo "Release files are now in $(RELEASEDIR) - now you should commit, push and make a release on your git hosting site such as GitHub or GitLab"
-
-MAIN_FILES := $(MAIN_FILES) fly_anatomy.obo fbbt-cedar.obo
-CLEANFILES := $(CLEANFILES) $(patsubst %, $(IMPORTDIR)/%_terms_combined.txt, $(IMPORTS))
-
 .PHONY: travis_checks
 travis_checks: odkversion fbbt-simple.obo reason_test sparql_test $(REPORTDIR)/obo_qc_fbbt.obo.txt $(REPORTDIR)/chado_load_check_simple.txt $(REPORTDIR)/validate_profile_owl2dl_$(ONT).owl.txt
 
@@ -190,9 +177,6 @@ $(COMPONENTSDIR)/mappings_xrefs.owl: $(MAPPINGDIR)/fbbt.sssom.tsv $(SCRIPTSDIR)/
 		 annotate --ontology-iri http://purl.obolibrary.org/obo/fbbt/components/mappings_xrefs.owl \
 			  --output $@
 
-# Ensure the synonyms with EM source are published along with the other artefacts
-RELEASE_ASSETS_AFTER_RELEASE += ../../EM_synonyms.owl
-
 #####################################################################################
 ### Generate the flybase anatomy version of FBBT
 #####################################################################################
@@ -221,6 +205,13 @@ fbbt-cedar.obo:
 	--annotation rdfs:comment "This release artefact contains only the classification hierarchy (no relationships) and will not be suitable for most users." \
 	convert -f obo $(OBO_FORMAT_OPTIONS) -o $@
 
+# Make sure the flybase versions are included in $(ASSETS)
+# and generated as needed
+MAIN_FILES += fly_anatomy.obo fbbt-cedar.obo
+all_assets: fly_anatomy.obo fbbt-cedar.obo
+
+# Ensure the synonyms with EM source are published along with the other artefacts
+RELEASE_ASSETS_AFTER_RELEASE += ../../EM_synonyms.owl
 
 #######################################################################
 ### Subsets
