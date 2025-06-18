@@ -23,7 +23,7 @@ else:
 if args.label_col:
     label_column_name = args.label_col
 else:
-    label_column_name = 'term_label'
+    label_column_name = 'FBbt_name'
 if args.sep:
     separator = args.sep
 else:
@@ -32,12 +32,6 @@ if args.source:
     source = args.source
 else:
     source = 'VFB'
-
-# conditional imports
-if source == 'VFB':
-    from vfb_connect.neo.neo4j_tools import Neo4jConnect, dict_cursor
-else:
-    from oaklib import get_adapter
 
 
 def get_id_cols(filename=file):
@@ -63,6 +57,7 @@ def replace_labels(dataframe, id_col_name=id_column_name, label_col_name=label_c
     flat_FBbt_list = list(filter(None, flat_FBbt_list))  # remove Nones
 
     if source == 'VFB':  # get labels from VFB KB
+        from vfb_connect.neo.neo4j_tools import Neo4jConnect, dict_cursor
         flat_FBbt_list_converted = [item.replace(':', '_') for item in flat_FBbt_list]
 
         nc = Neo4jConnect('http://kb.virtualflybrain.org', 'neo4j', 'vfb')
@@ -77,6 +72,7 @@ def replace_labels(dataframe, id_col_name=id_column_name, label_col_name=label_c
         labels_df = labels_df.set_index('ID')
 
     else:  # get labels from local file
+        from oaklib import get_adapter
         ontology = get_adapter(source)
         labels_df = pd.DataFrame({})
         labels_df['ID'] = flat_FBbt_list
@@ -112,7 +108,7 @@ def replace_labels(dataframe, id_col_name=id_column_name, label_col_name=label_c
     return dataframe
 
 
-def replace_labels_in_file(filename, id_col_name=id_column_name, label_col_name=label_column_name, sep=separator):
+def replace_labels_in_file(filename, id_col_name=id_column_name, label_col_name=label_column_name, sep=separator, source=source):
     """Updates labels from latest FBbt release (from VFB) based on IDs.
 
     Input is a file - default for ID column to be 'FBbt_id' and label column as 'FBbt_name'."""
@@ -127,10 +123,10 @@ def replace_labels_in_file(filename, id_col_name=id_column_name, label_col_name=
     for i in id_columns:
         if id_col_name == 'auto':
             label_col_name = i + '_label'
-        dataframe = replace_labels(dataframe, i, label_col_name, sep)
+        dataframe = replace_labels(dataframe, i, label_col_name, sep, source)
 
     dataframe.to_csv(filename, sep='\t', index=False)
 
 
 if __name__ == "__main__":
-    replace_labels_in_file(file, id_column_name, label_column_name, separator)
+    replace_labels_in_file(file, id_column_name, label_column_name, separator, source)
