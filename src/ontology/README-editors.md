@@ -141,7 +141,7 @@ Many neurons have a single, unique short identifier as a symbol (IAO:0000028) an
 
 ## SSSOM Mappings
 
-Mappings to external resources are maintained in [../mappings](../mappings). These are merged and used to produce [components/mappings_xrefs.owl](components/mappings_xrefs.owl) as well as being released as a separate tsv [../../fbbt.ssom.tsv](../../fbbt.ssom.tsv). New mapping files must be added to `MAPPING_SETS` in [fbbt.Makefile](fbbt.Makefile).
+Mappings to external resources are maintained in [../mappings](../mappings). These are merged and used to produce [components/mappings_xrefs.owl](components/mappings_xrefs.owl) as well as being released as a separate tsv [../../fbbt.sssom.tsv](../../fbbt.sssom.tsv). New mapping files must be added to `MAPPING_SETS` in [fbbt.Makefile](fbbt.Makefile).
 
 See SSSOM [paper](https://academic.oup.com/database/article/doi/10.1093/database/baac035/6591806) and [GitHub](https://github.com/mapping-commons/sssom).
 
@@ -178,7 +178,7 @@ To add a new import module:
 
 Travis checks must be run (and passed) on all PRs before merging.
 
-Check the build status here: [![Build Status](https://travis-ci.com/FlyBase/drosophila-anatomy-developmental-ontology.svg?branch=master)](https://travis-ci.com/FlyBase/drosophila-anatomy-developmental-ontology)
+Check the build status here: [![Build Status](https://api.travis-ci.com/FlyBase/drosophila-anatomy-developmental-ontology.svg?branch=master&status=created)](https://app.travis-ci.com/github/FlyBase/drosophila-anatomy-developmental-ontology)
 
 The way QC now works for all four FB ontologies is this:
 
