@@ -60,8 +60,6 @@ First, clone the repository:
 
 Make sure you have an ID range in the [idranges file](fbbt-idranges.owl) (see above).
 
-The editors' version is [fbbt-edit.obo](fbbt-edit.obo), [../../fbbt.owl](../../fbbt.owl) is the release version. DO NOT EDIT fbbt.obo OR fbbt.owl in the top level directory
-
 There are multiple places that axioms can be edited:
 1. Editors' file
 2. Design patterns
@@ -116,11 +114,11 @@ Design patterns can be used to maintain and generate complete terms (labels, def
 
 See DOSDP [paper](https://jbiomedsem.biomedcentral.com/articles/10.1186/s13326-017-0126-0) and [GitHub](https://github.com/INCATools/dead_simple_owl_design_patterns).
 
-DOSDP design pattern yaml files are found in `src/patterns/dosdp-patterns`. Fillers are in tsv files in `src/patterns/data/all-axioms` for generation of logical and annotation axioms, or `src/patterns/data/logical-only` for generation of only logical axioms. Any (yaml and tsv) pair of files that share a name (apart from the extension) are assumed to be a DOSDP design pattern and a corresponding tsv specifying axioms to add.
+DOSDP design pattern yaml files are found in [../patterns/dosdp-patterns](../patterns/dosdp-patterns). Fillers are in tsv files in [../patterns/data/all-axioms](../patterns/data/all-axioms) for generation of logical and annotation axioms, or [../patterns/data/logical-only](../patterns/data/logical-only) for generation of only logical axioms. Any (yaml and tsv) pair of files that share a name (apart from the extension) are assumed to be a DOSDP design pattern and a corresponding tsv specifying axioms to add.
 
 After updating term IDs in a filler tsv, labels can be automatically updated by running `sh run.sh make update_pattern_labels` to aid human readability/checking.
 
-To compile design patterns, run `sh run.sh make patterns`. This generates a file (`src/patterns/definitions.owl`), which is imported by the editor's file.
+To compile design patterns, run `sh run.sh make patterns`. This generates a file [../patterns/definitions.owl](../patterns/definitions.owl), which is imported by the editor's file.
 
 Design pattern tests are skipped, as the ALNeuronEquivalentClass pattern fails, but actual design pattern compilation should succeed when run.
 
