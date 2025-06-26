@@ -137,23 +137,23 @@ Source data and notebooks for generating templates can be found in [../patterns/
 
 ## Neuron Symbols
 
-Many neurons have a single, unique short identifier as a symbol (IAO:0000028) annotation (similar to gene symbols). These are maintained in the [neuron_symbols.tsv](neuron_symbols.tsv`) file, which is used to generate [components/neuron_symbols.owl](components/neuron_symbols.owl`). When adding/modifying symbols it is important to check that both the term ID and symbol are unique within the file. Adding a reference publication is optional, but recommended. Symbols should not be maintained as synonyms in the editors' file (or elsewhere), as they will be automatically generated as typed (`official symbol used on Virtual Fly Brain`) synonyms in the symbols component.
+Many neurons have a single, unique short identifier as a symbol (IAO:0000028) annotation (similar to gene symbols). These are maintained in the [neuron_symbols.tsv](neuron_symbols.tsv) file, which is used to generate [components/neuron_symbols.owl](components/neuron_symbols.owl). When adding/modifying symbols it is important to check that both the term ID and symbol are unique within the file. Adding a reference publication is optional, but recommended. Symbols should not be maintained as synonyms in the editors' file (or elsewhere), as they will be automatically generated as typed (`official symbol used on Virtual Fly Brain`) synonyms in the symbols component.
 
 ## SSSOM Mappings
 
-Mappings to external resources are maintained in [../mappings](../mappings). These are merged and used to produce [components/mappings_xrefs.owl](components/mappings_xrefs.owl`) as well as being released as a separate tsv [../../fbbt.ssom.tsv](../../fbbt.ssom.tsv). New mapping files must be added to `MAPPING_SETS` in [fbbt.Makefile](fbbt.Makefile).
+Mappings to external resources are maintained in [../mappings](../mappings). These are merged and used to produce [components/mappings_xrefs.owl](components/mappings_xrefs.owl) as well as being released as a separate tsv [../../fbbt.ssom.tsv](../../fbbt.ssom.tsv). New mapping files must be added to `MAPPING_SETS` in [fbbt.Makefile](fbbt.Makefile).
 
 See SSSOM [paper](https://academic.oup.com/database/article/doi/10.1093/database/baac035/6591806) and [GitHub](https://github.com/mapping-commons/sssom).
 
 ## Extended Logical Axioms
 
-The [components/fbbt_ext.owl](components/fbbt_ext.owl`) file contains axioms that are awkward to represent in obo format. Most of these appear in the `General class axioms` section when viewing the editors' file in Protege, under the `Active ontology` tab. To add a new axiom, create it in this location in Protege, then right click to `Move axiom(s) to ontology...` and select `fbbt_ext`.
+The [components/fbbt_ext.owl](components/fbbt_ext.owl) file contains axioms that are awkward to represent in obo format. Most of these appear in the `General class axioms` section when viewing the editors' file in Protege, under the `Active ontology` tab. To add a new axiom, create it in this location in Protege, then right click to `Move axiom(s) to ontology...` and select `fbbt_ext`.
 
 ## Other Components
 Two components are automatically updated during the release process and do not require any manual edits:
 
-- The [components/flybase_import.owl](components/flybase_import.owl`) file contains annotation from FlyBase for genes used in FBbt axioms.
-- The [components/VFB_xrefs.owl](components/VFB_xrefs.owl`) file contains axioms that are used to generate linkouts to Virtual Fly Brain from the FlyBase website for nervous system terms.
+- The [components/flybase_import.owl](components/flybase_import.owl) file contains annotation from FlyBase for genes used in FBbt axioms.
+- The [components/VFB_xrefs.owl](components/VFB_xrefs.owl) file contains axioms that are used to generate linkouts to Virtual Fly Brain from the FlyBase website for nervous system terms.
 
 The `qc_assertions` files were historically used to allow some qc checks to pass, but might no longer be needed.
 
