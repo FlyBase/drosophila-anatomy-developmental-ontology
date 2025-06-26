@@ -211,7 +211,7 @@ Everything should be done from this (`src/ontology`) folder.
  * Note that the versionIRI value will be automatically added, and will end with `YYYY-MM-DD`, as per OBO guidelines.
 
 3. Checks:
- * Check the diff (header and Typedefs of `fbbt-simple.obo` are usually most informative).
+ * Check the diff (header and Typedefs of `fbbt.obo` are usually most informative).
  * Check reports (in [reports](reports) folder), particularly `chado_load_check_simple.txt` and `obo_qc_fbbt.obo.txt`.
  * Look at the diff for the `spellcheck.txt` report. Add any new words to the [dictionary](../../tools/dictionaries/standard.dict).
 
