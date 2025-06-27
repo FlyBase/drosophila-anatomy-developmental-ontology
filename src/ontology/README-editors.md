@@ -87,6 +87,8 @@ For a term with a logical (equivalent class) definition, leaving the text defini
 
 The main identifying part of the label should be used in at least one of the definition xrefs. This should be extended with context such as stage or location if needed for clarification (e.g. `calyx of oviduct`, `calyx of adult mushroom body`). Labels should ideally spell out all words, but abbreviations can be used to avoid unreasonably long labels, especially if they are in common usage (such as `VNC`).
 
+Stages in labels refer to the entity, rather than the organism as a whole, therefore a `larval` entity may exist in the embryo, larva or pupa, if it is essentially the same as that found in the larva. Similarly, `adult` entities may also exist during the pupal stage. `embryonic` and `pupal` classes should only be created for entities that are different to what is found in the larva or adult. If a class is intended to represent entities that may exist during `larval` or `adult` stages, these should not have a stage specified in the label (and should not have a `part of` relationship to any stage-specific terms).
+
 Other names from the literature should be recorded as synonyms, with publication IDs added as xrefs. Variants of these names that could help user searches can also be added as synonyms. See [obook](https://oboacademy.github.io/obook/reference/synonyms-properties/) for information about different synonym scopes.
 
 #### Obsoleting terms
