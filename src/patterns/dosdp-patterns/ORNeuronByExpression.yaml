@@ -1,6 +1,6 @@
 pattern_name: ORNeuronByExpression
 pattern_iri: http://purl.obolibrary.org/obo/fbbt/src/patterns/dosdp-patterns/ORNeuronByExpression.yaml
-description: "Pattern for olfactory receptor neurons that can be uniquely defined by their GENE (not transcript) expression and (optionally) sensory dendrite location or glomerulus. Receptors, dendrite locations and glomeruli that are not necessary for logical definitions can be added as SC axioms using other_receptor, other_dendrite and other_glomerulus  - separated by '|'. Can also add soma location, modality, laterality, developmental precursor and target projection neuron(s) - separated by '|'. Not for segment-specific subclasses of larval neurons (see larvalSensoryNeuronBySegment) or sensory neurons defined by dendrite location and modality (see sensoryNeuronByDendriteLocation)."
+description: "Pattern for olfactory receptor neurons that can be uniquely defined by their stage, GENE (not transcript) expression and (optionally) sensory dendrite location or glomerulus. stage_parent should be either FBbt:00007386 'adult olfactory receptor neuron' or FBbt:00007388 'embryonic/larval olfactory receptor neuron'. Receptors, dendrite locations and glomeruli that are not necessary for logical definitions can be added as SC axioms using other_receptor, other_dendrite and other_glomerulus  - separated by '|'. Can also add soma location, modality, laterality, developmental precursor and target projection neuron(s) - separated by '|'. Not for segment-specific subclasses of larval neurons (see larvalSensoryNeuronBySegment) or sensory neurons defined by dendrite location and modality (see sensoryNeuronByDendriteLocation)."
 
 contributors:
   - https://orcid.org/0000-0002-1373-1705
@@ -23,6 +23,7 @@ relations:
   sends_synaptic_output_to_cell: RO:0013009
 
 vars:
+  stage_parent: neuron
   receptor: gene
   dendrite: anatomical_entity
   glomerulus: synaptic_neuropil_subdomain
@@ -42,8 +43,9 @@ logical_axioms:
      multi_clause:
       sep: " and "
       clauses:
-        - text: "neuron that 'expresses' some %s"
+        - text: "%s that 'expresses' some %s"
           vars:
+            - stage_parent
             - receptor
         - text: "'has_sensory_dendrite_in' some %s"
           vars:
