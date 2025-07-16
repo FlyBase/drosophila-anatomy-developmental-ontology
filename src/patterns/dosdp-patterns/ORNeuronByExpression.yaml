@@ -1,0 +1,109 @@
+pattern_name: ORNeuronByExpression
+pattern_iri: http://purl.obolibrary.org/obo/fbbt/src/patterns/dosdp-patterns/ORNeuronByExpression.yaml
+description: "Pattern for olfactory receptor neurons that can be uniquely defined by their GENE (not transcript) expression and (optionally) sensory dendrite location or glomerulus. Receptors, dendrite locations and glomeruli that are not necessary for logical definitions can be added as SC axioms using other_receptor, other_dendrite and other_glomerulus  - separated by '|'. Can also add soma location, modality, laterality, developmental precursor and target projection neuron(s) - separated by '|'. Not for segment-specific subclasses of larval neurons (see larvalSensoryNeuronBySegment) or sensory neurons defined by dendrite location and modality (see sensoryNeuronByDendriteLocation)."
+
+contributors:
+  - https://orcid.org/0000-0002-1373-1705
+
+classes:
+  anatomical_entity: FBbt:10000000
+  gene: SO:0000704
+  synaptic_neuropil_subdomain: FBbt:00040006
+  neuron: FBbt:00005106
+  quality: PATO:0000001
+
+relations: 
+  expresses: RO:0002292
+  has_sensory_dendrite_in: RO:0013007
+  sends_synaptic_output_throughout: RO:0013006
+  has_soma_location: RO:0002100
+  capable_of: RO:0002215
+  has_characteristic: RO:0000053
+  develops_from: RO:0002202
+  sends_synaptic_output_to_cell: RO:0013009
+
+vars:
+  receptor: gene
+  dendrite: anatomical_entity
+  glomerulus: synaptic_neuropil_subdomain
+
+list_vars:
+  other_receptor: gene
+  other_dendrite: anatomical_entity
+  other_glomerulus: synaptic_neuropil_subdomain
+  soma_location: anatomical_entity
+  modality: detection_of_stimulus
+  laterality: quality
+  precursor: anatomical_entity
+  target_PN: neuron
+
+logical_axioms:
+   - axiom_type: equivalentTo
+     multi_clause:
+      sep: " and "
+      clauses:
+        - text: "neuron that 'expresses' some %s"
+          vars:
+            - receptor
+        - text: "'has_sensory_dendrite_in' some %s"
+          vars:
+            - dendrite
+        - text: "'sends_synaptic_output_throughout' some %s"
+          vars:
+            - glomerulus
+   - axiom_type: subClassOf
+     multi_clause:
+      sep: " and "
+      clauses:
+        - text: "'expresses' some %s"
+          vars:
+            - other_receptor
+   - axiom_type: subClassOf
+     multi_clause:
+      sep: " and "
+      clauses:
+        - text: "'has_sensory_dendrite_in' some %s"
+          vars:
+            - other_dendrite
+   - axiom_type: subClassOf
+     multi_clause:
+      sep: " and "
+      clauses:
+        - text: "'sends_synaptic_output_throughout' some %s"
+          vars:
+            - other_glomerulus
+   - axiom_type: subClassOf
+     multi_clause:
+      sep: " and "
+      clauses:
+        - text: "'has_soma_location' some %s"
+          vars:
+            - soma_location
+   - axiom_type: subClassOf
+     multi_clause:
+      sep: " and "
+      clauses:
+        - text: "'capable_of' some %s"
+          vars:
+            - modality
+   - axiom_type: subClassOf
+     multi_clause:
+      sep: " and "
+      clauses:
+        - text: "'has_characteristic' some %s"
+          vars:
+            - laterality
+   - axiom_type: subClassOf
+     multi_clause:
+      sep: " and "
+      clauses:
+        - text: "'develops_from' some %s"
+          vars:
+            - precursor
+   - axiom_type: subClassOf
+     multi_clause:
+      sep: " and "
+      clauses:
+        - text: "'sends_synaptic_output_to_cell' some %s"
+          vars:
+            - target_PN
