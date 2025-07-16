@@ -115,10 +115,14 @@ $(TMPDIR)/fbgn_seed.txt: $(SRC) | $(TMPDIR)
 		cat $@.tmp | sort | uniq > $@ && \
 		rm -f $@.tmp
 
+#import_runner also updates labels in patterns - add new ones to script
 $(TMPDIR)/FBgn_template.tsv: $(TMPDIR)/fbgn_seed.txt | $(TMPDIR)
 	if [ $(IMP) = true ]; then python3 $(SCRIPTSDIR)/flybase_import/FB_import_runner.py $< $@; fi
 
-$(COMPONENTSDIR)/flybase_import.owl: $(TMPDIR)/FBgn_template.tsv | $(COMPONENTSDIR)
+update_template_gene_names: $(TMPDIR)/FBgn_template.tsv
+	python3 $(SCRIPTSDIR)/flybase_import/template_gene_name_updater.py
+
+$(COMPONENTSDIR)/flybase_import.owl: $(TMPDIR)/FBgn_template.tsv update_template_gene_names | $(COMPONENTSDIR)
 	if [ $(IMP) = true ]; then $(ROBOT) template --input-iri http://purl.obolibrary.org/obo/ro.owl --template $< \
 	annotate --ontology-iri "http://purl.obolibrary.org/obo/fbbt/components/flybase_import.owl" --output $@ && rm $<; fi
 
