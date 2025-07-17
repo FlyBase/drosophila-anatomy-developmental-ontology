@@ -30,16 +30,19 @@ for pat in pattern_files:
     pat_df = pd.read_csv(pat, sep='\t', dtype='str')
     col_order = pat_df.columns
     fbgn_cols = detect_FBgn_cols(pat_df)
+    
     for col in fbgn_cols:
         label_col_name = col + '_label'
+        
+        # Allow column to exist or not exist already and maintain correct column order
         try:
             pat_df.drop(label_col_name, axis=1)
         except KeyError:
             ID_col_loc = col_order.get_loc(col)
             col_order = col_order.insert(ID_col_loc + 1, label_col_name)
 
-    # update labels
-    pat_df[label_col_name] = pat_df.loc[:, col].apply(label_list_lookup)
+        # update labels
+        pat_df[label_col_name] = pat_df.loc[:, col].apply(label_list_lookup)
 
     pat_df = pat_df[col_order]
     pat_df.to_csv(pat, index=False, sep='\t')
