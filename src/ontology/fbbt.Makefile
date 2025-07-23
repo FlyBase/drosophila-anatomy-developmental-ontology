@@ -117,7 +117,7 @@ $(TMPDIR)/fbgn_seed.txt: $(SRC) | $(TMPDIR)
 
 #import_runner also updates labels in patterns - add new ones to script
 $(TMPDIR)/FBgn_template.tsv: $(TMPDIR)/fbgn_seed.txt | $(TMPDIR)
-	if [ $(IMP) = true ]; then python3 $(SCRIPTSDIR)/flybase_import/FB_import_runner.py $< $@; fi
+	python3 $(SCRIPTSDIR)/flybase_import/FB_import_runner.py $< $@
 
 update_template_gene_names: $(TMPDIR)/FBgn_template.tsv
 	python3 $(SCRIPTSDIR)/flybase_import/template_gene_name_updater.py
