@@ -110,10 +110,13 @@ $(EDIT_PREPROCESSED): $(SRC) all_robot_plugins
 # Extract the list of terms from the -edit file. We cannot use $(IMPORT_SEED) for that,
 # as it can only be generated after all components have been generated, but we need
 # that list to generate the flybase_import.owl component (circular dependency).
+# Also checks definitions.owl for FBgns
 $(TMPDIR)/fbgn_seed.txt: $(SRC) | $(TMPDIR)
 	$(ROBOT) query -f csv -i $< --query ../sparql/terms.sparql $@.tmp && \
-		cat $@.tmp | sort | uniq > $@ && \
-		rm -f $@.tmp
+	cat $@.tmp | sort | uniq > $@-edit.txt && \
+	$(ROBOT) query -f csv -i $(PATTERNDIR)/definitions.owl --query ../sparql/terms.sparql $@.tmp && \
+	cat $@.tmp $@-edit.txt | sort | uniq > $@ && \
+	rm -f $@.tmp
 
 #import_runner also updates labels in patterns - add new ones to script
 $(TMPDIR)/FBgn_template.tsv: $(TMPDIR)/fbgn_seed.txt | $(TMPDIR)
