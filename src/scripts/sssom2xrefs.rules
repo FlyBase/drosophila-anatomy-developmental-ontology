@@ -10,4 +10,4 @@ subject==FBbt:*
     || predicate==skos:exactMatch
     || predicate==skos:narrowMatch
     || predicate==skos:relatedMatch)
-  -> annotate_subject(oio:hasDbXref, "%object_curie");
+  -> annotate(%{subject_id}, oio:hasDbXref, %{object_id|short});
