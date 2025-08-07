@@ -15,9 +15,8 @@ FLYBASE_REPORTS = $(REPORTDIR)/obo_qc_fbbt.obo.txt $(REPORTDIR)/obo_track_new_si
 .PHONY: flybase_reports
 flybase_reports: $(FLYBASE_REPORTS)
 
-# add fb to all_reports
-.PHONY: all_reports
-all_reports: flybase_reports
+# add fb to custom_reports
+custom_reports: flybase_reports
 
 SIMPLE_PURL =	http://purl.obolibrary.org/obo/fbbt/fbbt-simple.obo
 LAST_DEPLOYED_SIMPLE=$(TMPDIR)/$(ONT)-simple-last.obo
