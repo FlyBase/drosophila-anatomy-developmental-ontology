@@ -20,6 +20,15 @@ robot_plugins:
   plugins:
     - name: flybase
       mirror_from: https://github.com/FlyBase/flybase-robot-plugin/releases/download/flybase-robot-plugin-0.1.1/flybase.jar
+robot_report:
+  use_base_iris: True
+  custom_sparql_checks:
+    - owldef-self-reference
+    - iri-range
+    - label-with-iri
+    - multiple-replaced_by
+    - dc-properties
+    - id-format
 namespaces: 
   - http://purl.obolibrary.org/obo/FBbt_
   - http://purl.obolibrary.org/obo/fbbt_
