@@ -11,13 +11,19 @@ classes:
 
 relations:
   part_of: BFO:0000050
+  overlaps: RO:0002131
 
 vars:
   entity: anatomical_entity
   sex: organism
 
 equivalentTo:
-  text: "%s that 'part_of' some %s"
+  text: "%s that 'overlaps' some %s"
   vars:
     - entity
+    - sex
+
+subClassOf:
+  text: "'part_of' some %s"
+  vars:
     - sex
