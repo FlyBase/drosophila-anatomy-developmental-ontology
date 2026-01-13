@@ -7,8 +7,8 @@ Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
 
 
 Ontology(<http://purl.obolibrary.org/obo/fbbt/imports/merged_import.owl>
-<http://purl.obolibrary.org/obo/fbbt/releases/2025-10-16/imports/merged_import.owl>
-Annotation(owl:versionInfo "2025-10-16")
+<http://purl.obolibrary.org/obo/fbbt/releases/2026-01-13/imports/merged_import.owl>
+Annotation(owl:versionInfo "2026-01-13")
 
 Declaration(Class(<http://purl.obolibrary.org/obo/BFO_0000001>))
 Declaration(Class(<http://purl.obolibrary.org/obo/BFO_0000002>))
@@ -2542,6 +2542,7 @@ SubClassOf(<http://purl.obolibrary.org/obo/CL_0000197> ObjectSomeValuesFrom(<htt
 
 AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "MESH:D008465") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/CL_0000199> "A cell specialized to transduce mechanical stimuli and relay that information centrally in the nervous system.")
 AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "MP:0000972") <http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> <http://purl.obolibrary.org/obo/CL_0000199> "mechanoreceptor")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#inSubset> <http://purl.obolibrary.org/obo/CL_0000199> <http://purl.obolibrary.org/obo/cl#cellxgene_subset>)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CL_0000199> "mechanoreceptor cell")
 EquivalentClasses(<http://purl.obolibrary.org/obo/CL_0000199> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/CL_0000540> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002215> <http://purl.obolibrary.org/obo/GO_0050974>)))
 SubClassOf(<http://purl.obolibrary.org/obo/CL_0000199> <http://purl.obolibrary.org/obo/CL_0000101>)
@@ -2646,6 +2647,7 @@ SubClassOf(<http://purl.obolibrary.org/obo/CL_0000221> <http://purl.obolibrary.o
 AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "MESH:D004707") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/CL_0000223> "A cell of the inner of the three germ layers of the embryo.")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/CL_0000223> "FMA:72555")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/CL_0000223> "endoderm cell")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#inSubset> <http://purl.obolibrary.org/obo/CL_0000223> <http://purl.obolibrary.org/obo/cl#cellxgene_subset>)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CL_0000223> "endodermal cell")
 SubClassOf(<http://purl.obolibrary.org/obo/CL_0000223> <http://purl.obolibrary.org/obo/CL_0000255>)
 SubClassOf(<http://purl.obolibrary.org/obo/CL_0000223> <http://purl.obolibrary.org/obo/CL_0002321>)
@@ -2699,6 +2701,7 @@ SubClassOf(<http://purl.obolibrary.org/obo/CL_0000488> ObjectSomeValuesFrom(<htt
 AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "GOC:tfm") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "MESH:D009475") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/CL_0000526> "A neuron which conveys sensory information centrally from the periphery.")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/CL_0000526> "FMA:87653")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/CL_0000526> "input neuron")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#inSubset> <http://purl.obolibrary.org/obo/CL_0000526> <http://purl.obolibrary.org/obo/cl#cellxgene_subset>)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#inSubset> <http://purl.obolibrary.org/obo/CL_0000526> <http://purl.obolibrary.org/obo/uberon/core#human_reference_atlas>)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CL_0000526> "afferent neuron")
 SubClassOf(<http://purl.obolibrary.org/obo/CL_0000526> <http://purl.obolibrary.org/obo/CL_0000540>)
@@ -2793,6 +2796,7 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <ht
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/CL_0000850> "5-HT neuron")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/CL_0000850> "5-hydroxytryptamine neuron")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> <http://purl.obolibrary.org/obo/CL_0000850> "serotinergic neuron")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#inSubset> <http://purl.obolibrary.org/obo/CL_0000850> <http://purl.obolibrary.org/obo/cl#cellxgene_subset>)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CL_0000850> "serotonergic neuron")
 EquivalentClasses(<http://purl.obolibrary.org/obo/CL_0000850> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/CL_0000540> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002215> <http://purl.obolibrary.org/obo/GO_0060096>)))
 SubClassOf(<http://purl.obolibrary.org/obo/CL_0000850> <http://purl.obolibrary.org/obo/CL_0000458>)
@@ -2923,6 +2927,7 @@ These neurons are critical to the inhibitory control of neuronal networks, helpi
 Moreover, glycinergic neurons are integral to certain sensory processes and motor coordination. In the auditory system, these neurons aid in the localization of sound, and in the spinal cord, they are involved in the regulation of motor reflexes and rhythms. Any dysfunction in the glycinergic system can cause serious neurological conditions, such as hyperekplexia, characterized by increased startle responses and periodic bouts of rigidity, and some forms of chronic pain.
 
 (This extended description was generated by ChatGPT and reviewed by the CellGuide team, who added references, and by the CL editors, who approved it for inclusion in CL. It may contain information that applies only to some subtypes and species, and so should not be considered definitional.)")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#inSubset> <http://purl.obolibrary.org/obo/CL_1001509> <http://purl.obolibrary.org/obo/cl#cellxgene_subset>)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CL_1001509> "glycinergic neuron")
 EquivalentClasses(<http://purl.obolibrary.org/obo/CL_1001509> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/CL_0000540> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002215> <http://purl.obolibrary.org/obo/GO_0061537>)))
 SubClassOf(<http://purl.obolibrary.org/obo/CL_1001509> <http://purl.obolibrary.org/obo/CL_0000151>)
