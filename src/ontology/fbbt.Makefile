@@ -219,6 +219,15 @@ all_assets: fly_anatomy.obo fbbt-cedar.obo
 # Ensure the synonyms with EM source are published along with the other artefacts
 RELEASE_ASSETS_AFTER_RELEASE += ../../EM_synonyms.owl
 
+######################################################################################
+### Update image_annotation.owl
+###################################################################################
+
+$(COMPONENTSDIR)/image_annotation.owl: $(PATTERNDIR)/image_annotation_template.tsv | $(COMPONENTSDIR)
+	$(ROBOT) template --input-iri http://purl.obolibrary.org/obo/fbbt.owl --template $< \
+	annotate --ontology-iri "http://purl.obolibrary.org/obo/fbbt/components/image_annotation.owl" \
+	--output $@
+
 #######################################################################
 ### Subsets
 #######################################################################
