@@ -85,7 +85,7 @@ all_synonyms = pd.concat(synonym_dataframes)
 
 # make robot template
 header = pd.DataFrame({'FBbt_id': ['ID'], 'label': ['LABEL'], 'TYPE': ['TYPE'], 
-                       'synonym': ['A oboInOwl:hasExactSynonym'], 'ref': ['>A oboInOwl:hasDbXref'], 'synonym_type': ['>A oboInOwl:hasSynonymType'],
+                       'synonym': ['A oboInOwl:hasRelatedSynonym'], 'ref': ['>A oboInOwl:hasDbXref'], 'synonym_type': ['>A oboInOwl:hasSynonymType'],
                        'superproperty': ['SP %']})
 
 synonym_type_rows = pd.DataFrame({'FBbt_id': [f'http://purl.obolibrary.org/obo/fbbt#{s}' for s in synonym_types], 
