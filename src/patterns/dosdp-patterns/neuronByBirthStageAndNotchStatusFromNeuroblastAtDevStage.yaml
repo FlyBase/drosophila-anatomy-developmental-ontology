@@ -40,6 +40,8 @@ vars:
   secondary_synonym_type: thing
   technau_synonym_type: thing
   other_type: neuron
+  il_position_synonym: thing
+  h_position_synonym: thing
 
 list_vars:
   stage: organism
@@ -50,6 +52,7 @@ list_vars:
 data_list_vars:
   reference: thing
   technau_reference: thing
+  position_refs: thing
 
 logical_axioms:
    - axiom_type: equivalentTo
@@ -122,6 +125,14 @@ generated_synonyms:
     annotations:
       - annotationProperty: synonym_type
         var: technau_synonym_type
+  - text: "%s"
+    vars:
+      - il_position_synonym
+    xrefs: position_refs
+  - text: "%s"
+    vars:
+      - h_position_synonym
+    xrefs: position_refs
 
 exact_synonym:
   value: other_synonyms

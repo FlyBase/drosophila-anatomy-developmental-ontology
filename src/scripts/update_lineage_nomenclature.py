@@ -176,12 +176,17 @@ class neuronLineageInfo:
         replacing the Notch status with the position term.
         E.g. 'CREa2 Notch OFF hemilineage neuron' + position 'ventral'
           -> 'CREa2 ventral hemilineage neuron'
-        Populates the 'position_synonyms' column with pipe-separated values.
+        Writes the canonical synonym for each naming system to individual columns
+        (il_position_synonym, h_position_synonym) for use as generated_synonyms
+        in DOSDP. Any additional birth-stage variants are added to other_synonyms.
         """
-        position_synonyms = []
-        # Pair each naming system with its corresponding position column
-        position_map = {'ito_lee': 'IL_position', 'hartenstein': 'H_position'}
-        for nom_col, pos_col in position_map.items():
+        extra_synonyms = []
+        # Pair each naming system with its position column and output column
+        position_map = {
+            'ito_lee': ('IL_position', 'il_position_synonym'),
+            'hartenstein': ('H_position', 'h_position_synonym'),
+        }
+        for nom_col, (pos_col, out_col) in position_map.items():
             nb_name = self.table_row[nom_col]
             position = self.table_row.get(pos_col, '')
             if nb_name and position:
@@ -195,14 +200,27 @@ class neuronLineageInfo:
                 # Strip any stage prefix (e.g. 'adult ') that was prepended by write_names
                 if self.stage and raw_nb.startswith(self.stage + ' '):
                     raw_nb = raw_nb[len(self.stage) + 1:]
-                # Generate position synonyms with all birth-stage variants
+                # Canonical position synonym uses the primary birth-stage label
+                canonical = neuron_name_printer(
+                    neuroblast=raw_nb, org_stage=self.stage,
+                    birth_stage=self.prim_sec, notch_status=position,
+                    vnc_secondary=(nom_col == 'secondary'))
+                self.table_row[out_col] = canonical
+                # Additional birth-stage variants go into other_synonyms
                 for e in self.other_prim_sec:
-                    position_synonyms.append(neuron_name_printer(
+                    variant = neuron_name_printer(
                         neuroblast=raw_nb, org_stage=self.stage,
                         birth_stage=e, notch_status=position,
-                        vnc_secondary=(nom_col=='secondary')))
-        position_synonyms = sorted(set(position_synonyms))
-        self.table_row['position_synonyms'] = '|'.join(position_synonyms)
+                        vnc_secondary=(nom_col == 'secondary'))
+                    if variant != canonical:
+                        extra_synonyms.append(variant)
+            else:
+                self.table_row[out_col] = ''
+        # Append position variants to existing other_synonyms
+        if extra_synonyms:
+            existing = self.table_row.get('other_synonyms', '')
+            all_synonyms = [s for s in existing.split('|') if s] + extra_synonyms
+            self.table_row['other_synonyms'] = '|'.join(sorted(set(all_synonyms)))
         return self.table_row
 
 
@@ -249,6 +267,7 @@ for pat in lineage_pattern_files:
         # and generate synonym variants, including position-based synonyms
         merged_data = merged_data.apply(lambda x: neuronLineageInfo(x).write_names(col_order_non_sec), axis=1)
         merged_data = merged_data.apply(lambda x: neuronLineageInfo(x).write_position_synonyms(), axis=1)
+        merged_data.drop(columns=['position_synonyms'], inplace=True, errors='ignore')
         # Secondary neurons and adult neurons use the secondary label priority order
         sec_merged_data = merged_data[merged_data['birth_notch'].isin(['FBbt:00047096','FBbt:00049541','FBbt:00049542']) | merged_data['stage'].isin(['FBbt:00003004'])]
         non_sec_merged_data = merged_data[~merged_data.index.isin(sec_merged_data.index)]
