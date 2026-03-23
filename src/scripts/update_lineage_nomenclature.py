@@ -169,6 +169,42 @@ class neuronLineageInfo:
         self.table_row['other_synonyms'] = '|'.join(sorted(other_synonyms))
         return self.table_row
 
+    def write_position_synonyms(self):
+        """
+        Generate position-based synonyms by combining IL_position with the ito_lee
+        neuroblast name and H_position with the hartenstein neuroblast name,
+        replacing the Notch status with the position term.
+        E.g. 'CREa2 Notch OFF hemilineage neuron' + position 'ventral'
+          -> 'CREa2 ventral hemilineage neuron'
+        Populates the 'position_synonyms' column with pipe-separated values.
+        """
+        position_synonyms = []
+        # Pair each naming system with its corresponding position column
+        position_map = {'ito_lee': 'IL_position', 'hartenstein': 'H_position'}
+        for nom_col, pos_col in position_map.items():
+            nb_name = self.table_row[nom_col]
+            position = self.table_row.get(pos_col, '')
+            if nb_name and position:
+                # Extract the raw neuroblast name from the full neuron name
+                # by taking text before ' Notch', ' hemilineage', or ' lineage'
+                raw_nb = nb_name
+                for marker in [' Notch ', ' hemilineage ', ' lineage ']:
+                    if marker in raw_nb:
+                        raw_nb = raw_nb[:raw_nb.index(marker)]
+                        break
+                # Strip any stage prefix (e.g. 'adult ') that was prepended by write_names
+                if self.stage and raw_nb.startswith(self.stage + ' '):
+                    raw_nb = raw_nb[len(self.stage) + 1:]
+                # Generate position synonyms with all birth-stage variants
+                for e in self.other_prim_sec:
+                    position_synonyms.append(neuron_name_printer(
+                        neuroblast=raw_nb, org_stage=self.stage,
+                        birth_stage=e, notch_status=position,
+                        vnc_secondary=(nom_col=='secondary')))
+        position_synonyms = sorted(set(position_synonyms))
+        self.table_row['position_synonyms'] = '|'.join(position_synonyms)
+        return self.table_row
+
 
 def clone_name(df_row, nom_col):
     """Build a clone name like '<stage> <neuroblast name> lineage clone'."""
@@ -210,8 +246,9 @@ for pat in lineage_pattern_files:
 
     elif pat == 'neurons':
         # For neurons, replace nomenclature values with full neuron name strings
-        # and generate synonym variants
+        # and generate synonym variants, including position-based synonyms
         merged_data = merged_data.apply(lambda x: neuronLineageInfo(x).write_names(col_order_non_sec), axis=1)
+        merged_data = merged_data.apply(lambda x: neuronLineageInfo(x).write_position_synonyms(), axis=1)
         # Secondary neurons and adult neurons use the secondary label priority order
         sec_merged_data = merged_data[merged_data['birth_notch'].isin(['FBbt:00047096','FBbt:00049541','FBbt:00049542']) | merged_data['stage'].isin(['FBbt:00003004'])]
         non_sec_merged_data = merged_data[~merged_data.index.isin(sec_merged_data.index)]
