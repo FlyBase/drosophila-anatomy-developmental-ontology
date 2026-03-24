@@ -8,7 +8,8 @@ import pandas as pd
 pat_dir = '../patterns/data/all-axioms/'
 lineage_pattern_files = {'seg_nbs': pat_dir + 'neuroblastBySegment.tsv',
                          'neurons': pat_dir + 'neuronByBirthStageAndNotchStatusFromNeuroblastAtDevStage.tsv',
-                         'clones': pat_dir + 'cloneWithNeuroblastAndStage.tsv'}
+                         'clones': pat_dir + 'cloneWithNeuroblastAndStage.tsv',
+                         'position_hemilineages': pat_dir + 'neuronWithHemilineageByPosition.tsv'}
 # The neuroblast annotations file is the source of truth for nomenclature
 nb_pattern_file = pat_dir + 'neuroblastAnnotations.tsv'
 
@@ -224,6 +225,26 @@ class neuronLineageInfo:
         return self.table_row
 
 
+def position_hemilineage_synonyms(row):
+    """Generate position-based synonyms for neuronWithHemilineageByPosition rows.
+    Combines each naming system's NB name with the corresponding position value
+    and writes the result back into the nomenclature column itself.
+    E.g. ito_lee='CREa2', IL_position='ventral' -> ito_lee='CREa2 ventral hemilineage neuron'
+    No stage, Notch status, or birth stage applies to these classes."""
+    position_map = {
+        'ito_lee': 'IL_position',
+        'hartenstein': 'H_position',
+    }
+    for nom_col, pos_col in position_map.items():
+        nb_name = row.get(nom_col, '')
+        position = row.get(pos_col, '')
+        if nb_name and position:
+            row[nom_col] = f"{nb_name} {position} hemilineage neuron"
+        elif nb_name:
+            row[nom_col] = ''
+    return row
+
+
 def clone_name(df_row, nom_col):
     """Build a clone name like '<stage> <neuroblast name> lineage clone'."""
     if df_row[nom_col]:
@@ -272,11 +293,28 @@ for pat in lineage_pattern_files:
         sec_merged_data = merged_data[merged_data['birth_notch'].isin(['FBbt:00047096','FBbt:00049541','FBbt:00049542']) | merged_data['stage'].isin(['FBbt:00003004'])]
         non_sec_merged_data = merged_data[~merged_data.index.isin(sec_merged_data.index)]
 
+    elif pat == 'position_hemilineages':
+        # Generate position-based synonyms, writing them into ito_lee/hartenstein columns
+        merged_data = merged_data.apply(position_hemilineage_synonyms, axis=1)
+        # Drop columns not needed for this pattern
+        merged_data.drop(columns=['il_position_synonym', 'h_position_synonym',
+            'primary', 'secondary', 'technau', 'technau_reference',
+            'primary_synonym_type', 'secondary_synonym_type', 'technau_synonym_type'],
+            inplace=True, errors='ignore')
+        # nb_label uses hartenstein-priority order (matching col_order_non_sec)
+        merged_data = merged_data.apply(choose_label, axis=1,
+            col_order=['hartenstein', 'ito_lee'])
+        non_sec_merged_data = merged_data
+        sec_merged_data = pd.DataFrame({})
+
     # Apply the appropriate label priority order to each subset
-    if not non_sec_merged_data.empty:
-        non_sec_merged_data = non_sec_merged_data.apply(choose_label, axis=1, col_order=col_order_non_sec)
+    # (skip for position_hemilineages where nb_label is already set from position synonyms)
+    if pat != 'position_hemilineages':
+        if not non_sec_merged_data.empty:
+            non_sec_merged_data = non_sec_merged_data.apply(choose_label, axis=1, col_order=col_order_non_sec)
+        if not sec_merged_data.empty:
+            sec_merged_data = sec_merged_data.apply(choose_label, axis=1, col_order=col_order_sec)
     if not sec_merged_data.empty:
-        sec_merged_data = sec_merged_data.apply(choose_label, axis=1, col_order=col_order_sec)
         merged_data = pd.concat([non_sec_merged_data, sec_merged_data])
     else:
         merged_data = non_sec_merged_data
