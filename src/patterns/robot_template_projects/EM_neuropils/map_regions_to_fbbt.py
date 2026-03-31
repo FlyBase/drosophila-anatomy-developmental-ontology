@@ -26,6 +26,18 @@ OBO_FILE = os.path.join(SCRIPT_DIR, '..', '..', '..', 'ontology', 'fbbt-edit.obo
 # These override synonym lookup to avoid ambiguity with non-neuropil terms.
 
 EXPLICIT_MAP = {
+    # Broad groupings
+    'brain_neuropil': ('FBbt:00003624', 'adult brain'),
+    'CentralBrain': ('FBbt:00047887', 'adult central brain'),
+    'INP': ('FBbt:00040037', 'inferior neuropils'),
+    'OL': ('FBbt:00003701', 'adult optic lobe'),
+    'Optic': ('FBbt:00003701', 'adult optic lobe'),
+    'optic': ('FBbt:00003701', 'adult optic lobe'),
+    'PENP': ('FBbt:00045047', 'adult periesophageal neuropils'),
+    'SNP': ('FBbt:00045030', 'superior neuropils'),
+    'VLNP': ('FBbt:00045021', 'ventrolateral neuropils'),
+    'vnc_neuropil': ('FBbt:00004052', 'adult ventral nerve cord'),
+
     # Brain neuropils
     'AB': ('FBbt:00110172', 'asymmetrical body'),
     'AL': ('FBbt:00007401', 'adult antennal lobe'),
@@ -161,6 +173,7 @@ EXPLICIT_MAP = {
     'PB(R9)': ('FBbt:00003676', 'protocerebral bridge glomerulus 9'),
 
     # VNC neuropils
+    'Ov': ('FBbt:00004091', 'adult accessory mesothoracic neuropil'),
     'ABDNM': ('FBbt:00110173', 'adult abdominal neuromere'),
     'ANm': ('FBbt:00110173', 'adult abdominal neuromere'),
     'AMNP': ('FBbt:00004091', 'adult accessory mesothoracic neuropil'),

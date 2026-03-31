@@ -51,8 +51,8 @@ Many region abbreviations are ambiguous in FBbt (e.g. `PB` matches both protocer
 
 ### Unmapped regions
 
-- **Broad groupings** like `INP`, `SNP`, `VLNP`, `PENP`, `OL` (hemibrain) and `brain_neuropil`, `optic`, `vnc_neuropil` (BANC) are left unmapped as they are not individual neuropils.
-- **Lobula layer 7** (male-cns, optic-lobe) has no FBbt term (FBbt has lobula layers 1-6 only).
+- **`*-unspecified`** regions (male-cns: `CV-unspecified`, `CentralBrain-unspecified`, `Optic-unspecified`, `VNC-unspecified`) are catch-all categories for unassigned synapses.
+- **`hemibrain`** in the hemibrain dataset is a dataset-level label, not a region.
+- **Lobula layer 7** (`LO_L_layer_7`, `LO_R_layer_7` in male-cns and optic-lobe) has no FBbt term (FBbt has lobula layers 1-6 only).
 - **`GF`** (hemibrain) is the giant fiber neuron, not a region.
-- **`Ov`** (manc) is the ovoid body, not currently in FBbt.
 - **`CRN`** (male-cns) is the copulation reporting neuron, not a region.
