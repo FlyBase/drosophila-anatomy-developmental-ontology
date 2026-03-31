@@ -12,10 +12,10 @@ Region names were fetched from neuprint (neuprint.janelia.org) on 2026-03-31 usi
 |---------|-----------------|---------|-------|
 | hemibrain | hemibrain:v1.2.1 | 230 | Brain regions including individual AL glomeruli and PB glomeruli |
 | manc | manc:v1.2.3 | 59 | VNC neuropils and nerves |
-| male-cns | male-cns:v0.9 | 5,412 | Brain + VNC regions; includes ~5,250 individual optic lobe columns |
-| optic-lobe | optic-lobe:v1.1 | 2,690 | Brain regions; includes ~2,600 individual optic lobe columns |
+| male-cns | male-cns:v0.9 | 200 | Brain + VNC neuropil-level regions |
+| optic-lobe | optic-lobe:v1.1 | 106 | Brain neuropil-level regions |
 
-The large region counts for male-cns and optic-lobe are mostly individual columns in medulla (ME), lobula (LO), and lobula plate (LOP). The neuropil-level regions number ~80-150 per dataset.
+Individual optic lobe columns (ME, LO, LOP columns — ~5,200 in male-cns and ~2,600 in optic-lobe) were removed as they cannot be mapped to FBbt terms.
 
 ### FlyWire FAFB
 
@@ -39,5 +39,20 @@ The `banc_regions.tsv` file includes columns for source atlas and region type (m
 
 ### File descriptions
 
-- `{dataset}_regions.tsv` - Tab-separated mapping files with columns: dataset region name, FBbt_id, FBbt_name, notes. FBbt mappings are to be filled in.
+- `{dataset}_regions.tsv` - Tab-separated mapping files with columns: dataset region name, FBbt_id, FBbt_name, notes. The `banc_regions.tsv` file has additional columns for source, region_type, and segment_id.
 - `{dataset}_roi_hierarchy.json` - ROI hierarchy from neuprint showing how regions nest (e.g. CNS > CentralBrain > AL(L), or CNS > Optic(R) > ME(R) > ME(R)-columns > individual columns). Only available for neuprint datasets.
+- `map_regions_to_fbbt.py` - Script to populate FBbt_id and FBbt_name columns in the TSV files. Can be re-run after adding new regions or datasets.
+
+## Mapping to FBbt
+
+Region names were mapped to FBbt terms using `map_regions_to_fbbt.py`. The script strips left/right suffixes (`(L)`/`(R)`/`_L`/`_R`) before lookup so both sides receive the same FBbt ID.
+
+Many region abbreviations are ambiguous in FBbt (e.g. `PB` matches both protocerebral bridge and pharyngeal tracheal branch; `CA` matches both mushroom body calyx and embryonic crepine; `FLA` matches both flange and first lateral abdominal nerve). The script uses an explicit dictionary of ~230 abbreviation-to-FBbt mappings to resolve these ambiguities, rather than relying on synonym lookup alone. Antennal lobe glomeruli (e.g. `DA1`, `AL-DA1`) are looked up dynamically from fbbt-edit.obo by matching `antennal lobe glomerulus {name}`.
+
+### Unmapped regions
+
+- **Broad groupings** like `INP`, `SNP`, `VLNP`, `PENP`, `OL` (hemibrain) and `brain_neuropil`, `optic`, `vnc_neuropil` (BANC) are left unmapped as they are not individual neuropils.
+- **Lobula layer 7** (male-cns, optic-lobe) has no FBbt term (FBbt has lobula layers 1-6 only).
+- **`GF`** (hemibrain) is the giant fiber neuron, not a region.
+- **`Ov`** (manc) is the ovoid body, not currently in FBbt.
+- **`CRN`** (male-cns) is the copulation reporting neuron, not a region.
