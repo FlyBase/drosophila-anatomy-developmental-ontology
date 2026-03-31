@@ -291,10 +291,12 @@ EXPLICIT_MAP = {
     'LO_R_layer_3': ('FBbt:00003855', 'lobula layer 3'),
     'LO_L_layer_4': ('FBbt:00003856', 'lobula layer 4'),
     'LO_R_layer_4': ('FBbt:00003856', 'lobula layer 4'),
-    'LO_L_layer_5': ('FBbt:00040016', 'lobula layer 5'),
-    'LO_R_layer_5': ('FBbt:00040016', 'lobula layer 5'),
-    'LO_L_layer_6': ('FBbt:00040017', 'lobula layer 6'),
-    'LO_R_layer_6': ('FBbt:00040017', 'lobula layer 6'),
+    'LO_L_layer_5': ('FBbt:00111743', 'lobula layer 5A'),
+    'LO_R_layer_5': ('FBbt:00111743', 'lobula layer 5A'),
+    'LO_L_layer_6': ('FBbt:00111744', 'lobula layer 5B'),
+    'LO_R_layer_6': ('FBbt:00111744', 'lobula layer 5B'),
+    'LO_L_layer_7': ('FBbt:00040017', 'lobula layer 6'),
+    'LO_R_layer_7': ('FBbt:00040017', 'lobula layer 6'),
 
     # Lobula plate layers
     'LOP_L_layer_1': ('FBbt:00003886', 'lobula plate layer 1'),
