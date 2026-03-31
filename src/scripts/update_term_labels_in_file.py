@@ -52,8 +52,8 @@ def replace_labels(dataframe, id_col_name=id_column_name, label_col_name=label_c
     Label column not required in input."""
     col_order = dataframe.columns
     # separate ids to lists and make one flat list of unique values
-    dataframe['id_lists'] = dataframe[id_col_name].apply(lambda x: x.split(sep))
-    flat_FBbt_list = list(set(dataframe['id_lists'].explode().tolist()))
+    id_lists = dataframe[id_col_name].str.split(pat=sep)
+    flat_FBbt_list = list(set(id_lists.explode().tolist()))
     flat_FBbt_list = list(filter(None, flat_FBbt_list))  # remove Nones
 
     if source == 'VFB':  # get labels from VFB KB
@@ -98,11 +98,12 @@ def replace_labels(dataframe, id_col_name=id_column_name, label_col_name=label_c
         col_order = col_order.insert(ID_col_loc + 1, label_col_name)
 
     # make column of lists of labels from column of lists of IDs
-    dataframe['label_lists'] = dataframe.loc[:, id_col_name].apply(
-        lambda x: label_lookup(x.split(sep)))
+    dataframe['label_lists'] = dataframe.loc[:, id_col_name].map(
+        lambda x: label_lookup(x.split(sep)), na_action='ignore')
     # convert lists to strings with separator
     dataframe[label_col_name] = dataframe.loc[:,'label_lists'].apply(
         lambda x: sep.join(x) if type(x) == list else x)
+    dataframe = dataframe.drop('label_lists', axis=1)
 
     dataframe = dataframe[col_order]
     return dataframe
