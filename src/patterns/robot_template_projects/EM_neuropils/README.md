@@ -42,6 +42,7 @@ The `banc_regions.tsv` file includes columns for source atlas and region type (m
 - `{dataset}_regions.tsv` - Tab-separated mapping files with columns: dataset region name, FBbt_id, FBbt_name, notes. The `banc_regions.tsv` file has additional columns for source, region_type, and segment_id.
 - `{dataset}_roi_hierarchy.json` - ROI hierarchy from neuprint showing how regions nest (e.g. CNS > CentralBrain > AL(L), or CNS > Optic(R) > ME(R) > ME(R)-columns > individual columns). Only available for neuprint datasets.
 - `map_regions_to_fbbt.py` - Script to populate FBbt_id and FBbt_name columns in the TSV files. Can be re-run after adding new regions or datasets.
+- `EM_neuropil_synonym_template.py` - Script to generate a ROBOT template (`template.tsv`) from the mapping files. The template and OWL file are not kept in this directory; the output OWL file is at the repository top level as `EM_neuropil_synonyms.owl`.
 
 ## Mapping to FBbt
 
@@ -56,3 +57,19 @@ Many region abbreviations are ambiguous in FBbt (e.g. `PB` matches both protocer
 - Neuprint lobula layers 5, 6, 7 correspond to FBbt lobula layers 5A, 5B, 6 respectively.
 - **`GF`** (hemibrain) is the giant fiber neuron, not a region.
 - **`CRN`** (male-cns) is the copulation reporting neuron, not a region.
+
+## Building the OWL file
+
+Run the template script then ROBOT:
+
+```sh
+cd src/patterns/robot_template_projects/EM_neuropils
+python3 EM_neuropil_synonym_template.py
+robot template --input-iri http://purl.obolibrary.org/obo/fbbt.owl \
+  --template template.tsv \
+  annotate --ontology-iri "http://purl.obolibrary.org/obo/fbbt/EM_neuropil_synonyms.owl" \
+  --output ../../../../EM_neuropil_synonyms.owl
+rm template.tsv
+```
+
+The output `EM_neuropil_synonyms.owl` lives at the repository top level alongside `EM_synonyms.owl`. It contains related synonyms for each mapped region, annotated with the dataset-specific synonym type and a publication reference. The same synonym types are used as in the EM_synonyms project (`name_in_hemibrain`, `name_in_manc`, `name_in_flywire_fafb`, `name_in_neuprint_optic_lobe`, `name_in_male-cns`, `name_in_banc`).
