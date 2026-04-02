@@ -30,6 +30,17 @@ list_vars:
   nerve: nerve
   soma_location: anatomical_entity
 
+data_list_vars:
+  def_xrefs: thing
+
+def:
+  text: "Any neuron (FBbt:00005106) that has sensory dendrite in some %s and is capable of some %s that is part of %s."
+  vars:
+    - dendrite_location
+    - defining_detection
+    - defining_perception
+  xrefs: def_xrefs
+
 logical_axioms:
    - axiom_type: equivalentTo
      multi_clause:
