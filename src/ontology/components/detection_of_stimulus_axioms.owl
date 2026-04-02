@@ -24,7 +24,6 @@ Declaration(Class(obo:GO_0071063))
 Declaration(Class(obo:FBbt_00004178))
 Declaration(Class(obo:FBbt_00007275))
 Declaration(Class(obo:FBbt_00007411))
-Declaration(Class(obo:FBbt_00047455))
 Declaration(Class(obo:FBbt_00047456))
 Declaration(Class(obo:FBbt_00047460))
 Declaration(Class(obo:FBbt_00047461))
@@ -127,16 +126,6 @@ SubClassOf(obo:FBbt_00007275
 
 # FBbt:00007411 large labellar taste bristle - capable_of some (detection_of_chemical_stimulus and part_of some sensory_perception_of_salty_taste)
 SubClassOf(obo:FBbt_00007411
-  ObjectSomeValuesFrom(obo:RO_0002215
-    ObjectIntersectionOf(
-      obo:GO_0009593
-      ObjectSomeValuesFrom(obo:BFO_0000050 obo:GO_0050914)
-    )
-  )
-)
-
-# FBbt:00047455 gustatory receptor neuron C1 - capable_of some (detection_of_chemical_stimulus and part_of some sensory_perception_of_salty_taste)
-SubClassOf(obo:FBbt_00047455
   ObjectSomeValuesFrom(obo:RO_0002215
     ObjectIntersectionOf(
       obo:GO_0009593
