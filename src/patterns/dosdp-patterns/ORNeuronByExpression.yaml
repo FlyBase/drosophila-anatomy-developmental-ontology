@@ -1,6 +1,6 @@
 pattern_name: ORNeuronByExpression
 pattern_iri: http://purl.obolibrary.org/obo/fbbt/src/patterns/dosdp-patterns/ORNeuronByExpression.yaml
-description: "Pattern for olfactory receptor neurons that can be uniquely defined by their stage, GENE (not transcript) expression and (optionally) sensory dendrite location or glomerulus. stage_parent should be either FBbt:00007386 'adult olfactory receptor neuron' or FBbt:00007388 'embryonic/larval olfactory receptor neuron'. Receptors, dendrite locations and glomeruli that are not necessary for logical definitions can be added as SC axioms using other_receptor, other_dendrite and other_glomerulus  - separated by '|'. Can also add soma location, modality, laterality, developmental precursor and target projection neuron(s) - separated by '|'. Not for segment-specific subclasses of larval neurons (see larvalSensoryNeuronBySegment) or sensory neurons defined by dendrite location and modality (see sensoryNeuronByDendriteLocation)."
+description: "Pattern for olfactory receptor neurons that can be uniquely defined by their stage, GENE (not transcript) expression and (optionally) sensory dendrite location or glomerulus. stage_parent should be either FBbt:00007386 'adult olfactory receptor neuron' or FBbt:00007388 'embryonic/larval olfactory receptor neuron'. Receptors, dendrite locations and glomeruli that are not necessary for logical definitions can be added as SC axioms using other_receptor, other_dendrite and other_glomerulus  - separated by '|'. Can also add soma location, laterality, developmental precursor and target projection neuron(s) - separated by '|'. Modality is expressed as a compound: 'capable_of some (detection_type and part_of some perception_type)'. Use multiple rows per defined_class for additional modalities rather than pipe-separated values. For non-decomposable detection terms, use GO:0007600 'sensory perception' as perception_type. Not for segment-specific subclasses of larval neurons (see larvalSensoryNeuronBySegment) or sensory neurons defined by dendrite location and modality (see sensoryNeuronByDendriteLocation)."
 
 contributors:
   - https://orcid.org/0000-0002-1373-1705
@@ -12,8 +12,9 @@ classes:
   neuron: FBbt:00005106
   quality: PATO:0000001
   detection_of_stimulus: GO:0051606
+  biological_process: GO:0008150
 
-relations: 
+relations:
   expresses: RO:0002292
   has_sensory_dendrite_in: RO:0013007
   sends_synaptic_output_throughout: RO:0013006
@@ -22,19 +23,21 @@ relations:
   has_characteristic: RO:0000053
   develops_from: RO:0002202
   sends_synaptic_output_to_cell: RO:0013009
+  part_of: BFO:0000050
 
 vars:
   stage_parent: neuron
   receptor: gene
   dendrite: anatomical_entity
   glomerulus: synaptic_neuropil_subdomain
+  detection_type: detection_of_stimulus
+  perception_type: biological_process
 
 list_vars:
   other_receptor: gene
   other_dendrite: anatomical_entity
   other_glomerulus: synaptic_neuropil_subdomain
   soma_location: anatomical_entity
-  modality: detection_of_stimulus
   laterality: quality
   precursor: anatomical_entity
   target_PN: neuron
@@ -86,9 +89,10 @@ logical_axioms:
      multi_clause:
       sep: " and "
       clauses:
-        - text: "'capable_of' some %s"
+        - text: "'capable_of' some (%s and 'part_of' some %s)"
           vars:
-            - modality
+            - detection_type
+            - perception_type
    - axiom_type: subClassOf
      multi_clause:
       sep: " and "

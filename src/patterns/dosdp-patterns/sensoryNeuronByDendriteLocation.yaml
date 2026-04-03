@@ -1,6 +1,6 @@
 pattern_name: sensoryNeuronByDendriteLocation
 pattern_iri: http://purl.obolibrary.org/obo/fbbt/src/patterns/dosdp-patterns/sensoryNeuronByDendriteLocation.yaml
-description: "Pattern for sensory neurons that can be uniquely defined by their sensory dendrite location (optionally in combination with modality). If modality/modalities not necessary for logical def, add as SC axiom instead using other_modality - separated by '|'. Can optionally add soma location(s) and nerve(s) - separated by '|'. Not for segment-specific subclasses of larval neurons (see larvalSensoryNeuronBySegment)."
+description: "Pattern for sensory neurons that can be uniquely defined by their sensory dendrite location (optionally in combination with modality). Modality is expressed as a compound: 'capable_of some (detection_type and part_of some perception_type)'. Use multiple rows per defined_class for additional modalities rather than pipe-separated values. Can optionally add soma location(s) and nerve(s) - separated by '|'. Not for segment-specific subclasses of larval neurons (see larvalSensoryNeuronBySegment)."
 
 contributors:
   - https://orcid.org/0000-0002-1373-1705
@@ -8,24 +8,38 @@ contributors:
 classes:
   anatomical_entity: FBbt:10000000
   detection_of_stimulus: GO:0051606
+  biological_process: GO:0008150
   nerve: FBbt:00005105
   neuron: FBbt:00005106
 
-relations: 
+relations:
   has_sensory_dendrite_in: RO:0013007
   capable_of: RO:0002215
   has_soma_location: RO:0002100
   fasciculates_with: RO:0002101
+  part_of: BFO:0000050
 
 vars:
-  defining_modality: detection_of_stimulus
+  defining_detection: detection_of_stimulus
+  defining_perception: biological_process
   dendrite_location: anatomical_entity
-
+  other_detection: detection_of_stimulus
+  other_perception: biological_process
 
 list_vars:
   nerve: nerve
   soma_location: anatomical_entity
-  other_modality: detection_of_stimulus
+
+data_list_vars:
+  def_xrefs: thing
+
+def:
+  text: "Any neuron (FBbt:00005106) that has sensory dendrite in some %s and is capable of some %s that is part of %s."
+  vars:
+    - dendrite_location
+    - defining_detection
+    - defining_perception
+  xrefs: def_xrefs
 
 logical_axioms:
    - axiom_type: equivalentTo
@@ -35,16 +49,18 @@ logical_axioms:
         - text: "neuron that has_sensory_dendrite_in some %s"
           vars:
             - dendrite_location
-        - text: "'capable_of' some %s"
+        - text: "'capable_of' some (%s and 'part_of' some %s)"
           vars:
-            - defining_modality
+            - defining_detection
+            - defining_perception
    - axiom_type: subClassOf
      multi_clause:
       sep: " and "
       clauses:
-        - text: "'capable_of'some %s"
+        - text: "'capable_of' some (%s and 'part_of' some %s)"
           vars:
-            - other_modality
+            - other_detection
+            - other_perception
    - axiom_type: subClassOf
      multi_clause:
       sep: " and "
