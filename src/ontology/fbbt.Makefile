@@ -218,7 +218,7 @@ MAIN_FILES += fly_anatomy.obo fbbt-cedar.obo
 all_assets: fly_anatomy.obo fbbt-cedar.obo
 
 # Ensure the synonyms with EM source are published along with the other artefacts
-RELEASE_ASSETS_AFTER_RELEASE += ../../EM_synonyms.owl
+RELEASE_ASSETS_AFTER_RELEASE += ../../EM_synonyms.owl ../../EM_neuropil_synonyms.owl
 
 ######################################################################################
 ### Update image_annotation.owl
