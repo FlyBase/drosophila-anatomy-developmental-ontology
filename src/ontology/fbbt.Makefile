@@ -25,28 +25,31 @@ $(LAST_DEPLOYED_SIMPLE):
 	wget -O $@ $(SIMPLE_PURL)
 
 export PERL5LIB := ${realpath ../scripts}
-install_flybase_scripts:
-	rm -rf /tmp/fbcv_clone /tmp/fbao_clone /tmp/fbo_clone
+LOCAL_RELEASE_SCRIPTS=$(realpath ../../tools/release_and_checking_scripts/releases)
+
+.PHONY: install_flybase_scripts
+$(SCRIPTSDIR)/.flybase_scripts_installed:
+	rm -rf /tmp/fbcv_clone /tmp/fbo_clone
 	git clone --depth 1 --filter=blob:none --sparse \
 	    https://github.com/FlyBase/flybase-controlled-vocabulary.git /tmp/fbcv_clone && \
 	    cd /tmp/fbcv_clone && git sparse-checkout set external_tools/perl_modules/releases
 	git clone --depth 1 --filter=blob:none --sparse \
-	    https://github.com/FlyBase/drosophila-anatomy-developmental-ontology.git /tmp/fbao_clone && \
-	    cd /tmp/fbao_clone && git sparse-checkout set tools/release_and_checking_scripts/releases
-	git clone --depth 1 --filter=blob:none --sparse \
 	    https://github.com/FlyBase/flybase-ontology-scripts.git /tmp/fbo_clone && \
 	    cd /tmp/fbo_clone && git sparse-checkout set misc
 	cp /tmp/fbcv_clone/external_tools/perl_modules/releases/OboModel.pm $(SCRIPTSDIR)/OboModel.pm
-	cp /tmp/fbao_clone/tools/release_and_checking_scripts/releases/onto_metrics_calc.pl $(SCRIPTSDIR)/onto_metrics_calc.pl
-	cp /tmp/fbao_clone/tools/release_and_checking_scripts/releases/chado_load_checks.pl $(SCRIPTSDIR)/chado_load_checks.pl
-	cp /tmp/fbao_clone/tools/release_and_checking_scripts/releases/obo_track_new.pl $(SCRIPTSDIR)/obo_track_new.pl
-	cp /tmp/fbao_clone/tools/release_and_checking_scripts/releases/auto_def_sub.pl $(SCRIPTSDIR)/auto_def_sub.pl
+	cp $(LOCAL_RELEASE_SCRIPTS)/onto_metrics_calc.pl $(SCRIPTSDIR)/onto_metrics_calc.pl
+	cp $(LOCAL_RELEASE_SCRIPTS)/chado_load_checks.pl $(SCRIPTSDIR)/chado_load_checks.pl
+	cp $(LOCAL_RELEASE_SCRIPTS)/obo_track_new.pl $(SCRIPTSDIR)/obo_track_new.pl
+	cp $(LOCAL_RELEASE_SCRIPTS)/auto_def_sub.pl $(SCRIPTSDIR)/auto_def_sub.pl
 	cp /tmp/fbo_clone/misc/obo_spellchecker.py $(SCRIPTSDIR)/obo_spellchecker.py
 	cp /tmp/fbo_clone/misc/fetch_flybase_authors.py $(SCRIPTSDIR)/fetch_authors.py
 	chmod +x $(SCRIPTSDIR)/onto_metrics_calc.pl $(SCRIPTSDIR)/chado_load_checks.pl \
 	    $(SCRIPTSDIR)/obo_track_new.pl $(SCRIPTSDIR)/auto_def_sub.pl \
 	    $(SCRIPTSDIR)/obo_spellchecker.py $(SCRIPTSDIR)/fetch_authors.py
-	rm -rf /tmp/fbcv_clone /tmp/fbao_clone /tmp/fbo_clone
+	rm -rf /tmp/fbcv_clone /tmp/fbo_clone
+	touch $@
+
+install_flybase_scripts: $(SCRIPTSDIR)/.flybase_scripts_installed
 
 $(REPORTDIR)/obo_track_new_simple.txt: $(LAST_DEPLOYED_SIMPLE) install_flybase_scripts $(ONT)-simple.obo
 	echo "Comparing with: "$(SIMPLE_PURL) && $(SCRIPTSDIR)/obo_track_new.pl $(LAST_DEPLOYED_SIMPLE) $(ONT)-simple.obo > $@
