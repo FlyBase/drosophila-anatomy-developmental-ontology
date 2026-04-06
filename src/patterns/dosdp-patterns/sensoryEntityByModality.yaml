@@ -12,7 +12,6 @@ classes:
 
 relations:
   capable_of: RO:0002215
-  capable_of_part_of: RO:0002216
   part_of: BFO:0000050
 
 vars:
@@ -22,8 +21,6 @@ vars:
   location: anatomical_entity
   other_detection: detection_of_stimulus
   other_perception: biological_process
-  other_detection_copo: detection_of_stimulus
-  other_perception_copo: biological_process
 
 data_list_vars:
   def_xrefs: thing
@@ -54,8 +51,3 @@ logical_axioms:
      vars:
        - other_detection
        - other_perception
-   - axiom_type: subClassOf
-     text: "'capable_of_part_of' some (%s and 'part_of' some %s)"
-     vars:
-       - other_detection_copo
-       - other_perception_copo
