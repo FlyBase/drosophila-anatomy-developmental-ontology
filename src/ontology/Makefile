@@ -10,7 +10,7 @@
 # More information: https://github.com/INCATools/ontology-development-kit/
 
 # Fingerprint of the configuration file when this Makefile was last generated
-CONFIG_HASH=                931a9afef2022a86ea78f00a68f64c809f55d8d0ddfc8f13660a7f30b779c693
+CONFIG_HASH=                317602c93052bd8c6cc294c0ccf40c3a568f0d07ba58afe3b550117cf81335c8
 
 
 # ----------------------------------------
@@ -57,7 +57,7 @@ OBODATE ?=                  $(shell date +'%d:%m:%Y %H:%M')
 VERSION=                    $(TODAY)
 ANNOTATE_ONTOLOGY_VERSION = annotate -V $(ONTBASE)/releases/$(VERSION)/$@ --annotation owl:versionInfo $(VERSION)
 ANNOTATE_CONVERT_FILE =     annotate --ontology-iri $(ONTBASE)/$@ $(ANNOTATE_ONTOLOGY_VERSION) convert -f ofn --output $@.tmp.owl && mv $@.tmp.owl $@
-OTHER_SRC =                 $(PATTERNDIR)/definitions.owl $(COMPONENTSDIR)/fbbt_ext.owl $(COMPONENTSDIR)/mappings_xrefs.owl $(COMPONENTSDIR)/neuron_symbols.owl $(COMPONENTSDIR)/hemibrain_new_cells.owl $(COMPONENTSDIR)/hemibrain_new_ALLNs.owl $(COMPONENTSDIR)/VNC_new_cells.owl $(COMPONENTSDIR)/manc_new_cells.owl $(COMPONENTSDIR)/banc_identical_to.owl $(COMPONENTSDIR)/flybase_import.owl $(COMPONENTSDIR)/flywire_neurons.owl $(COMPONENTSDIR)/VFB_xrefs.owl $(COMPONENTSDIR)/detection_of_stimulus_axioms.owl 
+OTHER_SRC =                 $(PATTERNDIR)/definitions.owl $(COMPONENTSDIR)/fbbt_ext.owl $(COMPONENTSDIR)/mappings_xrefs.owl $(COMPONENTSDIR)/neuron_symbols.owl $(COMPONENTSDIR)/hemibrain_new_cells.owl $(COMPONENTSDIR)/hemibrain_new_ALLNs.owl $(COMPONENTSDIR)/VNC_new_cells.owl $(COMPONENTSDIR)/manc_new_cells.owl $(COMPONENTSDIR)/banc_identical_to.owl $(COMPONENTSDIR)/flybase_import.owl $(COMPONENTSDIR)/flywire_neurons.owl $(COMPONENTSDIR)/VFB_xrefs.owl 
 ONTOLOGYTERMS =             $(TMPDIR)/ontologyterms.txt
 EDIT_PREPROCESSED =         $(TMPDIR)/$(ONT)-preprocess.owl
 
@@ -483,7 +483,6 @@ recreate-components:
 		--assume-new=$(TMPDIR)/stamp-component-flybase_import.owl \
 		--assume-new=$(TMPDIR)/stamp-component-flywire_neurons.owl \
 		--assume-new=$(TMPDIR)/stamp-component-VFB_xrefs.owl \
-		--assume-new=$(TMPDIR)/stamp-component-detection_of_stimulus_axioms.owl \
 		COMP=true IMP=false MIR=true PAT=true all_components
 
 .PHONY: no-mirror-recreate-components
@@ -499,7 +498,6 @@ no-mirror-recreate-components:
 		--assume-new=$(TMPDIR)/stamp-component-flybase_import.owl \
 		--assume-new=$(TMPDIR)/stamp-component-flywire_neurons.owl \
 		--assume-new=$(TMPDIR)/stamp-component-VFB_xrefs.owl \
-		--assume-new=$(TMPDIR)/stamp-component-detection_of_stimulus_axioms.owl \
 		COMP=true IMP=false MIR=false PAT=true all_components
 
 .PHONY: recreate-%
