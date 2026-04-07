@@ -1,0 +1,53 @@
+pattern_name: sensoryEntityByModality
+pattern_iri: http://purl.obolibrary.org/obo/fbbt/src/patterns/dosdp-patterns/sensoryEntityByModality.yaml
+description: "Pattern for sensory entities (neurons, organs, sensilla) defined by or associated with a sensory modality. Modality is expressed as a compound: 'capable_of some (detection_type and part_of some perception_type)'. For non-decomposable detection terms, use GO:0007600 'sensory perception' as perception_type. Use defining_detection/defining_perception for the EquivalentClasses axiom and other_detection/other_perception for SubClassOf axioms. Use multiple rows per defined_class for additional modalities. An optional location can be included in the EquivalentClasses axiom via 'part_of some location'."
+
+contributors:
+  - https://orcid.org/0000-0002-1373-1705
+
+classes:
+  anatomical_entity: FBbt:10000000
+  detection_of_stimulus: GO:0051606
+  biological_process: GO:0008150
+
+relations:
+  capable_of: RO:0002215
+  part_of: BFO:0000050
+
+vars:
+  parent: anatomical_entity
+  defining_detection: detection_of_stimulus
+  defining_perception: biological_process
+  location: anatomical_entity
+  other_detection: detection_of_stimulus
+  other_perception: biological_process
+
+data_list_vars:
+  def_xrefs: thing
+
+def:
+  text: "Any %s that is capable of some %s that is part of %s."
+  vars:
+    - parent
+    - defining_detection
+    - defining_perception
+  xrefs: def_xrefs
+
+logical_axioms:
+   - axiom_type: equivalentTo
+     multi_clause:
+      sep: " and "
+      clauses:
+        - text: "%s that 'capable_of' some (%s and 'part_of' some %s)"
+          vars:
+            - parent
+            - defining_detection
+            - defining_perception
+        - text: "'part_of' some %s"
+          vars:
+            - location
+   - axiom_type: subClassOf
+     text: "'capable_of' some (%s and 'part_of' some %s)"
+     vars:
+       - other_detection
+       - other_perception
