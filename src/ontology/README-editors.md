@@ -164,6 +164,7 @@ The `qc_assertions` files were historically used to allow some qc checks to pass
 [Claude Code](https://docs.anthropic.com/en/docs/claude-code) skills for this repository are stored in `.claude/skills/`. They are available to any Claude Code user working in this repo via the `/skill-name` command. Available skills:
 
 - **`/move-to-edit`** `[FBbt_ID ...]` — Moves one or more neuron terms from robot template-generated component OWL files (see above) into the editors' file. For each term, it extracts all axioms from the component, converts from OWL XML to OBO format, inserts the term stanza into fbbt-edit.obo in ID order, removes the term from the component OWL file, and removes it from the source TSV in robot_template_projects so that it will not be regenerated. EM synonym mappings are preserved. Requires [ROBOT](http://robot.obolibrary.org/) on your PATH.
+- **`/obsolete-term`** `[FBbt_ID ...]` — Obsoletes one or more FBbt terms in the editors' file following the procedure in the "Obsoleting terms" section above. Prompts for replacement term(s) and whether to use `replaced_by` (1:1) or `consider` (non-1:1) if not specified, rewrites the stanza to remove logical axioms and mark deprecated, then searches `fbbt-edit.obo`, components, and pattern/template TSVs for usage and asks the curator whether to update each hit.
 
 ## Imports
 
