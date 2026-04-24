@@ -133,7 +133,7 @@ $(COMPONENTSDIR)/flybase_import.owl: $(TMPDIR)/FBgn_template.tsv update_template
 ### Update VFB_xrefs.owl
 ###################################################################################
 
-$(TMPDIR)/fbbt-merged.json:
+$(TMPDIR)/fbbt-merged.json: $(SRC) | $(TMPDIR)
 	$(ROBOT) merge -i fbbt-edit.obo \
 	relax \
 	convert -f json -o $@
