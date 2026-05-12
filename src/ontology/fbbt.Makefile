@@ -253,7 +253,7 @@ $(TMPDIR)/$(ONT)-merged.db: $(SRC)
 
 update_pattern_labels: $(TMPDIR)/$(ONT)-merged.db
 	wget -O $(SCRIPTSDIR)/update_term_labels_in_file.py https://raw.githubusercontent.com/FlyBase/flybase-ontology-scripts/master/update_term_labels_in_file/src/update_term_labels_in_file.py
-	for file in $(ALL_DOSDP_TSVs) ; do \
+	for file in $(ALL_DOSDP_TSVs) $(PATTERNDIR)/image_annotation_template.tsv ; do \
     python3 $(SCRIPTSDIR)/update_term_labels_in_file.py -f $$file -i auto -c $< ; \
 	done
 	
