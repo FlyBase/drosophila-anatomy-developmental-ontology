@@ -2,7 +2,15 @@ import pandas as pd
 import shutil
 import re
 
-# update files from local copies (requires relevant mapping repos in same parent folder as fbbt repo)
+"""
+Use this to generate a template, then run:
+
+robot template --input-iri http://purl.obolibrary.org/obo/fbbt.owl --template template.tsv \
+annotate --ontology-iri "http://purl.obolibrary.org/obo/fbbt/EM_synonyms.owl" \
+--output ../../../../EM_synonyms.owl
+
+Uses mapping files from local folders (requires relevant mapping repos in same parent folder as fbbt repo)
+"""
 source_filepaths = {'OL':'../../../../../neuprint_optic_lobe_curation/OL_FBbt_mapping.tsv',
                     'manc':'../../../../../manc_curation/resources/manc_cell_type_fbbt_mapping.tsv',
                     'flywire':'../../../../../FlyWire_curation/src/resources/flywire_fbbt_mapping.tsv',
