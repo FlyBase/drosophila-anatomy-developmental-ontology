@@ -147,6 +147,14 @@ Mappings to external resources are maintained in [../mappings](../mappings). The
 
 See SSSOM [paper](https://academic.oup.com/database/article/doi/10.1093/database/baac035/6591806) and [GitHub](https://github.com/mapping-commons/sssom).
 
+## Image Annotations
+
+Images for terms are recorded as `foaf:depiction` annotations. These are maintained in [../patterns/image_annotation_template.tsv](../patterns/image_annotation_template.tsv) and compiled by ROBOT into [components/image_annotation.owl](components/image_annotation.owl). Each row links an FBbt term to an image URL together with a source citation (`oboInOwl:hasDbXref`, typically a `doi:` or `FlyBase:FBrf...`) and a licence URL (`dc:licence`). The same URL can be reused on multiple terms.
+
+After editing the template, regenerate the component with `sh run.sh make components/image_annotation.owl`.
+
+At release time, [check_depictions.py](../scripts/check_depictions.py) verifies that every distinct depiction URL still resolves. The result is written to [reports/depiction_check.tsv](reports/depiction_check.tsv) with any failing URLs listed first. A failure prints a warning but does not fail the build.
+
 ## Extended Logical Axioms
 
 The [components/fbbt_ext.owl](components/fbbt_ext.owl) file contains axioms that are awkward to represent in obo format. Most of these appear in the `General class axioms` section when viewing the editors' file in Protege, under the `Active ontology` tab. To add a new axiom, create it in this location in Protege, then right click to `Move axiom(s) to ontology...` and select `fbbt_ext`.

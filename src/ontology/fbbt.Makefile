@@ -10,7 +10,7 @@ travis_checks: odkversion fbbt-simple.obo reason_test sparql_test $(REPORTDIR)/o
 ### Code for generating additional FlyBase reports ###
 ######################################################
 
-FLYBASE_REPORTS = $(REPORTDIR)/obo_qc_fbbt.obo.txt $(REPORTDIR)/obo_track_new_simple.txt $(REPORTDIR)/robot_simple_diff.txt $(REPORTDIR)/onto_metrics_calc.txt $(REPORTDIR)/chado_load_check_simple.txt $(REPORTDIR)/spellcheck.txt
+FLYBASE_REPORTS = $(REPORTDIR)/obo_qc_fbbt.obo.txt $(REPORTDIR)/obo_track_new_simple.txt $(REPORTDIR)/robot_simple_diff.txt $(REPORTDIR)/onto_metrics_calc.txt $(REPORTDIR)/chado_load_check_simple.txt $(REPORTDIR)/spellcheck.txt $(REPORTDIR)/depiction_check.tsv
 
 .PHONY: flybase_reports
 flybase_reports: $(FLYBASE_REPORTS)
@@ -24,7 +24,7 @@ LAST_DEPLOYED_SIMPLE=$(TMPDIR)/$(ONT)-simple-last.obo
 $(LAST_DEPLOYED_SIMPLE):
 	wget -O $@ $(SIMPLE_PURL)
 
-export PERL5LIB := ${realpath ../scripts}
+export PERL5LIB := $(realpath ../scripts)
 LOCAL_RELEASE_SCRIPTS=$(realpath ../../tools/release_and_checking_scripts/releases)
 
 .PHONY: install_flybase_scripts
@@ -44,8 +44,7 @@ $(SCRIPTSDIR)/.flybase_scripts_installed:
 	cp /tmp/fbo_clone/misc/obo_spellchecker.py $(SCRIPTSDIR)/obo_spellchecker.py
 	cp /tmp/fbo_clone/misc/fetch_flybase_authors.py $(SCRIPTSDIR)/fetch_authors.py
 	chmod +x $(SCRIPTSDIR)/onto_metrics_calc.pl $(SCRIPTSDIR)/chado_load_checks.pl \
-	    $(SCRIPTSDIR)/obo_track_new.pl $(SCRIPTSDIR)/auto_def_sub.pl \
-	    $(SCRIPTSDIR)/obo_spellchecker.py $(SCRIPTSDIR)/fetch_authors.py
+	    $(SCRIPTSDIR)/obo_track_new.pl $(SCRIPTSDIR)/auto_def_sub.pl
 	rm -rf /tmp/fbcv_clone /tmp/fbo_clone
 	touch $@
 
@@ -73,10 +72,13 @@ $(REPORTDIR)/obo_qc_%.owl.txt:
 	rm -f $(REPORTDIR)/obo_qc_$*.owl
 
 $(REPORTDIR)/spellcheck.txt: fbbt-simple.obo install_flybase_scripts ../../tools/dictionaries/standard.dict
-	$(SCRIPTSDIR)/obo_spellchecker.py -o $@ \
+	python3 $(SCRIPTSDIR)/obo_spellchecker.py -o $@ \
 		-d ../../tools/dictionaries/standard.dict \
-		-d '|$(SCRIPTSDIR)/fetch_authors.py' \
+		-d '|python3 $(SCRIPTSDIR)/fetch_authors.py' \
 		fbbt-simple.obo
+
+$(REPORTDIR)/depiction_check.tsv: fbbt-simple.obo
+	python3 $(SCRIPTSDIR)/check_depictions.py -o $@ fbbt-simple.obo || true
 
 
 ######################################################
@@ -251,7 +253,7 @@ $(TMPDIR)/$(ONT)-merged.db: $(SRC)
 
 update_pattern_labels: $(TMPDIR)/$(ONT)-merged.db
 	wget -O $(SCRIPTSDIR)/update_term_labels_in_file.py https://raw.githubusercontent.com/FlyBase/flybase-ontology-scripts/master/update_term_labels_in_file/src/update_term_labels_in_file.py
-	for file in $(ALL_DOSDP_TSVs) ; do \
+	for file in $(ALL_DOSDP_TSVs) $(PATTERNDIR)/image_annotation_template.tsv ; do \
     python3 $(SCRIPTSDIR)/update_term_labels_in_file.py -f $$file -i auto -c $< ; \
 	done
 	
