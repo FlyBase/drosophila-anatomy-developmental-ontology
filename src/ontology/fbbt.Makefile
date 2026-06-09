@@ -151,19 +151,32 @@ $(COMPONENTSDIR)/VFB_xrefs.owl: $(TMPDIR)/fbbt-merged.json
 ### Update neuron_symbols.owl
 ###################################################################################
 
-OTHERCOMPONENTS := $(filter-out $(COMPONENTSDIR)/neuron_symbols.owl $(COMPONENTSDIR)/flybase_import.owl, $(OTHER_SRC))
-OTHERSRCMERGED = $(TMPDIR)/nosymbolsmerged-$(SRC)
 
-$(OTHERSRCMERGED): $(EDIT_PREPROCESSED) $(OTHERCOMPONENTS)
-	$(ROBOT) remove --input $< --select imports --trim false \
-		merge  $(patsubst %, -i %, $(OTHERCOMPONENTS)) -o $@
-
-$(TMPDIR)/symbols_template.tsv: neuron_symbols.tsv $(OTHERSRCMERGED) | $(TMPDIR)
-	if [ $(IMP) = true ]; then python3 $(SCRIPTSDIR)/neuron_symbols/symbol_template.py $(OTHERSRCMERGED) $< $@; fi
+$(TMPDIR)/symbols_template.tsv: neuron_symbols.tsv | $(TMPDIR)
+	python3 $(SCRIPTSDIR)/symbols_abbreviations/check_symbol_clashes.py neuron_symbols.tsv brain_name_abbreviations.tsv && \
+	python3 $(SCRIPTSDIR)/symbols_abbreviations/symbol_template.py $< $@
 
 $(COMPONENTSDIR)/neuron_symbols.owl: $(TMPDIR)/symbols_template.tsv | $(COMPONENTSDIR)
-	if [ $(IMP) = true ]; then $(ROBOT) template --input-iri http://purl.obolibrary.org/obo/ro.owl --template $< \
-	annotate --ontology-iri "http://purl.obolibrary.org/obo/fbbt/components/neuron_symbols.owl" --output $@ && rm $<; fi
+	$(ROBOT) template --input-iri http://purl.obolibrary.org/obo/ro.owl --template $< \
+	annotate --ontology-iri "http://purl.obolibrary.org/obo/fbbt/components/neuron_symbols.owl" --output $@ && rm $<
+
+######################################################################################
+### Update brain_name_abbreviations.owl
+###################################################################################
+# BrainName official abbreviations (Ito et al. 2014, FBrf0224194) for neuropils,
+# tracts, nerves, commissures and cell body rinds. Maintained as a simple curated
+# TSV (brain_name_abbreviations.tsv: FBbt_id + abbreviation); a script turns it
+# into a ROBOT template. Generation also
+# checks (by comparing the two TSVs) that no abbreviation clashes with a neuron
+# symbol in neuron_symbols.tsv.
+
+$(TMPDIR)/brain_name_template.tsv: brain_name_abbreviations.tsv | $(TMPDIR)
+	python3 $(SCRIPTSDIR)/symbols_abbreviations/check_symbol_clashes.py brain_name_abbreviations.tsv neuron_symbols.tsv && \
+	python3 $(SCRIPTSDIR)/symbols_abbreviations/make_brain_name_template.py $< $@
+
+$(COMPONENTSDIR)/brain_name_abbreviations.owl: $(TMPDIR)/brain_name_template.tsv | $(COMPONENTSDIR)
+	$(ROBOT) template --input-iri http://purl.obolibrary.org/obo/ro.owl --template $< \
+	annotate --ontology-iri "http://purl.obolibrary.org/obo/fbbt/components/brain_name_abbreviations.owl" --output $@ && rm $<
 
 #######################################################################
 ### Update mappings_xrefs.owl
