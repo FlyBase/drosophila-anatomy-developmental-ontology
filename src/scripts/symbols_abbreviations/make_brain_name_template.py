@@ -36,7 +36,7 @@ def main(mapping, output_file):
     
     template_body = mapping.rename(columns = {'FBbt_id':'ID'})
     template_body["reference"] = REFERENCE
-    template_body["Synonym_type"] = SYNONYM_TYPE
+    template_body["synonym_type"] = SYNONYM_TYPE
     
     template = pd.concat([template_header, template_body], ignore_index=True, sort=False)
     template.to_csv(output_file, sep="\t", header=True, index=False)
