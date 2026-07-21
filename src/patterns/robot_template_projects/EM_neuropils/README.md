@@ -6,13 +6,13 @@ This project creates an OWL file of brain region synonyms found in EM connectomi
 
 ### Neuprint datasets
 
-Region names were fetched from neuprint (neuprint.janelia.org) on 2026-03-31 using neuprint-python. For each dataset, the ROI (Region of Interest) list was obtained via the Cypher query `MATCH (m :Meta) RETURN m.roiInfo` and the ROI hierarchy via `m.roiHierarchy`.
+Region names were fetched from neuprint (neuprint.janelia.org) on 2026-03-31 using neuprint-python (male-cns re-fetched from v1.0 on 2026-07-21). For each dataset, the ROI (Region of Interest) list was obtained via the Cypher query `MATCH (m :Meta) RETURN m.roiInfo` and the ROI hierarchy via `m.roiHierarchy`.
 
 | Dataset | neuprint version | Regions | Notes |
 |---------|-----------------|---------|-------|
 | hemibrain | hemibrain:v1.2.1 | 230 | Brain regions including individual AL glomeruli and PB glomeruli |
 | manc | manc:v1.2.3 | 59 | VNC neuropils and nerves |
-| male-cns | male-cns:v0.9 | 200 | Brain + VNC neuropil-level regions |
+| male-cns | male-cns:v1.0 | 407 | Brain + VNC regions including individual AL glomeruli, PB glomeruli, MB lobe slices, FB layers and EB domains |
 | optic-lobe | optic-lobe:v1.1 | 106 | Brain neuropil-level regions |
 
 Individual optic lobe columns (ME, LO, LOP columns — ~5,200 in male-cns and ~2,600 in optic-lobe) were removed as they cannot be mapped to FBbt terms.
@@ -23,7 +23,7 @@ Individual optic lobe columns (ME, LO, LOP columns — ~5,200 in male-cns and ~2
 
 ### BANC
 
-307 region outlines fetched from the BANC neuroglancer segment properties at `gs://lee-lab_brain-and-nerve-cord-fly-connectome/region_outlines/segment_properties/info` (file timestamp 2024-09-25 18:26:54). These are region meshes from multiple atlases warped into BANC space:
+307 region outlines fetched from the BANC neuroglancer segment properties at `gs://lee-lab_brain-and-nerve-cord-fly-connectome/region_outlines/segment_properties/info` (file timestamp 2026-06-24 18:33:21; the segment IDs of the 39 COURT/MANC tracts were remapped in this revision). These are region meshes from multiple atlases warped into BANC space:
 
 | Source | Count | Description |
 |--------|-------|-------------|
@@ -52,7 +52,7 @@ Many region abbreviations are ambiguous in FBbt (e.g. `PB` matches both protocer
 
 ### Unmapped regions
 
-- **`*-unspecified`** regions (male-cns: `CV-unspecified`, `CentralBrain-unspecified`, `Optic-unspecified`, `VNC-unspecified`) are catch-all categories for unassigned synapses.
+- **`*-unspecified`** regions (male-cns: `AL-unspecified`, `CV-unspecified`, `CentralBrain-unspecified`, `Optic-unspecified`, `VNC-unspecified`, `gL-unspecified`) are catch-all categories for unassigned synapses.
 - **`hemibrain`** in the hemibrain dataset is a dataset-level label, not a region.
 - Neuprint lobula layers 5, 6, 7 correspond to FBbt lobula layers 5A, 5B, 6 respectively.
 - **`GF`** (hemibrain) is the giant fiber neuron, not a region.
