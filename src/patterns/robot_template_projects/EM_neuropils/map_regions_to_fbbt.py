@@ -120,11 +120,11 @@ EXPLICIT_MAP = {
     'g3': ('FBbt:00100275', 'mushroom body gamma lobe slice 3'),
     'g4': ('FBbt:00100276', 'mushroom body gamma lobe slice 4'),
     'g5': ('FBbt:00100277', 'mushroom body gamma lobe slice 5'),
-    'aL': ('FBbt:00110651', 'mushroom body alpha lobe'),
-    "a'L": ('FBbt:00110652', "mushroom body alpha' lobe"),
-    'bL': ('FBbt:00110653', 'mushroom body beta lobe'),
-    "b'L": ('FBbt:00110654', "mushroom body beta' lobe"),
-    'gL': ('FBbt:00007686', 'mushroom body gamma lobe'),
+    'aL': ('FBbt:00110657', 'adult mushroom body alpha-lobe'),
+    "a'L": ('FBbt:00013691', "adult mushroom body alpha'-lobe"),
+    'bL': ('FBbt:00110658', 'adult mushroom body beta-lobe'),
+    "b'L": ('FBbt:00013694', "adult mushroom body beta'-lobe"),
+    'gL': ('FBbt:00013695', 'adult mushroom body gamma-lobe'),
 
     # Fan-shaped body layers
     'FBl1': ('FBbt:00007487', 'fan-shaped body layer 1'),
@@ -223,9 +223,9 @@ EXPLICIT_MAP = {
     'SAD(-AMMC)': ('FBbt:00045048', 'saddle'),
 
     # Tracts
-    'DLT': ('FBbt:00047540', 'dorsal lateral tract'),
+    'DLT': ('FBbt:00047533', 'dorsal lateral tract of dorsal cervical fasciculus'),
     'DLV': ('FBbt:00047541', 'dorsal lateral tract of ventral cervical fasciculus'),
-    'DMT': ('FBbt:00047539', 'dorsal median tract'),
+    'DMT': ('FBbt:00047535', 'adult dorsal median tract'),
     'VLT': ('FBbt:00047543', 'ventral lateral tract of ventral cervical fasciculus'),
     'VTV': ('FBbt:00047542', 'ventral median tract of ventral cervical fasciculus'),
     'MDT': ('FBbt:00047544', 'median dorsal abdominal tract'),
@@ -235,9 +235,9 @@ EXPLICIT_MAP = {
     'ITD-HC': ('FBbt:00047838', 'intermediate tract of dorsal cervical fasciculus - haltere commissure'),
     'ITD-HT': ('FBbt:00049638', 'haltere tract'),
     'CVL': ('FBbt:00053285', 'adult curved ventrolateral tract'),
-    'type-I_MTD': ('FBbt:00047546', 'type I median tract of dorsal cervical fasciculus'),
-    'type-II_MTD': ('FBbt:00047547', 'type II median tract of dorsal cervical fasciculus'),
-    'type-III_MTD': ('FBbt:00047548', 'type III median tract of dorsal cervical fasciculus'),
+    'type-I_MTD': ('FBbt:00053283', 'adult median tract of dorsal cervical fasciculus I'),
+    'type-II_MTD': ('FBbt:00053284', 'adult median tract of dorsal cervical fasciculus II'),
+    'type-III_MTD': ('FBbt:00053286', 'adult median tract of dorsal cervical fasciculus III'),
 
     # Nerves
     'AbN1': ('FBbt:00004105', 'adult first abdominal nerve'),
@@ -258,7 +258,7 @@ EXPLICIT_MAP = {
     'ProCN': ('FBbt:00049893', 'adult prothoracic chordotonal nerve'),
     'ProLN': ('FBbt:00007657', 'adult prothoracic leg nerve'),
     'VProN': ('FBbt:00004057', 'adult ventral prothoracic nerve'),
-    'Xnerve': ('FBbt:00004098', 'adult X nerve'),
+    'Xnerve': ('', ''),  # no FBbt term for the X nerve - left unmapped (not loaded)
 
     # Medulla layers (neuprint uses 01-10, FBbt uses M1-M10)
     'ME_L_layer_01': ('FBbt:00003750', 'medulla layer M1'),
