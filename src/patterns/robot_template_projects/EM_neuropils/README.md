@@ -57,6 +57,7 @@ Many region abbreviations are ambiguous in FBbt (e.g. `PB` matches both protocer
 - Neuprint lobula layers 5, 6, 7 correspond to FBbt lobula layers 5A, 5B, 6 respectively.
 - **`GF`** (hemibrain) is the giant fiber neuron, not a region.
 - **`CRN`** (male-cns) is the copulation reporting neuron, not a region.
+- **`Xnerve`** (banc, MANC atlas) has no corresponding FBbt term (the X nerve is not currently represented in FBbt).
 
 ## Building the OWL file
 
