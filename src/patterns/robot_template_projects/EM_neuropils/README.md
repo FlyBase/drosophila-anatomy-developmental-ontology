@@ -23,7 +23,7 @@ Individual optic lobe columns (ME, LO, LOP columns — ~5,200 in male-cns and ~2
 
 ### BANC
 
-307 region outlines fetched from the BANC neuroglancer segment properties at `gs://lee-lab_brain-and-nerve-cord-fly-connectome/region_outlines/segment_properties/info` (file timestamp 2024-09-25 18:26:54). These are region meshes from multiple atlases warped into BANC space:
+307 region outlines fetched from the BANC neuroglancer segment properties at `gs://lee-lab_brain-and-nerve-cord-fly-connectome/region_outlines/segment_properties/info` (file timestamp 2026-06-24 18:33:21; the segment IDs of the 39 COURT/MANC tracts were remapped in this revision). These are region meshes from multiple atlases warped into BANC space:
 
 | Source | Count | Description |
 |--------|-------|-------------|
