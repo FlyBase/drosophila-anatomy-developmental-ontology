@@ -38,7 +38,7 @@ DATASETS = {
         'file': 'male-cns_regions.tsv',
         'region_col': 'male-cns_region',
         'synonym_type': 'name_in_male-cns',
-        'reference': 'doi:10.1101/2025.10.09.680999',  # Berg2025
+        'reference': 'doi:10.1101/2025.10.09.680999',  # Berg2025a (male-cns v1.0)
     },
     'optic-lobe': {
         'file': 'optic-lobe_regions.tsv',
@@ -56,7 +56,7 @@ DATASETS = {
         'file': 'banc_regions.tsv',
         'region_col': 'banc_region',
         'synonym_type': 'name_in_banc',
-        'reference': 'doi:10.1101/2025.07.31.667571',  # Bates2025
+        'reference': 'doi:10.1038/s41586-026-10735-w',  # Bates2026 (BANC v888)
     },
 }
 

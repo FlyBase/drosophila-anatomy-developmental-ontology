@@ -218,6 +218,7 @@ EXPLICIT_MAP = {
 
     # Compound/partial region names
     'CRE(-ROB,-RUB)': ('FBbt:00045037', 'adult crepine'),
+    'CRE(-ROB)(-RUB)': ('FBbt:00045037', 'adult crepine'),  # male-cns v1.0 notation
     'CRE(-RUB)': ('FBbt:00045037', 'adult crepine'),
     'LAL(-GA)': ('FBbt:00003681', 'adult lateral accessory lobe'),
     'SAD(-AMMC)': ('FBbt:00045048', 'saddle'),
