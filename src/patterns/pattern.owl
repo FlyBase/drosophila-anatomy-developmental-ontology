@@ -53,6 +53,7 @@ Declaration(Class(<http://purl.obolibrary.org/obo/fbbt/src/patterns/dosdp-patter
 Declaration(Class(<http://purl.obolibrary.org/obo/fbbt/src/patterns/dosdp-patterns/cellByLocation.yaml>))
 Declaration(Class(<http://purl.obolibrary.org/obo/fbbt/src/patterns/dosdp-patterns/cellTypeFromNeuroblast.yaml>))
 Declaration(Class(<http://purl.obolibrary.org/obo/fbbt/src/patterns/dosdp-patterns/cloneWithNeuroblastAndStage.yaml>))
+Declaration(Class(<http://purl.obolibrary.org/obo/fbbt/src/patterns/dosdp-patterns/cnsRegionIntersection.yaml>))
 Declaration(Class(<http://purl.obolibrary.org/obo/fbbt/src/patterns/dosdp-patterns/developingEntityWithEarlierAndLaterStructures.yaml>))
 Declaration(Class(<http://purl.obolibrary.org/obo/fbbt/src/patterns/dosdp-patterns/fbTangentialNeuronByLayerAndLineage.yaml>))
 Declaration(Class(<http://purl.obolibrary.org/obo/fbbt/src/patterns/dosdp-patterns/glomerulusWithNeuropilAndInputNeurons.yaml>))
@@ -181,6 +182,11 @@ AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/fbbt/src/patterns
 SubClassOf(<http://purl.obolibrary.org/obo/fbbt/src/patterns/dosdp-patterns/cloneWithNeuroblastAndStage.yaml> <http://purl.obolibrary.org/obo/FBbt_00007683>)
 SubClassOf(<http://purl.obolibrary.org/obo/fbbt/src/patterns/dosdp-patterns/cloneWithNeuroblastAndStage.yaml> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000050> <http://purl.obolibrary.org/obo/FBbt_00000001>))
 SubClassOf(<http://purl.obolibrary.org/obo/fbbt/src/patterns/dosdp-patterns/cloneWithNeuroblastAndStage.yaml> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002202> <http://purl.obolibrary.org/obo/FBbt_00005146>))
+
+# Class: <http://purl.obolibrary.org/obo/fbbt/src/patterns/dosdp-patterns/cnsRegionIntersection.yaml> (<http://purl.obolibrary.org/obo/fbbt/src/patterns/dosdp-patterns/cnsRegionIntersection.yaml>)
+
+AnnotationAssertion(<http://purl.org/dc/terms/title> <http://purl.obolibrary.org/obo/fbbt/src/patterns/dosdp-patterns/cnsRegionIntersection.yaml> "cnsRegionIntersection"^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/fbbt/src/patterns/dosdp-patterns/cnsRegionIntersection.yaml> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/FBbt_10000000> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000050> <http://purl.obolibrary.org/obo/FBbt_10000000>)))
 
 # Class: <http://purl.obolibrary.org/obo/fbbt/src/patterns/dosdp-patterns/developingEntityWithEarlierAndLaterStructures.yaml> (<http://purl.obolibrary.org/obo/fbbt/src/patterns/dosdp-patterns/developingEntityWithEarlierAndLaterStructures.yaml>)
 
