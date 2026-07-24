@@ -1,0 +1,25 @@
+pattern_name: cnsRegionIntersection
+pattern_iri: http://purl.obolibrary.org/obo/fbbt/src/patterns/dosdp-patterns/cnsRegionIntersection.yaml
+description: "Pattern for a region of the nervous system that is defined as the intersection (overlap) of two other regions - i.e. the part of a (genus) region that is part of both of two intersecting regions. First applied to neuromeric subdivisions of longitudinal domains of the larval CNS (subclasses of FBbt:00051071), where region_1 is a longitudinal domain and region_2 is a neuromere. The genus (parent) is included in the definition to avoid classifying cells or other entities that lie in the overlap as the region itself."
+
+contributors:
+  - https://orcid.org/0000-0002-1373-1705
+
+classes:
+  anatomical_entity: FBbt:10000000
+
+relations:
+  part_of: BFO:0000050
+
+vars:
+  parent: anatomical_entity
+  region_1: anatomical_entity
+  region_2: anatomical_entity
+
+logical_axioms:
+   - axiom_type: equivalentTo
+     text: "%s that 'part_of' some %s and 'part_of' some %s"
+     vars:
+       - parent
+       - region_1
+       - region_2
