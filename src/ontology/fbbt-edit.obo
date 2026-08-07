@@ -116252,10 +116252,11 @@ property_value: http://purl.org/dc/terms/date "2022-08-02T10:36:12Z" xsd:dateTim
 [Term]
 id: FBbt:00052249
 name: adult moonwalker subesophageal zone neuron
-def: "Adult neuron with its soma in the lateral subesophageal zone (SEZ), dendritic arborization in the SEZ and axonal arborization in the lower lateral accessory lobe (Israel et al., 2022). Its presynaptic arborizations are organized in a characteristic two-dimensional vertical sheet that slopes from anterolateral to posteriomedial (Israel et al., 2022). It outputs onto the moonwalker descending neurons and its activity results in backwards locomotion (Israel et al., 2022). It is also indirectly upstream of DNa01 and DNa02, and similar to these cells, can influence turning motion (Israel et al., 2022). There is one of these cells per hemisphere (Israel et al., 2022)." [FlyBase:FBrf0252931]
+def: "Adult neuron with its soma in the lateral subesophageal zone (SEZ), dendritic arborization in the SEZ and axonal arborization in the lower lateral accessory lobe (Israel et al., 2022). Its presynaptic arborizations are organized in a characteristic two-dimensional vertical sheet that slopes from anterolateral to posteriomedial (Israel et al., 2022). It outputs onto the moonwalker descending neurons and its activity results in backwards locomotion (Israel et al., 2022). It is also indirectly upstream of DNa01 and DNa02, and similar to these cells, can influence turning motion (Israel et al., 2022). There is one of these cells per hemisphere (Israel et al., 2022). It develops from the larval AMB (mooSEZ) neuron (Israel and Parnas, 2025)." [FlyBase:FBrf0252931, FlyBase:FBrf0264223]
 synonym: "adult moonwalker SEZ neuron" EXACT [FlyBase:FBrf0252931]
 is_a: FBbt:00005106 ! neuron
 relationship: RO:0002100 FBbt:00049781 ! has soma location cell body rind of adult subesophageal zone
+relationship: RO:0002202 FBbt:00052653 ! develops from larval ascending moonwalker-like backward neuron
 relationship: RO:0002216 GO:0043057 ! capable of part of backward locomotion
 relationship: RO:0013002 FBbt:00110639 ! receives synaptic input in region adult subesophageal zone
 relationship: RO:0013003 FBbt:00040061 ! sends synaptic output to region lower lateral accessory lobe
@@ -119879,11 +119880,14 @@ property_value: http://purl.org/dc/terms/date "2023-10-12T12:47:08Z" xsd:dateTim
 [Term]
 id: FBbt:00052653
 name: larval ascending moonwalker-like backward neuron
-def: "Larval neuron with its soma in the subesophageal zone (SEZ), dendritic arborization from the SEZ to the mesothoracic neuromere, and ascending axonal projections to the brain (Omamiuda-Ishikawa et al., 2020). There is one of these cells per hemisphere and it is cholinergic (Omamiuda-Ishikawa et al., 2020). It is activated by blue light, downstream of class IV dendritic arborizing neurons (Omamiuda-Ishikawa et al., 2020). It outputs onto and can activate the mooncrawler descending neurons to stimulate backwards locomotion (Omamiuda-Ishikawa et al., 2020)." [FlyBase:FBrf0247105]
+def: "Larval primary neuron with its soma in the subesophageal zone (SEZ), dendritic arborization from the SEZ to the mesothoracic neuromere, and ascending axonal projections terminating dorsoposterior to the antennal lobe (Omamiuda-Ishikawa et al., 2020; Israel and Parnas, 2025). There is one of these cells per hemisphere and it is cholinergic (Omamiuda-Ishikawa et al., 2020). It is activated by blue light, downstream of class IV dendritic arborizing neurons (Omamiuda-Ishikawa et al., 2020). It outputs onto and can activate the mooncrawler descending neurons to stimulate backwards locomotion (Omamiuda-Ishikawa et al., 2020). It is the precursor to the adult mooSEZ neuron (Israel and Parnas, 2025)." [FlyBase:FBrf0247105, FlyBase:FBrf0264223]
 comment: Does not fit FBbt definition of ascending as soma is in SEZ and not VNC.
 synonym: "larval AMB neuron" EXACT [FlyBase:FBrf0247105]
-is_a: FBbt:00005106 ! neuron
+synonym: "larval moonwalker subesophageal zone neuron" EXACT [FlyBase:FBrf0264223]
+synonym: "larval MooSEZ neuron" EXACT [FlyBase:FBrf0264223]
+is_a: FBbt:00047097 ! primary neuron
 relationship: RO:0002100 FBbt:00047751 ! has soma location cell body rind of larval gnathal ganglion
+relationship: RO:0002203 FBbt:00052249 ! develops into adult moonwalker subesophageal zone neuron
 relationship: RO:0002215 GO:0061535 ! capable of glutamate secretion, neurotransmission
 relationship: RO:0002216 GO:0008345 ! capable of part of larval locomotory behavior
 relationship: RO:0002216 GO:0043057 ! capable of part of backward locomotion
