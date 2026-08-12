@@ -70,7 +70,7 @@ EXPLICIT_MAP = {
     'LO': ('FBbt:00003852', 'lobula'),
     'LOP': ('FBbt:00003885', 'lobula plate'),
     'LX': ('FBbt:00040001', 'lateral complex'),
-    'MB': ('FBbt:00005801', 'adult mushroom body'),
+    'MB': ('FBbt:00003684', 'adult mushroom body'),
     'ME': ('FBbt:00003748', 'medulla'),
     'NO': ('FBbt:00003680', 'nodulus'),
     'OCG': ('FBbt:00049817', 'ocellar ganglion'),
@@ -102,7 +102,7 @@ EXPLICIT_MAP = {
     'dACA': ('FBbt:00045007', 'adult mushroom body dorsal accessory calyx'),
     'lACA': ('FBbt:00048332', 'adult mushroom body lateral accessory calyx'),
     'vACA': ('FBbt:00110991', 'adult mushroom body ventral accessory calyx'),
-    'MB(+ACA)': ('FBbt:00005801', 'adult mushroom body'),
+    'MB(+ACA)': ('FBbt:00003684', 'adult mushroom body'),
 
     # MB lobe compartments (hemibrain naming)
     'a1': ('FBbt:00100285', 'mushroom body alpha lobe slice 1'),
