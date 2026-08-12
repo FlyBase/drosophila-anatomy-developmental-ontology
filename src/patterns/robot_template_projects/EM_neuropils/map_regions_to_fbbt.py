@@ -59,7 +59,7 @@ EXPLICIT_MAP = {
     'FLA': ('FBbt:00045050', 'flange'),
     'GA': ('FBbt:00040060', 'gall'),
     'GC': ('FBbt:00047941', 'great commissure'),
-    'GNG': ('FBbt:00004013', 'gnathal ganglion'),
+    'GNG': ('FBbt:00014013', 'adult gnathal ganglion'),
     'GOR': ('FBbt:00040039', 'gorget'),
     'IB': ('FBbt:00040050', 'inferior bridge'),
     'ICL': ('FBbt:00040049', 'inferior clamp'),
@@ -75,7 +75,7 @@ EXPLICIT_MAP = {
     'NO': ('FBbt:00003680', 'nodulus'),
     'OCG': ('FBbt:00049817', 'ocellar ganglion'),
     'PB': ('FBbt:00003668', 'protocerebral bridge'),
-    'PED': ('FBbt:00003687', 'mushroom body pedunculus'),
+    'PED': ('FBbt:00007453', 'pedunculus of adult mushroom body'),
     'PLP': ('FBbt:00040044', 'posterior lateral protocerebrum'),
     'POC': ('FBbt:00007427', 'posterior optic commissure'),
     'PRW': ('FBbt:00040051', 'prow'),
@@ -205,12 +205,12 @@ EXPLICIT_MAP = {
     'LNp_T3': ('FBbt:00047142', 'adult T3 leg neuropil'),
 
     # mVAC variants
-    'mVAC(T1)': ('FBbt:00047176', 'medial ventral association center'),
-    'mVAC(T2)': ('FBbt:00047176', 'medial ventral association center'),
-    'mVAC(T3)': ('FBbt:00047176', 'medial ventral association center'),
-    'mVAC_T1': ('FBbt:00047176', 'medial ventral association center'),
-    'mVAC_T2': ('FBbt:00047176', 'medial ventral association center'),
-    'mVAC_T3': ('FBbt:00047176', 'medial ventral association center'),
+    'mVAC(T1)': ('FBbt:00047523', 'T1 medial ventral association center'),
+    'mVAC(T2)': ('FBbt:00047524', 'T2 medial ventral association center'),
+    'mVAC(T3)': ('FBbt:00047525', 'T3 medial ventral association center'),
+    'mVAC_T1': ('FBbt:00047523', 'T1 medial ventral association center'),
+    'mVAC_T2': ('FBbt:00047524', 'T2 medial ventral association center'),
+    'mVAC_T3': ('FBbt:00047525', 'T3 medial ventral association center'),
 
     # Other VNC
     'cervical_connective': ('FBbt:00004019', 'adult cervical connective'),
