@@ -77,8 +77,12 @@ def build_template(db_path):
     parent_types = pd.read_csv(_proj("male_cns_neurons", "broad_type_map.tsv"), sep="\t",
                                low_memory=False, index_col="broad_type")
     hemilineage_map = pd.read_csv(_proj("flywire_neurons", "lineage_map.tsv"), sep="\t", low_memory=False)
-    mcns_rois = pd.read_csv(_proj("male_cns_neurons", "mcns_ROI_mapping.tsv"), sep="\t")
-    raw_ROI_dict = dict(zip(mcns_rois["ROI"], mcns_rois["FBbt_id"]))
+    # ROI->FBbt mapping from the shared EM_neuropils v1.0 region table (adult/
+    # segment-specific terms; '-unspecified' catch-alls are left blank -> excluded,
+    # which is lossless since they are part-of ancestors of the specific regions).
+    mcns_rois = pd.read_csv(_proj("EM_neuropils", "male-cns_regions.tsv"), sep="\t", dtype=str)
+    mcns_rois = mcns_rois[mcns_rois["FBbt_id"].notna() & (mcns_rois["FBbt_id"] != "")]
+    raw_ROI_dict = dict(zip(mcns_rois["male-cns_region"], mcns_rois["FBbt_id"]))
     mcns_rois_FBbt = mcns_rois[["FBbt_id", "FBbt_name"]].drop_duplicates()
     ROI_name_dict = dict(zip(mcns_rois_FBbt["FBbt_id"], mcns_rois_FBbt["FBbt_name"]))
 

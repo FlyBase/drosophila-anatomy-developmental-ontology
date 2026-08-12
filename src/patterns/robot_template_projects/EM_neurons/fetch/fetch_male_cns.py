@@ -4,13 +4,10 @@
 Opt-in: needs a neuPrint token. Reproduces the two queries in
 male_cns_neurons/male_cns_neurons.ipynb.
 
-Dataset version: pinned to 'male-cns:v0.9' for now, to reproduce the current
-committed male_cns_neurons.owl exactly. Updating to 'male-cns:v1.0' is a planned
-follow-up (run with --dataset male-cns:v1.0) once the content refresh has been
-reviewed.
+Dataset version: 'male-cns:v1.0' (updated from v0.9). Override with --dataset.
 
 Usage:
-    python3 fetch_male_cns.py --token <NEUPRINT_TOKEN> [--dataset male-cns:v1.0]
+    python3 fetch_male_cns.py --token <NEUPRINT_TOKEN> [--dataset male-cns:v0.9]
 
 Writes: EM_neurons/data/male_cns_roiinfo.tsv
         EM_neurons/data/male_cns_hemilineage.tsv
@@ -22,7 +19,7 @@ import pandas as pd
 
 import neuprint_common as nc
 
-DATASET = "male-cns:v0.9"
+DATASET = "male-cns:v1.0"
 
 
 def main():
