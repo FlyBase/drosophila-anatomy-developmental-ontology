@@ -27,7 +27,7 @@ REFS = " (Takemura et al., 2024; Marin et al., 2024)."
 def _src(*parts):
     """Path to a file in the (current) manc_neurons project folder."""
     here = os.path.dirname(os.path.abspath(__file__))
-    return os.path.normpath(os.path.join(here, "..", "..", "manc_neurons", *parts))
+    return os.path.normpath(os.path.join(here, "..", "sources", "manc", *parts))
 
 
 def cv_lookup(term, mapping):

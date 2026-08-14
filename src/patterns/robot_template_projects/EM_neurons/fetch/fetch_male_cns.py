@@ -29,7 +29,7 @@ def main():
     args = ap.parse_args()
 
     cell_types = pd.read_csv(
-        nc.project_path("male_cns_neurons", "new_types.tsv"),
+        nc.sources_path("male_cns", "new_types.tsv"),
         sep="\t", low_memory=False,
     )
     types = cell_types["mcns_type"].tolist()

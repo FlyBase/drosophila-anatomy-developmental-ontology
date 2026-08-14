@@ -10,7 +10,7 @@
 # More information: https://github.com/INCATools/ontology-development-kit/
 
 # Fingerprint of the configuration file when this Makefile was last generated
-CONFIG_HASH=                d25447114511176dae3b6a2c92ca1178e3ad0021843ee71f5cee5d88841f306c
+CONFIG_HASH=                26a9cd89b44868eca23c019171324163448ccba73d29bacd4dc3944fe7f52e2c
 
 
 # ----------------------------------------
@@ -57,7 +57,7 @@ OBODATE ?=                  $(shell date +'%d:%m:%Y %H:%M')
 VERSION=                    $(TODAY)
 ANNOTATE_ONTOLOGY_VERSION = annotate -V $(ONTBASE)/releases/$(VERSION)/$@ --annotation owl:versionInfo $(VERSION)
 ANNOTATE_CONVERT_FILE =     annotate --ontology-iri $(ONTBASE)/$@ $(ANNOTATE_ONTOLOGY_VERSION) convert -f ofn --output $@.tmp.owl && mv $@.tmp.owl $@
-OTHER_SRC =                 $(PATTERNDIR)/definitions.owl $(COMPONENTSDIR)/fbbt_ext.owl $(COMPONENTSDIR)/mappings_xrefs.owl $(COMPONENTSDIR)/neuron_symbols.owl $(COMPONENTSDIR)/brain_name_abbreviations.owl $(COMPONENTSDIR)/hemibrain_new_cells.owl $(COMPONENTSDIR)/hemibrain_new_ALLNs.owl $(COMPONENTSDIR)/VNC_new_cells.owl $(COMPONENTSDIR)/manc_new_cells.owl $(COMPONENTSDIR)/male_cns_neurons.owl $(COMPONENTSDIR)/banc_identical_to.owl $(COMPONENTSDIR)/flybase_import.owl $(COMPONENTSDIR)/flywire_neurons.owl $(COMPONENTSDIR)/VFB_xrefs.owl 
+OTHER_SRC =                 $(PATTERNDIR)/definitions.owl $(COMPONENTSDIR)/fbbt_ext.owl $(COMPONENTSDIR)/mappings_xrefs.owl $(COMPONENTSDIR)/neuron_symbols.owl $(COMPONENTSDIR)/brain_name_abbreviations.owl $(COMPONENTSDIR)/EM_neurons.owl $(COMPONENTSDIR)/VNC_new_cells.owl $(COMPONENTSDIR)/banc_identical_to.owl $(COMPONENTSDIR)/flybase_import.owl $(COMPONENTSDIR)/VFB_xrefs.owl 
 ONTOLOGYTERMS =             $(TMPDIR)/ontologyterms.txt
 EDIT_PREPROCESSED =         $(TMPDIR)/$(ONT)-preprocess.owl
 
@@ -476,14 +476,10 @@ recreate-components:
 		--assume-new=$(TMPDIR)/stamp-component-mappings_xrefs.owl \
 		--assume-new=$(TMPDIR)/stamp-component-neuron_symbols.owl \
 		--assume-new=$(TMPDIR)/stamp-component-brain_name_abbreviations.owl \
-		--assume-new=$(TMPDIR)/stamp-component-hemibrain_new_cells.owl \
-		--assume-new=$(TMPDIR)/stamp-component-hemibrain_new_ALLNs.owl \
+		--assume-new=$(TMPDIR)/stamp-component-EM_neurons.owl \
 		--assume-new=$(TMPDIR)/stamp-component-VNC_new_cells.owl \
-		--assume-new=$(TMPDIR)/stamp-component-manc_new_cells.owl \
-		--assume-new=$(TMPDIR)/stamp-component-male_cns_neurons.owl \
 		--assume-new=$(TMPDIR)/stamp-component-banc_identical_to.owl \
 		--assume-new=$(TMPDIR)/stamp-component-flybase_import.owl \
-		--assume-new=$(TMPDIR)/stamp-component-flywire_neurons.owl \
 		--assume-new=$(TMPDIR)/stamp-component-VFB_xrefs.owl \
 		COMP=true IMP=false MIR=true PAT=true all_components
 
@@ -493,14 +489,10 @@ no-mirror-recreate-components:
 		--assume-new=$(TMPDIR)/stamp-component-mappings_xrefs.owl \
 		--assume-new=$(TMPDIR)/stamp-component-neuron_symbols.owl \
 		--assume-new=$(TMPDIR)/stamp-component-brain_name_abbreviations.owl \
-		--assume-new=$(TMPDIR)/stamp-component-hemibrain_new_cells.owl \
-		--assume-new=$(TMPDIR)/stamp-component-hemibrain_new_ALLNs.owl \
+		--assume-new=$(TMPDIR)/stamp-component-EM_neurons.owl \
 		--assume-new=$(TMPDIR)/stamp-component-VNC_new_cells.owl \
-		--assume-new=$(TMPDIR)/stamp-component-manc_new_cells.owl \
-		--assume-new=$(TMPDIR)/stamp-component-male_cns_neurons.owl \
 		--assume-new=$(TMPDIR)/stamp-component-banc_identical_to.owl \
 		--assume-new=$(TMPDIR)/stamp-component-flybase_import.owl \
-		--assume-new=$(TMPDIR)/stamp-component-flywire_neurons.owl \
 		--assume-new=$(TMPDIR)/stamp-component-VFB_xrefs.owl \
 		COMP=true IMP=false MIR=false PAT=true all_components
 

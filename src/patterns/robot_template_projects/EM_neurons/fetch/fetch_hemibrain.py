@@ -29,7 +29,7 @@ def main():
     args = ap.parse_args()
 
     cell_types = pd.read_csv(
-        nc.project_path("hemibrain_new_types", "new_cell_types.tsv"),
+        nc.sources_path("hemibrain", "new_cell_types.tsv"),
         sep="\t", dtype="str", na_filter=False,
     )
     types = cell_types["np_type"].tolist()

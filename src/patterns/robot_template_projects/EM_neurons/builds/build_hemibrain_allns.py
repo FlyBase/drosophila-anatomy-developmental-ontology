@@ -50,7 +50,7 @@ TEMPLATE_SEED = OrderedDict([
 
 def _src(*parts):
     here = os.path.dirname(os.path.abspath(__file__))
-    return os.path.normpath(os.path.join(here, "..", "..", "hemibrain_new_types", *parts))
+    return os.path.normpath(os.path.join(here, "..", "sources", "hemibrain", *parts))
 
 
 def shortname_splitter(shortname):

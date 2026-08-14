@@ -74,10 +74,10 @@ def build_template(db_path):
     import numpy as np  # noqa: F401  (parity with notebook imports)
     from oaklib import get_adapter
 
-    cell_types = pd.read_csv(_proj("optic_lobe", "new_types.tsv"), sep="\t", low_memory=False, index_col="OL_type")
-    parent_types = pd.read_csv(_proj("optic_lobe", "broad_type_map.tsv"), sep="\t", low_memory=False, index_col="broad_type")
-    hemilineage_map = pd.read_csv(_proj("flywire_neurons", "lineage_map.tsv"), sep="\t", low_memory=False)
-    OL_rois = pd.read_csv(_proj("optic_lobe", "OL_ROI_mapping.tsv"), sep="\t")
+    cell_types = pd.read_csv(_proj("EM_neurons", "sources", "optic_lobe", "new_types.tsv"), sep="\t", low_memory=False, index_col="OL_type")
+    parent_types = pd.read_csv(_proj("EM_neurons", "sources", "optic_lobe", "broad_type_map.tsv"), sep="\t", low_memory=False, index_col="broad_type")
+    hemilineage_map = pd.read_csv(_proj("EM_neurons", "sources", "flywire", "lineage_map.tsv"), sep="\t", low_memory=False)
+    OL_rois = pd.read_csv(_proj("EM_neurons", "sources", "optic_lobe", "OL_ROI_mapping.tsv"), sep="\t")
     raw_ROI_dict = dict(zip(OL_rois["ROI"], OL_rois["FBbt_id"]))
     OL_rois_FBbt = OL_rois[["FBbt_id", "FBbt_name"]].drop_duplicates()
     ROI_name_dict = dict(zip(OL_rois_FBbt["FBbt_id"], OL_rois_FBbt["FBbt_name"]))

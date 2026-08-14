@@ -74,7 +74,7 @@ TEMPLATE_HEAD = OrderedDict([
 
 class FlyWireBuilder:
     def __init__(self):
-        info = pd.read_csv(_proj("flywire_neurons", "Supplemental_file1_neuron_annotations.tsv"),
+        info = pd.read_csv(_proj("EM_neurons", "sources", "flywire", "Supplemental_file1_neuron_annotations.tsv"),
                            sep="\t", low_memory=False)
         info["root_783"] = info.root_id
 
@@ -88,8 +88,8 @@ class FlyWireBuilder:
         info = info.drop_duplicates().reset_index(drop=True)
         self.info = info
 
-        pre_counts = pd.read_feather(_proj("flywire_neurons", "per_neuron_neuropilv5_filtered_count_pre_783.feather"))
-        post_counts = pd.read_feather(_proj("flywire_neurons", "per_neuron_neuropilv5_filtered_count_post_783.feather"))
+        pre_counts = pd.read_feather(_proj("EM_neurons", "sources", "flywire", "per_neuron_neuropilv5_filtered_count_pre_783.feather"))
+        post_counts = pd.read_feather(_proj("EM_neurons", "sources", "flywire", "per_neuron_neuropilv5_filtered_count_post_783.feather"))
         pre_counts = pre_counts[pre_counts.pre_pt_root_id.isin(info.root_id)].copy()
         post_counts = post_counts[post_counts.post_pt_root_id.isin(info.root_id)].copy()
         pre_counts["neuropil"] = pre_counts["neuropil"].astype("category")
@@ -107,7 +107,7 @@ class FlyWireBuilder:
             pre_counts.loc[(pre_counts.soma_side == x) & (pre_counts.neuropil.str.contains(f"_{y}", na=False)), "np_side"] = z
             post_counts.loc[(post_counts.soma_side == x) & (post_counts.neuropil.str.contains(f"_{y}", na=False)), "np_side"] = z
 
-        np_map = pd.read_csv(_proj("flywire_neurons", "neuropil_map.tsv"), sep="\t", dtype="str")
+        np_map = pd.read_csv(_proj("EM_neurons", "sources", "flywire", "neuropil_map.tsv"), sep="\t", dtype="str")
         pre_counts["neuropil_short"] = pre_counts.neuropil.apply(lambda x: x.replace("_L", "").replace("_R", "")).astype("category")
         post_counts["neuropil_short"] = post_counts.neuropil.apply(lambda x: x.replace("_L", "").replace("_R", "")).astype("category")
         pre_counts = pre_counts.merge(np_map[["neuropil_short", "neuropil_full", "NP_id"]], how="left", on="neuropil_short")
@@ -135,8 +135,8 @@ class FlyWireBuilder:
         self.neuropil_centers = nv[["x", "y", "z"]].to_numpy()
         self.np_tree = KDTree(self.neuropil_centers)
 
-        self.superclasses = pd.read_csv(_proj("flywire_neurons", "superclasses.tsv"), sep="\t", dtype="str")
-        self.lineage_map = pd.read_csv(_proj("flywire_neurons", "lineage_map.tsv"), sep="\t", dtype="str")
+        self.superclasses = pd.read_csv(_proj("EM_neurons", "sources", "flywire", "superclasses.tsv"), sep="\t", dtype="str")
+        self.lineage_map = pd.read_csv(_proj("EM_neurons", "sources", "flywire", "lineage_map.tsv"), sep="\t", dtype="str")
 
     # --- lookups -----------------------------------------------------------
     def get_type_annotations(self, t):
@@ -330,7 +330,7 @@ class FlyWireBuilder:
 
     # --- row builders ------------------------------------------------------
     def build_own_rows(self, template):
-        fw_type_ids = pd.read_csv(_proj("flywire_neurons", "FBbt_ID-cell_type.tsv"), sep="\t", dtype="str")
+        fw_type_ids = pd.read_csv(_proj("EM_neurons", "sources", "flywire", "FBbt_ID-cell_type.tsv"), sep="\t", dtype="str")
         for i in fw_type_ids.index:
             row = OrderedDict((c, "") for c in template.columns)
             cell_type = fw_type_ids.cell_type[i]
@@ -417,7 +417,7 @@ class FlyWireBuilder:
         return template
 
     def build_hemibrain_rows(self, template):
-        all_hemibrain_types = pd.read_csv(_proj("hemibrain_new_types", "new_cell_types.tsv"), sep="\t", dtype="str")
+        all_hemibrain_types = pd.read_csv(_proj("EM_neurons", "sources", "hemibrain", "new_cell_types.tsv"), sep="\t", dtype="str")
         updated = all_hemibrain_types[
             all_hemibrain_types["np_type"].isin(self.info["cell_type"])
             | all_hemibrain_types["np_type"].isin(self.info["hemibrain_type"])].reset_index()

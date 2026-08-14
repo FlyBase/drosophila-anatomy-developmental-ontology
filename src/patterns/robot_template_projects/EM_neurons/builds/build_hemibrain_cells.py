@@ -62,7 +62,7 @@ TEMPLATE_SEED = OrderedDict([
 
 def _src(project, *parts):
     here = os.path.dirname(os.path.abspath(__file__))
-    return os.path.normpath(os.path.join(here, "..", "..", project, *parts))
+    return os.path.normpath(os.path.join(here, "..", "sources", project, *parts))
 
 
 def _cache(name):
@@ -71,12 +71,12 @@ def _cache(name):
 
 
 def build_template():
-    cell_types = pd.read_csv(_src("hemibrain_new_types", "new_cell_types.tsv"),
+    cell_types = pd.read_csv(_src("hemibrain", "new_cell_types.tsv"),
                              sep="\t", dtype="str", na_filter=False)
 
     # Filter out types already covered by FlyWire annotations.
     flywire_annotations = pd.read_csv(
-        _src("flywire_neurons", "Supplemental_file1_neuron_annotations.tsv"),
+        _src("flywire", "Supplemental_file1_neuron_annotations.tsv"),
         sep="\t", dtype="str",
     )
     cell_types = cell_types[~(
@@ -85,7 +85,7 @@ def build_template():
     )].reset_index()
 
     # ROI mapping (+ extra regions), raw dict built BEFORE stripping L/R.
-    full_roi_mapping = pd.read_csv(_src("hemibrain_new_types", "hemibrain_1-1_ROI_mapping.tsv"), sep="\t")
+    full_roi_mapping = pd.read_csv(_src("hemibrain", "hemibrain_1-1_ROI_mapping.tsv"), sep="\t")
     extra_regions = pd.DataFrame({
         "ROI": ["PS(R)", "PS(L)", "CL(R)", "CL(L)"],
         "FBbt_id": ["FBbt:00040072", "FBbt:00040072", "FBbt:00040047", "FBbt:00040047"],

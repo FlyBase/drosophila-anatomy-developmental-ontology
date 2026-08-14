@@ -149,9 +149,7 @@ def record_provenance(cache_file, dataset_full, source, n_rows):
             w.writerow(rows[key])
 
 
-def project_path(*parts):
-    """Absolute path inside the robot_template_projects/ tree (for reading the
-    existing curated source TSVs until they are relocated in Phase 2)."""
+def sources_path(*parts):
+    """Absolute path inside EM_neurons/sources/ (committed curated inputs)."""
     here = os.path.dirname(os.path.abspath(__file__))
-    root = os.path.normpath(os.path.join(here, "..", ".."))
-    return os.path.join(root, *parts)
+    return os.path.join(os.path.normpath(os.path.join(here, "..", "sources")), *parts)

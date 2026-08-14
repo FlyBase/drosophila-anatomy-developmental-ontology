@@ -72,11 +72,11 @@ def build_template(db_path):
     import numpy as np
     from oaklib import get_adapter
 
-    cell_types = pd.read_csv(_proj("male_cns_neurons", "new_types.tsv"), sep="\t",
+    cell_types = pd.read_csv(_proj("EM_neurons", "sources", "male_cns", "new_types.tsv"), sep="\t",
                              low_memory=False, index_col="mcns_type")
-    parent_types = pd.read_csv(_proj("male_cns_neurons", "broad_type_map.tsv"), sep="\t",
+    parent_types = pd.read_csv(_proj("EM_neurons", "sources", "male_cns", "broad_type_map.tsv"), sep="\t",
                                low_memory=False, index_col="broad_type")
-    hemilineage_map = pd.read_csv(_proj("flywire_neurons", "lineage_map.tsv"), sep="\t", low_memory=False)
+    hemilineage_map = pd.read_csv(_proj("EM_neurons", "sources", "flywire", "lineage_map.tsv"), sep="\t", low_memory=False)
     # ROI->FBbt mapping from the shared EM_neuropils v1.0 region table (adult/
     # segment-specific terms; '-unspecified' catch-alls are left blank -> excluded,
     # which is lossless since they are part-of ancestors of the specific regions).

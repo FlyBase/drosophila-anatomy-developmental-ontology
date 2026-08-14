@@ -27,14 +27,24 @@ All paths are relative to the repository root unless otherwise noted.
 
 Each component OWL file is generated from TSV files in robot_template_projects. When removing a term from a source TSV, search ALL `.tsv` files in the relevant subdirectory for the FBbt ID, as some projects use multiple TSV files.
 
+The EM connectome neuron terms are all in the single consolidated component
+`EM_neurons.owl`, but their source TSVs are still per-connectome. To find a
+term's source TSV, identify which connectome it came from and search that
+directory (search ALL EM source dirs for the FBbt ID if unsure).
+
 | Component File | Source Directory | Primary TSV File(s) | ID Column |
 |---|---|---|---|
-| `flywire_neurons.owl` | `flywire_neurons/` | `FBbt_ID-cell_type.tsv` | `FBbt_id` |
-| `hemibrain_new_cells.owl` | `hemibrain_new_types/` | `new_cell_types.tsv` | `FBbt_id` |
-| `hemibrain_new_ALLNs.owl` | `hemibrain_new_types/` | `new_ALLNs.tsv` | `FBbt_id` |
-| `optic_lobe_neurons.owl` | `optic_lobe/` | `new_types.tsv` | `FBbt_id` |
-| `manc_new_cells.owl` | `manc_neurons/` | `new_cell_FBbt_ids.tsv` | `FBbt_id` |
+| `EM_neurons.owl` | `EM_neurons/sources/flywire/` | `FBbt_ID-cell_type.tsv` | `FBbt_id` |
+| `EM_neurons.owl` | `EM_neurons/sources/hemibrain/` | `new_cell_types.tsv`, `new_ALLNs.tsv` | `FBbt_id` |
+| `EM_neurons.owl` | `EM_neurons/sources/optic_lobe/` | `new_types.tsv` | `FBbt_id` |
+| `EM_neurons.owl` | `EM_neurons/sources/manc/` | `new_cell_FBbt_ids.tsv` | `FBbt_id` |
+| `EM_neurons.owl` | `EM_neurons/sources/male_cns/` | `new_types.tsv` | `FBbt_id` |
 | `VNC_new_cells.owl` | `VNC_neurons/` | `VNCtable2.tsv`, `Feng.tsv` | `FBbt_ID` |
+
+Note: `EM_neurons.owl` is regenerated from these source TSVs (via
+`make components/EM_neurons.owl`), so removing a term from the source TSV is what
+durably prevents it being regenerated; removing it from the component OWL keeps
+the current release consistent until the next regeneration.
 
 ## Workflow
 
@@ -156,5 +166,5 @@ After processing all terms, provide a summary:
 - **ROBOT filter produces empty output:** Ensure you're using the full IRI format `http://purl.obolibrary.org/obo/FBbt_NNNNNNN` (underscores, not colons) with the `--term` flag.
 - **Missing relationships in OBO output:** Ensure `--signature true --trim false` flags are used with `robot filter`.
 - **Cannot find parent term name:** Some parent terms may only exist in component files. Search across all components: `grep -r "rdfs:label" components/*.owl | grep "FBbt_XXXXX"`.
-- **Large component files are slow:** The larger files (hemibrain_new_cells.owl at 22MB, flywire_neurons.owl at 19MB) may take a minute to process with ROBOT. This is normal.
+- **Large component files are slow:** `EM_neurons.owl` is large (~59MB) and may take a minute or two to process with ROBOT. This is normal.
 - **Term appears in multiple components:** A term should only be in one component file. If found in multiple, investigate before proceeding — this may indicate a problem.
