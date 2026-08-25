@@ -4,7 +4,7 @@ Consolidated, script-driven generation of FBbt neuron terms from EM connectome
 datasets (FlyWire/FAFB, hemibrain, MANC, male-CNS, optic-lobe). Replaces the
 previous per-connectome notebook + manual `robot template` workflow with offline
 build scripts (run from committed data) that produce a single consolidated
-component, `components/EM_neurons.owl`.
+component, `components/EM_neurons.owl`, from a **single ROBOT template**.
 
 > **Scope:** EM-connectome neuron terms only. `VNC_neurons/` (Feng/Ehrhardt) is
 > **not** EM-derived and is out of scope — it keeps its own component
@@ -15,7 +15,17 @@ component, `components/EM_neurons.owl`.
 
 ```
 EM_neurons/
-├── lib/EM_common.py        # shared helpers used by all build scripts
+├── lib/
+│   ├── EM_common.py        # shared helpers (name_lister, #1105 TYPE rows, NT->GO,
+│   │                       #   laterality/connectivity filter, curation_path, ...)
+│   └── EM_unified.py       # the single unified ROBOT-template schema + per-connectome
+│                           #   native->unified column maps + the row collector
+├── build_EM_neurons.py     # THE generator: runs the six row builders, unifies +
+│                           #   registry-filters them, writes one template.tsv
+├── registry/
+│   ├── build_registry.py   # (re)build the registry from source lists + curation bridges
+│   └── EM_neuron_registry.tsv   # committed: one row per FBbt id (single ID source;
+│                                 #   move-to-edit removal target)
 ├── sources/                # committed curated inputs, per connectome (relocated
 │   │                       #   here from the old per-connectome notebook folders)
 │   ├── manc/               # new_cell_FBbt_ids, typing_info (committed cache), *_FBbt_map, ...
@@ -28,17 +38,26 @@ EM_neurons/
 │   ├── neuprint_common.py
 │   └── fetch_{hemibrain,male_cns,optic_lobe,flywire_neuropils}.py
 ├── data/                   # evidence caches (gitignored) + PROVENANCE.tsv (tracked)
-├── builds/                 # offline per-connectome build scripts (no network)
+├── builds/                 # offline per-connectome row generators (no network)
 │   └── build_{manc,hemibrain_cells,hemibrain_allns,flywire,male_cns,optic_lobe}.py
 └── README.md
 ```
 
-The FlyWire optic-lobe mapping (`OL_FBbt_mapping.tsv`) and the male-CNS region
-mapping (`EM_neuropils/male-cns_regions.tsv`) are still read from their existing
-homes (the sibling `neuprint_optic_lobe_curation` repo and the `EM_neuropils`
-project) rather than copied here, to keep a single source of truth.
+Cross-dataset FBbt mapping bridges are read from the consolidated
+`../connectome-curation` repo (`datasets/<connectome>/resources/…`) via
+`EM_common.curation_path`. The male-CNS region mapping
+(`EM_neuropils/male-cns_regions.tsv`) is read from the in-repo `EM_neuropils`
+project.
 
-## Two build modes
+## Build
+
+The six `builds/build_*.py` are the tested, faithful per-connectome row
+generators. `build_EM_neurons.py` drives them, re-expresses every connectome's
+output on the one `EM_unified.UNIFIED_HEADER` schema (RO CURIEs throughout, so
+**no `robot template --input` is needed**), filters to the FBbt ids in
+`registry/EM_neuron_registry.tsv`, appends the ROBOT issue-#1105 TYPE rows once,
+and writes a single `template.tsv` that the Makefile turns into
+`EM_neurons.owl` with one `robot template`.
 
 **Normal / release build** uses the committed `components/EM_neurons.owl` and
 needs none of this — the component is a checked-in build input.
@@ -51,18 +70,18 @@ needs none of this — the component is a checked-in build input.
    ```sh
    cd fetch
    NEUPRINT_TOKEN=<token> python3 fetch_hemibrain.py
-   NEUPRINT_TOKEN=<token> python3 fetch_male_cns.py     # pinned male-cns:v0.9
+   NEUPRINT_TOKEN=<token> python3 fetch_male_cns.py     # pinned male-cns:v1.0
    NEUPRINT_TOKEN=<token> python3 fetch_optic_lobe.py
    python3 fetch_flywire_neuropils.py
    ```
    (MANC needs no fetch — it reads the committed `sources/manc/typing_info.tsv`.)
-2. **Build** each connectome's ROBOT template from committed data + the caches,
-   then `robot template` + `robot merge` into `EM_neurons.owl` (see `builds/`).
-   Generators that use quoted relation labels (`build_hemibrain_cells`,
-   `build_male_cns`, `build_optic_lobe`, and the FlyWire hemibrain cross-gen)
-   need `robot template --input fbbt.owl` for label resolution; `build_manc` and
-   FlyWire-own use `RO:` CURIEs and do not. `build_male_cns` / `build_optic_lobe`
-   also need `tmp/fbbt-merged.db` (OAK part-of pruning).
+2. **Build**: `make components/EM_neurons.owl` (from `src/ontology`) runs
+   `build_EM_neurons.py` + one `robot template`. `build_male_cns` /
+   `build_optic_lobe` need `tmp/fbbt-merged.db` (OAK part-of pruning of region
+   terms); run a normal build first if it is absent. Add a new term by editing
+   the relevant `sources/<connectome>/` id-list and re-running
+   `registry/build_registry.py`; remove one with `/move-to-edit` (which deletes
+   its registry row).
 
 ## Evidence caches and provenance
 
@@ -74,27 +93,27 @@ the connectome dataset, version, source, fetch date and row count — the durabl
 record of what each regeneration was based on. The `fetch/` scripts update it
 automatically on every fetch (`record_provenance`).
 
-Current pinned versions: hemibrain v1.2.1, optic-lobe v1.1, male-CNS **v0.9**
-(v1.0 is a planned follow-up), FlyWire FAFB v783, MANC v1.2.1.
+Current pinned versions: hemibrain v1.2.1, optic-lobe v1.1, male-CNS **v1.0**,
+FlyWire FAFB v783, MANC v1.2.1.
 
 ## Status
 
-- **Done:** shared library; fetch scripts; offline build scripts for all six EM
-  generators. Each reproduces its current committed component (manc, FlyWire-own,
-  male_cns byte-identical; hemibrain, ALLNs, optic_lobe axiom-identical), and the
-  merged `EM_neurons.owl` is axiom-identical to the union of the six components
-  (11,210 terms, 0 diffs).
-- **Done (Phase 2):** `EM_neurons.owl` is wired into the ODK build (`fbbt-odk.yaml`,
+- **Done (Phase 1):** shared library; fetch scripts; offline row generators for
+  all six EM connectomes, each reproducing its current committed content.
+- **Done (Phase 2):** `EM_neurons.owl` wired into the ODK build (`fbbt-odk.yaml`,
   `catalog-v001.xml`, `fbbt-edit.obo` imports, `Makefile` `OTHER_SRC`/recreate
   lists) in place of the six per-connectome components (VNC and BANC kept
-  separate); the `components/EM_neurons.owl` Makefile goal (in `fbbt.Makefile`)
-  regenerates it — running the `builds/` scripts to make templates, then
-  `$(ROBOT) template` + `$(ROBOT) merge` (validated byte-identical).
-  `README-editors.md` and the
-  `move-to-edit` skill are updated. The build scripts still read curated source
-  TSVs from the old per-connectome project folders (relocating them into this
-  folder is optional follow-up cleanup).
-- **Later (Phase 3):** unified generator producing one term per cell type,
-  merging evidence across every connectome where the type appears.
+  separate); `README-editors.md` and the `move-to-edit` skill updated.
+- **Done (Phase 3, Stage A):** single **registry** (`registry/EM_neuron_registry.tsv`,
+  11,206 ids), single **generator** (`build_EM_neurons.py`) and single unified
+  **template** (`lib/EM_unified.py`, RO CURIEs — no `robot template --input`, no
+  `robot merge`). `robot diff` of the regenerated `EM_neurons.owl` vs the previous
+  committed component: **identical**. Curation bridges now read from
+  `../connectome-curation`. Cross-dataset identity is recorded in the registry's
+  `name_in_*` columns but not yet emitted into terms.
+- **Later (Phase 3, Stage B/C):** emit `name_in_*` as dataset-tagged synonyms +
+  provenance (identity merge), then reconcile connectome evidence across every
+  connectome where a type appears (evidence merge). `EM_synonyms.owl` stays a
+  separate asset for now.
 - **Later (Phase 4):** an opt-in `refresh-EM-data` Makefile goal wrapping the
   `fetch/` scripts.

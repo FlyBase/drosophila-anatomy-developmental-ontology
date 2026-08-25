@@ -15,10 +15,35 @@ Usage from a build script in the parent folder::
     import EM_common as em
 """
 
+import os
 import re
 from collections import OrderedDict
 
 import pandas as pd
+
+
+# ---------------------------------------------------------------------------
+# Consolidated curation repo (../connectome-curation)
+# ---------------------------------------------------------------------------
+# The six per-connectome curation repos have been merged into a single sibling
+# repo, ``connectome-curation`` (i.e. <fbbt-repo>/../connectome-curation). Its
+# per-connectome FBbt bridge TSVs live under datasets/<connectome>/resources/.
+# All curation-repo reads go through curation_path() so the location is defined
+# in exactly one place.
+_LIB_DIR = os.path.dirname(os.path.abspath(__file__))
+# lib -> EM_neurons -> robot_template_projects -> patterns -> src -> <fbbt repo>
+_FBBT_REPO = os.path.normpath(os.path.join(_LIB_DIR, "..", "..", "..", "..", ".."))
+CONNECTOME_CURATION = os.path.normpath(os.path.join(_FBBT_REPO, "..", "connectome-curation"))
+
+
+def curation_path(connectome, *parts):
+    """Path to a file under the consolidated ``../connectome-curation`` repo.
+
+    Resolves ``<connectome-curation>/datasets/<connectome>/resources/<parts...>``.
+    ``connectome`` is the dataset folder name (e.g. 'optic_lobe', 'manc',
+    'flywire', 'hemibrain', 'male_cns', 'banc').
+    """
+    return os.path.join(CONNECTOME_CURATION, "datasets", connectome, "resources", *parts)
 
 
 # ---------------------------------------------------------------------------

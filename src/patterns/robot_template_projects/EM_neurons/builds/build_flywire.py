@@ -11,7 +11,8 @@ Reads committed/local data only: the FlyWire annotations TSV, the per-neuron
 synapse .feather files, neuropil/superclass/lineage maps, and the committed
 FlyWire neuropil-volume centres cache (data/flywire_neuropil_volumes.tsv) which
 replaces the live fafbseg call for soma positioning. The optic-lobe mapping is
-read from the sibling neuprint_optic_lobe_curation repo (as in EM_synonyms).
+read from the consolidated ../connectome-curation repo (via
+EM_common.curation_path).
 
 Usage:
     python3 build_flywire.py --which own|hemibrain|both --out template.tsv
@@ -79,7 +80,7 @@ class FlyWireBuilder:
         info["root_783"] = info.root_id
 
         ol_types = pd.read_csv(
-            _proj("..", "..", "..", "..", "neuprint_optic_lobe_curation", "OL_FBbt_mapping.tsv"),
+            em.curation_path("optic_lobe", "OL_FBbt_mapping.tsv"),
             sep="\t", low_memory=False, usecols=["OL_type", "Schlegel_type"])
         ol_map = ol_types[ol_types["Schlegel_type"].notna()]
         merged = pd.merge(info, ol_map, how="left", left_on="cell_type", right_on="Schlegel_type")

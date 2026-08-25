@@ -251,41 +251,30 @@ $(COMPONENTSDIR)/image_annotation.owl: $(PATTERNDIR)/image_annotation_template.t
 # hemibrain cells + ALLNs, manc, optic_lobe, male_cns) that were previously
 # generated one-per-connectome by notebooks + manual robot. Like those, it is a
 # committed component generated out-of-band from connectome data; the normal
-# build just consumes it. The per-connectome Python scripts under EM_neurons/
-# builds/ emit ROBOT templates from committed data + the (gitignored) evidence
-# caches; this recipe turns each into an OWL fragment with $(ROBOT) and merges
-# them. Run locally (needs pandas/oaklib and the caches; see that folder's
-# README). hemibrain/male_cns/optic_lobe templates use quoted relation labels,
-# resolved against the local RO mirror ($(MIRRORDIR)/ro.owl); manc/flywire use
-# RO CURIEs (no input). male_cns/optic_lobe also read $(TMPDIR)/$(ONT)-merged.db
-# for OAK part-of pruning of region terms.
+# build just consumes it.
 #
-# $(TMPDIR)/$(ONT)-merged.db and $(MIRRORDIR)/ro.owl must already exist (they are
-# ordinary build artefacts). They are deliberately NOT prerequisites: merged.db
-# is built from $(SRC), which imports this component, so making it a prerequisite
-# would deadlock when regenerating a missing/forced component (and the region
-# part-of hierarchy it provides is unaffected by this component). Run a normal
-# build first if they are absent.
-EM_BUILDS = ../patterns/robot_template_projects/EM_neurons/builds
+# build_EM_neurons.py runs the six per-connectome row generators under
+# EM_neurons/builds/ (offline, from committed data + the gitignored evidence
+# caches), re-expresses their output on ONE unified ROBOT template (RO CURIEs
+# throughout, so no --input is needed for label resolution), and filters to the
+# ids in the committed registry (EM_neurons/registry/EM_neuron_registry.tsv --
+# the single ID source and the move-to-edit removal target). This recipe then
+# runs a single $(ROBOT) template. Run locally (needs pandas/scipy/oaklib and
+# the caches; see EM_neurons/README.md).
+#
+# male_cns/optic_lobe read $(TMPDIR)/$(ONT)-merged.db for OAK part-of pruning of
+# region terms. It must already exist (an ordinary build artefact) and is
+# deliberately NOT a prerequisite: it is built from $(SRC), which imports this
+# component, so making it a prerequisite would deadlock when regenerating a
+# missing/forced component (and the region part-of hierarchy it provides is
+# unaffected by this component). Run a normal build first if it is absent.
+EM_DIR = ../patterns/robot_template_projects/EM_neurons
 
 $(COMPONENTSDIR)/EM_neurons.owl:
-	python3 $(EM_BUILDS)/build_manc.py             --out $(TMPDIR)/EM-manc.tsv
-	python3 $(EM_BUILDS)/build_hemibrain_allns.py  --out $(TMPDIR)/EM-hb-allns.tsv
-	python3 $(EM_BUILDS)/build_hemibrain_cells.py  --out $(TMPDIR)/EM-hb-cells.tsv
-	python3 $(EM_BUILDS)/build_flywire.py --which both --out $(TMPDIR)/EM-flywire.tsv
-	python3 $(EM_BUILDS)/build_male_cns.py         --out $(TMPDIR)/EM-male-cns.tsv
-	python3 $(EM_BUILDS)/build_optic_lobe.py       --out $(TMPDIR)/EM-optic-lobe.tsv
-	$(ROBOT) template --template $(TMPDIR)/EM-manc.tsv --output $(TMPDIR)/EM-manc.owl
-	$(ROBOT) template --template $(TMPDIR)/EM-flywire.tsv --output $(TMPDIR)/EM-flywire.owl
-	$(ROBOT) template --input $(MIRRORDIR)/ro.owl --template $(TMPDIR)/EM-hb-allns.tsv --output $(TMPDIR)/EM-hb-allns.owl
-	$(ROBOT) template --input $(MIRRORDIR)/ro.owl --template $(TMPDIR)/EM-hb-cells.tsv --output $(TMPDIR)/EM-hb-cells.owl
-	$(ROBOT) template --input $(MIRRORDIR)/ro.owl --template $(TMPDIR)/EM-male-cns.tsv --output $(TMPDIR)/EM-male-cns.owl
-	$(ROBOT) template --input $(MIRRORDIR)/ro.owl --template $(TMPDIR)/EM-optic-lobe.tsv --output $(TMPDIR)/EM-optic-lobe.owl
-	$(ROBOT) merge -i $(TMPDIR)/EM-manc.owl -i $(TMPDIR)/EM-hb-allns.owl -i $(TMPDIR)/EM-hb-cells.owl \
-		-i $(TMPDIR)/EM-flywire.owl -i $(TMPDIR)/EM-male-cns.owl -i $(TMPDIR)/EM-optic-lobe.owl \
+	python3 $(EM_DIR)/build_EM_neurons.py --out $(TMPDIR)/EM_neurons.tsv
+	$(ROBOT) template --template $(TMPDIR)/EM_neurons.tsv \
 		annotate --ontology-iri "$(URIBASE)/fbbt/components/EM_neurons.owl" --output $@
-	rm -f $(TMPDIR)/EM-manc.tsv $(TMPDIR)/EM-hb-allns.tsv $(TMPDIR)/EM-hb-cells.tsv $(TMPDIR)/EM-flywire.tsv $(TMPDIR)/EM-male-cns.tsv $(TMPDIR)/EM-optic-lobe.tsv
-	rm -f $(TMPDIR)/EM-manc.owl $(TMPDIR)/EM-hb-allns.owl $(TMPDIR)/EM-hb-cells.owl $(TMPDIR)/EM-flywire.owl $(TMPDIR)/EM-male-cns.owl $(TMPDIR)/EM-optic-lobe.owl
+	rm -f $(TMPDIR)/EM_neurons.tsv
 .PRECIOUS: $(COMPONENTSDIR)/EM_neurons.owl
 
 #######################################################################

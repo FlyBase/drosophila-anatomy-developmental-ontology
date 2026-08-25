@@ -8,9 +8,12 @@ OAK against the built tmp/fbbt-merged.db for part-of redundancy pruning. The
 class-level connectivity-consistency filter is reconstructed by
 EM_common.laterality_connectivity. No network/token.
 
-NB: dataset pinned to male-cns:v0.9 via the cache (see fetch_male_cns.py). This
-generator does NOT use the ROBOT #1105 TYPE-row workaround (matching the
-original); build with `robot template --input fbbt.owl`.
+NB: dataset pinned to male-cns:v1.0 via the cache (see fetch_male_cns.py).
+Emits native quoted-label relation columns and no #1105 TYPE rows; the
+consolidated build (`build_EM_neurons.py`) re-expresses these as RO CURIEs and
+adds the #1105 rows for the whole template, so no `robot template --input` is
+needed there. Standalone, this native template needs `--input` for the quoted
+labels (see the old per-connectome recipe).
 
 Usage:
     python3 build_male_cns.py [--out template.tsv] [--db ../../../ontology/tmp/fbbt-merged.db]

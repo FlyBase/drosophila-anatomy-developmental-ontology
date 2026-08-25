@@ -28,23 +28,30 @@ All paths are relative to the repository root unless otherwise noted.
 Each component OWL file is generated from TSV files in robot_template_projects. When removing a term from a source TSV, search ALL `.tsv` files in the relevant subdirectory for the FBbt ID, as some projects use multiple TSV files.
 
 The EM connectome neuron terms are all in the single consolidated component
-`EM_neurons.owl`, but their source TSVs are still per-connectome. To find a
-term's source TSV, identify which connectome it came from and search that
-directory (search ALL EM source dirs for the FBbt ID if unsure).
+`EM_neurons.owl`. There is one **registry** listing every EM neuron id —
+`EM_neurons/registry/EM_neuron_registry.tsv` (ID column `FBbt_id`) — and it is
+the single ID source: `build_EM_neurons.py` emits only ids present in the
+registry, so **deleting a term's registry row is what durably stops it being
+regenerated**. The per-connectome source TSVs still exist and are what
+`registry/build_registry.py` reads to (re)build the registry, so a term is also
+removed from its source TSV to keep the two in sync (otherwise a later registry
+rebuild would resurrect it).
 
-| Component File | Source Directory | Primary TSV File(s) | ID Column |
+| Component File | Registry (primary removal target) | Per-connectome source dir + TSV(s) | ID Column |
 |---|---|---|---|
-| `EM_neurons.owl` | `EM_neurons/sources/flywire/` | `FBbt_ID-cell_type.tsv` | `FBbt_id` |
-| `EM_neurons.owl` | `EM_neurons/sources/hemibrain/` | `new_cell_types.tsv`, `new_ALLNs.tsv` | `FBbt_id` |
-| `EM_neurons.owl` | `EM_neurons/sources/optic_lobe/` | `new_types.tsv` | `FBbt_id` |
-| `EM_neurons.owl` | `EM_neurons/sources/manc/` | `new_cell_FBbt_ids.tsv` | `FBbt_id` |
-| `EM_neurons.owl` | `EM_neurons/sources/male_cns/` | `new_types.tsv` | `FBbt_id` |
-| `VNC_new_cells.owl` | `VNC_neurons/` | `VNCtable2.tsv`, `Feng.tsv` | `FBbt_ID` |
+| `EM_neurons.owl` | `EM_neurons/registry/EM_neuron_registry.tsv` | `EM_neurons/sources/flywire/` — `FBbt_ID-cell_type.tsv` | `FBbt_id` |
+| `EM_neurons.owl` | `EM_neurons/registry/EM_neuron_registry.tsv` | `EM_neurons/sources/hemibrain/` — `new_cell_types.tsv`, `new_ALLNs.tsv` | `FBbt_id` |
+| `EM_neurons.owl` | `EM_neurons/registry/EM_neuron_registry.tsv` | `EM_neurons/sources/optic_lobe/` — `new_types.tsv` | `FBbt_id` |
+| `EM_neurons.owl` | `EM_neurons/registry/EM_neuron_registry.tsv` | `EM_neurons/sources/manc/` — `new_cell_FBbt_ids.tsv` | `FBbt_id` |
+| `EM_neurons.owl` | `EM_neurons/registry/EM_neuron_registry.tsv` | `EM_neurons/sources/male_cns/` — `new_types.tsv` | `FBbt_id` |
+| `VNC_new_cells.owl` | (no registry — VNC is not EM-derived) | `VNC_neurons/` — `VNCtable2.tsv`, `Feng.tsv` | `FBbt_ID` |
 
-Note: `EM_neurons.owl` is regenerated from these source TSVs (via
-`make components/EM_neurons.owl`), so removing a term from the source TSV is what
-durably prevents it being regenerated; removing it from the component OWL keeps
-the current release consistent until the next regeneration.
+Note: `EM_neurons.owl` is regenerated (via `make components/EM_neurons.owl`)
+from the registry + source TSVs, so removing a term from **both** the registry
+and its source TSV is what durably prevents regeneration; removing it from the
+component OWL keeps the current release consistent until the next regeneration.
+(To find which connectome a term came from, look it up by `FBbt_id` in the
+registry — its `defining_connectome` and `type_name` columns name the source.)
 
 ## Workflow
 
@@ -141,14 +148,23 @@ Verify removal:
 grep "FBbt_NNNNNNN" components/COMPONENT.owl
 ```
 
-### Step 6: Remove from source TSV file(s)
+### Step 6: Remove from the registry and source TSV file(s)
 
-1. Identify the source directory from the mapping table above.
-2. Search ALL TSV files in that directory for the FBbt ID (check both `:` and `_` formats):
+1. **Registry (durable control).** Remove the term's row from
+   `src/patterns/robot_template_projects/EM_neurons/registry/EM_neuron_registry.tsv`
+   (match the `FBbt_id` column). The generator only emits ids present here, so
+   this is what stops regeneration. The row's `defining_connectome`/`type_name`
+   columns also tell you which source dir to edit next.
+2. **Per-connectome source TSV** (keeps a later `build_registry.py` rebuild from
+   resurrecting the term). Search ALL TSV files in that connectome's
+   `EM_neurons/sources/<connectome>/` dir for the FBbt ID (check both `:` and
+   `_` formats):
    ```
-   grep -rl "FBbt:NNNNNNN\|FBbt_NNNNNNN" src/patterns/robot_template_projects/DIRECTORY/
+   grep -rl "FBbt:NNNNNNN\|FBbt_NNNNNNN" src/patterns/robot_template_projects/EM_neurons/sources/CONNECTOME/
    ```
-3. For each TSV file found, remove the entire row containing the FBbt ID using the Edit tool.
+   For each TSV file found, remove the entire row containing the FBbt ID using the Edit tool.
+
+(For `VNC_new_cells.owl` there is no registry — remove from its `VNC_neurons/` TSVs only.)
 
 **IMPORTANT:** Do NOT remove entries from `src/patterns/robot_template_projects/EM_synonyms/` mapping files. These are ID-based synonym mappings (linking external dataset names to FBbt IDs) that should persist regardless of where the term is defined. The EM synonyms are generated as a separate component and the mappings remain valid.
 
