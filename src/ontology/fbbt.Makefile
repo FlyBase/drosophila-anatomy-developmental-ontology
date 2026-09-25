@@ -259,15 +259,17 @@ $(COMPONENTSDIR)/image_annotation.owl: $(PATTERNDIR)/image_annotation_template.t
 # throughout, so no --input is needed for label resolution), and filters to the
 # ids in the committed registry (EM_neurons/registry/EM_neuron_registry.tsv --
 # the single ID source and the move-to-edit removal target). This recipe then
-# runs a single $(ROBOT) template. Run locally (needs pandas/scipy/oaklib and
-# the caches; see EM_neurons/README.md).
+# runs a single $(ROBOT) template.
 #
-# male_cns/optic_lobe read $(TMPDIR)/$(ONT)-merged.db for OAK part-of pruning of
-# region terms. It must already exist (an ordinary build artefact) and is
-# deliberately NOT a prerequisite: it is built from $(SRC), which imports this
-# component, so making it a prerequisite would deadlock when regenerating a
-# missing/forced component (and the region part-of hierarchy it provides is
-# unaffected by this component). Run a normal build first if it is absent.
+# The six connectome generators are slow (FlyWire soma positioning alone is
+# ~10+ min), so their native templates are CACHED under EM_neurons/templates/
+# (gitignored, curator-local): build_EM_neurons.py reads the cache and computes
+# only what is missing, so a re-run is fast. Recompute the cache explicitly with
+# `make refresh-EM-templates` (needs pandas/scipy/oaklib + the evidence caches;
+# male_cns/optic_lobe also need $(TMPDIR)/$(ONT)-merged.db). That db must already
+# exist and is deliberately NOT a prerequisite here: it is built from $(SRC),
+# which imports this component, so making it a prerequisite would deadlock when
+# regenerating a missing/forced component. Run a normal build first if absent.
 EM_DIR = ../patterns/robot_template_projects/EM_neurons
 
 $(COMPONENTSDIR)/EM_neurons.owl:
@@ -276,6 +278,14 @@ $(COMPONENTSDIR)/EM_neurons.owl:
 		annotate --ontology-iri "$(URIBASE)/fbbt/components/EM_neurons.owl" --output $@
 	rm -f $(TMPDIR)/EM_neurons.tsv
 .PRECIOUS: $(COMPONENTSDIR)/EM_neurons.owl
+
+# Opt-in: recompute the (gitignored) per-connectome native-template cache under
+# EM_neurons/templates/. This is the slow step (runs all six generators incl.
+# FlyWire). Run it when connectome source data / build logic changes, then
+# regenerate the component + registry.
+.PHONY: refresh-EM-templates
+refresh-EM-templates:
+	python3 $(EM_DIR)/build_EM_neurons.py --refresh-cache
 
 #######################################################################
 ### Subsets

@@ -221,37 +221,69 @@ def _as_str_frame(df):
     return pd.read_csv(buf, sep="\t", dtype=str, keep_default_na=False)
 
 
-def native_frames(db_path, from_tsvs=None):
-    """Return ``{connectome: native_str_DataFrame}`` for all six connectomes.
+# connectome key -> cached native-template basename
+FILE_KEY = {"manc": "EM-manc", "hb_allns": "EM-hb-allns", "hb_cells": "EM-hb-cells",
+            "flywire": "EM-flywire", "male_cns": "EM-male-cns", "optic_lobe": "EM-optic-lobe"}
 
-    ``from_tsvs``: directory of pre-built native templates named
-    ``EM-<key>.tsv`` (dev fast-path; keys: manc, hb-allns, hb-cells, flywire,
-    male-cns, optic-lobe). Otherwise the six ``builds/build_*.py`` are imported
-    and run (offline, from committed data + evidence caches).
-    """
-    file_key = {"manc": "EM-manc", "hb_allns": "EM-hb-allns", "hb_cells": "EM-hb-cells",
-                "flywire": "EM-flywire", "male_cns": "EM-male-cns", "optic_lobe": "EM-optic-lobe"}
-    if from_tsvs:
-        return {c: pd.read_csv(os.path.join(from_tsvs, file_key[c] + ".tsv"),
-                               sep="\t", dtype=str, keep_default_na=False)
-                for c in CONNECTOMES}
 
+def _read_tsv(path):
+    return pd.read_csv(path, sep="\t", dtype=str, keep_default_na=False)
+
+
+def _build_one(connectome, db_path):
+    """Run a single connectome's row generator and return its native template as
+    a str DataFrame (matching exactly what its build_*.py main() would write)."""
     import build_manc, build_hemibrain_allns, build_hemibrain_cells
     import build_flywire, build_male_cns, build_optic_lobe
-    return {
-        "manc": _as_str_frame(build_manc.build_template()),
-        "hb_allns": _as_str_frame(build_hemibrain_allns.build_template()),
-        "hb_cells": _as_str_frame(build_hemibrain_cells.build_template()),
-        "flywire": _as_str_frame(build_flywire.build_template("both")),
-        "male_cns": _as_str_frame(build_male_cns.build_template(db_path)),
-        "optic_lobe": _as_str_frame(build_optic_lobe.build_template(db_path)),
+    builders = {
+        "manc": lambda: build_manc.build_template(),
+        "hb_allns": lambda: build_hemibrain_allns.build_template(),
+        "hb_cells": lambda: build_hemibrain_cells.build_template(),
+        "flywire": lambda: build_flywire.build_template("both"),
+        "male_cns": lambda: build_male_cns.build_template(db_path),
+        "optic_lobe": lambda: build_optic_lobe.build_template(db_path),
     }
+    return _as_str_frame(builders[connectome]())
 
 
-def unified_data_frame(db_path, from_tsvs=None):
+def native_frames(db_path, from_tsvs=None, cache_dir=None, refresh=False):
+    """Return ``{connectome: native_str_DataFrame}`` for all six connectomes.
+
+    Resolution order per connectome:
+    * ``from_tsvs``: strict read of ``<from_tsvs>/EM-<key>.tsv`` (dev fast-path;
+      every file must exist). No building.
+    * ``cache_dir`` (the normal path): read ``<cache_dir>/EM-<key>.tsv`` if it
+      exists and ``refresh`` is False; otherwise run the connectome's build
+      (offline, from committed data + evidence caches; male_cns/optic_lobe need
+      ``db_path``) and **write** the result into the cache. This is what lets the
+      slow FlyWire soma-positioning etc. be computed once and reused.
+    * neither: build every connectome in-process, no caching.
+    """
+    if from_tsvs:
+        return {c: _read_tsv(os.path.join(from_tsvs, FILE_KEY[c] + ".tsv")) for c in CONNECTOMES}
+
+    frames = {}
+    for c in CONNECTOMES:
+        path = os.path.join(cache_dir, FILE_KEY[c] + ".tsv") if cache_dir else None
+        if path and os.path.exists(path) and not refresh:
+            frames[c] = _read_tsv(path)
+        else:
+            frames[c] = _build_one(c, db_path)
+            if path:
+                os.makedirs(cache_dir, exist_ok=True)
+                frames[c].to_csv(path, sep="\t", index=False)
+    return frames
+
+
+def refresh_cache(db_path, cache_dir):
+    """Force-recompute every connectome's native template into ``cache_dir``."""
+    native_frames(db_path, cache_dir=cache_dir, refresh=True)
+
+
+def unified_data_frame(db_path, from_tsvs=None, cache_dir=None, refresh=False):
     """Collect all connectomes' data rows on the unified schema (concatenated,
     with a ``defining_connectome`` column). No header / #1105 rows added."""
-    frames = native_frames(db_path, from_tsvs=from_tsvs)
+    frames = native_frames(db_path, from_tsvs=from_tsvs, cache_dir=cache_dir, refresh=refresh)
     return pd.concat([to_unified(frames[c], c) for c in CONNECTOMES], ignore_index=True)
 
 

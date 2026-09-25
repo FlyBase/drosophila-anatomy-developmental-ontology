@@ -94,8 +94,8 @@ def name_in_maps():
     return out
 
 
-def build(db_path, from_tsvs=None):
-    uni = u.unified_data_frame(db_path, from_tsvs=from_tsvs)
+def build(db_path, from_tsvs=None, cache_dir=None):
+    uni = u.unified_data_frame(db_path, from_tsvs=from_tsvs, cache_dir=cache_dir)
     reg = uni[["ID", "label", "defining_connectome"]].drop_duplicates("ID").copy()
     reg = reg.rename(columns={"ID": "FBbt_id"})
     reg["defining_connectome"] = reg["defining_connectome"].map(DEFINING_LABEL)
@@ -117,9 +117,12 @@ def main():
     ap.add_argument("--out", default=os.path.join(here, "EM_neuron_registry.tsv"))
     ap.add_argument("--db", default=os.path.normpath(
         os.path.join(here, "..", "..", "..", "..", "ontology", "tmp", "fbbt-merged.db")))
-    ap.add_argument("--from-tsvs", default=None, help="dev: dir of pre-built native templates")
+    ap.add_argument("--templates-dir", default=os.path.join(here, "..", "templates"),
+                    help="native-template cache dir (default ../templates)")
+    ap.add_argument("--from-tsvs", default=None, help="dev: strict read of pre-built native templates")
     args = ap.parse_args()
-    reg = build(args.db, from_tsvs=args.from_tsvs)
+    cache_dir = None if args.from_tsvs else args.templates_dir
+    reg = build(args.db, from_tsvs=args.from_tsvs, cache_dir=cache_dir)
     reg.to_csv(args.out, sep="\t", index=False)
     print(f"Wrote {len(reg)} registry rows -> {args.out}")
     print(reg["defining_connectome"].value_counts().to_string())

@@ -40,6 +40,8 @@ EM_neurons/
 ├── data/                   # evidence caches (gitignored) + PROVENANCE.tsv (tracked)
 ├── builds/                 # offline per-connectome row generators (no network)
 │   └── build_{manc,hemibrain_cells,hemibrain_allns,flywire,male_cns,optic_lobe}.py
+├── templates/              # gitignored cache of the six computed native templates
+│                           #   (EM-<connectome>.tsv) — see "Template cache" below
 └── README.md
 ```
 
@@ -75,13 +77,31 @@ needs none of this — the component is a checked-in build input.
    python3 fetch_flywire_neuropils.py
    ```
    (MANC needs no fetch — it reads the committed `sources/manc/typing_info.tsv`.)
-2. **Build**: `make components/EM_neurons.owl` (from `src/ontology`) runs
-   `build_EM_neurons.py` + one `robot template`. `build_male_cns` /
-   `build_optic_lobe` need `tmp/fbbt-merged.db` (OAK part-of pruning of region
-   terms); run a normal build first if it is absent. Add a new term by editing
-   the relevant `sources/<connectome>/` id-list and re-running
-   `registry/build_registry.py`; remove one with `/move-to-edit` (which deletes
+2. **Refresh the template cache** (the slow step — see below):
+   ```sh
+   make refresh-EM-templates        # from src/ontology
+   ```
+3. **Build**: `make components/EM_neurons.owl` (from `src/ontology`) runs
+   `build_EM_neurons.py` + one `robot template`. Add a new term by editing the
+   relevant `sources/<connectome>/` id-list, then refresh + rebuild the registry
+   (`registry/build_registry.py`); remove one with `/move-to-edit` (which deletes
    its registry row).
+
+## Template cache
+
+The six connectome row generators are slow — FlyWire's per-neuron soma
+positioning alone is ~10+ min — so their native templates are **cached** under
+`templates/EM-<connectome>.tsv` (gitignored, curator-local). `build_EM_neurons.py`
+reads the cache and only computes what is missing, so regenerating
+`EM_neurons.owl` (e.g. after editing the registry) is fast and needs no evidence
+caches or `tmp/fbbt-merged.db`.
+
+Recompute the cache with `make refresh-EM-templates` (i.e.
+`build_EM_neurons.py --refresh-cache`) when connectome **source data or build
+logic** changes; this is the only step that needs the `fetch/` evidence caches
+and (for male_cns/optic_lobe) `tmp/fbbt-merged.db`. The cache is deterministic
+except for pipe-order within some `SPLIT=|` columns (axiom-neutral), so a refresh
+never changes the resulting OWL unless the underlying data did.
 
 ## Evidence caches and provenance
 
