@@ -64,19 +64,17 @@ and writes a single `template.tsv` that the Makefile turns into
 **Normal / release build** uses the committed `components/EM_neurons.owl` and
 needs none of this — the component is a checked-in build input.
 
-**Regeneration** (occasional, by a curator) has two steps:
+**Regeneration** (occasional, by a curator) has three steps:
 
-1. **Fetch** connectome evidence into `data/` (needs a neuPrint token; FlyWire
-   also needs `fafbseg` and the committed feather files). Opt-in, not part of
-   the normal build:
+1. **Fetch** connectome evidence into `data/` (needs network, a neuPrint token,
+   `neuprint-python` and `fafbseg`). Opt-in, not part of the normal build:
    ```sh
-   cd fetch
-   NEUPRINT_TOKEN=<token> python3 fetch_hemibrain.py
-   NEUPRINT_TOKEN=<token> python3 fetch_male_cns.py     # pinned male-cns:v1.0
-   NEUPRINT_TOKEN=<token> python3 fetch_optic_lobe.py
-   python3 fetch_flywire_neuropils.py
+   NEUPRINT_TOKEN=<token> make refresh-EM-data     # from src/ontology, local make
    ```
-   (MANC needs no fetch — it reads the committed `sources/manc/typing_info.tsv`.)
+   This runs the four `fetch/` scripts (hemibrain, male-CNS pinned to v1.0,
+   optic lobe, FlyWire neuropil volumes) and updates `data/PROVENANCE.tsv`.
+   Each script can also be run on its own (`python3 fetch/fetch_<x>.py`).
+   MANC needs no fetch — it reads the committed `sources/manc/typing_info.tsv`.
 2. **Refresh the template cache** (the slow step — see below):
    ```sh
    make refresh-EM-templates        # from src/ontology
@@ -130,10 +128,15 @@ FlyWire FAFB v783, MANC v1.2.1.
   `robot merge`). `robot diff` of the regenerated `EM_neurons.owl` vs the previous
   committed component: **identical**. Curation bridges now read from
   `../connectome-curation`. Cross-dataset identity is recorded in the registry's
-  `name_in_*` columns but not yet emitted into terms.
-- **Later (Phase 3, Stage B/C):** emit `name_in_*` as dataset-tagged synonyms +
-  provenance (identity merge), then reconcile connectome evidence across every
-  connectome where a type appears (evidence merge). `EM_synonyms.owl` stays a
-  separate asset for now.
-- **Later (Phase 4):** an opt-in `refresh-EM-data` Makefile goal wrapping the
-  `fetch/` scripts.
+  `name_in_*` columns.
+- **Done (Phase 3, Stage B):** dataset-tagged `name_in_*` synonyms (with
+  references) are provided by the separate `EM_synonyms.owl` release asset
+  (`../EM_synonyms/EM_synonym_template.py`), which now reads the same
+  `../connectome-curation` bridges with the same 1:1 filter as the registry. They
+  are deliberately **not** emitted into `EM_neurons.owl`: `EM_synonyms.owl` also
+  covers hand-curated `fbbt-edit.obo` terms, so emitting them here would
+  duplicate its axioms for EM terms without replacing it.
+- **Later (Phase 3, Stage C):** reconcile connectome evidence across every
+  connectome where a type appears (evidence merge).
+- **Done (Phase 4):** opt-in `make refresh-EM-data` goal wrapping the `fetch/`
+  scripts.

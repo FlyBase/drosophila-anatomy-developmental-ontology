@@ -287,6 +287,23 @@ $(COMPONENTSDIR)/EM_neurons.owl:
 refresh-EM-templates:
 	python3 $(EM_DIR)/build_EM_neurons.py --refresh-cache
 
+# Opt-in: re-fetch the (gitignored) connectome evidence caches under
+# EM_neurons/data/ from neuPrint (hemibrain, male-CNS, optic lobe) and FlyWire
+# (neuropil volumes), updating the committed data/PROVENANCE.tsv. MANC needs no
+# fetch (it reads the committed sources/manc/typing_info.tsv). Needs network, a
+# neuPrint token in NEUPRINT_TOKEN, and neuprint-python + fafbseg, so run it with
+# a local make (not the ODK docker wrapper). The token is read from the
+# environment rather than passed on the command line, so make never echoes it.
+# Follow with `make refresh-EM-templates` and a component rebuild to pick up the
+# new data.
+.PHONY: refresh-EM-data
+refresh-EM-data:
+	@test -n "$$NEUPRINT_TOKEN" || { echo "NEUPRINT_TOKEN is not set (get a token from https://neuprint.janelia.org, Account page)"; exit 1; }
+	python3 $(EM_DIR)/fetch/fetch_hemibrain.py
+	python3 $(EM_DIR)/fetch/fetch_male_cns.py
+	python3 $(EM_DIR)/fetch/fetch_optic_lobe.py
+	python3 $(EM_DIR)/fetch/fetch_flywire_neuropils.py
+
 #######################################################################
 ### Subsets
 #######################################################################
