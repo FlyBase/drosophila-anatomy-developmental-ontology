@@ -1,8 +1,7 @@
 #!/usr/bin/env python3
 """Build the MANC neuron-term ROBOT template (offline, from committed data).
 
-Faithful port of manc_neurons/manc_template.ipynb. Reads the committed MANC
-evidence cache (typing_info.tsv, produced by the neuPrint fetch step) plus the
+Reads the committed MANC typing data (sources/manc/typing_info.tsv) plus the
 curated FBbt mapping TSVs, and writes a ROBOT template. No network/token.
 
 Usage:
@@ -25,7 +24,7 @@ REFS = " (Takemura et al., 2024; Marin et al., 2024)."
 
 
 def _src(*parts):
-    """Path to a file in the (current) manc_neurons project folder."""
+    """Path to a file in sources/manc/."""
     here = os.path.dirname(os.path.abspath(__file__))
     return os.path.normpath(os.path.join(here, "..", "sources", "manc", *parts))
 

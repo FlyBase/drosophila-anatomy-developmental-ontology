@@ -43,7 +43,7 @@ def connect(dataset, token):
 def fetch_roiinfo_long(client, types, include_instance=True, drop_column_rois=True):
     """Fetch per-body roiInfo for the given neuron types and return a long table.
 
-    Reproduces the query used by the hemibrain/male_cns/optic_lobe notebooks::
+    Query::
 
         MATCH (n:Neuron) WHERE n.type IN [...]
         RETURN n.type, n.bodyId, [n.instance,]
@@ -51,7 +51,7 @@ def fetch_roiinfo_long(client, types, include_instance=True, drop_column_rois=Tr
 
     Returns columns: type, bodyId, [instance,] roi, pre, post — one row per
     (body, roi) pair present in that body's roiInfo. Missing pre/post keys are
-    stored as 0 (matching the notebooks' ``fillna(0)``). No ROI→FBbt mapping is
+    stored as 0. No ROI→FBbt mapping is
     done here; the build step does that.
 
     ``drop_column_rois`` (default True) drops optic-lobe column ROIs (name

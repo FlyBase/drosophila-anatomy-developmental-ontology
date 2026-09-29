@@ -32,7 +32,7 @@ The EM connectome neuron terms are all in the single consolidated component
 `EM_neurons/registry/EM_neuron_registry.tsv` (ID column `FBbt_id`) — and it is
 the single ID source: `build_EM_neurons.py` emits only ids present in the
 registry, so **deleting a term's registry row is what durably stops it being
-regenerated**. The per-connectome source TSVs still exist and are what
+regenerated**. The per-connectome source TSVs are what
 `registry/build_registry.py` reads to (re)build the registry, so a term is also
 removed from its source TSV to keep the two in sync (otherwise a later registry
 rebuild would resurrect it).
@@ -46,7 +46,7 @@ rebuild would resurrect it).
 | `EM_neurons.owl` | `EM_neurons/registry/EM_neuron_registry.tsv` | `EM_neurons/sources/male_cns/` — `new_types.tsv` | `FBbt_id` |
 | `VNC_new_cells.owl` | (no registry — VNC is not EM-derived) | `VNC_neurons/` — `VNCtable2.tsv`, `Feng.tsv` | `FBbt_ID` |
 
-Note: `EM_neurons.owl` is regenerated (via `make components/EM_neurons.owl`)
+Note: `EM_neurons.owl` is regenerated (via `sh run.sh make components/EM_neurons.owl`)
 from the registry + source TSVs, so removing a term from **both** the registry
 and its source TSV is what durably prevents regeneration; removing it from the
 component OWL keeps the current release consistent until the next regeneration.
@@ -166,7 +166,7 @@ grep "FBbt_NNNNNNN" components/COMPONENT.owl
 
 (For `VNC_new_cells.owl` there is no registry — remove from its `VNC_neurons/` TSVs only.)
 
-**IMPORTANT:** Do NOT remove entries from `src/patterns/robot_template_projects/EM_synonyms/` mapping files. These are ID-based synonym mappings (linking external dataset names to FBbt IDs) that should persist regardless of where the term is defined. The EM synonyms are generated as a separate component and the mappings remain valid.
+**IMPORTANT:** Do NOT remove the term's `name_in_*` synonyms or its entries in the `../connectome-curation` mapping files (`datasets/<connectome>/resources/`). These are ID-based synonym mappings (linking external dataset names to FBbt IDs) that should persist regardless of where the term is defined. `EM_synonyms.owl` is generated from them as a separate release asset (by `src/patterns/robot_template_projects/EM_synonyms/EM_synonym_template.py`), so the term keeps its dataset synonyms after it moves to the editors' file.
 
 ### Step 7: Report
 

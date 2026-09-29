@@ -1,14 +1,13 @@
 #!/usr/bin/env python3
 """Build the optic-lobe neuron-term ROBOT template (offline).
 
-Faithful port of optic_lobe/optic_lobe_neurons.ipynb. Reads committed data: the
-optic-lobe evidence caches (optic_lobe_roiinfo.tsv, optic_lobe_hemilineage.tsv),
+Reads the optic-lobe evidence caches (optic_lobe_roiinfo.tsv, optic_lobe_hemilineage.tsv),
 curated maps, and the FlyWire lineage map; uses OAK against tmp/fbbt-merged.db
-for part-of pruning; reconstructs the class-level connectivity-consistency filter
+for part-of pruning; applies the class-level connectivity-consistency filter
 via EM_common.laterality_connectivity. No network/token.
 
-This generator does NOT use the ROBOT #1105 TYPE-row workaround (matching the
-original); build with `robot template --input fbbt.owl`.
+This generator does not emit the ROBOT #1105 TYPE rows (the consolidated build
+adds them); standalone, build with `robot template --input fbbt.owl`.
 
 Usage:
     python3 build_optic_lobe.py [--out template.tsv] [--db .../fbbt-merged.db]
@@ -71,7 +70,6 @@ TEMPLATE_SEED = OrderedDict([
 
 
 def build_template(db_path):
-    import numpy as np  # noqa: F401  (parity with notebook imports)
     from oaklib import get_adapter
 
     cell_types = pd.read_csv(_proj("EM_neurons", "sources", "optic_lobe", "new_types.tsv"), sep="\t", low_memory=False, index_col="OL_type")
@@ -100,12 +98,12 @@ def build_template(db_path):
         return em.drop_redundant_part_of(term_list, FBbt_descendants)
 
     connectivity_inputs = type_connectivity_table.loc[type_connectivity_table.loc[:, "post"] > CONNECTIVITY_THRESHOLD, "post"]
-    connectivity_inputs = connectivity_inputs.reset_index("ROI").drop(columns=["post"], axis=1)
+    connectivity_inputs = connectivity_inputs.reset_index("ROI").drop(columns=["post"])
     connectivity_inputs_lat = connectivity_inputs.groupby(["type", "laterality"])["ROI"].apply(list).apply(drop_redundant_terms)
     connectivity_inputs_nolat = connectivity_inputs.groupby("type")["ROI"].apply(list).apply(drop_redundant_terms)
 
     connectivity_outputs = type_connectivity_table.loc[type_connectivity_table.loc[:, "pre"] > CONNECTIVITY_THRESHOLD, "pre"]
-    connectivity_outputs = connectivity_outputs.reset_index("ROI").drop(columns=["pre"], axis=1)
+    connectivity_outputs = connectivity_outputs.reset_index("ROI").drop(columns=["pre"])
     connectivity_outputs_lat = connectivity_outputs.groupby(["type", "laterality"])["ROI"].apply(list).apply(drop_redundant_terms)
     connectivity_outputs_nolat = connectivity_outputs.groupby("type")["ROI"].apply(list).apply(drop_redundant_terms)
 

@@ -1,8 +1,7 @@
 #!/usr/bin/env python3
 """Fetch hemibrain per-body roiInfo and cache it for the offline build.
 
-Opt-in: needs a neuPrint token. Reproduces the query in
-hemibrain_new_types/update_new_types.ipynb (dataset hemibrain:v1.2.1). Fetches
+Opt-in: needs a neuPrint token (dataset hemibrain:v1.2.1). Fetches
 connectivity for ALL np_types in new_cell_types.tsv (the FlyWire overlap filter
 is applied later, in the build step, so the cache is independent of it).
 

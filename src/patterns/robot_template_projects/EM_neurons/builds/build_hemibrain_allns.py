@@ -1,10 +1,9 @@
 #!/usr/bin/env python3
 """Build the hemibrain antennal-lobe local-neuron (ALLN) ROBOT template.
 
-Faithful port of hemibrain_new_types/ALLNs.ipynb. Pure build from committed
-TSVs (new_ALLNs.tsv, glomerulus_names.tsv); no neuPrint fetch. NOTE: this
-generator does NOT use the ROBOT #1105 TYPE-row workaround (matching the
-original), and uses 'A dc:contributor' (not 'AI').
+Pure build from committed TSVs (new_ALLNs.tsv, glomerulus_names.tsv); no
+neuPrint fetch. This generator does not emit the ROBOT #1105 TYPE rows (the
+consolidated build adds them for the whole template).
 
 Usage:
     python3 build_hemibrain_allns.py [--out template.tsv]
@@ -36,8 +35,7 @@ TEMPLATE_SEED = OrderedDict([
     ("obo_id", "A oboInOwl:id"), ("obo_namespace", "A oboInOwl:hasOBONamespace"),
     ("label", "A rdfs:label"), ("definition", "A IAO:0000115"),
     ("Xref_def", ">A oboInOwl:hasDbXref SPLIT=|"),
-    # NB: the original ALLNs.ipynb used 'A dc:contributor' (literal ORCID); the
-    # released component and house style use an IRI value, so use 'AI'.
+    # contributor ORCIDs are IRI values (house style), hence 'AI'.
     ("created_by", "AI dc:contributor"), ("creation_date", "AT dc:date^^xsd:dateTime"),
     ("synonym", "A oboInOwl:hasExactSynonym"), ("comment", "A rdfs:comment"),
     ("glomeruli", "SC 'has synaptic IO in region' some % SPLIT=|"),

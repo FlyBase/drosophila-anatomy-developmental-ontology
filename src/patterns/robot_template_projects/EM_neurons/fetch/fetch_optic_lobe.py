@@ -1,10 +1,9 @@
 #!/usr/bin/env python3
 """Fetch optic-lobe per-body roiInfo + hemilineage and cache for the offline build.
 
-Opt-in: needs a neuPrint token. Reproduces the two queries in
-optic_lobe/optic_lobe_neurons.ipynb (dataset optic-lobe:v1.1). Optic-lobe column
-ROIs (containing '_col_') are kept in the raw cache and dropped in the build step
-(matching the notebook).
+Opt-in: needs a neuPrint token (dataset optic-lobe:v1.1). Optic-lobe column
+ROIs (containing '_col_') are dropped at fetch time (see
+neuprint_common.fetch_roiinfo_long).
 
 Usage:
     python3 fetch_optic_lobe.py --token <NEUPRINT_TOKEN>

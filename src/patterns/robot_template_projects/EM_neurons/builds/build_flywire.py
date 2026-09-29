@@ -1,16 +1,15 @@
 #!/usr/bin/env python3
 """Build the FlyWire/FAFB neuron-term ROBOT template(s) (offline).
 
-Faithful port of flywire_neurons/flywire_neurons.ipynb. Builds two row-sets:
-  * "own"        -> FlyWire's own new types (flywire_neurons.owl)
-  * "hemibrain"  -> hemibrain types now defined by FlyWire data, keeping their
-                    hemibrain FBbt IDs (this set is merged into the hemibrain
-                    component in the legacy workflow).
+Builds two row-sets:
+  * "own"        -> FlyWire's own new types
+  * "hemibrain"  -> hemibrain types defined by FlyWire data, keeping their
+                    hemibrain FBbt IDs
 
 Reads committed/local data only: the FlyWire annotations TSV, the per-neuron
 synapse .feather files, neuropil/superclass/lineage maps, and the committed
-FlyWire neuropil-volume centres cache (data/flywire_neuropil_volumes.tsv) which
-replaces the live fafbseg call for soma positioning. The optic-lobe mapping is
+FlyWire neuropil-volume centres cache (data/flywire_neuropil_volumes.tsv), used
+for soma positioning. The optic-lobe mapping is
 read from the consolidated ../connectome-curation repo (via
 EM_common.curation_path).
 
@@ -128,9 +127,9 @@ class FlyWireBuilder:
         self.neuropil_ids = dict(zip(np_map["neuropil_short"], np_map["NP_id"]))
         self.cbr_ids = dict(zip(np_map["neuropil_short"], np_map["CBR_id"]))
 
-        # KDTree of neuropil-volume centres from the committed cache
-        # (replaces fafbseg.flywire.get_neuropil_volumes). Row order preserved
-        # so np.bincount(ix).argmax() indexes the same volume as the notebook.
+        # KDTree of neuropil-volume centres from the cache written by
+        # fetch_flywire_neuropils.py. Row order must match the fafbseg volume
+        # order, as np.bincount(ix).argmax() indexes into it.
         nv = pd.read_csv(_cache("flywire_neuropil_volumes.tsv"), sep="\t")
         self.neuropil_names = nv["name"].tolist()
         self.neuropil_centers = nv[["x", "y", "z"]].to_numpy()

@@ -1,9 +1,8 @@
 """Shared helpers for EM connectome neuron-term generation.
 
-This module consolidates logic that was previously copy-pasted across the
-per-connectome generator notebooks (flywire, hemibrain, manc, optic_lobe,
-male_cns). It is deliberately dependency-light: only the OAK part-of pruner
-needs an ontology adapter, which the caller supplies.
+Logic shared by the per-connectome generators (flywire, hemibrain, manc,
+optic_lobe, male_cns). It is deliberately dependency-light: only the OAK
+part-of pruner needs an ontology adapter, which the caller supplies.
 
 Scope: EM-connectome neuron terms only. VNC_neurons (Feng/Ehrhardt) is NOT
 EM-derived and is out of scope for this pipeline.
@@ -50,8 +49,6 @@ def curation_path(connectome, *parts):
 # Neurotransmitters
 # ---------------------------------------------------------------------------
 # Canonical neurotransmitter name -> GO "neurotransmitter secretion" CV.
-# Superset of the (divergent) dicts previously kept in flywire_neurons.ipynb
-# (6 entries), male_cns_neurons.ipynb and optic_lobe_neurons.ipynb (3 each).
 # Lookup is case-insensitive so both 'gaba' (flywire) and 'GABA' (optic_lobe)
 # resolve.
 NT_TO_GO = {
@@ -112,8 +109,8 @@ def name_lister(names, sort=False):
     """Join a list of names into an English list ("a, b and c").
 
     Returns False for an empty list (preserving the behaviour the callers rely
-    on). ``sort=True`` reproduces the manc/optic-lobe variant that sorts first;
-    ``sort=False`` (default) reproduces the unsorted variant.
+    on). ``sort=True`` sorts the names first (used by manc/optic-lobe);
+    ``sort=False`` (default) keeps the given order.
     """
     names = list(names)
     if sort:
@@ -211,15 +208,13 @@ def laterality(cell_side, np_side):
 
 
 def laterality_connectivity(cache, raw_roi_map):
-    """Reconstruct the notebook's per-body, per-side connectivity table with the
-    class-level consistency filter, for the laterality-aware generators.
+    """Build the per-type, per-side connectivity table with the class-level
+    consistency filter, for the laterality-aware generators.
 
-    The notebook does ROIs.apply(pd.Series).stack(future_stack=True) then
-    .apply(pd.Series).fillna(0), which materialises a ZERO for every
-    (body, side, region) pair a body lacks; the later groupby(type,laterality,
-    ROI).min() therefore drops any (laterality, region) not present in EVERY
-    body of the type. Our cache stores only present pairs, so we rebuild the
-    full (body x region) grid per type (0-filled) before deriving laterality.
+    A (laterality, region) is kept for a type only if it is present in EVERY
+    body of that type (the per-type minimum over bodies must be non-zero). The
+    cache stores only present pairs, so the full (body x region) grid is rebuilt
+    per type (0-filled) before deriving laterality.
 
     ``cache`` columns: type, bodyId, instance, roi, pre, post (roi = neuprint
     ROI name, e.g. 'ME(R)'). ``raw_roi_map`` maps roi -> FBbt id. Returns a

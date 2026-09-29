@@ -245,32 +245,41 @@ $(COMPONENTSDIR)/image_annotation.owl: $(PATTERNDIR)/image_annotation_template.t
 	--output $@
 
 ######################################################################################
-### Regenerate the consolidated EM neuron component (components/EM_neurons.owl)
+### EM connectome neuron terms (components/EM_neurons.owl) and EM_synonyms.owl
 ######################################################################################
-# EM_neurons.owl consolidates the connectome neuron-term components (flywire,
-# hemibrain cells + ALLNs, manc, optic_lobe, male_cns) that were previously
-# generated one-per-connectome by notebooks + manual robot. Like those, it is a
-# committed component generated out-of-band from connectome data; the normal
-# build just consumes it.
+# All goals here are run through the ODK wrapper (sh run.sh make <goal>); see
+# ../patterns/robot_template_projects/EM_neurons/README.md for the workflow.
 #
-# build_EM_neurons.py runs the six per-connectome row generators under
-# EM_neurons/builds/ (offline, from committed data + the gitignored evidence
-# caches), re-expresses their output on ONE unified ROBOT template (RO CURIEs
-# throughout, so no --input is needed for label resolution), and filters to the
-# ids in the committed registry (EM_neurons/registry/EM_neuron_registry.tsv --
-# the single ID source and the move-to-edit removal target). This recipe then
-# runs a single $(ROBOT) template.
+# EM_neurons.owl is a committed component holding the provisional neuron terms
+# from the EM connectomes (flywire, hemibrain cells + ALLNs, manc, optic_lobe,
+# male_cns); the normal build just consumes it. build_EM_neurons.py runs the six
+# per-connectome row generators under EM_neurons/builds/, re-expresses their
+# output on one unified ROBOT template (RO CURIEs throughout, so no --input is
+# needed), and keeps only the ids in the committed registry
+# (EM_neurons/registry/EM_neuron_registry.tsv -- the single ID source and the
+# move-to-edit removal target).
 #
-# The six connectome generators are slow (FlyWire soma positioning alone is
-# ~10+ min), so their native templates are CACHED under EM_neurons/templates/
-# (gitignored, curator-local): build_EM_neurons.py reads the cache and computes
-# only what is missing, so a re-run is fast. Recompute the cache explicitly with
-# `make refresh-EM-templates` (needs pandas/scipy/oaklib + the evidence caches;
-# male_cns/optic_lobe also need $(TMPDIR)/$(ONT)-merged.db). That db must already
-# exist and is deliberately NOT a prerequisite here: it is built from $(SRC),
-# which imports this component, so making it a prerequisite would deadlock when
-# regenerating a missing/forced component. Run a normal build first if absent.
+# The six generators are slow (FlyWire soma positioning alone is ~10+ min), so
+# their output is cached under EM_neurons/templates/ (gitignored, per curator).
+# build_EM_neurons.py reads the cache and computes only what is missing, so
+# rebuilding the component after a registry edit is fast.
+#
+# Goals that read ../connectome-curation (refresh-EM-templates,
+# refresh-EM-registry, refresh-EM-synonyms) need that sibling repo mounted into
+# the ODK container; the curator's run.sh.conf sets this up (see the README).
+# refresh-EM-templates also needs $(TMPDIR)/$(ONT)-merged.db for the male_cns and
+# optic_lobe generators. It is deliberately NOT a prerequisite: it is built from
+# $(SRC), which imports EM_neurons.owl, so depending on it would deadlock when the
+# component is missing. Run a normal build first if it is absent.
 EM_DIR = ../patterns/robot_template_projects/EM_neurons
+EM_SYNONYMS_DIR = ../patterns/robot_template_projects/EM_synonyms
+# Same relative path locally and inside the ODK container (mounted at /connectome-curation).
+CONNECTOME_CURATION = ../../../connectome-curation
+EM_FETCH_PYLIB = $(TMPDIR)/EM-fetch-pylib
+
+.PHONY: check-connectome-curation
+check-connectome-curation:
+	@test -d $(CONNECTOME_CURATION)/datasets || { echo "connectome-curation not found at $(CONNECTOME_CURATION). Clone it next to this repo and mount it into the ODK container via ODK_BINDS in run.sh.conf (see $(EM_DIR)/README.md)."; exit 1; }
 
 $(COMPONENTSDIR)/EM_neurons.owl:
 	python3 $(EM_DIR)/build_EM_neurons.py --out $(TMPDIR)/EM_neurons.tsv
@@ -279,30 +288,43 @@ $(COMPONENTSDIR)/EM_neurons.owl:
 	rm -f $(TMPDIR)/EM_neurons.tsv
 .PRECIOUS: $(COMPONENTSDIR)/EM_neurons.owl
 
-# Opt-in: recompute the (gitignored) per-connectome native-template cache under
-# EM_neurons/templates/. This is the slow step (runs all six generators incl.
-# FlyWire). Run it when connectome source data / build logic changes, then
-# regenerate the component + registry.
+# Recompute the per-connectome template cache under EM_neurons/templates/ (the
+# slow step). Run it when connectome data or build logic changes, then rebuild the
+# registry and the component.
 .PHONY: refresh-EM-templates
-refresh-EM-templates:
+refresh-EM-templates: check-connectome-curation
 	python3 $(EM_DIR)/build_EM_neurons.py --refresh-cache
 
-# Opt-in: re-fetch the (gitignored) connectome evidence caches under
-# EM_neurons/data/ from neuPrint (hemibrain, male-CNS, optic lobe) and FlyWire
-# (neuropil volumes), updating the committed data/PROVENANCE.tsv. MANC needs no
-# fetch (it reads the committed sources/manc/typing_info.tsv). Needs network, a
-# neuPrint token in NEUPRINT_TOKEN, and neuprint-python + fafbseg, so run it with
-# a local make (not the ODK docker wrapper). The token is read from the
-# environment rather than passed on the command line, so make never echoes it.
-# Follow with `make refresh-EM-templates` and a component rebuild to pick up the
-# new data.
+# Rebuild the registry from the template cache, the sources/ id-lists and the
+# connectome-curation bridges (after adding terms to a sources/ id-list).
+.PHONY: refresh-EM-registry
+refresh-EM-registry: check-connectome-curation
+	python3 $(EM_DIR)/registry/build_registry.py
+
+# Re-fetch the neuPrint evidence caches under EM_neurons/data/ (hemibrain,
+# male-CNS, optic lobe) and update the committed data/PROVENANCE.tsv. Needs
+# network and NEUPRINT_TOKEN passed into the container (see the README). The ODK
+# image lacks neuprint-python, so it is installed into $(EM_FETCH_PYLIB) on first
+# use; --no-deps keeps the image's own pandas/scipy (it only lacks ujson and
+# asciitree). The FlyWire neuropil-volume cache and MANC need no fetch here (see
+# the README). Follow with refresh-EM-templates to use the new data.
 .PHONY: refresh-EM-data
 refresh-EM-data:
-	@test -n "$$NEUPRINT_TOKEN" || { echo "NEUPRINT_TOKEN is not set (get a token from https://neuprint.janelia.org, Account page)"; exit 1; }
-	python3 $(EM_DIR)/fetch/fetch_hemibrain.py
-	python3 $(EM_DIR)/fetch/fetch_male_cns.py
-	python3 $(EM_DIR)/fetch/fetch_optic_lobe.py
-	python3 $(EM_DIR)/fetch/fetch_flywire_neuropils.py
+	@test -n "$$NEUPRINT_TOKEN" || { echo "NEUPRINT_TOKEN is not set in the container (see $(EM_DIR)/README.md; get a token from https://neuprint.janelia.org, Account page)"; exit 1; }
+	test -d $(EM_FETCH_PYLIB)/neuprint || \
+		python3 -m pip install --quiet --no-deps --target $(EM_FETCH_PYLIB) neuprint-python ujson asciitree
+	PYTHONPATH=$(EM_FETCH_PYLIB) python3 $(EM_DIR)/fetch/fetch_hemibrain.py
+	PYTHONPATH=$(EM_FETCH_PYLIB) python3 $(EM_DIR)/fetch/fetch_male_cns.py
+	PYTHONPATH=$(EM_FETCH_PYLIB) python3 $(EM_DIR)/fetch/fetch_optic_lobe.py
+
+# Regenerate the EM_synonyms.owl release asset (dataset-tagged name_in_* synonyms
+# for every FBbt term with a 1:1 connectome-curation mapping).
+.PHONY: refresh-EM-synonyms
+refresh-EM-synonyms: check-connectome-curation
+	python3 $(EM_SYNONYMS_DIR)/EM_synonym_template.py $(TMPDIR)/EM_synonyms.tsv
+	$(ROBOT) template --template $(TMPDIR)/EM_synonyms.tsv \
+		annotate --ontology-iri "$(URIBASE)/fbbt/EM_synonyms.owl" --output ../../EM_synonyms.owl
+	rm -f $(TMPDIR)/EM_synonyms.tsv
 
 #######################################################################
 ### Subsets

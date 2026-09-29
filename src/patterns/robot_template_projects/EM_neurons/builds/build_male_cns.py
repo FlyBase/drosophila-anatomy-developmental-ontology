@@ -1,11 +1,10 @@
 #!/usr/bin/env python3
 """Build the male-CNS neuron-term ROBOT template (offline).
 
-Faithful port of male_cns_neurons/male_cns_neurons.ipynb. Reads committed data:
-the male-CNS evidence caches (male_cns_roiinfo.tsv, male_cns_hemilineage.tsv,
+Reads the male-CNS evidence caches (male_cns_roiinfo.tsv, male_cns_hemilineage.tsv,
 from the neuPrint fetch step), curated maps, and the FlyWire lineage map. Uses
 OAK against the built tmp/fbbt-merged.db for part-of redundancy pruning. The
-class-level connectivity-consistency filter is reconstructed by
+class-level connectivity-consistency filter is applied by
 EM_common.laterality_connectivity. No network/token.
 
 NB: dataset pinned to male-cns:v1.0 via the cache (see fetch_male_cns.py).
@@ -13,7 +12,7 @@ Emits native quoted-label relation columns and no #1105 TYPE rows; the
 consolidated build (`build_EM_neurons.py`) re-expresses these as RO CURIEs and
 adds the #1105 rows for the whole template, so no `robot template --input` is
 needed there. Standalone, this native template needs `--input` for the quoted
-labels (see the old per-connectome recipe).
+labels.
 
 Usage:
     python3 build_male_cns.py [--out template.tsv] [--db ../../../ontology/tmp/fbbt-merged.db]
@@ -122,7 +121,7 @@ def build_template(db_path):
         return group
 
     connectivity_inputs = type_connectivity_table.loc[type_connectivity_table.loc[:, "post"] > CONNECTIVITY_THRESHOLD, "post"]
-    connectivity_inputs = connectivity_inputs.reset_index("ROI").drop(columns=["post"], axis=1)
+    connectivity_inputs = connectivity_inputs.reset_index("ROI").drop(columns=["post"])
     connectivity_inputs_lat = connectivity_inputs.groupby(["type", "laterality"])["ROI"].apply(list)
     connectivity_inputs_lat = connectivity_inputs_lat.apply(drop_redundant_terms)
     connectivity_inputs_lat = connectivity_inputs_lat.groupby(level="type", group_keys=False).apply(prune_nolat_against_lateralized)
@@ -130,7 +129,7 @@ def build_template(db_path):
     connectivity_inputs_nolat = connectivity_inputs_nolat.apply(drop_redundant_terms)
 
     connectivity_outputs = type_connectivity_table.loc[type_connectivity_table.loc[:, "pre"] > CONNECTIVITY_THRESHOLD, "pre"]
-    connectivity_outputs = connectivity_outputs.reset_index("ROI").drop(columns=["pre"], axis=1)
+    connectivity_outputs = connectivity_outputs.reset_index("ROI").drop(columns=["pre"])
     connectivity_outputs_lat = connectivity_outputs.groupby(["type", "laterality"])["ROI"].apply(list)
     connectivity_outputs_lat = connectivity_outputs_lat.apply(drop_redundant_terms)
     connectivity_outputs_lat = connectivity_outputs_lat.groupby(level="type", group_keys=False).apply(prune_nolat_against_lateralized)

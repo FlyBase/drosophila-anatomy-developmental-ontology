@@ -1,10 +1,9 @@
 #!/usr/bin/env python3
 """Fetch male-CNS per-body roiInfo + hemilineage and cache for the offline build.
 
-Opt-in: needs a neuPrint token. Reproduces the two queries in
-male_cns_neurons/male_cns_neurons.ipynb.
+Opt-in: needs a neuPrint token.
 
-Dataset version: 'male-cns:v1.0' (updated from v0.9). Override with --dataset.
+Dataset version: 'male-cns:v1.0'. Override with --dataset.
 
 Usage:
     python3 fetch_male_cns.py --token <NEUPRINT_TOKEN> [--dataset male-cns:v0.9]

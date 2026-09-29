@@ -1,10 +1,10 @@
 """Unified EM-neuron ROBOT-template schema and per-connectome column mapping.
 
-Phase 3 (Stage A) consolidates the six per-connectome ROBOT templates into a
-single template with one header row. This module defines:
+Combines the six per-connectome ROBOT templates into a single template with
+one header row. This module defines:
 
-* ``UNIFIED_HEADER`` — the single ROBOT header (RO CURIEs throughout, so the
-  merged build needs no ``--input`` for label resolution).
+* ``UNIFIED_HEADER`` — the single ROBOT header (RO CURIEs throughout, so
+  ``robot template`` needs no ``--input`` for label resolution).
 * ``COLUMN_MAPS`` — for each connectome, how its *native* template columns map
   onto the unified columns. Where several native columns are plain
   ``SC % [SPLIT=|]`` superclass assertions (e.g. hemibrain ``parent`` +
@@ -14,16 +14,15 @@ single template with one header row. This module defines:
 * ``to_unified`` / ``native_frames`` — read each connectome's native data rows
   and re-express them on the unified schema.
 
-Reproduction guarantee: for every connectome, each native column maps to a
-unified column whose ROBOT header string is byte-identical to the native one,
-**except** the quoted relation labels (``'develops from'`` …) which become the
-IRI-identical RO CURIEs (verified earlier as axiom-neutral). Cell values are
-copied verbatim. So each connectome's contribution to the single template is
-the same (header, value) set as its standalone template, and ``robot template``
-produces the same axioms.
+Axiom equivalence: for every connectome, each native column maps to a unified
+column whose ROBOT header string is byte-identical to the native one, **except**
+the quoted relation labels (``'develops from'`` …) which become the
+IRI-identical RO CURIEs. Cell values are copied verbatim. So each connectome's
+contribution to the single template is the same (header, value) set as its
+native template, and ``robot template`` produces the same axioms.
 
-The six ``builds/build_*.py`` remain the tested, faithful row generators; this
-module and ``build_EM_neurons.py`` drive them and unify their output.
+The six ``builds/build_*.py`` generate the rows; this module and
+``build_EM_neurons.py`` drive them and unify their output.
 """
 
 import io

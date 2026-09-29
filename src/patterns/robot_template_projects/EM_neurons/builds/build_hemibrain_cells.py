@@ -1,10 +1,9 @@
 #!/usr/bin/env python3
 """Build the hemibrain provisional-cell-type ROBOT template (offline).
 
-Faithful port of hemibrain_new_types/update_new_types.ipynb. Reads the committed
-hemibrain evidence cache (hemibrain_roiinfo.tsv) instead of querying neuPrint
-live, plus the curated new_cell_types.tsv + ROI mapping, and filters out types
-already covered by FlyWire. No network/token.
+Reads the hemibrain evidence cache (data/hemibrain_roiinfo.tsv, written by
+fetch_hemibrain.py), plus the curated new_cell_types.tsv + ROI mapping, and
+filters out types already covered by FlyWire. No network/token.
 
 Usage:
     python3 build_hemibrain_cells.py [--out template.tsv]
@@ -101,17 +100,13 @@ def build_template():
     tidy_roi_mapping = tidy_roi_mapping[tidy_roi_mapping["ROI"].str.match("[A-Z]+$") == True]  # noqa: E712
     tidy_roi_mapping = tidy_roi_mapping.drop_duplicates().reset_index(drop=True)
 
-    # Connectivity from the committed cache (replaces the live neuPrint query).
+    # Connectivity from the evidence cache.
     #
-    # The notebook does ROIs.apply(pd.Series).stack(future_stack=True) then
-    # .apply(pd.Series).fillna(0), which materialises a ZERO for every
-    # (body, region) pair a body lacks. The subsequent groupby(type,ROI).min()
-    # is therefore 0 for any region not present in EVERY body of the type -->
-    # those are dropped. This is a class-level consistency filter that keeps only
-    # regions shared by all individuals of a type. Our cache stores only present
-    # (body, region) pairs, so we reconstruct the "present in all bodies"
-    # requirement here: a region survives only if the number of bodies carrying
-    # it equals the type's total body count.
+    # Class-level consistency filter: a region is kept for a type only if it is
+    # present in EVERY body of that type (the per-type minimum over bodies must
+    # be non-zero). The cache stores only present (body, region) pairs, so a
+    # region survives only if the number of bodies carrying it equals the
+    # type's total body count.
     cache = pd.read_csv(_cache("hemibrain_roiinfo.tsv"), sep="\t")
     nbodies = cache.groupby("type")["bodyId"].nunique()  # all bodies per type
     mapped = cache.assign(ROI=cache["roi"].map(raw_ROI_dict)).dropna(subset=["ROI"])

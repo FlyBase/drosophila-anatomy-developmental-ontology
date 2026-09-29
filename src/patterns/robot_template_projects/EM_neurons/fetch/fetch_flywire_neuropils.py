@@ -4,15 +4,8 @@
 Opt-in: needs the ``fafbseg`` package (``pip install fafbseg``) and network
 access to fetch neuropil meshes. This is the ONLY live call in the FlyWire
 generator; all its other inputs (the annotations TSV and the per-neuron synapse
-``.feather`` files) are already committed. Reproduces
-flywire_neurons/flywire_neurons.ipynb::
-
-    all_neuropils = flywire.get_neuropil_volumes(None)
-    neuropils = flywire.get_neuropil_volumes(all_neuropils)
-    neuropil_centers = np.vstack([n.center for n in neuropils])
-
-The build step rebuilds the KDTree of soma-to-neuropil distances from this cache
-instead of calling fafbseg.
+``.feather`` files) are local files. The build step builds the KDTree of
+soma-to-neuropil distances from this cache.
 
 Usage:
     python3 fetch_flywire_neuropils.py

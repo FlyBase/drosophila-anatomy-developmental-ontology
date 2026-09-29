@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build the EM-neuron registry (Phase 3, Stage A).
+"""Build the EM-neuron registry.
 
 The registry (``EM_neuron_registry.tsv``) is the single, committed list of every
 EM-minted FBbt neuron id — one row per id — and the ``move-to-edit`` removal
@@ -17,11 +17,15 @@ Each row records:
 * ``name_in_<dataset>`` — every dataset's 1:1 name for the id, inverted from the
   six ``../connectome-curation`` bridges exactly as ``EM_synonyms`` does
   (``specificity`` blank, single FBbt id). Recorded as the consolidated identity
-  record; **not** emitted into terms in Stage A (that is Stage B).
+  record only; they are **not** emitted into ``EM_neurons.owl``. The
+  dataset-tagged synonyms themselves are published in the separate
+  ``EM_synonyms.owl`` release asset, built from the same bridges.
 
 Usage:
     python3 build_registry.py [--out EM_neuron_registry.tsv]
-                              [--db .../fbbt-merged.db] [--from-tsvs DIR]
+                              [--db .../fbbt-merged.db]
+                              [--templates-dir DIR]  # native-template cache (default ../templates)
+                              [--from-tsvs DIR]
 """
 
 import argparse

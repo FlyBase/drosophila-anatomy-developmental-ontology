@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Generate the single consolidated EM-neuron ROBOT template (offline).
 
-Phase 3 (Stage A). Drives the six per-connectome row generators
+Drives the six per-connectome row generators
 (``builds/build_*.py``), re-expresses their output on the one
 ``EM_unified.UNIFIED_HEADER`` schema (RO CURIEs throughout, so ``robot
 template`` needs no ``--input``), filters to the FBbt ids listed in the
