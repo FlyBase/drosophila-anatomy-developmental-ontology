@@ -29,7 +29,7 @@ jobs:
       - name: Run ontology QC checks
         env:
           DEFAULT_BRANCH: master
-        # Run the same checks as the Travis pipeline (travis_checks target in fbbt.Makefile):
+        # QC checks (travis_checks target in fbbt.Makefile; the name dates from Travis, now a disabled standby CI):
         # reason_test, sparql_test, fbbt-simple.obo, obo_qc, chado_load_check, OWL2-DL profile validation
         run: cd src/ontology && make ROBOT_ENV='ROBOT_JAVA_ARGS=-Xmx6G' travis_checks IMP=false PAT=false MIR=false
 

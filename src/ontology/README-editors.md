@@ -68,7 +68,7 @@ There are multiple places that axioms can be edited:
 5. SSSOM mappings
 6. Extended logical axioms
 
-Changes should be made on a branch and merged via a Pull Request (PR) after travis checks have passed (see below). If your changes relate to an issue, link the PR to the issue using 'related to #' or 'fixes #' as appropriate in the PR description.
+Changes should be made on a branch and merged via a Pull Request (PR) after the CI checks have passed (see below). If your changes relate to an issue, link the PR to the issue using 'related to #' or 'fixes #' as appropriate in the PR description.
 
 
 ## Editors' File
@@ -188,16 +188,15 @@ To add a new import module:
 4. Add a class from the ontology you wish to import as above.
 
 
-## Travis Continuous Integration System
+## Continuous Integration (GitHub Actions)
 
-Travis checks must be run (and passed) on all PRs before merging.
+CI checks must be run (and passed) on all PRs before merging. They run on GitHub Actions ([qc.yml](../../.github/workflows/qc.yml)) for every PR to, and push to, `master`, and can also be started manually from the Actions tab.
 
-Check the build status here: [![Build Status](https://api.travis-ci.com/FlyBase/drosophila-anatomy-developmental-ontology.svg?branch=master&status=created)](https://app.travis-ci.com/github/FlyBase/drosophila-anatomy-developmental-ontology)
+Check the build status here: [![Build Status](https://github.com/FlyBase/drosophila-anatomy-developmental-ontology/actions/workflows/qc.yml/badge.svg?branch=master)](https://github.com/FlyBase/drosophila-anatomy-developmental-ontology/actions/workflows/qc.yml)
 
-The way QC now works for all four FB ontologies is this:
+The workflow runs the `travis_checks` goal in [fbbt.Makefile](fbbt.Makefile): reasoning, SPARQL QC, building `fbbt-simple.obo`, OBO QC, the Chado load check and OWL 2 DL profile validation. Some hard QC can be controlled through the file [qc-profile.txt](qc-profile.txt). To run the same checks locally, use `sh travis.sh`.
 
-  1. We run the whole (slightly modified) pipeline (encoded in [travis.sh](travis.sh))
-  2. In the end some hard QC is run. This QC can be controlled through the file [qc-profile.txt](qc-profile.txt).
+Travis CI is kept as a disabled standby (the goal name dates from when it was the main CI). See the header of [.travis.yml](../../.travis.yml) for how to reactivate it.
 
 # Releases
 
@@ -209,7 +208,7 @@ FlyBase ontologies are usually released over the course of a day or two, in the 
 
 This order is important because DPO imports FBdv and FBbt, and FBcv imports DPO.
 
-You should only attempt to make a release if the travis build is passing on the master branch.
+You should only attempt to make a release if the CI build is passing on the master branch.
 
 These instructions assume you have [docker](https://www.docker.com/get-docker) running. The script [run.sh](run.sh) wraps docker commands.
 
@@ -233,7 +232,7 @@ Everything should be done from this (`src/ontology`) folder.
 
 5. Commit and push the files and make a PR in the usual way.
 
-6. When travis checks have passed, merge the PR and IMMEDIATELY make a new release on GitHub (see below).
+6. When the CI checks have passed, merge the PR and IMMEDIATELY make a new release on GitHub (see below).
 
 ## Releasing on GitHub
 

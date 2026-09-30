@@ -14,7 +14,7 @@ We break the queries into 3 categories:
 ## Constraint Violation checks
 
 These are all named `*violation.sparql`. A subset of these are
-configured to be executed via travis. If these return any results,
+configured to be executed by the CI QC checks (GitHub Actions). If these return any results,
 then the build will fail.
 
 Consult the individual sparql files to see the intent of the check

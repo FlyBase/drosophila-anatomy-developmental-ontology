@@ -1,5 +1,13 @@
-## REMEMBER TO SET UP YOUR GITHUB REPO FOR TRAVIS
-## Go to: https://travis-ci.org/FlyBase for details
+## STANDBY CI: Travis is DISABLED for this repo. The active CI is GitHub Actions
+## (.github/workflows/qc.yml), which runs the same travis_checks goal.
+##
+## This config is kept so Travis can be switched back on if needed (e.g. if
+## GitHub Actions becomes unavailable). To reactivate:
+##   1. Go to https://app.travis-ci.com/github/FlyBase/drosophila-anatomy-developmental-ontology/settings
+##   2. Under General, turn on "Build pushed branches" and "Build pushed pull requests".
+##   3. Check the FlyBase Travis account's plan/credits: open-source builds on
+##      travis-ci.com use a credit allowance, so builds may not start without it.
+## Travis runs src/ontology/travis.sh, which adds -B (force-rebuild everything).
 sudo: required
 dist: focal
 
