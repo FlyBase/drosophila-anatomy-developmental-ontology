@@ -27,14 +27,31 @@ All paths are relative to the repository root unless otherwise noted.
 
 Each component OWL file is generated from TSV files in robot_template_projects. When removing a term from a source TSV, search ALL `.tsv` files in the relevant subdirectory for the FBbt ID, as some projects use multiple TSV files.
 
-| Component File | Source Directory | Primary TSV File(s) | ID Column |
+The EM connectome neuron terms are all in the single consolidated component
+`EM_neurons.owl`. There is one **registry** listing every EM neuron id —
+`EM_neurons/registry/EM_neuron_registry.tsv` (ID column `FBbt_id`) — and it is
+the single ID source: `build_EM_neurons.py` emits only ids present in the
+registry, so **deleting a term's registry row is what durably stops it being
+regenerated**. The per-connectome source TSVs are what
+`registry/build_registry.py` reads to (re)build the registry, so a term is also
+removed from its source TSV to keep the two in sync (otherwise a later registry
+rebuild would resurrect it).
+
+| Component File | Registry (primary removal target) | Per-connectome source dir + TSV(s) | ID Column |
 |---|---|---|---|
-| `flywire_neurons.owl` | `flywire_neurons/` | `FBbt_ID-cell_type.tsv` | `FBbt_id` |
-| `hemibrain_new_cells.owl` | `hemibrain_new_types/` | `new_cell_types.tsv` | `FBbt_id` |
-| `hemibrain_new_ALLNs.owl` | `hemibrain_new_types/` | `new_ALLNs.tsv` | `FBbt_id` |
-| `optic_lobe_neurons.owl` | `optic_lobe/` | `new_types.tsv` | `FBbt_id` |
-| `manc_new_cells.owl` | `manc_neurons/` | `new_cell_FBbt_ids.tsv` | `FBbt_id` |
-| `VNC_new_cells.owl` | `VNC_neurons/` | `VNCtable2.tsv`, `Feng.tsv` | `FBbt_ID` |
+| `EM_neurons.owl` | `EM_neurons/registry/EM_neuron_registry.tsv` | `EM_neurons/sources/flywire/` — `FBbt_ID-cell_type.tsv` | `FBbt_id` |
+| `EM_neurons.owl` | `EM_neurons/registry/EM_neuron_registry.tsv` | `EM_neurons/sources/hemibrain/` — `new_cell_types.tsv`, `new_ALLNs.tsv` | `FBbt_id` |
+| `EM_neurons.owl` | `EM_neurons/registry/EM_neuron_registry.tsv` | `EM_neurons/sources/optic_lobe/` — `new_types.tsv` | `FBbt_id` |
+| `EM_neurons.owl` | `EM_neurons/registry/EM_neuron_registry.tsv` | `EM_neurons/sources/manc/` — `new_cell_FBbt_ids.tsv` | `FBbt_id` |
+| `EM_neurons.owl` | `EM_neurons/registry/EM_neuron_registry.tsv` | `EM_neurons/sources/male_cns/` — `new_types.tsv` | `FBbt_id` |
+| `VNC_new_cells.owl` | (no registry — VNC is not EM-derived) | `VNC_neurons/` — `VNCtable2.tsv`, `Feng.tsv` | `FBbt_ID` |
+
+Note: `EM_neurons.owl` is regenerated (via `sh run.sh make refresh-EM-neurons`)
+from the registry + source TSVs, so removing a term from **both** the registry
+and its source TSV is what durably prevents regeneration; removing it from the
+component OWL keeps the current release consistent until the next regeneration.
+(To find which connectome a term came from, look it up by `FBbt_id` in the
+registry — its `defining_connectome` and `type_name` columns name the source.)
 
 ## Workflow
 
@@ -131,16 +148,25 @@ Verify removal:
 grep "FBbt_NNNNNNN" components/COMPONENT.owl
 ```
 
-### Step 6: Remove from source TSV file(s)
+### Step 6: Remove from the registry and source TSV file(s)
 
-1. Identify the source directory from the mapping table above.
-2. Search ALL TSV files in that directory for the FBbt ID (check both `:` and `_` formats):
+1. **Registry (durable control).** Remove the term's row from
+   `src/patterns/robot_template_projects/EM_neurons/registry/EM_neuron_registry.tsv`
+   (match the `FBbt_id` column). The generator only emits ids present here, so
+   this is what stops regeneration. The row's `defining_connectome`/`type_name`
+   columns also tell you which source dir to edit next.
+2. **Per-connectome source TSV** (keeps a later `build_registry.py` rebuild from
+   resurrecting the term). Search ALL TSV files in that connectome's
+   `EM_neurons/sources/<connectome>/` dir for the FBbt ID (check both `:` and
+   `_` formats):
    ```
-   grep -rl "FBbt:NNNNNNN\|FBbt_NNNNNNN" src/patterns/robot_template_projects/DIRECTORY/
+   grep -rl "FBbt:NNNNNNN\|FBbt_NNNNNNN" src/patterns/robot_template_projects/EM_neurons/sources/CONNECTOME/
    ```
-3. For each TSV file found, remove the entire row containing the FBbt ID using the Edit tool.
+   For each TSV file found, remove the entire row containing the FBbt ID using the Edit tool.
 
-**IMPORTANT:** Do NOT remove entries from `src/patterns/robot_template_projects/EM_synonyms/` mapping files. These are ID-based synonym mappings (linking external dataset names to FBbt IDs) that should persist regardless of where the term is defined. The EM synonyms are generated as a separate component and the mappings remain valid.
+(For `VNC_new_cells.owl` there is no registry — remove from its `VNC_neurons/` TSVs only.)
+
+**IMPORTANT:** Do NOT remove the term's `name_in_*` synonyms or its entries in the `../connectome-curation` mapping files (`datasets/<connectome>/resources/`). These are ID-based synonym mappings (linking external dataset names to FBbt IDs) that should persist regardless of where the term is defined. `EM_synonyms.owl` is generated from them as a separate release asset (by `src/patterns/robot_template_projects/EM_synonyms/EM_synonym_template.py`), so the term keeps its dataset synonyms after it moves to the editors' file.
 
 ### Step 7: Report
 
@@ -156,5 +182,5 @@ After processing all terms, provide a summary:
 - **ROBOT filter produces empty output:** Ensure you're using the full IRI format `http://purl.obolibrary.org/obo/FBbt_NNNNNNN` (underscores, not colons) with the `--term` flag.
 - **Missing relationships in OBO output:** Ensure `--signature true --trim false` flags are used with `robot filter`.
 - **Cannot find parent term name:** Some parent terms may only exist in component files. Search across all components: `grep -r "rdfs:label" components/*.owl | grep "FBbt_XXXXX"`.
-- **Large component files are slow:** The larger files (hemibrain_new_cells.owl at 22MB, flywire_neurons.owl at 19MB) may take a minute to process with ROBOT. This is normal.
+- **Large component files are slow:** `EM_neurons.owl` is large (~59MB) and may take a minute or two to process with ROBOT. This is normal.
 - **Term appears in multiple components:** A term should only be in one component file. If found in multiple, investigate before proceeding — this may indicate a problem.

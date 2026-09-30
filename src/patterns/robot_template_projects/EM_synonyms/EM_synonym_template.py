@@ -1,38 +1,37 @@
+import os
+import sys
 import pandas as pd
-import shutil
-import re
 
 """
-Use this to generate a template, then run:
+Generate the ROBOT template for EM_synonyms.owl (dataset-tagged name_in_* synonyms).
 
-robot template --input-iri http://purl.obolibrary.org/obo/fbbt.owl --template template.tsv \
-annotate --ontology-iri "http://purl.obolibrary.org/obo/fbbt/EM_synonyms.owl" \
---output ../../../../EM_synonyms.owl
+Run via `sh run.sh make refresh-EM-synonyms` from src/ontology, which runs this
+script and `robot template` to regenerate ../../../../EM_synonyms.owl.
 
-Uses mapping files from local folders (requires relevant mapping repos in same parent folder as fbbt repo)
+Usage: python3 EM_synonym_template.py [OUT_TSV]   (default: template.tsv)
+
+Reads mapping files from the connectome-curation repo (must be in the same parent
+folder as the fbbt repo), via EM_common.curation_path.
 """
-source_filepaths = {'OL':'../../../../../neuprint_optic_lobe_curation/OL_FBbt_mapping.tsv',
-                    'manc':'../../../../../manc_curation/resources/manc_cell_type_fbbt_mapping.tsv',
-                    'flywire':'../../../../../FlyWire_curation/src/resources/flywire_fbbt_mapping.tsv',
-                    'hemibrain':'../../../../../hemibrain_metadata/hemibrain_1-2_type_mapping.tsv',
-                    'mc':'../../../../../male-cns_curation/resources/all_male-cns_FBbt.tsv',
-                    'banc':'../../../../../banc-curation/src/resources/all_banc_FBbt.tsv'}
-local_filepaths = {s:f.split('/')[-1] for s,f in source_filepaths.items()}
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'EM_neurons', 'lib'))
+import EM_common as em  # noqa: E402
+
+# source -> (connectome-curation dataset folder, mapping file)
+source_files = {'OL': ('optic_lobe', 'OL_FBbt_mapping.tsv'),
+                'manc': ('manc', 'manc_cell_type_fbbt_mapping.tsv'),
+                'flywire': ('flywire', 'flywire_fbbt_mapping.tsv'),
+                'hemibrain': ('hemibrain', 'hemibrain_1-2_type_mapping.tsv'),
+                'mc': ('male_cns', 'all_male-cns_FBbt.tsv'),
+                'banc': ('banc', 'all_banc_FBbt.tsv')}
 
 synonym_types = ['name_in_neuprint_optic_lobe', 'name_in_manc', 'name_in_flywire_fafb', 'name_in_hemibrain', 'name_in_male-cns', 'name_in_banc']
-data_sources = source_filepaths.keys()
-
-update_files = True
-if update_files:
-    for s in data_sources:
-        f = source_filepaths[s]
-        shutil.copy2(f, f.split('/')[-1])
+data_sources = source_files.keys()
 
 
 class Mapping:
     def __init__(self, source):
         self.source = source
-        self.filename = local_filepaths[source]
+        self.filename = em.curation_path(*source_files[source])
         
         if self.source == 'OL':
             self.synonym_type = 'name_in_neuprint_optic_lobe'
@@ -109,4 +108,5 @@ all_synonyms['TYPE'] = 'owl:Class'
 all_synonyms['superproperty'] = ''
 
 template = pd.concat([header, synonym_type_rows, all_synonyms])
-template.to_csv('template.tsv', sep='\t', index=None)
+out = sys.argv[1] if len(sys.argv) > 1 else 'template.tsv'
+template.to_csv(out, sep='\t', index=None)
