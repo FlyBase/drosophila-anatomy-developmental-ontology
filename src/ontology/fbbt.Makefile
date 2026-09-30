@@ -264,6 +264,11 @@ $(COMPONENTSDIR)/image_annotation.owl: $(PATTERNDIR)/image_annotation_template.t
 # build_EM_neurons.py reads the cache and computes only what is missing, so
 # rebuilding the component after a registry edit is fast.
 #
+# The component is regenerated only by the phony refresh-EM-neurons goal, never
+# by a file rule: CI and other forced builds (make -B) run on a fresh checkout
+# with no template cache or gitignored FlyWire inputs, so they must fall through
+# to ODK's generic component rule, which leaves the committed file in place.
+#
 # Goals that read ../connectome-curation (refresh-EM-templates,
 # refresh-EM-registry, refresh-EM-synonyms) need that sibling repo mounted into
 # the ODK container; the curator's run.sh.conf sets this up (see the README).
@@ -281,12 +286,14 @@ EM_FETCH_PYLIB = $(TMPDIR)/EM-fetch-pylib
 check-connectome-curation:
 	@test -d $(CONNECTOME_CURATION)/datasets || { echo "connectome-curation not found at $(CONNECTOME_CURATION). Clone it next to this repo and mount it into the ODK container via ODK_BINDS in run.sh.conf (see $(EM_DIR)/README.md)."; exit 1; }
 
-$(COMPONENTSDIR)/EM_neurons.owl:
+# Regenerate components/EM_neurons.owl from the template cache + registry.
+.PHONY: refresh-EM-neurons
+refresh-EM-neurons: | $(COMPONENTSDIR)
 	python3 $(EM_DIR)/build_EM_neurons.py --out $(TMPDIR)/EM_neurons.tsv
 	$(ROBOT) template --template $(TMPDIR)/EM_neurons.tsv \
-		annotate --ontology-iri "$(URIBASE)/fbbt/components/EM_neurons.owl" --output $@
+		annotate --ontology-iri "$(URIBASE)/fbbt/components/EM_neurons.owl" \
+		--output $(COMPONENTSDIR)/EM_neurons.owl
 	rm -f $(TMPDIR)/EM_neurons.tsv
-.PRECIOUS: $(COMPONENTSDIR)/EM_neurons.owl
 
 # Recompute the per-connectome template cache under EM_neurons/templates/ (the
 # slow step). Run it when connectome data or build logic changes, then rebuild the

@@ -46,7 +46,7 @@ rebuild would resurrect it).
 | `EM_neurons.owl` | `EM_neurons/registry/EM_neuron_registry.tsv` | `EM_neurons/sources/male_cns/` — `new_types.tsv` | `FBbt_id` |
 | `VNC_new_cells.owl` | (no registry — VNC is not EM-derived) | `VNC_neurons/` — `VNCtable2.tsv`, `Feng.tsv` | `FBbt_ID` |
 
-Note: `EM_neurons.owl` is regenerated (via `sh run.sh make components/EM_neurons.owl`)
+Note: `EM_neurons.owl` is regenerated (via `sh run.sh make refresh-EM-neurons`)
 from the registry + source TSVs, so removing a term from **both** the registry
 and its source TSV is what durably prevents regeneration; removing it from the
 component OWL keeps the current release consistent until the next regeneration.

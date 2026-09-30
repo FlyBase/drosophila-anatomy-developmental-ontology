@@ -85,12 +85,11 @@ Goals that need `connectome-curation` stop with an error if it isn't mounted.
 | `refresh-EM-data` | Re-fetches the neuPrint evidence caches (hemibrain v1.2.1, male-CNS v1.0, optic lobe v1.1) into `data/` and updates `data/PROVENANCE.tsv`. Needs network and `NEUPRINT_TOKEN` exported in your shell. Installs `neuprint-python` into `tmp/EM-fetch-pylib` the first time. | New connectome data |
 | `refresh-EM-templates` | Recomputes the template cache (slow; see below). Needs `tmp/fbbt-merged.db` (run a normal build first if it is missing). | After new data or build-logic changes |
 | `refresh-EM-registry` | Rebuilds `registry/EM_neuron_registry.tsv` from the template cache, the `sources/` id-lists and the curation mappings. | After adding terms |
-| `components/EM_neurons.owl` | Builds the component from the cache + registry (fast). Use `make -B` to force a rebuild of the committed file. | After any of the above, or a registry edit |
+| `refresh-EM-neurons` | Regenerates `components/EM_neurons.owl` from the cache + registry (fast). | After any of the above, or a registry edit |
 | `refresh-EM-synonyms` | Regenerates the `EM_synonyms.owl` release asset (see below). | After curation-mapping changes |
 
 To **add** terms, add them to the relevant `sources/<connectome>/` id-list, then
-run `refresh-EM-templates`, `refresh-EM-registry` and
-`components/EM_neurons.owl`. To **remove** one (e.g. when moving it to
+run `refresh-EM-templates`, `refresh-EM-registry` and `refresh-EM-neurons`. To **remove** one (e.g. when moving it to
 `fbbt-edit.obo`), use `/move-to-edit`, which deletes its registry row, then
 rebuild the component.
 
@@ -101,6 +100,24 @@ neuropil-volume cache (`data/flywire_neuropil_volumes.tsv`) comes from
 installed in the ODK image on ARM machines, as one of its dependencies needs a
 Rust compiler. FAFB v783 is a fixed release, so the cache only needs fetching
 once; run the script outside the container with `pip install fafbseg`.
+
+### FlyWire source files (not reproducible yet)
+
+The FlyWire and hemibrain builds also read three gitignored files in
+`sources/flywire/` that no goal fetches, so a from-scratch rebuild currently
+needs a curator who already has them:
+
+- `Supplemental_file1_neuron_annotations.tsv`: from
+  [flyconnectome/flywire_annotations](https://github.com/flyconnectome/flywire_annotations/tree/main/supplemental_files).
+  The copy in use matches upstream commit
+  [`c294fba`](https://raw.githubusercontent.com/flyconnectome/flywire_annotations/c294fba426f5abe861289bdc1171188026646b04/supplemental_files/Supplemental_file1_neuron_annotations.tsv)
+  (2024-07-30). Upstream has changed a lot since, so updating to a newer
+  version would change the generated terms and needs checking first.
+- `per_neuron_neuropilv5_filtered_count_{pre,post}_783.feather`: per-neuron
+  synapse counts per neuropil. Not publicly available as files, but they could
+  in principle be regenerated from the public FAFB v783 Codex data at
+  `gs://flywire-data/codex/data/fafb/783`
+  ([console](https://console.cloud.google.com/storage/browser/flywire-data/codex/data/fafb/783)).
 
 ## Template cache
 
@@ -142,3 +159,7 @@ covers hand-curated `fbbt-edit.obo` terms, which is why it stays separate.
 
 - Reconcile connectome evidence across every connectome where a type appears
   (evidence merge).
+- Make `EM_neurons.owl` fully rebuildable from scratch: add a pinned fetch for
+  the FlyWire annotations file, and a way to regenerate the two `.feather`
+  synapse-count files from the public Codex data (see
+  "FlyWire source files" above).
