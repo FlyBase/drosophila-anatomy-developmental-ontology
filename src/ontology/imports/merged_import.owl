@@ -7,8 +7,8 @@ Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
 
 
 Ontology(<http://purl.obolibrary.org/obo/fbbt/imports/merged_import.owl>
-<http://purl.obolibrary.org/obo/fbbt/releases/2026-07-09/imports/merged_import.owl>
-Annotation(owl:versionInfo "2026-07-09")
+<http://purl.obolibrary.org/obo/fbbt/releases/2026-10-01/imports/merged_import.owl>
+Annotation(owl:versionInfo "2026-10-01")
 
 Declaration(Class(<http://purl.obolibrary.org/obo/BFO_0000001>))
 Declaration(Class(<http://purl.obolibrary.org/obo/BFO_0000002>))
@@ -852,6 +852,7 @@ Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0013008>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0013009>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0013010>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0015011>))
+Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0019009>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0020104>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/so#member_of>))
 Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/IAO_0000028>))
@@ -1565,6 +1566,7 @@ AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.ob
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#inSubset> <http://purl.obolibrary.org/obo/RO_0002180> <http://purl.obolibrary.org/obo/ro/subsets#ro-eco>)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/RO_0002180> "has component"@en)
 SubObjectPropertyOf(<http://purl.obolibrary.org/obo/RO_0002180> <http://purl.obolibrary.org/obo/BFO_0000051>)
+InverseObjectProperties(<http://purl.obolibrary.org/obo/RO_0002180> <http://purl.obolibrary.org/obo/RO_0019009>)
 
 # Object Property: <http://purl.obolibrary.org/obo/RO_0002202> (develops from)
 
@@ -2108,6 +2110,13 @@ SubObjectPropertyOf(<http://purl.obolibrary.org/obo/RO_0013010> <http://purl.obo
 AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "https://orcid.org/0000-0002-6601-2165") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/RO_0015011> "s3 has_cross_section s3 if and only if : there exists some 2d plane that intersects the bearer of s3, and the impression of s3 upon that plane has shape quality s2.")
 AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/RO_0015011> "Example: a spherical object has the quality of being spherical, and the spherical quality has_cross_section round.")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/RO_0015011> "has cross section")
+
+# Object Property: <http://purl.obolibrary.org/obo/RO_0019009> (component of)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/RO_0019009> "Inverse of 'has component'.")
+AnnotationAssertion(<http://purl.org/dc/terms/contributor> <http://purl.obolibrary.org/obo/RO_0019009> <https://orcid.org/0000-0002-8688-6599>)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/RO_0019009> "component of")
+SubObjectPropertyOf(<http://purl.obolibrary.org/obo/RO_0019009> <http://purl.obolibrary.org/obo/BFO_0000050>)
 
 # Object Property: <http://purl.obolibrary.org/obo/RO_0020104> (is neuron)
 
