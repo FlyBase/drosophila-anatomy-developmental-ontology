@@ -27,6 +27,7 @@ vars:
   ito_lee_synonym_type: thing
   hartenstein_synonym_type: thing
   H_position: thing
+  IL_position: thing
 
 list_vars:
   soma: anatomical_entity
@@ -37,6 +38,7 @@ data_list_vars:
 logical_axioms:
    - axiom_type: subClassOf
      text: "neuron"
+     vars: []
    - axiom_type: subClassOf
      text: "'develops_from' some %s"
      vars:
