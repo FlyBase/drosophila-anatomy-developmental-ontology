@@ -30901,6 +30901,7 @@ synonym: "T neuron T2" EXACT []
 is_a: FBbt:00003726 ! T neuron
 relationship: RO:0002100 FBbt:00051036 ! has soma location cell body rind of adult posterior lobula plate
 relationship: RO:0002131 FBbt:00003922 ! overlaps second optic chiasma
+relationship: RO:0002202 FBbt:00053664 ! develops from immature T2 neuron
 relationship: RO:0002215 GO:0014055 ! capable of acetylcholine secretion, neurotransmission
 relationship: RO:0002215 GO:0061534 ! capable of gamma-aminobutyric acid secretion, neurotransmission
 relationship: RO:0013002 FBbt:00003750 ! receives synaptic input in region medulla layer M1
@@ -30919,6 +30920,7 @@ synonym: "T neuron T2a" EXACT []
 is_a: FBbt:00003726 ! T neuron
 relationship: RO:0002100 FBbt:00051036 ! has soma location cell body rind of adult posterior lobula plate
 relationship: RO:0002131 FBbt:00003922 ! overlaps second optic chiasma
+relationship: RO:0002202 FBbt:00053665 ! develops from immature T2a neuron
 relationship: RO:0013002 FBbt:00003750 ! receives synaptic input in region medulla layer M1
 relationship: RO:0013002 FBbt:00003751 ! receives synaptic input in region medulla layer M2
 relationship: RO:0013002 FBbt:00003752 ! receives synaptic input in region medulla layer M3
@@ -30940,6 +30942,7 @@ is_a: FBbt:00003726 ! T neuron
 is_a: FBbt:00110137 ! optic lobe wide-field columnar neuron
 relationship: RO:0002100 FBbt:00051036 ! has soma location cell body rind of adult posterior lobula plate
 relationship: RO:0002131 FBbt:00003922 ! overlaps second optic chiasma
+relationship: RO:0002202 FBbt:00053666 ! develops from immature T3 neuron
 relationship: RO:0002215 GO:0061534 ! capable of gamma-aminobutyric acid secretion, neurotransmission
 relationship: RO:0002215 GO:0061535 ! capable of glutamate secretion, neurotransmission
 relationship: RO:0013002 FBbt:00003759 ! receives synaptic input in region medulla layer M9
@@ -128100,7 +128103,7 @@ property_value: http://purl.org/dc/terms/date "2025-07-14T16:39:57Z" xsd:dateTim
 [Term]
 id: FBbt:00053543
 name: immature proximal medullary amacrine neuron Pm3
-def: "Immature form of the proximal medullary amacrine neuron Pm2 (Erclik et al., 2017). It is a Notch OFF hemilineage secondary neuron, born from a medulla forming neuroblast during the Hth temporal window (Erclik et al., 2017)." [FlyBase:FBrf0234567]
+def: "Immature form of the proximal medullary amacrine neuron Pm3 (Erclik et al., 2017). It is a Notch OFF hemilineage secondary neuron, born from a medulla forming neuroblast during the Hth temporal window (Erclik et al., 2017)." [FlyBase:FBrf0234567]
 property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0002-1373-1705
 property_value: http://purl.org/dc/terms/date "2025-07-15T08:38:26Z" xsd:dateTime
 
@@ -128910,6 +128913,33 @@ intersection_of: FBbt:00047095 ! adult neuron
 intersection_of: RO:0002202 FBbt:00007275 ! develops from larval multidendritic class IV neuron
 property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0002-1373-1705
 property_value: http://purl.org/dc/terms/date "2026-09-30T15:24:48Z" xsd:dateTime
+
+[Term]
+id: FBbt:00053664
+name: immature T2 neuron
+def: "Immature secondary neuron that is a precursor to an adult T2 neuron (Kurmangaliyev et al., 2020)." [FlyBase:FBrf0247594]
+comment: A transcriptional cluster corresponding to this cell type was identified in single-cell RNA-seq data from 0-24h APF. Its identity was assigned because it shares most of its 24h APF cells with the T2 neuron cluster from a separate analysis of 24-96h APF data (Kurmangaliyev et al., 2020).
+synonym: "developing T2 neuron" EXACT []
+property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0002-1373-1705
+property_value: http://purl.org/dc/terms/date "2026-10-19T12:00:00Z" xsd:dateTime
+
+[Term]
+id: FBbt:00053665
+name: immature T2a neuron
+def: "Immature secondary neuron that is a precursor to an adult T2a neuron (Kurmangaliyev et al., 2020)." [FlyBase:FBrf0247594]
+comment: A transcriptional cluster corresponding to this cell type was identified in single-cell RNA-seq data from 0-24h APF. Its identity was assigned because it shares most of its 24h APF cells with the T2a neuron cluster from a separate analysis of 24-96h APF data (Kurmangaliyev et al., 2020). The identity of the T2a neuron cluster in the 24-96h APF analysis was inferred from its similarity to the T2 and T3 clusters, rather than by matching to an adult reference expression profile (Kurmangaliyev et al., 2020).
+synonym: "developing T2a neuron" EXACT []
+property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0002-1373-1705
+property_value: http://purl.org/dc/terms/date "2026-10-19T12:00:00Z" xsd:dateTime
+
+[Term]
+id: FBbt:00053666
+name: immature T3 neuron
+def: "Immature secondary neuron that is a precursor to an adult T3 neuron (Kurmangaliyev et al., 2020)." [FlyBase:FBrf0247594]
+comment: A transcriptional cluster corresponding to this cell type was identified in single-cell RNA-seq data from 0-24h APF. Its identity was assigned because it shares most of its 24h APF cells with the T3 neuron cluster from a separate analysis of 24-96h APF data (Kurmangaliyev et al., 2020).
+synonym: "developing T3 neuron" EXACT []
+property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0002-1373-1705
+property_value: http://purl.org/dc/terms/date "2026-10-19T12:00:00Z" xsd:dateTime
 
 [Term]
 id: FBbt:00057000
