@@ -31076,6 +31076,7 @@ subset: cur
 synonym: "Lawf" EXACT [FlyBrain_NDB:10094]
 synonym: "LaWF1" EXACT [FlyBase:FBrf0222324]
 is_a: FBbt:00059323 ! lamina wide-field neuron
+relationship: RO:0002202 FBbt:00053682 ! develops from immature lamina wide-field 1 neuron
 relationship: RO:0013002 FBbt:00003750 ! receives synaptic input in region medulla layer M1
 relationship: RO:0013002 FBbt:00003753 ! receives synaptic input in region medulla layer M4
 relationship: RO:0013003 FBbt:00003750 ! sends synaptic output to region medulla layer M1
@@ -31100,6 +31101,7 @@ def: "Adult centrifugal neuron with arborizations in the medulla layers M1, M5/M
 comment: Pre- versus postsynaptic innervation in the proximal medulla was inferred by scoring of terminal morphology from figures in Fischbach and Dittrich (1989) as assessed by FlyBrain Neuron DB. Connectivity in the medulla was extrapolated from serial EM of 7 columns from a single sample (Takemura et al., 2013).
 subset: cur
 is_a: FBbt:00003742 ! optic lobe centrifugal columnar neuron
+relationship: RO:0002202 FBbt:00053667 ! develops from immature centrifugal neuron C2
 relationship: RO:0002215 GO:0061534 ! capable of gamma-aminobutyric acid secretion, neurotransmission
 relationship: RO:0013002 FBbt:00003708 ! receives synaptic input in region lamina
 relationship: RO:0013002 FBbt:00003750 ! receives synaptic input in region medulla layer M1
@@ -31122,6 +31124,7 @@ comment: Pre-synaptic terminals were assessed by labelling with a UAS-Synaptotag
 subset: cur
 is_a: FBbt:00003742 ! optic lobe centrifugal columnar neuron
 is_a: FBbt:00110137 ! optic lobe wide-field columnar neuron
+relationship: RO:0002202 FBbt:00053668 ! develops from immature centrifugal neuron C3
 relationship: RO:0002215 GO:0061534 ! capable of gamma-aminobutyric acid secretion, neurotransmission
 relationship: RO:0013002 FBbt:00003708 ! receives synaptic input in region lamina
 relationship: RO:0013002 FBbt:00003750 ! receives synaptic input in region medulla layer M1
@@ -31914,6 +31917,7 @@ comment: Pre- versus postsynaptic innervation judged by scoring of terminal morp
 subset: cur
 is_a: FBbt:00003788 ! transmedullary neuron
 relationship: RO:0002100 FBbt:00100205 ! has soma location cell body rind of adult medulla
+relationship: RO:0002202 FBbt:00053684 ! develops from immature transmedullary neuron Tm5
 relationship: RO:0013002 FBbt:00003752 ! receives synaptic input in region medulla layer M3
 relationship: RO:0013002 FBbt:00003755 ! receives synaptic input in region medulla layer M6
 relationship: RO:0013003 FBbt:00040016 ! sends synaptic output to region lobula layer 5
@@ -33178,6 +33182,7 @@ synonym: "lobular columnar neuron Lcn4" EXACT []
 is_a: FBbt:00003870 ! lobula columnar neuron
 is_a: FBbt:00110137 ! optic lobe wide-field columnar neuron
 relationship: RO:0002100 FBbt:00100201 ! has soma location adult lateral brain cell body rind
+relationship: RO:0002202 FBbt:00053669 ! develops from immature lobula columnar neuron LC4
 relationship: RO:0002215 GO:0014055 ! capable of acetylcholine secretion, neurotransmission
 relationship: RO:0002215 GO:0061535 ! capable of glutamate secretion, neurotransmission
 relationship: RO:0013002 FBbt:00003854 ! receives synaptic input in region lobula layer 2
@@ -33212,6 +33217,7 @@ is_a: FBbt:00003870 ! lobula columnar neuron
 is_a: FBbt:00110137 ! optic lobe wide-field columnar neuron
 relationship: RO:0002100 FBbt:00100201 ! has soma location adult lateral brain cell body rind
 relationship: RO:0002101 FBbt:00100337 ! fasciculates with adult anterior optic tract
+relationship: RO:0002202 FBbt:00053670 ! develops from immature lobula columnar neuron LC6
 relationship: RO:0002215 GO:0014055 ! capable of acetylcholine secretion, neurotransmission
 relationship: RO:0013001 FBbt:00003856 ! has synaptic IO in region lobula layer 4
 relationship: RO:0013001 FBbt:00111744 ! has synaptic IO in region lobula layer 5B
@@ -128942,6 +128948,177 @@ property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0002
 property_value: http://purl.org/dc/terms/date "2026-10-19T12:00:00Z" xsd:dateTime
 
 [Term]
+id: FBbt:00053667
+name: immature centrifugal neuron C2
+def: "Immature secondary neuron that is a precursor to an adult centrifugal neuron C2 (Özel et al., 2021)." [FlyBase:FBrf0247762]
+comment: A transcriptional cluster corresponding to this cell type was identified in single-cell RNA-seq data from 15%, 30% and 40% of pupal development. Its identity was assigned by classifying cells from each pupal stage against annotated clusters from the next later stage, starting from adult clusters identified by comparison to bulk transcriptomes (Özel et al., 2021).
+synonym: "developing centrifugal neuron C2" EXACT []
+property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0002-1373-1705
+property_value: http://purl.org/dc/terms/date "2026-10-19T12:00:00Z" xsd:dateTime
+
+[Term]
+id: FBbt:00053668
+name: immature centrifugal neuron C3
+def: "Immature secondary neuron that is a precursor to an adult centrifugal neuron C3 (Özel et al., 2021)." [FlyBase:FBrf0247762]
+comment: A transcriptional cluster corresponding to this cell type was identified in single-cell RNA-seq data from 15%, 30% and 40% of pupal development. Its identity was assigned by classifying cells from each pupal stage against annotated clusters from the next later stage, starting from adult clusters identified by comparison to bulk transcriptomes (Özel et al., 2021).
+synonym: "developing centrifugal neuron C3" EXACT []
+property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0002-1373-1705
+property_value: http://purl.org/dc/terms/date "2026-10-19T12:00:00Z" xsd:dateTime
+
+[Term]
+id: FBbt:00053669
+name: immature lobula columnar neuron LC4
+def: "Immature secondary neuron that is a precursor to an adult lobula columnar neuron LC4 (Özel et al., 2021)." [FlyBase:FBrf0247762]
+comment: A transcriptional cluster corresponding to this cell type was identified in single-cell RNA-seq data from 15%, 30% and 40% of pupal development. Its identity was assigned by classifying cells from each pupal stage against annotated clusters from the next later stage, starting from adult clusters identified by comparison to bulk transcriptomes (Özel et al., 2021).
+synonym: "developing lobula columnar neuron LC4" EXACT []
+property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0002-1373-1705
+property_value: http://purl.org/dc/terms/date "2026-10-19T12:00:00Z" xsd:dateTime
+
+[Term]
+id: FBbt:00053670
+name: immature lobula columnar neuron LC6
+def: "Immature secondary neuron that is a precursor to an adult lobula columnar neuron LC6 (Özel et al., 2021)." [FlyBase:FBrf0247762]
+comment: A transcriptional cluster corresponding to this cell type was identified in single-cell RNA-seq data from 15%, 30% and 40% of pupal development. Its identity was assigned by classifying cells from each pupal stage against annotated clusters from the next later stage, starting from adult clusters identified by comparison to bulk transcriptomes (Özel et al., 2021).
+synonym: "developing lobula columnar neuron LC6" EXACT []
+property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0002-1373-1705
+property_value: http://purl.org/dc/terms/date "2026-10-19T12:00:00Z" xsd:dateTime
+
+[Term]
+id: FBbt:00053671
+name: immature lobula columnar neuron LC10a
+def: "Immature secondary neuron that is a precursor to an adult lobula columnar neuron LC10a (Özel et al., 2021)." [FlyBase:FBrf0247762]
+comment: A transcriptional cluster corresponding to this cell type was identified in single-cell RNA-seq data from 15%, 30% and 40% of pupal development. Its identity was assigned by classifying cells from each pupal stage against annotated clusters from the next later stage, starting from adult clusters identified by comparison to bulk transcriptomes (Özel et al., 2021).
+synonym: "developing lobula columnar neuron LC10a" EXACT []
+property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0002-1373-1705
+property_value: http://purl.org/dc/terms/date "2026-10-19T12:00:00Z" xsd:dateTime
+
+[Term]
+id: FBbt:00053672
+name: immature lobula columnar neuron LC10b
+def: "Immature secondary neuron that is a precursor to an adult lobula columnar neuron LC10b (Özel et al., 2021)." [FlyBase:FBrf0247762]
+comment: A transcriptional cluster corresponding to this cell type was identified in single-cell RNA-seq data from 15%, 30% and 40% of pupal development. Its identity was assigned by classifying cells from each pupal stage against annotated clusters from the next later stage, starting from adult clusters identified by comparison to bulk transcriptomes (Özel et al., 2021).
+synonym: "developing lobula columnar neuron LC10b" EXACT []
+property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0002-1373-1705
+property_value: http://purl.org/dc/terms/date "2026-10-19T12:00:00Z" xsd:dateTime
+
+[Term]
+id: FBbt:00053673
+name: immature lobula columnar neuron LC10c
+def: "Immature secondary neuron that is a precursor to an adult lobula columnar neuron LC10c (Özel et al., 2021)." [FlyBase:FBrf0247762]
+comment: A transcriptional cluster corresponding to this cell type was identified in single-cell RNA-seq data from 15%, 30% and 40% of pupal development. Its identity was assigned by classifying cells from each pupal stage against annotated clusters from the next later stage, starting from an adult cluster that was tentatively identified as LC10c because it correlated with the LC10b bulk transcriptome, but was distinct from the LC10b cluster, and no LC10c bulk transcriptome was available (Özel et al., 2021).
+synonym: "developing lobula columnar neuron LC10c" EXACT []
+property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0002-1373-1705
+property_value: http://purl.org/dc/terms/date "2026-10-19T12:00:00Z" xsd:dateTime
+
+[Term]
+id: FBbt:00053674
+name: immature lobula columnar neuron LC10d
+def: "Immature secondary neuron that is a precursor to an adult lobula columnar neuron LC10d (Özel et al., 2021)." [FlyBase:FBrf0247762]
+comment: A transcriptional cluster corresponding to this cell type was identified in single-cell RNA-seq data from 15%, 30% and 40% of pupal development. Its identity was assigned by classifying cells from each pupal stage against annotated clusters from the next later stage, starting from adult clusters identified by comparison to bulk transcriptomes (Özel et al., 2021).
+synonym: "developing lobula columnar neuron LC10d" EXACT []
+property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0002-1373-1705
+property_value: http://purl.org/dc/terms/date "2026-10-19T12:00:00Z" xsd:dateTime
+
+[Term]
+id: FBbt:00053675
+name: immature lobula columnar neuron LC12
+def: "Immature secondary neuron that is a precursor to an adult lobula columnar neuron LC12 (Özel et al., 2021)." [FlyBase:FBrf0247762]
+comment: A transcriptional cluster corresponding to this cell type was identified in single-cell RNA-seq data from 15%, 30% and 40% of pupal development. Its identity was assigned by classifying cells from each pupal stage against annotated clusters from the next later stage, starting from adult clusters identified by protein marker expression (Özel et al., 2021).
+synonym: "developing lobula columnar neuron LC12" EXACT []
+property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0002-1373-1705
+property_value: http://purl.org/dc/terms/date "2026-10-19T12:00:00Z" xsd:dateTime
+
+[Term]
+id: FBbt:00053676
+name: immature lobula columnar neuron LC16
+def: "Immature secondary neuron that is a precursor to an adult lobula columnar neuron LC16 (Özel et al., 2021)." [FlyBase:FBrf0247762]
+comment: A transcriptional cluster corresponding to this cell type was identified in single-cell RNA-seq data from 15%, 30% and 40% of pupal development. Its identity was assigned by classifying cells from each pupal stage against annotated clusters from the next later stage, starting from adult clusters identified by comparison to bulk transcriptomes (Özel et al., 2021).
+synonym: "developing lobula columnar neuron LC16" EXACT []
+property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0002-1373-1705
+property_value: http://purl.org/dc/terms/date "2026-10-19T12:00:00Z" xsd:dateTime
+
+[Term]
+id: FBbt:00053677
+name: immature lobula columnar neuron LC17
+def: "Immature secondary neuron that is a precursor to an adult lobula columnar neuron LC17 (Özel et al., 2021)." [FlyBase:FBrf0247762]
+comment: A transcriptional cluster corresponding to this cell type was identified in single-cell RNA-seq data from 15%, 30% and 40% of pupal development. Its identity was assigned by classifying cells from each pupal stage against annotated clusters from the next later stage, starting from adult clusters identified by protein marker expression (Özel et al., 2021).
+synonym: "developing lobula columnar neuron LC17" EXACT []
+property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0002-1373-1705
+property_value: http://purl.org/dc/terms/date "2026-10-19T12:00:00Z" xsd:dateTime
+
+[Term]
+id: FBbt:00053678
+name: immature lobula-lobula plate columnar neuron LLPC1
+def: "Immature secondary neuron that is a precursor to an adult lobula-lobula plate columnar neuron LLPC1 (Özel et al., 2021)." [FlyBase:FBrf0247762]
+comment: A transcriptional cluster corresponding to this cell type was identified in single-cell RNA-seq data from 15%, 30% and 40% of pupal development. Its identity was assigned by classifying cells from each pupal stage against annotated clusters from the next later stage, starting from adult clusters identified by comparison to bulk transcriptomes (Özel et al., 2021).
+synonym: "developing lobula-lobula plate columnar neuron LLPC1" EXACT []
+property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0002-1373-1705
+property_value: http://purl.org/dc/terms/date "2026-10-19T12:00:00Z" xsd:dateTime
+
+[Term]
+id: FBbt:00053679
+name: immature lobula plate columnar neuron LPC1
+def: "Immature secondary neuron that is a precursor to an adult lobula plate columnar neuron LPC1 (Özel et al., 2021)." [FlyBase:FBrf0247762]
+comment: A transcriptional cluster corresponding to this cell type was identified in single-cell RNA-seq data from 15%, 30% and 40% of pupal development. Its identity was assigned by classifying cells from each pupal stage against annotated clusters from the next later stage, starting from adult clusters identified by comparison to bulk transcriptomes (Özel et al., 2021).
+synonym: "developing lobula plate columnar neuron LPC1" EXACT []
+property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0002-1373-1705
+property_value: http://purl.org/dc/terms/date "2026-10-19T12:00:00Z" xsd:dateTime
+
+[Term]
+id: FBbt:00053680
+name: immature lobula plate-lobula columnar neuron LPLC1
+def: "Immature secondary neuron that is a precursor to an adult lobula plate-lobula columnar neuron LPLC1 (Özel et al., 2021)." [FlyBase:FBrf0247762]
+comment: A transcriptional cluster corresponding to this cell type was identified in single-cell RNA-seq data from 15%, 30% and 40% of pupal development. Its identity was assigned by classifying cells from each pupal stage against annotated clusters from the next later stage, starting from adult clusters identified by comparison to bulk transcriptomes (Özel et al., 2021).
+synonym: "developing lobula plate-lobula columnar neuron LPLC1" EXACT []
+property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0002-1373-1705
+property_value: http://purl.org/dc/terms/date "2026-10-19T12:00:00Z" xsd:dateTime
+
+[Term]
+id: FBbt:00053681
+name: immature lobula plate-lobula columnar neuron LPLC2
+def: "Immature secondary neuron that is a precursor to an adult lobula plate-lobula columnar neuron LPLC2 (Özel et al., 2021)." [FlyBase:FBrf0247762]
+comment: A transcriptional cluster corresponding to this cell type was identified in single-cell RNA-seq data from 15%, 30% and 40% of pupal development. Its identity was assigned by classifying cells from each pupal stage against annotated clusters from the next later stage, starting from adult clusters identified by comparison to bulk transcriptomes (Özel et al., 2021).
+synonym: "developing lobula plate-lobula columnar neuron LPLC2" EXACT []
+property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0002-1373-1705
+property_value: http://purl.org/dc/terms/date "2026-10-19T12:00:00Z" xsd:dateTime
+
+[Term]
+id: FBbt:00053682
+name: immature lamina wide-field 1 neuron
+def: "Immature secondary neuron that is a precursor to an adult lamina wide-field 1 neuron (Özel et al., 2021)." [FlyBase:FBrf0247762]
+comment: A transcriptional cluster corresponding to this cell type was identified in single-cell RNA-seq data from 15%, 30% and 40% of pupal development. Its identity was assigned by classifying cells from each pupal stage against annotated clusters from the next later stage, starting from adult clusters identified by comparison to bulk transcriptomes (Özel et al., 2021).
+synonym: "developing lamina wide-field 1 neuron" EXACT []
+property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0002-1373-1705
+property_value: http://purl.org/dc/terms/date "2026-10-19T12:00:00Z" xsd:dateTime
+
+[Term]
+id: FBbt:00053683
+name: immature lamina wide-field 2 neuron
+def: "Immature secondary neuron that is a precursor to an adult lamina wide-field 2 neuron (Özel et al., 2021)." [FlyBase:FBrf0247762]
+comment: A transcriptional cluster corresponding to this cell type was identified in single-cell RNA-seq data from 15%, 30% and 40% of pupal development. Its identity was assigned by classifying cells from each pupal stage against annotated clusters from the next later stage, starting from adult clusters identified by comparison to bulk transcriptomes (Özel et al., 2021).
+synonym: "developing lamina wide-field 2 neuron" EXACT []
+property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0002-1373-1705
+property_value: http://purl.org/dc/terms/date "2026-10-19T12:00:00Z" xsd:dateTime
+
+[Term]
+id: FBbt:00053684
+name: immature transmedullary neuron Tm5
+def: "Immature secondary neuron that is a precursor to an adult transmedullary neuron Tm5 (Özel et al., 2021)." [FlyBase:FBrf0247762]
+comment: A transcriptional cluster corresponding to this cell type was identified in single-cell RNA-seq data from 15%, 30% and 40% of pupal development. Its identity was assigned by classifying cells from each pupal stage against annotated clusters from the next later stage, starting from adult clusters identified by comparison to bulk transcriptomes (Özel et al., 2021).
+synonym: "developing transmedullary neuron Tm5" EXACT []
+property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0002-1373-1705
+property_value: http://purl.org/dc/terms/date "2026-10-19T12:00:00Z" xsd:dateTime
+
+[Term]
+id: FBbt:00053685
+name: immature transmedullary neuron Tm5a
+def: "Immature secondary neuron that is a precursor to an adult transmedullary neuron Tm5a (Özel et al., 2021)." [FlyBase:FBrf0247762]
+comment: A transcriptional cluster corresponding to this cell type was identified in single-cell RNA-seq data from 15%, 30% and 40% of pupal development. Its identity was assigned by classifying cells from each pupal stage against annotated clusters from the next later stage, starting from adult clusters identified by comparison to bulk transcriptomes (Özel et al., 2021).
+synonym: "developing transmedullary neuron Tm5a" EXACT []
+property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0002-1373-1705
+property_value: http://purl.org/dc/terms/date "2026-10-19T12:00:00Z" xsd:dateTime
+
+[Term]
 id: FBbt:00057000
 name: early-mid elongation-stage spermatid
 def: "An elongating spermatid, 200-500 micrometers in length and in which nuclear shaping has begun. The two parts of the mitochondrial derivative become unequal in size." [FlyBase:FBrf0064778]
@@ -131546,6 +131723,7 @@ def: "Lobula-lobula plate columnar neuron that receives input from around 5-10 c
 subset: cur
 is_a: FBbt:00003881 ! lobula-lobula plate columnar neuron LLPC
 relationship: RO:0000053 PATO:0000634 ! has characteristic unilateral
+relationship: RO:0002202 FBbt:00053678 ! develops from immature lobula-lobula plate columnar neuron LLPC1
 relationship: RO:0002215 GO:0014055 ! capable of acetylcholine secretion, neurotransmission
 relationship: RO:0013002 FBbt:00003856 ! receives synaptic input in region lobula layer 4
 relationship: RO:0013002 FBbt:00003886 ! receives synaptic input in region lobula plate layer 1
@@ -149896,6 +150074,7 @@ synonym: "Lcn12" EXACT []
 is_a: FBbt:00003870 ! lobula columnar neuron
 is_a: FBbt:00110137 ! optic lobe wide-field columnar neuron
 relationship: RO:0002100 FBbt:00100201 ! has soma location adult lateral brain cell body rind
+relationship: RO:0002202 FBbt:00053675 ! develops from immature lobula columnar neuron LC12
 relationship: RO:0013002 FBbt:00003854 ! receives synaptic input in region lobula layer 2
 relationship: RO:0013002 FBbt:00003855 ! receives synaptic input in region lobula layer 3
 relationship: RO:0013002 FBbt:00003856 ! receives synaptic input in region lobula layer 4
@@ -153529,6 +153708,7 @@ def: "A lamina wide-field neuron that has a main projection into the lamina maki
 subset: cur
 synonym: "Lawfl2" EXACT [FlyBase:FBrf0213020]
 is_a: FBbt:00059323 ! lamina wide-field neuron
+relationship: RO:0002202 FBbt:00053683 ! develops from immature lamina wide-field 2 neuron
 relationship: RO:0013002 FBbt:00003750 ! receives synaptic input in region medulla layer M1
 relationship: RO:0013002 FBbt:00003758 ! receives synaptic input in region medulla layer M8
 relationship: RO:0013002 FBbt:00003759 ! receives synaptic input in region medulla layer M9
@@ -153641,6 +153821,7 @@ comment: Connectivity in the medulla inferred from EM reconstructions (Gao et al
 subset: cur
 is_a: FBbt:00003793 ! transmedullary neuron Tm5
 is_a: FBbt:00013789 ! narrow field transmedullary neuron
+relationship: RO:0002202 FBbt:00053685 ! develops from immature transmedullary neuron Tm5a
 relationship: RO:0002215 GO:0014055 ! capable of acetylcholine secretion, neurotransmission
 relationship: RO:0013002 FBbt:00003752 ! receives synaptic input in region medulla layer M3
 relationship: RO:0013002 FBbt:00003755 ! receives synaptic input in region medulla layer M6
@@ -174565,6 +174746,7 @@ name: lobula columnar neuron LC10b
 def: "Subtype of lobula columnar neuron LC10A. It has its main arbors in lobula layers 4 to 6, with arbors denser in the latter, and many parallel processes exist between the two layers. Presynaptic sites are mainly observed in layer 6, with some in layers 4 and 5A. It is a cholinergic neuron (Davis et al., 2020)." [FlyBase:FBrf0234700, FlyBase:FBrf0244935]
 comment: Pre- versus postsynaptic innervation assessed with a presynaptic marker (synaptotagmin-HA driver) (Wu et al., 2016).
 is_a: FBbt:00110933 ! lobula columnar neuron LC10A
+relationship: RO:0002202 FBbt:00053672 ! develops from immature lobula columnar neuron LC10b
 relationship: RO:0002215 GO:0014055 ! capable of acetylcholine secretion, neurotransmission
 relationship: RO:0013001 FBbt:00003856 ! has synaptic IO in region lobula layer 4
 relationship: RO:0013001 FBbt:00040017 ! has synaptic IO in region lobula layer 6
@@ -174579,6 +174761,7 @@ name: lobula columnar neuron LC10c
 def: "Subtype of lobula columnar neuron LC10A. It has its main arbors in lobula layer 5B, some branches in 6 and some processes reaching into 5A. It projects to the most lateral of the dorsal optic glomeruli of the PVLP, ventral to LC16. There are around 70 cells of this type." [FlyBase:FBrf0234700]
 comment: Pre- versus postsynaptic innervation assessed with a presynaptic marker (synaptotagmin-HA driver) (Wu et al., 2016).
 is_a: FBbt:00110933 ! lobula columnar neuron LC10A
+relationship: RO:0002202 FBbt:00053673 ! develops from immature lobula columnar neuron LC10c
 relationship: RO:0013002 FBbt:00040016 ! receives synaptic input in region lobula layer 5
 relationship: RO:0013002 FBbt:00040017 ! receives synaptic input in region lobula layer 6
 property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0001-5948-3092
@@ -174590,6 +174773,7 @@ name: lobula columnar neuron LC10a
 def: "Subtype of lobula columnar neuron LC10B. It has its main arbors in lobula layers 3, 4 and 5B, with some processes extending into layer 2 and some branches in layers 5 and 6. Presynaptic sites are observed in layer 3. It is a cholinergic neuron (Davis et al., 2020). It is involved in the detection of fly-sized objects and its sensitivity increases during male courtship or female aggression (Schretter et al., 2025)." [FlyBase:FBrf0234700, FlyBase:FBrf0244935, FlyBase:FBrf0261440]
 comment: Pre- versus postsynaptic innervation assessed with a presynaptic marker (synaptotagmin-HA driver) (Wu et al., 2016).
 is_a: FBbt:00110934 ! lobula columnar neuron LC10B
+relationship: RO:0002202 FBbt:00053671 ! develops from immature lobula columnar neuron LC10a
 relationship: RO:0002215 GO:0014055 ! capable of acetylcholine secretion, neurotransmission
 relationship: RO:0013001 FBbt:00003855 ! has synaptic IO in region lobula layer 3
 relationship: RO:0013002 FBbt:00003854 ! receives synaptic input in region lobula layer 2
@@ -174605,6 +174789,7 @@ name: lobula columnar neuron LC10d
 def: "Subtype of lobula columnar neuron LC10B. It has its main arbors in lobula layers 4 to 6, with less dense arbors in 5B than in layers 4, 6 or 5A (in contrast to LC10a). Presynaptic sites are observed in layers 4 and 6 (less numerous than LC10a in layer 3 and LC10b in layer 6). Its arbor is much smaller than LC10b. There are around 84 cells of this type." [FlyBase:FBrf0234700]
 comment: Pre- versus postsynaptic innervation assessed with a presynaptic marker (synaptotagmin-HA driver) (Wu et al., 2016).
 is_a: FBbt:00110934 ! lobula columnar neuron LC10B
+relationship: RO:0002202 FBbt:00053674 ! develops from immature lobula columnar neuron LC10d
 relationship: RO:0013001 FBbt:00003856 ! has synaptic IO in region lobula layer 4
 relationship: RO:0013001 FBbt:00040017 ! has synaptic IO in region lobula layer 6
 relationship: RO:0013002 FBbt:00040016 ! receives synaptic input in region lobula layer 5
@@ -174650,6 +174835,7 @@ comment: Pre- versus postsynaptic innervation assessed with a presynaptic marker
 is_a: FBbt:00003870 ! lobula columnar neuron
 is_a: FBbt:00110137 ! optic lobe wide-field columnar neuron
 relationship: RO:0002100 FBbt:00100201 ! has soma location adult lateral brain cell body rind
+relationship: RO:0002202 FBbt:00053676 ! develops from immature lobula columnar neuron LC16
 relationship: RO:0002215 GO:0014055 ! capable of acetylcholine secretion, neurotransmission
 relationship: RO:0013001 FBbt:00003856 ! has synaptic IO in region lobula layer 4
 relationship: RO:0013002 FBbt:00040016 ! receives synaptic input in region lobula layer 5
@@ -174666,6 +174852,7 @@ comment: Pre- versus postsynaptic innervation assessed with a presynaptic marker
 is_a: FBbt:00003870 ! lobula columnar neuron
 is_a: FBbt:00110137 ! optic lobe wide-field columnar neuron
 relationship: RO:0002100 FBbt:00100201 ! has soma location adult lateral brain cell body rind
+relationship: RO:0002202 FBbt:00053677 ! develops from immature lobula columnar neuron LC17
 relationship: RO:0013002 FBbt:00003854 ! receives synaptic input in region lobula layer 2
 relationship: RO:0013002 FBbt:00003855 ! receives synaptic input in region lobula layer 3
 relationship: RO:0013002 FBbt:00003856 ! receives synaptic input in region lobula layer 4
@@ -174819,6 +175006,7 @@ synonym: "lobula plate and lobula columnar neuron 1" EXACT []
 is_a: FBbt:00003880 ! lobula plate-lobula columnar neuron LPLC
 is_a: FBbt:00110137 ! optic lobe wide-field columnar neuron
 relationship: RO:0002100 FBbt:00100201 ! has soma location adult lateral brain cell body rind
+relationship: RO:0002202 FBbt:00053680 ! develops from immature lobula plate-lobula columnar neuron LPLC1
 relationship: RO:0002215 GO:0014055 ! capable of acetylcholine secretion, neurotransmission
 relationship: RO:0013001 FBbt:00003855 ! has synaptic IO in region lobula layer 3
 relationship: RO:0013001 FBbt:00003856 ! has synaptic IO in region lobula layer 4
@@ -174841,6 +175029,7 @@ synonym: "LPL2CN" EXACT [FlyBase:FBrf0218239]
 is_a: FBbt:00003880 ! lobula plate-lobula columnar neuron LPLC
 is_a: FBbt:00110137 ! optic lobe wide-field columnar neuron
 relationship: RO:0002100 FBbt:00100201 ! has soma location adult lateral brain cell body rind
+relationship: RO:0002202 FBbt:00053681 ! develops from immature lobula plate-lobula columnar neuron LPLC2
 relationship: RO:0002215 GO:0014055 ! capable of acetylcholine secretion, neurotransmission
 relationship: RO:0002216 GO:0007630 ! capable of part of jump response
 relationship: RO:0013001 FBbt:00003856 ! has synaptic IO in region lobula layer 4
@@ -174896,6 +175085,7 @@ id: FBbt:00111767
 name: lobula plate columnar neuron LPC1
 def: "Lobula plate columnar neuron that has its main dendritic arborization in lobula plate layer 2 and receives input from T4b and T5b neurons (Shinomiya et al., 2022). It projects to a small glomerulus in the posterior region of the optic glomeruli of the PVLP, posterior to LC4 and ventral to LPLC3. It is cholinergic (Davis et al., 2020)." [FlyBase:FBrf0233032, FlyBase:FBrf0234700, FlyBase:FBrf0244935, FlyBase:FBrf0254308]
 is_a: FBbt:00111766 ! lobula plate columnar neuron
+relationship: RO:0002202 FBbt:00053679 ! develops from immature lobula plate columnar neuron LPC1
 relationship: RO:0002215 GO:0014055 ! capable of acetylcholine secretion, neurotransmission
 relationship: RO:0013002 FBbt:00003887 ! receives synaptic input in region lobula plate layer 2
 relationship: RO:0013003 FBbt:00007582 ! sends synaptic output to region optic glomerulus of the PVLP
