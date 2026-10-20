@@ -26599,16 +26599,25 @@ subset: cur
 [Term]
 id: FBbt:00003209
 name: adult fat body
-def: "Fat body of the adult. It is composed of diploid cells derived from cell clusters in the larval body wall and from adepithelial cells of the imaginal discs (Hoshizaki et al., 1995; Musselman and Kuhnlein, 2018). It is composed of various unconnected adipose tissue depots throughout the body (Musselman and Kuhnlein, 2018)." [FlyBase:FBrf0064793, FlyBase:FBrf0083200, FlyBase:FBrf0238315]
+def: "Fat body of the adult. It is composed of diploid cells derived from cell clusters in the larval body wall and from adepithelial cells of the imaginal discs (Hoshizaki et al., 1995; Musselman and Kuhnlein, 2018). It is composed of various unconnected adipose tissue depots throughout the body (Musselman and Kuhnlein, 2018). Most of the adult fat body is found in the abdomen, where it forms segmental plates lining the body wall, with smaller amounts in the head, thorax and associated with the female reproductive system (Lei et al., 2023; Ott et al., 2024)." [FlyBase:FBrf0064793, FlyBase:FBrf0083200, FlyBase:FBrf0238315, FlyBase:FBrf0256185, FlyBase:FBrf0260129]
 subset: cur
+property_value: IAO:0000233 "https://github.com/FlyBase/drosophila-anatomy-developmental-ontology/issues/2218" xsd:anyURI
 
 [Term]
 id: FBbt:00003210
-name: adult peripheral fat mass
-def: "Component part of the adult fat body that is found in sheets beneath the body wall (Bate, 1993)." [FlyBase:FBrf0064793]
+name: adult subcuticular fat mass
+def: "Part of the adult fat body that is found in sheets immediately beneath the body wall (Bate, 1993; Klepsatel et al., 2016). Most of this tissue lines the abdomen as segmental plates (Lei et al., 2023), but it is also found attached to the dorsal epidermis of the thorax (Pokrzywa et al., 2010)." [FlyBase:FBrf0064793, FlyBase:FBrf0212549, FlyBase:FBrf0233535, FlyBase:FBrf0256185]
+comment: In general insect anatomy, the fat body layer beneath the body wall is also called the peripheral fat body (Haunerland and Shirk, 1995). However, in the Drosophila literature, 'peripheral fat body' has also been used to refer to all fat body outside of the head (see 'adult postcephalic fat mass').
 subset: cur
+synonym: "adult peripheral fat mass" RELATED [doi:10.1146/annurev.en.40.010195.001005]
+synonym: "adult subcutaneous fat mass" EXACT []
+synonym: "parietal fat body" EXACT [doi:10.1017/CBO9781139035460.009]
+synonym: "subcuticular fat body" EXACT [FlyBase:FBrf0233535]
+synonym: "subepidermal fat body" EXACT [doi:10.1146/annurev.en.40.010195.001005]
 is_a: FBbt:00007003 ! portion of tissue
-relationship: BFO:0000050 FBbt:00003209 ! part of adult fat body
+relationship: BFO:0000050 FBbt:00053709 ! part of adult postcephalic fat mass
+relationship: RO:0002220 FBbt:00005401 ! adjacent to adult epidermis
+property_value: IAO:0000233 "https://github.com/FlyBase/drosophila-anatomy-developmental-ontology/issues/2218" xsd:anyURI
 
 [Term]
 id: FBbt:00003211
@@ -26623,19 +26632,23 @@ relationship: RO:0002202 FBbt:00001704 ! develops from embryonic/larval fat body
 [Term]
 id: FBbt:00003212
 name: adult pericardial fat mass
-def: "Dense layer of adult fat body that surrounds the pericardial septum, which covers the heart chamber in the first abdominal segment." [FlyBase:FBrf0202990]
+def: "Dense layer of adult fat body that lines the pericardial diaphragm and, together with it, surrounds the first chamber of the adult heart, in the anterior abdomen (Wasserthal, 2007)." [FlyBase:FBrf0202990]
 subset: cur
-is_a: FBbt:00003213 ! adult abdominal fat mass
-relationship: BFO:0000050 FBbt:00003157 ! part of adult heart chamber 1
+is_a: FBbt:00053711 ! adult visceral fat mass
+relationship: BFO:0000050 FBbt:00003213 ! part of adult abdominal fat mass
+relationship: RO:0002220 FBbt:00003157 ! adjacent to adult heart chamber 1
+property_value: IAO:0000233 "https://github.com/FlyBase/drosophila-anatomy-developmental-ontology/issues/2218" xsd:anyURI
 
 [Term]
 id: FBbt:00003213
 name: adult abdominal fat mass
-def: "Fat body of the adult abdomen." [https://orcid.org/0000-0001-5948-3092]
+def: "Part of the adult fat body that is found in the abdomen. It contains the majority of the adult fat body tissue, much of which forms segmental plates lining the abdominal body wall (Lei et al., 2023; Ott et al., 2024). Adipocytes and oenocytes make up the abdominal fat body (Ott et al., 2024)." [FlyBase:FBrf0256185, FlyBase:FBrf0260129]
 subset: cur
+synonym: "abdominal fat body" EXACT [FlyBase:FBrf0260129]
 is_a: FBbt:00007003 ! portion of tissue
 relationship: BFO:0000050 FBbt:00003023 ! part of adult abdomen
-relationship: BFO:0000050 FBbt:00003209 ! part of adult fat body
+relationship: BFO:0000050 FBbt:00053709 ! part of adult postcephalic fat mass
+property_value: IAO:0000233 "https://github.com/FlyBase/drosophila-anatomy-developmental-ontology/issues/2218" xsd:anyURI
 
 [Term]
 id: FBbt:00003214
@@ -80387,15 +80400,18 @@ property_value: IAO:0000233 "https://github.com/FlyBase/drosophila-anatomy-devel
 [Term]
 id: FBbt:00048409
 name: adult pericerebral fat mass
-def: "Part of the adult fat body that is found in the head, surrounding the brain." [FlyBase:FBrf0219887]
+def: "Part of the adult fat body that is found in the head, surrounding the brain (Pokrzywa et al., 2010; Vodala et al., 2012)." [FlyBase:FBrf0212549, FlyBase:FBrf0219887]
+synonym: "head fat body" EXACT [FlyBase:FBrf0212549]
 synonym: "peri-cerebral adult fat mass" EXACT []
 synonym: "peri-cerebral fat body" EXACT [FlyBase:FBrf0220268]
 synonym: "pericerebral fat body" EXACT [FlyBase:FBrf0219887]
 is_a: FBbt:00007003 ! portion of tissue
 relationship: BFO:0000050 FBbt:00003007 ! part of adult head
 relationship: BFO:0000050 FBbt:00003209 ! part of adult fat body
+relationship: RO:0002220 FBbt:00003624 ! adjacent to adult brain
 property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0002-1373-1705
 property_value: http://purl.org/dc/terms/date "2019-08-29T11:16:42Z" xsd:dateTime
+property_value: IAO:0000233 "https://github.com/FlyBase/drosophila-anatomy-developmental-ontology/issues/2218" xsd:anyURI
 
 [Term]
 id: FBbt:00048410
@@ -114063,11 +114079,14 @@ id: FBbt:00052059
 name: female accessory gland fat mass
 def: "Adipose tissue surrounding the female accessory gland (McQueen et al., 2022). This tissue may be attached to the fat body surrounding the spermatheca (McQueen et al., 2022). It is in close contact with the rectum (Bodenstein, 1950; McQueen et al., 2022)." [FlyBase:FBrf0007733, FlyBase:FBrf0253444]
 synonym: "female accessory gland fat body" EXACT [FlyBase:FBrf0253444]
-is_a: FBbt:00003213 ! adult abdominal fat mass
+is_a: FBbt:00053711 ! adult visceral fat mass
+relationship: BFO:0000050 FBbt:00003213 ! part of adult abdominal fat mass
 relationship: RO:0000053 PATO:0060003 ! has characteristic female-specific
 relationship: RO:0002170 FBbt:00005756 ! connected to rectum
+relationship: RO:0002220 FBbt:00004914 ! adjacent to female accessory gland
 property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0002-1373-1705
 property_value: http://purl.org/dc/terms/date "2022-01-18T13:32:34Z" xsd:dateTime
+property_value: IAO:0000233 "https://github.com/FlyBase/drosophila-anatomy-developmental-ontology/issues/2218" xsd:anyURI
 
 [Term]
 id: FBbt:00052060
@@ -114230,10 +114249,13 @@ id: FBbt:00052073
 name: spermathecal fat mass
 def: "A small and delicate mass of fat body that surrounds each of the spermatheca and is in close contact with the rectum (Bodenstein, 1950; McQueen et al., 2022)." [FlyBase:FBrf0007733, FlyBase:FBrf0253444]
 synonym: "spermathecal fat body" EXACT [FlyBase:FBrf0253444]
-is_a: FBbt:00003213 ! adult abdominal fat mass
+is_a: FBbt:00053711 ! adult visceral fat mass
+relationship: BFO:0000050 FBbt:00003213 ! part of adult abdominal fat mass
 relationship: RO:0000053 PATO:0060003 ! has characteristic female-specific
+relationship: RO:0002220 FBbt:00004921 ! adjacent to spermatheca
 property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0002-1373-1705
 property_value: http://purl.org/dc/terms/date "2022-01-20T11:17:53Z" xsd:dateTime
+property_value: IAO:0000233 "https://github.com/FlyBase/drosophila-anatomy-developmental-ontology/issues/2218" xsd:anyURI
 
 [Term]
 id: FBbt:00052074
@@ -129403,11 +129425,11 @@ id: FBbt:00053708
 name: pupal mushroom body anterior paired lateral cell
 def: "Mushroom body anterior paired lateral (APL) cell of the pupa, which develops from the larval APL cell and develops into the adult APL cell. There is one of these cells per hemisphere (Xie et al., 2021)." [FlyBase:FBrf0247975]
 comment: APL neurons are labelled by GH146-GAL4 and were identified as transcriptional clusters at 24h APF by the expression of markers not expressed by projection neurons (Li et al., 2017; Xie et al., 2021).
-synonym: "pupal APL neuron" EXACT []
 synonym: "pupal APL" EXACT []
+synonym: "pupal APL neuron" EXACT []
 synonym: "remodelling mushroom body anterior paired lateral cell" EXACT []
-is_a: FBbt:00052517 ! primary interneuron
 is_a: FBbt:00052302 ! remodelling neuron
+is_a: FBbt:00052517 ! primary interneuron
 relationship: BFO:0000050 FBbt:00110194 ! part of pupal brain
 relationship: RO:0002202 FBbt:00100750 ! develops from neuroblast BLV
 relationship: RO:0002203 FBbt:00100222 ! develops into adult mushroom body anterior paired lateral cell
@@ -129415,6 +129437,107 @@ relationship: RO:0002207 FBbt:00110979 ! directly develops from larval mushroom 
 property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0002-1373-1705
 property_value: http://purl.org/dc/terms/date "2026-10-19T12:00:00Z" xsd:dateTime
 property_value: IAO:0000233 "https://github.com/FlyBase/drosophila-anatomy-developmental-ontology/issues/2220" xsd:anyURI
+
+[Term]
+id: FBbt:00053709
+name: adult postcephalic fat mass
+def: "Part of the adult fat body that is found outside of the head, in the thorax and abdomen (Min et al., 2008; Lu et al., 2023). It contains the majority of the adult fat body tissue (Ott et al., 2024)." [FlyBase:FBrf0205500, FlyBase:FBrf0256843, FlyBase:FBrf0260129]
+comment: This tissue has also been referred to as the 'peripheral fat body' (Hwangbo et al., 2004) and the 'visceral fat body' (Min et al., 2008), in contrast to the pericerebral fat body of the head. These names are used differently in general insect anatomy (see 'adult subcuticular fat mass' and 'adult visceral fat mass').
+synonym: "adult body fat body" EXACT [FlyBase:FBrf0256843]
+synonym: "peripheral fat body" RELATED [FlyBase:FBrf0179031]
+synonym: "visceral fat body" RELATED [FlyBase:FBrf0205500]
+is_a: FBbt:00007003 ! portion of tissue
+relationship: BFO:0000050 FBbt:00003209 ! part of adult fat body
+relationship: BFO:0000050 FBbt:00059181 ! part of adult postcephalic region
+property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0002-1373-1705
+property_value: http://purl.org/dc/terms/date "2026-10-20T12:00:00Z" xsd:dateTime
+property_value: IAO:0000233 "https://github.com/FlyBase/drosophila-anatomy-developmental-ontology/issues/2218" xsd:anyURI
+
+[Term]
+id: FBbt:00053710
+name: adult thoracic fat mass
+def: "Part of the adult fat body that is found in the thorax (Pokrzywa et al., 2010; Ott et al., 2024). It includes fat body attached to the dorsal epidermis and cuticle of the thorax, and fat body cells surrounding the indirect flight muscles (Pokrzywa et al., 2010)." [FlyBase:FBrf0212549, FlyBase:FBrf0260129]
+synonym: "thoracic fat body" EXACT [FlyBase:FBrf0212549]
+is_a: FBbt:00007003 ! portion of tissue
+relationship: BFO:0000050 FBbt:00003018 ! part of adult thorax
+relationship: BFO:0000050 FBbt:00053709 ! part of adult postcephalic fat mass
+property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0002-1373-1705
+property_value: http://purl.org/dc/terms/date "2026-10-20T12:00:00Z" xsd:dateTime
+property_value: IAO:0000233 "https://github.com/FlyBase/drosophila-anatomy-developmental-ontology/issues/2218" xsd:anyURI
+
+[Term]
+id: FBbt:00053711
+name: adult visceral fat mass
+def: "Part of the adult fat body that is associated with internal organs, rather than forming sheets beneath the body wall (Haunerland and Shirk, 1995). In the adult, this includes fat body surrounding the heart and parts of the female reproductive system (Wasserthal, 2007; McQueen et al., 2022; Lei et al., 2023)." [doi:10.1146/annurev.en.40.010195.001005, FlyBase:FBrf0202990, FlyBase:FBrf0253444, FlyBase:FBrf0256185]
+comment: Min et al. (2008) used 'visceral fat body' to refer to all of the fat body of the thorax and abdomen (see 'adult postcephalic fat mass').
+synonym: "perivisceral fat body" EXACT [doi:10.1146/annurev.en.40.010195.001005]
+synonym: "visceral fat body" EXACT [doi:10.1146/annurev.en.40.010195.001005]
+is_a: FBbt:00007003 ! portion of tissue
+relationship: BFO:0000050 FBbt:00053709 ! part of adult postcephalic fat mass
+property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0002-1373-1705
+property_value: http://purl.org/dc/terms/date "2026-10-20T12:00:00Z" xsd:dateTime
+property_value: IAO:0000233 "https://github.com/FlyBase/drosophila-anatomy-developmental-ontology/issues/2218" xsd:anyURI
+
+[Term]
+id: FBbt:00053712
+name: adult postcephalic fat cell
+def: "." [FBC:Autogenerated]
+synonym: "adult body fat cell" EXACT []
+intersection_of: FBbt:00046052 ! fat cell
+intersection_of: BFO:0000050 FBbt:00053709 ! part of adult postcephalic fat mass
+property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0002-1373-1705
+property_value: http://purl.org/dc/terms/date "2026-10-20T12:00:00Z" xsd:dateTime
+property_value: IAO:0000233 "https://github.com/FlyBase/drosophila-anatomy-developmental-ontology/issues/2218" xsd:anyURI
+
+[Term]
+id: FBbt:00053713
+name: adult visceral fat cell
+def: "." [FBC:Autogenerated]
+intersection_of: FBbt:00046052 ! fat cell
+intersection_of: BFO:0000050 FBbt:00053711 ! part of adult visceral fat mass
+property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0002-1373-1705
+property_value: http://purl.org/dc/terms/date "2026-10-20T12:00:00Z" xsd:dateTime
+property_value: IAO:0000233 "https://github.com/FlyBase/drosophila-anatomy-developmental-ontology/issues/2218" xsd:anyURI
+
+[Term]
+id: FBbt:00053714
+name: adult thoracic fat cell
+def: "." [FBC:Autogenerated]
+intersection_of: FBbt:00046052 ! fat cell
+intersection_of: BFO:0000050 FBbt:00053710 ! part of adult thoracic fat mass
+property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0002-1373-1705
+property_value: http://purl.org/dc/terms/date "2026-10-20T12:00:00Z" xsd:dateTime
+property_value: IAO:0000233 "https://github.com/FlyBase/drosophila-anatomy-developmental-ontology/issues/2218" xsd:anyURI
+
+[Term]
+id: FBbt:00053715
+name: adult pericardial fat cell
+def: "." [FBC:Autogenerated]
+intersection_of: FBbt:00046052 ! fat cell
+intersection_of: BFO:0000050 FBbt:00003212 ! part of adult pericardial fat mass
+property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0002-1373-1705
+property_value: http://purl.org/dc/terms/date "2026-10-20T12:00:00Z" xsd:dateTime
+property_value: IAO:0000233 "https://github.com/FlyBase/drosophila-anatomy-developmental-ontology/issues/2218" xsd:anyURI
+
+[Term]
+id: FBbt:00053716
+name: female accessory gland fat cell
+def: "." [FBC:Autogenerated]
+intersection_of: FBbt:00046052 ! fat cell
+intersection_of: BFO:0000050 FBbt:00052059 ! part of female accessory gland fat mass
+property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0002-1373-1705
+property_value: http://purl.org/dc/terms/date "2026-10-20T12:00:00Z" xsd:dateTime
+property_value: IAO:0000233 "https://github.com/FlyBase/drosophila-anatomy-developmental-ontology/issues/2218" xsd:anyURI
+
+[Term]
+id: FBbt:00053717
+name: spermathecal fat cell
+def: "." [FBC:Autogenerated]
+intersection_of: FBbt:00046052 ! fat cell
+intersection_of: BFO:0000050 FBbt:00052073 ! part of spermathecal fat mass
+property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0002-1373-1705
+property_value: http://purl.org/dc/terms/date "2026-10-20T12:00:00Z" xsd:dateTime
+property_value: IAO:0000233 "https://github.com/FlyBase/drosophila-anatomy-developmental-ontology/issues/2218" xsd:anyURI
 
 [Term]
 id: FBbt:00057000
@@ -141847,13 +141970,15 @@ property_value: http://purl.org/dc/terms/date "2022-08-30T13:05:32Z" xsd:dateTim
 
 [Term]
 id: FBbt:00059156
-name: adult peripheral fat cell
+name: adult subcuticular fat cell
 def: "." [FBC:Autogenerated]
 subset: cur
+synonym: "adult peripheral fat cell" RELATED []
 intersection_of: FBbt:00046052 ! fat cell
-intersection_of: BFO:0000050 FBbt:00003210 ! part of adult peripheral fat mass
+intersection_of: BFO:0000050 FBbt:00003210 ! part of adult subcuticular fat mass
 property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0002-6095-8718
 property_value: http://purl.org/dc/terms/date "2022-08-30T13:08:51Z" xsd:dateTime
+property_value: IAO:0000233 "https://github.com/FlyBase/drosophila-anatomy-developmental-ontology/issues/2218" xsd:anyURI
 
 [Term]
 id: FBbt:00059157
