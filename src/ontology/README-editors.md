@@ -91,6 +91,14 @@ Stages in labels refer to the entity, rather than the organism as a whole, there
 
 Other names from the literature should be recorded as synonyms, with publication IDs added as xrefs. Variants of these names that could help user searches can also be added as synonyms. See [obook](https://oboacademy.github.io/obook/reference/synonyms-properties/) for information about different synonym scopes.
 
+#### Serialisation
+
+If the editors' file is edited outside Protege (by hand or by a script), reserialise it before committing so that stanzas, tags and xrefs are in canonical order and diffs stay small. From this folder:
+
+`robot convert -i fbbt-edit.obo -o fbbt-edit.obo`
+
+Do not use the `--clean-obo` options for this; they are only for release products and would silently drop extra labels/definitions and any axioms that cannot be translated to OBO.
+
 #### Obsoleting terms
 
 Notify Flybase curators at least a week before carrying out any term obsoletions, linking to the relevant GitHub issue.
