@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: 2026-10-01
-date: 01:10:2026 10:45
+data-version: 2026-11-02
+date: 02:11:2026 14:01
 subsetdef: BrainName "BrainName project terms"
 subsetdef: BrainName_Embargo "Terms to hold back pending BrainName paper publication"
 subsetdef: Cross-product_review "Involved_in"
@@ -34061,18 +34061,25 @@ relationship: part_of FBbt:00003004 ! adult
 [Term]
 id: FBbt:00003209
 name: adult fat body
-def: "Fat body of the adult. It is composed of diploid cells derived from cell clusters in the larval body wall and from adepithelial cells of the imaginal discs (Hoshizaki et al., 1995; Musselman and Kuhnlein, 2018). It is composed of various unconnected adipose tissue depots throughout the body (Musselman and Kuhnlein, 2018)." [FlyBase:FBrf0064793, FlyBase:FBrf0083200, FlyBase:FBrf0238315]
+def: "Fat body of the adult. It is composed of diploid cells derived from cell clusters in the larval body wall and from adepithelial cells of the imaginal discs (Hoshizaki et al., 1995; Musselman and Kuhnlein, 2018). It is composed of various unconnected adipose tissue depots throughout the body (Musselman and Kuhnlein, 2018). Most of the adult fat body is found in the abdomen, where it forms segmental plates lining the body wall, with smaller amounts in the head, thorax and associated with the female reproductive system (Lei et al., 2023; Ott et al., 2024)." [FlyBase:FBrf0064793, FlyBase:FBrf0083200, FlyBase:FBrf0238315, FlyBase:FBrf0256185, FlyBase:FBrf0260129]
 subset: cur
 is_a: FBbt:00005066 ! fat body
 relationship: part_of FBbt:00003208 ! adult adipose system
 
 [Term]
 id: FBbt:00003210
-name: adult peripheral fat mass
-def: "Component part of the adult fat body that is found in sheets beneath the body wall (Bate, 1993)." [FlyBase:FBrf0064793]
+name: adult subcuticular fat mass
+def: "Part of the adult fat body that is found in sheets immediately beneath the body wall (Bate, 1993; Klepsatel et al., 2016). Most of this tissue lines the abdomen as segmental plates (Lei et al., 2023), but it is also found attached to the dorsal epidermis of the thorax (Pokrzywa et al., 2010)." [FlyBase:FBrf0064793, FlyBase:FBrf0212549, FlyBase:FBrf0233535, FlyBase:FBrf0256185]
+comment: In general insect anatomy, the fat body layer beneath the body wall is also called the peripheral fat body (Haunerland and Shirk, 1995). However, in the Drosophila literature, 'peripheral fat body' has also been used to refer to all fat body outside of the head (see 'adult postcephalic fat mass').
 subset: cur
+synonym: "adult peripheral fat mass" RELATED [doi:10.1146/annurev.en.40.010195.001005]
+synonym: "adult subcutaneous fat mass" EXACT []
+synonym: "parietal fat body" EXACT [doi:10.1017/CBO9781139035460.009]
+synonym: "subcuticular fat body" EXACT [FlyBase:FBrf0233535]
+synonym: "subepidermal fat body" EXACT [doi:10.1146/annurev.en.40.010195.001005]
 is_a: FBbt:00007003 ! portion of tissue
-relationship: part_of FBbt:00003209 ! adult fat body
+relationship: adjacent_to FBbt:00005401 ! adult epidermis
+relationship: part_of FBbt:00053709 ! adult postcephalic fat mass
 
 [Term]
 id: FBbt:00003211
@@ -34088,19 +34095,21 @@ relationship: part_of FBbt:00005065 ! adipose system
 [Term]
 id: FBbt:00003212
 name: adult pericardial fat mass
-def: "Dense layer of adult fat body that surrounds the pericardial septum, which covers the heart chamber in the first abdominal segment." [FlyBase:FBrf0202990]
+def: "Dense layer of adult fat body that lines the pericardial diaphragm and, together with it, surrounds the first chamber of the adult heart, in the anterior abdomen (Wasserthal, 2007)." [FlyBase:FBrf0202990]
 subset: cur
-is_a: FBbt:00003213 ! adult abdominal fat mass
-relationship: part_of FBbt:00003157 ! adult heart chamber 1
+is_a: FBbt:00053711 ! adult visceral fat mass
+relationship: adjacent_to FBbt:00003157 ! adult heart chamber 1
+relationship: part_of FBbt:00003213 ! adult abdominal fat mass
 
 [Term]
 id: FBbt:00003213
 name: adult abdominal fat mass
-def: "Fat body of the adult abdomen." [https://orcid.org/0000-0001-5948-3092]
+def: "Part of the adult fat body that is found in the abdomen. It contains the majority of the adult fat body tissue, much of which forms segmental plates lining the abdominal body wall (Lei et al., 2023; Ott et al., 2024). Adipocytes and oenocytes make up the abdominal fat body (Ott et al., 2024)." [FlyBase:FBrf0256185, FlyBase:FBrf0260129]
 subset: cur
+synonym: "abdominal fat body" EXACT [FlyBase:FBrf0260129]
 is_a: FBbt:00007003 ! portion of tissue
 relationship: part_of FBbt:00003023 ! adult abdomen
-relationship: part_of FBbt:00003209 ! adult fat body
+relationship: part_of FBbt:00053709 ! adult postcephalic fat mass
 
 [Term]
 id: FBbt:00003214
@@ -39400,8 +39409,10 @@ synonym: "T2" EXACT VFB_SYMBOL [FlyBase:FBrf0247762]
 xref: FlyBrain_NDB:10116
 xref: VFB:FBbt_00003728
 is_a: FBbt:00003726 ! T neuron
+is_a: FBbt:00047096 ! secondary neuron
 is_a: FBbt:00058205 ! adult cholinergic neuron
 is_a: FBbt:00058207 ! adult GABAergic neuron
+relationship: develops_from FBbt:00053664 ! immature T2 neuron
 relationship: has_soma_location FBbt:00051036 ! cell body rind of adult posterior lobula plate
 relationship: receives_synaptic_input_in_region FBbt:00003750 ! medulla layer M1
 relationship: receives_synaptic_input_in_region FBbt:00003751 ! medulla layer M2
@@ -39420,6 +39431,8 @@ synonym: "T2a" EXACT VFB_SYMBOL [FlyBase:FBrf0247762]
 xref: FlyBrain_NDB:10117
 xref: VFB:FBbt_00003729
 is_a: FBbt:00003726 ! T neuron
+is_a: FBbt:00047096 ! secondary neuron
+relationship: develops_from FBbt:00053665 ! immature T2a neuron
 relationship: has_soma_location FBbt:00051036 ! cell body rind of adult posterior lobula plate
 relationship: receives_synaptic_input_in_region FBbt:00003750 ! medulla layer M1
 relationship: receives_synaptic_input_in_region FBbt:00003751 ! medulla layer M2
@@ -39442,9 +39455,11 @@ synonym: "T3" EXACT VFB_SYMBOL [FlyBase:FBrf0247762]
 xref: FlyBrain_NDB:10183
 xref: VFB:FBbt_00003730
 is_a: FBbt:00003726 ! T neuron
+is_a: FBbt:00047096 ! secondary neuron
 is_a: FBbt:00058207 ! adult GABAergic neuron
 is_a: FBbt:00058208 ! adult glutamatergic neuron
 is_a: FBbt:00110137 ! optic lobe wide-field columnar neuron
+relationship: develops_from FBbt:00053666 ! immature T3 neuron
 relationship: has_soma_location FBbt:00051036 ! cell body rind of adult posterior lobula plate
 relationship: receives_synaptic_input_in_region FBbt:00003759 ! medulla layer M9
 relationship: receives_synaptic_input_in_region FBbt:00003854 ! lobula layer 2
@@ -39599,7 +39614,9 @@ synonym: "LaWF1" EXACT [FlyBase:FBrf0222324]
 synonym: "Lawf1" EXACT VFB_SYMBOL [FlyBase:FBrf0247762]
 xref: FlyBrain_NDB:10094
 xref: VFB:FBbt_00003741
+is_a: FBbt:00047096 ! secondary neuron
 is_a: FBbt:00059323 ! lamina wide-field neuron
+relationship: develops_from FBbt:00053682 ! immature lamina wide-field 1 neuron
 relationship: receives_synaptic_input_in_region FBbt:00003750 ! medulla layer M1
 relationship: receives_synaptic_input_in_region FBbt:00003753 ! medulla layer M4
 relationship: sends_synaptic_output_to_cell FBbt:00003721 ! lamina monopolar neuron L3
@@ -39628,7 +39645,9 @@ synonym: "C2" EXACT VFB_SYMBOL [FlyBase:FBrf0247762]
 xref: FlyBrain_NDB:10079
 xref: VFB:FBbt_00003743
 is_a: FBbt:00003742 ! optic lobe centrifugal columnar neuron
+is_a: FBbt:00047096 ! secondary neuron
 is_a: FBbt:00058207 ! adult GABAergic neuron
+relationship: develops_from FBbt:00053667 ! immature centrifugal neuron C2
 relationship: receives_synaptic_input_from_neuron FBbt:00003719 ! lamina monopolar neuron L1
 relationship: receives_synaptic_input_in_region FBbt:00003708 ! lamina
 relationship: receives_synaptic_input_in_region FBbt:00003750 ! medulla layer M1
@@ -39652,8 +39671,10 @@ synonym: "C3" EXACT VFB_SYMBOL [FlyBase:FBrf0247762]
 xref: FlyBrain_NDB:10080
 xref: VFB:FBbt_00003744
 is_a: FBbt:00003742 ! optic lobe centrifugal columnar neuron
+is_a: FBbt:00047096 ! secondary neuron
 is_a: FBbt:00058207 ! adult GABAergic neuron
 is_a: FBbt:00110137 ! optic lobe wide-field columnar neuron
+relationship: develops_from FBbt:00053668 ! immature centrifugal neuron C3
 relationship: receives_synaptic_input_from_neuron FBbt:00003719 ! lamina monopolar neuron L1
 relationship: receives_synaptic_input_in_region FBbt:00003708 ! lamina
 relationship: receives_synaptic_input_in_region FBbt:00003750 ! medulla layer M1
@@ -40530,6 +40551,8 @@ synonym: "Tm5" EXACT VFB_SYMBOL [FlyBase:FBrf0247762]
 xref: FlyBrain_NDB:10157
 xref: VFB:FBbt_00003793
 is_a: FBbt:00003788 ! transmedullary neuron
+is_a: FBbt:00047096 ! secondary neuron
+relationship: develops_from FBbt:00053684 ! immature transmedullary neuron Tm5
 relationship: receives_synaptic_input_in_region FBbt:00003752 ! medulla layer M3
 relationship: receives_synaptic_input_in_region FBbt:00003755 ! medulla layer M6
 relationship: sends_synaptic_output_to_region FBbt:00040016 ! lobula layer 5
@@ -41980,9 +42003,11 @@ synonym: "lobular columnar neuron Lcn4" EXACT []
 xref: FlyBrain_NDB:10001
 xref: VFB:FBbt_00003874
 is_a: FBbt:00003870 ! lobula columnar neuron
+is_a: FBbt:00047096 ! secondary neuron
 is_a: FBbt:00058205 ! adult cholinergic neuron
 is_a: FBbt:00058208 ! adult glutamatergic neuron
 is_a: FBbt:00110137 ! optic lobe wide-field columnar neuron
+relationship: develops_from FBbt:00053669 ! immature lobula columnar neuron LC4
 relationship: has_soma_location FBbt:00100201 ! adult lateral brain cell body rind
 relationship: receives_synaptic_input_in_region FBbt:00003854 ! lobula layer 2
 relationship: receives_synaptic_input_in_region FBbt:00003856 ! lobula layer 4
@@ -42019,8 +42044,10 @@ synonym: "S4" BROAD [FlyBase:FBrf0039022]
 xref: FlyBrain_NDB:10003
 xref: VFB:FBbt_00003876
 is_a: FBbt:00003870 ! lobula columnar neuron
+is_a: FBbt:00047096 ! secondary neuron
 is_a: FBbt:00058205 ! adult cholinergic neuron
 is_a: FBbt:00110137 ! optic lobe wide-field columnar neuron
+relationship: develops_from FBbt:00053670 ! immature lobula columnar neuron LC6
 relationship: fasciculates_with FBbt:00100337 ! adult anterior optic tract
 relationship: has_soma_location FBbt:00100201 ! adult lateral brain cell body rind
 relationship: has_synaptic_IO_in FBbt:00003856 ! lobula layer 4
@@ -44889,13 +44916,13 @@ relationship: part_of FBbt:00000019 ! metathoracic segment
 [Term]
 id: FBbt:00004093
 name: adult metathoracic ventral thoracic neurosecretory neuron
-def: "Adult ventral thoracic neurosecretory neuron with its soma in the abdominal ganglion, axonal projections that travel obliquely in a frontal direction, and neurosecretory terminals in the metathoracic neuromere (Lindquist and Nassel, 1990)." [FlyBase:FBrf0052426]
+def: "Adult ventral thoracic neurosecretory neuron with its soma in the metathoracic neuromere (Berg et al., 2025), axonal projections that travel obliquely in a frontal direction, and neurosecretory terminals in the metathoracic neuromere (Lindquist and Nassel, 1990)." [doi:10.1101/2025.10.09.680999, FlyBase:FBrf0052426]
+comment: Lindquist and Nassel (1990) placed the soma of this cell in the abdominal ganglion, but in the male CNS connectome (Berg et al., 2025) its soma is in the metathoracic neuromere.
 subset: cur
 xref: VFB:FBbt_00004093
-is_a: FBbt:00001987 ! abdominal neuron
+is_a: FBbt:00001986 ! metathoracic neuron
 is_a: FBbt:00053165 ! adult ventral thoracic neurosecretory neuron
-relationship: has_soma_location FBbt:00111086 ! cell body rind of adult abdominal neuromere
-relationship: overlaps FBbt:00110176 ! adult metathoracic neuromere
+relationship: has_soma_location FBbt:00111085 ! cell body rind of adult metathoracic neuromere
 
 [Term]
 id: FBbt:00004094
@@ -67904,6 +67931,7 @@ is_a: FBbt:00001366 ! supraesophageal ganglion neuron
 is_a: FBbt:00050197 ! adult ALv1 lineage neuron
 is_a: FBbt:00067123 ! adult antennal lobe projection neuron
 is_a: FBbt:00067351 ! antennal lobe projection neuron vPN
+relationship: develops_from FBbt:00053703 ! pupal antennal lobe projection neuron vPN
 relationship: has_soma_location FBbt:00100211 ! cell body rind of adult antennal lobe
 
 [Term]
@@ -68051,6 +68079,7 @@ is_a: FBbt:00053397 ! antennal lobe projection neuron to mushroom body
 is_a: FBbt:00053398 ! adult antennal lobe projection neuron to lateral horn
 is_a: FBbt:00058205 ! adult cholinergic neuron
 is_a: FBbt:00100368 ! adult uniglomerular antennal lobe projection neuron adPN
+relationship: develops_from FBbt:00053706 ! pupal antennal lobe projection neuron VA6 adPN
 relationship: receives_synaptic_input_throughout FBbt:00003938 ! antennal lobe glomerulus VA6
 relationship: sends_synaptic_output_to_region FBbt:00007385 ! calyx of adult mushroom body
 
@@ -68085,10 +68114,12 @@ xref: FlyBrain_NDB:10357
 xref: FlyBrain_NDB:10505
 xref: VFB:FBbt_00007449
 is_a: FBbt:00047312 ! adult uniglomerular antennal lobe projection neuron lPN
+is_a: FBbt:00049542 ! Notch OFF hemilineage secondary neuron
 is_a: FBbt:00051299 ! adult olfactory projection neuron
 is_a: FBbt:00053398 ! adult antennal lobe projection neuron to lateral horn
 is_a: FBbt:00058205 ! adult cholinergic neuron
 is_a: FBbt:00067350 ! medial antennal lobe tract projection neuron
+relationship: develops_from FBbt:00053701 ! immature adult antennal lobe projection neuron VC2 lPN
 relationship: receives_synaptic_input_throughout FBbt:00003946 ! antennal lobe glomerulus VC2
 
 [Term]
@@ -74580,11 +74611,13 @@ synonym: "iACT (DC3)" EXACT [FlyBase:FBrf0174482]
 synonym: "mALT (DC3)" EXACT []
 xref: FlyBrain_NDB:10488
 xref: VFB:FBbt_00040000
+is_a: FBbt:00047096 ! secondary neuron
 is_a: FBbt:00051299 ! adult olfactory projection neuron
 is_a: FBbt:00053397 ! antennal lobe projection neuron to mushroom body
 is_a: FBbt:00053398 ! adult antennal lobe projection neuron to lateral horn
 is_a: FBbt:00058205 ! adult cholinergic neuron
 is_a: FBbt:00100368 ! adult uniglomerular antennal lobe projection neuron adPN
+relationship: develops_from FBbt:00053689 ! immature adult antennal lobe projection neuron DC3 adPN
 relationship: receives_synaptic_input_throughout FBbt:00003963 ! antennal lobe glomerulus DC3
 relationship: sends_synaptic_output_to_region FBbt:00007385 ! calyx of adult mushroom body
 
@@ -78653,7 +78686,7 @@ id: FBbt:00047246
 name: wing axillary muscle hg1 motor neuron
 def: "Motor neuron that innervates the external muscle of fourth axillary hg1, ipsilaterally (O'Sullivan et al., 2018; Ehrhardt et al., 2023). Its large soma is found in the ventral mesothoracic neuromere and it has dense arborization, restricted to the ipsilateral hemisphere, in the dorsal mesothoracic neuromere, including the wing neuropil (O'Sullivan et al., 2018; Ehrhardt et al., 2023). In males, it is required for normal sine song (Shirangi et al., 2013; Ehrhardt et al., 2023) and also plays a role in pulse song generation (O'Sullivan et al., 2018). It is a fruitless vMS2 neuron (Cheong et al., 2024)." [doi:10.1101/2023.05.31.542897, doi:10.7554/eLife.96084.1, FlyBase:FBrf0223321]
 synonym: "hg1_MN" EXACT VFB_SYMBOL [doi:10.1101/2023.05.31.542897]
-synonym: "wing axillary muscle iv1 motor neuron" EXACT [doi:10.1101/2025.07.31.667571]
+synonym: "wing axillary muscle iv1 motor neuron" EXACT [doi:10.1038/s41586-026-10735-w]
 xref: VFB:FBbt_00047246
 is_a: FBbt:00004065 ! direct flight muscle motor neuron
 is_a: FBbt:00111113 ! adult fruitless vMS2 neuron
@@ -82579,7 +82612,7 @@ relationship: has_synaptic_IO_in FBbt:00047142 ! adult T3 leg neuropil
 [Term]
 id: FBbt:00047588
 name: descending neuron of the pars intercerebralis DNc01
-def: "Descending neuron belonging to the DNc group, having a cell body in the pars intercerebralis (Namiki et al., 2018). This neuron crosses the midline and descends on the contralateral side of the cervical connective (Namiki et al., 2018). It has neurites in the antennal lobe, medulla, lobula plate, mushroom body calyx, mushroom body vertical lobe, fan-shaped body, protocerebral bridge, inferior clamp, flange, prow, saddle, antennal mechanosensory and motor center, superior medial protocerebrum, superior intermediate protocerebrum, superior lateral protocerebrum, anterior ventrolateral protocerebrum, wedge, posterior ventrolateral protocerebrum, inferior posterior slope, superior posterior slope, gorget, vest, gnathal ganglion, neck neuropil, wing neuropil, haltere neuropil, intermediate tectulum, lower tectulum, abdominal neuromere, T1 leg neuropil, T2 leg neuropil, T3 leg neuropil, wing sensory neuropil, T1 median ventral association center, T2 median ventral association center and T3 median ventral association center (Namiki et al., 2018). It fasciculates with the dorsal lateral tract of the dorsal cervical fascicle in the ventral nerve cord (Namiki et al., 2018). There is one of these cells per hemisphere (Namiki et al., 2018). It is an SIFa neuron (Bates et al., 2025)." [doi:10.1101/2025.07.31.667571, FlyBase:FBrf0239335]
+def: "Descending neuron belonging to the DNc group, having a cell body in the pars intercerebralis (Namiki et al., 2018). This neuron crosses the midline and descends on the contralateral side of the cervical connective (Namiki et al., 2018). It has neurites in the antennal lobe, medulla, lobula plate, mushroom body calyx, mushroom body vertical lobe, fan-shaped body, protocerebral bridge, inferior clamp, flange, prow, saddle, antennal mechanosensory and motor center, superior medial protocerebrum, superior intermediate protocerebrum, superior lateral protocerebrum, anterior ventrolateral protocerebrum, wedge, posterior ventrolateral protocerebrum, inferior posterior slope, superior posterior slope, gorget, vest, gnathal ganglion, neck neuropil, wing neuropil, haltere neuropil, intermediate tectulum, lower tectulum, abdominal neuromere, T1 leg neuropil, T2 leg neuropil, T3 leg neuropil, wing sensory neuropil, T1 median ventral association center, T2 median ventral association center and T3 median ventral association center (Namiki et al., 2018). It fasciculates with the dorsal lateral tract of the dorsal cervical fascicle in the ventral nerve cord (Namiki et al., 2018). There is one of these cells per hemisphere (Namiki et al., 2018). It is an SIFa neuron (Bates et al., 2026)." [doi:10.1038/s41586-026-10735-w, FlyBase:FBrf0239335]
 synonym: "DNc01" EXACT VFB_SYMBOL [FlyBase:FBrf0239335]
 synonym: "DNxn010" EXACT [FlyBase:FBrf0262850]
 xref: VFB:FBbt_00047588
@@ -82623,7 +82656,7 @@ relationship: has_synaptic_IO_in FBbt:00110173 ! adult abdominal neuromere
 [Term]
 id: FBbt:00047589
 name: descending neuron of the pars intercerebralis DNc02
-def: "Descending neuron belonging to the DNc group, having a cell body in the pars intercerebralis (Namiki et al., 2018). This neuron crosses the midline and descends on the contralateral side of the cervical connective (Namiki et al., 2018). It has neurites in the antennal lobe, medulla, lobula plate, lobula, mushroom body calyx, fan-shaped body, protocerebral bridge, inferior clamp, flange, prow, saddle, antennal mechanosensory and motor center, superior medial protocerebrum, superior intermediate protocerebrum, superior lateral protocerebrum, anterior ventrolateral protocerebrum, wedge, posterior ventrolateral protocerebrum, inferior posterior slope, superior posterior slope, gorget, vest, gnathal ganglion, neck neuropil, wing neuropil, haltere neuropil, intermediate tectulum, lower tectulum, abdominal neuromere, T1 leg neuropil, T2 leg neuropil, T3 leg neuropil, wing sensory neuropil, T1 median ventral association center, T2 median ventral association center and T3 median ventral association center (Namiki et al., 2018). It fasciculates with the dorsal lateral tract of the dorsal cervical fascicle in the ventral nerve cord (Namiki et al., 2018). There is one of these cells per hemisphere (Namiki et al., 2018). It is an SIFa neuron (Bates et al., 2025)." [doi:10.1101/2025.07.31.667571, FlyBase:FBrf0239335]
+def: "Descending neuron belonging to the DNc group, having a cell body in the pars intercerebralis (Namiki et al., 2018). This neuron crosses the midline and descends on the contralateral side of the cervical connective (Namiki et al., 2018). It has neurites in the antennal lobe, medulla, lobula plate, lobula, mushroom body calyx, fan-shaped body, protocerebral bridge, inferior clamp, flange, prow, saddle, antennal mechanosensory and motor center, superior medial protocerebrum, superior intermediate protocerebrum, superior lateral protocerebrum, anterior ventrolateral protocerebrum, wedge, posterior ventrolateral protocerebrum, inferior posterior slope, superior posterior slope, gorget, vest, gnathal ganglion, neck neuropil, wing neuropil, haltere neuropil, intermediate tectulum, lower tectulum, abdominal neuromere, T1 leg neuropil, T2 leg neuropil, T3 leg neuropil, wing sensory neuropil, T1 median ventral association center, T2 median ventral association center and T3 median ventral association center (Namiki et al., 2018). It fasciculates with the dorsal lateral tract of the dorsal cervical fascicle in the ventral nerve cord (Namiki et al., 2018). There is one of these cells per hemisphere (Namiki et al., 2018). It is an SIFa neuron (Bates et al., 2026)." [doi:10.1038/s41586-026-10735-w, FlyBase:FBrf0239335]
 synonym: "DNc02" EXACT VFB_SYMBOL [FlyBase:FBrf0239335]
 synonym: "DNxn011" EXACT [FlyBase:FBrf0262850]
 xref: VFB:FBbt_00047589
@@ -83799,8 +83832,8 @@ relationship: has_synaptic_IO_in FBbt:00047173 ! neck neuropil
 [Term]
 id: FBbt:00047650
 name: descending neuron of the posterior brain DNp17
-def: "Descending neuron belonging to the DNp group, having a cell body on the posterior surface of the brain (Namiki et al., 2018). This neuron does not cross the midline and descends on the ipsilateral side of the cervical connective (Namiki et al., 2018). It has neurites in the posterior lateral protocerebrum, inferior posterior slope, gnathal ganglion and haltere neuropil (Namiki et al., 2018). It fasciculates with the intermediate tract of the dorsal cervical fascicle in the ventral nerve cord (Namiki et al., 2018). There are around six of these cells in each hemisphere (Namiki et al., 2018, Berg et al., 2025, Bates et al., 2025)." [doi:10.1101/2025.07.31.667571, doi:10.1101/2025.10.09.680999, FlyBase:FBrf0239335]
-comment: 4 per hemisphere in Namiki et al. (2018), 6 per hemisphere in male-cns v0.9 (Berg et al., 2025), 8 per hemisphere in BANC v626 (Bates et al., 2025).
+def: "Descending neuron belonging to the DNp group, having a cell body on the posterior surface of the brain (Namiki et al., 2018). This neuron does not cross the midline and descends on the ipsilateral side of the cervical connective (Namiki et al., 2018). It has neurites in the posterior lateral protocerebrum, inferior posterior slope, gnathal ganglion and haltere neuropil (Namiki et al., 2018). It fasciculates with the intermediate tract of the dorsal cervical fascicle in the ventral nerve cord (Namiki et al., 2018). There are around six of these cells in each hemisphere (Namiki et al., 2018, Berg et al., 2025, Bates et al., 2026)." [doi:10.1038/s41586-026-10735-w, doi:10.1101/2025.10.09.680999, FlyBase:FBrf0239335]
+comment: 4 per hemisphere in Namiki et al. (2018), 6 per hemisphere in male-cns v0.9 (Berg et al., 2025), 8 per hemisphere in BANC v888 (Bates et al., 2026).
 synonym: "DNp17" EXACT VFB_SYMBOL [FlyBase:FBrf0239335]
 synonym: "DNut025" NARROW [FlyBase:FBrf0262850]
 synonym: "DNut026" NARROW [FlyBase:FBrf0262850]
@@ -84053,7 +84086,7 @@ relationship: has_synaptic_IO_in FBbt:00110173 ! adult abdominal neuromere
 id: FBbt:00047663
 name: obsolete descending neuron of the posterior brain DNp30
 def: "Descending neuron belonging to the DNp group, having a cell body on the posterior surface of the brain. This neuron crosses the midline and descends on the contralateral side of the cervical connective. It has neurites in the antennal lobe, medulla, superior clamp, saddle, antennal mechanosensory and motor center, superior medial protocerebrum, superior intermediate protocerebrum, anterior ventrolateral protocerebrum, posterior ventrolateral protocerebrum, epaulette, vest, gnathal ganglion, intermediate tectulum, wing sensory neuropil, T1 median ventral association center, T2 median ventral association center and T3 median ventral association center. It fasciculates with the median dorsal abdominal tract in the ventral nerve cord. There is one of these cells per hemisphere." [FlyBase:FBrf0239335]
-comment: Obsoleted, as mapped to the Dsk MP1a neuron in Bates et al. (2025) - doi:10.1101/2025.07.31.667571. Namiki et al. (2018), identify this as being morphologically similar to the giant antennal mechanosensory descending neuron, described by Mu et al. (2014) (FBrf0225358).
+comment: Obsoleted, as mapped to the Dsk MP1a neuron in Bates et al. (2026) - doi:10.1038/s41586-026-10735-w. Namiki et al. (2018), identify this as being morphologically similar to the giant antennal mechanosensory descending neuron, described by Mu et al. (2014) (FBrf0225358).
 synonym: "DNxn044" EXACT [FlyBase:FBrf0262850]
 is_obsolete: true
 replaced_by: FBbt:00051433
@@ -89609,7 +89642,7 @@ name: wing axillary muscle hg2 motor neuron
 def: "Motor neuron that innervates the internal muscle of the fourth axillary 58b (hg2), ipsilaterally (Ehrhardt et al., 2023). Within the ventral nerve cord, it arborizes in the dorsal mesothoracic neuropil, including the wing neuropil, with greater innervation of the contralateral side (O'Sullivan et al., 2018; Ehrhardt et al., 2023). In the male, it plays a role in pulse and sine song generation (O'Sullivan et al., 2018; Ehrhardt et al., 2023)." [doi:10.1101/2023.05.31.542897, FlyBase:FBrf0240039]
 synonym: "hg2 MN" EXACT [FlyBase:FBrf0240039]
 synonym: "hg2_MN" EXACT VFB_SYMBOL [doi:10.1101/2023.05.31.542897]
-synonym: "wing axillary muscle iv2 motor neuron" EXACT [doi:10.1101/2025.07.31.667571]
+synonym: "wing axillary muscle iv2 motor neuron" EXACT [doi:10.1038/s41586-026-10735-w]
 xref: VFB:FBbt_00048111
 is_a: FBbt:00004065 ! direct flight muscle motor neuron
 relationship: has_synaptic_IO_in FBbt:00047137 ! wing neuropil
@@ -92870,11 +92903,13 @@ relationship: part_of FBbt:00000167 ! embryonic thoracic segment
 [Term]
 id: FBbt:00048409
 name: adult pericerebral fat mass
-def: "Part of the adult fat body that is found in the head, surrounding the brain." [FlyBase:FBrf0219887]
+def: "Part of the adult fat body that is found in the head, surrounding the brain (Pokrzywa et al., 2010; Vodala et al., 2012)." [FlyBase:FBrf0212549, FlyBase:FBrf0219887]
+synonym: "head fat body" EXACT [FlyBase:FBrf0212549]
 synonym: "peri-cerebral adult fat mass" EXACT []
 synonym: "peri-cerebral fat body" EXACT [FlyBase:FBrf0220268]
 synonym: "pericerebral fat body" EXACT [FlyBase:FBrf0219887]
 is_a: FBbt:00007003 ! portion of tissue
+relationship: adjacent_to FBbt:00003624 ! adult brain
 relationship: part_of FBbt:00003007 ! adult head
 relationship: part_of FBbt:00003209 ! adult fat body
 
@@ -112982,7 +113017,7 @@ id: FBbt:00049915
 name: adult TwoLumps ascending neuron
 def: "Adult ascending neuron with its soma in the mesothoracic neuromere, dendritic arborizations in the ipsilateral mesothoracic and prothoracic neuromeres, and axonal projections that ascend to the ipsilateral side of the central brain to the vest, flange, and the lateral accessory lobe (Sen et al., 2019). It is activated downstream of mechanosensory neurons and is involved in backwards locomotion, upstream of the moonwalker descending neurons (Sen et al., 2019). There is one of these cells per hemisphere (Sen et al., 2019)." [FlyBase:FBrf0244359]
 synonym: "adult TLA neuron" EXACT [FlyBase:FBrf0244359]
-synonym: "AN17A026" EXACT [doi:10.1101/2025.07.31.667571]
+synonym: "AN17A026" EXACT [doi:10.1038/s41586-026-10735-w]
 synonym: "TLA" EXACT [FlyBase:FBrf0244359]
 xref: VFB:FBbt_00049915
 is_a: FBbt:00001985 ! mesothoracic neuron
@@ -123563,7 +123598,7 @@ relationship: sends_synaptic_output_to_cell FBbt:00051427 ! larval internal musc
 [Term]
 id: FBbt:00051431
 name: adult Drosulfakinin MP1 neuron
-def: "Adult neuron that secretes Drosulfakinin and is found in a cluster of two cells close to the midline in the posterior medial protocerebrum (Nichols and Lim, 1996; Namiki et al., 2018; Wu et al., 2019; Bates et al., 2025). It also expresses fruitless and plays a role in mating behavior in both males and females, but it is not sexually dimorphic (Wu et al., 2019). There are two subtypes, both of which are descending neurons that arborize bilaterally in the lateral protocerebrum and subesophageal zone, but differ in whether they innervate the optic lobe (Wu et al., 2019; Bates et al., 2025)." [doi:10.1101/2025.07.31.667571, FlyBase:FBrf0085661, FlyBase:FBrf0219451, FlyBase:FBrf0239335, FlyBase:FBrf0243806]
+def: "Adult neuron that secretes Drosulfakinin and is found in a cluster of two cells close to the midline in the posterior medial protocerebrum (Nichols and Lim, 1996; Namiki et al., 2018; Wu et al., 2019; Bates et al., 2026). It also expresses fruitless and plays a role in mating behavior in both males and females, but it is not sexually dimorphic (Wu et al., 2019). There are two subtypes, both of which are descending neurons that arborize bilaterally in the lateral protocerebrum and subesophageal zone, but differ in whether they innervate the optic lobe (Wu et al., 2019; Bates et al., 2026)." [doi:10.1038/s41586-026-10735-w, FlyBase:FBrf0085661, FlyBase:FBrf0219451, FlyBase:FBrf0239335, FlyBase:FBrf0243806]
 synonym: "DSKMP1" EXACT VFB_SYMBOL []
 xref: VFB:FBbt_00051431
 is_a: FBbt:00016687 ! fruitless expressing neuron
@@ -123589,7 +123624,7 @@ relationship: has_soma_location FBbt:00003625 ! adult brain cell body rind
 id: FBbt:00051433
 name: adult Drosulfakinin MP1a neuron
 def: "Adult Drosulfakinin MP1 neuron that has bilateral projections to the optic lobe (Wu et al., 2019). It crosses the midline and descends on the contralateral side of the cervical connective (Namiki et al., 2018). It has neurites in the antennal lobe, medulla, superior clamp, saddle, antennal mechanosensory and motor center, superior medial protocerebrum, superior intermediate protocerebrum, anterior ventrolateral protocerebrum, posterior ventrolateral protocerebrum, epaulette, vest, gnathal ganglion, intermediate tectulum, wing sensory neuropil, T1 median ventral association center, T2 median ventral association center and T3 median ventral association center (Namiki et al., 2018). It fasciculates with the median dorsal abdominal tract in the ventral nerve cord (Namiki et al., 2018). There is one of these cells per hemisphere (Namiki et al., 2018; Wu et al., 2019)." [FlyBase:FBrf0239335, FlyBase:FBrf0243806]
-synonym: "descending neuron of the posterior brain DNp30" EXACT [doi:10.1101/2025.07.31.667571, FlyBase:FBrf0239335]
+synonym: "descending neuron of the posterior brain DNp30" EXACT [doi:10.1038/s41586-026-10735-w, FlyBase:FBrf0239335]
 synonym: "DNxn044" EXACT [FlyBase:FBrf0262850]
 synonym: "DSKMP1A" EXACT VFB_SYMBOL []
 xref: VFB:FBbt_00051433
@@ -123617,7 +123652,7 @@ id: FBbt:00051434
 name: adult Drosulfakinin MP1b neuron
 def: "Adult Drosulfakinin MP1 neuron that does not project to the optic lobe (Wu et al., 2019). In the brain, it has postsynapses in the ipsilateral superior lateral and intermediate protocerebrum and superior clamp, and presynapses in the gnathal ganglion, the ipsilateral and contralateral anterior ventrolateral protocerebrum, the ipsilateral superior lateral protocerebrum and the contralateral flange (Schlegel et al., 2024; Dorkenwald et al., 2024). Within the VNC, it fasciculates with the median tract of dorsal cervical fasciculus I and sends output to multiple regions (Takemura et al., 2024; Marin et al., 2024). There is one of these cells per hemisphere (Wu et al., 2019; Schlegel et al., 2024; Dorkenwald et al., 2024; Sturner et al., 2025)." [doi:10.7554/eLife.96084.1, doi:10.7554/eLife.97766.1, doi:10.7554/eLife.97769.1, FlyBase:FBrf0243806, FlyBase:FBrf0260535, FlyBase:FBrf0260546, FlyBase:FBrf0262850]
 comment: Pre- or post-synapse locations are those with the highest total count of these (DNp62) neurons in FlyWire FAFB. Sturner et al. (2025) note that drivers for DNp61 and DNp62 label the same cell type.
-synonym: "descending neuron of the posterior brain DNp62" EXACT [doi:10.1101/2025.07.31.667571, FlyBase:FBrf0239335]
+synonym: "descending neuron of the posterior brain DNp62" EXACT [doi:10.1038/s41586-026-10735-w, FlyBase:FBrf0239335]
 synonym: "Dnp61" RELATED [FlyBase:FBrf0262850]
 synonym: "DNxn089" EXACT [FlyBase:FBrf0262850]
 synonym: "DSKMP1B" EXACT VFB_SYMBOL []
@@ -131906,9 +131941,11 @@ id: FBbt:00052059
 name: female accessory gland fat mass
 def: "Adipose tissue surrounding the female accessory gland (McQueen et al., 2022). This tissue may be attached to the fat body surrounding the spermatheca (McQueen et al., 2022). It is in close contact with the rectum (Bodenstein, 1950; McQueen et al., 2022)." [FlyBase:FBrf0007733, FlyBase:FBrf0253444]
 synonym: "female accessory gland fat body" EXACT [FlyBase:FBrf0253444]
-is_a: FBbt:00003213 ! adult abdominal fat mass
 is_a: FBbt:00048491 ! female-specific anatomical entity
+is_a: FBbt:00053711 ! adult visceral fat mass
+relationship: adjacent_to FBbt:00004914 ! female accessory gland
 relationship: connected_to FBbt:00005756 ! rectum
+relationship: part_of FBbt:00003213 ! adult abdominal fat mass
 
 [Term]
 id: FBbt:00052060
@@ -132044,8 +132081,10 @@ id: FBbt:00052073
 name: spermathecal fat mass
 def: "A small and delicate mass of fat body that surrounds each of the spermatheca and is in close contact with the rectum (Bodenstein, 1950; McQueen et al., 2022)." [FlyBase:FBrf0007733, FlyBase:FBrf0253444]
 synonym: "spermathecal fat body" EXACT [FlyBase:FBrf0253444]
-is_a: FBbt:00003213 ! adult abdominal fat mass
 is_a: FBbt:00048491 ! female-specific anatomical entity
+is_a: FBbt:00053711 ! adult visceral fat mass
+relationship: adjacent_to FBbt:00004921 ! spermatheca
+relationship: part_of FBbt:00003213 ! adult abdominal fat mass
 
 [Term]
 id: FBbt:00052074
@@ -132797,7 +132836,7 @@ relationship: sends_synaptic_output_to_region FBbt:00040017 ! lobula layer 6
 id: FBbt:00052138
 name: medulla-lobula visual projection neuron 1
 def: "Visual projection neuron with its cell body near the anterior proximal medulla and an axonal projection following that of the medulla-lobula neuron 1 (Kind et al., 2021). It has wide-field dendritic arborization in the medulla, spanning tens of columns, ramifying at the border of layers M7/M8, then sending vertical projections to M3 and then to M1, and expanding laterally in each of these layers (Kind et al., 2021). Its main synaptic input from photoreceptors is from R8 cells of pale ommatidia (Kind et al., 2021). It projects to the ipsilateral posterior lateral protocerebrum, innervating a region just behind the optic glomeruli (Kind et al., 2021). There are approximately 65 of these cells per optic lobe (Kind et al., 2021)." [FlyBase:FBrf0252485]
-comment: MTe50 mapped to ML-VPN1 in Bates et al. (2025) - doi:10.1101/2025.07.31.667571, but cell numbers do not match.
+comment: MTe50 mapped to ML-VPN1 in Bates et al. (2026) - doi:10.1038/s41586-026-10735-w, but cell numbers do not match.
 synonym: "ML-VPN1" EXACT VFB_SYMBOL [FlyBase:FBrf0252485]
 xref: VFB:FBbt_00052138
 is_a: FBbt:00003702 ! adult optic lobe neuron
@@ -132932,7 +132971,7 @@ name: adult medulla-medulla neuron of dorsal rim area
 def: "Large neuron with its soma on the dorsal side of the medulla that connects the dorsal rim areas of the ipsilateral and contralateral hemispheres (Kind et al., 2021). Its ipsilateral processes are largely dendritic and its contralateral processes are largely axonal (Kind et al., 2021). It receives input from R7 photoreceptors of the dorsal rim area in layer M6 (Kind et al., 2021). It passes through the central brain without forming synapses there (Kind et al., 2021). There are two of these cells per hemisphere, one innervating the ipsilateral anterior medulla and contralateral posterior medulla and one innervating the ipsilateral posterior medulla and the contralateral anterior medulla (Kind et al., 2021)." [FlyBase:FBrf0252485]
 synonym: "MeMe-DRA" EXACT VFB_SYMBOL [FlyBase:FBrf0252485]
 synonym: "MeMe1" RELATED [FlyBase:FBrf0252485]
-synonym: "MeMe_e10" EXACT [doi:10.1101/2025.07.31.667571]
+synonym: "MeMe_e10" EXACT [doi:10.1038/s41586-026-10735-w]
 synonym: "MeVPMe10" EXACT [FlyBase:FBrf0260535, FlyBase:FBrf0262545]
 xref: VFB:FBbt_00052147
 is_a: FBbt:00003702 ! adult optic lobe neuron
@@ -135055,8 +135094,7 @@ name: immature transmedullary neuron Tm5b
 def: "Immature form of the transmedullary neuron Tm5b (Konstantinides et al., 2022). It is a Notch ON hemilineage secondary neuron, born from a medulla forming neuroblast during the Hbn/Opa/Slp temporal window (Konstantinides et al., 2022)." [FlyBase:FBrf0253187]
 xref: VFB:FBbt_00052331
 is_a: FBbt:00049541 ! Notch ON hemilineage secondary neuron
-is_a: FBbt:00052664 ! immature secondary neuron
-is_a: FBbt:00053274 ! immature transmedullary neuron
+is_a: FBbt:00053684 ! immature transmedullary neuron Tm5
 relationship: develops_from FBbt:00001938 ! medulla forming neuroblast
 relationship: develops_into FBbt:00110073 ! transmedullary neuron Tm5b
 
@@ -135066,8 +135104,7 @@ name: immature transmedullary neuron Tm5c
 def: "Immature form of the transmedullary neuron Tm5c (Konstantinides et al., 2022). It is a Notch OFF hemilineage secondary neuron, born from a medulla forming neuroblast during the Opa/Erm temporal window (Konstantinides et al., 2022)." [FlyBase:FBrf0253187]
 xref: VFB:FBbt_00052332
 is_a: FBbt:00049542 ! Notch OFF hemilineage secondary neuron
-is_a: FBbt:00052664 ! immature secondary neuron
-is_a: FBbt:00053274 ! immature transmedullary neuron
+is_a: FBbt:00053684 ! immature transmedullary neuron Tm5
 relationship: develops_from FBbt:00001938 ! medulla forming neuroblast
 relationship: develops_into FBbt:00110074 ! transmedullary neuron Tm5c
 
@@ -135350,7 +135387,7 @@ id: FBbt:00052359
 name: adult metathoracic histaminergic neuron
 def: "Adult histaminergic neuron with its cell body in the metathoracic neuromere (Nassel et al., 1990). There are one or two of these cells on each side and their somas are located ventrally and posteriorly, near the border with the abdominal neuromere (Nassel et al., 1990; Cheong et al., 2024). It has an axon that runs dorsally and anteriorly, entering the cervical connective (Nassel et al., 1990; Cheong et al., 2024). Its arbors are mainly found in the contralateral central nervous system (Cheong et al., 2024). Its input is mainly from the intermediate tectulum of the meso- and meta-thoracic neuromeres and it outputs to all three contralateral leg neuropils, the dorsal gnathal ganglion and the antennal mechanosensory and motor center (Cheong et al., 2024)." [FlyBase:FBrf0052427, FlyBase:FBrf0258993]
 comment: Nassel et al. (1990) say two of these on each side, but Cheong et al. (2023) only find one per side (both by IHC).
-synonym: "AN27X004" EXACT [doi:10.1101/2025.07.31.667571]
+synonym: "AN27X004" EXACT [doi:10.1038/s41586-026-10735-w]
 synonym: "MtAHN" EXACT VFB_SYMBOL [FlyBase:FBrf0258993]
 xref: VFB:FBbt_00052359
 is_a: FBbt:00001986 ! metathoracic neuron
@@ -139646,7 +139683,7 @@ id: FBbt:00052727
 name: wing axillary muscle hg3 motor neuron
 def: "Motor neuron that innervates the internal muscle of the fourth axillary 58a (hg3) (Ehrhardt et al., 2023). In the dorsal mesothoracic neuromere, it has roughly symmetrical arborization in both hemispheres of the dorsomedial neuropil and an extra ipsilateral lateral arbor (Ehrhardt et al., 2023). In the male, its activity affects pulse song (Ehrhardt et al., 2023)." [doi:10.1101/2023.05.31.542897]
 synonym: "hg3_MN" EXACT VFB_SYMBOL [doi:10.1101/2023.05.31.542897]
-synonym: "wing axillary muscle iv3 motor neuron" EXACT [doi:10.1101/2025.07.31.667571]
+synonym: "wing axillary muscle iv3 motor neuron" EXACT [doi:10.1038/s41586-026-10735-w]
 xref: VFB:FBbt_00052727
 is_a: FBbt:00004065 ! direct flight muscle motor neuron
 relationship: has_synaptic_IO_in FBbt:00110175 ! adult mesothoracic neuromere
@@ -139658,7 +139695,7 @@ name: wing axillary muscle hg4 motor neuron
 def: "Motor neuron that innervates the external muscle of the fourth axillary hg4 (Ehrhardt et al., 2023)." [doi:10.1101/2023.05.31.542897]
 comment: Ehrhardt et al. (2023) say there is a 1:1 correspondence of MNs to muscles (except for tpn), implying the existence of this neuron, but they do not have an image or description.
 synonym: "hg4_MN" EXACT VFB_SYMBOL [doi:10.1101/2023.05.31.542897]
-synonym: "wing axillary muscle iv4 motor neuron" EXACT [doi:10.1101/2025.07.31.667571v2]
+synonym: "wing axillary muscle iv4 motor neuron" EXACT [doi:10.1038/s41586-026-10735-w]
 xref: VFB:FBbt_00052728
 is_a: FBbt:00004065 ! direct flight muscle motor neuron
 relationship: sends_synaptic_output_to_cell FBbt:00047245 ! muscle cell of wing axillary muscle hg4
@@ -147787,10 +147824,10 @@ relationship: sends_synaptic_output_to_region FBbt:00001920 ! larval brain
 id: FBbt:00053379
 name: adult brake neuron
 def: "Adult ascending neuron with its soma in a thoracic neuromere and an axonal projection to the subesophageal zone (Sapkal et al., 2024). It also outputs to the tectulum (Sapkal et al., 2024). There is one of these per thoracic hemineuromere. Its activation causes halting (Sapkal et al., 2024)." [FlyBase:FBrf0260559]
-comment: Sapkal et al. (2024) show that this is excitatory, but do not confirm neurotransmitter. Subtype of AN19A018 based on body ids in Sapkal et al. (2024) supplement. AN19A018 also mapped to brake neurons in Bates et al. (2025) - doi:10.1101/2025.07.31.667571.
-synonym: "AN_GNG_53" NARROW [doi:10.1101/2025.07.31.667571]
-synonym: "AN_GNG_54" NARROW [doi:10.1101/2025.07.31.667571]
-synonym: "AN_GNG_76" NARROW [doi:10.1101/2025.07.31.667571]
+comment: Sapkal et al. (2024) show that this is excitatory, but do not confirm neurotransmitter. Subtype of AN19A018 based on body ids in Sapkal et al. (2024) supplement. AN19A018 also mapped to brake neurons in Bates et al. (2026) - doi:10.1038/s41586-026-10735-w.
+synonym: "AN_GNG_53" NARROW [doi:10.1038/s41586-026-10735-w]
+synonym: "AN_GNG_54" NARROW [doi:10.1038/s41586-026-10735-w]
+synonym: "AN_GNG_76" NARROW [doi:10.1038/s41586-026-10735-w]
 synonym: "BRK neuron" EXACT [FlyBase:FBrf0260559]
 xref: VFB:FBbt_00053379
 is_a: FBbt:00001983 ! thoracic neuron
@@ -150018,7 +150055,7 @@ relationship: develops_into FBbt:00003646 ! adult protocerebral bridge 1 glomeru
 [Term]
 id: FBbt:00053539
 name: immature adult optic lobe neuron
-def: "Immature neuron that develops from an optic neuroblast and will become an adult optic lobe neuron." []
+def: "Immature neuron that develops from an optic neuroblast and will become an adult optic lobe neuron (Hofbauer and Campos-Ortega, 1990; Apitz and Salecker, 2014)." [FlyBase:FBrf0052913, FlyBase:FBrf0226618]
 xref: VFB:FBbt_00053539
 is_a: FBbt:00025991 ! anterior ectoderm derivative
 is_a: FBbt:00051424 ! immature neuron
@@ -150028,7 +150065,7 @@ relationship: develops_into FBbt:00003702 ! adult optic lobe neuron
 [Term]
 id: FBbt:00053540
 name: immature adult optic lobe intrinsic neuron
-def: "Immature neuron that will have its synapses restricted to the optic lobe in the adult." []
+def: "Immature neuron that will have its synapses restricted to the optic lobe in the adult (Fischbach and Dittrich, 1989; Apitz and Salecker, 2014)." [FlyBase:FBrf0049410, FlyBase:FBrf0226618]
 xref: VFB:FBbt_00053540
 is_a: FBbt:00051424 ! immature neuron
 relationship: develops_into FBbt:00007577 ! adult optic lobe intrinsic neuron
@@ -150055,7 +150092,7 @@ relationship: develops_into FBbt:00003817 ! transmedullary Y neuron
 [Term]
 id: FBbt:00053543
 name: immature proximal medullary amacrine neuron Pm3
-def: "Immature form of the proximal medullary amacrine neuron Pm2 (Erclik et al., 2017). It is a Notch OFF hemilineage secondary neuron, born from a medulla forming neuroblast during the Hth temporal window (Erclik et al., 2017)." [FlyBase:FBrf0234567]
+def: "Immature form of the proximal medullary amacrine neuron Pm3 (Erclik et al., 2017). It is a Notch OFF hemilineage secondary neuron, born from a medulla forming neuroblast during the Hth temporal window (Erclik et al., 2017)." [FlyBase:FBrf0234567]
 xref: VFB:FBbt_00053543
 is_a: FBbt:00052664 ! immature secondary neuron
 is_a: FBbt:00053539 ! immature adult optic lobe neuron
@@ -150250,7 +150287,7 @@ relationship: part_of FBbt:00111595 ! adult abdominal segment posterior compartm
 [Term]
 id: FBbt:00053566
 name: mesothoracic sternal adductor muscle motor neuron
-def: "Adult motor neuron that has its soma in the mesothoracic neuromere and innervates the mesothoracic sternal adductor muscle (Azevedo et al., 2024; Cheong et al., 2025). There is one of these on each side and it fasciculates with the mesothoracic leg nerve (Cheong et al., 2025; Bates et al., 2025)." [doi:10.1101/2025.07.31.667571, doi:10.7554/elife.96084, FlyBase:FBrf0259940]
+def: "Adult motor neuron that has its soma in the mesothoracic neuromere and innervates the mesothoracic sternal adductor muscle (Azevedo et al., 2024; Cheong et al., 2025). There is one of these on each side and it fasciculates with the mesothoracic leg nerve (Cheong et al., 2025; Bates et al., 2026)." [doi:10.1038/s41586-026-10735-w, doi:10.7554/elife.96084, FlyBase:FBrf0259940]
 comment: Segmental homologue of similarly-named prothoracic neuron, but unclear from references which muscle from Miller (1950) - FBrf0186027 this innervates.
 synonym: "MNml16" EXACT [FlyBase:FBrf0259940]
 xref: VFB:FBbt_00053566
@@ -150260,7 +150297,7 @@ relationship: fasciculates_with FBbt:00004063 ! adult mesothoracic leg nerve
 [Term]
 id: FBbt:00053567
 name: metathoracic sternal adductor muscle motor neuron
-def: "Adult motor neuron that has its soma in the metathoracic neuromere and innervates the metathoracic sternal adductor muscle (Azevedo et al., 2024; Cheong et al., 2025). There is one of these on each side and it fasciculates with the metathoracic accessory (first abdominal) nerve (Bates et al., 2025)." [doi:10.1101/2025.07.31.667571, doi:10.7554/elife.96084, FlyBase:FBrf0259940]
+def: "Adult motor neuron that has its soma in the metathoracic neuromere and innervates the metathoracic sternal adductor muscle (Azevedo et al., 2024; Cheong et al., 2025). There is one of these on each side and it fasciculates with the metathoracic accessory (first abdominal) nerve (Bates et al., 2026)." [doi:10.1038/s41586-026-10735-w, doi:10.7554/elife.96084, FlyBase:FBrf0259940]
 comment: Segmental homologue of similarly-named prothoracic neuron, but unclear from references which muscle from Miller (1950) - FBrf0186027 this innervates.
 synonym: "MNhl16" EXACT [FlyBase:FBrf0259940]
 xref: VFB:FBbt_00053567
@@ -150270,7 +150307,7 @@ relationship: fasciculates_with FBbt:00004105 ! adult first abdominal nerve
 [Term]
 id: FBbt:00053568
 name: mesothoracic sternal anterior rotator muscle motor neuron
-def: "Adult motor neuron that has its soma in the mesothoracic neuromere and innervates the mesothoracic sternal anterior rotator muscle (Azevedo et al., 2024; Cheong et al., 2025). There are two of these on each side and they fasciculate with the mesothoracic leg nerve (Cheong et al., 2025; Bates et al., 2025)." [doi:10.1101/2025.07.31.667571, doi:10.7554/elife.96084, FlyBase:FBrf0259940]
+def: "Adult motor neuron that has its soma in the mesothoracic neuromere and innervates the mesothoracic sternal anterior rotator muscle (Azevedo et al., 2024; Cheong et al., 2025). There are two of these on each side and they fasciculate with the mesothoracic leg nerve (Cheong et al., 2025; Bates et al., 2026)." [doi:10.1038/s41586-026-10735-w, doi:10.7554/elife.96084, FlyBase:FBrf0259940]
 comment: Segmental homologue of similarly-named prothoracic neuron, but unclear from references which muscle from Miller (1950) - FBrf0186027 this innervates.
 synonym: "MNml36" EXACT [FlyBase:FBrf0259940]
 xref: VFB:FBbt_00053568
@@ -150280,7 +150317,7 @@ relationship: fasciculates_with FBbt:00004063 ! adult mesothoracic leg nerve
 [Term]
 id: FBbt:00053569
 name: metathoracic sternal anterior rotator muscle motor neuron
-def: "Adult motor neuron that has its soma in the metathoracic neuromere and innervates the metathoracic sternal anterior rotator muscle (Azevedo et al., 2024; Cheong et al., 2025). There are two of these on each side and they fasciculate with the metathoracic leg nerve (Bates et al., 2025)." [doi:10.1101/2025.07.31.667571, doi:10.7554/elife.96084, FlyBase:FBrf0259940]
+def: "Adult motor neuron that has its soma in the metathoracic neuromere and innervates the metathoracic sternal anterior rotator muscle (Azevedo et al., 2024; Cheong et al., 2025). There are two of these on each side and they fasciculate with the metathoracic leg nerve (Bates et al., 2026)." [doi:10.1038/s41586-026-10735-w, doi:10.7554/elife.96084, FlyBase:FBrf0259940]
 comment: Segmental homologue of similarly-named prothoracic neuron, but unclear from references which muscle from Miller (1950) - FBrf0186027 this innervates.
 synonym: "MNhl36" EXACT [FlyBase:FBrf0259940]
 xref: VFB:FBbt_00053569
@@ -150290,7 +150327,7 @@ relationship: fasciculates_with FBbt:00004096 ! adult metathoracic leg nerve
 [Term]
 id: FBbt:00053570
 name: mesothoracic sternal posterior rotator muscle motor neuron
-def: "Adult motor neuron that has its soma in the mesothoracic neuromere and innervates the mesothoracic sternal posterior rotator muscle (Azevedo et al., 2024; Cheong et al., 2025). There are four of these on each side and they fasciculate with the mesothoracic leg nerve (Cheong et al., 2025; Bates et al., 2025)." [doi:10.1101/2025.07.31.667571, doi:10.7554/elife.96084, FlyBase:FBrf0259940]
+def: "Adult motor neuron that has its soma in the mesothoracic neuromere and innervates the mesothoracic sternal posterior rotator muscle (Azevedo et al., 2024; Cheong et al., 2025). There are four of these on each side and they fasciculate with the mesothoracic leg nerve (Cheong et al., 2025; Bates et al., 2026)." [doi:10.1038/s41586-026-10735-w, doi:10.7554/elife.96084, FlyBase:FBrf0259940]
 comment: Segmental homologue of similarly-named prothoracic neuron, but unclear from references which muscle from Miller (1950) - FBrf0186027 this innervates.
 synonym: "MNml06" NARROW [FlyBase:FBrf0259940]
 synonym: "MNml33" NARROW [FlyBase:FBrf0259940]
@@ -150302,7 +150339,7 @@ relationship: fasciculates_with FBbt:00004063 ! adult mesothoracic leg nerve
 [Term]
 id: FBbt:00053571
 name: metathoracic sternal posterior rotator muscle motor neuron
-def: "Adult motor neuron that has its soma in the metathoracic neuromere and innervates the metathoracic sternal anterior rotator muscle (Azevedo et al., 2024; Cheong et al., 2025). There are four of these on each side and they fasciculate with the metathoracic leg nerve (Bates et al., 2025)." [doi:10.1101/2025.07.31.667571, doi:10.7554/elife.96084, FlyBase:FBrf0259940]
+def: "Adult motor neuron that has its soma in the metathoracic neuromere and innervates the metathoracic sternal anterior rotator muscle (Azevedo et al., 2024; Cheong et al., 2025). There are four of these on each side and they fasciculate with the metathoracic leg nerve (Bates et al., 2026)." [doi:10.1038/s41586-026-10735-w, doi:10.7554/elife.96084, FlyBase:FBrf0259940]
 comment: Segmental homologue of similarly-named prothoracic neuron, but unclear from references which muscle from Miller (1950) - FBrf0186027 this innervates.
 synonym: "MNhl06" NARROW [FlyBase:FBrf0259940]
 synonym: "MNhl33" NARROW [FlyBase:FBrf0259940]
@@ -150314,7 +150351,7 @@ relationship: fasciculates_with FBbt:00004096 ! adult metathoracic leg nerve
 [Term]
 id: FBbt:00053572
 name: mesothoracic sternotrochanter extensor muscle motor neuron
-def: "Adult motor neuron that has its soma in the mesothoracic neuromere and innervates the mesothoracic sternotrochanter extensor muscle (Azevedo et al., 2024; Cheong et al., 2025). There are three of these on each side and they fasciculate with the mesothoracic leg nerve (Cheong et al., 2025; Bates et al., 2025)." [doi:10.1101/2025.07.31.667571, doi:10.7554/elife.96084, FlyBase:FBrf0259940]
+def: "Adult motor neuron that has its soma in the mesothoracic neuromere and innervates the mesothoracic sternotrochanter extensor muscle (Azevedo et al., 2024; Cheong et al., 2025). There are three of these on each side and they fasciculate with the mesothoracic leg nerve (Cheong et al., 2025; Bates et al., 2026)." [doi:10.1038/s41586-026-10735-w, doi:10.7554/elife.96084, FlyBase:FBrf0259940]
 comment: Segmental homologue of similarly-named prothoracic neuron, but no sternotrochanter extensor in Miller (1950) - FBrf0186027.
 synonym: "MNml08" NARROW [FlyBase:FBrf0259940]
 synonym: "MNml22" NARROW [FlyBase:FBrf0259940]
@@ -151180,6 +151217,591 @@ is_a: FBbt:00005213 ! dendritic arborizing neuron
 is_a: FBbt:00047097 ! primary neuron
 is_a: FBbt:00048284 ! adult multidendritic neuron
 relationship: develops_from FBbt:00007275 ! larval multidendritic class IV neuron
+
+[Term]
+id: FBbt:00053664
+name: immature T2 neuron
+def: "Immature secondary neuron that is a precursor to an adult T2 neuron (Kurmangaliyev et al., 2020)." [FlyBase:FBrf0247594]
+comment: A transcriptional cluster corresponding to this cell type was identified in single-cell RNA-seq data from 0-24h APF. Its identity was assigned because it shares most of its 24h APF cells with the T2 neuron cluster from a separate analysis of 24-96h APF data (Kurmangaliyev et al., 2020).
+synonym: "developing T2 neuron" EXACT []
+xref: VFB:FBbt_00053664
+is_a: FBbt:00052664 ! immature secondary neuron
+is_a: FBbt:00059279 ! immature T neuron
+relationship: develops_into FBbt:00003728 ! T2 neuron
+
+[Term]
+id: FBbt:00053665
+name: immature T2a neuron
+def: "Immature secondary neuron that is a precursor to an adult T2a neuron (Kurmangaliyev et al., 2020)." [FlyBase:FBrf0247594]
+comment: A transcriptional cluster corresponding to this cell type was identified in single-cell RNA-seq data from 0-24h APF. Its identity was assigned because it shares most of its 24h APF cells with the T2a neuron cluster from a separate analysis of 24-96h APF data (Kurmangaliyev et al., 2020). The identity of the T2a neuron cluster in the 24-96h APF analysis was inferred from its similarity to the T2 and T3 clusters, rather than by matching to an adult reference expression profile (Kurmangaliyev et al., 2020).
+synonym: "developing T2a neuron" EXACT []
+xref: VFB:FBbt_00053665
+is_a: FBbt:00052664 ! immature secondary neuron
+is_a: FBbt:00059279 ! immature T neuron
+relationship: develops_into FBbt:00003729 ! T2a neuron
+
+[Term]
+id: FBbt:00053666
+name: immature T3 neuron
+def: "Immature secondary neuron that is a precursor to an adult T3 neuron (Kurmangaliyev et al., 2020)." [FlyBase:FBrf0247594]
+comment: A transcriptional cluster corresponding to this cell type was identified in single-cell RNA-seq data from 0-24h APF. Its identity was assigned because it shares most of its 24h APF cells with the T3 neuron cluster from a separate analysis of 24-96h APF data (Kurmangaliyev et al., 2020).
+synonym: "developing T3 neuron" EXACT []
+xref: VFB:FBbt_00053666
+is_a: FBbt:00052664 ! immature secondary neuron
+is_a: FBbt:00059279 ! immature T neuron
+relationship: develops_into FBbt:00003730 ! T3 neuron
+
+[Term]
+id: FBbt:00053667
+name: immature centrifugal neuron C2
+def: "Immature secondary neuron that is a precursor to an adult centrifugal neuron C2 (Özel et al., 2021)." [FlyBase:FBrf0247762]
+comment: A transcriptional cluster corresponding to this cell type was identified in single-cell RNA-seq data from 15%, 30% and 40% of pupal development. Its identity was assigned by classifying cells from each pupal stage against annotated clusters from the next later stage, starting from adult clusters identified by comparison to bulk transcriptomes (Özel et al., 2021).
+synonym: "developing centrifugal neuron C2" EXACT []
+xref: VFB:FBbt_00053667
+is_a: FBbt:00052664 ! immature secondary neuron
+is_a: FBbt:00053275 ! immature optic lobe centrifugal columnar neuron
+relationship: develops_into FBbt:00003743 ! centrifugal neuron C2
+
+[Term]
+id: FBbt:00053668
+name: immature centrifugal neuron C3
+def: "Immature secondary neuron that is a precursor to an adult centrifugal neuron C3 (Özel et al., 2021)." [FlyBase:FBrf0247762]
+comment: A transcriptional cluster corresponding to this cell type was identified in single-cell RNA-seq data from 15%, 30% and 40% of pupal development. Its identity was assigned by classifying cells from each pupal stage against annotated clusters from the next later stage, starting from adult clusters identified by comparison to bulk transcriptomes (Özel et al., 2021).
+synonym: "developing centrifugal neuron C3" EXACT []
+xref: VFB:FBbt_00053668
+is_a: FBbt:00052664 ! immature secondary neuron
+is_a: FBbt:00053275 ! immature optic lobe centrifugal columnar neuron
+relationship: develops_into FBbt:00003744 ! centrifugal neuron C3
+
+[Term]
+id: FBbt:00053669
+name: immature lobula columnar neuron LC4
+def: "Immature secondary neuron that is a precursor to an adult lobula columnar neuron LC4 (Özel et al., 2021)." [FlyBase:FBrf0247762]
+comment: A transcriptional cluster corresponding to this cell type was identified in single-cell RNA-seq data from 15%, 30% and 40% of pupal development. Its identity was assigned by classifying cells from each pupal stage against annotated clusters from the next later stage, starting from adult clusters identified by comparison to bulk transcriptomes (Özel et al., 2021).
+synonym: "developing lobula columnar neuron LC4" EXACT []
+xref: VFB:FBbt_00053669
+is_a: FBbt:00052664 ! immature secondary neuron
+is_a: FBbt:00053273 ! immature lobula columnar neuron
+relationship: develops_into FBbt:00003874 ! lobula columnar neuron LC4
+
+[Term]
+id: FBbt:00053670
+name: immature lobula columnar neuron LC6
+def: "Immature secondary neuron that is a precursor to an adult lobula columnar neuron LC6 (Özel et al., 2021)." [FlyBase:FBrf0247762]
+comment: A transcriptional cluster corresponding to this cell type was identified in single-cell RNA-seq data from 15%, 30% and 40% of pupal development. Its identity was assigned by classifying cells from each pupal stage against annotated clusters from the next later stage, starting from adult clusters identified by comparison to bulk transcriptomes (Özel et al., 2021).
+synonym: "developing lobula columnar neuron LC6" EXACT []
+xref: VFB:FBbt_00053670
+is_a: FBbt:00052664 ! immature secondary neuron
+is_a: FBbt:00053273 ! immature lobula columnar neuron
+relationship: develops_into FBbt:00003876 ! lobula columnar neuron LC6
+
+[Term]
+id: FBbt:00053671
+name: immature lobula columnar neuron LC10a
+def: "Immature secondary neuron that is a precursor to an adult lobula columnar neuron LC10a (Özel et al., 2021)." [FlyBase:FBrf0247762]
+comment: A transcriptional cluster corresponding to this cell type was identified in single-cell RNA-seq data from 15%, 30% and 40% of pupal development. Its identity was assigned by classifying cells from each pupal stage against annotated clusters from the next later stage, starting from adult clusters identified by comparison to bulk transcriptomes (Özel et al., 2021).
+synonym: "developing lobula columnar neuron LC10a" EXACT []
+xref: VFB:FBbt_00053671
+is_a: FBbt:00052664 ! immature secondary neuron
+is_a: FBbt:00053273 ! immature lobula columnar neuron
+relationship: develops_into FBbt:00111747 ! lobula columnar neuron LC10a
+
+[Term]
+id: FBbt:00053672
+name: immature lobula columnar neuron LC10b
+def: "Immature secondary neuron that is a precursor to an adult lobula columnar neuron LC10b (Özel et al., 2021)." [FlyBase:FBrf0247762]
+comment: A transcriptional cluster corresponding to this cell type was identified in single-cell RNA-seq data from 15%, 30% and 40% of pupal development. Its identity was assigned by classifying cells from each pupal stage against annotated clusters from the next later stage, starting from adult clusters identified by comparison to bulk transcriptomes (Özel et al., 2021).
+synonym: "developing lobula columnar neuron LC10b" EXACT []
+xref: VFB:FBbt_00053672
+is_a: FBbt:00052664 ! immature secondary neuron
+is_a: FBbt:00053273 ! immature lobula columnar neuron
+relationship: develops_into FBbt:00111745 ! lobula columnar neuron LC10b
+
+[Term]
+id: FBbt:00053673
+name: immature lobula columnar neuron LC10c
+def: "Immature secondary neuron that is a precursor to an adult lobula columnar neuron LC10c (Özel et al., 2021)." [FlyBase:FBrf0247762]
+comment: A transcriptional cluster corresponding to this cell type was identified in single-cell RNA-seq data from 15%, 30% and 40% of pupal development. Its identity was assigned by classifying cells from each pupal stage against annotated clusters from the next later stage, starting from an adult cluster that was tentatively identified as LC10c because it correlated with the LC10b bulk transcriptome, but was distinct from the LC10b cluster, and no LC10c bulk transcriptome was available (Özel et al., 2021).
+synonym: "developing lobula columnar neuron LC10c" EXACT []
+xref: VFB:FBbt_00053673
+is_a: FBbt:00052664 ! immature secondary neuron
+is_a: FBbt:00053273 ! immature lobula columnar neuron
+relationship: develops_into FBbt:00111746 ! lobula columnar neuron LC10c
+
+[Term]
+id: FBbt:00053674
+name: immature lobula columnar neuron LC10d
+def: "Immature secondary neuron that is a precursor to an adult lobula columnar neuron LC10d (Özel et al., 2021)." [FlyBase:FBrf0247762]
+comment: A transcriptional cluster corresponding to this cell type was identified in single-cell RNA-seq data from 15%, 30% and 40% of pupal development. Its identity was assigned by classifying cells from each pupal stage against annotated clusters from the next later stage, starting from adult clusters identified by comparison to bulk transcriptomes (Özel et al., 2021).
+synonym: "developing lobula columnar neuron LC10d" EXACT []
+xref: VFB:FBbt_00053674
+is_a: FBbt:00052664 ! immature secondary neuron
+is_a: FBbt:00053273 ! immature lobula columnar neuron
+relationship: develops_into FBbt:00111748 ! lobula columnar neuron LC10d
+
+[Term]
+id: FBbt:00053675
+name: immature lobula columnar neuron LC12
+def: "Immature secondary neuron that is a precursor to an adult lobula columnar neuron LC12 (Özel et al., 2021)." [FlyBase:FBrf0247762]
+comment: A transcriptional cluster corresponding to this cell type was identified in single-cell RNA-seq data from 15%, 30% and 40% of pupal development. Its identity was assigned by classifying cells from each pupal stage against annotated clusters from the next later stage, starting from adult clusters identified by protein marker expression (Özel et al., 2021).
+synonym: "developing lobula columnar neuron LC12" EXACT []
+xref: VFB:FBbt_00053675
+is_a: FBbt:00052664 ! immature secondary neuron
+is_a: FBbt:00053273 ! immature lobula columnar neuron
+relationship: develops_into FBbt:00100484 ! lobula columnar neuron LC12
+
+[Term]
+id: FBbt:00053676
+name: immature lobula columnar neuron LC16
+def: "Immature secondary neuron that is a precursor to an adult lobula columnar neuron LC16 (Özel et al., 2021)." [FlyBase:FBrf0247762]
+comment: A transcriptional cluster corresponding to this cell type was identified in single-cell RNA-seq data from 15%, 30% and 40% of pupal development. Its identity was assigned by classifying cells from each pupal stage against annotated clusters from the next later stage, starting from adult clusters identified by comparison to bulk transcriptomes (Özel et al., 2021).
+synonym: "developing lobula columnar neuron LC16" EXACT []
+xref: VFB:FBbt_00053676
+is_a: FBbt:00052664 ! immature secondary neuron
+is_a: FBbt:00053273 ! immature lobula columnar neuron
+relationship: develops_into FBbt:00111751 ! lobula columnar neuron LC16
+
+[Term]
+id: FBbt:00053677
+name: immature lobula columnar neuron LC17
+def: "Immature secondary neuron that is a precursor to an adult lobula columnar neuron LC17 (Özel et al., 2021)." [FlyBase:FBrf0247762]
+comment: A transcriptional cluster corresponding to this cell type was identified in single-cell RNA-seq data from 15%, 30% and 40% of pupal development. Its identity was assigned by classifying cells from each pupal stage against annotated clusters from the next later stage, starting from adult clusters identified by protein marker expression (Özel et al., 2021).
+synonym: "developing lobula columnar neuron LC17" EXACT []
+xref: VFB:FBbt_00053677
+is_a: FBbt:00052664 ! immature secondary neuron
+is_a: FBbt:00053273 ! immature lobula columnar neuron
+relationship: develops_into FBbt:00111752 ! lobula columnar neuron LC17
+
+[Term]
+id: FBbt:00053678
+name: immature lobula-lobula plate columnar neuron LLPC1
+def: "Immature secondary neuron that is a precursor to an adult lobula-lobula plate columnar neuron LLPC1 (Özel et al., 2021)." [FlyBase:FBrf0247762]
+comment: A transcriptional cluster corresponding to this cell type was identified in single-cell RNA-seq data from 15%, 30% and 40% of pupal development. Its identity was assigned by classifying cells from each pupal stage against annotated clusters from the next later stage, starting from adult clusters identified by comparison to bulk transcriptomes (Özel et al., 2021).
+synonym: "developing lobula-lobula plate columnar neuron LLPC1" EXACT []
+xref: VFB:FBbt_00053678
+is_a: FBbt:00052664 ! immature secondary neuron
+is_a: FBbt:00053539 ! immature adult optic lobe neuron
+relationship: develops_into FBbt:00058227 ! lobula-lobula plate columnar neuron LLPC1
+
+[Term]
+id: FBbt:00053679
+name: immature lobula plate columnar neuron LPC1
+def: "Immature secondary neuron that is a precursor to an adult lobula plate columnar neuron LPC1 (Özel et al., 2021)." [FlyBase:FBrf0247762]
+comment: A transcriptional cluster corresponding to this cell type was identified in single-cell RNA-seq data from 15%, 30% and 40% of pupal development. Its identity was assigned by classifying cells from each pupal stage against annotated clusters from the next later stage, starting from adult clusters identified by comparison to bulk transcriptomes (Özel et al., 2021).
+synonym: "developing lobula plate columnar neuron LPC1" EXACT []
+xref: VFB:FBbt_00053679
+is_a: FBbt:00052664 ! immature secondary neuron
+is_a: FBbt:00053539 ! immature adult optic lobe neuron
+relationship: develops_into FBbt:00111767 ! lobula plate columnar neuron LPC1
+
+[Term]
+id: FBbt:00053680
+name: immature lobula plate-lobula columnar neuron LPLC1
+def: "Immature secondary neuron that is a precursor to an adult lobula plate-lobula columnar neuron LPLC1 (Özel et al., 2021)." [FlyBase:FBrf0247762]
+comment: A transcriptional cluster corresponding to this cell type was identified in single-cell RNA-seq data from 15%, 30% and 40% of pupal development. Its identity was assigned by classifying cells from each pupal stage against annotated clusters from the next later stage, starting from adult clusters identified by comparison to bulk transcriptomes (Özel et al., 2021).
+synonym: "developing lobula plate-lobula columnar neuron LPLC1" EXACT []
+xref: VFB:FBbt_00053680
+is_a: FBbt:00052664 ! immature secondary neuron
+relationship: develops_into FBbt:00111762 ! lobula plate-lobula columnar neuron LPLC1
+
+[Term]
+id: FBbt:00053681
+name: immature lobula plate-lobula columnar neuron LPLC2
+def: "Immature secondary neuron that is a precursor to an adult lobula plate-lobula columnar neuron LPLC2 (Özel et al., 2021)." [FlyBase:FBrf0247762]
+comment: A transcriptional cluster corresponding to this cell type was identified in single-cell RNA-seq data from 15%, 30% and 40% of pupal development. Its identity was assigned by classifying cells from each pupal stage against annotated clusters from the next later stage, starting from adult clusters identified by comparison to bulk transcriptomes (Özel et al., 2021).
+synonym: "developing lobula plate-lobula columnar neuron LPLC2" EXACT []
+xref: VFB:FBbt_00053681
+is_a: FBbt:00052664 ! immature secondary neuron
+relationship: develops_into FBbt:00111763 ! lobula plate-lobula columnar neuron LPLC2
+
+[Term]
+id: FBbt:00053682
+name: immature lamina wide-field 1 neuron
+def: "Immature secondary neuron that is a precursor to an adult lamina wide-field 1 neuron (Özel et al., 2021)." [FlyBase:FBrf0247762]
+comment: A transcriptional cluster corresponding to this cell type was identified in single-cell RNA-seq data from 15%, 30% and 40% of pupal development. Its identity was assigned by classifying cells from each pupal stage against annotated clusters from the next later stage, starting from adult clusters identified by comparison to bulk transcriptomes (Özel et al., 2021).
+synonym: "developing lamina wide-field 1 neuron" EXACT []
+xref: VFB:FBbt_00053682
+is_a: FBbt:00052664 ! immature secondary neuron
+is_a: FBbt:00053539 ! immature adult optic lobe neuron
+is_a: FBbt:00053540 ! immature adult optic lobe intrinsic neuron
+relationship: develops_into FBbt:00003741 ! lamina wide-field 1 neuron
+
+[Term]
+id: FBbt:00053683
+name: immature lamina wide-field 2 neuron
+def: "Immature secondary neuron that is a precursor to an adult lamina wide-field 2 neuron (Özel et al., 2021)." [FlyBase:FBrf0247762]
+comment: A transcriptional cluster corresponding to this cell type was identified in single-cell RNA-seq data from 15%, 30% and 40% of pupal development. Its identity was assigned by classifying cells from each pupal stage against annotated clusters from the next later stage, starting from adult clusters identified by comparison to bulk transcriptomes (Özel et al., 2021).
+synonym: "developing lamina wide-field 2 neuron" EXACT []
+xref: VFB:FBbt_00053683
+is_a: FBbt:00052664 ! immature secondary neuron
+is_a: FBbt:00053539 ! immature adult optic lobe neuron
+is_a: FBbt:00053540 ! immature adult optic lobe intrinsic neuron
+relationship: develops_into FBbt:00110065 ! lamina wide-field 2 neuron
+
+[Term]
+id: FBbt:00053684
+name: immature transmedullary neuron Tm5
+def: "Immature secondary neuron that is a precursor to an adult transmedullary neuron Tm5 (Özel et al., 2021)." [FlyBase:FBrf0247762]
+comment: A transcriptional cluster corresponding to this cell type was identified in single-cell RNA-seq data from 15%, 30% and 40% of pupal development. Its identity was assigned by classifying cells from each pupal stage against annotated clusters from the next later stage, starting from adult clusters identified by comparison to bulk transcriptomes (Özel et al., 2021).
+synonym: "developing transmedullary neuron Tm5" EXACT []
+xref: VFB:FBbt_00053684
+is_a: FBbt:00052664 ! immature secondary neuron
+is_a: FBbt:00053274 ! immature transmedullary neuron
+relationship: develops_into FBbt:00003793 ! transmedullary neuron Tm5
+
+[Term]
+id: FBbt:00053685
+name: immature transmedullary neuron Tm5a
+def: "Immature secondary neuron that is a precursor to an adult transmedullary neuron Tm5a (Özel et al., 2021)." [FlyBase:FBrf0247762]
+comment: A transcriptional cluster corresponding to this cell type was identified in single-cell RNA-seq data from 15%, 30% and 40% of pupal development. Its identity was assigned by classifying cells from each pupal stage against annotated clusters from the next later stage, starting from adult clusters identified by comparison to bulk transcriptomes (Özel et al., 2021).
+synonym: "developing transmedullary neuron Tm5a" EXACT []
+xref: VFB:FBbt_00053685
+is_a: FBbt:00053684 ! immature transmedullary neuron Tm5
+relationship: develops_into FBbt:00110072 ! transmedullary neuron Tm5a
+
+[Term]
+id: FBbt:00053686
+name: immature adult antennal lobe projection neuron D adPN
+def: "Immature secondary neuron that is a precursor to an adult antennal lobe projection neuron D adPN (Yu et al., 2010; Xie et al., 2021)." [FlyBase:FBrf0211729, FlyBase:FBrf0247975]
+comment: Transcriptional clusters corresponding to this cell type were identified in single-cell RNA-seq data from pupal stages (Xie et al., 2021). At 24h APF, the corresponding transcriptional cluster was identified using intersections between projection neuron drivers and GAL4 lines for differentially expressed genes, and clusters at other stages were matched to it based on shared differentially expressed genes and marker expression (Xie et al., 2021).
+synonym: "developing adult antennal lobe projection neuron D adPN" EXACT []
+xref: VFB:FBbt_00053686
+is_a: FBbt:00052664 ! immature secondary neuron
+is_a: FBbt:00053704 ! immature adult uniglomerular antennal lobe projection neuron adPN
+relationship: develops_into FBbt:00067355 ! adult antennal lobe projection neuron D adPN
+
+[Term]
+id: FBbt:00053687
+name: immature adult antennal lobe projection neuron DA3 adPN
+def: "Immature secondary neuron that is a precursor to an adult antennal lobe projection neuron DA3 adPN (Yu et al., 2010; Xie et al., 2021)." [FlyBase:FBrf0211729, FlyBase:FBrf0247975]
+comment: Transcriptional clusters corresponding to this cell type were identified in single-cell RNA-seq data from pupal stages (Xie et al., 2021). At 24h APF, this cluster was assigned by elimination, as the only unassigned adPN cluster among four labelled by a particular driver combination after the other three had been identified using intersectional GAL4 labelling (Xie et al., 2021). Clusters at other stages were matched to it by Xie et al. (2021), based on shared differentially expressed genes and marker expression.
+synonym: "developing adult antennal lobe projection neuron DA3 adPN" EXACT []
+xref: VFB:FBbt_00053687
+is_a: FBbt:00052664 ! immature secondary neuron
+is_a: FBbt:00053704 ! immature adult uniglomerular antennal lobe projection neuron adPN
+relationship: develops_into FBbt:00100384 ! adult antennal lobe projection neuron DA3 adPN
+
+[Term]
+id: FBbt:00053688
+name: immature adult antennal lobe projection neuron DC2 adPN
+def: "Immature secondary neuron that is a precursor to an adult antennal lobe projection neuron DC2 adPN (Yu et al., 2010; Xie et al., 2021)." [FlyBase:FBrf0211729, FlyBase:FBrf0237214, FlyBase:FBrf0247975]
+comment: Transcriptional clusters corresponding to this cell type were identified in single-cell RNA-seq data from pupal stages (Li et al., 2017; Xie et al., 2021). At 24h APF, the corresponding transcriptional cluster was identified using intersections between GH146-GAL4 and drivers for newly identified marker genes (Li et al., 2017). Clusters at other stages were matched to it by Xie et al. (2021), based on shared differentially expressed genes and marker expression.
+synonym: "developing adult antennal lobe projection neuron DC2 adPN" EXACT []
+xref: VFB:FBbt_00053688
+is_a: FBbt:00052664 ! immature secondary neuron
+is_a: FBbt:00053704 ! immature adult uniglomerular antennal lobe projection neuron adPN
+relationship: develops_into FBbt:00067354 ! adult antennal lobe projection neuron DC2 adPN
+
+[Term]
+id: FBbt:00053689
+name: immature adult antennal lobe projection neuron DC3 adPN
+def: "Immature secondary neuron that is a precursor to an adult antennal lobe projection neuron DC3 adPN (Yu et al., 2010; Xie et al., 2021)." [FlyBase:FBrf0211729, FlyBase:FBrf0237214, FlyBase:FBrf0247975]
+comment: Transcriptional clusters corresponding to this cell type were identified in single-cell RNA-seq data from pupal stages (Li et al., 2017; Xie et al., 2021). At 24h APF, the corresponding transcriptional cluster was identified using intersections between GH146-GAL4 and drivers for newly identified marker genes (Li et al., 2017). Mz19-GAL4-labelled cells of this type were followed from 24h APF to adulthood (Li et al., 2017). Clusters at other stages were matched to it by Xie et al. (2021), based on shared differentially expressed genes and marker expression.
+synonym: "developing adult antennal lobe projection neuron DC3 adPN" EXACT []
+xref: VFB:FBbt_00053689
+is_a: FBbt:00052664 ! immature secondary neuron
+is_a: FBbt:00053704 ! immature adult uniglomerular antennal lobe projection neuron adPN
+relationship: develops_into FBbt:00040000 ! adult antennal lobe projection neuron DC3 adPN
+
+[Term]
+id: FBbt:00053690
+name: immature adult antennal lobe projection neuron DL1 adPN
+def: "Immature secondary neuron that is a precursor to an adult antennal lobe projection neuron DL1 adPN (Yu et al., 2010; Xie et al., 2021)." [FlyBase:FBrf0211729, FlyBase:FBrf0247975]
+comment: Transcriptional clusters corresponding to this cell type were identified in single-cell RNA-seq data from pupal stages (Xie et al., 2021). At 24h APF, the corresponding transcriptional cluster was identified using intersections between projection neuron drivers and GAL4 lines for differentially expressed genes, and clusters at other stages were matched to it based on shared differentially expressed genes and marker expression (Xie et al., 2021).
+synonym: "developing adult antennal lobe projection neuron DL1 adPN" EXACT []
+xref: VFB:FBbt_00053690
+is_a: FBbt:00052664 ! immature secondary neuron
+is_a: FBbt:00053704 ! immature adult uniglomerular antennal lobe projection neuron adPN
+relationship: develops_into FBbt:00067353 ! adult antennal lobe projection neuron DL1 adPN
+
+[Term]
+id: FBbt:00053691
+name: immature adult antennal lobe projection neuron DM6 adPN
+def: "Immature secondary neuron that is a precursor to an adult antennal lobe projection neuron DM6 adPN (Yu et al., 2010; Xie et al., 2021)." [FlyBase:FBrf0211729, FlyBase:FBrf0247975]
+comment: Transcriptional clusters corresponding to this cell type were identified in single-cell RNA-seq data from pupal stages (Xie et al., 2021). At 24h APF, the corresponding transcriptional cluster was identified using intersections between projection neuron drivers and GAL4 lines for differentially expressed genes, and clusters at other stages were matched to it based on shared differentially expressed genes and marker expression (Xie et al., 2021).
+synonym: "developing adult antennal lobe projection neuron DM6 adPN" EXACT []
+xref: VFB:FBbt_00053691
+is_a: FBbt:00052664 ! immature secondary neuron
+is_a: FBbt:00053704 ! immature adult uniglomerular antennal lobe projection neuron adPN
+relationship: develops_into FBbt:00067360 ! adult antennal lobe projection neuron DM6 adPN
+
+[Term]
+id: FBbt:00053692
+name: immature adult antennal lobe projection neuron VA1d adPN
+def: "Immature secondary neuron that is a precursor to an adult antennal lobe projection neuron VA1d adPN (Yu et al., 2010; Xie et al., 2021)." [FlyBase:FBrf0211729, FlyBase:FBrf0237214, FlyBase:FBrf0247975]
+comment: Transcriptional clusters corresponding to this cell type were identified in single-cell RNA-seq data from pupal stages (Li et al., 2017; Xie et al., 2021). At 24h APF, the corresponding transcriptional cluster was identified using intersections between GH146-GAL4 and drivers for newly identified marker genes (Li et al., 2017). Mz19-GAL4-labelled cells of this type were followed from 24h APF to adulthood (Li et al., 2017). Clusters at other stages were matched to it by Xie et al. (2021), based on shared differentially expressed genes and marker expression.
+synonym: "developing adult antennal lobe projection neuron VA1d adPN" EXACT []
+xref: VFB:FBbt_00053692
+is_a: FBbt:00052664 ! immature secondary neuron
+is_a: FBbt:00053704 ! immature adult uniglomerular antennal lobe projection neuron adPN
+relationship: develops_into FBbt:00067357 ! adult antennal lobe projection neuron VA1d adPN
+
+[Term]
+id: FBbt:00053693
+name: immature adult antennal lobe projection neuron VA1v adPN
+def: "Immature secondary neuron that is a precursor to an adult antennal lobe projection neuron VA1v adPN (Yu et al., 2010; Xie et al., 2021)." [FlyBase:FBrf0211729, FlyBase:FBrf0247975]
+comment: Transcriptional clusters corresponding to this cell type were identified in single-cell RNA-seq data from pupal stages (Xie et al., 2021). At 24h APF, the corresponding transcriptional cluster was identified using intersections between projection neuron drivers and GAL4 lines for differentially expressed genes, and clusters at other stages were matched to it based on shared differentially expressed genes and marker expression (Xie et al., 2021).
+synonym: "developing adult antennal lobe projection neuron VA1v adPN" EXACT []
+xref: VFB:FBbt_00053693
+is_a: FBbt:00052664 ! immature secondary neuron
+is_a: FBbt:00053704 ! immature adult uniglomerular antennal lobe projection neuron adPN
+relationship: develops_into FBbt:00067361 ! adult antennal lobe projection neuron VA1v adPN
+
+[Term]
+id: FBbt:00053694
+name: immature adult antennal lobe projection neuron VM2 adPN
+def: "Immature secondary neuron that is a precursor to an adult antennal lobe projection neuron VM2 adPN (Yu et al., 2010; Xie et al., 2021)." [FlyBase:FBrf0211729, FlyBase:FBrf0237214, FlyBase:FBrf0247975]
+comment: Transcriptional clusters corresponding to this cell type were identified in single-cell RNA-seq data from pupal stages (Li et al., 2017; Xie et al., 2021). At 24h APF, the corresponding transcriptional cluster was identified using intersections between GH146-GAL4 and drivers for newly identified marker genes (Li et al., 2017). Clusters at other stages were matched to it by Xie et al. (2021), based on shared differentially expressed genes and marker expression.
+synonym: "developing adult antennal lobe projection neuron VM2 adPN" EXACT []
+xref: VFB:FBbt_00053694
+is_a: FBbt:00052664 ! immature secondary neuron
+is_a: FBbt:00053704 ! immature adult uniglomerular antennal lobe projection neuron adPN
+relationship: develops_into FBbt:00067359 ! adult antennal lobe projection neuron VM2 adPN
+
+[Term]
+id: FBbt:00053695
+name: immature adult antennal lobe projection neuron VM5v adPN
+def: "Immature secondary neuron that is a precursor to an adult antennal lobe projection neuron VM5v adPN (Yu et al., 2010; Xie et al., 2021)." [FlyBase:FBrf0211729, FlyBase:FBrf0247975]
+comment: Transcriptional clusters corresponding to this cell type were identified in single-cell RNA-seq data from pupal stages (Xie et al., 2021). Two transcriptional clusters at 24h APF were identified as VM7 or VM5v adPNs using intersectional GAL4 labelling, but could not be distinguished from each other (Xie et al., 2021).
+synonym: "developing adult antennal lobe projection neuron VM5v adPN" EXACT []
+xref: VFB:FBbt_00053695
+is_a: FBbt:00052664 ! immature secondary neuron
+is_a: FBbt:00053704 ! immature adult uniglomerular antennal lobe projection neuron adPN
+relationship: develops_into FBbt:00100386 ! adult antennal lobe projection neuron VM5v adPN
+
+[Term]
+id: FBbt:00053696
+name: immature adult antennal lobe projection neuron VM7 adPN
+def: "Immature secondary neuron that is a precursor to an adult antennal lobe projection neuron VM7 adPN (Yu et al., 2010; Xie et al., 2021)." [FlyBase:FBrf0211729, FlyBase:FBrf0247975]
+comment: Transcriptional clusters corresponding to this cell type were identified in single-cell RNA-seq data from pupal stages (Xie et al., 2021). Two transcriptional clusters at 24h APF were identified as VM7 or VM5v adPNs using intersectional GAL4 labelling, but could not be distinguished from each other (Xie et al., 2021).
+synonym: "developing adult antennal lobe projection neuron VM7 adPN" EXACT []
+xref: VFB:FBbt_00053696
+is_a: FBbt:00052664 ! immature secondary neuron
+is_a: FBbt:00053704 ! immature adult uniglomerular antennal lobe projection neuron adPN
+relationship: develops_into FBbt:00067358 ! adult antennal lobe projection neuron VM7 adPN
+
+[Term]
+id: FBbt:00053697
+name: immature adult antennal lobe projection neuron DA1 lPN
+def: "Immature secondary neuron that is a precursor to an adult antennal lobe projection neuron DA1 lPN (Xie et al., 2021)." [FlyBase:FBrf0237214, FlyBase:FBrf0247975]
+comment: Transcriptional clusters corresponding to this cell type were identified in single-cell RNA-seq data from pupal stages (Li et al., 2017; Xie et al., 2021). At 24h APF, the corresponding transcriptional cluster was identified using intersections between GH146-GAL4 and drivers for newly identified marker genes (Li et al., 2017). Mz19-GAL4-labelled cells of this type were followed from 24h APF to adulthood (Li et al., 2017). Clusters at other stages were matched to it by Xie et al. (2021), based on shared differentially expressed genes and marker expression. At 24h APF, these cells form two transcriptional clusters, with fru expression only detected in the larger cluster (Li et al., 2017). DA1 lPNs are born in two time windows separated by more than 24 hours, which may contribute to this heterogeneity (Li et al., 2017).
+synonym: "developing adult antennal lobe projection neuron DA1 lPN" EXACT []
+xref: VFB:FBbt_00053697
+is_a: FBbt:00052664 ! immature secondary neuron
+relationship: develops_into FBbt:00067363 ! adult antennal lobe projection neuron DA1 lPN
+
+[Term]
+id: FBbt:00053698
+name: immature adult antennal lobe projection neuron DL3 lPN
+def: "Immature secondary neuron that is a precursor to an adult antennal lobe projection neuron DL3 lPN (Xie et al., 2021)." [FlyBase:FBrf0237214, FlyBase:FBrf0247975]
+comment: Transcriptional clusters corresponding to this cell type were identified in single-cell RNA-seq data from pupal stages (Li et al., 2017; Xie et al., 2021). At 24h APF, the corresponding transcriptional cluster was identified using intersections between GH146-GAL4 and drivers for newly identified marker genes (Li et al., 2017). Clusters at other stages were matched to it by Xie et al. (2021), based on shared differentially expressed genes and marker expression.
+synonym: "developing adult antennal lobe projection neuron DL3 lPN" EXACT []
+xref: VFB:FBbt_00053698
+is_a: FBbt:00052664 ! immature secondary neuron
+relationship: develops_into FBbt:00067364 ! adult antennal lobe projection neuron DL3 lPN
+
+[Term]
+id: FBbt:00053699
+name: immature adult antennal lobe projection neuron DM2 lPN
+def: "Immature secondary neuron that is a precursor to an adult antennal lobe projection neuron DM2 lPN (Xie et al., 2021)." [FlyBase:FBrf0247975]
+comment: Transcriptional clusters corresponding to this cell type were identified in single-cell RNA-seq data from pupal stages (Xie et al., 2021). At 24h APF, the corresponding transcriptional cluster was identified using intersections between projection neuron drivers and GAL4 lines for differentially expressed genes, and clusters at other stages were matched to it based on shared differentially expressed genes and marker expression (Xie et al., 2021).
+synonym: "developing adult antennal lobe projection neuron DM2 lPN" EXACT []
+xref: VFB:FBbt_00053699
+is_a: FBbt:00052664 ! immature secondary neuron
+relationship: develops_into FBbt:00067368 ! adult antennal lobe projection neuron DM2 lPN
+
+[Term]
+id: FBbt:00053700
+name: immature adult antennal lobe projection neuron VA5 lPN
+def: "Immature secondary neuron that is a precursor to an adult antennal lobe projection neuron VA5 lPN (Xie et al., 2021)." [FlyBase:FBrf0247975]
+comment: Transcriptional clusters corresponding to this cell type were identified in single-cell RNA-seq data from pupal stages (Xie et al., 2021). At 24h APF, the corresponding transcriptional cluster was identified using intersections between projection neuron drivers and GAL4 lines for differentially expressed genes, and clusters at other stages were matched to it based on shared differentially expressed genes and marker expression (Xie et al., 2021).
+synonym: "developing adult antennal lobe projection neuron VA5 lPN" EXACT []
+xref: VFB:FBbt_00053700
+is_a: FBbt:00052664 ! immature secondary neuron
+relationship: develops_into FBbt:00067366 ! adult antennal lobe projection neuron VA5 lPN
+
+[Term]
+id: FBbt:00053701
+name: immature adult antennal lobe projection neuron VC2 lPN
+def: "Immature secondary neuron that is a precursor to an adult antennal lobe projection neuron VC2 lPN (Xie et al., 2021)." [FlyBase:FBrf0247975]
+comment: Transcriptional clusters corresponding to this cell type were identified in single-cell RNA-seq data from pupal stages (Xie et al., 2021). At 24h APF, this cluster was assigned by elimination, as the last unassigned lPN cluster among those labelled by a particular driver combination after the others had been identified using intersectional GAL4 labelling (Xie et al., 2021). Clusters at other stages were matched to it by Xie et al. (2021), based on shared differentially expressed genes and marker expression.
+synonym: "developing adult antennal lobe projection neuron VC2 lPN" EXACT []
+xref: VFB:FBbt_00053701
+is_a: FBbt:00052664 ! immature secondary neuron
+relationship: develops_into FBbt:00007449 ! adult antennal lobe projection neuron VC2 lPN
+
+[Term]
+id: FBbt:00053702
+name: pupal antennal lobe projection neuron DA1 vPN
+def: "Antennal lobe projection neuron of the pupa that will become an adult antennal lobe projection neuron DA1 vPN (Xie et al., 2021)." [FlyBase:FBrf0247975]
+comment: Transcriptional clusters corresponding to this cell type were identified in single-cell RNA-seq data from pupal stages (Xie et al., 2021). At 24h APF, the corresponding cluster was identified as a vPN cluster expressing a marker not expressed by DA1 lPNs, and intersectional labelling with a driver for this marker showed innervation of glomerulus DA1 (Xie et al., 2021). It is not known whether these cells are larval-born neurons (immature at pupal stages) or embryonic-born neurons (remodelling at pupal stages).
+synonym: "pupal DA1 vPN" EXACT []
+xref: VFB:FBbt_00053702
+is_a: FBbt:00053703 ! pupal antennal lobe projection neuron vPN
+relationship: develops_into FBbt:00067372 ! adult antennal lobe projection neuron DA1 vPN
+
+[Term]
+id: FBbt:00053703
+name: pupal antennal lobe projection neuron vPN
+def: "Antennal lobe projection neuron of the pupa that will become an adult antennal lobe projection neuron vPN (Xie et al., 2021)." [FlyBase:FBrf0237214, FlyBase:FBrf0247975]
+comment: Transcriptional clusters corresponding to this cell type were identified in single-cell RNA-seq data from pupal stages (Li et al., 2017; Xie et al., 2021). vPN clusters were identified at 24h APF by the expression of known vPN markers (Li et al., 2017; Xie et al., 2021). It is not known whether these cells are larval-born neurons (immature at pupal stages) or embryonic-born neurons (remodelling at pupal stages).
+synonym: "pupal vPN" EXACT []
+xref: VFB:FBbt_00053703
+is_a: FBbt:00053585 ! developing adult antennal lobe projection neuron
+is_a: FBbt:00067351 ! antennal lobe projection neuron vPN
+relationship: develops_into FBbt:00007437 ! adult antennal lobe projection neuron vPN
+relationship: part_of FBbt:00110194 ! pupal brain
+
+[Term]
+id: FBbt:00053704
+name: immature adult uniglomerular antennal lobe projection neuron adPN
+def: "Immature neuron that is a precursor to an adult uniglomerular antennal lobe projection neuron adPN (Xie et al., 2021)." [FlyBase:FBrf0247975]
+comment: Xie et al. (2021) identified two transcriptional clusters at 24h APF as VM7 or VM5v adPNs, but could not distinguish them from each other.
+synonym: "developing adult uniglomerular antennal lobe projection neuron adPN" BROAD []
+xref: VFB:FBbt_00053704
+is_a: FBbt:00051424 ! immature neuron
+relationship: develops_into FBbt:00100368 ! adult uniglomerular antennal lobe projection neuron adPN
+
+[Term]
+id: FBbt:00053705
+name: pupal antennal lobe projection neuron DA4l adPN
+def: "Pupal form of the embryonically born uniglomerular antennal lobe projection neuron that will innervate antennal lobe glomerulus DA4l in the adult (Yu et al., 2010; Xie et al., 2021). It is a primary neuron that functions in the larval olfactory system and, during early metamorphosis, prunes the terminal branches of its dendrites and axon and then re-extends its dendrites into the developing adult antennal lobe and its axon into the mushroom body and lateral horn (Xie et al., 2021)." [FlyBase:FBrf0211729, FlyBase:FBrf0247975]
+comment: Transcriptional clusters corresponding to this cell type were identified in single-cell RNA-seq data from pupal stages (Xie et al., 2021). At 24h APF, the corresponding transcriptional cluster was identified using intersections between projection neuron drivers and GAL4 lines for differentially expressed genes, and clusters at other stages were matched to it based on shared differentially expressed genes and marker expression (Xie et al., 2021). At 0h APF, DA4l and VA6 PNs map to a transcriptional cluster of embryonically born PNs that is distinct from that of larval-born PNs and has higher expression of genes associated with neurite pruning (Xie et al., 2021).
+synonym: "pupal DA4l adPN" EXACT []
+synonym: "remodelling antennal lobe projection neuron DA4l adPN" EXACT []
+xref: VFB:FBbt_00053705
+is_a: FBbt:00052302 ! remodelling neuron
+is_a: FBbt:00052517 ! primary interneuron
+is_a: FBbt:00053585 ! developing adult antennal lobe projection neuron
+is_a: FBbt:00067349 ! antennal lobe projection neuron adPN
+relationship: develops_directly_from FBbt:00007225 ! larval antennal lobe projection neuron
+relationship: develops_into FBbt:00100367 ! adult antennal lobe projection neuron DA4l adPN
+relationship: part_of FBbt:00110194 ! pupal brain
+
+[Term]
+id: FBbt:00053706
+name: pupal antennal lobe projection neuron VA6 adPN
+def: "Pupal form of the embryonically born uniglomerular antennal lobe projection neuron that will innervate antennal lobe glomerulus VA6 in the adult (Yu et al., 2010; Xie et al., 2021). It is a primary neuron that functions in the larval olfactory system and, during early metamorphosis, prunes the terminal branches of its dendrites and axon and then re-extends its dendrites into the developing adult antennal lobe and its axon into the mushroom body and lateral horn (Xie et al., 2021)." [FlyBase:FBrf0211729, FlyBase:FBrf0247975]
+comment: Transcriptional clusters corresponding to this cell type were identified in single-cell RNA-seq data from pupal stages (Xie et al., 2021). At 24h APF, the corresponding transcriptional cluster was identified using intersections between projection neuron drivers and GAL4 lines for differentially expressed genes, and clusters at other stages were matched to it based on shared differentially expressed genes and marker expression (Xie et al., 2021). At 0h APF, DA4l and VA6 PNs map to a transcriptional cluster of embryonically born PNs that is distinct from that of larval-born PNs and has higher expression of genes associated with neurite pruning (Xie et al., 2021).
+synonym: "pupal VA6 adPN" EXACT []
+synonym: "remodelling antennal lobe projection neuron VA6 adPN" EXACT []
+xref: VFB:FBbt_00053706
+is_a: FBbt:00052302 ! remodelling neuron
+is_a: FBbt:00052517 ! primary interneuron
+is_a: FBbt:00053585 ! developing adult antennal lobe projection neuron
+is_a: FBbt:00067349 ! antennal lobe projection neuron adPN
+relationship: develops_directly_from FBbt:00007225 ! larval antennal lobe projection neuron
+relationship: develops_into FBbt:00007447 ! adult antennal lobe projection neuron VA6 adPN
+relationship: part_of FBbt:00110194 ! pupal brain
+
+[Term]
+id: FBbt:00053707
+name: pupal antennal lobe projection neuron VA2 adPN
+def: "Pupal form of the embryonically born uniglomerular antennal lobe projection neuron that will innervate antennal lobe glomerulus VA2 in the adult (Yu et al., 2010; Xie et al., 2021). It is a primary neuron that functions in the larval olfactory system and, during early metamorphosis, prunes the terminal branches of its dendrites and axon and then re-extends its dendrites into the developing adult antennal lobe and its axon into the mushroom body and lateral horn (Xie et al., 2021)." [FlyBase:FBrf0211729, FlyBase:FBrf0247975]
+comment: Transcriptional clusters corresponding to this cell type were identified in single-cell RNA-seq data from pupal stages (Xie et al., 2021). At 24h APF, the corresponding transcriptional cluster was identified using intersections between projection neuron drivers and GAL4 lines for differentially expressed genes, and clusters at other stages were matched to it based on shared differentially expressed genes and marker expression (Xie et al., 2021).
+synonym: "pupal VA2 adPN" EXACT []
+synonym: "remodelling antennal lobe projection neuron VA2 adPN" EXACT []
+xref: VFB:FBbt_00053707
+is_a: FBbt:00052302 ! remodelling neuron
+is_a: FBbt:00052517 ! primary interneuron
+is_a: FBbt:00053585 ! developing adult antennal lobe projection neuron
+is_a: FBbt:00067349 ! antennal lobe projection neuron adPN
+relationship: develops_directly_from FBbt:00007225 ! larval antennal lobe projection neuron
+relationship: develops_into FBbt:00067352 ! adult antennal lobe projection neuron VA2 adPN
+relationship: part_of FBbt:00110194 ! pupal brain
+
+[Term]
+id: FBbt:00053708
+name: pupal mushroom body anterior paired lateral cell
+def: "Mushroom body anterior paired lateral (APL) cell of the pupa, which develops from the larval APL cell and develops into the adult APL cell. There is one of these cells per hemisphere (Xie et al., 2021)." [FlyBase:FBrf0247975]
+comment: APL neurons are labelled by GH146-GAL4 and were identified as transcriptional clusters at 24h APF by the expression of markers not expressed by projection neurons (Li et al., 2017; Xie et al., 2021).
+synonym: "pupal APL" EXACT []
+synonym: "pupal APL neuron" EXACT []
+synonym: "remodelling mushroom body anterior paired lateral cell" EXACT []
+xref: VFB:FBbt_00053708
+is_a: FBbt:00025991 ! anterior ectoderm derivative
+is_a: FBbt:00052302 ! remodelling neuron
+is_a: FBbt:00052517 ! primary interneuron
+relationship: develops_directly_from FBbt:00110979 ! larval mushroom body anterior paired lateral cell
+relationship: develops_into FBbt:00100222 ! adult mushroom body anterior paired lateral cell
+relationship: part_of FBbt:00110194 ! pupal brain
+
+[Term]
+id: FBbt:00053709
+name: adult postcephalic fat mass
+def: "Part of the adult fat body that is found outside of the head, in the thorax and abdomen (Min et al., 2008; Lu et al., 2023). It contains the majority of the adult fat body tissue (Ott et al., 2024)." [FlyBase:FBrf0205500, FlyBase:FBrf0256843, FlyBase:FBrf0260129]
+comment: This tissue has also been referred to as the 'peripheral fat body' (Hwangbo et al., 2004) and the 'visceral fat body' (Min et al., 2008), in contrast to the pericerebral fat body of the head. These names are used differently in general insect anatomy (see 'adult subcuticular fat mass' and 'adult visceral fat mass').
+synonym: "adult body fat body" EXACT [FlyBase:FBrf0256843]
+synonym: "peripheral fat body" RELATED [FlyBase:FBrf0179031]
+synonym: "visceral fat body" RELATED [FlyBase:FBrf0205500]
+is_a: FBbt:00007003 ! portion of tissue
+relationship: part_of FBbt:00003209 ! adult fat body
+relationship: part_of FBbt:00059181 ! adult postcephalic region
+
+[Term]
+id: FBbt:00053710
+name: adult thoracic fat mass
+def: "Part of the adult fat body that is found in the thorax (Pokrzywa et al., 2010; Ott et al., 2024). It includes fat body attached to the dorsal epidermis and cuticle of the thorax, and fat body cells surrounding the indirect flight muscles (Pokrzywa et al., 2010)." [FlyBase:FBrf0212549, FlyBase:FBrf0260129]
+synonym: "thoracic fat body" EXACT [FlyBase:FBrf0212549]
+is_a: FBbt:00007003 ! portion of tissue
+relationship: part_of FBbt:00003018 ! adult thorax
+relationship: part_of FBbt:00053709 ! adult postcephalic fat mass
+
+[Term]
+id: FBbt:00053711
+name: adult visceral fat mass
+def: "Part of the adult fat body that is associated with internal organs, rather than forming sheets beneath the body wall (Haunerland and Shirk, 1995). In the adult, this includes fat body surrounding the heart and parts of the female reproductive system (Wasserthal, 2007; McQueen et al., 2022; Lei et al., 2023)." [doi:10.1146/annurev.en.40.010195.001005, FlyBase:FBrf0202990, FlyBase:FBrf0253444, FlyBase:FBrf0256185]
+comment: Min et al. (2008) used 'visceral fat body' to refer to all of the fat body of the thorax and abdomen (see 'adult postcephalic fat mass').
+synonym: "perivisceral fat body" EXACT [doi:10.1146/annurev.en.40.010195.001005]
+synonym: "visceral fat body" EXACT [doi:10.1146/annurev.en.40.010195.001005]
+is_a: FBbt:00007003 ! portion of tissue
+relationship: part_of FBbt:00053709 ! adult postcephalic fat mass
+
+[Term]
+id: FBbt:00053712
+name: adult postcephalic fat cell
+def: "Any fat cell (FBbt:00046052) that is part of some adult postcephalic fat mass (FBbt:00053709)." [FBC:Autogenerated]
+synonym: "adult body fat cell" EXACT []
+is_a: FBbt:00049949 ! adult fat cell
+relationship: part_of FBbt:00053709 ! adult postcephalic fat mass
+
+[Term]
+id: FBbt:00053713
+name: adult visceral fat cell
+def: "Any fat cell (FBbt:00046052) that is part of some adult visceral fat mass (FBbt:00053711)." [FBC:Autogenerated]
+is_a: FBbt:00053712 ! adult postcephalic fat cell
+relationship: part_of FBbt:00053711 ! adult visceral fat mass
+
+[Term]
+id: FBbt:00053714
+name: adult thoracic fat cell
+def: "Any fat cell (FBbt:00046052) that is part of some adult thoracic fat mass (FBbt:00053710)." [FBC:Autogenerated]
+is_a: FBbt:00053712 ! adult postcephalic fat cell
+relationship: part_of FBbt:00053710 ! adult thoracic fat mass
+
+[Term]
+id: FBbt:00053715
+name: adult pericardial fat cell
+def: "Any fat cell (FBbt:00046052) that is part of some adult pericardial fat mass (FBbt:00003212)." [FBC:Autogenerated]
+is_a: FBbt:00053713 ! adult visceral fat cell
+is_a: FBbt:00059155 ! adult abdominal fat cell
+relationship: part_of FBbt:00003212 ! adult pericardial fat mass
+
+[Term]
+id: FBbt:00053716
+name: female accessory gland fat cell
+def: "Any fat cell (FBbt:00046052) that is part of some female accessory gland fat mass (FBbt:00052059)." [FBC:Autogenerated]
+is_a: FBbt:00053713 ! adult visceral fat cell
+is_a: FBbt:00059155 ! adult abdominal fat cell
+relationship: part_of FBbt:00052059 ! female accessory gland fat mass
+
+[Term]
+id: FBbt:00053717
+name: spermathecal fat cell
+def: "Any fat cell (FBbt:00046052) that is part of some spermathecal fat mass (FBbt:00052073)." [FBC:Autogenerated]
+is_a: FBbt:00053713 ! adult visceral fat cell
+is_a: FBbt:00059155 ! adult abdominal fat cell
+relationship: part_of FBbt:00052073 ! spermathecal fat mass
 
 [Term]
 id: FBbt:00057000
@@ -153634,7 +154256,9 @@ subset: cur
 synonym: "LLPC1" EXACT VFB_SYMBOL []
 xref: VFB:FBbt_00058227
 is_a: FBbt:00003881 ! lobula-lobula plate columnar neuron LLPC
+is_a: FBbt:00047096 ! secondary neuron
 is_a: FBbt:00058205 ! adult cholinergic neuron
+relationship: develops_from FBbt:00053678 ! immature lobula-lobula plate columnar neuron LLPC1
 relationship: receives_synaptic_input_in_region FBbt:00003856 ! lobula layer 4
 relationship: receives_synaptic_input_in_region FBbt:00003886 ! lobula plate layer 1
 relationship: receives_synaptic_input_in_region FBbt:00003887 ! lobula plate layer 2
@@ -162470,16 +163094,17 @@ id: FBbt:00059155
 name: adult abdominal fat cell
 def: "Any fat cell (FBbt:00046052) that is part of some adult abdominal fat mass (FBbt:00003213)." [FBC:Autogenerated]
 subset: cur
-is_a: FBbt:00049949 ! adult fat cell
+is_a: FBbt:00053712 ! adult postcephalic fat cell
 relationship: part_of FBbt:00003213 ! adult abdominal fat mass
 
 [Term]
 id: FBbt:00059156
-name: adult peripheral fat cell
-def: "Any fat cell (FBbt:00046052) that is part of some adult peripheral fat mass (FBbt:00003210)." [FBC:Autogenerated]
+name: adult subcuticular fat cell
+def: "Any fat cell (FBbt:00046052) that is part of some adult subcuticular fat mass (FBbt:00003210)." [FBC:Autogenerated]
 subset: cur
-is_a: FBbt:00049949 ! adult fat cell
-relationship: part_of FBbt:00003210 ! adult peripheral fat mass
+synonym: "adult peripheral fat cell" RELATED []
+is_a: FBbt:00053712 ! adult postcephalic fat cell
+relationship: part_of FBbt:00003210 ! adult subcuticular fat mass
 
 [Term]
 id: FBbt:00059157
@@ -163236,8 +163861,8 @@ relationship: fasciculates_with FBbt:00051751 ! adult anterior ventral primary n
 id: FBbt:00059240
 name: lateral accessory lobe-posterior slope contralateral ascending neuron
 def: "An ascending neuron that innervates the prothoracic and mesothoracic leg neuropils and projects to the contralateral posterior slope and lateral accessory lobe (Fujiwara et al., 2022). It contributes to the stride-coupled modulation of horizontal system neurons." [FlyBase:FBrf0253908]
-synonym: "AN06B011" EXACT [doi:10.1101/2025.07.31.667571]
-synonym: "AN_multi_10" EXACT [doi:10.1101/2025.07.31.667571]
+synonym: "AN06B011" EXACT [doi:10.1038/s41586-026-10735-w]
+synonym: "AN_multi_10" EXACT [doi:10.1038/s41586-026-10735-w]
 synonym: "LAL-PS-ANcontra" EXACT VFB_SYMBOL [FlyBase:FBrf0253908]
 xref: VFB:FBbt_00059240
 is_a: FBbt:00048301 ! adult ascending neuron
@@ -165779,6 +166404,7 @@ is_a: FBbt:00053397 ! antennal lobe projection neuron to mushroom body
 is_a: FBbt:00053398 ! adult antennal lobe projection neuron to lateral horn
 is_a: FBbt:00058205 ! adult cholinergic neuron
 is_a: FBbt:00100368 ! adult uniglomerular antennal lobe projection neuron adPN
+relationship: develops_from FBbt:00053707 ! pupal antennal lobe projection neuron VA2 adPN
 relationship: receives_synaptic_input_throughout FBbt:00003942 ! antennal lobe glomerulus VA2
 relationship: sends_synaptic_output_to_region FBbt:00007385 ! calyx of adult mushroom body
 
@@ -165796,11 +166422,13 @@ synonym: "mAPT (DL1)" EXACT [FlyBrain_NDB:10489]
 xref: FlyBrain_NDB:10489
 xref: VFB:FBbt_00067353
 is_a: FBbt:00007456 ! persistent antennal lobe projection neuron
+is_a: FBbt:00047096 ! secondary neuron
 is_a: FBbt:00051299 ! adult olfactory projection neuron
 is_a: FBbt:00053397 ! antennal lobe projection neuron to mushroom body
 is_a: FBbt:00053398 ! adult antennal lobe projection neuron to lateral horn
 is_a: FBbt:00058205 ! adult cholinergic neuron
 is_a: FBbt:00100368 ! adult uniglomerular antennal lobe projection neuron adPN
+relationship: develops_from FBbt:00053690 ! immature adult antennal lobe projection neuron DL1 adPN
 relationship: receives_synaptic_input_throughout FBbt:00003968 ! antennal lobe glomerulus DL1
 relationship: sends_synaptic_output_to_region FBbt:00007385 ! calyx of adult mushroom body
 
@@ -165814,11 +166442,13 @@ synonym: "DC2 adPN" EXACT []
 synonym: "DC2_adPN" EXACT VFB_SYMBOL []
 xref: FlyBrain_NDB:10487
 xref: VFB:FBbt_00067354
+is_a: FBbt:00047096 ! secondary neuron
 is_a: FBbt:00051299 ! adult olfactory projection neuron
 is_a: FBbt:00053397 ! antennal lobe projection neuron to mushroom body
 is_a: FBbt:00053398 ! adult antennal lobe projection neuron to lateral horn
 is_a: FBbt:00058205 ! adult cholinergic neuron
 is_a: FBbt:00100368 ! adult uniglomerular antennal lobe projection neuron adPN
+relationship: develops_from FBbt:00053688 ! immature adult antennal lobe projection neuron DC2 adPN
 relationship: receives_synaptic_input_throughout FBbt:00003962 ! antennal lobe glomerulus DC2
 relationship: sends_synaptic_output_to_region FBbt:00007385 ! calyx of adult mushroom body
 
@@ -165832,11 +166462,13 @@ synonym: "D adPN" EXACT []
 synonym: "D_adPN" EXACT VFB_SYMBOL []
 xref: FlyBrain_NDB:10484
 xref: VFB:FBbt_00067355
+is_a: FBbt:00047096 ! secondary neuron
 is_a: FBbt:00051299 ! adult olfactory projection neuron
 is_a: FBbt:00053397 ! antennal lobe projection neuron to mushroom body
 is_a: FBbt:00053398 ! adult antennal lobe projection neuron to lateral horn
 is_a: FBbt:00058205 ! adult cholinergic neuron
 is_a: FBbt:00100368 ! adult uniglomerular antennal lobe projection neuron adPN
+relationship: develops_from FBbt:00053686 ! immature adult antennal lobe projection neuron D adPN
 relationship: receives_synaptic_input_throughout FBbt:00003960 ! antennal lobe glomerulus D
 relationship: sends_synaptic_output_to_region FBbt:00007385 ! calyx of adult mushroom body
 
@@ -165872,11 +166504,13 @@ synonym: "VA1d adPN" EXACT []
 synonym: "VA1d_adPN" EXACT VFB_SYMBOL []
 xref: FlyBrain_NDB:10499
 xref: VFB:FBbt_00067357
+is_a: FBbt:00047096 ! secondary neuron
 is_a: FBbt:00053397 ! antennal lobe projection neuron to mushroom body
 is_a: FBbt:00053398 ! adult antennal lobe projection neuron to lateral horn
 is_a: FBbt:00058205 ! adult cholinergic neuron
 is_a: FBbt:00059283 ! adult antennal lobe projection neuron VA1d
 is_a: FBbt:00100368 ! adult uniglomerular antennal lobe projection neuron adPN
+relationship: develops_from FBbt:00053692 ! immature adult antennal lobe projection neuron VA1d adPN
 relationship: sends_synaptic_output_to_region FBbt:00007385 ! calyx of adult mushroom body
 
 [Term]
@@ -165887,9 +166521,11 @@ subset: olfactory_system_draft
 synonym: "VM7 adPN" EXACT []
 xref: FlyBrain_NDB:10512
 xref: VFB:FBbt_00067358
+is_a: FBbt:00047096 ! secondary neuron
 is_a: FBbt:00053397 ! antennal lobe projection neuron to mushroom body
 is_a: FBbt:00053398 ! adult antennal lobe projection neuron to lateral horn
 is_a: FBbt:00100368 ! adult uniglomerular antennal lobe projection neuron adPN
+relationship: develops_from FBbt:00053696 ! immature adult antennal lobe projection neuron VM7 adPN
 relationship: receives_synaptic_input_throughout FBbt:00003973 ! antennal lobe glomerulus VM7
 relationship: sends_synaptic_output_to_region FBbt:00007385 ! calyx of adult mushroom body
 
@@ -165906,11 +166542,13 @@ synonym: "VM2 adPN" EXACT []
 synonym: "VM2_adPN" EXACT VFB_SYMBOL []
 xref: FlyBrain_NDB:10510
 xref: VFB:FBbt_00067359
+is_a: FBbt:00047096 ! secondary neuron
 is_a: FBbt:00053397 ! antennal lobe projection neuron to mushroom body
 is_a: FBbt:00053398 ! adult antennal lobe projection neuron to lateral horn
 is_a: FBbt:00058205 ! adult cholinergic neuron
 is_a: FBbt:00059286 ! adult antennal lobe projection neuron VM2
 is_a: FBbt:00100368 ! adult uniglomerular antennal lobe projection neuron adPN
+relationship: develops_from FBbt:00053694 ! immature adult antennal lobe projection neuron VM2 adPN
 relationship: sends_synaptic_output_to_region FBbt:00007385 ! calyx of adult mushroom body
 
 [Term]
@@ -165923,11 +166561,13 @@ synonym: "DM6 adPN" EXACT []
 synonym: "DM6_adPN" EXACT VFB_SYMBOL []
 xref: FlyBrain_NDB:10497
 xref: VFB:FBbt_00067360
+is_a: FBbt:00047096 ! secondary neuron
 is_a: FBbt:00051299 ! adult olfactory projection neuron
 is_a: FBbt:00053397 ! antennal lobe projection neuron to mushroom body
 is_a: FBbt:00053398 ! adult antennal lobe projection neuron to lateral horn
 is_a: FBbt:00058205 ! adult cholinergic neuron
 is_a: FBbt:00100368 ! adult uniglomerular antennal lobe projection neuron adPN
+relationship: develops_from FBbt:00053691 ! immature adult antennal lobe projection neuron DM6 adPN
 relationship: receives_synaptic_input_throughout FBbt:00003941 ! antennal lobe glomerulus DM6
 relationship: sends_synaptic_output_to_region FBbt:00007385 ! calyx of adult mushroom body
 
@@ -165944,11 +166584,13 @@ synonym: "VA1v mPN1" EXACT [FlyBase:FBrf0240823]
 synonym: "VA1v_adPN" EXACT VFB_SYMBOL []
 xref: FlyBrain_NDB:10500
 xref: VFB:FBbt_00067361
+is_a: FBbt:00047096 ! secondary neuron
 is_a: FBbt:00047711 ! medial antennal lobe tract projection neuron 1
 is_a: FBbt:00048519 ! adult antennal lobe projection neuron VA1v
 is_a: FBbt:00058205 ! adult cholinergic neuron
 is_a: FBbt:00100368 ! adult uniglomerular antennal lobe projection neuron adPN
 is_a: FBbt:00110415 ! adult fruitless aDT-a neuron
+relationship: develops_from FBbt:00053693 ! immature adult antennal lobe projection neuron VA1v adPN
 
 [Term]
 id: FBbt:00067362
@@ -165977,11 +166619,13 @@ xref: FlyBrain_NDB:10377
 xref: VFB:FBbt_00067363
 is_a: FBbt:00047312 ! adult uniglomerular antennal lobe projection neuron lPN
 is_a: FBbt:00048096 ! adult antennal lobe projection neuron DA1
+is_a: FBbt:00049542 ! Notch OFF hemilineage secondary neuron
 is_a: FBbt:00052692 ! adult fruitless aDT-e neuron
 is_a: FBbt:00053397 ! antennal lobe projection neuron to mushroom body
 is_a: FBbt:00053398 ! adult antennal lobe projection neuron to lateral horn
 is_a: FBbt:00058205 ! adult cholinergic neuron
 is_a: FBbt:00067350 ! medial antennal lobe tract projection neuron
+relationship: develops_from FBbt:00053697 ! immature adult antennal lobe projection neuron DA1 lPN
 relationship: sends_synaptic_output_to_region FBbt:00007385 ! calyx of adult mushroom body
 
 [Term]
@@ -165995,11 +166639,13 @@ synonym: "DL3_lPN" EXACT VFB_SYMBOL []
 xref: FlyBrain_NDB:10490
 xref: VFB:FBbt_00067364
 is_a: FBbt:00047312 ! adult uniglomerular antennal lobe projection neuron lPN
+is_a: FBbt:00049542 ! Notch OFF hemilineage secondary neuron
 is_a: FBbt:00051299 ! adult olfactory projection neuron
 is_a: FBbt:00053397 ! antennal lobe projection neuron to mushroom body
 is_a: FBbt:00053398 ! adult antennal lobe projection neuron to lateral horn
 is_a: FBbt:00058205 ! adult cholinergic neuron
 is_a: FBbt:00067350 ! medial antennal lobe tract projection neuron
+relationship: develops_from FBbt:00053698 ! immature adult antennal lobe projection neuron DL3 lPN
 relationship: receives_synaptic_input_throughout FBbt:00003964 ! antennal lobe glomerulus DL3
 relationship: sends_synaptic_output_to_region FBbt:00007385 ! calyx of adult mushroom body
 
@@ -166030,11 +166676,13 @@ synonym: "VA5 lPN" EXACT []
 synonym: "VA5_lPN" EXACT VFB_SYMBOL []
 xref: VFB:FBbt_00067366
 is_a: FBbt:00047312 ! adult uniglomerular antennal lobe projection neuron lPN
+is_a: FBbt:00049542 ! Notch OFF hemilineage secondary neuron
 is_a: FBbt:00051299 ! adult olfactory projection neuron
 is_a: FBbt:00053397 ! antennal lobe projection neuron to mushroom body
 is_a: FBbt:00053398 ! adult antennal lobe projection neuron to lateral horn
 is_a: FBbt:00058205 ! adult cholinergic neuron
 is_a: FBbt:00067350 ! medial antennal lobe tract projection neuron
+relationship: develops_from FBbt:00053700 ! immature adult antennal lobe projection neuron VA5 lPN
 relationship: receives_synaptic_input_throughout FBbt:00003937 ! antennal lobe glomerulus VA5
 relationship: sends_synaptic_output_to_region FBbt:00007385 ! calyx of adult mushroom body
 
@@ -166069,11 +166717,13 @@ xref: FlyBrain_NDB:10355
 xref: FlyBrain_NDB:10494
 xref: VFB:FBbt_00067368
 is_a: FBbt:00047312 ! adult uniglomerular antennal lobe projection neuron lPN
+is_a: FBbt:00049542 ! Notch OFF hemilineage secondary neuron
 is_a: FBbt:00051299 ! adult olfactory projection neuron
 is_a: FBbt:00053397 ! antennal lobe projection neuron to mushroom body
 is_a: FBbt:00053398 ! adult antennal lobe projection neuron to lateral horn
 is_a: FBbt:00058205 ! adult cholinergic neuron
 is_a: FBbt:00067350 ! medial antennal lobe tract projection neuron
+relationship: develops_from FBbt:00053699 ! immature adult antennal lobe projection neuron DM2 lPN
 relationship: receives_synaptic_input_throughout FBbt:00003971 ! antennal lobe glomerulus DM2
 relationship: sends_synaptic_output_to_region FBbt:00007385 ! calyx of adult mushroom body
 
@@ -166127,6 +166777,7 @@ xref: VFB:FBbt_00067372
 is_a: FBbt:00007445 ! mediolateral antennal lobe tract projection neuron 1
 is_a: FBbt:00048096 ! adult antennal lobe projection neuron DA1
 is_a: FBbt:00058207 ! adult GABAergic neuron
+relationship: develops_from FBbt:00053702 ! pupal antennal lobe projection neuron DA1 vPN
 
 [Term]
 id: FBbt:00067500
@@ -168710,7 +169361,7 @@ is_a: FBbt:00025991 ! anterior ectoderm derivative
 is_a: FBbt:00052046 ! adult interneuron
 is_a: FBbt:00052517 ! primary interneuron
 is_a: FBbt:00058207 ! adult GABAergic neuron
-relationship: develops_from FBbt:00110979 ! larval mushroom body anterior paired lateral cell
+relationship: develops_from FBbt:00053708 ! pupal mushroom body anterior paired lateral cell
 relationship: electrically_synapsed_to FBbt:00005780 ! mushroom body dorsal paired medial cell
 relationship: fasciculates_with FBbt:00003984 ! adult mediolateral antennal lobe tract
 relationship: has_soma_location FBbt:00100201 ! adult lateral brain cell body rind
@@ -170462,6 +171113,7 @@ is_a: FBbt:00053397 ! antennal lobe projection neuron to mushroom body
 is_a: FBbt:00053398 ! adult antennal lobe projection neuron to lateral horn
 is_a: FBbt:00058205 ! adult cholinergic neuron
 is_a: FBbt:00100368 ! adult uniglomerular antennal lobe projection neuron adPN
+relationship: develops_from FBbt:00053705 ! pupal antennal lobe projection neuron DA4l adPN
 relationship: receives_synaptic_input_throughout FBbt:00007360 ! antennal lobe glomerulus DA4l
 relationship: sends_synaptic_output_to_region FBbt:00007385 ! calyx of adult mushroom body
 
@@ -170476,6 +171128,7 @@ synonym: "adult uniglomerular anterodorsal antennal lobe projection neuron" EXAC
 xref: VFB:FBbt_00100368
 is_a: FBbt:00007438 ! adult antennal lobe projection neuron adPN
 is_a: FBbt:00007440 ! adult uniglomerular antennal lobe projection neuron
+relationship: develops_from FBbt:00053704 ! immature adult uniglomerular antennal lobe projection neuron adPN
 
 [Term]
 id: FBbt:00100369
@@ -170698,19 +171351,20 @@ relationship: sends_synaptic_output_to_region FBbt:00007385 ! calyx of adult mus
 [Term]
 id: FBbt:00100384
 name: adult antennal lobe projection neuron DA3 adPN
-def: "Adult uniglomerular antennal lobe projection neuron from the ad neuroblast (ALad1) lineage (embryonic born) whose dendrites mainly innervate antennal lobe glomerulus DA3. This is the second cell type to be generated post-embryonically by neuroblast ALad1 (Yu et al., 2010). There are around two of these per hemisphere, they fasciculate with the medial antennal lobe tract and they are cholinergic (Bates et al., 2020)." [FlyBase:FBrf0211729, FlyBase:FBrf0246460]
+def: "Adult uniglomerular antennal lobe projection neuron from the ad neuroblast (ALad1) lineage whose dendrites mainly innervate antennal lobe glomerulus DA3. This is the second cell type to be generated post-embryonically by neuroblast ALad1 (Yu et al., 2010). There are around two of these per hemisphere, they fasciculate with the medial antennal lobe tract and they are cholinergic (Bates et al., 2020)." [FlyBase:FBrf0211729, FlyBase:FBrf0246460]
 comment: For image, see FBrf0211729.
 subset: olfactory_system_draft
 synonym: "DA3 adPN" EXACT [FlyBase:FBrf0211729]
 synonym: "DA3_adPN" EXACT VFB_SYMBOL []
 xref: FlyBrain_NDB:10485
 xref: VFB:FBbt_00100384
+is_a: FBbt:00047096 ! secondary neuron
 is_a: FBbt:00051299 ! adult olfactory projection neuron
-is_a: FBbt:00052517 ! primary interneuron
 is_a: FBbt:00053397 ! antennal lobe projection neuron to mushroom body
 is_a: FBbt:00053398 ! adult antennal lobe projection neuron to lateral horn
 is_a: FBbt:00058205 ! adult cholinergic neuron
 is_a: FBbt:00100368 ! adult uniglomerular antennal lobe projection neuron adPN
+relationship: develops_from FBbt:00053687 ! immature adult antennal lobe projection neuron DA3 adPN
 relationship: receives_synaptic_input_throughout FBbt:00003934 ! antennal lobe glomerulus DA3
 relationship: sends_synaptic_output_to_region FBbt:00007385 ! calyx of adult mushroom body
 
@@ -170741,12 +171395,14 @@ subset: olfactory_system_draft
 synonym: "VM5v adPN" EXACT []
 synonym: "VM5v_adPN" EXACT VFB_SYMBOL []
 xref: VFB:FBbt_00100386
+is_a: FBbt:00047096 ! secondary neuron
 is_a: FBbt:00048520 ! adult antennal lobe projection neuron VM5
 is_a: FBbt:00051299 ! adult olfactory projection neuron
 is_a: FBbt:00053397 ! antennal lobe projection neuron to mushroom body
 is_a: FBbt:00053398 ! adult antennal lobe projection neuron to lateral horn
 is_a: FBbt:00058205 ! adult cholinergic neuron
 is_a: FBbt:00100368 ! adult uniglomerular antennal lobe projection neuron adPN
+relationship: develops_from FBbt:00053695 ! immature adult antennal lobe projection neuron VM5v adPN
 relationship: receives_synaptic_input_throughout FBbt:00007365 ! antennal lobe glomerulus VM5v
 relationship: sends_synaptic_output_to_region FBbt:00007385 ! calyx of adult mushroom body
 
@@ -171972,7 +172628,9 @@ synonym: "Lcn12" EXACT []
 xref: FlyBrain_NDB:10002
 xref: VFB:FBbt_00100484
 is_a: FBbt:00003870 ! lobula columnar neuron
+is_a: FBbt:00047096 ! secondary neuron
 is_a: FBbt:00110137 ! optic lobe wide-field columnar neuron
+relationship: develops_from FBbt:00053675 ! immature lobula columnar neuron LC12
 relationship: has_soma_location FBbt:00100201 ! adult lateral brain cell body rind
 relationship: receives_synaptic_input_in_region FBbt:00003854 ! lobula layer 2
 relationship: receives_synaptic_input_in_region FBbt:00003855 ! lobula layer 3
@@ -176398,7 +177056,9 @@ subset: cur
 synonym: "Lawf2" EXACT VFB_SYMBOL [FlyBase:FBrf0225131, FlyBase:FBrf0247762]
 synonym: "Lawfl2" EXACT [FlyBase:FBrf0213020]
 xref: VFB:FBbt_00110065
+is_a: FBbt:00047096 ! secondary neuron
 is_a: FBbt:00059323 ! lamina wide-field neuron
+relationship: develops_from FBbt:00053683 ! immature lamina wide-field 2 neuron
 relationship: receives_synaptic_input_in_region FBbt:00003750 ! medulla layer M1
 relationship: receives_synaptic_input_in_region FBbt:00003758 ! medulla layer M8
 relationship: receives_synaptic_input_in_region FBbt:00003759 ! medulla layer M9
@@ -176503,6 +177163,7 @@ xref: VFB:FBbt_00110072
 is_a: FBbt:00003793 ! transmedullary neuron Tm5
 is_a: FBbt:00013789 ! narrow field transmedullary neuron
 is_a: FBbt:00058205 ! adult cholinergic neuron
+relationship: develops_from FBbt:00053685 ! immature transmedullary neuron Tm5a
 relationship: receives_synaptic_input_from_neuron FBbt:02000005 ! photoreceptor cell R7 of yellow ommatidium
 relationship: receives_synaptic_input_in_region FBbt:00003758 ! medulla layer M8
 relationship: receives_synaptic_input_in_region FBbt:00052134 ! yellow optic column
@@ -177695,7 +178356,7 @@ id: FBbt:00110150
 name: octopaminergic VPM2 neuron
 def: "Octopaminergic descending neuron whose cell body is located slightly lateral to the subesophageal ganglion midline, in the mandibular segment (Busch et al., 2009; Schlegel et al., 2024; Dorkenwald et al., 2024). Its main neurite projects to the area surrounding the ventral esophagus foramen where it crosses the midline and bifurcates at the ventral part of the contralateral ventrolateral protocerebrum (Busch et al., 2009). These processes innervate the contralateral ventrolateral, ventromedial, anterior inferior medial protocerebra and the subesophageal ganglion (Busch et al., 2009). There is also some innervation in the ipsilateral subesophageal ganglion (Busch et al., 2009). In the VNC, it follows the dorsal lateral tract of ventral cervical fasciculus (Sturner et al., 2025). There are 2 of these cells per organism (Schlegel et al., 2024; Dorkenwald et al., 2024; Sturner et al., 2025)." [FlyBase:FBrf0207458, FlyBase:FBrf0210649, FlyBase:FBrf0212145, FlyBase:FBrf0260535, FlyBase:FBrf0260546, FlyBase:FBrf0262850]
 comment: The neurotransmitter was assessed by immunostaining with an anti-octopamine (OA) antibody in cells labelled with tdc2-GAL4 (FBti0101786) and NP7088-GAL4 (FBti0037217) (Busch et al., 2009) or only using the tdc2-GAL4 (FBti0101786) (Busch and Tanimoto, 2010). Certel et al. (2010) describes a OA-VPM2 neuron, although it resembles the VMP1 subtype, and not the VPM2 described by Busch et al. (2009). Pre- or post-synapse locations are those with the highest total count of these neurons in FlyWire FAFB.
-synonym: "descending neuron of the gnathal ganglion DNg104" EXACT [doi:10.1101/2025.07.31.667571]
+synonym: "descending neuron of the gnathal ganglion DNg104" EXACT [doi:10.1038/s41586-026-10735-w]
 synonym: "DNxn072" EXACT [FlyBase:FBrf0262850]
 synonym: "OA-VPM2" EXACT VFB_SYMBOL [FlyBase:FBrf0207458]
 synonym: "ventral paired median octopaminergic neuron 2" EXACT []
@@ -177894,7 +178555,7 @@ id: FBbt:00110161
 name: octopaminergic VUMd1 neuron
 def: "Octopaminergic neuron of the VUMd cluster that exhibits a fan-shaped projection in the brain. Two laterally projecting neurites that originate in the ventral esophagus arborize in the ventrolateral protocerebrum, antennal nerve, the subesophageal ganglion and the antennal motor and mechanosensory center. A pair of descending axons project from the ventral esophagus into the cervical connective (Busch et al., 2009)." [FlyBase:FBrf0207458]
 comment: The neurotransmitter was assessed by immunostaining with an anti-octopamine (OA) antibody in cells labelled with tdc2-GAL4 (FBti0101786) and NP7088-GAL4 (FBti0037217) (Busch et al., 2009).
-synonym: "DNge138" EXACT [doi:10.1101/2025.07.31.667571]
+synonym: "DNge138" EXACT [doi:10.1038/s41586-026-10735-w]
 synonym: "OA-VUMd1" EXACT VFB_SYMBOL [FlyBase:FBrf0207458]
 xref: VFB:FBbt_00110161
 is_a: FBbt:00004037 ! adult subesophageal sensory interneuron
@@ -177906,7 +178567,7 @@ relationship: overlaps FBbt:00003980 ! adult antennal nerve
 id: FBbt:00110162
 name: octopaminergic VUMd2 neuron
 def: "Octopaminergic neuron of the VUMd cluster that exhibits a fan-shaped projection in the brain (Busch et al., 2009). Secondary neurites that originate in area surrounding the ventral esophagus foramen project to the lateral inferior posterior slope where they turn ventrally and project via the cervical connective to the ventral nerve cord (Busch et al., 2009). Projections to the posterior subesophageal ganglion and the inferior posterior slope form varicose terminals (Busch et al., 2009). It is inhibited in response to infection, and this leads to reduced egg laying in females (Masuzzo et al., 2019)." [FlyBase:FBrf0207458, FlyBase:FBrf0243879]
-comment: The neurotransmitter was assessed by immunostaining with an anti-octopamine (OA) antibody in cells labelled with tdc2-GAL4 (FBti0101786) and NP7088-GAL4 (FBti0037217) (Busch et al., 2009). Despite egg-laying function in females, it is present in both males and females (Masuzzo et al., 2019). DNge149 and DNge152 mapped to OA-VUMd2 (Bates et al., 2025).
+comment: The neurotransmitter was assessed by immunostaining with an anti-octopamine (OA) antibody in cells labelled with tdc2-GAL4 (FBti0101786) and NP7088-GAL4 (FBti0037217) (Busch et al., 2009). Despite egg-laying function in females, it is present in both males and females (Masuzzo et al., 2019). DNge149 and DNge152 mapped to OA-VUMd2 in Bates et al. (2026) - doi:10.1038/s41586-026-10735-w.
 synonym: "OA-VUMd2" EXACT VFB_SYMBOL [FlyBase:FBrf0207458]
 synonym: "pLB1+/Tdc2+ VM III neuron" EXACT [FlyBase:FBrf0243879]
 xref: VFB:FBbt_00110162
@@ -177917,7 +178578,7 @@ id: FBbt:00110163
 name: octopaminergic VUMd3 neuron
 def: "Octopaminergic neuron of the VUMd cluster that exhibits a fan-shaped projection in the brain. Secondary neurites that originate in area surrounding the ventral esophagus foramen fasciculate with the cervical connective. Apart from forming spiny arborizations in the posterior slope, this neuron does not innervate other areas in the brain (Busch et al., 2009)." [FlyBase:FBrf0207458]
 comment: The neurotransmitter was assessed by immunostaining with an anti-octopamine (OA) antibody in cells labelled with tdc2-GAL4 (FBti0101786) and NP7088-GAL4 (FBti0037217) (Busch et al., 2009).
-synonym: "DNge150" EXACT [doi:10.1101/2025.07.31.667571]
+synonym: "DNge150" EXACT [doi:10.1038/s41586-026-10735-w]
 synonym: "OA-VUMd3" EXACT VFB_SYMBOL [FlyBase:FBrf0207458]
 xref: VFB:FBbt_00110163
 is_a: FBbt:00110160 ! octopaminergic VUMd neuron
@@ -180011,7 +180672,7 @@ id: FBbt:00110330
 name: octopaminergic VUMd4 neuron
 def: "Adult octopaminergic descending neuron of the VUMd cluster, with its soma posterior-ventral to the gnathal ganglion (Busch and Tanimoto, 2010; Schlegel et al., 2024; Dorkenwald et al., 2024). In the brain, it has postsynapses and presynapses in the saddle, the gnathal ganglion and the flange, and also has postsynapses in the cantle (Schlegel et al., 2024; Dorkenwald et al., 2024). In the VNC, it follows the median dorsal abdominal tract (Sturner et al., 2025). Its predicted neurotransmitter is acetylcholine (Eckstein et al., 2024). There are approximately 1-2 of these cells per organism (Schlegel et al., 2024; Dorkenwald et al., 2024; Sturner et al., 2025)." [FlyBase:FBrf0210649, FlyBase:FBrf0259490, FlyBase:FBrf0260535, FlyBase:FBrf0260546, FlyBase:FBrf0262850]
 comment: The neurotransmitter was assessed by labelling cells with tdc2-GAL4 (FBti0101786) (Busch and Tanimoto, 2010). Pre- or post-synapse locations are the fewest regions that collectively contain at least 80 percent of all pre- or post-synapses of these (DNg66) neurons in FlyWire.
-synonym: "descending neuron of the gnathal ganglion DNg66" EXACT [doi:10.1101/2025.07.31.667571]
+synonym: "descending neuron of the gnathal ganglion DNg66" EXACT [doi:10.1038/s41586-026-10735-w]
 synonym: "DNad002" EXACT [FlyBase:FBrf0262850]
 synonym: "OA VUMd4" EXACT [FlyBase:FBrf0210649]
 synonym: "OA-VUMd4" EXACT VFB_SYMBOL [FlyBase:FBrf0210649]
@@ -191306,7 +191967,7 @@ name: adult sex peptide abdominal ganglion neuron
 def: "Female-specific adult ascending neuron that regulates female receptivity to mating (Feng et al., 2014). There are two of these cells per female, with their somas on either side of the midline, variably found on either the dorsal or ventral surface of the abdominal ganglion (Feng et al., 2014). It arborizes extensively within the abdominal ganglion, in the same region as the adult sex peptide sensory neuron, and sends an ascending projection along the dorsal midline into the brain (Feng et al., 2014). There, it projects ipsilaterally in the periesophageal region and bilaterally in the dorsal protocerebrum, including the pars intercerebralis (Feng et al., 2014). In the brain, it synapses onto and can activate doublesex pC1a neurons (Wang et al., 2020). It is cholinergic (Wang et al., 2020)." [FlyBase:FBrf0225544, FlyBase:FBrf0245074]
 comment: These neurons express doublesex (FBgn0000504), but not fruitless (FBgn0004652) (Feng et al., 2014).
 subset: cur
-synonym: "AN_SMP_2" EXACT [doi:10.1101/2025.07.31.667571]
+synonym: "AN_SMP_2" EXACT [doi:10.1038/s41586-026-10735-w]
 synonym: "SAG" EXACT VFB_SYMBOL [FlyBase:FBrf0246888]
 synonym: "SAG neuron" EXACT [FlyBase:FBrf0225544]
 xref: VFB:FBbt_00111304
@@ -196849,8 +197510,10 @@ def: "Subtype of lobula columnar neuron LC10A. It has its main arbors in lobula 
 comment: Pre- versus postsynaptic innervation assessed with a presynaptic marker (synaptotagmin-HA driver) (Wu et al., 2016).
 synonym: "LC10b" EXACT VFB_SYMBOL [FlyBase:FBrf0246888]
 xref: VFB:FBbt_00111745
+is_a: FBbt:00047096 ! secondary neuron
 is_a: FBbt:00058205 ! adult cholinergic neuron
 is_a: FBbt:00110933 ! lobula columnar neuron LC10A
+relationship: develops_from FBbt:00053672 ! immature lobula columnar neuron LC10b
 relationship: has_synaptic_IO_in FBbt:00003856 ! lobula layer 4
 relationship: has_synaptic_IO_in FBbt:00040017 ! lobula layer 6
 relationship: receives_synaptic_input_in_region FBbt:00040016 ! lobula layer 5
@@ -196863,7 +197526,9 @@ def: "Subtype of lobula columnar neuron LC10A. It has its main arbors in lobula 
 comment: Pre- versus postsynaptic innervation assessed with a presynaptic marker (synaptotagmin-HA driver) (Wu et al., 2016).
 synonym: "LC10c" EXACT VFB_SYMBOL [FlyBase:FBrf0246888]
 xref: VFB:FBbt_00111746
+is_a: FBbt:00047096 ! secondary neuron
 is_a: FBbt:00110933 ! lobula columnar neuron LC10A
+relationship: develops_from FBbt:00053673 ! immature lobula columnar neuron LC10c
 relationship: receives_synaptic_input_in_region FBbt:00040016 ! lobula layer 5
 relationship: receives_synaptic_input_in_region FBbt:00040017 ! lobula layer 6
 
@@ -196874,8 +197539,10 @@ def: "Subtype of lobula columnar neuron LC10B. It has its main arbors in lobula 
 comment: Pre- versus postsynaptic innervation assessed with a presynaptic marker (synaptotagmin-HA driver) (Wu et al., 2016).
 synonym: "LC10a" EXACT VFB_SYMBOL [FlyBase:FBrf0246888]
 xref: VFB:FBbt_00111747
+is_a: FBbt:00047096 ! secondary neuron
 is_a: FBbt:00058205 ! adult cholinergic neuron
 is_a: FBbt:00110934 ! lobula columnar neuron LC10B
+relationship: develops_from FBbt:00053671 ! immature lobula columnar neuron LC10a
 relationship: has_synaptic_IO_in FBbt:00003855 ! lobula layer 3
 relationship: receives_synaptic_input_in_region FBbt:00003854 ! lobula layer 2
 relationship: receives_synaptic_input_in_region FBbt:00003856 ! lobula layer 4
@@ -196889,7 +197556,9 @@ def: "Subtype of lobula columnar neuron LC10B. It has its main arbors in lobula 
 comment: Pre- versus postsynaptic innervation assessed with a presynaptic marker (synaptotagmin-HA driver) (Wu et al., 2016).
 synonym: "LC10d" EXACT VFB_SYMBOL [FlyBase:FBrf0246888]
 xref: VFB:FBbt_00111748
+is_a: FBbt:00047096 ! secondary neuron
 is_a: FBbt:00110934 ! lobula columnar neuron LC10B
+relationship: develops_from FBbt:00053674 ! immature lobula columnar neuron LC10d
 relationship: has_synaptic_IO_in FBbt:00003856 ! lobula layer 4
 relationship: has_synaptic_IO_in FBbt:00040017 ! lobula layer 6
 relationship: receives_synaptic_input_in_region FBbt:00040016 ! lobula layer 5
@@ -196932,8 +197601,10 @@ comment: Pre- versus postsynaptic innervation assessed with a presynaptic marker
 synonym: "LC16" EXACT VFB_SYMBOL [FlyBase:FBrf0246888]
 xref: VFB:FBbt_00111751
 is_a: FBbt:00003870 ! lobula columnar neuron
+is_a: FBbt:00047096 ! secondary neuron
 is_a: FBbt:00058205 ! adult cholinergic neuron
 is_a: FBbt:00110137 ! optic lobe wide-field columnar neuron
+relationship: develops_from FBbt:00053676 ! immature lobula columnar neuron LC16
 relationship: has_soma_location FBbt:00100201 ! adult lateral brain cell body rind
 relationship: has_synaptic_IO_in FBbt:00003856 ! lobula layer 4
 relationship: receives_synaptic_input_in_region FBbt:00040016 ! lobula layer 5
@@ -196948,7 +197619,9 @@ comment: Pre- versus postsynaptic innervation assessed with a presynaptic marker
 synonym: "LC17" EXACT VFB_SYMBOL [FlyBase:FBrf0246888]
 xref: VFB:FBbt_00111752
 is_a: FBbt:00003870 ! lobula columnar neuron
+is_a: FBbt:00047096 ! secondary neuron
 is_a: FBbt:00110137 ! optic lobe wide-field columnar neuron
+relationship: develops_from FBbt:00053677 ! immature lobula columnar neuron LC17
 relationship: has_soma_location FBbt:00100201 ! adult lateral brain cell body rind
 relationship: receives_synaptic_input_in_region FBbt:00003854 ! lobula layer 2
 relationship: receives_synaptic_input_in_region FBbt:00003855 ! lobula layer 3
@@ -197101,8 +197774,10 @@ synonym: "lobula plate and lobula columnar neuron 1" EXACT []
 synonym: "LPLC1" EXACT VFB_SYMBOL []
 xref: VFB:FBbt_00111762
 is_a: FBbt:00003880 ! lobula plate-lobula columnar neuron LPLC
+is_a: FBbt:00047096 ! secondary neuron
 is_a: FBbt:00058205 ! adult cholinergic neuron
 is_a: FBbt:00110137 ! optic lobe wide-field columnar neuron
+relationship: develops_from FBbt:00053680 ! immature lobula plate-lobula columnar neuron LPLC1
 relationship: has_synaptic_IO_in FBbt:00003855 ! lobula layer 3
 relationship: has_synaptic_IO_in FBbt:00003856 ! lobula layer 4
 relationship: receives_synaptic_input_in_region FBbt:00003854 ! lobula layer 2
@@ -197121,8 +197796,10 @@ synonym: "LPL2CN" EXACT [FlyBase:FBrf0218239]
 synonym: "LPLC2" EXACT VFB_SYMBOL []
 xref: VFB:FBbt_00111763
 is_a: FBbt:00003880 ! lobula plate-lobula columnar neuron LPLC
+is_a: FBbt:00047096 ! secondary neuron
 is_a: FBbt:00058205 ! adult cholinergic neuron
 is_a: FBbt:00110137 ! optic lobe wide-field columnar neuron
+relationship: develops_from FBbt:00053681 ! immature lobula plate-lobula columnar neuron LPLC2
 relationship: has_synaptic_IO_in FBbt:00003856 ! lobula layer 4
 relationship: receives_synaptic_input_in_region FBbt:00040016 ! lobula layer 5
 relationship: sends_synaptic_output_to_region FBbt:00052656 ! LPLC2 optic glomerulus
@@ -197167,8 +197844,10 @@ name: lobula plate columnar neuron LPC1
 def: "Lobula plate columnar neuron that has its main dendritic arborization in lobula plate layer 2 and receives input from T4b and T5b neurons (Shinomiya et al., 2022). It projects to a small glomerulus in the posterior region of the optic glomeruli of the PVLP, posterior to LC4 and ventral to LPLC3. It is cholinergic (Davis et al., 2020)." [FlyBase:FBrf0233032, FlyBase:FBrf0234700, FlyBase:FBrf0244935, FlyBase:FBrf0254308]
 synonym: "LPC1" EXACT VFB_SYMBOL [FlyBase:FBrf0254308]
 xref: VFB:FBbt_00111767
+is_a: FBbt:00047096 ! secondary neuron
 is_a: FBbt:00058205 ! adult cholinergic neuron
 is_a: FBbt:00111766 ! lobula plate columnar neuron
+relationship: develops_from FBbt:00053679 ! immature lobula plate columnar neuron LPC1
 relationship: receives_synaptic_input_from_neuron FBbt:00003733 ! T4b neuron
 relationship: receives_synaptic_input_from_neuron FBbt:00003738 ! T5b neuron
 relationship: receives_synaptic_input_in_region FBbt:00003887 ! lobula plate layer 2
@@ -269463,7 +270142,7 @@ relationship: sends_synaptic_output_to_region FBbt:00040051 ! prow
 id: FBbt:20004126
 name: obsolete adult medulla-contralateral medulla neuron MeVPMe10
 def: "Adult medulla-contralateral medulla neuron of the MeVPMe10 group (Nern et al., 2025). It belongs to the VPNl&d1 lateral hemilineage (Nern et al., 2025). It receives input in the ipsilateral medulla layer M6 and medulla serpentine layer, and the contralateral medulla layer M6 and medulla serpentine layer (Nern et al., 2025). It sends output to the contralateral medulla layer M6 and medulla serpentine layer (Nern et al., 2025). There are approximately 2 of these cells per hemisphere (Nern et al., 2025)." [FlyBase:FBrf0260535, FlyBase:FBrf0260546, FlyBase:FBrf0262545]
-comment: Cell type identified in multiple EM datasets (Schlegel et al., 2024; Dorkenwald et al., 2024; Nern et al., 2025). Obsoleted as mapped to MeMe-DRA in Bates et al. (2025) - doi:10.1101/2025.07.31.667571.
+comment: Cell type identified in multiple EM datasets (Schlegel et al., 2024; Dorkenwald et al., 2024; Nern et al., 2025). Obsoleted as mapped to MeMe-DRA in Bates et al. (2026) - doi:10.1038/s41586-026-10735-w.
 synonym: "MeMe_e10" RELATED [FlyBase:FBrf0260535, FlyBase:FBrf0262545]
 is_obsolete: true
 replaced_by: FBbt:00052147
@@ -323456,7 +324135,7 @@ relationship: sends_synaptic_output_to_region FBbt:00014013 ! adult gnathal gang
 id: FBbt:20007449
 name: obsolete descending neuron of the gnathal ganglion DNge138
 def: "Adult descending neuron of the DNge138 group, with its soma in the brain, posterior to the gnathal ganglia (Schlegel et al., 2024; Dorkenwald et al., 2024). It belongs to the LB0 anterior hemilineage (Schlegel et al., 2024; Dorkenwald et al., 2024). It has postsynapses in the gnathal ganglia, the saddle, the superior posterior slope, the vest, the cantle, the anterior ventrolateral protocerebrum and the wedge (Schlegel et al., 2024; Dorkenwald et al., 2024). It has presynapses in the gnathal ganglia, the saddle, the wedge, the anterior ventrolateral protocerebrum and the antennal mechanosensory and motor center (Schlegel et al., 2024; Dorkenwald et al., 2024). Its predicted neurotransmitter is octopamine (Eckstein et al., 2024). There are approximately 2 of these cells per organism (Schlegel et al., 2024; Dorkenwald et al., 2024)." [FlyBase:FBrf0259490, FlyBase:FBrf0260535, FlyBase:FBrf0260546]
-comment: Uncharacterized putative cell type from Schlegel et al. (2024), based on FlyWire v783 (FAFB) data (Dorkenwald et al., 2024; Schlegel et al., 2024). Obsoleted as mapped to OA-VUMd1 in Bates et al. (2025) - doi:10.1101/2025.07.31.667571.
+comment: Uncharacterized putative cell type from Schlegel et al. (2024), based on FlyWire v783 (FAFB) data (Dorkenwald et al., 2024; Schlegel et al., 2024). Obsoleted as mapped to OA-VUMd1 in Bates et al. (2026) - doi:10.1038/s41586-026-10735-w.
 synonym: "DNge138" EXACT VFB_SYMBOL [FlyBase:FBrf0260535]
 is_obsolete: true
 replaced_by: FBbt:00110161
@@ -323612,7 +324291,7 @@ relationship: sends_synaptic_output_to_region FBbt:00014013 ! adult gnathal gang
 id: FBbt:20007461
 name: obsolete descending neuron of the gnathal ganglion DNge150
 def: "Adult descending neuron of the DNge150 group, with its soma in the brain, posterior-ventral to the gnathal ganglia (Schlegel et al., 2024; Dorkenwald et al., 2024). It belongs to the LB0 posterior hemilineage (Schlegel et al., 2024; Dorkenwald et al., 2024). It has postsynapses in the flange, the gnathal ganglia, the prow, the saddle and the cantle (Schlegel et al., 2024; Dorkenwald et al., 2024). It has presynapses in the gnathal ganglia, the prow and the flange (Schlegel et al., 2024; Dorkenwald et al., 2024). Its predicted neurotransmitter is octopamine (Eckstein et al., 2024). There is approximately one of these cells per organism (Schlegel et al., 2024; Dorkenwald et al., 2024)." [FlyBase:FBrf0259490, FlyBase:FBrf0260535, FlyBase:FBrf0260546]
-comment: Uncharacterized putative cell type from Schlegel et al. (2024), based on FlyWire v783 (FAFB) data (Dorkenwald et al., 2024; Schlegel et al., 2024). Obsoleted as mapped to OA-VUMd3 in Bates et al. (2025) - doi:10.1101/2025.07.31.667571.
+comment: Uncharacterized putative cell type from Schlegel et al. (2024), based on FlyWire v783 (FAFB) data (Dorkenwald et al., 2024; Schlegel et al., 2024). Obsoleted as mapped to OA-VUMd3 in Bates et al. (2026) - doi:10.1038/s41586-026-10735-w.
 synonym: "DNge150" EXACT [FlyBase:FBrf0260535]
 is_obsolete: true
 replaced_by: FBbt:00110163
@@ -323821,7 +324500,7 @@ relationship: sends_synaptic_output_to_region FBbt:00014013 ! adult gnathal gang
 id: FBbt:20007475
 name: obsolete descending neuron of the gnathal ganglion DNg104
 def: "Adult descending neuron with its soma in the gnathal ganglion, ventral to the prow (Schlegel et al., 2024; Dorkenwald et al., 2024). It is a putative embryonic-born neuron (Schlegel et al., 2024; Dorkenwald et al., 2024). It has its postsynapses and presynapses mainly in the contralateral anterior ventrolateral protocerebrum and the gnathal ganglion (Schlegel et al., 2024; Dorkenwald et al., 2024). In the VNC, it follows the dorsal lateral tract of ventral cervical fasciculus (Sturner et al., 2025). Its predicted neurotransmitter is octopamine (Eckstein et al., 2024). There are approximately 2 of these cells per organism (Schlegel et al., 2024; Dorkenwald et al., 2024; Sturner et al., 2025)." [FlyBase:FBrf0259490, FlyBase:FBrf0260535, FlyBase:FBrf0260546, FlyBase:FBrf0262850]
-comment: Obsoleted, as mapped to OA-VPM2 in Bates et al. (2025) - doi:10.1101/2025.07.31.667571. Type identified at light level and matched across EM datasets by Sturner et al. (2025). Pre- or post-synapse locations are those with the highest total count of these neurons in FlyWire FAFB.
+comment: Obsoleted, as mapped to OA-VPM2 in Bates et al. (2026) - doi:10.1038/s41586-026-10735-w. Type identified at light level and matched across EM datasets by Sturner et al. (2025). Pre- or post-synapse locations are those with the highest total count of these neurons in FlyWire FAFB.
 synonym: "DNxn072" EXACT [FlyBase:FBrf0262850]
 is_obsolete: true
 replaced_by: FBbt:00110150
@@ -324313,7 +324992,7 @@ relationship: sends_synaptic_output_to_region FBbt:00014013 ! adult gnathal gang
 id: FBbt:20007508
 name: obsolete descending neuron of the gnathal ganglion DNg66
 def: "Adult descending neuron with its soma posterior-ventral to the gnathal ganglion (Schlegel et al., 2024; Dorkenwald et al., 2024). In the brain, it has postsynapses and presynapses in the saddle, the gnathal ganglion and the flange, and also has postsynapses in the cantle (Schlegel et al., 2024; Dorkenwald et al., 2024). In the VNC, it follows the median dorsal abdominal tract (Sturner et al., 2025). Its predicted neurotransmitter is acetylcholine (Eckstein et al., 2024). There are approximately 1-2 of these cells per organism (Schlegel et al., 2024; Dorkenwald et al., 2024; Sturner et al., 2025)." [FlyBase:FBrf0259490, FlyBase:FBrf0260535, FlyBase:FBrf0260546, FlyBase:FBrf0262850]
-comment: Obsoleted, as mapped to OA-VUMd4 in Bates et al. (2025) - doi:10.1101/2025.07.31.667571. Type identified at light level and matched across EM datasets by Sturner et al. (2025). Pre- or post-synapse locations are the fewest regions that collectively contain at least 80 percent of all pre- or post-synapses of these neurons in FlyWire.
+comment: Obsoleted, as mapped to OA-VUMd4 in Bates et al. (2026) - doi:10.1038/s41586-026-10735-w. Type identified at light level and matched across EM datasets by Sturner et al. (2025). Pre- or post-synapse locations are the fewest regions that collectively contain at least 80 percent of all pre- or post-synapses of these neurons in FlyWire.
 synonym: "DNad002" EXACT [FlyBase:FBrf0262850]
 is_obsolete: true
 replaced_by: FBbt:00110330
@@ -327231,7 +327910,7 @@ relationship: sends_synaptic_output_to_region FBbt:00040048 ! superior clamp
 id: FBbt:20007659
 name: adult medulla visual projection neuron MeVP11
 def: "Adult visual projection neuron with its soma ventral to the accessory medulla (Schlegel et al., 2024; Dorkenwald et al., 2024). It receives input mainly in medulla layers M3 and M7, in around 10 columns (Nern et al., 2025). It remains ipsilateral and sends output to the posterior lateral protocerebrum (Schlegel et al., 2024; Dorkenwald et al., 2024). Its predicted neurotransmitter is acetylcholine (Eckstein et al., 2024; Nern et al., 2025). There are approximately 30 of these cells per hemisphere (Nern et al., 2025)." [FlyBase:FBrf0259490, FlyBase:FBrf0260535, FlyBase:FBrf0260546, FlyBase:FBrf0262545]
-comment: Cell type from Schlegel et al. (2024), based on FlyWire v783 (FAFB) data (Dorkenwald et al., 2024; Schlegel et al., 2024), identified at light level by Nern et al. (2025). Soma location is based on the closest annotated neuropil region in FlyWire. MTe50 mapped to ML-VPN1 in Bates et al. (2025) - doi:10.1101/2025.07.31.667571, but cell numbers do not match.
+comment: Cell type from Schlegel et al. (2024), based on FlyWire v783 (FAFB) data (Dorkenwald et al., 2024; Schlegel et al., 2024), identified at light level by Nern et al. (2025). Soma location is based on the closest annotated neuropil region in FlyWire. MTe50 mapped to ML-VPN1 in Bates et al. (2026) - doi:10.1038/s41586-026-10735-w, but cell numbers do not match.
 synonym: "adult medulla tangential neuron e50" EXACT []
 synonym: "adult MTe50 neuron" EXACT [FlyBase:FBrf0260535]
 synonym: "MeVP11" EXACT VFB_SYMBOL [FlyBase:FBrf0262545]
@@ -329437,7 +330116,7 @@ relationship: sends_synaptic_output_to_region FBbt:00003624 ! adult brain
 id: FBbt:20007797
 name: obsolete adult AN06B011 neuron
 def: "Adult ascending neuron of the AN06B011 group with bilateral VNC arbors (Takemura et al., 2024; Marin et al., 2024). It is a secondary neuron of the 06B hemilineage (Takemura et al., 2024; Marin et al., 2024). It exits the VNC via the cervical connective (Takemura et al., 2024; Marin et al., 2024). Within the VNC it fasciculates with the dorsal lateral tract of dorsal cervical fasciculus (Takemura et al., 2024; Marin et al., 2024). It sends output to the brain (Takemura et al., 2024; Marin et al., 2024). Its predicted neurotransmitter is acetylcholine (Eckstein et al., 2024). There are approximately 2 of these cells per organism and their somas are found in the mesothoracic neuromere (Takemura et al., 2024; Marin et al., 2024)." [doi:10.7554/eLife.96084.1, doi:10.7554/eLife.97766.1, doi:10.7554/eLife.97769.1, FlyBase:FBrf0259490]
-comment: Uncharacterized putative cell type from Marin et al. (2024), based on MANC v1.2.1 data (Takemura et al., 2024) from NeuPrint. Obsoleted as mapped to LAL-PS-AN in Bates et al. (2025) - doi:10.1101/2025.07.31.667571.
+comment: Uncharacterized putative cell type from Marin et al. (2024), based on MANC v1.2.1 data (Takemura et al., 2024) from NeuPrint. Obsoleted as mapped to LAL-PS-AN in Bates et al. (2026) - doi:10.1038/s41586-026-10735-w.
 synonym: "AN06B011" EXACT [doi:10.1101/2023.06.05.543407, doi:10.1101/2023.06.05.543757]
 is_obsolete: true
 replaced_by: FBbt:00059240
@@ -332818,7 +333497,7 @@ relationship: receives_synaptic_input_in_region FBbt:00047139 ! adult leg neurop
 id: FBbt:20008018
 name: obsolete adult AN17A026 neuron
 def: "Adult ascending neuron of the AN17A026 group with ipsilateral VNC arbors (Takemura et al., 2024; Marin et al., 2024). It is a secondary neuron of the 17A hemilineage (Takemura et al., 2024; Marin et al., 2024). It exits the VNC via the cervical connective (Takemura et al., 2024; Marin et al., 2024). Within the VNC it fasciculates with the ventral median tract of ventral cervical fasciculus (Takemura et al., 2024; Marin et al., 2024). It receives input in multiple regions and sends output to multiple regions (Takemura et al., 2024; Marin et al., 2024). Its predicted neurotransmitter is acetylcholine (Eckstein et al., 2024). There are approximately 2 of these cells per organism and their somas are found in the mesothoracic neuromere (Takemura et al., 2024; Marin et al., 2024)." [doi:10.7554/eLife.96084.1, doi:10.7554/eLife.97766.1, doi:10.7554/eLife.97769.1, FlyBase:FBrf0259490]
-comment: Uncharacterized putative cell type from Marin et al. (2024), based on MANC v1.2.1 data (Takemura et al., 2024) from NeuPrint. Obsoleted, as mapped to TwoLumps ascending neuron in Bates et al. (2025) - doi:10.1101/2025.07.31.667571.
+comment: Uncharacterized putative cell type from Marin et al. (2024), based on MANC v1.2.1 data (Takemura et al., 2024) from NeuPrint. Obsoleted, as mapped to TwoLumps ascending neuron in Bates et al. (2026) - doi:10.1038/s41586-026-10735-w.
 synonym: "AN17A026" EXACT [doi:10.1101/2023.06.05.543407, doi:10.1101/2023.06.05.543757]
 is_obsolete: true
 replaced_by: FBbt:00049915
@@ -382199,7 +382878,7 @@ relationship: sends_synaptic_output_to_region FBbt:00014013 ! adult gnathal gang
 id: FBbt:20011355
 name: obsolete descending neuron of the posterior brain DNp62
 def: "Adult descending neuron with its soma in the brain, posterior to the inferior bridge (Schlegel et al., 2024; Dorkenwald et al., 2024). It is a putative embryonic-born neuron (Schlegel et al., 2024; Dorkenwald et al., 2024). In the brain, it has postsynapses in the ipsilateral superior lateral and intermediate protocerebrum and superior clamp, and presynapses in the gnathal ganglion, the ipsilateral and contralateral anterior ventrolateral protocerebrum, the ipsilateral superior lateral protocerebrum and the contralateral flange (Schlegel et al., 2024; Dorkenwald et al., 2024). Within the VNC, it fasciculates with the median tract of dorsal cervical fasciculus I and sends output to multiple regions (Takemura et al., 2024; Marin et al., 2024). There are approximately 2 of these cells per organism (Schlegel et al., 2024; Dorkenwald et al., 2024; Sturner et al., 2025)." [doi:10.7554/eLife.96084.1, doi:10.7554/eLife.97766.1, doi:10.7554/eLife.97769.1, FlyBase:FBrf0260535, FlyBase:FBrf0260546, FlyBase:FBrf0262850]
-comment: Obsoleted, as mapped to the Dsk MP1b neuron in Bates et al. (2025) - doi:10.1101/2025.07.31.667571. Type identified at light level and matched across EM datasets by Sturner et al. (2025). Pre- or post-synapse locations are those with the highest total count of these neurons in FlyWire FAFB. Inconsistent neurotransmitter predictions between MANC and FlyWire FAFB. Sturner et al. (2025) note that drivers for DNp61 and DNp62 label the same cell type.
+comment: Obsoleted, as mapped to the Dsk MP1b neuron in Bates et al. (2026) - doi:10.1038/s41586-026-10735-w. Type identified at light level and matched across EM datasets by Sturner et al. (2025). Pre- or post-synapse locations are those with the highest total count of these neurons in FlyWire FAFB. Inconsistent neurotransmitter predictions between MANC and FlyWire FAFB. Sturner et al. (2025) note that drivers for DNp61 and DNp62 label the same cell type.
 synonym: "DNp61" RELATED [FlyBase:FBrf0262850]
 synonym: "DNxn089" EXACT [FlyBase:FBrf0262850]
 is_obsolete: true
@@ -385219,6 +385898,15 @@ relationship: receives_synaptic_input_in_region FBbt:00003748 ! medulla
 relationship: receives_synaptic_input_in_region FBbt:00111744 ! lobula layer 5B
 relationship: sends_synaptic_output_to_region FBbt:00003748 ! medulla
 relationship: sends_synaptic_output_to_region FBbt:00003852 ! lobula
+
+[Typedef]
+id: adjacent_to
+name: adjacent_to
+def: "x adjacent to y if and only if x and y share a boundary." []
+subset: http://purl.obolibrary.org/obo/valid_for_go_annotation_extension
+subset: http://purl.obolibrary.org/obo/valid_for_go_ontology
+subset: http://purl.obolibrary.org/obo/valid_for_gocam
+xref: RO:0002220
 
 [Typedef]
 id: attached_to
