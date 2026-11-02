@@ -7,8 +7,8 @@ Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
 
 
 Ontology(<http://purl.obolibrary.org/obo/fbbt/imports/merged_import.owl>
-<http://purl.obolibrary.org/obo/fbbt/releases/2026-10-20/imports/merged_import.owl>
-Annotation(owl:versionInfo "2026-10-20")
+<http://purl.obolibrary.org/obo/fbbt/releases/2026-11-02/imports/merged_import.owl>
+Annotation(owl:versionInfo "2026-11-02")
 
 Declaration(Class(<http://purl.obolibrary.org/obo/BFO_0000001>))
 Declaration(Class(<http://purl.obolibrary.org/obo/BFO_0000002>))
@@ -716,7 +716,6 @@ Declaration(Class(<http://purl.obolibrary.org/obo/PATO_0000411>))
 Declaration(Class(<http://purl.obolibrary.org/obo/PATO_0000618>))
 Declaration(Class(<http://purl.obolibrary.org/obo/PATO_0000634>))
 Declaration(Class(<http://purl.obolibrary.org/obo/PATO_0000947>))
-Declaration(Class(<http://purl.obolibrary.org/obo/PATO_0001018>))
 Declaration(Class(<http://purl.obolibrary.org/obo/PATO_0001241>))
 Declaration(Class(<http://purl.obolibrary.org/obo/PATO_0001861>))
 Declaration(Class(<http://purl.obolibrary.org/obo/PATO_0001873>))
@@ -10971,19 +10970,20 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://pu
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/NCBITaxon_88770> "Panarthropoda")
 SubClassOf(<http://purl.obolibrary.org/obo/NCBITaxon_88770> <http://purl.obolibrary.org/obo/NCBITaxon_1206794>)
 
-# Class: <http://purl.obolibrary.org/obo/PATO_0000001> (quality)
+# Class: <http://purl.obolibrary.org/obo/PATO_0000001> (characteristic)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "PATOC:GVG") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/PATO_0000001> "A dependent entity that inheres in a bearer by virtue of how the bearer is related to other entities")
 AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "PATOC:GVG") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/PATO_0000001> "A dependent entity that inheres in a bearer by virtue of how the bearer is related to other entities.")
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "https://github.com/pato-ontology/pato/issues/602") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/PATO_0000001> "The properties, attributes, or modifiers used to describe an entity or process or some aspect of an entity or process.")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasAlternativeId> <http://purl.obolibrary.org/obo/PATO_0000001> "PATO:0000072")
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "OBO:legacy") <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/PATO_0000001> "quality")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/PATO_0000001> "trait")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/PATO_0000001> "quality")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/PATO_0000001> "PATO:0000001")
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/PATO_0000001> "quality")
-SubClassOf(<http://purl.obolibrary.org/obo/PATO_0000001> <http://purl.obolibrary.org/obo/BFO_0000020>)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/PATO_0000001> "characteristic")
 
 # Class: <http://purl.obolibrary.org/obo/PATO_0000051> (morphology)
 
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "PATOC:GVG") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/PATO_0000051> "A characterisitic of a single physical entity inhering in the bearer by virtue of the bearer's size or shape or structure.")
 AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "PATOC:GVG") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/PATO_0000051> "A quality of a single physical entity inhering in the bearer by virtue of the bearer's size or shape or structure.")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/PATO_0000051> "quality")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/PATO_0000051> "PATO:0000051")
@@ -11027,7 +11027,7 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#inSubset> <htt
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#inSubset> <http://purl.obolibrary.org/obo/PATO_0000125> <http://purl.obolibrary.org/obo/pato#scalar_slim>)
 AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/PATO_0000125> "For any biological use of PATO, the concept that should be used is 'mass' and not 'weight'. For example, increased weight of an organism.")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/PATO_0000125> "mass")
-SubClassOf(<http://purl.obolibrary.org/obo/PATO_0000125> <http://purl.obolibrary.org/obo/PATO_0001018>)
+SubClassOf(<http://purl.obolibrary.org/obo/PATO_0000125> <http://purl.obolibrary.org/obo/PATO_0001241>)
 
 # Class: <http://purl.obolibrary.org/obo/PATO_0000140> (position)
 
@@ -11041,7 +11041,7 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespac
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/PATO_0000140> "PATO:0000140")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#inSubset> <http://purl.obolibrary.org/obo/PATO_0000140> <http://purl.obolibrary.org/obo/pato#attribute_slim>)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/PATO_0000140> "position")
-SubClassOf(<http://purl.obolibrary.org/obo/PATO_0000140> <http://purl.obolibrary.org/obo/PATO_0001018>)
+SubClassOf(<http://purl.obolibrary.org/obo/PATO_0000140> <http://purl.obolibrary.org/obo/PATO_0001241>)
 
 # Class: <http://purl.obolibrary.org/obo/PATO_0000141> (structure)
 
@@ -11104,27 +11104,16 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#inSubset> <htt
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/PATO_0000947> "elliptic")
 SubClassOf(<http://purl.obolibrary.org/obo/PATO_0000947> <http://purl.obolibrary.org/obo/PATO_0002318>)
 
-# Class: <http://purl.obolibrary.org/obo/PATO_0001018> (physical quality)
+# Class: <http://purl.obolibrary.org/obo/PATO_0001241> (physical object characteristic)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "PATOC:GVG") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/PATO_0001018> "A quality of a physical entity that exists through action of continuants at the physical level of organisation in relation to other entities.")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasAlternativeId> <http://purl.obolibrary.org/obo/PATO_0001018> "PATO:0002079")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/PATO_0001018> "Wikipedia:Physical_property")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/PATO_0001018> "relational physical quality")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/PATO_0001018> "quality")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/PATO_0001018> "PATO:0001018")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#inSubset> <http://purl.obolibrary.org/obo/PATO_0001018> <http://purl.obolibrary.org/obo/pato#attribute_slim>)
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/PATO_0001018> "physical quality")
-SubClassOf(<http://purl.obolibrary.org/obo/PATO_0001018> <http://purl.obolibrary.org/obo/PATO_0001241>)
-
-# Class: <http://purl.obolibrary.org/obo/PATO_0001241> (physical object quality)
-
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "PATOC:GVG") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/PATO_0001241> "A characteristic which inheres in a continuant.")
 AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "PATOC:GVG") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/PATO_0001241> "A quality which inheres in a continuant.")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasAlternativeId> <http://purl.obolibrary.org/obo/PATO_0001241> "PATO:0001237")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasAlternativeId> <http://purl.obolibrary.org/obo/PATO_0001241> "PATO:0001238")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/PATO_0001241> "snap:Quality")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/PATO_0001241> "monadic quality of a continuant")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/PATO_0001241> "multiply inhering quality of a physical entity")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/PATO_0001241> "multiply inhering quality of a physical entity ")
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "OBO:legacy") <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/PATO_0001241> "physical object quality")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/PATO_0001241> "quality of a continuant")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/PATO_0001241> "quality of a single physical entity")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/PATO_0001241> "quality of an object")
@@ -11133,8 +11122,8 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasNarrowSynon
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym> <http://purl.obolibrary.org/obo/PATO_0001241> "monadic quality of continuant")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/PATO_0001241> "quality")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/PATO_0001241> "PATO:0001241")
-AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/PATO_0001241> "Relational qualities are qualities that hold between multiple entities. Normal (monadic) qualities such as the shape of a eyeball exist purely as a quality of that eyeball. A relational quality such as sensitivity to light is a quality of that eyeball (and connecting nervous system) as it relates to incoming light waves/particles.")
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/PATO_0001241> "physical object quality")
+AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/PATO_0001241> "Relational characteristics are characteristics that hold between multiple entities. Normal (monadic) characteristics such as the shape of a eyeball exist purely as a characteristic of that eyeball. A relational characteristic such as sensitivity to light is a characteristic of that eyeball (and connecting nervous system) as it relates to incoming light waves/particles.")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/PATO_0001241> "physical object characteristic")
 SubClassOf(<http://purl.obolibrary.org/obo/PATO_0001241> <http://purl.obolibrary.org/obo/PATO_0000001>)
 
 # Class: <http://purl.obolibrary.org/obo/PATO_0001861> (fasciculated)
