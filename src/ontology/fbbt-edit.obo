@@ -65963,6 +65963,7 @@ property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0002
 id: FBbt:00047188
 name: dorsal organ sensory neuron
 def: "." [https://orcid.org/0000-0002-1373-1705]
+relationship: RO:0002101 FBbt:00049186 ! fasciculates with larval antennal-pharyngeal nerve
 property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0002-1373-1705
 
 [Term]
@@ -86888,7 +86889,7 @@ property_value: http://purl.org/dc/terms/date "2020-03-05T12:00:00Z" xsd:dateTim
 [Term]
 id: FBbt:00049077
 name: larval mushroom body feedforward neuron 8
-def: "Larval mushroom body feedforward neuron belonging to group 8 (Eschbach et al., 2020). There is one bilateral pair of these cells (Eschbach et al., 2020)." [FlyBase:FBrf0245294]
+def: "Larval mushroom body feedforward neuron belonging to group 8 (Eschbach et al., 2020). There is one bilateral pair of these cells (Eschbach et al., 2020). It relays proprioceptive information to higher brain centres (Winding et al., 2023)." [FlyBase:FBrf0245294, FlyBase:FBrf0255988]
 comment: MB2IN-57 and MB2ON-268 synonyms from catmaid.
 synonym: "FFN-8" EXACT [FlyBase:FBrf0245294]
 synonym: "larval mushroom body second-order output neuron 268" EXACT [FlyBase:FBrf0251872]
@@ -86896,6 +86897,7 @@ synonym: "MB2IN-57" EXACT []
 synonym: "MB2ON-268" EXACT [FlyBase:FBrf0251872]
 is_a: FBbt:00049005 ! larval mushroom body feedforward neuron
 is_a: FBbt:00051205 ! larval mushroom body second order output neuron
+is_a: FBbt:00052521 ! larval proprioceptive projection neuron
 property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0002-1373-1705
 property_value: http://purl.org/dc/terms/date "2020-03-05T12:00:00Z" xsd:dateTime
 
@@ -87115,11 +87117,12 @@ property_value: http://purl.org/dc/terms/date "2020-03-05T12:00:00Z" xsd:dateTim
 [Term]
 id: FBbt:00049096
 name: larval mushroom body feedforward neuron 27
-def: "Larval mushroom body feedforward neuron belonging to group 27 (Eschbach et al., 2020). There is one bilateral pair of these cells (Eschbach et al., 2020)." [FlyBase:FBrf0245294]
+def: "Larval mushroom body feedforward neuron belonging to group 27 (Eschbach et al., 2020). There is one bilateral pair of these cells (Eschbach et al., 2020). It relays nociceptive information to higher brain centres (Winding et al., 2023)." [FlyBase:FBrf0245294, FlyBase:FBrf0255988]
 comment: MB2IN-87 synonym from catmaid.
 synonym: "FFN-27" EXACT [FlyBase:FBrf0245294]
 synonym: "MB2IN-87" EXACT []
 is_a: FBbt:00049005 ! larval mushroom body feedforward neuron
+is_a: FBbt:00051504 ! larval nociceptive projection neuron
 property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0002-1373-1705
 property_value: http://purl.org/dc/terms/date "2020-03-05T12:00:00Z" xsd:dateTime
 
@@ -87137,11 +87140,12 @@ property_value: http://purl.org/dc/terms/date "2020-03-05T12:00:00Z" xsd:dateTim
 [Term]
 id: FBbt:00049098
 name: larval mushroom body feedforward neuron 29
-def: "Larval mushroom body feedforward neuron belonging to group 29 (Eschbach et al., 2020). There is one bilateral pair of these cells (Eschbach et al., 2020)." [FlyBase:FBrf0245294]
+def: "Larval mushroom body feedforward neuron belonging to group 29 (Eschbach et al., 2020). There is one bilateral pair of these cells (Eschbach et al., 2020). It relays nociceptive information to higher brain centres (Winding et al., 2023)." [FlyBase:FBrf0245294, FlyBase:FBrf0255988]
 comment: MB2IN-91 synonym from catmaid.
 synonym: "FFN-29" EXACT [FlyBase:FBrf0245294]
 synonym: "MB2IN-91" EXACT []
 is_a: FBbt:00049005 ! larval mushroom body feedforward neuron
+is_a: FBbt:00051504 ! larval nociceptive projection neuron
 property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0002-1373-1705
 property_value: http://purl.org/dc/terms/date "2020-03-05T12:00:00Z" xsd:dateTime
 
@@ -119446,11 +119450,12 @@ property_value: http://purl.org/dc/terms/date "2023-08-22T09:55:16Z" xsd:dateTim
 [Term]
 id: FBbt:00052611
 name: larval gut internal state sensory neuron
-def: "Sensory neuron that innervates the gut posterior to the pharynx." [FlyBase:FBrf0240975, FlyBase:FBrf0255988]
+def: "Sensory neuron that innervates the gut posterior to the pharynx. These neurons enter the brain via the antennal-pharyngeal nerve and terminate in the ACa or AVa compartments (Miroschnikow et al., 2018)." [FlyBase:FBrf0240975, FlyBase:FBrf0255988]
 synonym: "larval AN-B1 neuron" RELATED [FlyBase:FBrf0240975, FlyBase:FBrf0255988]
 synonym: "larval enteric sensory neuron" EXACT [FlyBase:FBrf0240975]
 is_a: FBbt:00005124 ! sensory neuron
 is_a: FBbt:00052612 ! larval enteric neuron
+relationship: RO:0002101 FBbt:00049186 ! fasciculates with larval antennal-pharyngeal nerve
 relationship: RO:0013007 FBbt:00007512 ! has sensory dendrite in embryonic/larval gut
 property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0002-1373-1705
 property_value: http://purl.org/dc/terms/date "2023-08-22T10:26:18Z" xsd:dateTime
@@ -129527,6 +129532,36 @@ def: "." [FBC:Autogenerated]
 property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0002-1373-1705
 property_value: http://purl.org/dc/terms/date "2026-10-20T12:00:00Z" xsd:dateTime
 property_value: IAO:0000233 "https://github.com/FlyBase/drosophila-anatomy-developmental-ontology/issues/2218" xsd:anyURI
+
+[Term]
+id: FBbt:00053718
+name: external sense organ gustatory receptor neuron of larval maxillary-labial nerve
+def: "Larval external sense organ gustatory receptor neuron that fasciculates with the larval maxillary-labial nerve (Miroschnikow et al., 2018; Winding et al., 2023)." [FlyBase:FBrf0240975, FlyBase:FBrf0255988]
+intersection_of: FBbt:00052616 ! larval external sense organ gustatory receptor neuron
+intersection_of: RO:0002101 FBbt:00049187 ! fasciculates with larval maxillary-labial nerve
+property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0002-1373-1705
+property_value: http://purl.org/dc/terms/date "2026-11-04T12:00:00Z" xsd:dateTime
+property_value: IAO:0000233 "https://github.com/FlyBase/drosophila-anatomy-developmental-ontology/issues/2228" xsd:anyURI
+
+[Term]
+id: FBbt:00053719
+name: pharyngeal gustatory receptor neuron of larval maxillary-labial nerve
+def: "Larval pharyngeal gustatory receptor neuron that fasciculates with the larval maxillary-labial nerve (Miroschnikow et al., 2018; Winding et al., 2023)." [FlyBase:FBrf0240975, FlyBase:FBrf0255988]
+intersection_of: FBbt:00052613 ! larval pharyngeal gustatory receptor neuron
+intersection_of: RO:0002101 FBbt:00049187 ! fasciculates with larval maxillary-labial nerve
+property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0002-1373-1705
+property_value: http://purl.org/dc/terms/date "2026-11-04T12:00:00Z" xsd:dateTime
+property_value: IAO:0000233 "https://github.com/FlyBase/drosophila-anatomy-developmental-ontology/issues/2228" xsd:anyURI
+
+[Term]
+id: FBbt:00053720
+name: pharyngeal gustatory receptor neuron of larval antennal-pharyngeal nerve
+def: "Larval pharyngeal gustatory receptor neuron that fasciculates with the larval antennal-pharyngeal nerve (Miroschnikow et al., 2018; Winding et al., 2023)." [FlyBase:FBrf0240975, FlyBase:FBrf0255988]
+intersection_of: FBbt:00052613 ! larval pharyngeal gustatory receptor neuron
+intersection_of: RO:0002101 FBbt:00049186 ! fasciculates with larval antennal-pharyngeal nerve
+property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0002-1373-1705
+property_value: http://purl.org/dc/terms/date "2026-11-04T12:00:00Z" xsd:dateTime
+property_value: IAO:0000233 "https://github.com/FlyBase/drosophila-anatomy-developmental-ontology/issues/2228" xsd:anyURI
 
 [Term]
 id: FBbt:00057000
@@ -168197,10 +168232,11 @@ property_value: http://purl.org/dc/terms/date "2015-10-29T12:13:03Z" xsd:dateTim
 [Term]
 id: FBbt:00111237
 name: larval Ipsiphone neuron
-def: "Neuron of the larval brain. It has an ipsilateral dendritic and axonal domains. It receives input from the A00c neurons (Ohyama et al., 2015)." [FlyBase:FBrf0228257]
+def: "Neuron of the larval brain. It has an ipsilateral dendritic and axonal domains. It receives input from the A00c neurons (Ohyama et al., 2015) and relays nociceptive information to higher brain centres (Winding et al., 2023)." [FlyBase:FBrf0228257, FlyBase:FBrf0255988]
 subset: cur
 is_a: FBbt:00005125 ! interneuron
 is_a: FBbt:00047097 ! primary neuron
+is_a: FBbt:00051504 ! larval nociceptive projection neuron
 relationship: RO:0002100 FBbt:00111226 ! has soma location cell body rind of larval brain
 relationship: RO:0013001 FBbt:00001920 ! has synaptic IO in region larval brain
 relationship: RO:0013008 FBbt:00047682 ! receives synaptic input from neuron larval A00c neuron
@@ -175801,7 +175837,7 @@ subset: larval_OF
 synonym: "Drosophila" RELATED []
 intersection_of: CARO:0000000 ! anatomical entity
 intersection_of: BFO:0000050 NCBITaxon:7227 ! part of Drosophila melanogaster
-disjoint_from: PATO:0000001 ! quality
+disjoint_from: PATO:0000001 ! characteristic
 
 [Term]
 id: FBbt:10000445
