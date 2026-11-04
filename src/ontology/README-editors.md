@@ -124,11 +124,26 @@ Design patterns can be used to maintain and generate complete terms (labels, def
 
 See DOSDP [paper](https://jbiomedsem.biomedcentral.com/articles/10.1186/s13326-017-0126-0) and [GitHub](https://github.com/INCATools/dead_simple_owl_design_patterns).
 
-DOSDP design pattern yaml files are found in [../patterns/dosdp-patterns](../patterns/dosdp-patterns). Fillers are in tsv files in [../patterns/data/all-axioms](../patterns/data/all-axioms) for generation of logical and annotation axioms, or [../patterns/data/logical-only](../patterns/data/logical-only) for generation of only logical axioms. Any (yaml and tsv) pair of files that share a name (apart from the extension) are assumed to be a DOSDP design pattern and a corresponding tsv specifying axioms to add.
+DOSDP design pattern yaml files are found in [../patterns/dosdp-patterns](../patterns/dosdp-patterns). Any (yaml and tsv) pair of files that share a name (apart from the extension) are assumed to be a DOSDP design pattern and a corresponding tsv specifying axioms to add.
+
+### The two pipelines: `all-axioms` and `logical-only`
+
+Filler tsvs go in one of two folders, and the folder (not the pattern) decides which axioms are generated:
+
+- [../patterns/data/all-axioms](../patterns/data/all-axioms): everything the pattern specifies, i.e. logical axioms plus the generated label, definition, synonyms and xrefs. Use this when the pattern should produce the whole term.
+- [../patterns/data/logical-only](../patterns/data/logical-only): only the logical axioms (equivalence/subclass axioms). The pattern's `name`, `def`, synonym and annotation rules are ignored for these rows, even though the yaml contains them. Use this when the label, definition etc. are written by hand in the editors' file.
+
+The same pattern can have fillers in both folders (e.g. `cellByLocation`). [../patterns/data/default](../patterns/data/default) is not used.
+
+Generated axioms never change the editors' file. They are written to [../patterns/definitions.owl](../patterns/definitions.owl) and imported, so they are added alongside whatever is in `fbbt-edit.obo` for the same term. Consequences:
+
+- `all-axioms` term: do not also give it a label or definition in `fbbt-edit.obo`, or the term ends up with two. Keep only what the pattern does not generate (e.g. contributor, date, extra synonyms, comments).
+- `logical-only` term: keep the label, definition etc. in `fbbt-edit.obo`, and remove its `intersection_of`/`is_a` lines that the pattern now generates, so they are not maintained in two places.
+- Moving an existing term into either pipeline does not overwrite its hand-written axioms; it only adds the generated ones.
 
 After updating term IDs in a filler tsv, labels can be automatically updated by running `sh run.sh make update_pattern_labels` to aid human readability/checking.
 
-To compile design patterns, run `sh run.sh make patterns`. This generates a file [../patterns/definitions.owl](../patterns/definitions.owl), which is imported by the editor's file.
+To compile design patterns, run `sh run.sh make patterns`. This generates [../patterns/definitions.owl](../patterns/definitions.owl) (and [../patterns/pattern.owl](../patterns/pattern.owl) from the yaml files). Commit both; the per-pattern `.ofn` and `.txt` files in the data folders are gitignored.
 
 Design pattern tests are skipped, as the ALNeuronEquivalentClass pattern fails, but actual design pattern compilation should succeed when run.
 
