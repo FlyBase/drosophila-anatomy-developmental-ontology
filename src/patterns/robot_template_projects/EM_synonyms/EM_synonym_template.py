@@ -55,12 +55,12 @@ class Mapping:
 
         elif self.source == 'mc':
             self.synonym_type = 'name_in_male-cns'
-            self.reference = 'doi:10.1101/2025.10.09.680999' #Berg2025
+            self.reference = 'doi:10.1016/j.cell.2026.08.015' #Berg2025
             self.synonym_column = 'type'
 
         elif self.source == 'banc':
             self.synonym_type = 'name_in_banc'
-            self.reference = 'doi:10.1101/2025.07.31.667571' #Bates2025
+            self.reference = 'doi:10.1038/s41586-026-10735-w' #Bates2025
             self.synonym_column = 'type'
         else:
             raise ValueError(f'Invalid source dataset {self.source}')
