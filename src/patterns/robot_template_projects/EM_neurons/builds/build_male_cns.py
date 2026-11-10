@@ -178,9 +178,9 @@ def build_template(db_path):
             if nolat_post:
                 input_regions.append(f" the {neuropil_writer(nolat_post)}")
             if len(input_regions) < 3:
-                input_def = f" It receives input in{', and'.join(input_regions)} (Berg et al., 2025)."
+                input_def = f" It receives input in{', and'.join(input_regions)} (Berg et al., 2026)."
             else:
-                input_def = f" It receives input in{input_regions[0]},{input_regions[1]}, and{input_regions[2]} (Berg et al., 2025)."
+                input_def = f" It receives input in{input_regions[0]},{input_regions[1]}, and{input_regions[2]} (Berg et al., 2026)."
         else:
             input_def = ""
 
@@ -193,26 +193,26 @@ def build_template(db_path):
             if nolat_pre:
                 output_regions.append(f" the {neuropil_writer(nolat_pre)}")
             if len(output_regions) < 3:
-                output_def = f" It sends output to{', and'.join(output_regions)} (Berg et al., 2025)."
+                output_def = f" It sends output to{', and'.join(output_regions)} (Berg et al., 2026)."
             else:
-                output_def = f" It sends output to{output_regions[0]},{output_regions[1]}, and{output_regions[2]} (Berg et al., 2025)."
+                output_def = f" It sends output to{output_regions[0]},{output_regions[1]}, and{output_regions[2]} (Berg et al., 2026)."
         else:
             output_def = ""
 
         try:
             hemilineage = (f" It belongs to the {mapped_hemilineages.loc[mcns_type, 'hemilineage'].replace('_',' ')}"
-                           f" hemilineage (Berg et al., 2025).")
+                           f" hemilineage (Berg et al., 2026).")
         except KeyError:
             hemilineage = ""
 
         if "neuron" in broad_type:
-            definition = f"Adult {broad_type} of the {mcns_type} group (Berg et al., 2025)."
+            definition = f"Adult {broad_type} of the {mcns_type} group (Berg et al., 2026)."
         else:
-            definition = f"Adult {broad_type} neuron of the {mcns_type} group (Berg et al., 2025)."
+            definition = f"Adult {broad_type} neuron of the {mcns_type} group (Berg et al., 2026)."
         definition += hemilineage + input_def + output_def
         if cell_types["transmitter_pred"].notna().loc[mcns_type]:
             definition += (f" Its predicted neurotransmitter is {cell_types.loc[mcns_type, 'transmitter_pred']} "
-                           "(Eckstein et al., 2024; Berg et al., 2025).")
+                           "(Eckstein et al., 2024; Berg et al., 2026).")
         return definition
 
     def comment_writer(mcns_type):
@@ -223,7 +223,7 @@ def build_template(db_path):
             citations.extend(["Schlegel et al., 2024", "Dorkenwald et al., 2024"])
         if cell_types["manc_type"].notnull()[mcns_type]:
             citations.append("Marin et al., 2024")
-        citations.append("Berg et al., 2025")
+        citations.append("Berg et al., 2026")
         citation_str = "; ".join(citations)
         if len(citations) == 1:
             comment = f"Cell type identified in one EM dataset ({citation_str})."
@@ -236,7 +236,7 @@ def build_template(db_path):
         return comment
 
     def xref_generator(mcns_type):
-        def_xrefs = ["doi:10.1101/2025.10.09.680999"]
+        def_xrefs = ["doi:10.1016/j.cell.2026.08.015"]
         if cell_types["transmitter_pred"].notnull()[mcns_type]:
             def_xrefs.append("FlyBase:FBrf0259490")
         if cell_types["flywire_type"].notnull()[mcns_type]:
@@ -270,9 +270,9 @@ def build_template(db_path):
 
     for col in ["hemibrain_type", "flywire_type", "manc_type"]:
         cell_types[col] = cell_types[col].apply(lambda x: {"X": np.nan}.get(x, x))
-    cell_types.loc[cell_types["hemibrain_type"].notnull(), "hemibrain_ref"] = "FlyBase:FBrf0246888|doi:10.1101/2025.10.09.680999"
-    cell_types.loc[cell_types["flywire_type"].notnull(), "flywire_ref"] = "FlyBase:FBrf0260535|doi:10.1101/2025.10.09.680999"
-    cell_types.loc[cell_types["manc_type"].notnull(), "manc_ref"] = "doi:10.7554/eLife.97766.1|doi:10.1101/2025.10.09.680999"
+    cell_types.loc[cell_types["hemibrain_type"].notnull(), "hemibrain_ref"] = "FlyBase:FBrf0246888|doi:10.1016/j.cell.2026.08.015"
+    cell_types.loc[cell_types["flywire_type"].notnull(), "flywire_ref"] = "FlyBase:FBrf0260535|doi:10.1016/j.cell.2026.08.015"
+    cell_types.loc[cell_types["manc_type"].notnull(), "manc_ref"] = "doi:10.7554/eLife.97766.1|doi:10.1016/j.cell.2026.08.015"
 
     template = pd.DataFrame.from_records([TEMPLATE_SEED])
     cell_types = cell_types.rename(columns={"FBbt_id": "ID"})
