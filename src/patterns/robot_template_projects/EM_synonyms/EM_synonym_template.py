@@ -55,17 +55,23 @@ class Mapping:
 
         elif self.source == 'mc':
             self.synonym_type = 'name_in_male-cns'
-            self.reference = 'doi:10.1016/j.cell.2026.08.015' #Berg2025
+            self.reference = 'doi:10.1016/j.cell.2026.08.015' #Berg2026
             self.synonym_column = 'type'
 
         elif self.source == 'banc':
             self.synonym_type = 'name_in_banc'
-            self.reference = 'doi:10.1038/s41586-026-10735-w' #Bates2025
-            self.synonym_column = 'type'
+            self.reference = 'doi:10.1038/s41586-026-10735-w' #Bates2026
+            # only names from the paper's table (paper_type), for neurons typed
+            # from that name; others were typed from banc_888_meta or Codex
+            # names, or from their class alone
+            self.synonym_column = 'paper_type'
+            self.row_filter = lambda df: df['typed_from'] == 'paper'
         else:
             raise ValueError(f'Invalid source dataset {self.source}')
         
         self.dataframe = pd.read_csv(self.filename, sep='\t', dtype='str')
+        if hasattr(self, 'row_filter'):
+            self.dataframe = self.dataframe[self.row_filter(self.dataframe)]
         self.dataframe = self.dataframe[['FBbt_id', self.synonym_column, 'specificity']].drop_duplicates(ignore_index=True)
         
     def format_and_filter(self):
