@@ -108,8 +108,9 @@ $(EDIT_PREPROCESSED): $(SRC) all_robot_plugins
 # Components are written in OWL functional syntax (keeping the .owl name): about
 # half the size of RDF/XML and one axiom per line in diffs. ROBOT would otherwise
 # pick RDF/XML from the .owl extension, so every goal writing a component ends
-# with $(COMPONENT_OFN).
-COMPONENT_OFN = convert --add-prefix "obo: http://purl.obolibrary.org/obo/" --format ofn
+# with $(COMPONENT_OFN). component_prefixes.json gives the prefixes, so the
+# output is the same whichever command made the component.
+COMPONENT_OFN = convert --add-prefixes component_prefixes.json --format ofn
 
 ######################################################################################
 ### Update flybase_import.owl
@@ -136,7 +137,7 @@ update_template_gene_names: $(TMPDIR)/FBgn_template.tsv
 $(COMPONENTSDIR)/flybase_import.owl: $(TMPDIR)/FBgn_template.tsv update_template_gene_names | $(COMPONENTSDIR)
 	if [ $(IMP) = true ]; then $(ROBOT) template --input-iri http://purl.obolibrary.org/obo/ro.owl --template $< \
 	annotate --ontology-iri "http://purl.obolibrary.org/obo/fbbt/components/flybase_import.owl" \
-	$(COMPONENT_OFN) --add-prefix "FlyBase: http://flybase.org/reports/" --output $@ && rm $<; fi
+	$(COMPONENT_OFN) --output $@ && rm $<; fi
 
 ######################################################################################
 ### Update VFB_xrefs.owl

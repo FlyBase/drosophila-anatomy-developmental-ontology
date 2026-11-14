@@ -4,7 +4,11 @@ Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
 Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
 Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
 Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
+Prefix(foaf:=<http://xmlns.com/foaf/0.1/>)
 Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
+Prefix(terms:=<http://purl.org/dc/terms/>)
+Prefix(FlyBase:=<http://flybase.org/reports/>)
+Prefix(oboInOwl:=<http://www.geneontology.org/formats/oboInOwl#>)
 
 
 Ontology(<http://purl.obolibrary.org/obo/fbbt/components/brain_name_abbreviations.owl>
@@ -239,9 +243,9 @@ Declaration(Class(obo:FBbt_00111151))
 Declaration(Class(obo:FBbt_00111152))
 Declaration(Class(obo:FBbt_00111153))
 Declaration(Class(obo:FBbt_00111154))
-Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#hasDbXref>))
-Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym>))
-Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType>))
+Declaration(AnnotationProperty(oboInOwl:hasDbXref))
+Declaration(AnnotationProperty(oboInOwl:hasExactSynonym))
+Declaration(AnnotationProperty(oboInOwl:hasSynonymType))
 
 
 ############################
@@ -250,923 +254,923 @@ Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#has
 
 # Class: obo:FBbt_00001948 (obo:FBbt_00001948)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0224194") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> obo:FBbt_00001948 "rLOP")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FlyBase:FBrf0224194") Annotation(oboInOwl:hasSynonymType <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) oboInOwl:hasExactSynonym obo:FBbt_00001948 "rLOP")
 
 # Class: obo:FBbt_00003216 (obo:FBbt_00003216)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0224194") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> obo:FBbt_00003216 "CCA")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FlyBase:FBrf0224194") Annotation(oboInOwl:hasSynonymType <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) oboInOwl:hasExactSynonym obo:FBbt_00003216 "CCA")
 
 # Class: obo:FBbt_00003632 (obo:FBbt_00003632)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0224194") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> obo:FBbt_00003632 "CX")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FlyBase:FBrf0224194") Annotation(oboInOwl:hasSynonymType <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) oboInOwl:hasExactSynonym obo:FBbt_00003632 "CX")
 
 # Class: obo:FBbt_00003668 (obo:FBbt_00003668)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0224194") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> obo:FBbt_00003668 "PB")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FlyBase:FBrf0224194") Annotation(oboInOwl:hasSynonymType <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) oboInOwl:hasExactSynonym obo:FBbt_00003668 "PB")
 
 # Class: obo:FBbt_00003678 (obo:FBbt_00003678)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0224194") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> obo:FBbt_00003678 "EB")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FlyBase:FBrf0224194") Annotation(oboInOwl:hasSynonymType <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) oboInOwl:hasExactSynonym obo:FBbt_00003678 "EB")
 
 # Class: obo:FBbt_00003679 (obo:FBbt_00003679)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0224194") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> obo:FBbt_00003679 "FB")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FlyBase:FBrf0224194") Annotation(oboInOwl:hasSynonymType <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) oboInOwl:hasExactSynonym obo:FBbt_00003679 "FB")
 
 # Class: obo:FBbt_00003680 (obo:FBbt_00003680)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0224194") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> obo:FBbt_00003680 "NO")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FlyBase:FBrf0224194") Annotation(oboInOwl:hasSynonymType <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) oboInOwl:hasExactSynonym obo:FBbt_00003680 "NO")
 
 # Class: obo:FBbt_00003681 (obo:FBbt_00003681)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0224194") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> obo:FBbt_00003681 "LAL")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FlyBase:FBrf0224194") Annotation(oboInOwl:hasSynonymType <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) oboInOwl:hasExactSynonym obo:FBbt_00003681 "LAL")
 
 # Class: obo:FBbt_00003682 (obo:FBbt_00003682)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0224194") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> obo:FBbt_00003682 "BU")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FlyBase:FBrf0224194") Annotation(oboInOwl:hasSynonymType <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) oboInOwl:hasExactSynonym obo:FBbt_00003682 "BU")
 
 # Class: obo:FBbt_00003683 (obo:FBbt_00003683)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0224194") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> obo:FBbt_00003683 "MBDL")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FlyBase:FBrf0224194") Annotation(oboInOwl:hasSynonymType <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) oboInOwl:hasExactSynonym obo:FBbt_00003683 "MBDL")
 
 # Class: obo:FBbt_00003684 (obo:FBbt_00003684)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0224194") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> obo:FBbt_00003684 "MB")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FlyBase:FBrf0224194") Annotation(oboInOwl:hasSynonymType <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) oboInOwl:hasExactSynonym obo:FBbt_00003684 "MB")
 
 # Class: obo:FBbt_00003685 (obo:FBbt_00003685)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0224194") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> obo:FBbt_00003685 "CA")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FlyBase:FBrf0224194") Annotation(oboInOwl:hasSynonymType <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) oboInOwl:hasExactSynonym obo:FBbt_00003685 "CA")
 
 # Class: obo:FBbt_00003699 (obo:FBbt_00003699)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0224194") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> obo:FBbt_00003699 "OCN")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FlyBase:FBrf0224194") Annotation(oboInOwl:hasSynonymType <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) oboInOwl:hasExactSynonym obo:FBbt_00003699 "OCN")
 
 # Class: obo:FBbt_00003700 (obo:FBbt_00003700)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0224194") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> obo:FBbt_00003700 "PI")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FlyBase:FBrf0224194") Annotation(oboInOwl:hasSynonymType <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) oboInOwl:hasExactSynonym obo:FBbt_00003700 "PI")
 
 # Class: obo:FBbt_00003701 (obo:FBbt_00003701)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0224194") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> obo:FBbt_00003701 "OL")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FlyBase:FBrf0224194") Annotation(oboInOwl:hasSynonymType <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) oboInOwl:hasExactSynonym obo:FBbt_00003701 "OL")
 
 # Class: obo:FBbt_00003708 (obo:FBbt_00003708)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0224194") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> obo:FBbt_00003708 "LA")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FlyBase:FBrf0224194") Annotation(oboInOwl:hasSynonymType <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) oboInOwl:hasExactSynonym obo:FBbt_00003708 "LA")
 
 # Class: obo:FBbt_00003748 (obo:FBbt_00003748)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0224194") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> obo:FBbt_00003748 "ME")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FlyBase:FBrf0224194") Annotation(oboInOwl:hasSynonymType <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) oboInOwl:hasExactSynonym obo:FBbt_00003748 "ME")
 
 # Class: obo:FBbt_00003756 (obo:FBbt_00003756)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0224194") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> obo:FBbt_00003756 "SPL")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FlyBase:FBrf0224194") Annotation(oboInOwl:hasSynonymType <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) oboInOwl:hasExactSynonym obo:FBbt_00003756 "SPL")
 
 # Class: obo:FBbt_00003757 (obo:FBbt_00003757)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0224194") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> obo:FBbt_00003757 "MEI")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FlyBase:FBrf0224194") Annotation(oboInOwl:hasSynonymType <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) oboInOwl:hasExactSynonym obo:FBbt_00003757 "MEI")
 
 # Class: obo:FBbt_00003852 (obo:FBbt_00003852)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0224194") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> obo:FBbt_00003852 "LO")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FlyBase:FBrf0224194") Annotation(oboInOwl:hasSynonymType <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) oboInOwl:hasExactSynonym obo:FBbt_00003852 "LO")
 
 # Class: obo:FBbt_00003885 (obo:FBbt_00003885)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0224194") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> obo:FBbt_00003885 "LOP")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FlyBase:FBrf0224194") Annotation(oboInOwl:hasSynonymType <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) oboInOwl:hasExactSynonym obo:FBbt_00003885 "LOP")
 
 # Class: obo:FBbt_00003921 (obo:FBbt_00003921)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0224194") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> obo:FBbt_00003921 "OCH")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FlyBase:FBrf0224194") Annotation(oboInOwl:hasSynonymType <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) oboInOwl:hasExactSynonym obo:FBbt_00003921 "OCH")
 
 # Class: obo:FBbt_00003922 (obo:FBbt_00003922)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0224194") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> obo:FBbt_00003922 "OCH2")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FlyBase:FBrf0224194") Annotation(oboInOwl:hasSynonymType <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) oboInOwl:hasExactSynonym obo:FBbt_00003922 "OCH2")
 
 # Class: obo:FBbt_00003980 (obo:FBbt_00003980)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0224194") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> obo:FBbt_00003980 "AN")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FlyBase:FBrf0224194") Annotation(oboInOwl:hasSynonymType <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) oboInOwl:hasExactSynonym obo:FBbt_00003980 "AN")
 
 # Class: obo:FBbt_00003981 (obo:FBbt_00003981)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0224194") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> obo:FBbt_00003981 "TgN")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FlyBase:FBrf0224194") Annotation(oboInOwl:hasSynonymType <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) oboInOwl:hasExactSynonym obo:FBbt_00003981 "TgN")
 
 # Class: obo:FBbt_00003983 (obo:FBbt_00003983)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0224194") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> obo:FBbt_00003983 "lALT")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FlyBase:FBrf0224194") Annotation(oboInOwl:hasSynonymType <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) oboInOwl:hasExactSynonym obo:FBbt_00003983 "lALT")
 
 # Class: obo:FBbt_00003984 (obo:FBbt_00003984)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0224194") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> obo:FBbt_00003984 "mlALT")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FlyBase:FBrf0224194") Annotation(oboInOwl:hasSynonymType <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) oboInOwl:hasExactSynonym obo:FBbt_00003984 "mlALT")
 
 # Class: obo:FBbt_00003985 (obo:FBbt_00003985)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0224194") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> obo:FBbt_00003985 "mALT")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FlyBase:FBrf0224194") Annotation(oboInOwl:hasSynonymType <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) oboInOwl:hasExactSynonym obo:FBbt_00003985 "mALT")
 
 # Class: obo:FBbt_00004019 (obo:FBbt_00004019)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0224194") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> obo:FBbt_00004019 "CV")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FlyBase:FBrf0224194") Annotation(oboInOwl:hasSynonymType <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) oboInOwl:hasExactSynonym obo:FBbt_00004019 "CV")
 
 # Class: obo:FBbt_00004021 (obo:FBbt_00004021)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0224194") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> obo:FBbt_00004021 "PhN")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FlyBase:FBrf0224194") Annotation(oboInOwl:hasSynonymType <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) oboInOwl:hasExactSynonym obo:FBbt_00004021 "PhN")
 
 # Class: obo:FBbt_00004024 (obo:FBbt_00004024)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0224194") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> obo:FBbt_00004024 "APhN")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FlyBase:FBrf0224194") Annotation(oboInOwl:hasSynonymType <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) oboInOwl:hasExactSynonym obo:FBbt_00004024 "APhN")
 
 # Class: obo:FBbt_00004028 (obo:FBbt_00004028)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0224194") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> obo:FBbt_00004028 "LbN")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FlyBase:FBrf0224194") Annotation(oboInOwl:hasSynonymType <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) oboInOwl:hasExactSynonym obo:FBbt_00004028 "LbN")
 
 # Class: obo:FBbt_00004043 (obo:FBbt_00004043)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0224194") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> obo:FBbt_00004043 "MxN")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FlyBase:FBrf0224194") Annotation(oboInOwl:hasSynonymType <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) oboInOwl:hasExactSynonym obo:FBbt_00004043 "MxN")
 
 # Class: obo:FBbt_00004052 (obo:FBbt_00004052)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0224194") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> obo:FBbt_00004052 "TAG")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FlyBase:FBrf0224194") Annotation(oboInOwl:hasSynonymType <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) oboInOwl:hasExactSynonym obo:FBbt_00004052 "TAG")
 
 # Class: obo:FBbt_00005407 (obo:FBbt_00005407)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0224194") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> obo:FBbt_00005407 "VL")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FlyBase:FBrf0224194") Annotation(oboInOwl:hasSynonymType <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) oboInOwl:hasExactSynonym obo:FBbt_00005407 "VL")
 
 # Class: obo:FBbt_00005408 (obo:FBbt_00005408)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0224194") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> obo:FBbt_00005408 "ML")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FlyBase:FBrf0224194") Annotation(oboInOwl:hasSynonymType <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) oboInOwl:hasExactSynonym obo:FBbt_00005408 "ML")
 
 # Class: obo:FBbt_00005810 (obo:FBbt_00005810)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0224194") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> obo:FBbt_00005810 "OCH1")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FlyBase:FBrf0224194") Annotation(oboInOwl:hasSynonymType <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) oboInOwl:hasExactSynonym obo:FBbt_00005810 "OCH1")
 
 # Class: obo:FBbt_00007053 (obo:FBbt_00007053)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0224194") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> obo:FBbt_00007053 "LH")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FlyBase:FBrf0224194") Annotation(oboInOwl:hasSynonymType <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) oboInOwl:hasExactSynonym obo:FBbt_00007053 "LH")
 
 # Class: obo:FBbt_00007054 (obo:FBbt_00007054)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0224194") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> obo:FBbt_00007054 "SLP")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FlyBase:FBrf0224194") Annotation(oboInOwl:hasSynonymType <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) oboInOwl:hasExactSynonym obo:FBbt_00007054 "SLP")
 
 # Class: obo:FBbt_00007055 (obo:FBbt_00007055)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0224194") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> obo:FBbt_00007055 "SMP")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FlyBase:FBrf0224194") Annotation(oboInOwl:hasSynonymType <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) oboInOwl:hasExactSynonym obo:FBbt_00007055 "SMP")
 
 # Class: obo:FBbt_00007058 (obo:FBbt_00007058)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0224194") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> obo:FBbt_00007058 "VLP")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FlyBase:FBrf0224194") Annotation(oboInOwl:hasSynonymType <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) oboInOwl:hasExactSynonym obo:FBbt_00007058 "VLP")
 
 # Class: obo:FBbt_00007059 (obo:FBbt_00007059)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0224194") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> obo:FBbt_00007059 "AOTU")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FlyBase:FBrf0224194") Annotation(oboInOwl:hasSynonymType <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) oboInOwl:hasExactSynonym obo:FBbt_00007059 "AOTU")
 
 # Class: obo:FBbt_00007074 (obo:FBbt_00007074)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0224194") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> obo:FBbt_00007074 "LALC")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FlyBase:FBrf0224194") Annotation(oboInOwl:hasSynonymType <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) oboInOwl:hasExactSynonym obo:FBbt_00007074 "LALC")
 
 # Class: obo:FBbt_00007075 (obo:FBbt_00007075)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0224194") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> obo:FBbt_00007075 "SAC")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FlyBase:FBrf0224194") Annotation(oboInOwl:hasSynonymType <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) oboInOwl:hasExactSynonym obo:FBbt_00007075 "SAC")
 
 # Class: obo:FBbt_00007077 (obo:FBbt_00007077)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0224194") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> obo:FBbt_00007077 "sPLPC")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FlyBase:FBrf0224194") Annotation(oboInOwl:hasSynonymType <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) oboInOwl:hasExactSynonym obo:FBbt_00007077 "sPLPC")
 
 # Class: obo:FBbt_00007080 (obo:FBbt_00007080)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0224194") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> obo:FBbt_00007080 "GC")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FlyBase:FBrf0224194") Annotation(oboInOwl:hasSynonymType <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) oboInOwl:hasExactSynonym obo:FBbt_00007080 "GC")
 
 # Class: obo:FBbt_00007083 (obo:FBbt_00007083)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0224194") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> obo:FBbt_00007083 "PLF")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FlyBase:FBrf0224194") Annotation(oboInOwl:hasSynonymType <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) oboInOwl:hasExactSynonym obo:FBbt_00007083 "PLF")
 
 # Class: obo:FBbt_00007112 (obo:FBbt_00007112)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0224194") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> obo:FBbt_00007112 "rCA")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FlyBase:FBrf0224194") Annotation(oboInOwl:hasSynonymType <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) oboInOwl:hasExactSynonym obo:FBbt_00007112 "rCA")
 
 # Class: obo:FBbt_00007354 (obo:FBbt_00007354)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0224194") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> obo:FBbt_00007354 "AST")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FlyBase:FBrf0224194") Annotation(oboInOwl:hasSynonymType <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) oboInOwl:hasExactSynonym obo:FBbt_00007354 "AST")
 
 # Class: obo:FBbt_00007401 (obo:FBbt_00007401)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0224194") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> obo:FBbt_00007401 "AL")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FlyBase:FBrf0224194") Annotation(oboInOwl:hasSynonymType <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) oboInOwl:hasExactSynonym obo:FBbt_00007401 "AL")
 
 # Class: obo:FBbt_00007427 (obo:FBbt_00007427)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0224194") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> obo:FBbt_00007427 "POC")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FlyBase:FBrf0224194") Annotation(oboInOwl:hasSynonymType <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) oboInOwl:hasExactSynonym obo:FBbt_00007427 "POC")
 
 # Class: obo:FBbt_00007453 (obo:FBbt_00007453)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0224194") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> obo:FBbt_00007453 "PED")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FlyBase:FBrf0224194") Annotation(oboInOwl:hasSynonymType <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) oboInOwl:hasExactSynonym obo:FBbt_00007453 "PED")
 
 # Class: obo:FBbt_00007647 (obo:FBbt_00007647)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0224194") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> obo:FBbt_00007647 "rLH")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FlyBase:FBrf0224194") Annotation(oboInOwl:hasSynonymType <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) oboInOwl:hasExactSynonym obo:FBbt_00007647 "rLH")
 
 # Class: obo:FBbt_00007666 (obo:FBbt_00007666)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0224194") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> obo:FBbt_00007666 "rSMPa")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FlyBase:FBrf0224194") Annotation(oboInOwl:hasSynonymType <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) oboInOwl:hasExactSynonym obo:FBbt_00007666 "rSMPa")
 
 # Class: obo:FBbt_00007667 (obo:FBbt_00007667)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0224194") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> obo:FBbt_00007667 "rSMPp")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FlyBase:FBrf0224194") Annotation(oboInOwl:hasSynonymType <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) oboInOwl:hasExactSynonym obo:FBbt_00007667 "rSMPp")
 
 # Class: obo:FBbt_00013691 (obo:FBbt_00013691)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0224194") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> obo:FBbt_00013691 "alpha' L")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FlyBase:FBrf0224194") Annotation(oboInOwl:hasSynonymType <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) oboInOwl:hasExactSynonym obo:FBbt_00013691 "alpha' L")
 
 # Class: obo:FBbt_00013694 (obo:FBbt_00013694)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0224194") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> obo:FBbt_00013694 "beta' L")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FlyBase:FBrf0224194") Annotation(oboInOwl:hasSynonymType <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) oboInOwl:hasExactSynonym obo:FBbt_00013694 "beta' L")
 
 # Class: obo:FBbt_00013695 (obo:FBbt_00013695)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0224194") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> obo:FBbt_00013695 "gamma L")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FlyBase:FBrf0224194") Annotation(oboInOwl:hasSynonymType <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) oboInOwl:hasExactSynonym obo:FBbt_00013695 "gamma L")
 
 # Class: obo:FBbt_00014013 (obo:FBbt_00014013)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0224194") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> obo:FBbt_00014013 "GNG")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FlyBase:FBrf0224194") Annotation(oboInOwl:hasSynonymType <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) oboInOwl:hasExactSynonym obo:FBbt_00014013 "GNG")
 
 # Class: obo:FBbt_00040001 (obo:FBbt_00040001)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0224194") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> obo:FBbt_00040001 "LX")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FlyBase:FBrf0224194") Annotation(oboInOwl:hasSynonymType <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) oboInOwl:hasExactSynonym obo:FBbt_00040001 "LX")
 
 # Class: obo:FBbt_00040002 (obo:FBbt_00040002)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0224194") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> obo:FBbt_00040002 "VMNPS")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FlyBase:FBrf0224194") Annotation(oboInOwl:hasSynonymType <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) oboInOwl:hasExactSynonym obo:FBbt_00040002 "VMNPS")
 
 # Class: obo:FBbt_00040037 (obo:FBbt_00040037)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0224194") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> obo:FBbt_00040037 "INP")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FlyBase:FBrf0224194") Annotation(oboInOwl:hasSynonymType <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) oboInOwl:hasExactSynonym obo:FBbt_00040037 "INP")
 
 # Class: obo:FBbt_00040038 (obo:FBbt_00040038)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0224194") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> obo:FBbt_00040038 "RUB")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FlyBase:FBrf0224194") Annotation(oboInOwl:hasSynonymType <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) oboInOwl:hasExactSynonym obo:FBbt_00040038 "RUB")
 
 # Class: obo:FBbt_00040039 (obo:FBbt_00040039)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0224194") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> obo:FBbt_00040039 "GOR")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FlyBase:FBrf0224194") Annotation(oboInOwl:hasSynonymType <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) oboInOwl:hasExactSynonym obo:FBbt_00040039 "GOR")
 
 # Class: obo:FBbt_00040040 (obo:FBbt_00040040)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0224194") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> obo:FBbt_00040040 "EPA")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FlyBase:FBrf0224194") Annotation(oboInOwl:hasSynonymType <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) oboInOwl:hasExactSynonym obo:FBbt_00040040 "EPA")
 
 # Class: obo:FBbt_00040041 (obo:FBbt_00040041)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0224194") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> obo:FBbt_00040041 "VES")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FlyBase:FBrf0224194") Annotation(oboInOwl:hasSynonymType <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) oboInOwl:hasExactSynonym obo:FBbt_00040041 "VES")
 
 # Class: obo:FBbt_00040042 (obo:FBbt_00040042)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0224194") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> obo:FBbt_00040042 "PVLP")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FlyBase:FBrf0224194") Annotation(oboInOwl:hasSynonymType <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) oboInOwl:hasExactSynonym obo:FBbt_00040042 "PVLP")
 
 # Class: obo:FBbt_00040043 (obo:FBbt_00040043)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0224194") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> obo:FBbt_00040043 "AVLP")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FlyBase:FBrf0224194") Annotation(oboInOwl:hasSynonymType <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) oboInOwl:hasExactSynonym obo:FBbt_00040043 "AVLP")
 
 # Class: obo:FBbt_00040044 (obo:FBbt_00040044)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0224194") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> obo:FBbt_00040044 "PLP")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FlyBase:FBrf0224194") Annotation(oboInOwl:hasSynonymType <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) oboInOwl:hasExactSynonym obo:FBbt_00040044 "PLP")
 
 # Class: obo:FBbt_00040045 (obo:FBbt_00040045)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0224194") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> obo:FBbt_00040045 "ASLP")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FlyBase:FBrf0224194") Annotation(oboInOwl:hasSynonymType <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) oboInOwl:hasExactSynonym obo:FBbt_00040045 "ASLP")
 
 # Class: obo:FBbt_00040046 (obo:FBbt_00040046)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0224194") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> obo:FBbt_00040046 "PSLP")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FlyBase:FBrf0224194") Annotation(oboInOwl:hasSynonymType <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) oboInOwl:hasExactSynonym obo:FBbt_00040046 "PSLP")
 
 # Class: obo:FBbt_00040047 (obo:FBbt_00040047)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0224194") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> obo:FBbt_00040047 "CL")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FlyBase:FBrf0224194") Annotation(oboInOwl:hasSynonymType <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) oboInOwl:hasExactSynonym obo:FBbt_00040047 "CL")
 
 # Class: obo:FBbt_00040048 (obo:FBbt_00040048)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0224194") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> obo:FBbt_00040048 "SCL")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FlyBase:FBrf0224194") Annotation(oboInOwl:hasSynonymType <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) oboInOwl:hasExactSynonym obo:FBbt_00040048 "SCL")
 
 # Class: obo:FBbt_00040049 (obo:FBbt_00040049)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0224194") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> obo:FBbt_00040049 "ICL")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FlyBase:FBrf0224194") Annotation(oboInOwl:hasSynonymType <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) oboInOwl:hasExactSynonym obo:FBbt_00040049 "ICL")
 
 # Class: obo:FBbt_00040050 (obo:FBbt_00040050)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0224194") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> obo:FBbt_00040050 "IB")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FlyBase:FBrf0224194") Annotation(oboInOwl:hasSynonymType <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) oboInOwl:hasExactSynonym obo:FBbt_00040050 "IB")
 
 # Class: obo:FBbt_00040051 (obo:FBbt_00040051)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0224194") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> obo:FBbt_00040051 "PRW")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FlyBase:FBrf0224194") Annotation(oboInOwl:hasSynonymType <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) oboInOwl:hasExactSynonym obo:FBbt_00040051 "PRW")
 
 # Class: obo:FBbt_00040052 (obo:FBbt_00040052)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0224194") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> obo:FBbt_00040052 "SPhS")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FlyBase:FBrf0224194") Annotation(oboInOwl:hasSynonymType <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) oboInOwl:hasExactSynonym obo:FBbt_00040052 "SPhS")
 
 # Class: obo:FBbt_00040054 (obo:FBbt_00040054)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0224194") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> obo:FBbt_00040054 "IPhS")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FlyBase:FBrf0224194") Annotation(oboInOwl:hasSynonymType <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) oboInOwl:hasExactSynonym obo:FBbt_00040054 "IPhS")
 
 # Class: obo:FBbt_00040055 (obo:FBbt_00040055)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0224194") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> obo:FBbt_00040055 "LS")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FlyBase:FBrf0224194") Annotation(oboInOwl:hasSynonymType <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) oboInOwl:hasExactSynonym obo:FBbt_00040055 "LS")
 
 # Class: obo:FBbt_00040056 (obo:FBbt_00040056)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0224194") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> obo:FBbt_00040056 "PMS")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FlyBase:FBrf0224194") Annotation(oboInOwl:hasSynonymType <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) oboInOwl:hasExactSynonym obo:FBbt_00040056 "PMS")
 
 # Class: obo:FBbt_00040057 (obo:FBbt_00040057)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0224194") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> obo:FBbt_00040057 "AMS")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FlyBase:FBrf0224194") Annotation(oboInOwl:hasSynonymType <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) oboInOwl:hasExactSynonym obo:FBbt_00040057 "AMS")
 
 # Class: obo:FBbt_00040059 (obo:FBbt_00040059)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0224194") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> obo:FBbt_00040059 "ULAL")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FlyBase:FBrf0224194") Annotation(oboInOwl:hasSynonymType <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) oboInOwl:hasExactSynonym obo:FBbt_00040059 "ULAL")
 
 # Class: obo:FBbt_00040060 (obo:FBbt_00040060)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0224194") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> obo:FBbt_00040060 "GA")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FlyBase:FBrf0224194") Annotation(oboInOwl:hasSynonymType <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) oboInOwl:hasExactSynonym obo:FBbt_00040060 "GA")
 
 # Class: obo:FBbt_00040061 (obo:FBbt_00040061)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0224194") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> obo:FBbt_00040061 "LLAL")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FlyBase:FBrf0224194") Annotation(oboInOwl:hasSynonymType <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) oboInOwl:hasExactSynonym obo:FBbt_00040061 "LLAL")
 
 # Class: obo:FBbt_00040062 (obo:FBbt_00040062)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0224194") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> obo:FBbt_00040062 "ASMP")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FlyBase:FBrf0224194") Annotation(oboInOwl:hasSynonymType <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) oboInOwl:hasExactSynonym obo:FBbt_00040062 "ASMP")
 
 # Class: obo:FBbt_00040063 (obo:FBbt_00040063)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0224194") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> obo:FBbt_00040063 "PSMP")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FlyBase:FBrf0224194") Annotation(oboInOwl:hasSynonymType <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) oboInOwl:hasExactSynonym obo:FBbt_00040063 "PSMP")
 
 # Class: obo:FBbt_00040071 (obo:FBbt_00040071)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0224194") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> obo:FBbt_00040071 "VX")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FlyBase:FBrf0224194") Annotation(oboInOwl:hasSynonymType <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) oboInOwl:hasExactSynonym obo:FBbt_00040071 "VX")
 
 # Class: obo:FBbt_00040072 (obo:FBbt_00040072)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0224194") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> obo:FBbt_00040072 "PS")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FlyBase:FBrf0224194") Annotation(oboInOwl:hasSynonymType <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) oboInOwl:hasExactSynonym obo:FBbt_00040072 "PS")
 
 # Class: obo:FBbt_00045000 (obo:FBbt_00045000)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0224194") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> obo:FBbt_00045000 "LADRA")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FlyBase:FBrf0224194") Annotation(oboInOwl:hasSynonymType <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) oboInOwl:hasExactSynonym obo:FBbt_00045000 "LADRA")
 
 # Class: obo:FBbt_00045001 (obo:FBbt_00045001)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0224194") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> obo:FBbt_00045001 "PLME")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FlyBase:FBrf0224194") Annotation(oboInOwl:hasSynonymType <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) oboInOwl:hasExactSynonym obo:FBbt_00045001 "PLME")
 
 # Class: obo:FBbt_00045002 (obo:FBbt_00045002)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0224194") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> obo:FBbt_00045002 "MEDRA")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FlyBase:FBrf0224194") Annotation(oboInOwl:hasSynonymType <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) oboInOwl:hasExactSynonym obo:FBbt_00045002 "MEDRA")
 
 # Class: obo:FBbt_00045003 (obo:FBbt_00045003)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0224194") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> obo:FBbt_00045003 "AME")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FlyBase:FBrf0224194") Annotation(oboInOwl:hasSynonymType <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) oboInOwl:hasExactSynonym obo:FBbt_00045003 "AME")
 
 # Class: obo:FBbt_00045004 (obo:FBbt_00045004)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0224194") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> obo:FBbt_00045004 "LOX")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FlyBase:FBrf0224194") Annotation(oboInOwl:hasSynonymType <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) oboInOwl:hasExactSynonym obo:FBbt_00045004 "LOX")
 
 # Class: obo:FBbt_00045005 (obo:FBbt_00045005)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0224194") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> obo:FBbt_00045005 "MCA")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FlyBase:FBrf0224194") Annotation(oboInOwl:hasSynonymType <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) oboInOwl:hasExactSynonym obo:FBbt_00045005 "MCA")
 
 # Class: obo:FBbt_00045006 (obo:FBbt_00045006)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0224194") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> obo:FBbt_00045006 "LCA")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FlyBase:FBrf0224194") Annotation(oboInOwl:hasSynonymType <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) oboInOwl:hasExactSynonym obo:FBbt_00045006 "LCA")
 
 # Class: obo:FBbt_00045007 (obo:FBbt_00045007)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0224194") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> obo:FBbt_00045007 "ACA")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FlyBase:FBrf0224194") Annotation(oboInOwl:hasSynonymType <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) oboInOwl:hasExactSynonym obo:FBbt_00045007 "ACA")
 
 # Class: obo:FBbt_00045008 (obo:FBbt_00045008)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0224194") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> obo:FBbt_00045008 "PEDN")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FlyBase:FBrf0224194") Annotation(oboInOwl:hasSynonymType <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) oboInOwl:hasExactSynonym obo:FBbt_00045008 "PEDN")
 
 # Class: obo:FBbt_00045009 (obo:FBbt_00045009)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0224194") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> obo:FBbt_00045009 "PEDD")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FlyBase:FBrf0224194") Annotation(oboInOwl:hasSynonymType <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) oboInOwl:hasExactSynonym obo:FBbt_00045009 "PEDD")
 
 # Class: obo:FBbt_00045020 (obo:FBbt_00045020)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0224194") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> obo:FBbt_00045020 "CB")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FlyBase:FBrf0224194") Annotation(oboInOwl:hasSynonymType <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) oboInOwl:hasExactSynonym obo:FBbt_00045020 "CB")
 
 # Class: obo:FBbt_00045021 (obo:FBbt_00045021)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0224194") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> obo:FBbt_00045021 "VLNP")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FlyBase:FBrf0224194") Annotation(oboInOwl:hasSynonymType <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) oboInOwl:hasExactSynonym obo:FBbt_00045021 "VLNP")
 
 # Class: obo:FBbt_00045027 (obo:FBbt_00045027)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0224194") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> obo:FBbt_00045027 "WED")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FlyBase:FBrf0224194") Annotation(oboInOwl:hasSynonymType <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) oboInOwl:hasExactSynonym obo:FBbt_00045027 "WED")
 
 # Class: obo:FBbt_00045030 (obo:FBbt_00045030)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0224194") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> obo:FBbt_00045030 "SNP")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FlyBase:FBrf0224194") Annotation(oboInOwl:hasSynonymType <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) oboInOwl:hasExactSynonym obo:FBbt_00045030 "SNP")
 
 # Class: obo:FBbt_00045032 (obo:FBbt_00045032)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0224194") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> obo:FBbt_00045032 "SIP")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FlyBase:FBrf0224194") Annotation(oboInOwl:hasSynonymType <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) oboInOwl:hasExactSynonym obo:FBbt_00045032 "SIP")
 
 # Class: obo:FBbt_00045037 (obo:FBbt_00045037)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0224194") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> obo:FBbt_00045037 "CRE")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FlyBase:FBrf0224194") Annotation(oboInOwl:hasSynonymType <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) oboInOwl:hasExactSynonym obo:FBbt_00045037 "CRE")
 
 # Class: obo:FBbt_00045039 (obo:FBbt_00045039)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0224194") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> obo:FBbt_00045039 "ATL")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FlyBase:FBrf0224194") Annotation(oboInOwl:hasSynonymType <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) oboInOwl:hasExactSynonym obo:FBbt_00045039 "ATL")
 
 # Class: obo:FBbt_00045040 (obo:FBbt_00045040)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0224194") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> obo:FBbt_00045040 "SPS")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FlyBase:FBrf0224194") Annotation(oboInOwl:hasSynonymType <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) oboInOwl:hasExactSynonym obo:FBbt_00045040 "SPS")
 
 # Class: obo:FBbt_00045046 (obo:FBbt_00045046)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0224194") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> obo:FBbt_00045046 "IPS")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FlyBase:FBrf0224194") Annotation(oboInOwl:hasSynonymType <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) oboInOwl:hasExactSynonym obo:FBbt_00045046 "IPS")
 
 # Class: obo:FBbt_00045047 (obo:FBbt_00045047)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0224194") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> obo:FBbt_00045047 "PENP")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FlyBase:FBrf0224194") Annotation(oboInOwl:hasSynonymType <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) oboInOwl:hasExactSynonym obo:FBbt_00045047 "PENP")
 
 # Class: obo:FBbt_00045048 (obo:FBbt_00045048)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0224194") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> obo:FBbt_00045048 "SAD")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FlyBase:FBrf0224194") Annotation(oboInOwl:hasSynonymType <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) oboInOwl:hasExactSynonym obo:FBbt_00045048 "SAD")
 
 # Class: obo:FBbt_00045050 (obo:FBbt_00045050)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0224194") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> obo:FBbt_00045050 "FLA")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FlyBase:FBrf0224194") Annotation(oboInOwl:hasSynonymType <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) oboInOwl:hasExactSynonym obo:FBbt_00045050 "FLA")
 
 # Class: obo:FBbt_00045051 (obo:FBbt_00045051)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0224194") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> obo:FBbt_00045051 "CAN")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FlyBase:FBrf0224194") Annotation(oboInOwl:hasSynonymType <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) oboInOwl:hasExactSynonym obo:FBbt_00045051 "CAN")
 
 # Class: obo:FBbt_00048329 (obo:FBbt_00048329)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0224194") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> obo:FBbt_00048329 "rIB")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FlyBase:FBrf0224194") Annotation(oboInOwl:hasSynonymType <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) oboInOwl:hasExactSynonym obo:FBbt_00048329 "rIB")
 
 # Class: obo:FBbt_00048330 (obo:FBbt_00048330)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0224194") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> obo:FBbt_00048330 "rPB")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FlyBase:FBrf0224194") Annotation(oboInOwl:hasSynonymType <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) oboInOwl:hasExactSynonym obo:FBbt_00048330 "rPB")
 
 # Class: obo:FBbt_00048403 (obo:FBbt_00048403)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0224194") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> obo:FBbt_00048403 "rSPS")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FlyBase:FBrf0224194") Annotation(oboInOwl:hasSynonymType <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) oboInOwl:hasExactSynonym obo:FBbt_00048403 "rSPS")
 
 # Class: obo:FBbt_00048404 (obo:FBbt_00048404)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0224194") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> obo:FBbt_00048404 "rIPS")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FlyBase:FBrf0224194") Annotation(oboInOwl:hasSynonymType <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) oboInOwl:hasExactSynonym obo:FBbt_00048404 "rIPS")
 
 # Class: obo:FBbt_00048470 (obo:FBbt_00048470)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0224194") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> obo:FBbt_00048470 "rAOTU")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FlyBase:FBrf0224194") Annotation(oboInOwl:hasSynonymType <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) oboInOwl:hasExactSynonym obo:FBbt_00048470 "rAOTU")
 
 # Class: obo:FBbt_00048542 (obo:FBbt_00048542)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0224194") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> obo:FBbt_00048542 "rATL")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FlyBase:FBrf0224194") Annotation(oboInOwl:hasSynonymType <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) oboInOwl:hasExactSynonym obo:FBbt_00048542 "rATL")
 
 # Class: obo:FBbt_00049149 (obo:FBbt_00049149)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0224194") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> obo:FBbt_00049149 "rPVLP")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FlyBase:FBrf0224194") Annotation(oboInOwl:hasSynonymType <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) oboInOwl:hasExactSynonym obo:FBbt_00049149 "rPVLP")
 
 # Class: obo:FBbt_00049151 (obo:FBbt_00049151)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0224194") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> obo:FBbt_00049151 "rWED")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FlyBase:FBrf0224194") Annotation(oboInOwl:hasSynonymType <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) oboInOwl:hasExactSynonym obo:FBbt_00049151 "rWED")
 
 # Class: obo:FBbt_00049152 (obo:FBbt_00049152)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0224194") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> obo:FBbt_00049152 "rSAD")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FlyBase:FBrf0224194") Annotation(oboInOwl:hasSynonymType <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) oboInOwl:hasExactSynonym obo:FBbt_00049152 "rSAD")
 
 # Class: obo:FBbt_00049550 (obo:FBbt_00049550)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0224194") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> obo:FBbt_00049550 "rSIP")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FlyBase:FBrf0224194") Annotation(oboInOwl:hasSynonymType <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) oboInOwl:hasExactSynonym obo:FBbt_00049550 "rSIP")
 
 # Class: obo:FBbt_00049781 (obo:FBbt_00049781)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0224194") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> obo:FBbt_00049781 "rSEZ")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FlyBase:FBrf0224194") Annotation(oboInOwl:hasSynonymType <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) oboInOwl:hasExactSynonym obo:FBbt_00049781 "rSEZ")
 
 # Class: obo:FBbt_00049908 (obo:FBbt_00049908)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0224194") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> obo:FBbt_00049908 "rSMPmd")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FlyBase:FBrf0224194") Annotation(oboInOwl:hasSynonymType <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) oboInOwl:hasExactSynonym obo:FBbt_00049908 "rSMPmd")
 
 # Class: obo:FBbt_00049999 (obo:FBbt_00049999)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0224194") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> obo:FBbt_00049999 "rSMPma")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FlyBase:FBrf0224194") Annotation(oboInOwl:hasSynonymType <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) oboInOwl:hasExactSynonym obo:FBbt_00049999 "rSMPma")
 
 # Class: obo:FBbt_00051000 (obo:FBbt_00051000)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0224194") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> obo:FBbt_00051000 "rALad")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FlyBase:FBrf0224194") Annotation(oboInOwl:hasSynonymType <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) oboInOwl:hasExactSynonym obo:FBbt_00051000 "rALad")
 
 # Class: obo:FBbt_00051001 (obo:FBbt_00051001)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0224194") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> obo:FBbt_00051001 "rALl")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FlyBase:FBrf0224194") Annotation(oboInOwl:hasSynonymType <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) oboInOwl:hasExactSynonym obo:FBbt_00051001 "rALl")
 
 # Class: obo:FBbt_00051002 (obo:FBbt_00051002)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0224194") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> obo:FBbt_00051002 "rALld")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FlyBase:FBrf0224194") Annotation(oboInOwl:hasSynonymType <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) oboInOwl:hasExactSynonym obo:FBbt_00051002 "rALld")
 
 # Class: obo:FBbt_00051003 (obo:FBbt_00051003)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0224194") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> obo:FBbt_00051003 "rALv")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FlyBase:FBrf0224194") Annotation(oboInOwl:hasSynonymType <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) oboInOwl:hasExactSynonym obo:FBbt_00051003 "rALv")
 
 # Class: obo:FBbt_00051004 (obo:FBbt_00051004)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0224194") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> obo:FBbt_00051004 "rAOTUa")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FlyBase:FBrf0224194") Annotation(oboInOwl:hasSynonymType <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) oboInOwl:hasExactSynonym obo:FBbt_00051004 "rAOTUa")
 
 # Class: obo:FBbt_00051005 (obo:FBbt_00051005)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0224194") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> obo:FBbt_00051005 "rAOTUl")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FlyBase:FBrf0224194") Annotation(oboInOwl:hasSynonymType <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) oboInOwl:hasExactSynonym obo:FBbt_00051005 "rAOTUl")
 
 # Class: obo:FBbt_00051006 (obo:FBbt_00051006)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0224194") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> obo:FBbt_00051006 "rAOTUv")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FlyBase:FBrf0224194") Annotation(oboInOwl:hasSynonymType <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) oboInOwl:hasExactSynonym obo:FBbt_00051006 "rAOTUv")
 
 # Class: obo:FBbt_00051007 (obo:FBbt_00051007)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0224194") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> obo:FBbt_00051007 "rAVLPa")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FlyBase:FBrf0224194") Annotation(oboInOwl:hasSynonymType <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) oboInOwl:hasExactSynonym obo:FBbt_00051007 "rAVLPa")
 
 # Class: obo:FBbt_00051008 (obo:FBbt_00051008)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0224194") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> obo:FBbt_00051008 "rAVLPl")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FlyBase:FBrf0224194") Annotation(oboInOwl:hasSynonymType <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) oboInOwl:hasExactSynonym obo:FBbt_00051008 "rAVLPl")
 
 # Class: obo:FBbt_00051009 (obo:FBbt_00051009)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0224194") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> obo:FBbt_00051009 "rCREa")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FlyBase:FBrf0224194") Annotation(oboInOwl:hasSynonymType <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) oboInOwl:hasExactSynonym obo:FBbt_00051009 "rCREa")
 
 # Class: obo:FBbt_00051010 (obo:FBbt_00051010)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0224194") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> obo:FBbt_00051010 "rCREm")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FlyBase:FBrf0224194") Annotation(oboInOwl:hasSynonymType <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) oboInOwl:hasExactSynonym obo:FBbt_00051010 "rCREm")
 
 # Class: obo:FBbt_00051011 (obo:FBbt_00051011)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0224194") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> obo:FBbt_00051011 "rLHd")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FlyBase:FBrf0224194") Annotation(oboInOwl:hasSynonymType <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) oboInOwl:hasExactSynonym obo:FBbt_00051011 "rLHd")
 
 # Class: obo:FBbt_00051012 (obo:FBbt_00051012)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0224194") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> obo:FBbt_00051012 "rLHl")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FlyBase:FBrf0224194") Annotation(oboInOwl:hasSynonymType <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) oboInOwl:hasExactSynonym obo:FBbt_00051012 "rLHl")
 
 # Class: obo:FBbt_00051013 (obo:FBbt_00051013)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0224194") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> obo:FBbt_00051013 "rLHp")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FlyBase:FBrf0224194") Annotation(oboInOwl:hasSynonymType <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) oboInOwl:hasExactSynonym obo:FBbt_00051013 "rLHp")
 
 # Class: obo:FBbt_00051014 (obo:FBbt_00051014)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0224194") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> obo:FBbt_00051014 "rPLPl")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FlyBase:FBrf0224194") Annotation(oboInOwl:hasSynonymType <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) oboInOwl:hasExactSynonym obo:FBbt_00051014 "rPLPl")
 
 # Class: obo:FBbt_00051015 (obo:FBbt_00051015)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0224194") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> obo:FBbt_00051015 "rPLPp")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FlyBase:FBrf0224194") Annotation(oboInOwl:hasSynonymType <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) oboInOwl:hasExactSynonym obo:FBbt_00051015 "rPLPp")
 
 # Class: obo:FBbt_00051016 (obo:FBbt_00051016)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0224194") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> obo:FBbt_00051016 "rSADl")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FlyBase:FBrf0224194") Annotation(oboInOwl:hasSynonymType <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) oboInOwl:hasExactSynonym obo:FBbt_00051016 "rSADl")
 
 # Class: obo:FBbt_00051017 (obo:FBbt_00051017)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0224194") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> obo:FBbt_00051017 "rSADmv")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FlyBase:FBrf0224194") Annotation(oboInOwl:hasSynonymType <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) oboInOwl:hasExactSynonym obo:FBbt_00051017 "rSADmv")
 
 # Class: obo:FBbt_00051018 (obo:FBbt_00051018)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0224194") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> obo:FBbt_00051018 "rSIPa")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FlyBase:FBrf0224194") Annotation(oboInOwl:hasSynonymType <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) oboInOwl:hasExactSynonym obo:FBbt_00051018 "rSIPa")
 
 # Class: obo:FBbt_00051019 (obo:FBbt_00051019)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0224194") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> obo:FBbt_00051019 "rSIPd")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FlyBase:FBrf0224194") Annotation(oboInOwl:hasSynonymType <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) oboInOwl:hasExactSynonym obo:FBbt_00051019 "rSIPd")
 
 # Class: obo:FBbt_00051020 (obo:FBbt_00051020)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0224194") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> obo:FBbt_00051020 "rSLPa")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FlyBase:FBrf0224194") Annotation(oboInOwl:hasSynonymType <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) oboInOwl:hasExactSynonym obo:FBbt_00051020 "rSLPa")
 
 # Class: obo:FBbt_00051021 (obo:FBbt_00051021)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0224194") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> obo:FBbt_00051021 "rSLPd")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FlyBase:FBrf0224194") Annotation(oboInOwl:hasSynonymType <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) oboInOwl:hasExactSynonym obo:FBbt_00051021 "rSLPd")
 
 # Class: obo:FBbt_00051022 (obo:FBbt_00051022)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0224194") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> obo:FBbt_00051022 "rSLPp")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FlyBase:FBrf0224194") Annotation(oboInOwl:hasSynonymType <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) oboInOwl:hasExactSynonym obo:FBbt_00051022 "rSLPp")
 
 # Class: obo:FBbt_00051023 (obo:FBbt_00051023)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0224194") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> obo:FBbt_00051023 "rSMPd")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FlyBase:FBrf0224194") Annotation(oboInOwl:hasSynonymType <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) oboInOwl:hasExactSynonym obo:FBbt_00051023 "rSMPd")
 
 # Class: obo:FBbt_00051024 (obo:FBbt_00051024)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0224194") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> obo:FBbt_00051024 "rGNGl")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FlyBase:FBrf0224194") Annotation(oboInOwl:hasSynonymType <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) oboInOwl:hasExactSynonym obo:FBbt_00051024 "rGNGl")
 
 # Class: obo:FBbt_00051025 (obo:FBbt_00051025)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0224194") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> obo:FBbt_00051025 "rGNGv")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FlyBase:FBrf0224194") Annotation(oboInOwl:hasSynonymType <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) oboInOwl:hasExactSynonym obo:FBbt_00051025 "rGNGv")
 
 # Class: obo:FBbt_00051026 (obo:FBbt_00051026)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0224194") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> obo:FBbt_00051026 "rLAa")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FlyBase:FBrf0224194") Annotation(oboInOwl:hasSynonymType <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) oboInOwl:hasExactSynonym obo:FBbt_00051026 "rLAa")
 
 # Class: obo:FBbt_00051027 (obo:FBbt_00051027)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0224194") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> obo:FBbt_00051027 "rLAd")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FlyBase:FBrf0224194") Annotation(oboInOwl:hasSynonymType <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) oboInOwl:hasExactSynonym obo:FBbt_00051027 "rLAd")
 
 # Class: obo:FBbt_00051028 (obo:FBbt_00051028)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0224194") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> obo:FBbt_00051028 "rLAl")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FlyBase:FBrf0224194") Annotation(oboInOwl:hasSynonymType <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) oboInOwl:hasExactSynonym obo:FBbt_00051028 "rLAl")
 
 # Class: obo:FBbt_00051029 (obo:FBbt_00051029)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0224194") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> obo:FBbt_00051029 "rLAm")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FlyBase:FBrf0224194") Annotation(oboInOwl:hasSynonymType <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) oboInOwl:hasExactSynonym obo:FBbt_00051029 "rLAm")
 
 # Class: obo:FBbt_00051030 (obo:FBbt_00051030)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0224194") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> obo:FBbt_00051030 "rLAp")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FlyBase:FBrf0224194") Annotation(oboInOwl:hasSynonymType <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) oboInOwl:hasExactSynonym obo:FBbt_00051030 "rLAp")
 
 # Class: obo:FBbt_00051031 (obo:FBbt_00051031)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0224194") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> obo:FBbt_00051031 "rLAv")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FlyBase:FBrf0224194") Annotation(oboInOwl:hasSynonymType <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) oboInOwl:hasExactSynonym obo:FBbt_00051031 "rLAv")
 
 # Class: obo:FBbt_00051032 (obo:FBbt_00051032)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0224194") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> obo:FBbt_00051032 "rLOa")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FlyBase:FBrf0224194") Annotation(oboInOwl:hasSynonymType <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) oboInOwl:hasExactSynonym obo:FBbt_00051032 "rLOa")
 
 # Class: obo:FBbt_00051033 (obo:FBbt_00051033)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0224194") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> obo:FBbt_00051033 "rLOd")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FlyBase:FBrf0224194") Annotation(oboInOwl:hasSynonymType <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) oboInOwl:hasExactSynonym obo:FBbt_00051033 "rLOd")
 
 # Class: obo:FBbt_00051034 (obo:FBbt_00051034)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0224194") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> obo:FBbt_00051034 "rLOp")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FlyBase:FBrf0224194") Annotation(oboInOwl:hasSynonymType <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) oboInOwl:hasExactSynonym obo:FBbt_00051034 "rLOp")
 
 # Class: obo:FBbt_00051035 (obo:FBbt_00051035)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0224194") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> obo:FBbt_00051035 "rLOPd")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FlyBase:FBrf0224194") Annotation(oboInOwl:hasSynonymType <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) oboInOwl:hasExactSynonym obo:FBbt_00051035 "rLOPd")
 
 # Class: obo:FBbt_00051036 (obo:FBbt_00051036)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0224194") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> obo:FBbt_00051036 "rLOPp")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FlyBase:FBrf0224194") Annotation(oboInOwl:hasSynonymType <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) oboInOwl:hasExactSynonym obo:FBbt_00051036 "rLOPp")
 
 # Class: obo:FBbt_00051037 (obo:FBbt_00051037)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0224194") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> obo:FBbt_00051037 "rLOPv")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FlyBase:FBrf0224194") Annotation(oboInOwl:hasSynonymType <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) oboInOwl:hasExactSynonym obo:FBbt_00051037 "rLOPv")
 
 # Class: obo:FBbt_00051038 (obo:FBbt_00051038)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0224194") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> obo:FBbt_00051038 "rLOv")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FlyBase:FBrf0224194") Annotation(oboInOwl:hasSynonymType <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) oboInOwl:hasExactSynonym obo:FBbt_00051038 "rLOv")
 
 # Class: obo:FBbt_00051039 (obo:FBbt_00051039)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0224194") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> obo:FBbt_00051039 "rMEa")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FlyBase:FBrf0224194") Annotation(oboInOwl:hasSynonymType <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) oboInOwl:hasExactSynonym obo:FBbt_00051039 "rMEa")
 
 # Class: obo:FBbt_00051040 (obo:FBbt_00051040)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0224194") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> obo:FBbt_00051040 "rMEd")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FlyBase:FBrf0224194") Annotation(oboInOwl:hasSynonymType <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) oboInOwl:hasExactSynonym obo:FBbt_00051040 "rMEd")
 
 # Class: obo:FBbt_00051041 (obo:FBbt_00051041)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0224194") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> obo:FBbt_00051041 "rMEl")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FlyBase:FBrf0224194") Annotation(oboInOwl:hasSynonymType <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) oboInOwl:hasExactSynonym obo:FBbt_00051041 "rMEl")
 
 # Class: obo:FBbt_00051042 (obo:FBbt_00051042)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0224194") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> obo:FBbt_00051042 "rMEp")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FlyBase:FBrf0224194") Annotation(oboInOwl:hasSynonymType <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) oboInOwl:hasExactSynonym obo:FBbt_00051042 "rMEp")
 
 # Class: obo:FBbt_00051043 (obo:FBbt_00051043)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0224194") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> obo:FBbt_00051043 "rMEv")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FlyBase:FBrf0224194") Annotation(oboInOwl:hasSynonymType <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) oboInOwl:hasExactSynonym obo:FBbt_00051043 "rMEv")
 
 # Class: obo:FBbt_00051044 (obo:FBbt_00051044)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0224194") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> obo:FBbt_00051044 "rSMPmp")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FlyBase:FBrf0224194") Annotation(oboInOwl:hasSynonymType <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) oboInOwl:hasExactSynonym obo:FBbt_00051044 "rSMPmp")
 
 # Class: obo:FBbt_00100099 (obo:FBbt_00100099)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0224194") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> obo:FBbt_00100099 "ALT")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FlyBase:FBrf0224194") Annotation(oboInOwl:hasSynonymType <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) oboInOwl:hasExactSynonym obo:FBbt_00100099 "ALT")
 
 # Class: obo:FBbt_00100201 (obo:FBbt_00100201)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0224194") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> obo:FBbt_00100201 "LCBR")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FlyBase:FBrf0224194") Annotation(oboInOwl:hasSynonymType <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) oboInOwl:hasExactSynonym obo:FBbt_00100201 "LCBR")
 
 # Class: obo:FBbt_00100202 (obo:FBbt_00100202)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0224194") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> obo:FBbt_00100202 "rSLP")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FlyBase:FBrf0224194") Annotation(oboInOwl:hasSynonymType <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) oboInOwl:hasExactSynonym obo:FBbt_00100202 "rSLP")
 
 # Class: obo:FBbt_00100203 (obo:FBbt_00100203)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0224194") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> obo:FBbt_00100203 "rPLP")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FlyBase:FBrf0224194") Annotation(oboInOwl:hasSynonymType <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) oboInOwl:hasExactSynonym obo:FBbt_00100203 "rPLP")
 
 # Class: obo:FBbt_00100204 (obo:FBbt_00100204)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0224194") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> obo:FBbt_00100204 "rSMP")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FlyBase:FBrf0224194") Annotation(oboInOwl:hasSynonymType <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) oboInOwl:hasExactSynonym obo:FBbt_00100204 "rSMP")
 
 # Class: obo:FBbt_00100205 (obo:FBbt_00100205)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0224194") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> obo:FBbt_00100205 "rME")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FlyBase:FBrf0224194") Annotation(oboInOwl:hasSynonymType <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) oboInOwl:hasExactSynonym obo:FBbt_00100205 "rME")
 
 # Class: obo:FBbt_00100206 (obo:FBbt_00100206)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0224194") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> obo:FBbt_00100206 "rLA")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FlyBase:FBrf0224194") Annotation(oboInOwl:hasSynonymType <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) oboInOwl:hasExactSynonym obo:FBbt_00100206 "rLA")
 
 # Class: obo:FBbt_00100207 (obo:FBbt_00100207)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0224194") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> obo:FBbt_00100207 "rLO")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FlyBase:FBrf0224194") Annotation(oboInOwl:hasSynonymType <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) oboInOwl:hasExactSynonym obo:FBbt_00100207 "rLO")
 
 # Class: obo:FBbt_00100209 (obo:FBbt_00100209)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0224194") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> obo:FBbt_00100209 "rAVLP")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FlyBase:FBrf0224194") Annotation(oboInOwl:hasSynonymType <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) oboInOwl:hasExactSynonym obo:FBbt_00100209 "rAVLP")
 
 # Class: obo:FBbt_00100210 (obo:FBbt_00100210)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0224194") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> obo:FBbt_00100210 "GCBR")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FlyBase:FBrf0224194") Annotation(oboInOwl:hasSynonymType <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) oboInOwl:hasExactSynonym obo:FBbt_00100210 "GCBR")
 
 # Class: obo:FBbt_00100211 (obo:FBbt_00100211)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0224194") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> obo:FBbt_00100211 "rAL")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FlyBase:FBrf0224194") Annotation(oboInOwl:hasSynonymType <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) oboInOwl:hasExactSynonym obo:FBbt_00100211 "rAL")
 
 # Class: obo:FBbt_00100212 (obo:FBbt_00100212)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0224194") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> obo:FBbt_00100212 "rPS")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FlyBase:FBrf0224194") Annotation(oboInOwl:hasSynonymType <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) oboInOwl:hasExactSynonym obo:FBbt_00100212 "rPS")
 
 # Class: obo:FBbt_00100256 (obo:FBbt_00100256)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0224194") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> obo:FBbt_00100256 "alpha accessory calyx layer")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FlyBase:FBrf0224194") Annotation(oboInOwl:hasSynonymType <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) oboInOwl:hasExactSynonym obo:FBbt_00100256 "alpha accessory calyx layer")
 
 # Class: obo:FBbt_00100261 (obo:FBbt_00100261)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0224194") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> obo:FBbt_00100261 "beta accessory calyx layer")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FlyBase:FBrf0224194") Annotation(oboInOwl:hasSynonymType <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) oboInOwl:hasExactSynonym obo:FBbt_00100261 "beta accessory calyx layer")
 
 # Class: obo:FBbt_00100288 (obo:FBbt_00100288)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0224194") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> obo:FBbt_00100288 "rCRE")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FlyBase:FBrf0224194") Annotation(oboInOwl:hasSynonymType <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) oboInOwl:hasExactSynonym obo:FBbt_00100288 "rCRE")
 
 # Class: obo:FBbt_00100308 (obo:FBbt_00100308)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0224194") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> obo:FBbt_00100308 "SCBR")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FlyBase:FBrf0224194") Annotation(oboInOwl:hasSynonymType <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) oboInOwl:hasExactSynonym obo:FBbt_00100308 "SCBR")
 
 # Class: obo:FBbt_00100328 (obo:FBbt_00100328)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0224194") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> obo:FBbt_00100328 "LbrN")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FlyBase:FBrf0224194") Annotation(oboInOwl:hasSynonymType <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) oboInOwl:hasExactSynonym obo:FBbt_00100328 "LbrN")
 
 # Class: obo:FBbt_00100330 (obo:FBbt_00100330)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0224194") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> obo:FBbt_00100330 "FrN")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FlyBase:FBrf0224194") Annotation(oboInOwl:hasSynonymType <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) oboInOwl:hasExactSynonym obo:FBbt_00100330 "FrN")
 
 # Class: obo:FBbt_00100332 (obo:FBbt_00100332)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0224194") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> obo:FBbt_00100332 "RcN")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FlyBase:FBrf0224194") Annotation(oboInOwl:hasSynonymType <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) oboInOwl:hasExactSynonym obo:FBbt_00100332 "RcN")
 
 # Class: obo:FBbt_00100335 (obo:FBbt_00100335)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0224194") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> obo:FBbt_00100335 "MnN")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FlyBase:FBrf0224194") Annotation(oboInOwl:hasSynonymType <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) oboInOwl:hasExactSynonym obo:FBbt_00100335 "MnN")
 
 # Class: obo:FBbt_00100337 (obo:FBbt_00100337)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0224194") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> obo:FBbt_00100337 "AOT")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FlyBase:FBrf0224194") Annotation(oboInOwl:hasSynonymType <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) oboInOwl:hasExactSynonym obo:FBbt_00100337 "AOT")
 
 # Class: obo:FBbt_00100338 (obo:FBbt_00100338)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0224194") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> obo:FBbt_00100338 "PYF")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FlyBase:FBrf0224194") Annotation(oboInOwl:hasSynonymType <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) oboInOwl:hasExactSynonym obo:FBbt_00100338 "PYF")
 
 # Class: obo:FBbt_00100339 (obo:FBbt_00100339)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0224194") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> obo:FBbt_00100339 "aSLPF")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FlyBase:FBrf0224194") Annotation(oboInOwl:hasSynonymType <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) oboInOwl:hasExactSynonym obo:FBbt_00100339 "aSLPF")
 
 # Class: obo:FBbt_00100340 (obo:FBbt_00100340)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0224194") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> obo:FBbt_00100340 "hVLPF")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FlyBase:FBrf0224194") Annotation(oboInOwl:hasSynonymType <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) oboInOwl:hasExactSynonym obo:FBbt_00100340 "hVLPF")
 
 # Class: obo:FBbt_00100341 (obo:FBbt_00100341)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0224194") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> obo:FBbt_00100341 "vVLPF")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FlyBase:FBrf0224194") Annotation(oboInOwl:hasSynonymType <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) oboInOwl:hasExactSynonym obo:FBbt_00100341 "vVLPF")
 
 # Class: obo:FBbt_00100342 (obo:FBbt_00100342)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0224194") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> obo:FBbt_00100342 "MEF")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FlyBase:FBrf0224194") Annotation(oboInOwl:hasSynonymType <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) oboInOwl:hasExactSynonym obo:FBbt_00100342 "MEF")
 
 # Class: obo:FBbt_00100343 (obo:FBbt_00100343)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0224194") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> obo:FBbt_00100343 "LEF")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FlyBase:FBrf0224194") Annotation(oboInOwl:hasSynonymType <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) oboInOwl:hasExactSynonym obo:FBbt_00100343 "LEF")
 
 # Class: obo:FBbt_00100344 (obo:FBbt_00100344)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0224194") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> obo:FBbt_00100344 "pCCF")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FlyBase:FBrf0224194") Annotation(oboInOwl:hasSynonymType <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) oboInOwl:hasExactSynonym obo:FBbt_00100344 "pCCF")
 
 # Class: obo:FBbt_00100345 (obo:FBbt_00100345)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0224194") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> obo:FBbt_00100345 "mCCF")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FlyBase:FBrf0224194") Annotation(oboInOwl:hasSynonymType <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) oboInOwl:hasExactSynonym obo:FBbt_00100345 "mCCF")
 
 # Class: obo:FBbt_00100346 (obo:FBbt_00100346)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0224194") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> obo:FBbt_00100346 "aCCF")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FlyBase:FBrf0224194") Annotation(oboInOwl:hasSynonymType <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) oboInOwl:hasExactSynonym obo:FBbt_00100346 "aCCF")
 
 # Class: obo:FBbt_00100347 (obo:FBbt_00100347)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0224194") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> obo:FBbt_00100347 "lCCF")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FlyBase:FBrf0224194") Annotation(oboInOwl:hasSynonymType <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) oboInOwl:hasExactSynonym obo:FBbt_00100347 "lCCF")
 
 # Class: obo:FBbt_00100349 (obo:FBbt_00100349)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0224194") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> obo:FBbt_00100349 "SFS")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FlyBase:FBrf0224194") Annotation(oboInOwl:hasSynonymType <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) oboInOwl:hasExactSynonym obo:FBbt_00100349 "SFS")
 
 # Class: obo:FBbt_00100350 (obo:FBbt_00100350)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0224194") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> obo:FBbt_00100350 "IFS")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FlyBase:FBrf0224194") Annotation(oboInOwl:hasSynonymType <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) oboInOwl:hasExactSynonym obo:FBbt_00100350 "IFS")
 
 # Class: obo:FBbt_00100351 (obo:FBbt_00100351)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0224194") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> obo:FBbt_00100351 "sALC")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FlyBase:FBrf0224194") Annotation(oboInOwl:hasSynonymType <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) oboInOwl:hasExactSynonym obo:FBbt_00100351 "sALC")
 
 # Class: obo:FBbt_00100352 (obo:FBbt_00100352)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0224194") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> obo:FBbt_00100352 "iALC")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FlyBase:FBrf0224194") Annotation(oboInOwl:hasSynonymType <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) oboInOwl:hasExactSynonym obo:FBbt_00100352 "iALC")
 
 # Class: obo:FBbt_00100354 (obo:FBbt_00100354)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0224194") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> obo:FBbt_00100354 "SEC")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FlyBase:FBrf0224194") Annotation(oboInOwl:hasSynonymType <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) oboInOwl:hasExactSynonym obo:FBbt_00100354 "SEC")
 
 # Class: obo:FBbt_00100355 (obo:FBbt_00100355)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0224194") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> obo:FBbt_00100355 "pPLPC")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FlyBase:FBrf0224194") Annotation(oboInOwl:hasSynonymType <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) oboInOwl:hasExactSynonym obo:FBbt_00100355 "pPLPC")
 
 # Class: obo:FBbt_00100356 (obo:FBbt_00100356)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0224194") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> obo:FBbt_00100356 "WEDC")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FlyBase:FBrf0224194") Annotation(oboInOwl:hasSynonymType <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) oboInOwl:hasExactSynonym obo:FBbt_00100356 "WEDC")
 
 # Class: obo:FBbt_00100357 (obo:FBbt_00100357)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0224194") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> obo:FBbt_00100357 "sAMMCC")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FlyBase:FBrf0224194") Annotation(oboInOwl:hasSynonymType <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) oboInOwl:hasExactSynonym obo:FBbt_00100357 "sAMMCC")
 
 # Class: obo:FBbt_00100362 (obo:FBbt_00100362)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0224194") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> obo:FBbt_00100362 "ALH")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FlyBase:FBrf0224194") Annotation(oboInOwl:hasSynonymType <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) oboInOwl:hasExactSynonym obo:FBbt_00100362 "ALH")
 
 # Class: obo:FBbt_00100363 (obo:FBbt_00100363)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0224194") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> obo:FBbt_00100363 "SBU")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FlyBase:FBrf0224194") Annotation(oboInOwl:hasSynonymType <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) oboInOwl:hasExactSynonym obo:FBbt_00100363 "SBU")
 
 # Class: obo:FBbt_00100364 (obo:FBbt_00100364)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0224194") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> obo:FBbt_00100364 "IBU")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FlyBase:FBrf0224194") Annotation(oboInOwl:hasSynonymType <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) oboInOwl:hasExactSynonym obo:FBbt_00100364 "IBU")
 
 # Class: obo:FBbt_00100365 (obo:FBbt_00100365)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0224194") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> obo:FBbt_00100365 "ABU")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FlyBase:FBrf0224194") Annotation(oboInOwl:hasSynonymType <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) oboInOwl:hasExactSynonym obo:FBbt_00100365 "ABU")
 
 # Class: obo:FBbt_00100366 (obo:FBbt_00100366)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0224194") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> obo:FBbt_00100366 "PLLA")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FlyBase:FBrf0224194") Annotation(oboInOwl:hasSynonymType <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) oboInOwl:hasExactSynonym obo:FBbt_00100366 "PLLA")
 
 # Class: obo:FBbt_00110123 (obo:FBbt_00110123)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0224194") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> obo:FBbt_00110123 "rVLP")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FlyBase:FBrf0224194") Annotation(oboInOwl:hasSynonymType <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) oboInOwl:hasExactSynonym obo:FBbt_00110123 "rVLP")
 
 # Class: obo:FBbt_00110184 (obo:FBbt_00110184)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0224194") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> obo:FBbt_00110184 "iAMMCC")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FlyBase:FBrf0224194") Annotation(oboInOwl:hasSynonymType <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) oboInOwl:hasExactSynonym obo:FBbt_00110184 "iAMMCC")
 
 # Class: obo:FBbt_00110636 (obo:FBbt_00110636)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0224194") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> obo:FBbt_00110636 "CRG")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FlyBase:FBrf0224194") Annotation(oboInOwl:hasSynonymType <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) oboInOwl:hasExactSynonym obo:FBbt_00110636 "CRG")
 
 # Class: obo:FBbt_00110638 (obo:FBbt_00110638)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0224194") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> obo:FBbt_00110638 "SPZ")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FlyBase:FBrf0224194") Annotation(oboInOwl:hasSynonymType <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) oboInOwl:hasExactSynonym obo:FBbt_00110638 "SPZ")
 
 # Class: obo:FBbt_00110639 (obo:FBbt_00110639)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0224194") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> obo:FBbt_00110639 "SEZ")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FlyBase:FBrf0224194") Annotation(oboInOwl:hasSynonymType <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) oboInOwl:hasExactSynonym obo:FBbt_00110639 "SEZ")
 
 # Class: obo:FBbt_00110640 (obo:FBbt_00110640)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0224194") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> obo:FBbt_00110640 "SPU")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FlyBase:FBrf0224194") Annotation(oboInOwl:hasSynonymType <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) oboInOwl:hasExactSynonym obo:FBbt_00110640 "SPU")
 
 # Class: obo:FBbt_00110650 (obo:FBbt_00110650)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0224194") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> obo:FBbt_00110650 "PCH")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FlyBase:FBrf0224194") Annotation(oboInOwl:hasSynonymType <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) oboInOwl:hasExactSynonym obo:FBbt_00110650 "PCH")
 
 # Class: obo:FBbt_00110651 (obo:FBbt_00110651)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0224194") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> obo:FBbt_00110651 "ACH")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FlyBase:FBrf0224194") Annotation(oboInOwl:hasSynonymType <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) oboInOwl:hasExactSynonym obo:FBbt_00110651 "ACH")
 
 # Class: obo:FBbt_00110652 (obo:FBbt_00110652)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0224194") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> obo:FBbt_00110652 "PL")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FlyBase:FBrf0224194") Annotation(oboInOwl:hasSynonymType <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) oboInOwl:hasExactSynonym obo:FBbt_00110652 "PL")
 
 # Class: obo:FBbt_00110653 (obo:FBbt_00110653)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0224194") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> obo:FBbt_00110653 "LbrFrN")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FlyBase:FBrf0224194") Annotation(oboInOwl:hasSynonymType <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) oboInOwl:hasExactSynonym obo:FBbt_00110653 "LbrFrN")
 
 # Class: obo:FBbt_00110654 (obo:FBbt_00110654)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0224194") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> obo:FBbt_00110654 "MxLbN")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FlyBase:FBrf0224194") Annotation(oboInOwl:hasSynonymType <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) oboInOwl:hasExactSynonym obo:FBbt_00110654 "MxLbN")
 
 # Class: obo:FBbt_00110657 (obo:FBbt_00110657)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0224194") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> obo:FBbt_00110657 "alpha L")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FlyBase:FBrf0224194") Annotation(oboInOwl:hasSynonymType <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) oboInOwl:hasExactSynonym obo:FBbt_00110657 "alpha L")
 
 # Class: obo:FBbt_00110658 (obo:FBbt_00110658)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0224194") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> obo:FBbt_00110658 "beta L")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FlyBase:FBrf0224194") Annotation(oboInOwl:hasSynonymType <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) oboInOwl:hasExactSynonym obo:FBbt_00110658 "beta L")
 
 # Class: obo:FBbt_00111151 (obo:FBbt_00111151)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0224194") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> obo:FBbt_00111151 "ACBR")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FlyBase:FBrf0224194") Annotation(oboInOwl:hasSynonymType <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) oboInOwl:hasExactSynonym obo:FBbt_00111151 "ACBR")
 
 # Class: obo:FBbt_00111152 (obo:FBbt_00111152)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0224194") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> obo:FBbt_00111152 "OLBR")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FlyBase:FBrf0224194") Annotation(oboInOwl:hasSynonymType <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) oboInOwl:hasExactSynonym obo:FBbt_00111152 "OLBR")
 
 # Class: obo:FBbt_00111153 (obo:FBbt_00111153)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0224194") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> obo:FBbt_00111153 "PCBR")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FlyBase:FBrf0224194") Annotation(oboInOwl:hasSynonymType <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) oboInOwl:hasExactSynonym obo:FBbt_00111153 "PCBR")
 
 # Class: obo:FBbt_00111154 (obo:FBbt_00111154)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FlyBase:FBrf0224194") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> obo:FBbt_00111154 "MCBR")
+AnnotationAssertion(Annotation(oboInOwl:hasDbXref "FlyBase:FBrf0224194") Annotation(oboInOwl:hasSynonymType <http://purl.obolibrary.org/obo/fbbt#BRAIN_NAME_ABV>) oboInOwl:hasExactSynonym obo:FBbt_00111154 "MCBR")
 
 
 )
