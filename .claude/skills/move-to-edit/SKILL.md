@@ -140,7 +140,7 @@ robot remove \
   --input components/COMPONENT.owl \
   --term "http://purl.obolibrary.org/obo/FBbt_NNNNNNN" \
   --trim true \
-  --output components/COMPONENT.owl
+  convert --add-prefix "obo: http://purl.obolibrary.org/obo/" --format ofn --output components/COMPONENT.owl
 ```
 
 Verify removal:

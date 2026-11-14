@@ -17,7 +17,8 @@ Run from EM_neurons/. --apply edits fbbt-edit.obo (reserialise it with
 `robot convert` afterwards), the EM registry, the per-connectome source id
 lists and neuron_symbols.tsv; then run `sh run.sh make refresh-EM-neurons`, or,
 if the templates/ cache is stale, take the terms out of components/EM_neurons.owl
-with `robot remove --term-file` (as for the 2026-11 merges).
+with `robot remove --term-file` (as for the 2026-11 merges), saving it as OFN
+(`convert --format ofn`).
 """
 import argparse
 import csv

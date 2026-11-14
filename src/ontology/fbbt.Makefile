@@ -105,6 +105,12 @@ $(EDIT_PREPROCESSED): $(SRC) all_robot_plugins
 	$(ROBOT) flybase:rewrite-def -i $< --dot-definitions --filter-prefix FBbt -o $@
 
 
+# Components are written in OWL functional syntax (keeping the .owl name): about
+# half the size of RDF/XML and one axiom per line in diffs. ROBOT would otherwise
+# pick RDF/XML from the .owl extension, so every goal writing a component ends
+# with $(COMPONENT_OFN).
+COMPONENT_OFN = convert --add-prefix "obo: http://purl.obolibrary.org/obo/" --format ofn
+
 ######################################################################################
 ### Update flybase_import.owl
 ###################################################################################
@@ -129,7 +135,8 @@ update_template_gene_names: $(TMPDIR)/FBgn_template.tsv
 
 $(COMPONENTSDIR)/flybase_import.owl: $(TMPDIR)/FBgn_template.tsv update_template_gene_names | $(COMPONENTSDIR)
 	if [ $(IMP) = true ]; then $(ROBOT) template --input-iri http://purl.obolibrary.org/obo/ro.owl --template $< \
-	annotate --ontology-iri "http://purl.obolibrary.org/obo/fbbt/components/flybase_import.owl" --output $@ && rm $<; fi
+	annotate --ontology-iri "http://purl.obolibrary.org/obo/fbbt/components/flybase_import.owl" \
+	$(COMPONENT_OFN) --add-prefix "FlyBase: http://flybase.org/reports/" --output $@ && rm $<; fi
 
 ######################################################################################
 ### Update VFB_xrefs.owl
@@ -144,7 +151,7 @@ $(COMPONENTSDIR)/VFB_xrefs.owl: $(TMPDIR)/fbbt-merged.json
 	python3 ../scripts/VFB_xrefs.py && \
 	$(ROBOT) template --input-iri http://purl.obolibrary.org/obo/fbbt.owl --template $(TMPDIR)/xref_template.tsv \
 	annotate --ontology-iri "http://purl.obolibrary.org/obo/fbbt/components/VFB_xrefs.owl" \
-	--output $@ && \
+	$(COMPONENT_OFN) --output $@ && \
 	rm $(TMPDIR)/xref_template.tsv
 
 ######################################################################################
@@ -158,7 +165,8 @@ $(TMPDIR)/symbols_template.tsv: neuron_symbols.tsv | $(TMPDIR)
 
 $(COMPONENTSDIR)/neuron_symbols.owl: $(TMPDIR)/symbols_template.tsv | $(COMPONENTSDIR)
 	$(ROBOT) template --input-iri http://purl.obolibrary.org/obo/ro.owl --template $< \
-	annotate --ontology-iri "http://purl.obolibrary.org/obo/fbbt/components/neuron_symbols.owl" --output $@ && rm $<
+	annotate --ontology-iri "http://purl.obolibrary.org/obo/fbbt/components/neuron_symbols.owl" \
+	$(COMPONENT_OFN) --output $@ && rm $<
 
 ######################################################################################
 ### Update brain_name_abbreviations.owl
@@ -176,7 +184,8 @@ $(TMPDIR)/brain_name_template.tsv: brain_name_abbreviations.tsv | $(TMPDIR)
 
 $(COMPONENTSDIR)/brain_name_abbreviations.owl: $(TMPDIR)/brain_name_template.tsv | $(COMPONENTSDIR)
 	$(ROBOT) template --input-iri http://purl.obolibrary.org/obo/ro.owl --template $< \
-	annotate --ontology-iri "http://purl.obolibrary.org/obo/fbbt/components/brain_name_abbreviations.owl" --output $@ && rm $<
+	annotate --ontology-iri "http://purl.obolibrary.org/obo/fbbt/components/brain_name_abbreviations.owl" \
+	$(COMPONENT_OFN) --output $@ && rm $<
 
 #######################################################################
 ### Update mappings_xrefs.owl
@@ -197,7 +206,7 @@ $(COMPONENTSDIR)/mappings_xrefs.owl: $(MAPPINGDIR)/fbbt.sssom.tsv $(SCRIPTSDIR)/
 	$(ROBOT) sssom:inject --create --sssom $(MAPPINGDIR)/fbbt.sssom.tsv \
 		              --ruleset $(SCRIPTSDIR)/sssom2xrefs.rules \
 		 annotate --ontology-iri http://purl.obolibrary.org/obo/fbbt/components/mappings_xrefs.owl \
-			  --output $@
+		 $(COMPONENT_OFN) --output $@
 
 #####################################################################################
 ### Generate the flybase anatomy version of FBBT
@@ -242,7 +251,7 @@ RELEASE_ASSETS_AFTER_RELEASE += ../../EM_synonyms.owl ../../EM_neuropil_synonyms
 $(COMPONENTSDIR)/image_annotation.owl: $(PATTERNDIR)/image_annotation_template.tsv | $(COMPONENTSDIR)
 	$(ROBOT) template --input-iri http://purl.obolibrary.org/obo/fbbt.owl --template $< \
 	annotate --ontology-iri "http://purl.obolibrary.org/obo/fbbt/components/image_annotation.owl" \
-	--output $@
+	$(COMPONENT_OFN) --output $@
 
 ######################################################################################
 ### EM connectome neuron terms (components/EM_neurons.owl) and EM_synonyms.owl
@@ -292,7 +301,7 @@ refresh-EM-neurons: | $(COMPONENTSDIR)
 	python3 $(EM_DIR)/build_EM_neurons.py --out $(TMPDIR)/EM_neurons.tsv
 	$(ROBOT) template --template $(TMPDIR)/EM_neurons.tsv \
 		annotate --ontology-iri "$(URIBASE)/fbbt/components/EM_neurons.owl" \
-		--output $(COMPONENTSDIR)/EM_neurons.owl
+		$(COMPONENT_OFN) --output $(COMPONENTSDIR)/EM_neurons.owl
 	rm -f $(TMPDIR)/EM_neurons.tsv
 
 # Recompute the per-connectome template cache under EM_neurons/templates/ (the
