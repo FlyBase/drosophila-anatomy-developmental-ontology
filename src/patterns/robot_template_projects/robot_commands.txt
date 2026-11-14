@@ -18,4 +18,5 @@ robot merge --collapse-import-closure false --input fbbt-edit.obo --input terms.
 #OPTIONAL - annotation (replacing template command above), e.g. for a component
 robot template --input-iri http://purl.obolibrary.org/obo/fbbt.owl --template template.tsv \
 annotate --ontology-iri "http://purl.obolibrary.org/obo/fbbt/components/<component>.owl" \
---output <component>.owl
+convert --add-prefix "obo: http://purl.obolibrary.org/obo/" --format ofn --output <component>.owl
+#components are saved in OWL functional syntax (keeping the .owl name)
