@@ -180149,6 +180149,32 @@ property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0002
 property_value: http://purl.org/dc/terms/date "2024-02-05T12:00:00Z" xsd:dateTime
 
 [Term]
+id: FBbt:20007325
+name: descending neuron of the gnathal ganglion DNge013
+def: "Adult descending neuron of the DNge013 group, with its soma in the brain, ventral-lateral to the inferior posterior slope (Schlegel et al., 2024; Dorkenwald et al., 2024). It is a putative embryonic-born neuron (Schlegel et al., 2024; Dorkenwald et al., 2024). It has postsynapses in the gnathal ganglia, the ipsilateral vest, the ipsilateral inferior posterior slope and the ipsilateral wedge (Schlegel et al., 2024; Dorkenwald et al., 2024). It has presynapses in the gnathal ganglia, the ipsilateral inferior posterior slope and the ipsilateral vest (Schlegel et al., 2024; Dorkenwald et al., 2024). It enters the VNC via the cervical connective, fasciculating with the median tract of dorsal cervical fasciculus I, and sends output to the abdominal neuromere and leg neuropil (Takemura et al., 2024; Marin et al., 2024). Its predicted neurotransmitter is acetylcholine (Eckstein et al., 2024). There are approximately 2 of these cells per organism (Schlegel et al., 2024; Dorkenwald et al., 2024; Takemura et al., 2024; Marin et al., 2024)." [doi:10.1016/j.cell.2026.08.015, doi:10.1038/s41586-026-10735-w, doi:10.7554/eLife.96084.1, doi:10.7554/eLife.97766.1, doi:10.7554/eLife.97769.1, FlyBase:FBrf0259490, FlyBase:FBrf0260535, FlyBase:FBrf0260546]
+comment: Uncharacterized putative cell type from Schlegel et al. (2024), based on FlyWire v783 (FAFB) data (Dorkenwald et al., 2024; Schlegel et al., 2024). Soma locations are based on the closest annotated neuropil region. Pre- or post-synapse locations are the fewest regions that collectively contain at least 80 percent of all pre- or post-synapses of these neurons in FlyWire. Neurotransmitter predictions are from Eckstein et al. (2024). Other annotations are based on annotations in FlyWire and are available in the supplemental material of Schlegel et al. (2024). MANC type DNxn071 (Takemura et al., 2024; Marin et al., 2024), formerly a separate term (FBbt:20008357), was matched to this type in the male CNS (Berg et al., 2026) and BANC (Bates et al., 2026) connectomes. VNC annotations are from MANC v1.2.1 data (Takemura et al., 2024; Marin et al., 2024).
+synonym: "adult DNxn071 neuron" EXACT []
+synonym: "DNxn071" EXACT [doi:10.7554/eLife.97766.1, doi:10.7554/eLife.97769.1]
+is_a: FBbt:00047097 ! primary neuron
+is_a: FBbt:00047516 ! descending neuron of the gnathal ganglion
+relationship: RO:0002100 FBbt:00048404 ! has soma location cell body rind of adult inferior posterior slope
+relationship: RO:0002101 FBbt:00004019 ! fasciculates with adult cervical connective
+relationship: RO:0002101 FBbt:00053283 ! fasciculates with adult median tract of dorsal cervical fasciculus I
+relationship: RO:0002215 GO:0014055 ! capable of acetylcholine secretion, neurotransmission
+relationship: RO:0013002 FBbt:00014013 ! receives synaptic input in region adult gnathal ganglion
+relationship: RO:0013002 FBbt:00040041 ! receives synaptic input in region vest
+relationship: RO:0013002 FBbt:00045027 ! receives synaptic input in region wedge
+relationship: RO:0013002 FBbt:00045046 ! receives synaptic input in region inferior posterior slope
+relationship: RO:0013003 FBbt:00014013 ! sends synaptic output to region adult gnathal ganglion
+relationship: RO:0013003 FBbt:00040041 ! sends synaptic output to region vest
+relationship: RO:0013003 FBbt:00045046 ! sends synaptic output to region inferior posterior slope
+relationship: RO:0013003 FBbt:00047139 ! sends synaptic output to region adult leg neuropil
+relationship: RO:0013003 FBbt:00110173 ! sends synaptic output to region adult abdominal neuromere
+property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0002-1373-1705
+property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0002-5633-1314
+property_value: http://purl.org/dc/terms/date "2024-02-05T12:00:00Z" xsd:dateTime
+
+[Term]
 id: FBbt:20007334
 name: descending neuron of the gnathal ganglion DNge022
 def: "Adult descending neuron of the DNge022 group, with its soma in the brain, ventral to the antennal mechanosensory and motor center (Schlegel et al., 2024; Dorkenwald et al., 2024). It is a putative embryonic-born neuron (Schlegel et al., 2024; Dorkenwald et al., 2024). It has postsynapses and presynapses in the gnathal ganglia (Schlegel et al., 2024; Dorkenwald et al., 2024). It enters the VNC via the cervical connective and sends output to the T1 leg neuropil (Takemura et al., 2024; Marin et al., 2024). Its predicted neurotransmitter is acetylcholine (Eckstein et al., 2024). There are approximately 2 of these cells per organism (Schlegel et al., 2024; Dorkenwald et al., 2024; Takemura et al., 2024; Marin et al., 2024)." [doi:10.1016/j.cell.2026.08.015, doi:10.1038/s41586-026-10735-w, doi:10.7554/eLife.96084.1, doi:10.7554/eLife.97766.1, doi:10.7554/eLife.97769.1, FlyBase:FBrf0259490, FlyBase:FBrf0260535, FlyBase:FBrf0260546]
@@ -180249,6 +180275,26 @@ relationship: RO:0002100 FBbt:00003625 ! has soma location adult brain cell body
 relationship: RO:0002101 FBbt:00004019 ! fasciculates with adult cervical connective
 relationship: RO:0002101 FBbt:00047535 ! fasciculates with adult dorsal median tract
 relationship: RO:0002215 GO:0061535 ! capable of glutamate secretion, neurotransmission
+relationship: RO:0013002 FBbt:00014013 ! receives synaptic input in region adult gnathal ganglion
+relationship: RO:0013003 FBbt:00014013 ! sends synaptic output to region adult gnathal ganglion
+relationship: RO:0013003 FBbt:00047139 ! sends synaptic output to region adult leg neuropil
+property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0002-1373-1705
+property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0002-5633-1314
+property_value: http://purl.org/dc/terms/date "2024-02-05T12:00:00Z" xsd:dateTime
+
+[Term]
+id: FBbt:20007347
+name: descending neuron of the gnathal ganglion DNge035
+def: "Adult descending neuron of the DNge035 group, with its soma in the brain, ventral to the antennal mechanosensory and motor center (Schlegel et al., 2024; Dorkenwald et al., 2024). It is a putative embryonic-born neuron (Schlegel et al., 2024; Dorkenwald et al., 2024). It has postsynapses and presynapses in the gnathal ganglia (Schlegel et al., 2024; Dorkenwald et al., 2024). It enters the VNC via the cervical connective, fasciculating with the dorsal lateral tract of dorsal cervical fasciculus, and sends output to the leg neuropil (Takemura et al., 2024; Marin et al., 2024). Its predicted neurotransmitter is acetylcholine (Eckstein et al., 2024). There are approximately 2 of these cells per organism (Schlegel et al., 2024; Dorkenwald et al., 2024; Takemura et al., 2024; Marin et al., 2024)." [doi:10.1016/j.cell.2026.08.015, doi:10.1038/s41586-026-10735-w, doi:10.7554/eLife.96084.1, doi:10.7554/eLife.97766.1, doi:10.7554/eLife.97769.1, FlyBase:FBrf0259490, FlyBase:FBrf0260535, FlyBase:FBrf0260546]
+comment: Uncharacterized putative cell type from Schlegel et al. (2024), based on FlyWire v783 (FAFB) data (Dorkenwald et al., 2024; Schlegel et al., 2024). Soma locations are based on the closest annotated neuropil region. Pre- or post-synapse locations are the fewest regions that collectively contain at least 80 percent of all pre- or post-synapses of these neurons in FlyWire. Neurotransmitter predictions are from Eckstein et al. (2024). Other annotations are based on annotations in FlyWire and are available in the supplemental material of Schlegel et al. (2024). MANC type DNxl134 (Takemura et al., 2024; Marin et al., 2024), formerly a separate term (FBbt:20008355), was matched to this type in the male CNS (Berg et al., 2026) and BANC (Bates et al., 2026) connectomes. VNC annotations are from MANC v1.2.1 data (Takemura et al., 2024; Marin et al., 2024).
+synonym: "adult DNxl134 neuron" EXACT []
+synonym: "DNxl134" EXACT [doi:10.7554/eLife.97766.1, doi:10.7554/eLife.97769.1]
+is_a: FBbt:00047097 ! primary neuron
+is_a: FBbt:00047516 ! descending neuron of the gnathal ganglion
+relationship: RO:0002100 FBbt:00003625 ! has soma location adult brain cell body rind
+relationship: RO:0002101 FBbt:00004019 ! fasciculates with adult cervical connective
+relationship: RO:0002101 FBbt:00047533 ! fasciculates with dorsal lateral tract of dorsal cervical fasciculus
+relationship: RO:0002215 GO:0014055 ! capable of acetylcholine secretion, neurotransmission
 relationship: RO:0013002 FBbt:00014013 ! receives synaptic input in region adult gnathal ganglion
 relationship: RO:0013003 FBbt:00014013 ! sends synaptic output to region adult gnathal ganglion
 relationship: RO:0013003 FBbt:00047139 ! sends synaptic output to region adult leg neuropil
@@ -180623,6 +180669,26 @@ relationship: RO:0002101 FBbt:00004019 ! fasciculates with adult cervical connec
 relationship: RO:0002215 GO:0014055 ! capable of acetylcholine secretion, neurotransmission
 relationship: RO:0013002 FBbt:00014013 ! receives synaptic input in region adult gnathal ganglion
 relationship: RO:0013003 FBbt:00047140 ! sends synaptic output to region adult T1 leg neuropil
+property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0002-1373-1705
+property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0002-5633-1314
+property_value: http://purl.org/dc/terms/date "2024-02-05T12:00:00Z" xsd:dateTime
+
+[Term]
+id: FBbt:20007374
+name: descending neuron of the gnathal ganglion DNge062
+def: "Adult descending neuron of the DNge062 group, with its soma in the brain, ventral to the wedge (Schlegel et al., 2024; Dorkenwald et al., 2024). It is a putative embryonic-born neuron (Schlegel et al., 2024; Dorkenwald et al., 2024). It has postsynapses and presynapses in the gnathal ganglia (Schlegel et al., 2024; Dorkenwald et al., 2024). It enters the VNC via the cervical connective, fasciculating with the dorsal lateral tract of dorsal cervical fasciculus, and sends output to the leg neuropil (Takemura et al., 2024; Marin et al., 2024). Its predicted neurotransmitter is acetylcholine (Eckstein et al., 2024). There are approximately 2 of these cells per organism (Schlegel et al., 2024; Dorkenwald et al., 2024; Takemura et al., 2024; Marin et al., 2024)." [doi:10.1016/j.cell.2026.08.015, doi:10.1038/s41586-026-10735-w, doi:10.7554/eLife.96084.1, doi:10.7554/eLife.97766.1, doi:10.7554/eLife.97769.1, FlyBase:FBrf0259490, FlyBase:FBrf0260535, FlyBase:FBrf0260546]
+comment: Uncharacterized putative cell type from Schlegel et al. (2024), based on FlyWire v783 (FAFB) data (Dorkenwald et al., 2024; Schlegel et al., 2024). Soma locations are based on the closest annotated neuropil region. Pre- or post-synapse locations are the fewest regions that collectively contain at least 80 percent of all pre- or post-synapses of these neurons in FlyWire. Neurotransmitter predictions are from Eckstein et al. (2024). Other annotations are based on annotations in FlyWire and are available in the supplemental material of Schlegel et al. (2024). MANC type DNxl079 (Takemura et al., 2024; Marin et al., 2024), formerly a separate term (FBbt:20008301), was matched to this type in the male CNS (Berg et al., 2026) and BANC (Bates et al., 2026) connectomes. VNC annotations are from MANC v1.2.1 data (Takemura et al., 2024; Marin et al., 2024).
+synonym: "adult DNxl079 neuron" EXACT []
+synonym: "DNxl079" EXACT [doi:10.7554/eLife.97766.1, doi:10.7554/eLife.97769.1]
+is_a: FBbt:00047097 ! primary neuron
+is_a: FBbt:00047516 ! descending neuron of the gnathal ganglion
+relationship: RO:0002100 FBbt:00049151 ! has soma location cell body rind of adult wedge
+relationship: RO:0002101 FBbt:00004019 ! fasciculates with adult cervical connective
+relationship: RO:0002101 FBbt:00047533 ! fasciculates with dorsal lateral tract of dorsal cervical fasciculus
+relationship: RO:0002215 GO:0014055 ! capable of acetylcholine secretion, neurotransmission
+relationship: RO:0013002 FBbt:00014013 ! receives synaptic input in region adult gnathal ganglion
+relationship: RO:0013003 FBbt:00014013 ! sends synaptic output to region adult gnathal ganglion
+relationship: RO:0013003 FBbt:00047139 ! sends synaptic output to region adult leg neuropil
 property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0002-1373-1705
 property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0002-5633-1314
 property_value: http://purl.org/dc/terms/date "2024-02-05T12:00:00Z" xsd:dateTime
@@ -181105,6 +181171,62 @@ property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0002
 property_value: http://purl.org/dc/terms/date "2024-02-05T12:00:00Z" xsd:dateTime
 
 [Term]
+id: FBbt:20007431
+name: descending neuron of the gnathal ganglion DNge120
+def: "Adult descending neuron of the DNge120 group, with its soma in the brain, ventral to the gnathal ganglia (Schlegel et al., 2024; Dorkenwald et al., 2024). It belongs to the MX3 hemilineage (Schlegel et al., 2024; Dorkenwald et al., 2024). It has postsynapses and presynapses in the gnathal ganglia (Schlegel et al., 2024; Dorkenwald et al., 2024). It enters the VNC via the cervical connective, fasciculating with the dorsal lateral tract of ventral cervical fasciculus, and sends output to the leg neuropil (Takemura et al., 2024; Marin et al., 2024). There are approximately 2 of these cells per organism (Schlegel et al., 2024; Dorkenwald et al., 2024; Takemura et al., 2024; Marin et al., 2024)." [doi:10.1016/j.cell.2026.08.015, doi:10.1038/s41586-026-10735-w, doi:10.7554/eLife.96084.1, doi:10.7554/eLife.97766.1, doi:10.7554/eLife.97769.1, FlyBase:FBrf0260535, FlyBase:FBrf0260546]
+comment: Uncharacterized putative cell type from Schlegel et al. (2024), based on FlyWire v783 (FAFB) data (Dorkenwald et al., 2024; Schlegel et al., 2024). Soma locations are based on the closest annotated neuropil region. Pre- or post-synapse locations are the fewest regions that collectively contain at least 80 percent of all pre- or post-synapses of these neurons in FlyWire. Neurotransmitter predictions are from Eckstein et al. (2024). Other annotations are based on annotations in FlyWire and are available in the supplemental material of Schlegel et al. (2024). MANC type DNxl084 (Takemura et al., 2024; Marin et al., 2024), formerly a separate term (FBbt:20008306), was matched to this type in the male CNS (Berg et al., 2026) and BANC (Bates et al., 2026) connectomes. VNC annotations are from MANC v1.2.1 data (Takemura et al., 2024; Marin et al., 2024). Predicted neurotransmitters differ between datasets (acetylcholine in FlyWire, glutamate in MANC; Eckstein et al., 2024), so none is asserted here.
+synonym: "adult DNxl084 neuron" EXACT []
+synonym: "DNxl084" EXACT [doi:10.7554/eLife.97766.1, doi:10.7554/eLife.97769.1]
+is_a: FBbt:00047516 ! descending neuron of the gnathal ganglion
+relationship: RO:0002100 FBbt:00100210 ! has soma location cell body rind of adult gnathal ganglion
+relationship: RO:0002101 FBbt:00004019 ! fasciculates with adult cervical connective
+relationship: RO:0002101 FBbt:00047541 ! fasciculates with dorsal lateral tract of ventral cervical fasciculus
+relationship: RO:0013002 FBbt:00014013 ! receives synaptic input in region adult gnathal ganglion
+relationship: RO:0013003 FBbt:00014013 ! sends synaptic output to region adult gnathal ganglion
+relationship: RO:0013003 FBbt:00047139 ! sends synaptic output to region adult leg neuropil
+property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0002-1373-1705
+property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0002-5633-1314
+property_value: http://purl.org/dc/terms/date "2024-02-05T12:00:00Z" xsd:dateTime
+
+[Term]
+id: FBbt:20007432
+name: descending neuron of the gnathal ganglion DNge121
+def: "Adult descending neuron of the DNge121 group, with its soma in the brain, ventral to the inferior posterior slope (Schlegel et al., 2024; Dorkenwald et al., 2024). It has postsynapses and presynapses in the gnathal ganglia (Schlegel et al., 2024; Dorkenwald et al., 2024). It enters the VNC via the cervical connective, fasciculating with the ventral median tract of ventral cervical fasciculus, and sends output to the leg neuropil (Takemura et al., 2024; Marin et al., 2024). Its predicted neurotransmitter is acetylcholine (Eckstein et al., 2024). There are approximately 2 of these cells per organism (Schlegel et al., 2024; Dorkenwald et al., 2024; Takemura et al., 2024; Marin et al., 2024)." [doi:10.1016/j.cell.2026.08.015, doi:10.1038/s41586-026-10735-w, doi:10.7554/eLife.96084.1, doi:10.7554/eLife.97766.1, doi:10.7554/eLife.97769.1, FlyBase:FBrf0259490, FlyBase:FBrf0260535, FlyBase:FBrf0260546]
+comment: Uncharacterized putative cell type from Schlegel et al. (2024), based on FlyWire v783 (FAFB) data (Dorkenwald et al., 2024; Schlegel et al., 2024). Soma locations are based on the closest annotated neuropil region. Pre- or post-synapse locations are the fewest regions that collectively contain at least 80 percent of all pre- or post-synapses of these neurons in FlyWire. Neurotransmitter predictions are from Eckstein et al. (2024). Other annotations are based on annotations in FlyWire and are available in the supplemental material of Schlegel et al. (2024). MANC type DNxl125 (Takemura et al., 2024; Marin et al., 2024), formerly a separate term (FBbt:20008346), was matched to this type in the male CNS (Berg et al., 2026) and BANC (Bates et al., 2026) connectomes. VNC annotations are from MANC v1.2.1 data (Takemura et al., 2024; Marin et al., 2024).
+synonym: "adult DNxl125 neuron" EXACT []
+synonym: "DNxl125" EXACT [doi:10.7554/eLife.97766.1, doi:10.7554/eLife.97769.1]
+is_a: FBbt:00047516 ! descending neuron of the gnathal ganglion
+relationship: RO:0002100 FBbt:00048404 ! has soma location cell body rind of adult inferior posterior slope
+relationship: RO:0002101 FBbt:00004019 ! fasciculates with adult cervical connective
+relationship: RO:0002101 FBbt:00047542 ! fasciculates with ventral median tract of ventral cervical fasciculus
+relationship: RO:0002215 GO:0014055 ! capable of acetylcholine secretion, neurotransmission
+relationship: RO:0013002 FBbt:00014013 ! receives synaptic input in region adult gnathal ganglion
+relationship: RO:0013003 FBbt:00014013 ! sends synaptic output to region adult gnathal ganglion
+relationship: RO:0013003 FBbt:00047139 ! sends synaptic output to region adult leg neuropil
+property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0002-1373-1705
+property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0002-5633-1314
+property_value: http://purl.org/dc/terms/date "2024-02-05T12:00:00Z" xsd:dateTime
+
+[Term]
+id: FBbt:20007433
+name: descending neuron of the gnathal ganglion DNge122
+def: "Adult descending neuron of the DNge122 group, with its soma in the brain, anterior-ventral to the gnathal ganglia (Schlegel et al., 2024; Dorkenwald et al., 2024). It belongs to the MX3 hemilineage (Schlegel et al., 2024; Dorkenwald et al., 2024). It has postsynapses and presynapses in the gnathal ganglia (Schlegel et al., 2024; Dorkenwald et al., 2024). It enters the VNC via the cervical connective, fasciculating with the ventral median tract of ventral cervical fasciculus, and sends output to the leg neuropil (Takemura et al., 2024; Marin et al., 2024). Its predicted neurotransmitter is GABA (Eckstein et al., 2024). There are approximately 2 of these cells per organism (Schlegel et al., 2024; Dorkenwald et al., 2024; Takemura et al., 2024; Marin et al., 2024)." [doi:10.1016/j.cell.2026.08.015, doi:10.1038/s41586-026-10735-w, doi:10.7554/eLife.96084.1, doi:10.7554/eLife.97766.1, doi:10.7554/eLife.97769.1, FlyBase:FBrf0259490, FlyBase:FBrf0260535, FlyBase:FBrf0260546]
+comment: Uncharacterized putative cell type from Schlegel et al. (2024), based on FlyWire v783 (FAFB) data (Dorkenwald et al., 2024; Schlegel et al., 2024). Soma locations are based on the closest annotated neuropil region. Pre- or post-synapse locations are the fewest regions that collectively contain at least 80 percent of all pre- or post-synapses of these neurons in FlyWire. Neurotransmitter predictions are from Eckstein et al. (2024). Other annotations are based on annotations in FlyWire and are available in the supplemental material of Schlegel et al. (2024). MANC type DNxn166 (Takemura et al., 2024; Marin et al., 2024), formerly a separate term (FBbt:20008424), was matched to this type in the male CNS (Berg et al., 2026) and BANC (Bates et al., 2026) connectomes. VNC annotations are from MANC v1.2.1 data (Takemura et al., 2024; Marin et al., 2024).
+synonym: "adult DNxn166 neuron" EXACT []
+synonym: "DNxn166" EXACT [doi:10.7554/eLife.97766.1, doi:10.7554/eLife.97769.1]
+is_a: FBbt:00047516 ! descending neuron of the gnathal ganglion
+relationship: RO:0002100 FBbt:00100210 ! has soma location cell body rind of adult gnathal ganglion
+relationship: RO:0002101 FBbt:00004019 ! fasciculates with adult cervical connective
+relationship: RO:0002101 FBbt:00047542 ! fasciculates with ventral median tract of ventral cervical fasciculus
+relationship: RO:0002215 GO:0061534 ! capable of gamma-aminobutyric acid secretion, neurotransmission
+relationship: RO:0013002 FBbt:00014013 ! receives synaptic input in region adult gnathal ganglion
+relationship: RO:0013003 FBbt:00014013 ! sends synaptic output to region adult gnathal ganglion
+relationship: RO:0013003 FBbt:00047139 ! sends synaptic output to region adult leg neuropil
+property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0002-1373-1705
+property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0002-5633-1314
+property_value: http://purl.org/dc/terms/date "2024-02-05T12:00:00Z" xsd:dateTime
+
+[Term]
 id: FBbt:20007434
 name: descending neuron of the gnathal ganglion DNge123
 def: "Adult descending neuron of the DNge123 group, with its soma in the brain, ventral to the antennal mechanosensory and motor center (Schlegel et al., 2024; Dorkenwald et al., 2024). It belongs to the MX12 prim hemilineage (Schlegel et al., 2024; Dorkenwald et al., 2024). It has postsynapses in the gnathal ganglia and the ipsilateral inferior posterior slope (Schlegel et al., 2024; Dorkenwald et al., 2024). It has presynapses in the gnathal ganglia and the contralateral inferior posterior slope (Schlegel et al., 2024; Dorkenwald et al., 2024). It enters the VNC via the cervical connective and sends output to the T1 leg neuropil (Takemura et al., 2024; Marin et al., 2024). Its predicted neurotransmitter is glutamate (Eckstein et al., 2024). There are approximately 2 of these cells per organism (Schlegel et al., 2024; Dorkenwald et al., 2024; Takemura et al., 2024; Marin et al., 2024)." [doi:10.1016/j.cell.2026.08.015, doi:10.1038/s41586-026-10735-w, doi:10.7554/eLife.96084.1, doi:10.7554/eLife.97766.1, doi:10.7554/eLife.97769.1, FlyBase:FBrf0259490, FlyBase:FBrf0260535, FlyBase:FBrf0260546]
@@ -181264,6 +181386,24 @@ property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0002
 property_value: http://purl.org/dc/terms/date "2024-02-05T12:00:00Z" xsd:dateTime
 
 [Term]
+id: FBbt:20007444
+name: descending neuron of the gnathal ganglion DNge133
+def: "Adult descending neuron of the DNge133 group, with its soma in the brain, ventral to the inferior posterior slope (Schlegel et al., 2024; Dorkenwald et al., 2024). It belongs to the LB7 prim hemilineage (Schlegel et al., 2024; Dorkenwald et al., 2024). It has postsynapses and presynapses in the gnathal ganglia (Schlegel et al., 2024; Dorkenwald et al., 2024). It enters the VNC via the cervical connective, fasciculating with the ventral median tract of ventral cervical fasciculus, and sends output to multiple regions (Takemura et al., 2024; Marin et al., 2024). Its predicted neurotransmitter is acetylcholine (Eckstein et al., 2024). There are approximately 2 of these cells per organism (Schlegel et al., 2024; Dorkenwald et al., 2024; Takemura et al., 2024; Marin et al., 2024)." [doi:10.1016/j.cell.2026.08.015, doi:10.1038/s41586-026-10735-w, doi:10.7554/eLife.96084.1, doi:10.7554/eLife.97766.1, doi:10.7554/eLife.97769.1, FlyBase:FBrf0259490, FlyBase:FBrf0260535, FlyBase:FBrf0260546]
+comment: Uncharacterized putative cell type from Schlegel et al. (2024), based on FlyWire v783 (FAFB) data (Dorkenwald et al., 2024; Schlegel et al., 2024). Soma locations are based on the closest annotated neuropil region. Pre- or post-synapse locations are the fewest regions that collectively contain at least 80 percent of all pre- or post-synapses of these neurons in FlyWire. Neurotransmitter predictions are from Eckstein et al. (2024). Other annotations are based on annotations in FlyWire and are available in the supplemental material of Schlegel et al. (2024). MANC type DNxn127 (Takemura et al., 2024; Marin et al., 2024), formerly a separate term (FBbt:20008385), was matched to this type in the male CNS (Berg et al., 2026) and BANC (Bates et al., 2026) connectomes. VNC annotations are from MANC v1.2.1 data (Takemura et al., 2024; Marin et al., 2024).
+synonym: "adult DNxn127 neuron" EXACT []
+synonym: "DNxn127" EXACT [doi:10.7554/eLife.97766.1, doi:10.7554/eLife.97769.1]
+is_a: FBbt:00047516 ! descending neuron of the gnathal ganglion
+relationship: RO:0002100 FBbt:00048404 ! has soma location cell body rind of adult inferior posterior slope
+relationship: RO:0002101 FBbt:00004019 ! fasciculates with adult cervical connective
+relationship: RO:0002101 FBbt:00047542 ! fasciculates with ventral median tract of ventral cervical fasciculus
+relationship: RO:0002215 GO:0014055 ! capable of acetylcholine secretion, neurotransmission
+relationship: RO:0013002 FBbt:00014013 ! receives synaptic input in region adult gnathal ganglion
+relationship: RO:0013003 FBbt:00014013 ! sends synaptic output to region adult gnathal ganglion
+property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0002-1373-1705
+property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0002-5633-1314
+property_value: http://purl.org/dc/terms/date "2024-02-05T12:00:00Z" xsd:dateTime
+
+[Term]
 id: FBbt:20007445
 name: descending neuron of the gnathal ganglion DNge134
 def: "Adult descending neuron of the DNge134 group, with its soma in the brain, ventral to the gnathal ganglia (Schlegel et al., 2024; Dorkenwald et al., 2024). It is a putative embryonic-born neuron (Schlegel et al., 2024; Dorkenwald et al., 2024). It has postsynapses in the gnathal ganglia and the ipsilateral inferior posterior slope (Schlegel et al., 2024; Dorkenwald et al., 2024). It has presynapses in the gnathal ganglia, the ipsilateral inferior posterior slope and the ipsilateral vest (Schlegel et al., 2024; Dorkenwald et al., 2024). It enters the VNC via the cervical connective and sends output to the intermediate tectulum and leg neuropil (Takemura et al., 2024; Marin et al., 2024). Its predicted neurotransmitter is glutamate (Eckstein et al., 2024). There are approximately 2 of these cells per organism (Schlegel et al., 2024; Dorkenwald et al., 2024; Takemura et al., 2024; Marin et al., 2024)." [doi:10.1016/j.cell.2026.08.015, doi:10.1038/s41586-026-10735-w, doi:10.7554/eLife.96084.1, doi:10.7554/eLife.97766.1, doi:10.7554/eLife.97769.1, FlyBase:FBrf0259490, FlyBase:FBrf0260535, FlyBase:FBrf0260546]
@@ -181373,6 +181513,26 @@ property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0002
 property_value: http://purl.org/dc/terms/date "2024-02-05T12:00:00Z" xsd:dateTime
 is_obsolete: true
 replaced_by: FBbt:00110161
+
+[Term]
+id: FBbt:20007450
+name: descending neuron of the gnathal ganglion DNge139
+def: "Adult descending neuron of the DNge139 group, with its soma in the brain, ventral to the antennal mechanosensory and motor center (Schlegel et al., 2024; Dorkenwald et al., 2024). It belongs to the MX7 prim hemilineage (Schlegel et al., 2024; Dorkenwald et al., 2024). It has postsynapses and presynapses in the gnathal ganglia (Schlegel et al., 2024; Dorkenwald et al., 2024). It enters the VNC via the cervical connective, fasciculating with the median dorsal abdominal tract, and sends output to the abdominal neuromere and intermediate tectulum (Takemura et al., 2024; Marin et al., 2024). Its predicted neurotransmitter is acetylcholine (Eckstein et al., 2024). There are approximately 2 of these cells per organism (Schlegel et al., 2024; Dorkenwald et al., 2024; Takemura et al., 2024; Marin et al., 2024)." [doi:10.1016/j.cell.2026.08.015, doi:10.1038/s41586-026-10735-w, doi:10.7554/eLife.96084.1, doi:10.7554/eLife.97766.1, doi:10.7554/eLife.97769.1, FlyBase:FBrf0259490, FlyBase:FBrf0260535, FlyBase:FBrf0260546]
+comment: Uncharacterized putative cell type from Schlegel et al. (2024), based on FlyWire v783 (FAFB) data (Dorkenwald et al., 2024; Schlegel et al., 2024). Soma locations are based on the closest annotated neuropil region. Pre- or post-synapse locations are the fewest regions that collectively contain at least 80 percent of all pre- or post-synapses of these neurons in FlyWire. Neurotransmitter predictions are from Eckstein et al. (2024). Other annotations are based on annotations in FlyWire and are available in the supplemental material of Schlegel et al. (2024). MANC type DNxn141 (Takemura et al., 2024; Marin et al., 2024), formerly a separate term (FBbt:20008399), was matched to this type in the male CNS (Berg et al., 2026) and BANC (Bates et al., 2026) connectomes. VNC annotations are from MANC v1.2.1 data (Takemura et al., 2024; Marin et al., 2024).
+synonym: "adult DNxn141 neuron" EXACT []
+synonym: "DNxn141" EXACT [doi:10.7554/eLife.97766.1, doi:10.7554/eLife.97769.1]
+is_a: FBbt:00047516 ! descending neuron of the gnathal ganglion
+relationship: RO:0002100 FBbt:00003625 ! has soma location adult brain cell body rind
+relationship: RO:0002101 FBbt:00004019 ! fasciculates with adult cervical connective
+relationship: RO:0002101 FBbt:00047544 ! fasciculates with median dorsal abdominal tract
+relationship: RO:0002215 GO:0014055 ! capable of acetylcholine secretion, neurotransmission
+relationship: RO:0013002 FBbt:00014013 ! receives synaptic input in region adult gnathal ganglion
+relationship: RO:0013003 FBbt:00014013 ! sends synaptic output to region adult gnathal ganglion
+relationship: RO:0013003 FBbt:00047519 ! sends synaptic output to region intermediate tectulum
+relationship: RO:0013003 FBbt:00110173 ! sends synaptic output to region adult abdominal neuromere
+property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0002-1373-1705
+property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0002-5633-1314
+property_value: http://purl.org/dc/terms/date "2024-02-05T12:00:00Z" xsd:dateTime
 
 [Term]
 id: FBbt:20007451
@@ -181496,14 +181656,14 @@ replaced_by: FBbt:00110163
 [Term]
 id: FBbt:20007463
 name: descending neuron of the gnathal ganglion DNge152
-def: "Adult descending neuron of the DNge152 group, with its soma in the brain, posterior-ventral to the gnathal ganglia (Schlegel et al., 2024; Dorkenwald et al., 2024). It belongs to the LB0 posterior hemilineage (Schlegel et al., 2024; Dorkenwald et al., 2024). It has postsynapses in the superior posterior slope, the gnathal ganglia, the cantle and the inferior bridge (Schlegel et al., 2024; Dorkenwald et al., 2024). It has presynapses in the superior posterior slope, the gnathal ganglia and the inferior bridge (Schlegel et al., 2024; Dorkenwald et al., 2024). It enters the VNC via the cervical connective and sends output to the upper tectulum (Takemura et al., 2024; Marin et al., 2024). Its predicted neurotransmitter is glutamate (Eckstein et al., 2024). There is one of these cells per organism (Berg et al., 2026; Bates et al., 2026)." [doi:10.1016/j.cell.2026.08.015, doi:10.1038/s41586-026-10735-w, doi:10.7554/eLife.96084.1, doi:10.7554/eLife.97766.1, doi:10.7554/eLife.97769.1, FlyBase:FBrf0259490, FlyBase:FBrf0260535, FlyBase:FBrf0260546]
-comment: Uncharacterized putative cell type from Schlegel et al. (2024), based on FlyWire v783 (FAFB) data (Dorkenwald et al., 2024; Schlegel et al., 2024). Soma locations are based on the closest annotated neuropil region. Pre- or post-synapse locations are the fewest regions that collectively contain at least 80 percent of all pre- or post-synapses of these neurons in FlyWire. Neurotransmitter predictions are from Eckstein et al. (2024). Other annotations are based on annotations in FlyWire and are available in the supplemental material of Schlegel et al. (2024). MANC type DNut059 (Takemura et al., 2024; Marin et al., 2024), formerly a separate term (FBbt:20008278), was matched to this type in the male CNS (Berg et al., 2026) and BANC (Bates et al., 2026) connectomes. VNC annotations are from MANC v1.2.1 data (Takemura et al., 2024; Marin et al., 2024). This is an unpaired neuron with two descending branches, which MANC types as two DNut059 neurons (Takemura et al., 2024; Marin et al., 2024). The MANC neurotransmitter prediction is not used, as it does not include octopamine.
+def: "Adult descending neuron of the DNge152 group, with its soma in the brain, posterior-ventral to the gnathal ganglia (Schlegel et al., 2024; Dorkenwald et al., 2024). It belongs to the LB0 posterior hemilineage (Schlegel et al., 2024; Dorkenwald et al., 2024). It has postsynapses in the superior posterior slope, the gnathal ganglia, the cantle and the inferior bridge (Schlegel et al., 2024; Dorkenwald et al., 2024). It has presynapses in the superior posterior slope, the gnathal ganglia and the inferior bridge (Schlegel et al., 2024; Dorkenwald et al., 2024). It enters the VNC via the cervical connective and sends output to the upper tectulum (Takemura et al., 2024; Marin et al., 2024). Its predicted neurotransmitter is octopamine (Berg et al., 2026; Bates et al., 2026). There is one of these cells per organism (Berg et al., 2026; Bates et al., 2026)." [doi:10.1016/j.cell.2026.08.015, doi:10.1038/s41586-026-10735-w, doi:10.7554/eLife.96084.1, doi:10.7554/eLife.97766.1, doi:10.7554/eLife.97769.1, FlyBase:FBrf0260535, FlyBase:FBrf0260546]
+comment: Uncharacterized putative cell type from Schlegel et al. (2024), based on FlyWire v783 (FAFB) data (Dorkenwald et al., 2024; Schlegel et al., 2024). Soma locations are based on the closest annotated neuropil region. Pre- or post-synapse locations are the fewest regions that collectively contain at least 80 percent of all pre- or post-synapses of these neurons in FlyWire. Neurotransmitter predictions are from Eckstein et al. (2024). Other annotations are based on annotations in FlyWire and are available in the supplemental material of Schlegel et al. (2024). MANC type DNut059 (Takemura et al., 2024; Marin et al., 2024), formerly a separate term (FBbt:20008278), was matched to this type in the male CNS (Berg et al., 2026) and BANC (Bates et al., 2026) connectomes. VNC annotations are from MANC v1.2.1 data (Takemura et al., 2024; Marin et al., 2024). This is an unpaired neuron with two descending branches, which MANC types as two DNut059 neurons (Takemura et al., 2024; Marin et al., 2024). The MANC neurotransmitter prediction is not used, as it does not include octopamine. The neurotransmitter is the male CNS and BANC prediction (Berg et al., 2026; Bates et al., 2026); FlyWire predicts glutamate (Eckstein et al., 2024).
 synonym: "adult DNut059 neuron" EXACT []
 synonym: "DNut059" EXACT [doi:10.7554/eLife.97766.1, doi:10.7554/eLife.97769.1]
 is_a: FBbt:00110162 ! octopaminergic VUMd2 neuron
 relationship: RO:0002100 FBbt:00100210 ! has soma location cell body rind of adult gnathal ganglion
 relationship: RO:0002101 FBbt:00004019 ! fasciculates with adult cervical connective
-relationship: RO:0002215 GO:0061535 ! capable of glutamate secretion, neurotransmission
+relationship: RO:0002215 GO:0061540 ! capable of octopamine secretion, neurotransmission
 relationship: RO:0013002 FBbt:00014013 ! receives synaptic input in region adult gnathal ganglion
 relationship: RO:0013002 FBbt:00040050 ! receives synaptic input in region inferior bridge
 relationship: RO:0013002 FBbt:00045040 ! receives synaptic input in region superior posterior slope
@@ -182026,14 +182186,19 @@ property_value: http://purl.org/dc/terms/date "2024-02-05T12:00:00Z" xsd:dateTim
 [Term]
 id: FBbt:20007502
 name: descending neuron of the gnathal ganglion DNg58
-def: "Adult descending neuron with its soma in the brain, posterior-lateral to the gnathal ganglion (Schlegel et al., 2024; Dorkenwald et al., 2024). It is a putative embryonic-born neuron (Schlegel et al., 2024; Dorkenwald et al., 2024). It has postsynapses and presynapses in the gnathal ganglion (Schlegel et al., 2024; Dorkenwald et al., 2024). Its predicted neurotransmitter is acetylcholine (Eckstein et al., 2024). There are approximately 2 of these cells per organism (Schlegel et al., 2024; Dorkenwald et al., 2024)." [FlyBase:FBrf0259490, FlyBase:FBrf0260535, FlyBase:FBrf0260546]
-comment: Cell type from Schlegel et al. (2024), based on FlyWire v783 (FAFB) data (Dorkenwald et al., 2024; Schlegel et al., 2024) and identified at light level by Sturner et al. (2025) - FlyBase:FBrf0262850. Soma location based on the closest annotated neuropil region. Pre- or post-synapse locations are the fewest regions that collectively contain at least 80 percent of all pre- or post-synapses of these neurons in FlyWire. Neurotransmitter predictions are from Eckstein et al. (2024). Other annotations are based on annotations in FlyWire and are available in the supplemental material of Schlegel et al. (2024).
+def: "Adult descending neuron with its soma in the brain, posterior-lateral to the gnathal ganglion (Schlegel et al., 2024; Dorkenwald et al., 2024). It is a putative embryonic-born neuron (Schlegel et al., 2024; Dorkenwald et al., 2024). It has postsynapses and presynapses in the gnathal ganglion (Schlegel et al., 2024; Dorkenwald et al., 2024). It enters the VNC via the cervical connective and sends output to the leg neuropil and upper tectulum (Takemura et al., 2024; Marin et al., 2024). Its predicted neurotransmitter is acetylcholine (Eckstein et al., 2024). There are approximately 2 of these cells per organism (Schlegel et al., 2024; Dorkenwald et al., 2024; Takemura et al., 2024; Marin et al., 2024)." [doi:10.1016/j.cell.2026.08.015, doi:10.1038/s41586-026-10735-w, doi:10.7554/eLife.96084.1, doi:10.7554/eLife.97766.1, doi:10.7554/eLife.97769.1, FlyBase:FBrf0259490, FlyBase:FBrf0260535, FlyBase:FBrf0260546]
+comment: Cell type from Schlegel et al. (2024), based on FlyWire v783 (FAFB) data (Dorkenwald et al., 2024; Schlegel et al., 2024) and identified at light level by Sturner et al. (2025) - FlyBase:FBrf0262850. Soma location based on the closest annotated neuropil region. Pre- or post-synapse locations are the fewest regions that collectively contain at least 80 percent of all pre- or post-synapses of these neurons in FlyWire. Neurotransmitter predictions are from Eckstein et al. (2024). Other annotations are based on annotations in FlyWire and are available in the supplemental material of Schlegel et al. (2024). MANC type DNxn145 (Takemura et al., 2024; Marin et al., 2024), formerly a separate term (FBbt:20008403), was matched to this type in the male CNS (Berg et al., 2026) and BANC (Bates et al., 2026) connectomes. VNC annotations are from MANC v1.2.1 data (Takemura et al., 2024; Marin et al., 2024).
+synonym: "adult DNxn145 neuron" EXACT []
+synonym: "DNxn145" EXACT [doi:10.7554/eLife.97766.1, doi:10.7554/eLife.97769.1]
 is_a: FBbt:00047097 ! primary neuron
 is_a: FBbt:00047516 ! descending neuron of the gnathal ganglion
 relationship: RO:0002100 FBbt:00100210 ! has soma location cell body rind of adult gnathal ganglion
+relationship: RO:0002101 FBbt:00004019 ! fasciculates with adult cervical connective
 relationship: RO:0002215 GO:0014055 ! capable of acetylcholine secretion, neurotransmission
 relationship: RO:0013002 FBbt:00014013 ! receives synaptic input in region adult gnathal ganglion
 relationship: RO:0013003 FBbt:00014013 ! sends synaptic output to region adult gnathal ganglion
+relationship: RO:0013003 FBbt:00047139 ! sends synaptic output to region adult leg neuropil
+relationship: RO:0013003 FBbt:00049994 ! sends synaptic output to region upper tectulum
 property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0002-1373-1705
 property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0002-5633-1314
 property_value: http://purl.org/dc/terms/date "2024-02-05T12:00:00Z" xsd:dateTime
@@ -183919,6 +184084,16 @@ is_obsolete: true
 replaced_by: FBbt:20000673
 
 [Term]
+id: FBbt:20008301
+name: obsolete adult DNxl079 neuron
+def: "Adult descending neuron of the DNxl079 group (Takemura et al., 2024; Marin et al., 2024). It enters the VNC via the cervical connective (Takemura et al., 2024; Marin et al., 2024). Within the VNC it fasciculates with the dorsal lateral tract of dorsal cervical fasciculus (Takemura et al., 2024; Marin et al., 2024). It receives input in the brain and sends output to the leg neuropil (Takemura et al., 2024; Marin et al., 2024). Its predicted neurotransmitter is acetylcholine (Eckstein et al., 2024). There are approximately 2 of these cells per organism (Takemura et al., 2024; Marin et al., 2024)." [doi:10.7554/eLife.96084.1, doi:10.7554/eLife.97766.1, doi:10.7554/eLife.97769.1, FlyBase:FBrf0259490]
+comment: Uncharacterized putative cell type from Marin et al. (2024), based on MANC v1.2.1 data (Takemura et al., 2024) from NeuPrint. Obsoleted: the same cell type as descending neuron of the gnathal ganglion DNge062 (FBbt:20007374), matched in the male CNS (Berg et al., 2026) and BANC (Bates et al., 2026) connectomes.
+property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0002-1373-1705
+property_value: http://purl.org/dc/terms/date "2024-05-10T12:00:00Z" xsd:dateTime
+is_obsolete: true
+replaced_by: FBbt:20007374
+
+[Term]
 id: FBbt:20008302
 name: obsolete adult DNxl080 neuron
 def: "Adult descending neuron of the DNxl080 group (Takemura et al., 2024; Marin et al., 2024). It enters the VNC via the cervical connective (Takemura et al., 2024; Marin et al., 2024). Within the VNC it fasciculates with the dorsal lateral tract of dorsal cervical fasciculus (Takemura et al., 2024; Marin et al., 2024). It receives input in the brain and sends output to the leg neuropil (Takemura et al., 2024; Marin et al., 2024). Its predicted neurotransmitter is gaba (Eckstein et al., 2024). There are approximately 2 of these cells per organism (Takemura et al., 2024; Marin et al., 2024)." [doi:10.7554/eLife.96084.1, doi:10.7554/eLife.97766.1, doi:10.7554/eLife.97769.1, FlyBase:FBrf0259490]
@@ -183957,6 +184132,16 @@ property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0002
 property_value: http://purl.org/dc/terms/date "2024-05-10T12:00:00Z" xsd:dateTime
 is_obsolete: true
 replaced_by: FBbt:20007536
+
+[Term]
+id: FBbt:20008306
+name: obsolete adult DNxl084 neuron
+def: "Adult descending neuron of the DNxl084 group (Takemura et al., 2024; Marin et al., 2024). It enters the VNC via the cervical connective (Takemura et al., 2024; Marin et al., 2024). Within the VNC it fasciculates with the dorsal lateral tract of ventral cervical fasciculus (Takemura et al., 2024; Marin et al., 2024). It receives input in the brain and sends output to the leg neuropil (Takemura et al., 2024; Marin et al., 2024). Its predicted neurotransmitter is glutamate (Eckstein et al., 2024). There are approximately 2 of these cells per organism (Takemura et al., 2024; Marin et al., 2024)." [doi:10.7554/eLife.96084.1, doi:10.7554/eLife.97766.1, doi:10.7554/eLife.97769.1, FlyBase:FBrf0259490]
+comment: Uncharacterized putative cell type from Marin et al. (2024), based on MANC v1.2.1 data (Takemura et al., 2024) from NeuPrint. Obsoleted: the same cell type as descending neuron of the gnathal ganglion DNge120 (FBbt:20007431), matched in the male CNS (Berg et al., 2026) and BANC (Bates et al., 2026) connectomes.
+property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0002-1373-1705
+property_value: http://purl.org/dc/terms/date "2024-05-10T12:00:00Z" xsd:dateTime
+is_obsolete: true
+replaced_by: FBbt:20007431
 
 [Term]
 id: FBbt:20008307
@@ -184259,6 +184444,16 @@ is_obsolete: true
 replaced_by: FBbt:20007335
 
 [Term]
+id: FBbt:20008346
+name: obsolete adult DNxl125 neuron
+def: "Adult descending neuron of the DNxl125 group (Takemura et al., 2024; Marin et al., 2024). It enters the VNC via the cervical connective (Takemura et al., 2024; Marin et al., 2024). Within the VNC it fasciculates with the ventral median tract of ventral cervical fasciculus (Takemura et al., 2024; Marin et al., 2024). It receives input in the brain and sends output to the leg neuropil (Takemura et al., 2024; Marin et al., 2024). Its predicted neurotransmitter is acetylcholine (Eckstein et al., 2024). There are approximately 2 of these cells per organism (Takemura et al., 2024; Marin et al., 2024)." [doi:10.7554/eLife.96084.1, doi:10.7554/eLife.97766.1, doi:10.7554/eLife.97769.1, FlyBase:FBrf0259490]
+comment: Uncharacterized putative cell type from Marin et al. (2024), based on MANC v1.2.1 data (Takemura et al., 2024) from NeuPrint. Obsoleted: the same cell type as descending neuron of the gnathal ganglion DNge121 (FBbt:20007432), matched in the male CNS (Berg et al., 2026) and BANC (Bates et al., 2026) connectomes.
+property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0002-1373-1705
+property_value: http://purl.org/dc/terms/date "2024-05-10T12:00:00Z" xsd:dateTime
+is_obsolete: true
+replaced_by: FBbt:20007432
+
+[Term]
 id: FBbt:20008350
 name: obsolete adult DNxl129 neuron
 def: "Adult descending neuron of the DNxl129 group (Takemura et al., 2024; Marin et al., 2024). It enters the VNC via the cervical connective (Takemura et al., 2024; Marin et al., 2024). Within the VNC it fasciculates with the dorsal lateral tract of dorsal cervical fasciculus (Takemura et al., 2024; Marin et al., 2024). It receives input in the brain and sends output to the leg neuropil (Takemura et al., 2024; Marin et al., 2024). Its predicted neurotransmitter is acetylcholine (Eckstein et al., 2024). There are approximately 2 of these cells per organism (Takemura et al., 2024; Marin et al., 2024)." [doi:10.7554/eLife.96084.1, doi:10.7554/eLife.97766.1, doi:10.7554/eLife.97769.1, FlyBase:FBrf0259490]
@@ -184297,6 +184492,26 @@ property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0002
 property_value: http://purl.org/dc/terms/date "2024-05-10T12:00:00Z" xsd:dateTime
 is_obsolete: true
 replaced_by: FBbt:20007415
+
+[Term]
+id: FBbt:20008355
+name: obsolete adult DNxl134 neuron
+def: "Adult descending neuron of the DNxl134 group (Takemura et al., 2024; Marin et al., 2024). It enters the VNC via the cervical connective (Takemura et al., 2024; Marin et al., 2024). Within the VNC it fasciculates with the dorsal lateral tract of dorsal cervical fasciculus (Takemura et al., 2024; Marin et al., 2024). It receives input in the brain and sends output to the leg neuropil (Takemura et al., 2024; Marin et al., 2024). Its predicted neurotransmitter is acetylcholine (Eckstein et al., 2024). There are approximately 2 of these cells per organism (Takemura et al., 2024; Marin et al., 2024)." [doi:10.7554/eLife.96084.1, doi:10.7554/eLife.97766.1, doi:10.7554/eLife.97769.1, FlyBase:FBrf0259490]
+comment: Uncharacterized putative cell type from Marin et al. (2024), based on MANC v1.2.1 data (Takemura et al., 2024) from NeuPrint. Obsoleted: the same cell type as descending neuron of the gnathal ganglion DNge035 (FBbt:20007347), matched in the male CNS (Berg et al., 2026) and BANC (Bates et al., 2026) connectomes.
+property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0002-1373-1705
+property_value: http://purl.org/dc/terms/date "2024-05-10T12:00:00Z" xsd:dateTime
+is_obsolete: true
+replaced_by: FBbt:20007347
+
+[Term]
+id: FBbt:20008357
+name: obsolete adult DNxn071 neuron
+def: "Adult descending neuron of the DNxn071 group (Takemura et al., 2024; Marin et al., 2024). It enters the VNC via the cervical connective (Takemura et al., 2024; Marin et al., 2024). Within the VNC it fasciculates with the median tract of dorsal cervical fasciculus I (Takemura et al., 2024; Marin et al., 2024). It receives input in the brain and sends output to the abdominal neuromere and leg neuropil (Takemura et al., 2024; Marin et al., 2024). Its predicted neurotransmitter is acetylcholine (Eckstein et al., 2024). There are approximately 2 of these cells per organism (Takemura et al., 2024; Marin et al., 2024)." [doi:10.7554/eLife.96084.1, doi:10.7554/eLife.97766.1, doi:10.7554/eLife.97769.1, FlyBase:FBrf0259490]
+comment: Uncharacterized putative cell type from Marin et al. (2024), based on MANC v1.2.1 data (Takemura et al., 2024) from NeuPrint. Obsoleted: the same cell type as descending neuron of the gnathal ganglion DNge013 (FBbt:20007325), matched in the male CNS (Berg et al., 2026) and BANC (Bates et al., 2026) connectomes.
+property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0002-1373-1705
+property_value: http://purl.org/dc/terms/date "2024-05-10T12:00:00Z" xsd:dateTime
+is_obsolete: true
+replaced_by: FBbt:20007325
 
 [Term]
 id: FBbt:20008358
@@ -184409,6 +184624,16 @@ is_obsolete: true
 replaced_by: FBbt:20007448
 
 [Term]
+id: FBbt:20008385
+name: obsolete adult DNxn127 neuron
+def: "Adult descending neuron of the DNxn127 group (Takemura et al., 2024; Marin et al., 2024). It enters the VNC via the cervical connective (Takemura et al., 2024; Marin et al., 2024). Within the VNC it fasciculates with the ventral median tract of ventral cervical fasciculus (Takemura et al., 2024; Marin et al., 2024). It receives input in the brain and sends output to multiple regions (Takemura et al., 2024; Marin et al., 2024). Its predicted neurotransmitter is acetylcholine (Eckstein et al., 2024). There are approximately 2 of these cells per organism (Takemura et al., 2024; Marin et al., 2024)." [doi:10.7554/eLife.96084.1, doi:10.7554/eLife.97766.1, doi:10.7554/eLife.97769.1, FlyBase:FBrf0259490]
+comment: Uncharacterized putative cell type from Marin et al. (2024), based on MANC v1.2.1 data (Takemura et al., 2024) from NeuPrint. Obsoleted: the same cell type as descending neuron of the gnathal ganglion DNge133 (FBbt:20007444), matched in the male CNS (Berg et al., 2026) and BANC (Bates et al., 2026) connectomes.
+property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0002-1373-1705
+property_value: http://purl.org/dc/terms/date "2024-05-10T12:00:00Z" xsd:dateTime
+is_obsolete: true
+replaced_by: FBbt:20007444
+
+[Term]
 id: FBbt:20008387
 name: obsolete adult DNxn129 neuron
 def: "Adult descending neuron of the DNxn129 group (Takemura et al., 2024; Marin et al., 2024). It enters the VNC via the cervical connective (Takemura et al., 2024; Marin et al., 2024). Within the VNC it fasciculates with the ventral median tract of ventral cervical fasciculus (Takemura et al., 2024; Marin et al., 2024). It receives input in the brain and sends output to the lower tectulum and medial ventral association center (Takemura et al., 2024; Marin et al., 2024). Its predicted neurotransmitter is acetylcholine (Eckstein et al., 2024). There are approximately 2 of these cells per organism (Takemura et al., 2024; Marin et al., 2024)." [doi:10.7554/eLife.96084.1, doi:10.7554/eLife.97766.1, doi:10.7554/eLife.97769.1, FlyBase:FBrf0259490]
@@ -184479,6 +184704,16 @@ is_obsolete: true
 replaced_by: FBbt:20007542
 
 [Term]
+id: FBbt:20008399
+name: obsolete adult DNxn141 neuron
+def: "Adult descending neuron of the DNxn141 group (Takemura et al., 2024; Marin et al., 2024). It enters the VNC via the cervical connective (Takemura et al., 2024; Marin et al., 2024). Within the VNC it fasciculates with the median dorsal abdominal tract (Takemura et al., 2024; Marin et al., 2024). It receives input in the brain and sends output to the abdominal neuromere and intermediate tectulum (Takemura et al., 2024; Marin et al., 2024). Its predicted neurotransmitter is acetylcholine (Eckstein et al., 2024). There are approximately 2 of these cells per organism (Takemura et al., 2024; Marin et al., 2024)." [doi:10.7554/eLife.96084.1, doi:10.7554/eLife.97766.1, doi:10.7554/eLife.97769.1, FlyBase:FBrf0259490]
+comment: Uncharacterized putative cell type from Marin et al. (2024), based on MANC v1.2.1 data (Takemura et al., 2024) from NeuPrint. Obsoleted: the same cell type as descending neuron of the gnathal ganglion DNge139 (FBbt:20007450), matched in the male CNS (Berg et al., 2026) and BANC (Bates et al., 2026) connectomes.
+property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0002-1373-1705
+property_value: http://purl.org/dc/terms/date "2024-05-10T12:00:00Z" xsd:dateTime
+is_obsolete: true
+replaced_by: FBbt:20007450
+
+[Term]
 id: FBbt:20008400
 name: obsolete adult DNxn142 neuron
 def: "Adult descending neuron of the DNxn142 group (Takemura et al., 2024; Marin et al., 2024). It enters the VNC via the cervical connective (Takemura et al., 2024; Marin et al., 2024). Within the VNC it fasciculates with the median tract of dorsal cervical fasciculus I (Takemura et al., 2024; Marin et al., 2024). It receives input in the brain and sends output to multiple regions (Takemura et al., 2024; Marin et al., 2024). Its predicted neurotransmitter is acetylcholine (Eckstein et al., 2024). There are approximately 2 of these cells per organism (Takemura et al., 2024; Marin et al., 2024)." [doi:10.7554/eLife.96084.1, doi:10.7554/eLife.97766.1, doi:10.7554/eLife.97769.1, FlyBase:FBrf0259490]
@@ -184487,6 +184722,16 @@ property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0002
 property_value: http://purl.org/dc/terms/date "2024-05-10T12:00:00Z" xsd:dateTime
 is_obsolete: true
 replaced_by: FBbt:20007538
+
+[Term]
+id: FBbt:20008403
+name: obsolete adult DNxn145 neuron
+def: "Adult descending neuron of the DNxn145 group (Takemura et al., 2024; Marin et al., 2024). It enters the VNC via the cervical connective (Takemura et al., 2024; Marin et al., 2024). It receives input in the brain and sends output to the leg neuropil and upper tectulum (Takemura et al., 2024; Marin et al., 2024). Its predicted neurotransmitter is acetylcholine (Eckstein et al., 2024). There are approximately 2 of these cells per organism (Takemura et al., 2024; Marin et al., 2024)." [doi:10.7554/eLife.96084.1, doi:10.7554/eLife.97766.1, doi:10.7554/eLife.97769.1, FlyBase:FBrf0259490]
+comment: Uncharacterized putative cell type from Marin et al. (2024), based on MANC v1.2.1 data (Takemura et al., 2024) from NeuPrint. Obsoleted: the same cell type as descending neuron of the gnathal ganglion DNg58 (FBbt:20007502), matched in the male CNS (Berg et al., 2026) and BANC (Bates et al., 2026) connectomes.
+property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0002-1373-1705
+property_value: http://purl.org/dc/terms/date "2024-05-10T12:00:00Z" xsd:dateTime
+is_obsolete: true
+replaced_by: FBbt:20007502
 
 [Term]
 id: FBbt:20008405
@@ -184607,6 +184852,16 @@ property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0002
 property_value: http://purl.org/dc/terms/date "2024-05-10T12:00:00Z" xsd:dateTime
 is_obsolete: true
 replaced_by: FBbt:20007365
+
+[Term]
+id: FBbt:20008424
+name: obsolete adult DNxn166 neuron
+def: "Adult descending neuron of the DNxn166 group (Takemura et al., 2024; Marin et al., 2024). It enters the VNC via the cervical connective (Takemura et al., 2024; Marin et al., 2024). Within the VNC it fasciculates with the ventral median tract of ventral cervical fasciculus (Takemura et al., 2024; Marin et al., 2024). It receives input in the brain and sends output to the leg neuropil (Takemura et al., 2024; Marin et al., 2024). Its predicted neurotransmitter is gaba (Eckstein et al., 2024). There are approximately 2 of these cells per organism (Takemura et al., 2024; Marin et al., 2024)." [doi:10.7554/eLife.96084.1, doi:10.7554/eLife.97766.1, doi:10.7554/eLife.97769.1, FlyBase:FBrf0259490]
+comment: Uncharacterized putative cell type from Marin et al. (2024), based on MANC v1.2.1 data (Takemura et al., 2024) from NeuPrint. Obsoleted: the same cell type as descending neuron of the gnathal ganglion DNge122 (FBbt:20007433), matched in the male CNS (Berg et al., 2026) and BANC (Bates et al., 2026) connectomes.
+property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0002-1373-1705
+property_value: http://purl.org/dc/terms/date "2024-05-10T12:00:00Z" xsd:dateTime
+is_obsolete: true
+replaced_by: FBbt:20007433
 
 [Term]
 id: FBbt:20008426
