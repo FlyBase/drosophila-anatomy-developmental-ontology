@@ -266,6 +266,25 @@ def drop_redundant_part_of(term_list, descendants_map):
     return kept
 
 
+
+def roi_hierarchy_parts(tree, roi_map):
+    """{FBbt id of a neuPrint ROI: FBbt ids of the mapped ROIs below it} from a
+    neuPrint ROI hierarchy ({'name', 'children'} nodes) and an ROI -> FBbt map,
+    for part-of pruning alongside the ontology's own part-of links."""
+    parts = {}
+
+    def walk(node):
+        below = set()
+        for child in node.get("children", []):
+            below |= walk(child)
+        own = roi_map.get(node["name"])
+        if own:
+            parts.setdefault(own, set()).update(below - {own})
+            below = below | {own}
+        return below
+    walk(tree)
+    return {k: v for k, v in parts.items() if v}
+
 if __name__ == "__main__":
     # Lightweight self-checks (the "unit checks" referenced in the plan).
     assert name_lister([]) is False
