@@ -187,7 +187,7 @@ Two components are automatically updated during the release process and do not r
 
 The `qc_assertions` files were historically used to allow some qc checks to pass, but might no longer be needed.
 
-All components are saved in OWL functional syntax, keeping the `.owl` filename (ROBOT and Protege detect the syntax from the content). This roughly halves their size and gives one-axiom-per-line diffs. ROBOT writes RDF/XML to a `.owl` output by default, so a command that writes a component should end with `convert --add-prefix "obo: http://purl.obolibrary.org/obo/" --format ofn --output components/<component>.owl` (the Makefile goals use `$(COMPONENT_OFN)` for this).
+All components are saved in OWL functional syntax, keeping the `.owl` filename (ROBOT and Protege detect the syntax from the content). This roughly halves their size and gives one-axiom-per-line diffs. ROBOT writes RDF/XML to a `.owl` output by default, so a command that writes a component should end with `convert --add-prefixes component_prefixes.json --format ofn --output components/<component>.owl` (run from `src/ontology`) (the Makefile goals use `$(COMPONENT_OFN)` for this).
 
 ## Claude Code Skills
 
