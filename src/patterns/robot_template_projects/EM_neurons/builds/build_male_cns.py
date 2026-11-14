@@ -19,6 +19,7 @@ Usage:
 """
 
 import argparse
+import json
 import os
 import re
 import sys
@@ -30,6 +31,7 @@ sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), ".."
 import EM_common as em  # noqa: E402
 
 CONNECTIVITY_THRESHOLD = 10
+TRACT_RE = r"\bconnective\b|\bnerve\b(?! cord)"   # region names that are fibre tracts
 NT_CVS = {"acetylcholine": "GO:0014055", "GABA": "GO:0061534", "glutamate": "GO:0061535"}
 
 
@@ -84,6 +86,9 @@ def build_template(db_path):
     # which is lossless since they are part-of ancestors of the specific regions).
     mcns_rois = pd.read_csv(_proj("EM_neuropils", "male-cns_regions.tsv"), sep="\t", dtype=str)
     mcns_rois = mcns_rois[mcns_rois["FBbt_id"].notna() & (mcns_rois["FBbt_id"] != "")]
+    # Nerves and the cervical connective are fibre tracts, not synaptic
+    # neuropils, so they are not used as input/output regions.
+    mcns_rois = mcns_rois[~mcns_rois["FBbt_name"].str.contains(TRACT_RE, regex=True)]
     raw_ROI_dict = dict(zip(mcns_rois["male-cns_region"], mcns_rois["FBbt_id"]))
     mcns_rois_FBbt = mcns_rois[["FBbt_id", "FBbt_name"]].drop_duplicates()
     ROI_name_dict = dict(zip(mcns_rois_FBbt["FBbt_id"], mcns_rois_FBbt["FBbt_name"]))
@@ -91,6 +96,12 @@ def build_template(db_path):
     fbbt = get_adapter(db_path)
     FBbt_descendants = {i: [x[0] for x in fbbt.relationships(objects=[i], predicates=["BFO:0000050"], include_entailed=True)]
                         for i in ROI_name_dict.keys()}
+    # Add the neuPrint ROI hierarchy: part-of links that FBbt states only in
+    # equivalence axioms (e.g. adult T1 leg neuropil) are not entailed in
+    # fbbt-merged.db, which left the whole VNC listed next to its neuropils.
+    with open(_proj("EM_neuropils", "male-cns_roi_hierarchy.json")) as f:
+        for parent, parts in em.roi_hierarchy_parts(json.load(f), raw_ROI_dict).items():
+            FBbt_descendants[parent] = list(set(FBbt_descendants.get(parent, [])) | parts)
 
     # hemilineage (from cache, replacing the live neuPrint query)
     hemilineages = pd.read_csv(_cache("male_cns_hemilineage.tsv"), sep="\t")
