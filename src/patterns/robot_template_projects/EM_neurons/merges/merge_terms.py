@@ -38,12 +38,16 @@ REGISTRY = os.path.join(EM, "registry", "EM_neuron_registry.tsv")
 SOURCE_LISTS = {
     "flywire": os.path.join(EM, "sources", "flywire", "FBbt_ID-cell_type.tsv"),
     "manc": os.path.join(EM, "sources", "manc", "new_cell_FBbt_ids.tsv"),
+    "male_cns": os.path.join(EM, "sources", "male_cns", "new_types.tsv"),
 }
 
 # Evidence that the two types are the same: matched in the male CNS and BANC.
 MATCH_XREFS = ["doi:10.1016/j.cell.2026.08.015", "doi:10.1038/s41586-026-10735-w"]
 MATCH_TEXT = "in the male CNS (Berg et al., 2026) and BANC (Bates et al., 2026) connectomes"
+BANC_REF = "Bates et al., 2026"
+PRIMARY_NEURON = "FBbt:00047097"
 DATASET_TEXT = {"manc": ("MANC", "Takemura et al., 2024; Marin et al., 2024"),
+                "male_cns": ("male CNS", "Berg et al., 2026"),
                 "flywire": ("FlyWire", "Schlegel et al., 2024; Dorkenwald et al., 2024")}
 NT_NAMES = {}  # filled from the def sentences: GO id -> name
 
@@ -160,6 +164,212 @@ def vnc_sentences(sents):
 
 # --- merging -----------------------------------------------------------------
 
+HEMI_RE = re.compile(r"^It belongs to the (.+) hemilineage$")
+FLYWIRE_REFS = ["Schlegel et al., 2024", "Dorkenwald et al., 2024"]
+FLYWIRE_XREFS = ["FlyBase:FBrf0260535", "FlyBase:FBrf0260546"]
+SOMA_REL = "RO:0002100"
+VNC = "FBbt:00004052"
+REGION_RE = re.compile(r"^(It (?:receives input in|sends output to)) (.+)$")
+_REGIONS = None
+
+
+def male_cns_regions():
+    """From the EM_neuropils male CNS region table and ROI hierarchy: the
+    nerves and connective (fibre tracts, not synaptic regions) and the VNC
+    neuropils, each as {FBbt id: name as written in defs}."""
+    global _REGIONS
+    if _REGIONS:
+        return _REGIONS
+    import json
+    np_dir = os.path.join(EM, "..", "EM_neuropils")
+    with open(os.path.join(np_dir, "male-cns_regions.tsv")) as f:
+        rows = [r for r in csv.DictReader(f, delimiter="\t") if r["FBbt_id"]]
+    roi = {r["male-cns_region"]: (r["FBbt_id"], r["FBbt_name"].replace("adult ", "")) for r in rows}
+    with open(os.path.join(np_dir, "male-cns_roi_hierarchy.json")) as f:
+        tree = json.load(f)
+
+    def under(node, name, inside=False):
+        inside = inside or node["name"] == name
+        found = [node["name"]] if inside else []
+        for c in node.get("children", []):
+            found += under(c, name, inside)
+        return found
+    tracts = {i: n for i, n in roi.values() if re.search(r"\bconnective\b|\bnerve\b(?! cord)", n)}
+    vnc_parts = {roi[r][0]: roi[r][1] for r in under(tree, "VNC")
+                 if r in roi and roi[r][0] not in tracts and roi[r][0] != VNC}
+    _REGIONS = tracts, vnc_parts, {n for _, n in roi.values()}
+    return _REGIONS
+
+
+def region_names():
+    return male_cns_regions()[2]
+
+
+def drop_tract_regions(sentence):
+    """Rewrite a male CNS input/output sentence ("It receives input in the
+    ipsilateral A and B, the contralateral C, and the D and E (refs).")
+    without fibre tracts, and without the whole VNC if a VNC neuropil is
+    listed. Groups are joined as in build_male_cns.py. Returns None if no
+    region is left."""
+    tracts, vnc_parts, _ = male_cns_regions()
+    b, refs = body(sentence), cites(sentence)
+    m = REGION_RE.match(b)
+    if not m:
+        return sentence
+    # region names containing " and " are protected while splitting the lists
+    anded = {n.replace(" and ", " & "): n for n in region_names() if " and " in n}
+    text = m.group(2)
+    for k, v in anded.items():
+        text = text.replace(v, k)
+    parsed = []
+    for g in re.split(r",? and (?=the )|, (?=the )", text):
+        g = g[len("the "):]
+        lat = next((l for l in ("ipsilateral ", "contralateral ") if g.startswith(l)), "")
+        parsed.append((lat, [anded.get(n, n) for n in re.split(r", | and ", g[len(lat):])]))
+    names = {n for _, items in parsed for n in items}
+    drop = set(tracts.values())
+    if names & set(vnc_parts.values()):
+        drop.add("ventral nerve cord")
+    if not drop & names:
+        return sentence
+    parts = [f"the {lat}{name_list(kept)}" for lat, items in parsed
+             if (kept := [n for n in items if n not in drop])]
+    if not parts:
+        return None
+    joined = ", and ".join(parts) if len(parts) < 3 else f"{parts[0]}, {parts[1]}, and {parts[2]}"
+    return cite(f"{m.group(1)} {joined}", refs)
+
+
+def drop_tract_axioms(rels):
+    """Drop input/output axioms on fibre tracts, and on the whole VNC where the
+    same relation has a VNC neuropil."""
+    tracts, vnc_parts, _ = male_cns_regions()
+    out = []
+    for v in rels:
+        rel, _, obj = v.partition(" ")
+        if rel in ("RO:0013002", "RO:0013003"):
+            if obj in tracts:
+                continue
+            if obj == VNC and any(w.startswith(rel + " ") and w.split(" ")[1] in vnc_parts for w in rels):
+                continue
+        out.append(v)
+    return out
+
+
+def name_list(names):
+    return names[0] if len(names) == 1 else ", ".join(names[:-1]) + " and " + names[-1]
+
+
+_FLYWIRE = None
+
+
+def flywire_soma(cell_type):
+    """(position, neuropil, cell body rind id) for a FlyWire type, from the
+    FlyWire builder's soma positioning (the neuropil closest to most somas),
+    or None if the type or the (untracked) FlyWire source files are missing."""
+    global _FLYWIRE
+    if _FLYWIRE is None:
+        sys.path.insert(0, os.path.join(EM, "builds"))
+        try:
+            from build_flywire import FlyWireBuilder
+            _FLYWIRE = FlyWireBuilder()
+        except (OSError, ImportError) as e:
+            print(f"FlyWire soma positions not available ({e}); skipping", file=sys.stderr)
+            _FLYWIRE = False
+    if not _FLYWIRE:
+        return None
+    try:
+        return _FLYWIRE.describe_position(cell_type)
+    except ValueError:
+        return None
+
+
+def male_cns_def(row, k_sents, o_sents, nt_conflict):
+    """Merged def for a kept male CNS term (whole CNS) and an obsoleted MANC
+    term: male CNS sentences, then the MANC tract and cell count, with BANC
+    (optional banc_* columns of the merges table) cited where it agrees.
+    Fibre tracts are dropped from the input/output sentences, and the soma
+    position is added from FlyWire (optional flywire_type column, else the
+    male CNS name) where available.
+    Returns (sentences, notes for the comment, extra is_a parents, extra
+    relationships, extra def xrefs)."""
+    manc = DATASET_TEXT["manc"][1].split("; ")
+    banc_hl = row.get("banc_hemilineage", "")
+    banc_nt = row.get("banc_nt", "").lower()
+    out, notes, parents, agree, rels, xrefs = [], [], [], [], [], []
+    soma = flywire_soma(row.get("flywire_type") or row["keep_name"])
+    hemi = next((HEMI_RE.match(body(s)).group(1) for s in k_sents if HEMI_RE.match(body(s))), None)
+    nt_sent = None
+    for s in k_sents:
+        b, refs = body(s), cites(s)
+        if HEMI_RE.match(b):
+            if banc_hl and banc_hl.replace("_", " ") == hemi:
+                refs = refs + [BANC_REF]
+                agree.append("hemilineage")
+            out.append(cite(b, refs))
+        elif NT_RE.match(b):
+            if not nt_conflict:
+                if banc_nt and banc_nt == NT_RE.match(b).group(1).lower():
+                    refs = refs + [BANC_REF]
+                    agree.append("predicted neurotransmitter")
+                nt_sent = cite(b.replace("is gaba", "is GABA"), refs)
+        else:
+            # "...neuron of the posterior brain of the DNp66 group" -> soma clause
+            s = re.sub(r"^(Adult descending neuron) of the (.+?) of the (\S+) group ",
+                       r"\1 of the \3 group, with its soma in the \2 ", s)
+            if soma and ", with its soma in the " in s:
+                pos, vol, cbr = soma
+                s = cite(body(s) + (f", near the {vol}" if pos == "near" else f", {pos} to the {vol}"),
+                         FLYWIRE_REFS + cites(s))
+                rels.append(f"{SOMA_REL} {cbr}")
+                xrefs += FLYWIRE_XREFS
+                notes.append("Soma position is from FlyWire data, based on the closest annotated "
+                             f"neuropil region ({'; '.join(FLYWIRE_REFS)}).")
+            s = drop_tract_regions(s)
+            if s:
+                out.append(s)
+            if b.startswith("Adult descending neuron of the") and not hemi and banc_hl == "putative_primary":
+                out.append(cite("It is a putative embryonic-born neuron", [BANC_REF]))
+                parents.append(PRIMARY_NEURON)
+    # MANC: tract and count only (its input/output summary is coarser than male CNS's)
+    enters = tract = None
+    manc_n = None
+    for s in o_sents:
+        b = body(s)
+        if b == "It enters the VNC via the cervical connective":
+            enters = True
+        elif b.startswith("Within the VNC it fasciculates with "):
+            tract = b[len("Within the VNC it fasciculates with "):]
+        elif COUNT_RE.match(b):
+            manc_n = COUNT_RE.match(b).group(1)
+    if enters:
+        out.append(cite("It enters the VNC via the cervical connective"
+                        + (f", fasciculating with {tract}" if tract else ""), manc))
+    if nt_sent:
+        out.append(nt_sent)
+    counts = {"MANC": manc_n, "male CNS": row.get("male_cns_count") or None,
+              "BANC": row.get("banc_count") or None}
+    refs = {"MANC": manc, "male CNS": ["Berg et al., 2026"], "BANC": [BANC_REF]}
+    present = {k: v for k, v in counts.items() if v}
+    if len(set(present.values())) == 1:
+        n = next(iter(present.values()))
+        out.append(cite(f"There are approximately {n} of these cells per organism",
+                        [r for k in present for r in refs[k]]))
+        if "BANC" in present:
+            agree.append("cell count")
+    else:
+        # counts differ between datasets: give the range, citing all of them
+        ns = sorted({int(v) for v in present.values()})
+        out.append(cite(f"There are approximately {ns[0]}-{ns[-1]} of these cells per organism",
+                        [r for k in present for r in refs[k]]))
+    if agree:
+        listed = agree[0] if len(agree) == 1 else ", ".join(agree[:-1]) + " and " + agree[-1]
+        notes.append(f"BANC data ({BANC_REF}) agree on {listed}.")
+    if row.get("banc_function"):
+        notes.append(f"Cell function in BANC: {row['banc_function'].replace('_', ' ')} ({BANC_REF}).")
+    return out, notes, parents, rels, xrefs
+
+
 def merge(row, keep, obs, symbols):
     k_text, k_xrefs = split_def(first(keep, "def"))
     o_text, o_xrefs = split_def(first(obs, "def"))
@@ -200,9 +410,14 @@ def merge(row, keep, obs, symbols):
         if on:
             tail.append(cite(f"There are approximately {on} of these cells per organism (MANC)", orefs))
 
-    head = [s for s in k_sents if not NT_RE.match(s) and not COUNT_RE.match(body(s))]
-    text = " ".join(head + vnc_sentences(o_sents) + tail)
-    xrefs = sorted(set(k_xrefs) | set(o_xrefs) | set(MATCH_XREFS))
+    notes, parents, rels, extra_xrefs = [], [], [], []
+    if row["keep_dataset"] == "male_cns":
+        sents, notes, parents, rels, extra_xrefs = male_cns_def(row, k_sents, o_sents, nt_conflict)
+        text = " ".join(sents)
+    else:
+        head = [s for s in k_sents if not NT_RE.match(s) and not COUNT_RE.match(body(s))]
+        text = " ".join(head + vnc_sentences(o_sents) + tail)
+    xrefs = sorted(set(k_xrefs) | set(o_xrefs) | set(MATCH_XREFS) | set(extra_xrefs))
 
     o_ds, o_refs = DATASET_TEXT[row["obsolete_dataset"]]
     comment = first(keep, "comment")
@@ -212,9 +427,15 @@ def merge(row, keep, obs, symbols):
     if new_name:
         k_ds, k_refs = DATASET_TEXT[row["keep_dataset"]]
         extra += f" Named {row['keep_name']} in {k_ds} ({k_refs})."
+    if row["keep_dataset"] == "male_cns":
+        extra = extra.replace(f"VNC annotations are from {o_ds} v1.2.1 data",
+                              f"VNC tract and cell count are from {o_ds} v1.2.1 data")
     if nt_conflict:
-        extra += (f" Predicted neurotransmitters differ between datasets ({k_nt} in FlyWire, "
-                  f"{o_nt} in {o_ds}; Eckstein et al., 2024), so none is asserted here.")
+        extra += (f" Predicted neurotransmitters differ between datasets ({k_nt} in "
+                  f"{DATASET_TEXT[row['keep_dataset']][0]}, {o_nt} in {o_ds}; Eckstein et al., 2024), "
+                  f"so none is asserted here.")
+    if notes:
+        extra += " " + " ".join(notes)
     comment = (comment + " " + extra).strip()
 
     # synonyms: both terms' own, plus the other dataset's name and old labels
@@ -230,6 +451,11 @@ def merge(row, keep, obs, symbols):
     else:
         add_syn(f'"{row["obsolete_name"]}" EXACT [{symbols[row["obsolete_id"]][1].replace("|", ", ")}]')
     add_syn(f'"{first(obs, "name")}" EXACT []')
+    oname = row["obsolete_name"]
+    if not new_name and " RELATED " in syns.get(oname, ""):
+        refs = re.search(r"\[(.*)\]", syns[oname]).group(1).split(", ")
+        refs += symbols[row["obsolete_id"]][1].split("|")
+        syns[oname] = f'"{oname}" EXACT [{", ".join(sorted(set(r for r in refs if r)))}]'
     syns.pop(label, None)
     syns.pop(new_name or row["keep_name"], None)
 
@@ -240,6 +466,12 @@ def merge(row, keep, obs, symbols):
             if tag == "relationship" and nt_conflict and v.startswith("RO:0002215 "):
                 continue
             vals.setdefault(v, None)
+        if tag == "is_a":
+            for p in parents:
+                vals.setdefault(p, None)
+        if tag == "relationship":
+            for r in rels:
+                vals.setdefault(r, None)
         vals = sorted(vals)
         # drop generic axioms the other term makes redundant
         if tag == "is_a" and len(vals) > 1:
@@ -248,12 +480,14 @@ def merge(row, keep, obs, symbols):
             for rel, generic in GENERIC_REGIONS:
                 if any(v.startswith(rel + " ") and v != f"{rel} {generic}" for v in vals):
                     vals = [v for v in vals if v != f"{rel} {generic}"]
+            if row["keep_dataset"] == "male_cns":
+                vals = drop_tract_axioms(vals)
         return vals
 
     contributors = OrderedDict()
     for v in values(keep, "property_value") + values(obs, "property_value"):
         if "terms/contributor" in v:
-            contributors.setdefault(v, None)
+            contributors.setdefault(v.replace("http://orcid.org/", "https://orcid.org/"), None)
     date = next(v for v in values(keep, "property_value") if "terms/date" in v)
 
     st = [("id", row["keep_id"]), ("name", label),
