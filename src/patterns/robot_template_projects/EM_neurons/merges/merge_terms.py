@@ -8,7 +8,22 @@ is obsoleted with replaced_by. Predicted neurotransmitters that disagree are
 not asserted; the comment records them instead.
 
 The definition rewriting assumes the kept term is FlyWire-generated (brain
-sentences) and the obsoleted one MANC-generated (VNC sentences).
+sentences) and the obsoleted one MANC-generated (VNC sentences), except:
+- keep_dataset male_cns: see male_cns_def;
+- keep_dataset fbbt-edit with obsolete_dataset flywire: a hand-curated term
+  absorbing a FlyWire (hemibrain-named) term, see merge_flywire_into_edit.
+
+Optional columns of the merges table:
+- new_label: label for the kept term, where new_name can't simply replace
+  keep_name in the old label;
+- unpaired = y: the kept term is an unpaired midline neuron (e.g. a VUM
+  neuron) whose two descending branches MANC typed as two neurons, so the MANC
+  cell count is not used. MANC neurotransmitter predictions don't include
+  octopamine, so the MANC prediction is dropped too;
+- drop_nt = y: don't assert the FlyWire neurotransmitter prediction (e.g. when
+  the kept term has experimental evidence against it);
+- matched_in: |-separated datasets (male_cns, banc, flywire) in which the
+  two types were matched (default male_cns|banc).
 
     python merge_terms.py merges/flywire_manc_2026-11.tsv --out x.obo   # dry run, stanzas to x.obo
     python merge_terms.py merges/flywire_manc_2026-11.tsv --apply       # edit the repo
@@ -18,7 +33,7 @@ Run from EM_neurons/. --apply edits fbbt-edit.obo (reserialise it with
 lists and neuron_symbols.tsv; then run `sh run.sh make refresh-EM-neurons`, or,
 if the templates/ cache is stale, take the terms out of components/EM_neurons.owl
 with `robot remove --term-file` (as for the 2026-11 merges), saving it as OFN
-(`convert --format ofn`).
+(`convert --add-prefixes component_prefixes.json --format ofn`).
 """
 import argparse
 import csv
@@ -40,17 +55,26 @@ SOURCE_LISTS = {
     "flywire": os.path.join(EM, "sources", "flywire", "FBbt_ID-cell_type.tsv"),
     "manc": os.path.join(EM, "sources", "manc", "new_cell_FBbt_ids.tsv"),
     "male_cns": os.path.join(EM, "sources", "male_cns", "new_types.tsv"),
+    "optic_lobe": os.path.join(EM, "sources", "optic_lobe", "new_types.tsv"),
+    "hemibrain": os.path.join(EM, "sources", "hemibrain", "new_cell_types.tsv"),
 }
+SIMPLE = os.path.normpath(os.path.join(ONT, "..", "..", "fbbt-simple.obo"))
 
 # Evidence that the two types are the same: matched in the male CNS and BANC.
-MATCH_XREFS = ["doi:10.1016/j.cell.2026.08.015", "doi:10.1038/s41586-026-10735-w"]
-MATCH_TEXT = "in the male CNS (Berg et al., 2026) and BANC (Bates et al., 2026) connectomes"
+MATCH_DATASETS = {"male_cns": ("male CNS", "Berg et al., 2026", "doi:10.1016/j.cell.2026.08.015"),
+                  "banc": ("BANC", "Bates et al., 2026", "doi:10.1038/s41586-026-10735-w"),
+                  "flywire": ("FlyWire", "Schlegel et al., 2024", "FlyBase:FBrf0260535")}
+HEMIBRAIN = ("Scheffer et al., 2020", "FlyBase:FBrf0246888")
+# for citing curated definitions that only give the reference as an xref
+KNOWN_REFS = {"FlyBase:FBrf0239335": "Namiki et al., 2018"}
 BANC_REF = "Bates et al., 2026"
 PRIMARY_NEURON = "FBbt:00047097"
 DATASET_TEXT = {"manc": ("MANC", "Takemura et al., 2024; Marin et al., 2024"),
                 "male_cns": ("male CNS", "Berg et al., 2026"),
-                "flywire": ("FlyWire", "Schlegel et al., 2024; Dorkenwald et al., 2024")}
+                "flywire": ("FlyWire", "Schlegel et al., 2024; Dorkenwald et al., 2024"),
+                "optic_lobe": ("optic lobe", "Nern et al., 2025")}
 NT_NAMES = {}  # filled from the def sentences: GO id -> name
+NT_CLASSES = {"FBbt:00058205", "FBbt:00058207", "FBbt:00058208"}  # adult cholinergic/GABAergic/glutamatergic neuron
 
 # Generic axioms dropped when the merged term has more specific ones.
 GENERIC_PARENTS = {"FBbt:00047095"}                 # adult neuron
@@ -371,19 +395,268 @@ def male_cns_def(row, k_sents, o_sents, nt_conflict):
     return out, notes, parents, rels, xrefs
 
 
+def tidy_def(sents):
+    """Tidy a merged FlyWire (or optic lobe/curated) + MANC definition, as for
+    the 2026-11 FlyWire/MANC merges: join the VNC entry and output sentences,
+    join post- and presynapse sentences that list the same regions, GABA in
+    capitals, and for ascending neurons put the MANC soma neuromere in the
+    first sentence and describe the VNC before the brain."""
+    manc = DATASET_TEXT["manc"][1].split("; ")
+    out = []
+    for s in sents:
+        b, refs = body(s), cites(s)
+        prev = out[-1] if out else None
+        pb = body(prev) if prev else ""
+        m_out = re.match(r"^In the VNC, it sends output to (.+)$", b)
+        m_enter = re.match(r"^It enters the VNC via the cervical connective(?: and fasciculates with (.+))?$", pb)
+        m_pre = re.match(r"^It has presynapses in (.+)$", b)
+        m_post = re.match(r"^It has postsynapses in (.+)$", pb)
+        if m_out and m_enter and cites(prev) == refs:
+            tract = m_enter.group(1)
+            out[-1] = cite("It enters the VNC via the cervical connective"
+                           + (f", fasciculating with {tract}, and" if tract else " and")
+                           + f" sends output to {m_out.group(1)}", refs)
+        elif m_pre and m_post and m_pre.group(1) == m_post.group(1) and cites(prev) == refs:
+            out[-1] = cite(f"It has postsynapses and presynapses in {m_pre.group(1)}", refs)
+        else:
+            out.append(s.replace("is gaba ", "is GABA "))
+    if not out or not body(out[0]).startswith("Adult ascending neuron"):
+        return out
+    # ascending neurons
+    first_s, rest = out[0], out[1:]
+    soma = next((re.match(r"^Their somas are found in the (.+)$", body(s)).group(1)
+                 for s in rest if re.match(r"^Their somas are found in the (.+)$", body(s))), None)
+    if soma and "with its soma in the ventral nerve cord or periphery" in first_s:
+        first_s = cite(body(first_s).replace("in the ventral nerve cord or periphery",
+                                             f"in the {soma} of the ventral nerve cord"), manc)
+    hemi, arbors, exits, inputs, brain, other = None, None, None, None, [], []
+    for s in rest:
+        b = body(s)
+        if b.startswith("Their somas are found"):
+            continue
+        if re.match(r"^It is a \w+ neuron of the .+ hemilineage$", b):
+            hemi = s
+        elif (m := re.match(r"^It has (\w+) VNC arbors$", b)):
+            arbors = m.group(1)
+        elif (m := re.match(r"^It exits the VNC via the cervical connective(?: and fasciculates with (.+))?$", b)):
+            exits = m.group(1) or ""
+        elif (m := re.match(r"^It receives input in (.+) and sends output to the brain$", b)):
+            inputs = None if m.group(1) == "multiple regions" else m.group(1)
+        elif re.match(r"^It has (?:post|pre)synapses", b):
+            brain.append(cite("In the brain, it" + b[2:], cites(s)))
+        else:
+            other.append(s)
+    vnc = None
+    if arbors is not None or exits is not None:
+        v = f"It has {arbors} arbors in the VNC" if arbors else "It has arbors in the VNC"
+        v += f", receiving input in {inputs}," if inputs else ""
+        v += " and ascends via the cervical connective"
+        v += f", fasciculating with {exits}" if exits else ""
+        vnc = cite(v, manc)
+    return [first_s] + ([hemi] if hemi else []) + ([vnc] if vnc else []) + brain + other
+
+
+def count_number(sentence):
+    m = re.match(r"^There (?:is|are) (?:approximately )?(\w+) of these cells per (organism|hemisphere)", body(sentence))
+    if not m:
+        return None
+    n = {"one": 1, "two": 2}.get(m.group(1), m.group(1))
+    try:
+        n = int(n)
+    except ValueError:
+        return None
+    return n * (2 if m.group(2) == "hemisphere" else 1)
+
+
+def matched_in(row):
+    return [d for d in (row.get("matched_in") or "male_cns|banc").split("|") if d]
+
+
+def match_text(row):
+    ds = [MATCH_DATASETS[d] for d in matched_in(row)]
+    names = [f"{n} ({r})" for n, r, _ in ds]
+    joined = names[0] if len(names) == 1 else ", ".join(names[:-1]) + " and " + names[-1]
+    return f"in the {joined} connectome" + ("s" if len(names) > 1 else "")
+
+
+def match_xrefs(row):
+    return [x for _, _, x in (MATCH_DATASETS[d] for d in matched_in(row))]
+
+
+_ANC = None
+
+
+def ancestors(t):
+    """is_a ancestors of t, from fbbt-simple.obo."""
+    global _ANC
+    if _ANC is None:
+        parents, cur = {}, None
+        for line in open(SIMPLE):
+            if line.startswith("id: "):
+                cur = line[4:].strip()
+            elif line.startswith("is_a: ") and cur and "gci_" not in line:
+                parents.setdefault(cur, set()).add(line.split()[1])
+        _ANC = {"parents": parents, "cache": {}}
+    cache, parents = _ANC["cache"], _ANC["parents"]
+    if t not in cache:
+        cache[t] = set()
+        for p in parents.get(t, ()):
+            cache[t] |= {p} | ancestors(p)
+    return cache[t]
+
+
+def prune_is_a(vals):
+    """Drop is_a parents that another listed parent is a subclass of."""
+    return [v for v in vals if not any(v in ancestors(w) for w in vals if w != v)]
+
+
+SOMA_SENT_RE = re.compile(r"^Adult [\w -]+? neuron of the \S+ group, with its soma (in .+)$")
+COUNT_ANY_RE = re.compile(r"^There (?:is|are) .* (?:cells?|neurons?) ")
+
+
+def merge_flywire_into_edit(row, keep, obs, symbols):
+    """Merge a FlyWire-generated term (named after its hemibrain type) into a
+    hand-curated fbbt-edit term. The curated definition is kept. If it has no
+    FlyWire data yet, the FlyWire sentences are added after it: soma position
+    (only if the kept term has no soma location), hemilineage, synapse
+    locations and predicted neurotransmitter (unless the kept term has a
+    different neurotransmitter or drop_nt is set). The FlyWire cell count is
+    not used, as the curated term already gives one."""
+    k_text, k_xrefs = split_def(first(keep, "def"))
+    o_text, o_xrefs = split_def(first(obs, "def"))
+    o_sents = sentences(o_text)
+    rels_k = [strip_comment(v) for v in values(keep, "relationship")]
+    rels_o = values(obs, "relationship")
+    k_nt = {v for v in rels_k if v.startswith("RO:0002215 ")}
+    o_nt = {v for v in rels_o if v.startswith("RO:0002215 ")}
+    drop_nt = row.get("drop_nt") == "y" or bool(k_nt and o_nt and k_nt != o_nt)
+    has_soma = any(v.startswith(SOMA_REL + " ") for v in rels_k)
+    has_flywire = all(r in k_text for r in FLYWIRE_REFS)
+    o_name = row["obsolete_name"]
+
+    k_sents = sentences(k_text)
+    if not any(cites(x) for x in k_sents) and len(k_xrefs) == 1 and k_xrefs[0] in KNOWN_REFS:
+        k_text = " ".join(cite(x.rstrip("."), [KNOWN_REFS[k_xrefs[0]]]) for x in re.split(r"(?<=\.) ", k_text))
+    add = []
+    if not has_flywire:
+        k_sents = re.split(r"(?<=\.) (?=[A-Z])", k_text)   # curated sentences may be uncited
+        for s in o_sents:
+            b = body(s)
+            m = SOMA_SENT_RE.match(b)
+            if m:
+                if has_soma:
+                    continue
+                pos = re.sub(r"^in the brain, ", "", m.group(1)).replace("near to the ", "near the ")
+                if k_sents and re.search(r"cell body|soma", k_sents[0]):
+                    # the curated first sentence gives the soma: add the FlyWire position to it
+                    # (an uncited first sentence takes the curated definition's first citation)
+                    refs0 = cites(k_sents[0]) or next((cites(x) for x in k_sents if cites(x)), [])
+                    k_sents[0] = cite(body(k_sents[0]).rstrip(".") + f", {pos}", refs0 + cites(s))
+                else:
+                    add.append(cite(f"Its soma is {m.group(1)}", cites(s)))
+            elif NT_RE.match(b):
+                if not drop_nt:
+                    add.append(cite(b.replace("is gaba", "is GABA"), cites(s)))
+            elif COUNT_RE.match(b) or COUNT_ANY_RE.match(b):
+                continue
+            else:
+                add.append(s)
+    if add:
+        # the curated cell count goes last
+        k_sents = re.split(r"(?<=\.) (?=[A-Z])", k_text) if has_flywire else k_sents
+        counts = [x for x in k_sents if re.match(r"^There (?:is|are) (?:one|\d+|approximately) ", x)
+                  and "of these cells per" in x]
+        k_text = " ".join([x for x in k_sents if x not in counts])
+        add += counts
+    text = " ".join([k_text] + add)
+    xrefs = set(k_xrefs) | set(match_xrefs(row))
+    if add:
+        xrefs |= set(o_xrefs) - {HEMIBRAIN[1]}
+        if drop_nt:
+            xrefs.discard("FlyBase:FBrf0259490")   # Eckstein et al., only cited for the NT
+    if "Eckstein et al., 2024" in text:
+        xrefs.add("FlyBase:FBrf0259490")
+    else:
+        xrefs.discard("FlyBase:FBrf0259490")
+
+    nt_note = ""
+    if drop_nt and o_nt:
+        o_nt_name = next((NT_RE.match(body(s)).group(1) for s in o_sents if NT_RE.match(body(s))), None)
+        o_nt_name = {"gaba": "GABA"}.get(o_nt_name, o_nt_name)
+        nt_note = (f" The FlyWire neurotransmitter prediction ({o_nt_name}; Eckstein et al., 2024) "
+                   "is not asserted, as it disagrees with experimental data.")
+    extra = (f"Hemibrain type {o_name} ({HEMIBRAIN[0]}), formerly a separate term ({row['obsolete_id']}) "
+             f"defined using FlyWire data ({'; '.join(FLYWIRE_REFS)}), was matched to this type "
+             f"{match_text(row)}.{nt_note}")
+    comment = (first(keep, "comment") + " " + extra).strip()
+
+    syns = OrderedDict()
+    def add_syn(v):
+        syns.setdefault(re.match(r'"(.*?)"', v).group(1), v)
+    for v in values(keep, "synonym") + values(obs, "synonym"):
+        add_syn(v)
+    add_syn(f'"{o_name}" EXACT [{symbols[row["obsolete_id"]][1].replace("|", ", ")}]')
+    add_syn(f'"{first(obs, "name")}" EXACT []')
+    syns.pop(first(keep, "name"), None)
+
+    def axioms(tag):
+        vals = OrderedDict()
+        for v in values(keep, tag):
+            vals.setdefault(strip_comment(v), None)
+        for v in values(obs, tag):
+            v = strip_comment(v)
+            if tag == "relationship":
+                if v.startswith("RO:0002215 ") and drop_nt:
+                    continue
+                if v.startswith(SOMA_REL + " ") and has_soma:
+                    continue
+            vals.setdefault(v, None)
+        vals = sorted(vals)
+        if tag == "is_a":   # keep the curated parents; add only non-redundant FlyWire ones
+            kept = {strip_comment(v) for v in values(keep, "is_a")}
+            vals = [v for v in vals if v in kept or v in prune_is_a(vals)]
+        if tag == "relationship":
+            for rel, generic in GENERIC_REGIONS:
+                if any(v.startswith(rel + " ") and v != f"{rel} {generic}" for v in vals):
+                    vals = [v for v in vals if v != f"{rel} {generic}"]
+        return vals
+
+    contributors = OrderedDict()
+    for v in values(keep, "property_value") + values(obs, "property_value"):
+        if "terms/contributor" in v:
+            contributors.setdefault(v.replace("http://orcid.org/", "https://orcid.org/"), None)
+    other_pv = [v for v in values(keep, "property_value")
+                if "terms/contributor" not in v]
+    st = [("id", row["keep_id"]), ("name", first(keep, "name")),
+          ("def", '"%s" [%s]' % (text, ", ".join(sorted(xrefs)))), ("comment", comment)]
+    st += [("subset", v) for v in OrderedDict.fromkeys(values(keep, "subset") + values(obs, "subset"))]
+    st += [("synonym", v) for v in syns.values()]
+    st += [("xref", v) for v in OrderedDict.fromkeys(values(keep, "xref") + values(obs, "xref"))]
+    st += [("is_a", v) for v in axioms("is_a")]
+    st += [("relationship", v) for v in axioms("relationship")]
+    st += [("property_value", v) for v in contributors] + [("property_value", v) for v in other_pv]
+    return st, drop_nt and bool(o_nt)
+
+
 def merge(row, keep, obs, symbols):
+    if row["keep_dataset"] == "fbbt-edit" and row["obsolete_dataset"] == "flywire":
+        return merge_flywire_into_edit(row, keep, obs, symbols)
     k_text, k_xrefs = split_def(first(keep, "def"))
     o_text, o_xrefs = split_def(first(obs, "def"))
     k_sents, o_sents = sentences(k_text), sentences(o_text)
     new_name = row["new_name"]
     k_label = first(keep, "name")
-    label = k_label.replace(row["keep_name"], new_name) if new_name else k_label
+    label = row.get("new_label") or (k_label.replace(row["keep_name"], new_name) if new_name else k_label)
+    unpaired = row.get("unpaired") == "y"
     if new_name:
         k_sents = [s.replace(f" {row['keep_name']} ", f" {new_name} ") for s in k_sents]
 
     # neurotransmitter
     k_go, k_nt = nt_of(keep, k_sents)
     o_go, o_nt = nt_of(obs, o_sents)
+    if unpaired:   # MANC predictions don't include octopamine: don't use them
+        o_go = o_nt = None
+        o_sents = [s for s in o_sents if not NT_RE.match(s)]
     nt_conflict = bool(k_go and o_go and k_go != o_go)
     nt_sent = None
     if not nt_conflict:
@@ -403,7 +676,12 @@ def merge(row, keep, obs, symbols):
         tail.append(cite(f"Their somas are found in the {o_soma}", orefs))
     if nt_sent:
         tail.append(nt_sent)
-    if kn and on and kn == on:
+    if unpaired:
+        on, o_soma = None, None
+        tail = [t for t in tail if not t.startswith("Their somas")]
+        tail.append(cite("There is one of these cells per organism",
+                         [MATCH_DATASETS[d][1] for d in matched_in(row)]))
+    elif kn and on and kn == on:
         tail.append(cite(f"There are approximately {kn} of these cells per organism", krefs + orefs))
     else:
         if kn:
@@ -417,13 +695,23 @@ def merge(row, keep, obs, symbols):
         text = " ".join(sents)
     else:
         head = [s for s in k_sents if not NT_RE.match(s) and not COUNT_RE.match(body(s))]
-        text = " ".join(head + vnc_sentences(o_sents) + tail)
-    xrefs = sorted(set(k_xrefs) | set(o_xrefs) | set(MATCH_XREFS) | set(extra_xrefs))
+        k_count = [s for s in head if COUNT_ANY_RE.match(body(s))]
+        head = [s for s in head if s not in k_count]
+        if k_count and not unpaired:
+            # a kept count in another form (e.g. per hemisphere): keep it, and
+            # the MANC count only if it differs
+            same = on and count_number(k_count[0]) == int(on)
+            tail = [t for t in tail if not (same and "(MANC)" in t)] + k_count
+        text = " ".join(tidy_def(head + vnc_sentences(o_sents) + tail))
+    xrefs = set(k_xrefs) | set(o_xrefs) | set(match_xrefs(row)) | set(extra_xrefs)
+    if "Eckstein et al., 2024" not in text:
+        xrefs.discard("FlyBase:FBrf0259490")
+    xrefs = sorted(xrefs)
 
     o_ds, o_refs = DATASET_TEXT[row["obsolete_dataset"]]
     comment = first(keep, "comment")
     extra = (f"{o_ds} type {row['obsolete_name']} ({o_refs}), formerly a separate term "
-             f"({row['obsolete_id']}), was matched to this type {MATCH_TEXT}. "
+             f"({row['obsolete_id']}), was matched to this type {match_text(row)}. "
              f"VNC annotations are from {o_ds} v1.2.1 data ({o_refs}).")
     if new_name:
         k_ds, k_refs = DATASET_TEXT[row["keep_dataset"]]
@@ -431,6 +719,10 @@ def merge(row, keep, obs, symbols):
     if row["keep_dataset"] == "male_cns":
         extra = extra.replace(f"VNC annotations are from {o_ds} v1.2.1 data",
                               f"VNC tract and cell count are from {o_ds} v1.2.1 data")
+    if unpaired:
+        extra += (f" This is an unpaired neuron with two descending branches, which {o_ds} types "
+                  f"as two {row['obsolete_name']} neurons ({o_refs}). The {o_ds} neurotransmitter "
+                  "prediction is not used, as it does not include octopamine.")
     if nt_conflict:
         extra += (f" Predicted neurotransmitters differ between datasets ({k_nt} in "
                   f"{DATASET_TEXT[row['keep_dataset']][0]}, {o_nt} in {o_ds}; Eckstein et al., 2024), "
@@ -466,6 +758,9 @@ def merge(row, keep, obs, symbols):
             v = strip_comment(v)
             if tag == "relationship" and nt_conflict and v.startswith("RO:0002215 "):
                 continue
+            if unpaired and v in [strip_comment(w) for w in values(obs, tag)] \
+                    and (v.startswith("RO:0002215 ") or v in NT_CLASSES):
+                continue
             vals.setdefault(v, None)
         if tag == "is_a":
             for p in parents:
@@ -477,6 +772,7 @@ def merge(row, keep, obs, symbols):
         # drop generic axioms the other term makes redundant
         if tag == "is_a" and len(vals) > 1:
             vals = [v for v in vals if v not in GENERIC_PARENTS]
+            vals = prune_is_a(vals)
         if tag == "relationship":
             for rel, generic in GENERIC_REGIONS:
                 if any(v.startswith(rel + " ") and v != f"{rel} {generic}" for v in vals):
@@ -489,7 +785,7 @@ def merge(row, keep, obs, symbols):
     for v in values(keep, "property_value") + values(obs, "property_value"):
         if "terms/contributor" in v:
             contributors.setdefault(v.replace("http://orcid.org/", "https://orcid.org/"), None)
-    date = next(v for v in values(keep, "property_value") if "terms/date" in v)
+    other_pv = [v for v in values(keep, "property_value") if "terms/contributor" not in v]
 
     st = [("id", row["keep_id"]), ("name", label),
           ("def", '"%s" [%s]' % (text, ", ".join(xrefs))), ("comment", comment)]
@@ -498,13 +794,13 @@ def merge(row, keep, obs, symbols):
     st += [("xref", v) for v in OrderedDict.fromkeys(values(keep, "xref") + values(obs, "xref"))]
     st += [("is_a", v) for v in axioms("is_a")]
     st += [("relationship", v) for v in axioms("relationship")]
-    st += [("property_value", v) for v in contributors] + [("property_value", date)]
+    st += [("property_value", v) for v in contributors] + [("property_value", v) for v in other_pv]
     return st, nt_conflict
 
 
 def obsolete(row, obs, keep_label):
     reason = (f"Obsoleted: the same cell type as {keep_label} ({row['keep_id']}), "
-              f"matched {MATCH_TEXT}.")
+              f"matched {match_text(row)}.")
     comment = (first(obs, "comment") + " " + reason).strip()
     st = [("id", row["obsolete_id"]), ("name", "obsolete " + first(obs, "name")),
           ("def", first(obs, "def")), ("comment", comment)]
