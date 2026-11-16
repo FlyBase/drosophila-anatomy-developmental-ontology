@@ -11,7 +11,10 @@ The definition rewriting assumes the kept term is FlyWire-generated (brain
 sentences) and the obsoleted one MANC-generated (VNC sentences), except:
 - keep_dataset male_cns: see male_cns_def;
 - keep_dataset fbbt-edit with obsolete_dataset flywire: a hand-curated term
-  absorbing a FlyWire (hemibrain-named) term, see merge_flywire_into_edit.
+  absorbing a FlyWire term, see merge_flywire_into_edit;
+- keep_dataset hemibrain: the older hemibrain-defined ID is kept, but the
+  definition, axioms and comment come from the obsoleted (FlyWire or optic
+  lobe) term, which is based on whole-brain data; see merge_into_hemibrain_id.
 
 Optional columns of the merges table:
 - new_label: label for the kept term, where new_name can't simply replace
@@ -22,8 +25,10 @@ Optional columns of the merges table:
   octopamine, so the MANC prediction is dropped too;
 - drop_nt = y: don't assert the FlyWire neurotransmitter prediction (e.g. when
   the kept term has experimental evidence against it);
-- matched_in: |-separated datasets (male_cns, banc, flywire) in which the
-  two types were matched (default male_cns|banc).
+- matched_in: |-separated datasets (male_cns, banc, flywire, flywire_v3) in
+  which the two types were matched (default male_cns|banc). flywire_v3 is
+  the FlyWire annotation release v3.2.0, whose hemibrain types were revised
+  by comparison with the male CNS, so it is not independent of male_cns.
 
     python merge_terms.py merges/flywire_manc_2026-11.tsv --out x.obo   # dry run, stanzas to x.obo
     python merge_terms.py merges/flywire_manc_2026-11.tsv --apply       # edit the repo
@@ -63,7 +68,11 @@ SIMPLE = os.path.normpath(os.path.join(ONT, "..", "..", "fbbt-simple.obo"))
 # Evidence that the two types are the same: matched in the male CNS and BANC.
 MATCH_DATASETS = {"male_cns": ("male CNS", "Berg et al., 2026", "doi:10.1016/j.cell.2026.08.015"),
                   "banc": ("BANC", "Bates et al., 2026", "doi:10.1038/s41586-026-10735-w"),
-                  "flywire": ("FlyWire", "Schlegel et al., 2024", "FlyBase:FBrf0260535")}
+                  "flywire": ("FlyWire", "Schlegel et al., 2024", "FlyBase:FBrf0260535"),
+                  "flywire_v3": ("FlyWire", "Schlegel et al., 2024", "FlyBase:FBrf0260535")}
+FLYWIRE_V3_TEXT = ("in FlyWire annotation release v3.2.0 (Schlegel et al., 2024; Berg et al., 2026; "
+                   "github.com/flyconnectome/flywire_annotations), whose hemibrain types were revised "
+                   "by comparison with the male CNS")
 HEMIBRAIN = ("Scheffer et al., 2020", "FlyBase:FBrf0246888")
 # for citing curated definitions that only give the reference as an xref
 KNOWN_REFS = {"FlyBase:FBrf0239335": "Namiki et al., 2018"}
@@ -457,10 +466,10 @@ def tidy_def(sents):
 
 
 def count_number(sentence):
-    m = re.match(r"^There (?:is|are) (?:approximately )?(\w+) of these cells per (organism|hemisphere)", body(sentence))
+    m = re.match(r"^There (?:is|are) (?:approximately |around )?(\w+) of these (?:cells|neurons) per (organism|hemisphere)", body(sentence))
     if not m:
         return None
-    n = {"one": 1, "two": 2}.get(m.group(1), m.group(1))
+    n = {"one": 1, "two": 2, "three": 3, "four": 4, "five": 5}.get(m.group(1), m.group(1))
     try:
         n = int(n)
     except ValueError:
@@ -473,6 +482,10 @@ def matched_in(row):
 
 
 def match_text(row):
+    if "flywire_v3" in matched_in(row):
+        rest = [d for d in matched_in(row) if d != "flywire_v3"]
+        parts = [f"in the {MATCH_DATASETS[d][0]} connectome ({MATCH_DATASETS[d][1]})" for d in rest]
+        return " and ".join(parts + [FLYWIRE_V3_TEXT])
     ds = [MATCH_DATASETS[d] for d in matched_in(row)]
     names = [f"{n} ({r})" for n, r, _ in ds]
     joined = names[0] if len(names) == 1 else ", ".join(names[:-1]) + " and " + names[-1]
@@ -531,6 +544,9 @@ def merge_flywire_into_edit(row, keep, obs, symbols):
     o_nt = {v for v in rels_o if v.startswith("RO:0002215 ")}
     drop_nt = row.get("drop_nt") == "y" or bool(k_nt and o_nt and k_nt != o_nt)
     has_soma = any(v.startswith(SOMA_REL + " ") for v in rels_k)
+    # a curated hemilineage/lineage wins over FlyWire's; a different FlyWire one goes in the comment
+    has_lineage = "lineage" in k_text or any(v.startswith("RO:0002202 ") for v in rels_k)
+    hemi_note = ""
     has_flywire = all(r in k_text for r in FLYWIRE_REFS)
     o_name = row["obsolete_name"]
 
@@ -554,6 +570,12 @@ def merge_flywire_into_edit(row, keep, obs, symbols):
                     k_sents[0] = cite(body(k_sents[0]).rstrip(".") + f", {pos}", refs0 + cites(s))
                 else:
                     add.append(cite(f"Its soma is {m.group(1)}", cites(s)))
+            elif HEMI_RE.match(b) and has_lineage:
+                hl = HEMI_RE.match(b).group(1)
+                words = lambda t: set(re.findall(r"[\w&]+", t))
+                if not words(hl) <= words(k_text):
+                    hemi_note = (f" FlyWire assigns it to the {hl} hemilineage "
+                                 f"({'; '.join(FLYWIRE_REFS)}).")
             elif NT_RE.match(b):
                 if not drop_nt:
                     add.append(cite(b.replace("is gaba", "is GABA"), cites(s)))
@@ -561,11 +583,11 @@ def merge_flywire_into_edit(row, keep, obs, symbols):
                 continue
             else:
                 add.append(s)
+    add = tidy_def(add)
     if add:
         # the curated cell count goes last
         k_sents = re.split(r"(?<=\.) (?=[A-Z])", k_text) if has_flywire else k_sents
-        counts = [x for x in k_sents if re.match(r"^There (?:is|are) (?:one|\d+|approximately) ", x)
-                  and "of these cells per" in x]
+        counts = [x for x in k_sents if re.match(r"^There (?:is|are) .*? of these (?:cells|neurons) per ", x)]
         k_text = " ".join([x for x in k_sents if x not in counts])
         add += counts
     text = " ".join([k_text] + add)
@@ -585,9 +607,21 @@ def merge_flywire_into_edit(row, keep, obs, symbols):
         o_nt_name = {"gaba": "GABA"}.get(o_nt_name, o_nt_name)
         nt_note = (f" The FlyWire neurotransmitter prediction ({o_nt_name}; Eckstein et al., 2024) "
                    "is not asserted, as it disagrees with experimental data.")
-    extra = (f"Hemibrain type {o_name} ({HEMIBRAIN[0]}), formerly a separate term ({row['obsolete_id']}) "
-             f"defined using FlyWire data ({'; '.join(FLYWIRE_REFS)}), was matched to this type "
-             f"{match_text(row)}.{nt_note}")
+    if HEMIBRAIN[1] in symbols[row["obsolete_id"]][1]:
+        extra = (f"Hemibrain type {o_name} ({HEMIBRAIN[0]}), formerly a separate term ({row['obsolete_id']}) "
+                 f"defined using FlyWire data ({'; '.join(FLYWIRE_REFS)}), was matched to this type "
+                 f"{match_text(row)}.{nt_note}")
+    else:
+        extra = (f"FlyWire type {o_name} ({'; '.join(FLYWIRE_REFS)}), formerly a separate term "
+                 f"({row['obsolete_id']}), was matched to this type {match_text(row)}.{nt_note}")
+    extra += hemi_note
+    # a FlyWire cell count that differs from the curated one goes in the comment
+    fw_n = next((int(COUNT_RE.match(body(x)).group(1)) for x in o_sents
+                 if COUNT_RE.match(body(x)) and COUNT_RE.match(body(x)).group(1).isdigit()), None)
+    k_n = count_number(next((x for x in re.split(r"(?<=\.) (?=[A-Z])", text)
+                             if "Schlegel et al., 2024" not in x and "of these" in x and "per " in x), ""))
+    if fw_n and k_n and fw_n != k_n:
+        extra += (f" There are {fw_n} of these cells in FlyWire ({'; '.join(FLYWIRE_REFS)}).")
     comment = (first(keep, "comment") + " " + extra).strip()
 
     syns = OrderedDict()
@@ -609,6 +643,8 @@ def merge_flywire_into_edit(row, keep, obs, symbols):
                 if v.startswith("RO:0002215 ") and drop_nt:
                     continue
                 if v.startswith(SOMA_REL + " ") and has_soma:
+                    continue
+                if v.startswith("RO:0002202 ") and has_lineage:
                     continue
             vals.setdefault(v, None)
         vals = sorted(vals)
@@ -638,9 +674,77 @@ def merge_flywire_into_edit(row, keep, obs, symbols):
     return st, drop_nt and bool(o_nt)
 
 
+def merge_into_hemibrain_id(row, keep, obs, symbols):
+    """Keep the older hemibrain-defined ID, with its label (the male CNS name)
+    unless new_name/new_label is given, but take the definition, axioms and
+    comment from the obsoleted FlyWire or optic lobe term, which is based on
+    whole-brain data. The hemibrain term's coarse region axioms are dropped."""
+    o_text, o_xrefs = split_def(first(obs, "def"))
+    k_name, o_name = row["keep_name"], row["obsolete_name"]
+    new_name = row.get("new_name") or k_name
+    label = row.get("new_label") or (first(obs, "name") if row.get("new_name") else first(keep, "name"))
+    text = o_text.replace(f" of the {o_name} group", f" of the {new_name} group")
+    text = " ".join(tidy_def(sentences(text)))
+    xrefs = set(o_xrefs) | set(match_xrefs(row))
+    if any(d == "flywire_v3" for d in matched_in(row)):
+        xrefs.add(MATCH_DATASETS["male_cns"][2])
+    if "Eckstein et al., 2024" not in text:
+        xrefs.discard("FlyBase:FBrf0259490")
+    o_ds, o_refs = DATASET_TEXT[row["obsolete_dataset"]]
+    note = (f"Hemibrain type {k_name} ({HEMIBRAIN[0]}) was first defined as this term from hemibrain data; "
+            f"{o_ds} type {o_name} ({o_refs}), formerly a separate term ({row['obsolete_id']}), "
+            f"was matched to it {match_text(row)}. The definition is now based on the {o_ds} data.")
+    if row.get("new_name"):
+        note += f" Named {new_name} in the male CNS ({MATCH_DATASETS['male_cns'][1]})."
+    comment = (first(obs, "comment") + " " + note).strip()
+
+    syns = OrderedDict()
+    def add_syn(v):
+        syns.setdefault(re.match(r'"(.*?)"', v).group(1), v)
+    for v in values(keep, "synonym") + values(obs, "synonym"):
+        add_syn(v)
+    for nm, tid in ((k_name, row["keep_id"]), (o_name, row["obsolete_id"])):
+        if nm != new_name:
+            add_syn(f'"{nm}" EXACT [{symbols[tid][1].replace("|", ", ")}]')
+    for lab in (first(keep, "name"), first(obs, "name")):
+        add_syn(f'"{lab}" EXACT []')
+    for nm in (label, new_name):
+        syns.pop(nm, None)
+    # an existing RELATED synonym for a name that is now EXACT
+    for nm in (k_name, o_name):
+        if nm in syns and " RELATED " in syns[nm] and nm != new_name:
+            syns[nm] = syns[nm].replace(" RELATED ", " EXACT ")
+
+    def axioms(tag):
+        vals = OrderedDict((strip_comment(v), None) for v in values(obs, tag))
+        if tag == "is_a":
+            for v in values(keep, tag):
+                v = strip_comment(v)
+                if v not in GENERIC_PARENTS:
+                    vals.setdefault(v, None)
+        vals = sorted(vals)
+        return prune_is_a(vals) if tag == "is_a" else vals
+
+    contributors = OrderedDict()
+    for v in values(keep, "property_value") + values(obs, "property_value"):
+        if "terms/contributor" in v:
+            contributors.setdefault(v.replace("http://orcid.org/", "https://orcid.org/"), None)
+    other_pv = [v for v in values(keep, "property_value") if "terms/contributor" not in v]
+    st = [("id", row["keep_id"]), ("name", label),
+          ("def", '"%s" [%s]' % (text, ", ".join(sorted(xrefs)))), ("comment", comment)]
+    st += [("synonym", v) for v in syns.values()]
+    st += [("xref", v) for v in OrderedDict.fromkeys(values(keep, "xref") + values(obs, "xref"))]
+    st += [("is_a", v) for v in axioms("is_a")]
+    st += [("relationship", v) for v in axioms("relationship")]
+    st += [("property_value", v) for v in contributors] + [("property_value", v) for v in other_pv]
+    return st, False
+
+
 def merge(row, keep, obs, symbols):
     if row["keep_dataset"] == "fbbt-edit" and row["obsolete_dataset"] == "flywire":
         return merge_flywire_into_edit(row, keep, obs, symbols)
+    if row["keep_dataset"] == "hemibrain":
+        return merge_into_hemibrain_id(row, keep, obs, symbols)
     k_text, k_xrefs = split_def(first(keep, "def"))
     o_text, o_xrefs = split_def(first(obs, "def"))
     k_sents, o_sents = sentences(k_text), sentences(o_text)
