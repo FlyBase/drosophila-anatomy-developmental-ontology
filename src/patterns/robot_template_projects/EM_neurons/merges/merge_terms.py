@@ -12,9 +12,14 @@ sentences) and the obsoleted one MANC-generated (VNC sentences), except:
 - keep_dataset male_cns: see male_cns_def;
 - keep_dataset fbbt-edit with obsolete_dataset flywire: a hand-curated term
   absorbing a FlyWire term, see merge_flywire_into_edit;
+- keep_dataset fbbt-edit with obsolete_dataset manc: a hand-curated term
+  absorbing a MANC term, see merge_manc_into_edit;
 - keep_dataset hemibrain: the older hemibrain-defined ID is kept, but the
   definition, axioms and comment come from the obsoleted (FlyWire or optic
   lobe) term, which is based on whole-brain data; see merge_into_hemibrain_id.
+
+merges/not_merged.tsv records candidate pairs that were reviewed (#2188, #2233)
+but not merged, with the reason, so they can be revisited if new data appear.
 
 Optional columns of the merges table:
 - new_label: label for the kept term, where new_name can't simply replace
@@ -740,9 +745,83 @@ def merge_into_hemibrain_id(row, keep, obs, symbols):
     return st, False
 
 
+MANC_ADD_RE = re.compile(r"^It is a primary neuron of the .+ hemilineage$|^Within the VNC it ")
+
+
+def merge_manc_into_edit(row, keep, obs, symbols):
+    """Merge a MANC-generated term into a hand-curated fbbt-edit term. The
+    curated definition is kept, adding only the MANC hemilineage and VNC tract
+    sentences. The MANC neurotransmitter prediction is used only if the
+    curated term has none, and drop_nt is not set; the MANC count is not used."""
+    k_text, k_xrefs = split_def(first(keep, "def"))
+    o_text, o_xrefs = split_def(first(obs, "def"))
+    o_sents = sentences(o_text)
+    rels_k = [strip_comment(v) for v in values(keep, "relationship")]
+    rels_o = [strip_comment(v) for v in values(obs, "relationship")]
+    k_nt = any(v.startswith("RO:0002215 ") for v in rels_k) or re.search(r"(?i)\w+ergic neuron", k_text)
+    o_nt = any(v.startswith("RO:0002215 ") for v in rels_o)
+    drop_nt = row.get("drop_nt") == "y" or bool(k_nt)
+    add = [s for s in o_sents if MANC_ADD_RE.match(body(s))]
+    if not drop_nt:
+        add += [s for s in o_sents if NT_RE.match(body(s))]
+    text = " ".join([k_text] + add)
+    xrefs = set(k_xrefs) | set(match_xrefs(row))
+    if add:
+        xrefs |= set(o_xrefs) - {"FlyBase:FBrf0259490"}
+    if "Eckstein et al., 2024" in text:
+        xrefs.add("FlyBase:FBrf0259490")
+
+    o_ds, o_refs = DATASET_TEXT["manc"]
+    o_name = row["obsolete_name"]
+    extra = (f"{o_ds} type {o_name} ({o_refs}), formerly a separate term ({row['obsolete_id']}), "
+             f"was matched to this type {match_text(row)}.")
+    if drop_nt and o_nt:
+        o_nt_name = next((NT_RE.match(body(s)).group(1) for s in o_sents if NT_RE.match(body(s))), None)
+        extra += (f" The {o_ds} neurotransmitter prediction ({o_nt_name}; Eckstein et al., 2024) "
+                  "is not asserted, as it disagrees with experimental data.")
+    comment = (first(keep, "comment") + " " + extra).strip()
+
+    syns = OrderedDict()
+    def add_syn(v):
+        syns.setdefault(re.match(r'"(.*?)"', v).group(1), v)
+    for v in values(keep, "synonym") + values(obs, "synonym"):
+        add_syn(v)
+    add_syn(f'"{o_name}" EXACT [{symbols[row["obsolete_id"]][1].replace("|", ", ")}]')
+    add_syn(f'"{first(obs, "name")}" EXACT []')
+    syns.pop(first(keep, "name"), None)
+
+    def axioms(tag):
+        vals = OrderedDict((strip_comment(v), None) for v in values(keep, tag))
+        for v in values(obs, tag):
+            v = strip_comment(v)
+            if tag == "relationship" and v.startswith("RO:0002215 ") and drop_nt:
+                continue
+            if tag == "is_a" and (v in ancestors(row["keep_id"]) or v in GENERIC_PARENTS):
+                continue
+            vals.setdefault(v, None)
+        return sorted(vals)
+
+    contributors = OrderedDict()
+    for v in values(keep, "property_value") + values(obs, "property_value"):
+        if "terms/contributor" in v:
+            contributors.setdefault(v.replace("http://orcid.org/", "https://orcid.org/"), None)
+    other_pv = [v for v in values(keep, "property_value") if "terms/contributor" not in v]
+    st = [("id", row["keep_id"]), ("name", first(keep, "name")),
+          ("def", '"%s" [%s]' % (text, ", ".join(sorted(xrefs)))), ("comment", comment)]
+    st += [("subset", v) for v in OrderedDict.fromkeys(values(keep, "subset") + values(obs, "subset"))]
+    st += [("synonym", v) for v in syns.values()]
+    st += [("xref", v) for v in OrderedDict.fromkeys(values(keep, "xref") + values(obs, "xref"))]
+    st += [("is_a", v) for v in axioms("is_a")]
+    st += [("relationship", v) for v in axioms("relationship")]
+    st += [("property_value", v) for v in contributors] + [("property_value", v) for v in other_pv]
+    return st, drop_nt and o_nt
+
+
 def merge(row, keep, obs, symbols):
     if row["keep_dataset"] == "fbbt-edit" and row["obsolete_dataset"] == "flywire":
         return merge_flywire_into_edit(row, keep, obs, symbols)
+    if row["keep_dataset"] == "fbbt-edit" and row["obsolete_dataset"] == "manc":
+        return merge_manc_into_edit(row, keep, obs, symbols)
     if row["keep_dataset"] == "hemibrain":
         return merge_into_hemibrain_id(row, keep, obs, symbols)
     k_text, k_xrefs = split_def(first(keep, "def"))
