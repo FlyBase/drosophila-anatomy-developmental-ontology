@@ -179366,6 +179366,92 @@ property_value: http://purl.org/dc/terms/date "2020-07-30T12:00:00Z" xsd:dateTim
 property_value: IAO:0000233 "https://github.com/FlyBase/drosophila-anatomy-developmental-ontology/issues/2233" xsd:anyURI
 
 [Term]
+id: FBbt:20003121
+name: adult CB4242 neuron
+def: "Adult brain-intrinsic neuron of the CB4242 group, with substantial synapsing in the superior medial protocerebrum (Scheffer et al., 2020; Berg et al., 2026). It belongs to the SMPpv2 dorsal hemilineage (Schlegel et al., 2024; Berg et al., 2026). It has postsynaptic sites in the superior medial protocerebrum and superior neuropils (Scheffer et al., 2020). It has presynaptic sites in the superior medial protocerebrum and superior neuropils (Scheffer et al., 2020). Its predicted neurotransmitter is acetylcholine (Eckstein et al., 2024; Berg et al., 2026). There are approximately 12 of these cells per organism (Schlegel et al., 2024; Berg et al., 2026)." [doi:10.1016/j.cell.2026.08.015, FlyBase:FBrf0246888, FlyBase:FBrf0259490, FlyBase:FBrf0260535]
+comment: Uncharacterized putative cell type. Hemibrain types SMP259, SMP260 and SMP263 (Scheffer et al., 2020) are not distinguished in the male CNS (Berg et al., 2026), FlyWire annotation release v3.2.0 (Schlegel et al., 2024; Berg et al., 2026; github.com/flyconnectome/flywire_annotations) or BANC (Bates et al., 2026), where they form a single type, CB4242 (14 cells in the male CNS, 12 in FlyWire, 11 in BANC). BANC matches individual CB4242 cells to hemibrain SMP259 and SMP263. This term was first defined from hemibrain SMP259; SMP260 (FBbt:20003122) and SMP263 (FBbt:20003125) were formerly separate terms and were merged into it. Hemibrain connectivity is based on v1.2.1 data where each individual of these types has at least 10 synapses in a region; only regions shared by all of the merged types are given.
+synonym: "adult SMP259 neuron" EXACT [FlyBase:FBrf0246888]
+synonym: "adult SMP260 neuron" EXACT [FlyBase:FBrf0246888]
+synonym: "adult SMP263 neuron" EXACT [FlyBase:FBrf0246888]
+synonym: "adult superior medial protocerebrum neuron 259" EXACT []
+synonym: "adult superior medial protocerebrum neuron 260" EXACT []
+synonym: "adult superior medial protocerebrum neuron 263" EXACT []
+synonym: "SMP259" EXACT [FlyBase:FBrf0246888]
+synonym: "SMP260" EXACT [FlyBase:FBrf0246888]
+synonym: "SMP263" EXACT [FlyBase:FBrf0246888]
+is_a: FBbt:00052046 ! adult interneuron
+relationship: RO:0002202 FBbt:00100608 ! develops from neuroblast CP1
+relationship: RO:0002215 GO:0014055 ! capable of acetylcholine secretion, neurotransmission
+relationship: RO:0013001 FBbt:00007055 ! has synaptic IO in region superior medial protocerebrum
+relationship: RO:0013002 FBbt:00007055 ! receives synaptic input in region superior medial protocerebrum
+relationship: RO:0013002 FBbt:00045030 ! receives synaptic input in region superior neuropils
+relationship: RO:0013003 FBbt:00007055 ! sends synaptic output to region superior medial protocerebrum
+relationship: RO:0013003 FBbt:00045030 ! sends synaptic output to region superior neuropils
+property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0002-1373-1705
+property_value: http://purl.org/dc/terms/date "2020-07-30T12:00:00Z" xsd:dateTime
+property_value: IAO:0000233 "https://github.com/FlyBase/drosophila-anatomy-developmental-ontology/issues/2236" xsd:anyURI
+
+[Term]
+id: FBbt:20003122
+name: obsolete adult superior medial protocerebrum neuron 260
+def: "Adult neuron belonging to group 260 of the terra incognita neurons with substantial synapsing in the superior medial protocerebrum (Scheffer et al., 2020). It has postsynaptic sites in the superior medial protocerebrum and superior neuropils (Scheffer et al., 2020). It has presynaptic sites in the superior medial protocerebrum and superior neuropils (Scheffer et al., 2020)." [FlyBase:FBrf0246888]
+comment: Uncharacterized putative cell type (based on clustering analysis) from Janelia hemibrain data (Scheffer et al., 2020). Connectivity based on Hemibrain v1.2.1 data where each individual of this type has at least 10 synapses in a region. Obsoleted: not distinguished from SMP259 and SMP263 in the male CNS (Berg et al., 2026), FlyWire annotation release v3.2.0 or BANC (Bates et al., 2026), where they form one type, CB4242; merged into adult CB4242 neuron (FBbt:20003121).
+synonym: "adult SMP260 neuron" EXACT [FlyBase:FBrf0246888]
+property_value: http://purl.org/dc/terms/contributor http://orcid.org/0000-0002-1373-1705
+property_value: http://purl.org/dc/terms/date "2020-07-30T12:00:00Z" xsd:dateTime
+property_value: IAO:0000233 "https://github.com/FlyBase/drosophila-anatomy-developmental-ontology/issues/2236" xsd:anyURI
+is_obsolete: true
+replaced_by: FBbt:20003121
+
+[Term]
+id: FBbt:20003125
+name: obsolete adult superior medial protocerebrum neuron 263
+def: "Adult neuron belonging to group 263 of the terra incognita neurons with substantial synapsing in the superior medial protocerebrum (Scheffer et al., 2020). It has postsynaptic sites in the superior medial protocerebrum, inferior neuropils, superior neuropils, superior intermediate protocerebrum and crepine (Scheffer et al., 2020). It has presynaptic sites in the superior medial protocerebrum and superior neuropils (Scheffer et al., 2020)." [FlyBase:FBrf0246888]
+comment: Uncharacterized putative cell type (based on clustering analysis) from Janelia hemibrain data (Scheffer et al., 2020). Connectivity based on Hemibrain v1.2.1 data where each individual of this type has at least 10 synapses in a region. Obsoleted: not distinguished from SMP259 and SMP260 in the male CNS (Berg et al., 2026), FlyWire annotation release v3.2.0 or BANC (Bates et al., 2026), where they form one type, CB4242; merged into adult CB4242 neuron (FBbt:20003121).
+synonym: "adult SMP263 neuron" EXACT [FlyBase:FBrf0246888]
+property_value: http://purl.org/dc/terms/contributor http://orcid.org/0000-0002-1373-1705
+property_value: http://purl.org/dc/terms/date "2020-07-30T12:00:00Z" xsd:dateTime
+property_value: IAO:0000233 "https://github.com/FlyBase/drosophila-anatomy-developmental-ontology/issues/2236" xsd:anyURI
+is_obsolete: true
+replaced_by: FBbt:20003121
+
+[Term]
+id: FBbt:20003126
+name: adult CB4243 neuron
+def: "Adult brain-intrinsic neuron of the CB4243 group, with substantial synapsing in the superior medial protocerebrum (Scheffer et al., 2020; Berg et al., 2026). It belongs to the SMPpv2 dorsal hemilineage (Schlegel et al., 2024; Berg et al., 2026). It has postsynaptic sites in the superior medial protocerebrum, superior neuropils and superior intermediate protocerebrum (Scheffer et al., 2020). It has presynaptic sites in the superior medial protocerebrum and superior neuropils (Scheffer et al., 2020). Its predicted neurotransmitter is acetylcholine (Eckstein et al., 2024; Berg et al., 2026). There are approximately 10 of these cells per organism (Schlegel et al., 2024; Berg et al., 2026)." [doi:10.1016/j.cell.2026.08.015, FlyBase:FBrf0246888, FlyBase:FBrf0259490, FlyBase:FBrf0260535]
+comment: Uncharacterized putative cell type. Hemibrain types SMP264 and SMP265 (Scheffer et al., 2020) are not distinguished in the male CNS (Berg et al., 2026), FlyWire annotation release v3.2.0 (Schlegel et al., 2024; Berg et al., 2026; github.com/flyconnectome/flywire_annotations) or BANC (Bates et al., 2026), where they form a single type, CB4243 (10 cells in the male CNS, 10 in FlyWire, 6 in BANC). This term was first defined from hemibrain SMP264; SMP265 (FBbt:20003127) was a formerly separate term, merged into it. Hemibrain connectivity is based on v1.2.1 data where each individual of these types has at least 10 synapses in a region; only regions shared by all of the merged types are given.
+synonym: "adult SMP264 neuron" EXACT [FlyBase:FBrf0246888]
+synonym: "adult SMP265 neuron" EXACT [FlyBase:FBrf0246888]
+synonym: "adult superior medial protocerebrum neuron 264" EXACT []
+synonym: "adult superior medial protocerebrum neuron 265" EXACT []
+synonym: "SMP264" EXACT [FlyBase:FBrf0246888]
+synonym: "SMP265" EXACT [FlyBase:FBrf0246888]
+is_a: FBbt:00052046 ! adult interneuron
+relationship: RO:0002202 FBbt:00100608 ! develops from neuroblast CP1
+relationship: RO:0002215 GO:0014055 ! capable of acetylcholine secretion, neurotransmission
+relationship: RO:0013001 FBbt:00007055 ! has synaptic IO in region superior medial protocerebrum
+relationship: RO:0013002 FBbt:00007055 ! receives synaptic input in region superior medial protocerebrum
+relationship: RO:0013002 FBbt:00045030 ! receives synaptic input in region superior neuropils
+relationship: RO:0013002 FBbt:00045032 ! receives synaptic input in region superior intermediate protocerebrum
+relationship: RO:0013003 FBbt:00007055 ! sends synaptic output to region superior medial protocerebrum
+relationship: RO:0013003 FBbt:00045030 ! sends synaptic output to region superior neuropils
+property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0002-1373-1705
+property_value: http://purl.org/dc/terms/date "2020-07-30T12:00:00Z" xsd:dateTime
+property_value: IAO:0000233 "https://github.com/FlyBase/drosophila-anatomy-developmental-ontology/issues/2236" xsd:anyURI
+
+[Term]
+id: FBbt:20003127
+name: obsolete adult superior medial protocerebrum neuron 265
+def: "Adult neuron belonging to group 265 of the terra incognita neurons with substantial synapsing in the superior medial protocerebrum (Scheffer et al., 2020). It has postsynaptic sites in the superior medial protocerebrum, superior neuropils and superior intermediate protocerebrum (Scheffer et al., 2020). It has presynaptic sites in the superior medial protocerebrum and superior neuropils (Scheffer et al., 2020)." [FlyBase:FBrf0246888]
+comment: Uncharacterized putative cell type (based on clustering analysis) from Janelia hemibrain data (Scheffer et al., 2020). Connectivity based on Hemibrain v1.2.1 data where each individual of this type has at least 10 synapses in a region. Obsoleted: not distinguished from SMP264 in the male CNS (Berg et al., 2026), FlyWire annotation release v3.2.0 or BANC (Bates et al., 2026), where they form one type, CB4243; merged into adult CB4243 neuron (FBbt:20003126).
+synonym: "adult SMP265 neuron" EXACT [FlyBase:FBrf0246888]
+property_value: http://purl.org/dc/terms/contributor http://orcid.org/0000-0002-1373-1705
+property_value: http://purl.org/dc/terms/date "2020-07-30T12:00:00Z" xsd:dateTime
+property_value: IAO:0000233 "https://github.com/FlyBase/drosophila-anatomy-developmental-ontology/issues/2236" xsd:anyURI
+is_obsolete: true
+replaced_by: FBbt:20003126
+
+[Term]
 id: FBbt:20003129
 name: adult superior medial protocerebrum neuron 267
 def: "Adult brain-intrinsic neuron of the SMP267 group, with its soma in the brain, posterior to the lateral horn (Schlegel et al., 2024; Dorkenwald et al., 2024). It belongs to the CLp2 hemilineage (Schlegel et al., 2024; Dorkenwald et al., 2024). It has postsynapses in the ipsilateral superior medial protocerebrum, the ipsilateral superior clamp and the ipsilateral inferior clamp (Schlegel et al., 2024; Dorkenwald et al., 2024). It has presynapses in the ipsilateral superior medial protocerebrum (Schlegel et al., 2024; Dorkenwald et al., 2024). Its predicted neurotransmitter is glutamate (Eckstein et al., 2024). There are approximately 4 of these cells per organism (Schlegel et al., 2024; Dorkenwald et al., 2024)." [doi:10.1016/j.cell.2026.08.015, FlyBase:FBrf0259490, FlyBase:FBrf0260535, FlyBase:FBrf0260546]
