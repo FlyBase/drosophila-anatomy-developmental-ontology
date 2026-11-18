@@ -129794,8 +129794,9 @@ property_value: IAO:0000233 "https://github.com/FlyBase/drosophila-anatomy-devel
 [Term]
 id: FBbt:00053722
 name: adult fruitless dPr-b neuron
-def: "Adult fruitless neuron with its cell body on the dorsal side of the ventral nerve cord that primarily innervates the prothoracic neuromere and projects intersegmentally (Cachero et al., 2010)." [FlyBase:FBrf0211926]
-comment: In the male CNS connectome, the types AN07B015, AN07B062, AN07B070, AN07B106, AN07B116, IN07B006 and IN07B029 are annotated as dPr-b (Berg et al., 2026). These have their somas in the prothoracic neuromere, belong to hemilineage 7B and are predicted to be cholinergic (Berg et al., 2026).
+def: "Adult fruitless neuron with its cell body on the dorsal side of the ventral nerve cord that primarily innervates the prothoracic neuromere and projects intersegmentally (Cachero et al., 2010). It develops from neuroblast NB3-2 and belongs to hemilineage 7B (Berg et al., 2026)." [doi:10.1016/j.cell.2026.08.015, FlyBase:FBrf0211926]
+comment: In the male CNS connectome, the types AN07B015, AN07B062, AN07B070, AN07B106, AN07B116, IN07B006 and IN07B029 are annotated as dPr-b (Berg et al., 2026). These have their somas in the prothoracic neuromere and are predicted to be cholinergic (Berg et al., 2026).
+is_a: FBbt:00048904 ! lineage 7 secondary neuron
 property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0002-1373-1705
 property_value: http://purl.org/dc/terms/date "2026-11-18T12:00:00Z" xsd:dateTime
 property_value: IAO:0000233 "https://github.com/FlyBase/drosophila-anatomy-developmental-ontology/issues/2236" xsd:anyURI
