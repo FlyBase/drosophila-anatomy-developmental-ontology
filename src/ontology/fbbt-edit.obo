@@ -179037,6 +179037,44 @@ property_value: http://purl.org/dc/terms/date "2020-07-30T12:00:00Z" xsd:dateTim
 property_value: IAO:0000233 "https://github.com/FlyBase/drosophila-anatomy-developmental-ontology/issues/2233" xsd:anyURI
 
 [Term]
+id: FBbt:20002553
+name: adult superior lateral protocerebrum neuron 159
+def: "Adult brain-intrinsic neuron of the SLP159 group, with its soma in the brain, anterior to the lateral horn (Schlegel et al., 2024; Dorkenwald et al., 2024). It belongs to the SLPad1 anterior hemilineage (Schlegel et al., 2024; Dorkenwald et al., 2024). It has postsynapses in the ipsilateral superior lateral protocerebrum, the ipsilateral lateral horn and the ipsilateral superior intermediate protocerebrum (Schlegel et al., 2024; Dorkenwald et al., 2024). It has presynapses in the ipsilateral superior lateral protocerebrum, the ipsilateral superior intermediate protocerebrum and the ipsilateral superior medial protocerebrum (Schlegel et al., 2024; Dorkenwald et al., 2024). Its predicted neurotransmitter is acetylcholine (Eckstein et al., 2024). There are approximately 2 of these cells per organism (Schlegel et al., 2024; Dorkenwald et al., 2024)." [FlyBase:FBrf0246888, FlyBase:FBrf0259490, FlyBase:FBrf0260535, FlyBase:FBrf0260546]
+comment: Uncharacterized putative cell type based on Hemibrain data (Scheffer et al., 2020) and updated using FlyWire (FAFB) data (Dorkenwald et al., 2024; Schlegel et al., 2024). Soma locations are based on the closest annotated neuropil region. Pre- or post-synapse locations are the fewest regions that collectively contain at least 80 percent of all pre- or post-synapses of these neurons in FlyWire. Neurotransmitter predictions are from Eckstein et al. (2024). Other annotations are based on annotations in FlyWire and are available in the supplemental material of Schlegel et al. (2024). In later FlyWire typing and in the male CNS (Berg et al., 2026), the cells of hemibrain types SLP159 and SLP169 and FlyWire type CB0406 together form type CB4220.
+synonym: "CB4220" BROAD [doi:10.1016/j.cell.2026.08.015, FlyBase:FBrf0260535]
+is_a: FBbt:00052046 ! adult interneuron
+relationship: RO:0002100 FBbt:00007647 ! has soma location cell body rind of adult lateral horn
+relationship: RO:0002202 FBbt:00100602 ! develops from neuroblast DPLl3
+relationship: RO:0002215 GO:0014055 ! capable of acetylcholine secretion, neurotransmission
+relationship: RO:0013002 FBbt:00007053 ! receives synaptic input in region adult lateral horn
+relationship: RO:0013002 FBbt:00007054 ! receives synaptic input in region superior lateral protocerebrum
+relationship: RO:0013002 FBbt:00045032 ! receives synaptic input in region superior intermediate protocerebrum
+relationship: RO:0013003 FBbt:00007054 ! sends synaptic output to region superior lateral protocerebrum
+relationship: RO:0013003 FBbt:00007055 ! sends synaptic output to region superior medial protocerebrum
+relationship: RO:0013003 FBbt:00045032 ! sends synaptic output to region superior intermediate protocerebrum
+property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0002-1373-1705
+property_value: http://purl.org/dc/terms/date "2020-07-30T12:00:00Z" xsd:dateTime
+
+[Term]
+id: FBbt:20002563
+name: adult superior lateral protocerebrum neuron 169
+def: "Adult brain-intrinsic neuron of the SLP169 group, with its soma in the brain, lateral to the anterior optic tubercle (Schlegel et al., 2024; Dorkenwald et al., 2024). It belongs to the SLPad1 anterior hemilineage (Schlegel et al., 2024; Dorkenwald et al., 2024). It has postsynapses in the ipsilateral superior lateral protocerebrum, the ipsilateral posterior lateral protocerebrum and the ipsilateral superior intermediate protocerebrum (Schlegel et al., 2024; Dorkenwald et al., 2024). It has presynapses in the ipsilateral superior lateral protocerebrum, the ipsilateral superior intermediate protocerebrum and the ipsilateral superior medial protocerebrum (Schlegel et al., 2024; Dorkenwald et al., 2024). Its predicted neurotransmitter is acetylcholine (Eckstein et al., 2024). There are approximately 2 of these cells per organism (Schlegel et al., 2024; Dorkenwald et al., 2024)." [FlyBase:FBrf0246888, FlyBase:FBrf0259490, FlyBase:FBrf0260535, FlyBase:FBrf0260546]
+comment: Uncharacterized putative cell type based on Hemibrain data (Scheffer et al., 2020) and updated using FlyWire (FAFB) data (Dorkenwald et al., 2024; Schlegel et al., 2024). Soma locations are based on the closest annotated neuropil region. Pre- or post-synapse locations are the fewest regions that collectively contain at least 80 percent of all pre- or post-synapses of these neurons in FlyWire. Neurotransmitter predictions are from Eckstein et al. (2024). Other annotations are based on annotations in FlyWire and are available in the supplemental material of Schlegel et al. (2024). In later FlyWire typing and in the male CNS (Berg et al., 2026), the cells of hemibrain types SLP159 and SLP169 and FlyWire type CB0406 together form type CB4220.
+synonym: "CB4220" BROAD [doi:10.1016/j.cell.2026.08.015, FlyBase:FBrf0260535]
+is_a: FBbt:00052046 ! adult interneuron
+relationship: RO:0002100 FBbt:00048470 ! has soma location cell body rind of adult anterior optic tubercle
+relationship: RO:0002202 FBbt:00100602 ! develops from neuroblast DPLl3
+relationship: RO:0002215 GO:0014055 ! capable of acetylcholine secretion, neurotransmission
+relationship: RO:0013002 FBbt:00007054 ! receives synaptic input in region superior lateral protocerebrum
+relationship: RO:0013002 FBbt:00040044 ! receives synaptic input in region posterior lateral protocerebrum
+relationship: RO:0013002 FBbt:00045032 ! receives synaptic input in region superior intermediate protocerebrum
+relationship: RO:0013003 FBbt:00007054 ! sends synaptic output to region superior lateral protocerebrum
+relationship: RO:0013003 FBbt:00007055 ! sends synaptic output to region superior medial protocerebrum
+relationship: RO:0013003 FBbt:00045032 ! sends synaptic output to region superior intermediate protocerebrum
+property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0002-1373-1705
+property_value: http://purl.org/dc/terms/date "2020-07-30T12:00:00Z" xsd:dateTime
+
+[Term]
 id: FBbt:20002577
 name: adult superior lateral protocerebrum neuron 183
 def: "Adult brain-intrinsic neuron of the SLP183 group, with its soma in the brain, lateral to the anterior optic tubercle (Schlegel et al., 2024; Dorkenwald et al., 2024). It belongs to the SLPal3 and SLPal4 dorsal hemilineage (Schlegel et al., 2024; Dorkenwald et al., 2024). It has postsynapses in the ipsilateral superior lateral protocerebrum and the ipsilateral superior medial protocerebrum (Schlegel et al., 2024; Dorkenwald et al., 2024). It has presynapses in the ipsilateral superior medial protocerebrum and the ipsilateral superior lateral protocerebrum (Schlegel et al., 2024; Dorkenwald et al., 2024). Its predicted neurotransmitter is glutamate (Eckstein et al., 2024). There are approximately 4 of these cells per organism (Schlegel et al., 2024; Dorkenwald et al., 2024)." [doi:10.1016/j.cell.2026.08.015, FlyBase:FBrf0259490, FlyBase:FBrf0260535, FlyBase:FBrf0260546]
@@ -179170,6 +179208,28 @@ property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0002
 property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0002-5633-1314
 property_value: http://purl.org/dc/terms/date "2020-07-30T12:00:00Z" xsd:dateTime
 property_value: IAO:0000233 "https://github.com/FlyBase/drosophila-anatomy-developmental-ontology/issues/2233" xsd:anyURI
+
+[Term]
+id: FBbt:20002695
+name: adult CB4130 neuron
+def: "Adult brain-intrinsic neuron of the CB4130 group, with its soma in the brain, dorsal to the mushroom body calyx (Schlegel et al., 2024; Dorkenwald et al., 2024). It belongs to the SLPpm1 hemilineage (Schlegel et al., 2024; Dorkenwald et al., 2024; Berg et al., 2026). It has postsynapses and presynapses in the ipsilateral superior lateral protocerebrum (Scheffer et al., 2020; Schlegel et al., 2024; Dorkenwald et al., 2024). Its predicted neurotransmitter is glutamate (Eckstein et al., 2024; Berg et al., 2026). There are approximately 12 of these cells per organism (Schlegel et al., 2024; Berg et al., 2026)." [doi:10.1016/j.cell.2026.08.015, FlyBase:FBrf0246888, FlyBase:FBrf0259490, FlyBase:FBrf0260535, FlyBase:FBrf0260546]
+comment: Cell type identified in multiple EM datasets (Scheffer et al., 2020; Schlegel et al., 2024; Dorkenwald et al., 2024; Berg et al., 2026; Bates et al., 2026). This term was formerly hemibrain type SLP301 (Scheffer et al., 2020). In later FlyWire typing, the cells of FlyWire types CB1835 and CB3025 (Schlegel et al., 2024), formerly separate terms (FBbt:20005437, FBbt:20006527), together with some cells of CB2850 and CB0973, were merged into CB4130, which is the type name used in the male CNS (Berg et al., 2026). FlyWire and the male CNS annotate CB4130 as matching hemibrain SLP279 or SLP301; SLP279 is a separate type of one cell per hemisphere in the hemibrain, FlyWire, the male CNS and the BANC, so CB4130 corresponds to SLP301. Soma locations are based on the closest annotated neuropil region. Pre- or post-synapse locations are the fewest regions that collectively contain at least 80 percent of all pre- or post-synapses of these neurons in FlyWire. Neurotransmitter predictions are from Eckstein et al. (2024). Other annotations are based on annotations in FlyWire and are available in the supplemental material of Schlegel et al. (2024).
+synonym: "adult CB1835 neuron" NARROW []
+synonym: "adult CB3025 neuron" NARROW []
+synonym: "adult SLP301 neuron" NARROW [FlyBase:FBrf0246888]
+synonym: "adult superior lateral protocerebrum neuron 301" NARROW []
+synonym: "CB1835" NARROW [FlyBase:FBrf0260535]
+synonym: "CB3025" NARROW [FlyBase:FBrf0260535]
+synonym: "SLP301" NARROW [FlyBase:FBrf0246888]
+is_a: FBbt:00052046 ! adult interneuron
+relationship: RO:0002100 FBbt:00007112 ! has soma location cell body rind of adult mushroom body calyx
+relationship: RO:0002202 FBbt:00100605 ! develops from neuroblast DPLm1
+relationship: RO:0002215 GO:0061535 ! capable of glutamate secretion, neurotransmission
+relationship: RO:0013002 FBbt:00007054 ! receives synaptic input in region superior lateral protocerebrum
+relationship: RO:0013003 FBbt:00007054 ! sends synaptic output to region superior lateral protocerebrum
+property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0002-1373-1705
+property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0002-5633-1314
+property_value: http://purl.org/dc/terms/date "2020-07-30T12:00:00Z" xsd:dateTime
 
 [Term]
 id: FBbt:20002705
@@ -180424,6 +180484,25 @@ is_obsolete: true
 replaced_by: FBbt:00051659
 
 [Term]
+id: FBbt:20004178
+name: adult CB0406 neuron
+def: "Adult brain-intrinsic neuron of the CB0406 group, with its soma in the brain, lateral to the anterior optic tubercle (Schlegel et al., 2024; Dorkenwald et al., 2024). It belongs to the SLPad1 anterior hemilineage (Schlegel et al., 2024; Dorkenwald et al., 2024). It has postsynapses in the ipsilateral superior lateral protocerebrum, the ipsilateral lateral horn and the ipsilateral superior intermediate protocerebrum (Schlegel et al., 2024; Dorkenwald et al., 2024). It has presynapses in the ipsilateral superior lateral protocerebrum and the ipsilateral superior intermediate protocerebrum (Schlegel et al., 2024; Dorkenwald et al., 2024). Its predicted neurotransmitter is acetylcholine (Eckstein et al., 2024). There are approximately 2 of these cells per organism (Schlegel et al., 2024; Dorkenwald et al., 2024)." [FlyBase:FBrf0259490, FlyBase:FBrf0260535, FlyBase:FBrf0260546]
+comment: Uncharacterized putative cell type from Schlegel et al. (2024), based on FlyWire v783 (FAFB) data (Dorkenwald et al., 2024; Schlegel et al., 2024). Soma locations are based on the closest annotated neuropil region. Pre- or post-synapse locations are the fewest regions that collectively contain at least 80 percent of all pre- or post-synapses of these neurons in FlyWire. Neurotransmitter predictions are from Eckstein et al. (2024). Other annotations are based on annotations in FlyWire and are available in the supplemental material of Schlegel et al. (2024). In later FlyWire typing and in the male CNS (Berg et al., 2026), the cells of hemibrain types SLP159 and SLP169 and FlyWire type CB0406 together form type CB4220.
+synonym: "CB4220" BROAD [doi:10.1016/j.cell.2026.08.015, FlyBase:FBrf0260535]
+is_a: FBbt:00052046 ! adult interneuron
+relationship: RO:0002100 FBbt:00048470 ! has soma location cell body rind of adult anterior optic tubercle
+relationship: RO:0002202 FBbt:00100602 ! develops from neuroblast DPLl3
+relationship: RO:0002215 GO:0014055 ! capable of acetylcholine secretion, neurotransmission
+relationship: RO:0013002 FBbt:00007053 ! receives synaptic input in region adult lateral horn
+relationship: RO:0013002 FBbt:00007054 ! receives synaptic input in region superior lateral protocerebrum
+relationship: RO:0013002 FBbt:00045032 ! receives synaptic input in region superior intermediate protocerebrum
+relationship: RO:0013003 FBbt:00007054 ! sends synaptic output to region superior lateral protocerebrum
+relationship: RO:0013003 FBbt:00045032 ! sends synaptic output to region superior intermediate protocerebrum
+property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0002-1373-1705
+property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0002-5633-1314
+property_value: http://purl.org/dc/terms/date "2024-02-05T12:00:00Z" xsd:dateTime
+
+[Term]
 id: FBbt:20004226
 name: obsolete adult CB0461 neuron
 def: "Adult brain-intrinsic neuron of the CB0461 group, with its soma in the brain, ventral to the antennal mechanosensory and motor center (Schlegel et al., 2024; Dorkenwald et al., 2024). It is a putative embryonic-born neuron (Schlegel et al., 2024; Dorkenwald et al., 2024). It has postsynapses in the gnathal ganglia and the prow (Schlegel et al., 2024; Dorkenwald et al., 2024). It has presynapses in the gnathal ganglia and the prow (Schlegel et al., 2024; Dorkenwald et al., 2024). Its predicted neurotransmitter is dopamine (Eckstein et al., 2024). There are approximately 2 of these cells per organism (Schlegel et al., 2024; Dorkenwald et al., 2024)." [FlyBase:FBrf0259490, FlyBase:FBrf0260535, FlyBase:FBrf0260546]
@@ -180872,6 +180951,17 @@ property_value: http://purl.org/dc/terms/date "2024-02-05T12:00:00Z" xsd:dateTim
 property_value: IAO:0000233 "https://github.com/FlyBase/drosophila-anatomy-developmental-ontology/issues/2233" xsd:anyURI
 is_obsolete: true
 replaced_by: FBbt:20001106
+
+[Term]
+id: FBbt:20004811
+name: obsolete adult CB1133 neuron
+def: "Adult brain-intrinsic neuron of the CB1133 group, with its soma in the brain, lateral to the mushroom body vertical lobe (Schlegel et al., 2024; Dorkenwald et al., 2024). It belongs to the LHd1 hemilineage (Schlegel et al., 2024; Dorkenwald et al., 2024). It has postsynapses in the ipsilateral superior lateral protocerebrum and the ipsilateral lateral horn (Schlegel et al., 2024; Dorkenwald et al., 2024). It has presynapses in the ipsilateral superior lateral protocerebrum (Schlegel et al., 2024; Dorkenwald et al., 2024). Its predicted neurotransmitter is acetylcholine (Eckstein et al., 2024). There are approximately 3 of these cells per organism (Schlegel et al., 2024; Dorkenwald et al., 2024)." [FlyBase:FBrf0259490, FlyBase:FBrf0260535, FlyBase:FBrf0260546]
+comment: Uncharacterized putative cell type from Schlegel et al. (2024), based on FlyWire v783 (FAFB) data (Dorkenwald et al., 2024; Schlegel et al., 2024). Soma locations are based on the closest annotated neuropil region. Pre- or post-synapse locations are the fewest regions that collectively contain at least 80 percent of all pre- or post-synapses of these neurons in FlyWire. Neurotransmitter predictions are from Eckstein et al. (2024). Other annotations are based on annotations in FlyWire and are available in the supplemental material of Schlegel et al. (2024). Obsoleted: merged into FlyWire type CB4141 (FBbt:20006557) in later FlyWire typing.
+property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0002-1373-1705
+property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0002-5633-1314
+property_value: http://purl.org/dc/terms/date "2024-02-05T12:00:00Z" xsd:dateTime
+is_obsolete: true
+replaced_by: FBbt:20006557
 
 [Term]
 id: FBbt:20004821
@@ -181351,6 +181441,17 @@ property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0002
 property_value: http://purl.org/dc/terms/date "2024-04-24T12:00:00Z" xsd:dateTime
 
 [Term]
+id: FBbt:20005437
+name: obsolete adult CB1835 neuron
+def: "Adult brain-intrinsic neuron of the CB1835 group, with its soma in the brain, dorsal to the mushroom body calyx (Schlegel et al., 2024; Dorkenwald et al., 2024). It belongs to the SLPpm1 hemilineage (Schlegel et al., 2024; Dorkenwald et al., 2024). It has postsynapses in the ipsilateral superior lateral protocerebrum (Schlegel et al., 2024; Dorkenwald et al., 2024). It has presynapses in the ipsilateral superior lateral protocerebrum (Schlegel et al., 2024; Dorkenwald et al., 2024). Its predicted neurotransmitter is glutamate (Eckstein et al., 2024). There are approximately 5 of these cells per organism (Schlegel et al., 2024; Dorkenwald et al., 2024)." [FlyBase:FBrf0259490, FlyBase:FBrf0260535, FlyBase:FBrf0260546]
+comment: Uncharacterized putative cell type from Schlegel et al. (2024), based on FlyWire v783 (FAFB) data (Dorkenwald et al., 2024; Schlegel et al., 2024). Soma locations are based on the closest annotated neuropil region. Pre- or post-synapse locations are the fewest regions that collectively contain at least 80 percent of all pre- or post-synapses of these neurons in FlyWire. Neurotransmitter predictions are from Eckstein et al. (2024). Other annotations are based on annotations in FlyWire and are available in the supplemental material of Schlegel et al. (2024). Obsoleted: merged into CB4130 (FBbt:20002695) in later FlyWire typing.
+property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0002-1373-1705
+property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0002-5633-1314
+property_value: http://purl.org/dc/terms/date "2024-02-05T12:00:00Z" xsd:dateTime
+is_obsolete: true
+replaced_by: FBbt:20002695
+
+[Term]
 id: FBbt:20005440
 name: obsolete adult CB1839 neuron
 def: "Adult brain-intrinsic neuron of the CB1839 group, with its soma in the brain, anterior to the accessory medulla (Schlegel et al., 2024; Dorkenwald et al., 2024). It belongs to the VLPl1 or VLPl5 hemilineage (Schlegel et al., 2024; Dorkenwald et al., 2024). It has postsynapses in the ipsilateral anterior ventrolateral protocerebrum (Schlegel et al., 2024; Dorkenwald et al., 2024). It has presynapses in the ipsilateral anterior ventrolateral protocerebrum (Schlegel et al., 2024; Dorkenwald et al., 2024). Its predicted neurotransmitter is acetylcholine (Eckstein et al., 2024). There are approximately 4 of these cells per organism (Schlegel et al., 2024; Dorkenwald et al., 2024)." [FlyBase:FBrf0259490, FlyBase:FBrf0260535, FlyBase:FBrf0260546]
@@ -181601,6 +181702,17 @@ is_obsolete: true
 replaced_by: FBbt:20002481
 
 [Term]
+id: FBbt:20006082
+name: obsolete adult CB2540 neuron
+def: "Adult brain-intrinsic neuron of the CB2540 group, with its soma in the brain, ventral to the antennal mechanosensory and motor center (Schlegel et al., 2024; Dorkenwald et al., 2024). It belongs to the MD3 hemilineage (Schlegel et al., 2024; Dorkenwald et al., 2024). It has postsynapses in the ipsilateral inferior posterior slope and the gnathal ganglia (Schlegel et al., 2024; Dorkenwald et al., 2024). It has presynapses in the gnathal ganglia and the ipsilateral inferior posterior slope (Schlegel et al., 2024; Dorkenwald et al., 2024). There are approximately 2 of these cells per organism (Schlegel et al., 2024; Dorkenwald et al., 2024)." [FlyBase:FBrf0259490, FlyBase:FBrf0260535, FlyBase:FBrf0260546]
+comment: Uncharacterized putative cell type from Schlegel et al. (2024), based on FlyWire v783 (FAFB) data (Dorkenwald et al., 2024; Schlegel et al., 2024). Soma locations are based on the closest annotated neuropil region. Pre- or post-synapse locations are the fewest regions that collectively contain at least 80 percent of all pre- or post-synapses of these neurons in FlyWire. Neurotransmitter predictions are from Eckstein et al. (2024). Other annotations are based on annotations in FlyWire and are available in the supplemental material of Schlegel et al. (2024). Obsoleted: merged into FlyWire type CB4068 (FBbt:20006524) in later FlyWire typing.
+property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0002-1373-1705
+property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0002-5633-1314
+property_value: http://purl.org/dc/terms/date "2024-02-05T12:00:00Z" xsd:dateTime
+is_obsolete: true
+replaced_by: FBbt:20006524
+
+[Term]
 id: FBbt:20006103
 name: obsolete adult CB2562 neuron
 def: "Adult brain-intrinsic neuron with its soma in the central brain, posterior to the lateral horn. It belongs to the VPNp&v1_posterior hemilineage. It has presynapses in the ipsilateral lateral horn. It has postsynapses in the ipsilateral lateral horn and the ipsilateral superior lateral protocerebrum." [FlyBase:FBrf0259490, FlyBase:FBrf0260535, FlyBase:FBrf0260546]
@@ -181822,6 +181934,36 @@ is_obsolete: true
 replaced_by: FBbt:20000307
 
 [Term]
+id: FBbt:20006524
+name: adult CB4068 neuron
+def: "Adult brain-intrinsic neuron of the CB4068 group, with its soma in the brain, ventral to the antennal mechanosensory and motor center (Schlegel et al., 2024; Dorkenwald et al., 2024). It belongs to the MD3 hemilineage (Schlegel et al., 2024; Dorkenwald et al., 2024; Berg et al., 2026). It has postsynapses in the gnathal ganglia and the ipsilateral inferior posterior slope (Schlegel et al., 2024; Dorkenwald et al., 2024). It has presynapses in the gnathal ganglia and the ipsilateral inferior posterior slope (Schlegel et al., 2024; Dorkenwald et al., 2024). There are approximately 8 of these cells per organism (Berg et al., 2026; Bates et al., 2026)." [doi:10.1016/j.cell.2026.08.015, doi:10.1038/s41586-026-10735-w, FlyBase:FBrf0259490, FlyBase:FBrf0260535, FlyBase:FBrf0260546]
+comment: Cell type identified in multiple EM datasets (Schlegel et al., 2024; Dorkenwald et al., 2024; Berg et al., 2026; Bates et al., 2026). In later FlyWire typing, the cells of FlyWire types CB3022 and CB2540 (Schlegel et al., 2024), together with one cell each from CB3070 and CB0977, were merged into CB4068. This term was formerly CB3022; CB2540 was FBbt:20006082 and CB3070 was FBbt:20006566. In the male CNS, CB4068 neurons are divided into types PS323, PS329 and PS330 (Berg et al., 2026); connectivity suggests that this division does not follow the earlier FlyWire types. Predicted neurotransmitters differ between datasets (gaba in the male CNS, Berg et al., 2026; glutamate for FlyWire CB3070, Eckstein et al., 2024), so none is asserted here. Soma locations are based on the closest annotated neuropil region. Pre- or post-synapse locations are the fewest regions that collectively contain at least 80 percent of all pre- or post-synapses of these neurons in FlyWire. Neurotransmitter predictions are from Eckstein et al. (2024). Other annotations are based on annotations in FlyWire and are available in the supplemental material of Schlegel et al. (2024).
+synonym: "adult CB2540 neuron" NARROW []
+synonym: "adult CB3022 neuron" NARROW []
+synonym: "CB2540" NARROW [FlyBase:FBrf0260535]
+synonym: "CB3022" NARROW [FlyBase:FBrf0260535]
+is_a: FBbt:00052046 ! adult interneuron
+relationship: RO:0002100 FBbt:00003625 ! has soma location adult brain cell body rind
+relationship: RO:0013002 FBbt:00014013 ! receives synaptic input in region adult gnathal ganglion
+relationship: RO:0013002 FBbt:00045046 ! receives synaptic input in region inferior posterior slope
+relationship: RO:0013003 FBbt:00014013 ! sends synaptic output to region adult gnathal ganglion
+relationship: RO:0013003 FBbt:00045046 ! sends synaptic output to region inferior posterior slope
+property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0002-1373-1705
+property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0002-5633-1314
+property_value: http://purl.org/dc/terms/date "2024-02-05T12:00:00Z" xsd:dateTime
+
+[Term]
+id: FBbt:20006527
+name: obsolete adult CB3025 neuron
+def: "Adult brain-intrinsic neuron of the CB3025 group, with its soma in the brain, dorsal to the mushroom body calyx (Schlegel et al., 2024; Dorkenwald et al., 2024). It belongs to the SLPpm1 hemilineage (Schlegel et al., 2024; Dorkenwald et al., 2024). It has postsynapses in the ipsilateral superior lateral protocerebrum (Schlegel et al., 2024; Dorkenwald et al., 2024). It has presynapses in the ipsilateral superior lateral protocerebrum (Schlegel et al., 2024; Dorkenwald et al., 2024). Its predicted neurotransmitter is glutamate (Eckstein et al., 2024). There are approximately 3 of these cells per organism (Schlegel et al., 2024; Dorkenwald et al., 2024)." [FlyBase:FBrf0259490, FlyBase:FBrf0260535, FlyBase:FBrf0260546]
+comment: Uncharacterized putative cell type from Schlegel et al. (2024), based on FlyWire v783 (FAFB) data (Dorkenwald et al., 2024; Schlegel et al., 2024). Soma locations are based on the closest annotated neuropil region. Pre- or post-synapse locations are the fewest regions that collectively contain at least 80 percent of all pre- or post-synapses of these neurons in FlyWire. Neurotransmitter predictions are from Eckstein et al. (2024). Other annotations are based on annotations in FlyWire and are available in the supplemental material of Schlegel et al. (2024). Obsoleted: merged into CB4130 (FBbt:20002695) in later FlyWire typing.
+property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0002-1373-1705
+property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0002-5633-1314
+property_value: http://purl.org/dc/terms/date "2024-02-05T12:00:00Z" xsd:dateTime
+is_obsolete: true
+replaced_by: FBbt:20002695
+
+[Term]
 id: FBbt:20006529
 name: obsolete adult CB3029 neuron
 def: "Adult brain-intrinsic neuron of the CB3029 group, with its soma in the brain, anterior to the accessory medulla (Schlegel et al., 2024; Dorkenwald et al., 2024). It belongs to the VLPl1 or VLPl5 hemilineage (Schlegel et al., 2024; Dorkenwald et al., 2024). It has postsynapses in the ipsilateral anterior ventrolateral protocerebrum (Schlegel et al., 2024; Dorkenwald et al., 2024). It has presynapses in the ipsilateral anterior ventrolateral protocerebrum (Schlegel et al., 2024; Dorkenwald et al., 2024). Its predicted neurotransmitter is acetylcholine (Eckstein et al., 2024). There are approximately 9 of these cells per organism (Schlegel et al., 2024; Dorkenwald et al., 2024)." [FlyBase:FBrf0259490, FlyBase:FBrf0260535, FlyBase:FBrf0260546]
@@ -181832,6 +181974,39 @@ property_value: http://purl.org/dc/terms/date "2024-02-05T12:00:00Z" xsd:dateTim
 property_value: IAO:0000233 "https://github.com/FlyBase/drosophila-anatomy-developmental-ontology/issues/2233" xsd:anyURI
 is_obsolete: true
 replaced_by: FBbt:20000496
+
+[Term]
+id: FBbt:20006557
+name: adult CB4141 neuron
+def: "Adult brain-intrinsic neuron of the CB4141 group, with its soma in the brain, lateral to the mushroom body vertical lobe (Schlegel et al., 2024; Dorkenwald et al., 2024). It belongs to the LHd1 hemilineage (Schlegel et al., 2024; Dorkenwald et al., 2024; Berg et al., 2026). It has postsynapses in the ipsilateral lateral horn and the ipsilateral superior lateral protocerebrum (Schlegel et al., 2024; Dorkenwald et al., 2024). It has presynapses in the ipsilateral superior lateral protocerebrum and the ipsilateral lateral horn (Schlegel et al., 2024; Dorkenwald et al., 2024). Its predicted neurotransmitter is acetylcholine (Eckstein et al., 2024; Berg et al., 2026). There are approximately 8 of these cells per organism (Schlegel et al., 2024; Berg et al., 2026)." [doi:10.1016/j.cell.2026.08.015, FlyBase:FBrf0259490, FlyBase:FBrf0260535, FlyBase:FBrf0260546]
+comment: Cell type identified in multiple EM datasets (Schlegel et al., 2024; Dorkenwald et al., 2024; Berg et al., 2026; Bates et al., 2026). FlyWire types CB3059 and CB1133 (Schlegel et al., 2024) were merged into CB4141 in later FlyWire typing, which is the type name used in the male CNS (Berg et al., 2026). This term was formerly CB3059; CB1133 was FBbt:20004811. Soma locations are based on the closest annotated neuropil region. Pre- or post-synapse locations are the fewest regions that collectively contain at least 80 percent of all pre- or post-synapses of these neurons in FlyWire. Neurotransmitter predictions are from Eckstein et al. (2024). Other annotations are based on annotations in FlyWire and are available in the supplemental material of Schlegel et al. (2024).
+synonym: "adult CB1133 neuron" NARROW []
+synonym: "adult CB3059 neuron" NARROW []
+synonym: "CB1133" NARROW [FlyBase:FBrf0260535]
+synonym: "CB3059" NARROW [FlyBase:FBrf0260535]
+is_a: FBbt:00052046 ! adult interneuron
+relationship: RO:0002100 FBbt:00003625 ! has soma location adult brain cell body rind
+relationship: RO:0002202 FBbt:00100594 ! develops from neuroblast DPLd
+relationship: RO:0002215 GO:0014055 ! capable of acetylcholine secretion, neurotransmission
+relationship: RO:0013002 FBbt:00007053 ! receives synaptic input in region adult lateral horn
+relationship: RO:0013002 FBbt:00007054 ! receives synaptic input in region superior lateral protocerebrum
+relationship: RO:0013003 FBbt:00007053 ! sends synaptic output to region adult lateral horn
+relationship: RO:0013003 FBbt:00007054 ! sends synaptic output to region superior lateral protocerebrum
+property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0002-1373-1705
+property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0002-5633-1314
+property_value: http://purl.org/dc/terms/date "2024-02-05T12:00:00Z" xsd:dateTime
+
+[Term]
+id: FBbt:20006566
+name: obsolete adult CB3070 neuron
+def: "Adult brain-intrinsic neuron of the CB3070 group, with its soma in the brain, anterior-ventral to the antennal mechanosensory and motor center (Schlegel et al., 2024; Dorkenwald et al., 2024). It belongs to the MD3 hemilineage (Schlegel et al., 2024; Dorkenwald et al., 2024). It has postsynapses in the gnathal ganglia and the ipsilateral inferior posterior slope (Schlegel et al., 2024; Dorkenwald et al., 2024). It has presynapses in the gnathal ganglia and the ipsilateral inferior posterior slope (Schlegel et al., 2024; Dorkenwald et al., 2024). Its predicted neurotransmitter is glutamate (Eckstein et al., 2024). There are approximately 2 of these cells per organism (Schlegel et al., 2024; Dorkenwald et al., 2024)." [FlyBase:FBrf0259490, FlyBase:FBrf0260535, FlyBase:FBrf0260546]
+comment: Uncharacterized putative cell type from Schlegel et al. (2024), based on FlyWire v783 (FAFB) data (Dorkenwald et al., 2024; Schlegel et al., 2024). Soma locations are based on the closest annotated neuropil region. Pre- or post-synapse locations are the fewest regions that collectively contain at least 80 percent of all pre- or post-synapses of these neurons in FlyWire. Neurotransmitter predictions are from Eckstein et al. (2024). Other annotations are based on annotations in FlyWire and are available in the supplemental material of Schlegel et al. (2024). Obsoleted: in later FlyWire typing, one cell of this type was assigned to CB4068 (FBbt:20006524) and the other to CB0977 (FBbt:20004664).
+property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0002-1373-1705
+property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0002-5633-1314
+property_value: http://purl.org/dc/terms/date "2024-02-05T12:00:00Z" xsd:dateTime
+is_obsolete: true
+consider: FBbt:20004664
+consider: FBbt:20006524
 
 [Term]
 id: FBbt:20006569
@@ -185566,6 +185741,49 @@ property_value: http://purl.org/dc/terms/date "2024-02-05T12:00:00Z" xsd:dateTim
 property_value: IAO:0000233 "https://github.com/FlyBase/drosophila-anatomy-developmental-ontology/issues/2233" xsd:anyURI
 
 [Term]
+id: FBbt:20007533
+name: descending neuron of the gnathal ganglion DNg102
+def: "Adult descending neuron of the DNg102 group, with its soma in the brain, ventral to the antennal mechanosensory and motor center (Schlegel et al., 2024; Dorkenwald et al., 2024). It is a putative embryonic-born neuron (Schlegel et al., 2024; Dorkenwald et al., 2024). It has postsynapses in the gnathal ganglia, the ipsilateral vest and the saddle (Schlegel et al., 2024; Dorkenwald et al., 2024). It has presynapses in the gnathal ganglia, the ipsilateral vest and the saddle (Schlegel et al., 2024; Dorkenwald et al., 2024). It enters the VNC via the cervical connective, fasciculating with the ventral median tract of ventral cervical fasciculus, and sends output to the abdominal neuromere and leg neuropil (Takemura et al., 2024; Marin et al., 2024). Its predicted neurotransmitter is gaba (Eckstein et al., 2024; Berg et al., 2026). There are approximately 4 of these cells per organism (Schlegel et al., 2024; Berg et al., 2026; Bates et al., 2026)." [doi:10.1016/j.cell.2026.08.015, doi:10.1038/s41586-026-10735-w, doi:10.7554/eLife.96084.1, doi:10.7554/eLife.97766.1, doi:10.7554/eLife.97769.1, FlyBase:FBrf0259490, FlyBase:FBrf0260535, FlyBase:FBrf0260546]
+comment: Cell type identified in multiple EM datasets (Schlegel et al., 2024; Dorkenwald et al., 2024; Marin et al., 2024; Berg et al., 2026; Bates et al., 2026). FlyWire types DNg102_a and DNg102_b (Schlegel et al., 2024), each of two cells, were merged into DNg102 in later FlyWire typing, which is the type name used in the male CNS (Berg et al., 2026). This term was formerly DNg102_a; DNg102_b was FBbt:20007534. MANC types DNxn181 and DNxn182 (Takemura et al., 2024; Marin et al., 2024), formerly separate terms (FBbt:20008439, FBbt:20008440), each match two of the four male CNS DNg102 neurons (Berg et al., 2026). Soma locations are based on the closest annotated neuropil region. Pre- or post-synapse locations are the fewest regions that collectively contain at least 80 percent of all pre- or post-synapses of these neurons in FlyWire. Neurotransmitter predictions are from Eckstein et al. (2024). Other annotations are based on annotations in FlyWire and are available in the supplemental material of Schlegel et al. (2024). VNC annotations are from MANC v1.2.1 data (Takemura et al., 2024; Marin et al., 2024).
+synonym: "adult DNxn181 neuron" NARROW []
+synonym: "adult DNxn182 neuron" NARROW []
+synonym: "descending neuron of the gnathal ganglion DNg102_a" NARROW []
+synonym: "descending neuron of the gnathal ganglion DNg102_b" NARROW []
+synonym: "DNg102_a" NARROW [FlyBase:FBrf0260535]
+synonym: "DNg102_b" NARROW [FlyBase:FBrf0260535]
+synonym: "DNxn181" NARROW [doi:10.1016/j.cell.2026.08.015, doi:10.7554/eLife.97766.1, doi:10.7554/eLife.97769.1]
+synonym: "DNxn182" NARROW [doi:10.1016/j.cell.2026.08.015, doi:10.7554/eLife.97766.1, doi:10.7554/eLife.97769.1]
+is_a: FBbt:00047097 ! primary neuron
+is_a: FBbt:00047511 ! adult descending neuron
+is_a: FBbt:00047516 ! descending neuron of the gnathal ganglion
+relationship: RO:0002100 FBbt:00003625 ! has soma location adult brain cell body rind
+relationship: RO:0002101 FBbt:00004019 ! fasciculates with adult cervical connective
+relationship: RO:0002101 FBbt:00047542 ! fasciculates with ventral median tract of ventral cervical fasciculus
+relationship: RO:0002215 GO:0061534 ! capable of gamma-aminobutyric acid secretion, neurotransmission
+relationship: RO:0013002 FBbt:00014013 ! receives synaptic input in region adult gnathal ganglion
+relationship: RO:0013002 FBbt:00040041 ! receives synaptic input in region vest
+relationship: RO:0013002 FBbt:00045048 ! receives synaptic input in region saddle
+relationship: RO:0013003 FBbt:00014013 ! sends synaptic output to region adult gnathal ganglion
+relationship: RO:0013003 FBbt:00040041 ! sends synaptic output to region vest
+relationship: RO:0013003 FBbt:00045048 ! sends synaptic output to region saddle
+relationship: RO:0013003 FBbt:00047139 ! sends synaptic output to region adult leg neuropil
+relationship: RO:0013003 FBbt:00110173 ! sends synaptic output to region adult abdominal neuromere
+property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0002-1373-1705
+property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0002-5633-1314
+property_value: http://purl.org/dc/terms/date "2024-02-05T12:00:00Z" xsd:dateTime
+
+[Term]
+id: FBbt:20007534
+name: obsolete descending neuron of the gnathal ganglion DNg102_b
+def: "Adult descending neuron of the DNg102_b group, with its soma in the brain, ventral to the antennal mechanosensory and motor center (Schlegel et al., 2024; Dorkenwald et al., 2024). It is a putative embryonic-born neuron (Schlegel et al., 2024; Dorkenwald et al., 2024). It has postsynapses in the gnathal ganglia, the ipsilateral vest and the saddle (Schlegel et al., 2024; Dorkenwald et al., 2024). It has presynapses in the gnathal ganglia and the ipsilateral vest (Schlegel et al., 2024; Dorkenwald et al., 2024). Its predicted neurotransmitter is gaba (Eckstein et al., 2024). There are approximately 2 of these cells per organism (Schlegel et al., 2024; Dorkenwald et al., 2024)." [FlyBase:FBrf0259490, FlyBase:FBrf0260535, FlyBase:FBrf0260546]
+comment: Uncharacterized putative cell type from Schlegel et al. (2024), based on FlyWire v783 (FAFB) data (Dorkenwald et al., 2024; Schlegel et al., 2024). Soma locations are based on the closest annotated neuropil region. Pre- or post-synapse locations are the fewest regions that collectively contain at least 80 percent of all pre- or post-synapses of these neurons in FlyWire. Neurotransmitter predictions are from Eckstein et al. (2024). Other annotations are based on annotations in FlyWire and are available in the supplemental material of Schlegel et al. (2024). Obsoleted: merged into FlyWire type DNg102 (FBbt:20007533) in later FlyWire typing.
+property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0002-1373-1705
+property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0002-5633-1314
+property_value: http://purl.org/dc/terms/date "2024-02-05T12:00:00Z" xsd:dateTime
+is_obsolete: true
+replaced_by: FBbt:20007533
+
+[Term]
 id: FBbt:20007536
 name: descending neuron of the posterior brain DNpe007
 def: "Adult descending neuron of the DNpe007 group, with its soma in the brain, medial to the posterior lateral protocerebrum (Schlegel et al., 2024; Dorkenwald et al., 2024). It is a putative embryonic-born neuron (Schlegel et al., 2024; Dorkenwald et al., 2024). It has postsynapses in the gnathal ganglia and the saddle (Schlegel et al., 2024; Dorkenwald et al., 2024). It has presynapses in the gnathal ganglia and the prow (Schlegel et al., 2024; Dorkenwald et al., 2024). It enters the VNC via the cervical connective, fasciculating with the dorsal lateral tract of ventral cervical fasciculus, and sends output to the leg neuropil (Takemura et al., 2024; Marin et al., 2024). There are approximately 2 of these cells per organism (Schlegel et al., 2024; Dorkenwald et al., 2024; Takemura et al., 2024; Marin et al., 2024)." [doi:10.1016/j.cell.2026.08.015, doi:10.1038/s41586-026-10735-w, doi:10.7554/eLife.96084.1, doi:10.7554/eLife.97766.1, doi:10.7554/eLife.97769.1, FlyBase:FBrf0259490, FlyBase:FBrf0260535, FlyBase:FBrf0260546]
@@ -188012,6 +188230,26 @@ property_value: http://purl.org/dc/terms/date "2024-05-10T12:00:00Z" xsd:dateTim
 property_value: IAO:0000233 "https://github.com/FlyBase/drosophila-anatomy-developmental-ontology/issues/2233" xsd:anyURI
 is_obsolete: true
 replaced_by: FBbt:20007447
+
+[Term]
+id: FBbt:20008439
+name: obsolete adult DNxn181 neuron
+def: "Adult descending neuron of the DNxn181 group (Takemura et al., 2024; Marin et al., 2024). It enters the VNC via the cervical connective (Takemura et al., 2024; Marin et al., 2024). Within the VNC it fasciculates with the ventral median tract of ventral cervical fasciculus (Takemura et al., 2024; Marin et al., 2024). It receives input in the brain and sends output to the abdominal neuromere and leg neuropil (Takemura et al., 2024; Marin et al., 2024). Its predicted neurotransmitter is gaba (Eckstein et al., 2024). There are approximately 2 of these cells per organism (Takemura et al., 2024; Marin et al., 2024)." [doi:10.7554/eLife.96084.1, doi:10.7554/eLife.97766.1, doi:10.7554/eLife.97769.1, FlyBase:FBrf0259490]
+comment: Uncharacterized putative cell type from Marin et al. (2024), based on MANC v1.2.1 data (Takemura et al., 2024) from NeuPrint. Obsoleted: this MANC type matches half of the cells of DNg102 (FBbt:20007533) in the male CNS (Berg et al., 2026).
+property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0002-1373-1705
+property_value: http://purl.org/dc/terms/date "2024-05-10T12:00:00Z" xsd:dateTime
+is_obsolete: true
+replaced_by: FBbt:20007533
+
+[Term]
+id: FBbt:20008440
+name: obsolete adult DNxn182 neuron
+def: "Adult descending neuron of the DNxn182 group (Takemura et al., 2024; Marin et al., 2024). It enters the VNC via the cervical connective (Takemura et al., 2024; Marin et al., 2024). Within the VNC it fasciculates with the ventral median tract of ventral cervical fasciculus (Takemura et al., 2024; Marin et al., 2024). It receives input in the brain and sends output to the abdominal neuromere and leg neuropil (Takemura et al., 2024; Marin et al., 2024). Its predicted neurotransmitter is gaba (Eckstein et al., 2024). There are approximately 2 of these cells per organism (Takemura et al., 2024; Marin et al., 2024)." [doi:10.7554/eLife.96084.1, doi:10.7554/eLife.97766.1, doi:10.7554/eLife.97769.1, FlyBase:FBrf0259490]
+comment: Uncharacterized putative cell type from Marin et al. (2024), based on MANC v1.2.1 data (Takemura et al., 2024) from NeuPrint. Obsoleted: this MANC type matches half of the cells of DNg102 (FBbt:20007533) in the male CNS (Berg et al., 2026).
+property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0002-1373-1705
+property_value: http://purl.org/dc/terms/date "2024-05-10T12:00:00Z" xsd:dateTime
+is_obsolete: true
+replaced_by: FBbt:20007533
 
 [Term]
 id: FBbt:20008441
