@@ -188300,6 +188300,36 @@ property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0002
 property_value: http://purl.org/dc/terms/date "2024-05-10T12:00:00Z" xsd:dateTime
 
 [Term]
+id: FBbt:20011189
+name: adult INXXX471 neuron
+def: "Adult intrinsic neuron of the INXXX471 group with its soma in the prothoracic or mesothoracic neuromere (Takemura et al., 2024; Berg et al., 2026). It is an early secondary neuron (Takemura et al., 2024). It receives input in and sends output to the leg neuropil of its own neuromere (Takemura et al., 2024). There are approximately 4 of these cells per organism, one per side in each of the prothoracic and mesothoracic neuromeres (Takemura et al., 2024; Berg et al., 2026)." [doi:10.1016/j.cell.2026.08.015, doi:10.7554/eLife.97769.1]
+comment: Cell type identified in multiple EM datasets (Takemura et al., 2024; Berg et al., 2026). In MANC v1.2.1 these cells were typed as two motor neuron types, MNfl10 (prothoracic) and MNml10 (mesothoracic) (Takemura et al., 2024; Marin et al., 2024). MANC v1.2.3 reclassified them as intrinsic neurons of a single type, INXXX471, as does the male CNS (Berg et al., 2026). This term was formerly MNfl10; MNml10 was FBbt:20011212. Predicted neurotransmitters differ between datasets (glutamate in MANC, Eckstein et al., 2024; gaba in the male CNS, Berg et al., 2026), so none is asserted here.
+synonym: "adult MNfl10 neuron" NARROW []
+synonym: "adult MNml10 neuron" NARROW []
+synonym: "MNfl10" NARROW [doi:10.7554/eLife.97766.1, doi:10.7554/eLife.97769.1]
+synonym: "MNml10" NARROW [doi:10.7554/eLife.97766.1, doi:10.7554/eLife.97769.1]
+is_a: FBbt:00001983 ! thoracic neuron
+is_a: FBbt:00047096 ! secondary neuron
+is_a: FBbt:00052046 ! adult interneuron
+is_a: FBbt:00059289 ! adult VNC neuron
+relationship: RO:0002100 FBbt:00111027 ! has soma location adult thoracic neuromere
+relationship: RO:0013002 FBbt:00047139 ! receives synaptic input in region adult leg neuropil
+relationship: RO:0013003 FBbt:00047139 ! sends synaptic output to region adult leg neuropil
+property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0002-1373-1705
+property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0002-5633-1314
+property_value: http://purl.org/dc/terms/date "2024-05-10T12:00:00Z" xsd:dateTime
+
+[Term]
+id: FBbt:20011212
+name: obsolete adult MNml10 neuron
+def: "Adult motor neuron of the MNml10 group (Takemura et al., 2024; Marin et al., 2024). It is a secondary neuron (Takemura et al., 2024; Marin et al., 2024). It exits the VNC via the mesothoracic leg nerve (Takemura et al., 2024; Marin et al., 2024). It receives input in the T2 leg neuropil and sends output to the mesothoracic leg (Takemura et al., 2024; Marin et al., 2024). Its predicted neurotransmitter is glutamate (Eckstein et al., 2024). There are approximately 2 of these cells per organism and their somas are found in the mesothoracic neuromere (Takemura et al., 2024; Marin et al., 2024)." [doi:10.7554/eLife.96084.1, doi:10.7554/eLife.97766.1, doi:10.7554/eLife.97769.1, FlyBase:FBrf0259490]
+comment: Uncharacterized putative cell type from Marin et al. (2024), based on MANC v1.2.1 data (Takemura et al., 2024) from NeuPrint. Obsoleted: MANC v1.2.3 retyped these cells as intrinsic neurons and merged them with MNfl10 into type INXXX471 (FBbt:20011189).
+property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0002-1373-1705
+property_value: http://purl.org/dc/terms/date "2024-05-10T12:00:00Z" xsd:dateTime
+is_obsolete: true
+replaced_by: FBbt:20011189
+
+[Term]
 id: FBbt:20011330
 name: descending neuron of the posterior brain DNp56
 def: "Adult descending neuron with its soma in the posterior brain, dorsal to the antler (Schlegel et al., 2024; Dorkenwald et al., 2024). It is a putative embryonic-born neuron (Schlegel et al., 2024; Dorkenwald et al., 2024). In the brain, it has postsynapses in the ipsilateral vest, and presynapses in the gnathal ganglion and the ipsilateral vest (Schlegel et al., 2024; Dorkenwald et al., 2024). In the VNC, it sends output to the T1 leg neuropil (Takemura et al., 2024; Marin et al., 2024). Its predicted neurotransmitter is acetylcholine (Eckstein et al., 2024). There are approximately 2 of these cells per organism (Schlegel et al., 2024; Dorkenwald et al., 2024; Sturner et al., 2025)." [doi:10.1016/j.cell.2026.08.015, doi:10.1038/s41586-026-10735-w, doi:10.7554/eLife.96084.1, doi:10.7554/eLife.97766.1, doi:10.7554/eLife.97769.1, FlyBase:FBrf0259490, FlyBase:FBrf0260535, FlyBase:FBrf0260546, FlyBase:FBrf0262850]
