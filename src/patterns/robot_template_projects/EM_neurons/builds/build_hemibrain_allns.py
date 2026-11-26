@@ -26,6 +26,13 @@ NB_DATA = np.array([
     ["FBbt:00067347", "l2", "ALl1 (Notch ON hemilineage)"],
 ])
 NEUROBLASTS = pd.DataFrame(NB_DATA, columns=["ID", "short", "name"]).set_index("short")
+# new_ALLNs.tsv may give a 'neuroblast' short key (e.g. v2) overriding the one
+# implied by the type name, where later connectomes disagree with Schlegel et
+# al. (2021). The lineage is then cited with the row's 'lineage_refs' (text)
+# and 'lineage_xrefs' ('|'-separated), its 'lineage_comment' is appended to
+# the comment, and the neuroblast's LN class (where defined below) becomes the
+# parent.
+LN_CLASS_BY_NEUROBLAST = {"v2": "FBbt:00007393"}  # adult local interneuron of the ventral ALv2 neuroblast
 
 PATTERNS_DICT = {"broad": "FBbt:00051500", "regional": "FBbt:00049644",
                  "sparse": "FBbt:00049647", "patchy": "FBbt:00049646"}
@@ -72,8 +79,15 @@ def glomerulus_lister(glomeruli):
     return glom_str
 
 
-def definition_maker(shortname, laterality, pattern, glomeruli):
-    lineage = "neuroblast %s" % NEUROBLASTS["name"][shortname_splitter(shortname)[0]]
+def neuroblast_key(shortname, override):
+    """Neuroblast short key: the curated override if given, else the name prefix."""
+    return override if isinstance(override, str) and override else shortname_splitter(shortname)[0]
+
+
+def definition_maker(shortname, laterality, pattern, glomeruli, override=None, lineage_refs=None):
+    lineage = "neuroblast %s" % NEUROBLASTS["name"][neuroblast_key(shortname, override)]
+    if isinstance(override, str) and override and isinstance(lineage_refs, str) and lineage_refs:
+        lineage += " (%s)" % lineage_refs
     group = shortname_splitter(shortname)[2]
     if laterality == "uni":
         lat = "It is unilateral"
@@ -108,14 +122,27 @@ def build_template():
         row_od["outputs_AL"] = "FBbt:00007401"
         row_od["obo_namespace"] = "fly_anatomy.ontology"
 
+        override = cell_types["neuroblast"][i] if "neuroblast" in cell_types else None
+        override = override if isinstance(override, str) and override else None
+        nb = neuroblast_key(np_type, override)
+
         row_od["ID"] = cell_types["FBbt_id"][i]
         row_od["obo_id"] = cell_types["FBbt_id"][i]
         row_od["synonym"] = ("adult antennal lobe local neuron type %s of neuroblast %s"
-                             % (shortname_splitter(np_type)[2], NEUROBLASTS["name"][shortname_splitter(np_type)[0]]))
+                             % (shortname_splitter(np_type)[2], NEUROBLASTS["name"][nb]))
         row_od["label"] = "adult antennal lobe local neuron %s" % np_type
         row_od["Xref_def"] = cell_types["ref"][i]
         row_od["creation_date"] = cell_types["date"][i]
-        row_od["neuroblast"] = NEUROBLASTS["ID"][shortname_splitter(np_type)[0]]
+        row_od["neuroblast"] = NEUROBLASTS["ID"][nb]
+        def _opt(col):
+            v = cell_types[col][i] if col in cell_types else None
+            return v if isinstance(v, str) and v else None
+        if override:
+            if _opt("lineage_xrefs"):
+                row_od["Xref_def"] += "|" + _opt("lineage_xrefs")
+            row_od["parent"] = LN_CLASS_BY_NEUROBLAST.get(nb, row_od["parent"])
+            if _opt("lineage_comment"):
+                row_od["comment"] += " " + _opt("lineage_comment")
 
         if cell_types.notnull()["glomeruli"][i]:
             glom_list = str(cell_types["glomeruli"][i]).split(sep="|")
@@ -124,7 +151,8 @@ def build_template():
 
         row_od["definition"] = definition_maker(
             shortname=np_type, laterality=cell_types["laterality"][i],
-            pattern=cell_types["pattern"][i], glomeruli=glom_list,
+            pattern=cell_types["pattern"][i], glomeruli=glom_list, override=override,
+            lineage_refs=cell_types["lineage_refs"][i] if "lineage_refs" in cell_types else None,
         )
 
         if glom_list:
