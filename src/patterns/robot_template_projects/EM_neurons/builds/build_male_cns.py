@@ -32,7 +32,16 @@ import EM_common as em  # noqa: E402
 
 CONNECTIVITY_THRESHOLD = 10
 TRACT_RE = r"\bconnective\b|\bnerve\b(?! cord)"   # region names that are fibre tracts
-NT_CVS = {"acetylcholine": "GO:0014055", "GABA": "GO:0061534", "glutamate": "GO:0061535"}
+NT_CVS = {"acetylcholine": "GO:0014055", "GABA": "GO:0061534", "glutamate": "GO:0061535",
+          "dopamine": "GO:0061527", "serotonin": "GO:0060096", "octopamine": "GO:0061540",
+          "tyramine": "GO:0061546"}
+# Optional new_types.tsv columns: mcns_members ('|' male-CNS types grouped
+# under one term), banc_type (BANC name, for citation), exclude_inputs /
+# exclude_outputs ('|' FBbt region ids another connectome contradicts),
+# exclude_hemilineage (TRUE to drop it), cross_check_comment (appended to the
+# comment).
+OPTIONAL_COLUMNS = ["mcns_members", "banc_type", "exclude_inputs", "exclude_outputs",
+                    "exclude_hemilineage", "cross_check_comment"]
 
 
 def _proj(*parts):
@@ -80,6 +89,16 @@ def build_template(db_path):
                              low_memory=False, index_col="mcns_type")
     parent_types = pd.read_csv(_proj("EM_neurons", "sources", "male_cns", "broad_type_map.tsv"), sep="\t",
                                low_memory=False, index_col="broad_type")
+    # Optional curation columns (see sources/male_cns/README section in the
+    # project README): cross-connectome exclusions and multi-type rows.
+    for col in OPTIONAL_COLUMNS:
+        if col not in cell_types:
+            cell_types[col] = np.nan
+    if "label_style" not in parent_types:
+        parent_types["label_style"] = np.nan
+
+    def _split(value):
+        return [x for x in str(value).split("|") if x] if pd.notna(value) else []
     hemilineage_map = pd.read_csv(_proj("EM_neurons", "sources", "flywire", "lineage_map.tsv"), sep="\t", low_memory=False)
     # ROI->FBbt mapping from the shared EM_neuropils v1.0 region table (adult/
     # segment-specific terms; '-unspecified' catch-alls are left blank -> excluded,
@@ -108,11 +127,29 @@ def build_template(db_path):
     mapped_hemilineages = hemilineages.merge(hemilineage_map, how="left", left_on="hemilineage", right_on="ito_lee_hemilineage")
     mapped_hemilineages = mapped_hemilineages[["mcns_type", "NB_id", "hemilineage"]].set_index("mcns_type").rename(columns={"NB_id": "neuroblast"})
     mapped_hemilineages = mapped_hemilineages[mapped_hemilineages["hemilineage"] != "putative_primary"]
+    # Drop hemilineages another connectome contradicts, and any type whose
+    # grouped members disagree (more than one hemilineage).
+    excluded_hl = set(cell_types.index[cell_types["exclude_hemilineage"].astype(str).str.upper().eq("TRUE")])
+    hl_counts = mapped_hemilineages.groupby(level=0)["hemilineage"].nunique()
+    excluded_hl |= set(hl_counts.index[hl_counts > 1])
+    mapped_hemilineages = mapped_hemilineages[~mapped_hemilineages.index.isin(excluded_hl)]
+    mapped_hemilineages = mapped_hemilineages[~mapped_hemilineages.index.duplicated()]
     cell_types = cell_types.merge(mapped_hemilineages["neuroblast"], how="left", left_index=True, right_index=True)
 
     # connectivity (from cache) with the class-level consistency filter
     roiinfo = pd.read_csv(_cache("male_cns_roiinfo.tsv"), sep="\t")
     type_connectivity_table = em.laterality_connectivity(roiinfo, raw_ROI_dict)
+    # Zero out regions another connectome contradicts (exclude_inputs /
+    # exclude_outputs: '|'-separated FBbt ids), so they are neither asserted
+    # nor written into the definition.
+    tct = type_connectivity_table.reset_index()
+    for col, polarity in (("exclude_inputs", "post"), ("exclude_outputs", "pre")):
+        excluded = {(t, roi) for t, v in cell_types[col].items() for roi in _split(v)}
+        if excluded:
+            mask = [(t, roi) in excluded for t, roi in zip(tct["type"], tct["ROI"])]
+            tct.loc[mask, polarity] = 0
+    tct = tct[~(tct["post"].eq(0) & tct["pre"].eq(0))]
+    type_connectivity_table = tct.set_index(["type", "laterality", "ROI"])
 
     def drop_redundant_terms(term_list):
         return em.drop_redundant_part_of(term_list, FBbt_descendants)
@@ -165,14 +202,37 @@ def build_template(db_path):
     def get_name_trunk(mcns_type):
         return re.match("[A-z]+", mcns_type)[0]
 
+    def label_style(mcns_type):
+        style = parent_types.loc[get_name_trunk(mcns_type), "label_style"]
+        return style if isinstance(style, str) else "type"
+
     def label_writer(mcns_type):
-        broad_type = parent_types.loc[get_name_trunk(mcns_type), "text"]
+        # label_style (broad_type_map): 'type' (default) -> adult <text> neuron <type>;
+        # 'number' -> adult <text> neuron <digits> (as hemibrain/FlyWire AVLP001);
+        # 'symbol' -> adult <type> neuron (as FlyWire CB0004, MANC AN07B015).
+        trunk = get_name_trunk(mcns_type)
+        broad_type = parent_types.loc[trunk, "text"]
+        style = label_style(mcns_type)
+        if style == "symbol":
+            return f"adult {mcns_type} neuron"
+        suffix = mcns_type[len(trunk):] if style == "number" else mcns_type
         if "neuron" in broad_type:
-            return f"adult {broad_type} {mcns_type}"
-        return f"adult {broad_type} neuron {mcns_type}"
+            return f"adult {broad_type} {suffix}"
+        return f"adult {broad_type} neuron {suffix}"
+
+    def opening_writer(mcns_type):
+        """Definition opening. 'number'/'symbol' prefixes name a region or
+        nothing, not a class, so these open with the first parent's label."""
+        broad_type = parent_types.loc[get_name_trunk(mcns_type), "text"]
+        if label_style(mcns_type) != "type":
+            parent = _split(cell_types.loc[mcns_type, "additional_parents"])[0]
+            name = fbbt.label(parent)
+            return f"{name[0].upper()}{name[1:]} of the {mcns_type} group (Berg et al., 2026)."
+        if "neuron" in broad_type:
+            return f"Adult {broad_type} of the {mcns_type} group (Berg et al., 2026)."
+        return f"Adult {broad_type} neuron of the {mcns_type} group (Berg et al., 2026)."
 
     def def_writer(mcns_type):
-        broad_type = parent_types.loc[get_name_trunk(mcns_type), "text"]
         ipsi_post = get_region_ids(mcns_type, "ipsilateral", "inputs")
         contra_post = get_region_ids(mcns_type, "contralateral", "inputs")
         nolat_post = get_region_ids(mcns_type, "no_laterality", "inputs")
@@ -216,10 +276,7 @@ def build_template(db_path):
         except KeyError:
             hemilineage = ""
 
-        if "neuron" in broad_type:
-            definition = f"Adult {broad_type} of the {mcns_type} group (Berg et al., 2026)."
-        else:
-            definition = f"Adult {broad_type} neuron of the {mcns_type} group (Berg et al., 2026)."
+        definition = opening_writer(mcns_type)
         definition += hemilineage + input_def + output_def
         if cell_types["transmitter_pred"].notna().loc[mcns_type]:
             definition += (f" Its predicted neurotransmitter is {cell_types.loc[mcns_type, 'transmitter_pred']} "
@@ -235,6 +292,8 @@ def build_template(db_path):
         if cell_types["manc_type"].notnull()[mcns_type]:
             citations.append("Marin et al., 2024")
         citations.append("Berg et al., 2026")
+        if cell_types["banc_type"].notnull()[mcns_type]:
+            citations.append("Bates et al., 2026")
         citation_str = "; ".join(citations)
         if len(citations) == 1:
             comment = f"Cell type identified in one EM dataset ({citation_str})."
@@ -244,6 +303,8 @@ def build_template(db_path):
                     f"neuprint has at least {CONNECTIVITY_THRESHOLD} connections.")
         if mcns_type in mapped_hemilineages.index:
             comment += " Hemilineage information from neuprint, though original source not clear."
+        if pd.notna(cell_types.loc[mcns_type, "cross_check_comment"]):
+            comment += " " + cell_types.loc[mcns_type, "cross_check_comment"]
         return comment
 
     def xref_generator(mcns_type):
@@ -256,6 +317,8 @@ def build_template(db_path):
             def_xrefs.append("FlyBase:FBrf0246888")
         if cell_types["manc_type"].notnull()[mcns_type]:
             def_xrefs.append("doi:10.7554/eLife.97766.1")
+        if cell_types["banc_type"].notnull()[mcns_type]:
+            def_xrefs.append("doi:10.1038/s41586-026-10735-w")
         return "|".join(def_xrefs)
 
     cell_types["obo_id"] = cell_types["FBbt_id"]
@@ -273,7 +336,7 @@ def build_template(db_path):
                                   how="left", on="broad_type")
     cell_types = cell_types.set_index("mcns_type")
     cell_types["parents"] = cell_types.apply(
-        lambda row: f"{row['additional_parents']}|{row['type_parent']}" if pd.notna(row["additional_parents"]) else row["type_parent"], axis=1)
+        lambda row: "|".join(p for p in (row["additional_parents"], row["type_parent"]) if pd.notna(p) and p), axis=1)
 
     cell_types["inputs"] = connectivity_inputs_nolat.apply(lambda x: "|".join(x))
     cell_types["outputs"] = connectivity_outputs_nolat.apply(lambda x: "|".join(x))
@@ -281,13 +344,18 @@ def build_template(db_path):
 
     for col in ["hemibrain_type", "flywire_type", "manc_type"]:
         cell_types[col] = cell_types[col].apply(lambda x: {"X": np.nan}.get(x, x))
+        # A name identical to the male-CNS type is already the term's symbol
+        # (exact synonym), so it is not repeated as a related synonym.
+        cell_types[col] = [("|".join(n for n in _split(v) if n != t) or np.nan)
+                           for t, v in zip(cell_types.index, cell_types[col])]
     cell_types.loc[cell_types["hemibrain_type"].notnull(), "hemibrain_ref"] = "FlyBase:FBrf0246888|doi:10.1016/j.cell.2026.08.015"
     cell_types.loc[cell_types["flywire_type"].notnull(), "flywire_ref"] = "FlyBase:FBrf0260535|doi:10.1016/j.cell.2026.08.015"
     cell_types.loc[cell_types["manc_type"].notnull(), "manc_ref"] = "doi:10.7554/eLife.97766.1|doi:10.1016/j.cell.2026.08.015"
 
     template = pd.DataFrame.from_records([TEMPLATE_SEED])
     cell_types = cell_types.rename(columns={"FBbt_id": "ID"})
-    cell_types = cell_types.drop(["transmitter_pred", "additional_parents", "broad_type", "type_parent"], axis=1)
+    cell_types = cell_types.drop(["transmitter_pred", "additional_parents", "broad_type", "type_parent"]
+                                 + OPTIONAL_COLUMNS, axis=1)
     populated_template = pd.concat([template, cell_types])
     return populated_template
 

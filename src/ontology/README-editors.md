@@ -161,6 +161,14 @@ Source data and scripts for generating templates can be found in [../patterns/ro
 
 Many neurons have a single, unique short identifier as a symbol (IAO:0000028) annotation (similar to gene symbols). These are maintained in the [neuron_symbols.tsv](neuron_symbols.tsv) file, which is used to generate [components/neuron_symbols.owl](components/neuron_symbols.owl). When adding/modifying symbols it is important to check that both the term ID and symbol are unique within the file. Adding a reference publication is optional, but recommended. Symbols should not be maintained as synonyms in the editors' file (or elsewhere), as they will be automatically generated as typed (`official symbol used on Virtual Fly Brain`) synonyms in the symbols component.
 
+Keep the rows (below the header) sorted by symbol in locale order, which ignores case and punctuation (so `adPN` sorts before `AHN`, and `AL_uPN` before `AL-AST1`). A plain byte-order sort (`LC_ALL=C`) gives a different order. To re-sort after adding rows:
+
+```sh
+(head -1 neuron_symbols.tsv; tail -n +2 neuron_symbols.tsv | LC_ALL=en_US.UTF-8 sort) > tmp/neuron_symbols.tsv && mv tmp/neuron_symbols.tsv neuron_symbols.tsv
+```
+
+Row order does not affect the generated component.
+
 ## SSSOM Mappings
 
 Mappings to external resources are maintained in [../mappings](../mappings). These are merged and used to produce [components/mappings_xrefs.owl](components/mappings_xrefs.owl) as well as being released as a separate tsv [../../fbbt.sssom.tsv](../../fbbt.sssom.tsv). New mapping files must be added to `MAPPING_SETS` in [fbbt.Makefile](fbbt.Makefile).
