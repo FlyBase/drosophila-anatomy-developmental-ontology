@@ -72,7 +72,7 @@ $(REPORTDIR)/obo_qc_%.owl.txt:
 	rm -f $(REPORTDIR)/obo_qc_$*.owl
 
 $(REPORTDIR)/spellcheck.txt: fbbt-simple.obo install_flybase_scripts ../../tools/dictionaries/standard.dict
-	python3 $(SCRIPTSDIR)/obo_spellchecker.py -o $@ \
+	python3 $(SCRIPTSDIR)/obo_spellchecker.py --no-default-dictionary -o $@ \
 		-d ../../tools/dictionaries/standard.dict \
 		-d '|python3 $(SCRIPTSDIR)/fetch_authors.py' \
 		fbbt-simple.obo
