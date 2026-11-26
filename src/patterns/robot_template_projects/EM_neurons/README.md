@@ -93,6 +93,25 @@ run `refresh-EM-templates`, `refresh-EM-registry` and `refresh-EM-neurons`. To *
 `fbbt-edit.obo`), use `/move-to-edit`, which deletes its registry row, then
 rebuild the component.
 
+`sources/male_cns/new_types.tsv` has optional columns for types checked against
+other connectomes:
+
+| Column | Effect |
+|---|---|
+| `mcns_members` | `\|`-separated male-CNS types grouped under one term (named by `mcns_type`); `fetch_male_cns.py` caches their bodies under that name |
+| `banc_type` | BANC name(s); cites Bates et al. (2026) in the comment and definition xrefs |
+| `exclude_inputs` / `exclude_outputs` | `\|`-separated FBbt region ids another connectome contradicts; they are not asserted or written into the definition |
+| `exclude_hemilineage` | `TRUE` drops the hemilineage (also dropped when grouped members disagree) |
+| `cross_check_comment` | appended to the comment (e.g. conflicting neurotransmitter predictions) |
+| `transmitter_pred` | left blank when the datasets disagree |
+
+In `sources/male_cns/broad_type_map.tsv`, `label_style` sets the label: blank
+(default) gives `adult <text> neuron <type>`; `number` gives
+`adult <text> neuron <digits>` (as hemibrain/FlyWire `AVLP001`); `symbol` gives
+`adult <type> neuron` (as FlyWire `CB0004`). `number` and `symbol` prefixes
+have no FBbt class, so their definitions open with the first
+`additional_parents` label.
+
 Two inputs have no make goal. MANC's typing data is committed
 (`sources/manc/typing_info.tsv`), so it needs no fetch. The FlyWire
 neuropil-volume cache (`data/flywire_neuropil_volumes.tsv`) comes from
