@@ -223,13 +223,14 @@ def laterality_connectivity(cache, raw_roi_map):
     """
     df = cache.copy()
     df["cell_side"] = df["instance"].map(find_side)
-    # Dataset-wide roi universe (mapped rois only): every body is 0-filled for
-    # every roi seen anywhere in the cache -- including BOTH side-variants of a
-    # region -- so the laterality-aware min drops a (laterality, region) unless
-    # every body carries its own-side variant of it. Using a per-type union
-    # would omit the cross-side zeros and weaken the filter.
-    mapped = df[df["roi"].isin(raw_roi_map.keys())]
-    global_rois = pd.DataFrame({"roi": mapped["roi"].drop_duplicates().tolist()})
+    # Roi universe: every body is 0-filled for EVERY mapped roi -- including
+    # BOTH side-variants of a region -- so the laterality-aware min drops a
+    # (laterality, region) unless every body carries its own-side variant of
+    # it. Taking the universe from the map rather than from the rois seen in
+    # the cache keeps the result independent of which other types are cached:
+    # a side-variant no cached body touches would otherwise never be 0-filled,
+    # and a type with only one side's cells in that region would pass.
+    global_rois = pd.DataFrame({"roi": sorted(raw_roi_map.keys())})
     bodies = df[["type", "bodyId", "cell_side"]].drop_duplicates()
     grid = bodies.merge(global_rois, how="cross")  # (type, body) x every mapped roi
     grid = grid.merge(df[["type", "bodyId", "roi", "pre", "post"]],
