@@ -105,6 +105,12 @@ def laterality_pato(has_contralateral):
 # ---------------------------------------------------------------------------
 # name_lister: "a", "a and b", "a, b and c"
 # ---------------------------------------------------------------------------
+def hemilineage_text(name):
+    """Hemilineage name for definition text: underscores to spaces, with runs
+    of spaces collapsed (male-CNS primary hemilineages are e.g. 'MX0__prim')."""
+    return " ".join(str(name).replace("_", " ").split())
+
+
 def name_lister(names, sort=False):
     """Join a list of names into an English list ("a, b and c").
 
