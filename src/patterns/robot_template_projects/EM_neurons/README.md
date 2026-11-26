@@ -120,6 +120,15 @@ installed in the ODK image on ARM machines, as one of its dependencies needs a
 Rust compiler. FAFB v783 is a fixed release, so the cache only needs fetching
 once; run the script outside the container with `pip install fafbseg`.
 
+MANC has no brain, so its descending-neuron types have no soma location of
+their own. `sources/manc/dn_soma_male_cns.tsv` (committed; regenerate with
+`fetch/fetch_manc_dn_soma.py`, which needs `NEUPRINT_TOKEN`) lists the MANC DN
+types whose male-CNS cells all have their soma in the same brain region
+(protocerebrum, deutocerebrum, tritocerebrum or gnathal ganglion, from the
+male-CNS somaNeuromere). `build_manc.py` asserts 'has soma location' that
+region's cell body rind; a gnathal-ganglion soma places the type under
+'descending neuron of the gnathal ganglion'.
+
 ### FlyWire source files (not reproducible yet)
 
 The FlyWire and hemibrain builds also read three gitignored files in

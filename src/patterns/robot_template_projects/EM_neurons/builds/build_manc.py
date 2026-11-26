@@ -95,6 +95,11 @@ def build_template():
     region_FBbt_map.loc["multi", "FBbt_name"] = "multiple regions"
     tract_FBbt_map = pd.read_csv(_src("tract_FBbt_map.tsv"), sep="\t", index_col="term")
     nt_go_map = pd.read_csv(_src("nt_GO_map.tsv"), sep="\t", index_col="term")
+    # Brain soma locations for DN types from the male CNS (fetch/fetch_manc_dn_soma.py);
+    # MANC itself has no brain, so DNs otherwise get no soma location.
+    dn_soma_path = _src("dn_soma_male_cns.tsv")
+    dn_soma = (pd.read_csv(dn_soma_path, sep="\t", index_col="manc_type", dtype=str)
+               if os.path.exists(dn_soma_path) else pd.DataFrame())
 
     template = pd.DataFrame.from_dict([TEMPLATE_HEAD])
 
@@ -256,6 +261,12 @@ def build_template():
                 cell_soma += f"{soma_mod} the {em.name_lister(neuromeres, sort=True)}"
         if cell_soma:
             definition_components.append(cell_soma + REFS)
+        if not row["Soma"] and i in dn_soma.index:
+            row["Soma"] = dn_soma.loc[i, "soma_FBbt_id"]
+            region = dn_soma.loc[i, "soma_FBbt_name"].replace("cell body rind of adult ", "")
+            soma_text = "Its soma is" if cell_count == 1 else "Their somas are"
+            definition_components.append(f"{soma_text} in the {region} (Berg et al., 2026).")
+            row["Def_xrefs"] += "|doi:10.1016/j.cell.2026.08.015"
 
         row["Parents"] = "|".join([x for x in Parents_list if isinstance(x, str)])
         row["Projection_bundles"] = "|".join([x for x in projection_bundles if isinstance(x, str)])
