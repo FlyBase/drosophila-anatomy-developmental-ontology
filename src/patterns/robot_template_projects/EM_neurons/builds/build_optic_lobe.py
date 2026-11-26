@@ -171,7 +171,7 @@ def build_template(db_path):
             output_def = ""
 
         try:
-            hemilineage = (f" It belongs to the {mapped_hemilineages.loc[OL_type, 'hemilineage'].replace('_',' ')}"
+            hemilineage = (f" It belongs to the {em.hemilineage_text(mapped_hemilineages.loc[OL_type, 'hemilineage'])}"
                            f" hemilineage (Nern et al., 2025).")
         except KeyError:
             hemilineage = ""

@@ -257,7 +257,7 @@ class FlyWireBuilder:
         lin = self.get_lineage(t)
         if lin:
             if lin[0] not in ("primary", "putative_primary"):
-                desc += f"It belongs to the {lin[0].replace('_',' ').replace('  ', ' ')} hemilineage {refs}. "
+                desc += f"It belongs to the {em.hemilineage_text(lin[0])} hemilineage {refs}. "
             else:
                 desc += f"It is a putative embryonic-born neuron {refs}. "
         try:
