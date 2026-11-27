@@ -256,6 +256,7 @@ Everything should be done from this (`src/ontology`) folder.
 1. Make a branch (directly from master) for the release.
 
 2. Run `sh run_release.sh`
+ * The FlyBase release scripts (e.g. `obo_spellchecker.py`, `fetch_authors.py`) are committed copies in `src/scripts/`, installed from [flybase-ontology-scripts](https://github.com/FlyBase/flybase-ontology-scripts) and [flybase-controlled-vocabulary](https://github.com/FlyBase/flybase-controlled-vocabulary). The committed stamp file `src/scripts/.flybase_scripts_installed` stops the release from fetching them again, so upstream changes are not picked up automatically. To update them, delete the stamp file, run `sh run.sh make install_flybase_scripts`, then commit the updated scripts (and the stamp file).
  * This generates derived files such as `fbbt.owl` and `fbbt.obo` and places them in the top level (`../..`).
  * Imports, DOSDP axioms and some components will be automatically updated as part of the release process, so no additional steps need to be run.
  * Note that the versionIRI value will be automatically added, and will end with `YYYY-MM-DD`, as per OBO guidelines.

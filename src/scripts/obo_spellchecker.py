@@ -18,7 +18,7 @@ from spellchecker import SpellChecker
 import click
 
 prog_name = "obo-spellchecker"
-prog_version = "0.1.0"
+prog_version = "0.2.0"
 prog_notice = f"""\
 {prog_name} {prog_version}
 Copyright © 2021 Damien Goutte-Gattat
@@ -213,11 +213,19 @@ class RepeatedPunctuationChecker(PatternChecker):
 
 class TermSpellChecker(OntologyTermChecker):
 
-    def __init__(self):
+    def __init__(self, default_dictionary=True):
+        """Creates a new instance.
+
+        :param default_dictionary: if False, do not load pyspellchecker's
+            built-in English word list, so that only the custom
+            dictionaries are used (the built-in list accepts many
+            British spellings, e.g. 'labelled', 'whilst')
+        """
+
         OntologyTermChecker.__init__(self, 'misspelling',
                                      fields=['name', 'definition', 'comment',
                                              'synonyms'])
-        self._checker = SpellChecker()
+        self._checker = SpellChecker(language='en' if default_dictionary else None)
         self._short_word_threshold = 4
         self._post_filters = [self._exclude_words_with_number,
                               self._exclude_short_word_filter]
@@ -279,7 +287,11 @@ def _load_dictionary(location):
                       to write the dictionary to its standard output. """)
 @click.option('--obsolete/--no-obsolete', default=False,
               help="""Check terms marked as obsolete.""")
-def check_ontology(obofile, output, dictionary, obsolete):
+@click.option('--default-dictionary/--no-default-dictionary', default=True,
+              help="""Use (default) or do not use the built-in English
+                      dictionary. With --no-default-dictionary, only the
+                      dictionaries given with --dictionary are used.""")
+def check_ontology(obofile, output, dictionary, obsolete, default_dictionary):
     """Spell-check the specified OBOFILE.
     
     This command performs a spell-check on the ontology in the
@@ -296,7 +308,10 @@ def check_ontology(obofile, output, dictionary, obsolete):
     except Exception as e:
         raise RuntimeError(f"Cannot load ontology: {e}")
 
-    spell_checker = TermSpellChecker()
+    if not default_dictionary and not dictionary:
+        raise click.UsageError("--no-default-dictionary requires at least one --dictionary")
+
+    spell_checker = TermSpellChecker(default_dictionary=default_dictionary)
     for dictfile in dictionary:
         try:
             dictdata = _load_dictionary(dictfile)
