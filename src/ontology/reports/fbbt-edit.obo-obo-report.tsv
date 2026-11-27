@@ -1,12 +1,8 @@
 Level	Rule Name	Subject	Property	Value
-WARN	duplicate_exact_synonym	vertical system twin neuron 1	has_exact_synonym	VSlike1
-WARN	duplicate_exact_synonym	vertical system-like neuron VSm	has_exact_synonym	VSlike1
 WARN	duplicate_exact_synonym	vertical system neuron 3	has_exact_synonym	VS3
 WARN	duplicate_exact_synonym	ventral acute muscle 2	has_exact_synonym	vs3
 WARN	duplicate_exact_synonym	vertical system neuron 1	has_exact_synonym	VS1
 WARN	duplicate_exact_synonym	ventral acute muscle 3	has_exact_synonym	vs1
-WARN	duplicate_exact_synonym	vertical system twin neuron 1	has_exact_synonym	VS twin 1
-WARN	duplicate_exact_synonym	vertical system-like neuron VSm	has_exact_synonym	VS twin 1
 WARN	duplicate_exact_synonym	larval vesM neuron	has_exact_synonym	vs neuron
 WARN	duplicate_exact_synonym	vertical system neuron	has_exact_synonym	VS neuron
 WARN	duplicate_exact_synonym	abdominal 8 ventral papilla vas	has_exact_synonym	vs
@@ -32,8 +28,6 @@ WARN	duplicate_exact_synonym	ventral longitudinal muscle 2	has_exact_synonym	VL2
 WARN	duplicate_exact_synonym	adult ventral lateral neck muscle 1	has_exact_synonym	VL1 muscle
 WARN	duplicate_exact_synonym	ventral longitudinal muscle 1	has_exact_synonym	VL1 muscle
 WARN	duplicate_exact_synonym	larval VUM interneuron	has_exact_synonym	Vi
-WARN	duplicate_exact_synonym	vertical system twin neuron 1	has_exact_synonym	vertical system-like neuron 1
-WARN	duplicate_exact_synonym	vertical system-like neuron VSm	has_exact_synonym	vertical system-like neuron 1
 WARN	duplicate_exact_synonym	pregonite	has_exact_synonym	ventral paramere
 WARN	duplicate_exact_synonym	ventral postgonite	has_exact_synonym	ventral paramere
 WARN	duplicate_exact_synonym	ventral association center	has_exact_synonym	VAC
@@ -303,8 +297,6 @@ WARN	duplicate_exact_synonym	larval lateral equatorial fascicle	has_exact_synony
 WARN	duplicate_exact_synonym	lateral equatorial fascicle	has_exact_synonym	larval LEF
 WARN	duplicate_exact_synonym	DM2 secondary intermediate neural progenitor 1	has_exact_synonym	larval DPMpm1 INP1
 WARN	duplicate_exact_synonym	DM1 secondary intermediate neural progenitor 1	has_exact_synonym	larval DPMpm1 INP1
-WARN	duplicate_exact_synonym	immature ellipsoid body R4d neuron	has_exact_synonym	larval developing ellipsoid body R4d neuron
-WARN	duplicate_exact_synonym	immature ellipsoid body R1 neuron	has_exact_synonym	larval developing ellipsoid body R4d neuron
 WARN	duplicate_exact_synonym	embryonic/larval antennal nerve	has_exact_synonym	larval an
 WARN	duplicate_exact_synonym	larval ascending neuron	has_exact_synonym	larval AN
 WARN	duplicate_exact_synonym	adult lateral accessory lobe commissure	has_exact_synonym	LALC
@@ -1370,12 +1362,12 @@ WARN	duplicate_label_synonym	adult MBp4 lineage clone	has_exact_synonym	adult MB
 WARN	duplicate_label_synonym	adult MBp4 lineage neuron	has_exact_synonym	adult MBp4 lineage neuron
 WARN	duplicate_label_synonym	adult MBp lineage clone	has_exact_synonym	adult MBp lineage clone
 WARN	duplicate_label_synonym	neuroblast NB5-7	has_exact_synonym	neuroblast NB5-7
-WARN	duplicate_scoped_synonym	adult descending neuron of the posterior brain DNpe053	has_exact_synonym	DNpe053
-WARN	duplicate_scoped_synonym	adult descending neuron of the posterior brain DNpe053	has_related_synonym	DNpe053
 WARN	duplicate_scoped_synonym	adult lobula plate tangential neuron LPT31	has_exact_synonym	LPT31
 WARN	duplicate_scoped_synonym	adult lobula plate tangential neuron LPT31	has_related_synonym	LPT31
 WARN	duplicate_scoped_synonym	adult lobula intrinsic neuron Li15	has_exact_synonym	Li15
 WARN	duplicate_scoped_synonym	adult lobula intrinsic neuron Li15	has_related_synonym	Li15
+WARN	duplicate_scoped_synonym	adult lobula columnar neuron LC31b	has_exact_synonym	LC31b
+WARN	duplicate_scoped_synonym	adult lobula columnar neuron LC31b	has_related_synonym	LC31b
 WARN	duplicate_scoped_synonym	adult lobula intrinsic neuron Li13	has_exact_synonym	Li13
 WARN	duplicate_scoped_synonym	adult lobula intrinsic neuron Li13	has_related_synonym	Li13
 WARN	duplicate_scoped_synonym	adult lobula intrinsic neuron Li32	has_exact_synonym	Li32
@@ -3015,7 +3007,6 @@ INFO	missing_superclass	Dh44 neuron	rdfs:subClassOf
 INFO	missing_superclass	larval Dh44 neuron of ventral nerve cord	rdfs:subClassOf	
 INFO	missing_superclass	adult Dh44 neuron of ventral nerve cord	rdfs:subClassOf	
 INFO	missing_superclass	neurosecretory cell of pars intercerebralis	rdfs:subClassOf	
-INFO	missing_superclass	dorsal organ sensory neuron	rdfs:subClassOf	
 INFO	missing_superclass	gonadal sheath epithelium	rdfs:subClassOf	
 INFO	missing_superclass	hygrosensory projection neuron	rdfs:subClassOf	
 INFO	missing_superclass	thermosensory projection neuron	rdfs:subClassOf	
@@ -4196,6 +4187,10 @@ INFO	missing_superclass	adult thoracic fat cell	rdfs:subClassOf
 INFO	missing_superclass	adult pericardial fat cell	rdfs:subClassOf	
 INFO	missing_superclass	female accessory gland fat cell	rdfs:subClassOf	
 INFO	missing_superclass	spermathecal fat cell	rdfs:subClassOf	
+INFO	missing_superclass	external sense organ gustatory receptor neuron of larval maxillary-labial nerve	rdfs:subClassOf	
+INFO	missing_superclass	pharyngeal gustatory receptor neuron of larval maxillary-labial nerve	rdfs:subClassOf	
+INFO	missing_superclass	pharyngeal gustatory receptor neuron of larval antennal-pharyngeal nerve	rdfs:subClassOf	
+INFO	missing_superclass	mechanosensory neuron of the adult pharynx	rdfs:subClassOf	
 INFO	missing_superclass	adult class I enteroendocrine cell	rdfs:subClassOf	
 INFO	missing_superclass	larval midgut Dh31 enteroendocrine cell	rdfs:subClassOf	
 INFO	missing_superclass	larval midgut junction Dh31 enteroendocrine cell	rdfs:subClassOf	
